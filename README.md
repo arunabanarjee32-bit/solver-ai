@@ -2,7 +2,34 @@
 
 **An open-development project aiming to build an AI-native platform for DSA, competitive programming and ICPC preparation.**
 
-> **Current status:** Planning and documentation. The repository does **not** yet contain a working web application, online judge, trained model or public deployment. See [Project status](docs/PROJECT_STATUS.md).
+> **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. AI, contests and production deployment remain planned. See [Project status](docs/PROJECT_STATUS.md) for executed validation and limitations.
+
+## Run locally
+
+Requirements: Node.js24 (see `.node-version`), Python3.12 and [uv](https://docs.astral.sh/uv/). No external API keys, database server or paid service is needed. Local account/submission data uses ignored SQLite files.
+
+```sh
+export UV_CACHE_DIR="${UV_CACHE_DIR:-/tmp/solver-ai-uv-cache}"
+npm ci
+uv sync --project services/api --frozen
+npm run dev
+```
+
+Open `http://127.0.0.1:3000`. The API listens on `http://127.0.0.1:8000`; its interactive documentation is at `/docs`. Stop both services with Ctrl-C. The browser calls the API through the web server, so no CORS configuration is required.
+
+```sh
+npm run test:api
+npm run test:auth
+npm run test:judge
+npm run typecheck
+npm run build
+npx playwright install chromium
+npm run test:e2e
+```
+
+Browser tests start their own services; stop `npm run dev` before running them. On Linux, Playwright may need `npx playwright install --with-deps chromium`. See [Development](docs/DEVELOPMENT.md) for independent services, production builds, Docker Compose and troubleshooting.
+
+For actual run/submit, this cloud image provides rootless Docker with gVisor. Build the sandbox with `npm run judge:build:cloud`, then start `npm run dev:judge` and create a local account. Other machines use `npm run judge:build` after installing a supported gVisor runtime. Missing isolation fails closed; learner code is never executed by the API/web process. [Full workflow and tests](docs/DEVELOPMENT.md#real-isolated-judging).
 
 ## The idea
 
@@ -17,7 +44,7 @@ It aims to support:
 - Model-neutral inference, legally sourced training datasets, fine-tuning and rigorous evaluation.
 - Independent hosting and extensibility for a future commercial product.
 
-**These are goals, not already implemented features.**
+**The full product above remains a roadmap.** The local implementation supports browsing, editing, accounts, finite isolated grading and authored hints. It does not provide AI-generated results or a production judge certification.
 
 ## New contributor? Start here
 
@@ -30,7 +57,7 @@ It aims to support:
 
 **All project documents:** [Documentation index](docs/INDEX.md).
 
-## Proposed architecture (not built yet)
+## Target architecture
 
 ~~~text
 Next.js + Monaco web app
@@ -54,7 +81,7 @@ We prefer **one modular monorepo** and verified third-party dependencies/service
 
 An authorized seed problem can be opened in the browser, solved in a Monaco editor, submitted to a secure isolated judge, and graded with a real verdict. A later milestone adds an optional AI hint and debugging workflow. Each increment requires reproducible tests.
 
-The proposed layout and API contracts are in [Architecture](docs/ARCHITECTURE.md). There is **no supported installation or run command yet**; the first coding contributions will introduce them.
+The proposed layout and API contracts are in [Architecture](docs/ARCHITECTURE.md). The current [foundation decision](docs/adr/0001-practice-foundation.md) records what is implemented and deferred.
 
 ## Expectations and guardrails
 

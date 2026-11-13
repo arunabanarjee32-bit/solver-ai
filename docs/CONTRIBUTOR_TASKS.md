@@ -1,6 +1,6 @@
 # Contributor tasks — suggested starter backlog
 
-**These are proposed tasks, not yet GitHub issues or implemented features.** New contributors should first read START_HERE.md and PROJECT_STATUS.md. Pick one scoped issue per PR. Create a GitHub issue before major work.
+**This is the suggested backlog, not a list of created GitHub issues.** Some foundation work is now implemented; see progress below and PROJECT_STATUS.md for verification. Pick one scoped issue per PR. Create a GitHub issue before major work.
 
 | ID | Size | Suggested title | Acceptance criteria |
 | --- | --- | --- | --- |
@@ -20,6 +20,8 @@
 | SAI-014 | S | Dependency inventory | Exact versions, notice/license compliance and vulnerability review process |
 
 ## Ready-made issue format
+
+Current foundation progress: SAI-002 is implemented locally. SAI-007 has catalog/detail, Monaco, browser drafts and browser tests. SAI-003 has Python lint, TypeScript checking, API/browser tests and CI configuration; a hosted CI run and broader accessibility/lint policy still need review. SAI-004/005/014 are partial: public catalog contracts, original samples/provenance and initial dependency decisions exist, but versioned private grading tests, submission contracts and a full compliance audit do not. SAI-006/008/009 now have a bounded local gVisor runner, actual authenticated run/submit and owned SQLite history with tests. Production identity, host-wide resource accounting and independent isolation review remain open. AI/contest milestones remain unimplemented. These statements do not close issues or mark the full P0 release complete.
 
 **Problem / user value:** Who benefits and what problem is solved?
 **Scope:** Exact modules/components touched.

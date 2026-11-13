@@ -1,0 +1,44 @@
+# Judge reuse decision and local validation
+
+Reviewed 2026-11-14 (Asia/Calcutta) for the original Solver AI development prototype. This is a scoped implementation review, not an independent sandbox certification or production release approval.
+
+## Reuse decision
+
+Use the existing gVisor `runsc` runtime as a narrow external runtime dependency. Write the original queue controller, bounded supervisor and grading oracle for Solver AI. No upstream repository is merged wholesale into the application. No public third-party execution API is called.
+
+| Candidate | Exact source reviewed | License and operational evidence | Decision |
+| --- | --- | --- | --- |
+| Piston | [engineer-man/piston at de2b365ac759670a3a0d13ea208a0869a92c7e64](https://github.com/engineer-man/piston/tree/de2b365ac759670a3a0d13ea208a0869a92c7e64) (latest commit 2026-07-31) | Wrapper MIT; `docker-compose.yaml` sets `privileged: true`, entrypoint requires writable pure cgroup v2, Dockerfile uses Node 15/Buster. Default compile/run memory limits are unlimited. | DEFER stock deployment; incompatible with this environment's reviewed least-privilege policy |
+| Isolate pulled by Piston | [envicutor/isolate at af6db68042c3aa0ded80787fbb78bc0846ea2114](https://github.com/envicutor/isolate/tree/af6db68042c3aa0ded80787fbb78bc0846ea2114) | GPL-2.0-or-later, as stated by its LICENSE. Piston's wrapper being MIT does not make this included binary MIT. | Not copied or distributed in this implementation |
+| nsjail | [google/nsjail at d1d9af34c61daf834b843d58100a108c7cc2c574](https://github.com/google/nsjail/tree/d1d9af34c61daf834b843d58100a108c7cc2c574) (latest commit 2026-11-10) | Apache-2.0; namespaces, seccomp and cgroups; README's Docker example uses `--privileged`. Requires additional privilege/cgroup integration and a separate audit here. | REFERENCE ONLY for this increment |
+| gVisor | [google/gvisor at 82aa9eed25582b0d3fad2c49dfec9b318b1babff](https://github.com/google/gvisor/tree/82aa9eed25582b0d3fad2c49dfec9b318b1babff) (latest commit 2026-11-13) | Apache-2.0; a userspace application kernel behind OCI runtime `runsc`, reducing direct host kernel exposure. Already registered with the managed rootless Docker daemon. | RUNTIME DEPENDENCY; local prototype only |
+
+The installed runtime reports `release-20260413.0`, corresponding to upstream [b5e83db38775bc5a6e12857c388c84be3cc8871c](https://github.com/google/gvisor/tree/b5e83db38775bc5a6e12857c388c84be3cc8871c). Its local binary SHA-256 is `c97966a7bce00a6ce6de2f931b2b4cf0cbe979d5f47d9feda75f5bbbce0d93ad`. This records what was exercised; it is not independent attestation of its provenance. The platform supplies this runtime; this project neither installs nor changes it. The latest upstream release tag observed during review was `release-20261109.0` at `a0e6be6fb5e03d8ebea13592f36a097c7e9a41b9`. Therefore the installed April binary must not be described as current or production patched. Review and update the runtime on a dedicated judge host before any public deployment.
+
+Review source: Piston `license`, `docker-compose.yaml`, `api/Dockerfile`, `api/src/config.js`, `api/src/job.js`; Isolate `LICENSE`; nsjail `LICENSE`, `README.md`; gVisor `LICENSE`, `README.md`, `g3doc/user_guide/rootless.md`, `pkg/sentry/kernel/kernel.go`, `pkg/sentry/mm/syscalls.go`, `pkg/sentry/kernel/task_acct.go` and their installed-release equivalents. Upstream sources were inspected under `/tmp`; none are app source imports.
+
+## Development boundary
+
+The trusted host worker alone controls the explicitly selected local Docker daemon and possesses `JUDGE_WORKER_TOKEN`. The API/web services and sandbox do not receive a Docker socket. A learner sandbox receives source and selected inputs only; expected answers remain in the trusted worker. A unique, ephemeral gVisor container runs compilation and execution with no network, no host mounts, a read-only root, nonroot UID/GID 10001, all capabilities dropped and `no-new-privileges`.
+
+Each worker resolves the reviewed local sandbox image to its immutable image ID at preflight. No job pulls an image, changes runtime, adds mounts or supplies compiler arguments. Python uses isolated mode, and C++17 uses fixed compiler options. Child environments are an explicit minimal whitelist; all configured Docker proxy variable names are cleared. The source limit is 32 KiB; case count, stdin, pipes and protocol responses are bounded. Container input closes before learner execution. A single JSON document, matching expected result count and allowed status/exit/output types, is required; malformed or forged supervisor output cannot grant acceptance.
+
+The runtime is configured with `--ignore-cgroups`; Docker reports cgroup driver `none`, with memory/PID cgroup enforcement unavailable. Accordingly this prototype does **not** claim Docker's `--memory` or `--pids-limit` provides protection. It uses tested gVisor rlimits: per-process virtual address-space limits (128 MiB run / 512 MiB compile), CPU limits (2 s run / 10 s compile), process limits (2 run, including supervisor; 8 compile), open-file/file-size limits, bounded tmpfs and outer wall/output deadlines. These are not peak RSS measurements. Runtime fork/thread creation is disallowed because both permitted process slots are occupied by supervisor and solution. Concurrency is one leased job per worker. Do not add many workers without a host-wide budget.
+
+The supervisor enforces a four-second wall deadline per run and fifteen seconds for compilation. The outer Docker exchange has an 85-second deadline, followed by bounded removal attempts. Cancellation requests remove any active named sandbox and prevent a pending create from proceeding to execution. Shutdown must remain graceful; forcibly killing control processes is never a substitute for operational container cleanup. Stop/restart behavior is tested separately from execution verdicts.
+
+## Verified finite controls
+
+Before writing the runner, fixed trusted probes were executed through the installed gVisor runtime: a 200 MiB allocation was rejected under a 128 MiB address-space cap; at NPROC=4 only three children could be created before EAGAIN; a one-MiB file limit stopped writing at exactly 1,048,576 bytes with EFBIG; a CPU-bounded finite busy loop was killed; `/workspace` and the Docker socket were absent; the host API was unreachable. No learner program was executed on the host.
+
+The worker performs its own required preflight before sending readiness heartbeats: actual address-space, CPU, process, file-size, network/filesystem/credential isolation checks and a fixed C++ compile/run. An unavailable runtime or failed control leaves execution unavailable. There is no runc fallback.
+
+Unit tests cover transport/lease control, bounded pipes, original generators/oracles and grading/protocol validation. Explicit opt-in sandbox tests run original correct/incorrect Python and C++ fixtures plus bounded syntax/runtime/time/allocation/output/fork/network/filesystem/protocol-tampering checks. A skipped sandbox test is not a validated sandbox check. See the root status ledger for the final executed outcomes.
+
+## Grading and limitations
+
+Runs use the two public examples. Submissions use public examples plus six original generated edge cases and trusted reference oracles. Generated cases are not a proof of general correctness or a benchmark. No literal private problem set or third-party content is committed. Run and submit completion summaries are fixed messages; private inputs, answers, actual output, compiler diagnostics and learner source are not returned in verdict summaries.
+
+AC means all selected checks passed. WA means a selected output differed under whitespace-token comparison. CE means actual parsing/compilation failed. RE covers process failure and allocation errors without trusted aggregate memory accounting. Source-controlled stderr text is not evidence for MLE; this implementation does not manufacture MLE from a printed `MemoryError`. TLE requires the trusted wall timeout or actual child CPU consumption at its configured cap; deliberate self-kill does not alone prove a time limit. OLE means a capped stream exceeded its bound. Failed container/protocol/control operations return SYSTEM_ERROR.
+
+Independent security review, a current dedicated runtime, host-wide CPU/memory/disk budgets, durable operations/recovery, release-ready identity and quotas, and broader hostile-code testing remain public-release gates. The main repository's original-code license is still the maintainer's decision. gVisor Apache notices are retained by its platform distribution; the sandbox image retains Debian package copyright notices, Python licensing and GNU compiler/runtime library notices under `/usr/share/doc`. GCC is a compiler package, not source code merged into the app; applicable GPL and GCC runtime exception obligations still need review before distributing images.

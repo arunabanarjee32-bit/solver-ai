@@ -1,0 +1,14 @@
+.git
+**/node_modules
+**/.next
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/*.tsbuildinfo
+apps/web/public/monaco
+test-results
+playwright-report
+.env
+.env.*
+!.env.example
+**/.local

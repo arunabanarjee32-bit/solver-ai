@@ -2,6 +2,7 @@
 .env
 .env.*
 !.env.example
+.local/
 *.pem
 *.key
 *.p12
@@ -36,3 +37,7 @@ runs/
 datasets/raw/
 datasets/private/
 testcases/private/
+apps/web/public/monaco/
+*.tsbuildinfo
+playwright-report/
+test-results/

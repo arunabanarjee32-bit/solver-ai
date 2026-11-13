@@ -1,6 +1,6 @@
 # Build versus reuse: public repository evaluation
 
-**Status: candidate inventory, NOT audited dependencies or selected integrations.** Assess upstream HEAD, dependencies, vulnerabilities, licenses, support and API compatibility before adoption. Public access is not permission to copy problem content or proprietary code.
+**Status: candidate inventory plus documented local adoptions.** Monaco, Better Auth and gVisor are adopted through narrow dependency/runtime interfaces in the [foundation](adr/0001-practice-foundation.md) and [isolated submissions](adr/0002-authenticated-isolated-submissions.md) decisions. Other listed projects remain candidates unless explicitly recorded. Assess exact versions, dependencies, vulnerabilities, licenses and operational fit before adoption. Public access is not permission to copy problem content or proprietary code.
 
 ## Guiding policy
 
@@ -11,7 +11,8 @@ One original modular monorepo, external libraries/services behind narrow adapter
 | Web code editor | [Monaco Editor](https://github.com/microsoft/monaco-editor) | Reuse as dependency | MIT; browser integration and editor safety |
 | Component UI | [shadcn/ui](https://github.com/shadcn-ui/ui) | Select components when frontend exists | MIT; audit transitive deps |
 | Authentication | [Better Auth](https://github.com/better-auth/better-auth) | Consider rather than custom auth | MIT; session integration must be reviewed |
-| Code execution | [Piston](https://github.com/engineer-man/piston) | Evaluate **self-hosted** sandbox adapter | MIT; sandbox hardening, resource isolation; don't rely on public API |
+| Deferred execution candidate | [Piston](https://github.com/engineer-man/piston) | Stock deployment reviewed and deferred; no public API use | Wrapper MIT, included Isolate GPL-2.0-or-later; privileged stock deployment and default memory limits do not fit this local integration |
+| Adopted local execution runtime | [gVisor](https://github.com/google/gvisor) | Existing reviewed rootless `runsc`; original bounded worker/controller | Apache-2.0; installed runtime age, resource limits and production review documented in isolated-submissions ADR |
 | Alternate judge foundation | [QingdaoU OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | Study APIs and contest design; audit maintenance | MIT reported; check latest, security |
 | Rich judge foundation | [DMOJ](https://github.com/DMOJ/online-judge), [judge server](https://github.com/DMOJ/judge-server) | Consider if advanced grading drives scope | AGPL-family obligations and integration cost |
 | AI competitive solver | [phi-code](https://github.com/Nan-Do/phi-code) | Research candidate generation/ranking approach | Apache 2.0; research project, not full product |

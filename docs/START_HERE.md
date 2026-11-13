@@ -1,6 +1,6 @@
 # Start here — first-day contributor onboarding
 
-Welcome. You do not need access to any previous private chats to contribute. This repository is currently a documented **proposal**, not a working app.
+Welcome. You do not need access to any previous private chats to contribute. This repository now has a runnable practice foundation. The larger judge, AI and contest platform remains a proposal.
 
 ## Understand the purpose in 10 minutes
 
@@ -18,14 +18,9 @@ The first end-to-end capability is: choose an authorized sample problem -> edit 
 
 ## Local development today
 
-There is **no runnable development environment yet**. Don't invent `npm install`, `docker compose up`, environment variables, or a live URL. The first engineering PR should add real scripts, test commands, a working minimal scaffold and clear instructions to this file.
+From the checkout root, run `npm ci`, `uv sync --project services/api --frozen`, then `npm run dev`. Open `http://127.0.0.1:3000` to browse original problems, edit Python/C++17 drafts, create a local account and view owned history. Drafts stay in the browser until an explicit run/submit. Set a writable uv cache as documented for managed clouds.
 
-Until then:
-1. Clone with `git clone https://github.com/arunabanarjee32-bit/solver-ai.git`.
-2. Read these docs and identify a scoped gap or decision.
-3. Open an issue with context, acceptance tests, license implications, and expected files.
-4. Create a branch and PR; show evidence of checks you could actually run.
-5. Update PROJECT_STATUS when code/CI exists.
+Follow [Development](DEVELOPMENT.md) for tests and Docker Compose. The optional full workflow builds a gVisor sandbox image and runs `npm run dev:judge`; it generates its own private local worker credential. No external account/model keys are required. Read the isolation/runtime limitations before changing execution. Do not execute learner code inside the API or web app, or call ordinary containers a fallback judge.
 
 ## Contribution expectations
 
