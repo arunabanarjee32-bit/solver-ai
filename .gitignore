@@ -1,0 +1,38 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+# Dependencies/build output
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# Local DB/artifacts
+*.sqlite
+*.sqlite3
+data/local/
+artifacts/
+checkpoints/
+models/
+wandb/
+runs/
+# IDE/system
+.DS_Store
+.idea/
+.vscode/
+# Keep original datasets and sensitive problem test sets out of version control
+datasets/raw/
+datasets/private/
+testcases/private/
