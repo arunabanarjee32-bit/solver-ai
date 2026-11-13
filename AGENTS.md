@@ -8,7 +8,7 @@ Build Solver AI: an independently controlled, AI-native DSA/competitive programm
 
 ## Reality check
 
-This repository begins as documentation only. Do not claim working apps, model training or judge integration until corresponding code, tests and run commands are committed. Never fabricate benchmarks or CI outcomes.
+This repository has a local practice workflow: web/API catalog, Monaco drafts, Better Auth accounts, owned submission history and an optional gVisor-isolated control worker. AI, contests and production deployment remain unimplemented. Read PROJECT_STATUS.md for executed checks and runtime limits; never fabricate benchmarks, hosted CI outcomes or release readiness.
 
 ## Priority order
 
@@ -38,6 +38,6 @@ This repository begins as documentation only. Do not claim working apps, model t
 
 Summary; files; decisions/reuse; tests actually run with results; open risks; deployment impacts; docs/PROJECT_STATUS changes. Don't say "done" for placeholders.
 
-## First coding task
+## Next implementation work
 
-Follow docs/CODEX_PLAYBOOK.md. Implement a minimal runnable frontend/API skeleton, automated tests and setup instructions as a small PR; no false claims of production-readiness.
+Follow docs/CODEX_PLAYBOOK.md and docs/DEVELOPMENT.md. Preserve the tested identity, ownership, queue and sandbox boundaries. Maintain actual sandbox/hostile-program tests when changing execution; never fall back to host or ordinary-container execution. Production identity/runtime/operations hardening and provider-neutral AI tutoring remain future work. Do not present authored hints as AI inference or finite grading as proof of universal correctness.

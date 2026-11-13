@@ -1,0 +1,29 @@
+[project]
+name = "solver-ai-api"
+version = "0.1.0"
+description = "Authenticated practice catalog and leased submission queue for Solver AI."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.162.6",
+  "uvicorn==0.54.0",
+  "PyJWT==2.15.1",
+  "cryptography==50.0.2",
+  "httpx==0.28.1",
+]
+
+[dependency-groups]
+dev = [
+  "pytest==9.2.0",
+  "ruff==0.17.5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

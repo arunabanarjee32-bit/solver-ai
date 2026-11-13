@@ -1,6 +1,6 @@
 # Architecture proposal
 
-Status: conceptual, NOT implemented. One privately controllable monorepo with clean interfaces and independently deployable services.
+Status: target architecture with local implementation. `apps/web` implements Better Auth sessions, practice and history; `services/api` implements public catalog, JWT ownership and durable SQLite job leases; `services/judge` is a separate trusted control worker using the existing gVisor runtime. PostgreSQL, AI and contests remain proposed. See [foundation](adr/0001-practice-foundation.md) and [isolated submissions](adr/0002-authenticated-isolated-submissions.md). One modular monorepo with independently deployable services; local validation is not production certification.
 
 ## Data and control flow
 

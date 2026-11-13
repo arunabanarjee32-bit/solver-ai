@@ -1,0 +1,67 @@
+services:
+  api:
+    build:
+      context: ./services/api
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      SOLVER_DB_PATH: /app/.local/solver.sqlite3
+      AUTH_ISSUER: http://127.0.0.1:3000
+      AUTH_JWKS_URL: http://web:3000/api/auth/jwks
+      NO_PROXY: 127.0.0.1,localhost,api,web
+      no_proxy: 127.0.0.1,localhost,api,web
+    volumes:
+      - submission-data:/app/.local
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test:
+        [
+          CMD,
+          python,
+          -c,
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)",
+        ]
+      interval: 5s
+      timeout: 4s
+      retries: 12
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        API_BASE_URL: http://api:8000
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      AUTH_URL: http://127.0.0.1:3000
+      AUTH_DB_PATH: /app/apps/web/.local/auth.sqlite
+      NO_PROXY: 127.0.0.1,localhost,api,web
+      no_proxy: 127.0.0.1,localhost,api,web
+    volumes:
+      - account-data:/app/apps/web/.local
+    depends_on:
+      api:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test:
+        [
+          CMD,
+          node,
+          -e,
+          "fetch('http://127.0.0.1:3000/api/v1/problems').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 4s
+      retries: 12
+volumes:
+  account-data:
+  submission-data:

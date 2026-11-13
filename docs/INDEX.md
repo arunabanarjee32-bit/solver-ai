@@ -5,6 +5,9 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 | Document | Purpose |
 | --- | --- |
 | [Start here](START_HERE.md) | First-day orientation and workflow |
+| [Development](DEVELOPMENT.md) | Tested setup, service commands and verification |
+| [Foundation decision](adr/0001-practice-foundation.md) | Initial scope, dependencies and safety boundaries |
+| [Accounts and isolated submissions](adr/0002-authenticated-isolated-submissions.md) | Upstream evaluation, identity boundary and gVisor integration |
 | [Project vision](PROJECT_VISION.md) | Mission, users, differentiation and boundaries |
 | [Product requirements](PRODUCT_REQUIREMENTS.md) | Feature inventory, user journeys and acceptance criteria |
 | [Architecture](ARCHITECTURE.md) | Service/data boundaries and proposed monorepo layout |

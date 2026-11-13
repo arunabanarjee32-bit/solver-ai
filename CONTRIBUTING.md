@@ -17,7 +17,7 @@ Pick one small task from [contributor tasks](docs/CONTRIBUTOR_TASKS.md); open an
 5. Ask for review; address security/rights concerns before merging.
 6. Update `docs/PROJECT_STATUS.md` only to reflect verified implementation.
 
-No stable development/test commands have been committed yet; this will be part of the first scaffold PR.
+Use the setup and verification commands in [Development](docs/DEVELOPMENT.md). The current foundation has API tests, browser tests and a web build/type check. A passing foundation check does not validate a judge, AI service or production deployment.
 
 ## Code quality and review
 
