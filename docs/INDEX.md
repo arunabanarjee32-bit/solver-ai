@@ -14,6 +14,7 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 | [Roadmap](ROADMAP.md) | Phased implementation and quality gates |
 | [Project status](PROJECT_STATUS.md) | Honest implemented-versus-planned ledger |
 | [Open-source strategy](OPEN_SOURCE_STRATEGY.md) | Public repository candidates, licenses and integration logic |
+| [Public repositories and resources (TXT)](PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | All 20 previously suggested GitHub repositories plus models, datasets and benchmarks |
 | [AI solver](AI_SOLVER.md) | Planning, testing, hints and agent workflow |
 | [Judge security](JUDGE_SECURITY.md) | Threat model and untrusted code execution |
 | [Model/data/evaluation](MODEL_DATA_EVALUATION.md) | Training plan, dataset rights and benchmarking |
