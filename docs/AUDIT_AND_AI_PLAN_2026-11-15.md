@@ -2,7 +2,7 @@
 
 **Baseline:** `main` at `b6f9fe90a05046dfc8adf879d09f91cd2fd5c32a`, examined through the connected GitHub source API. **Scope:** repository tree (132 entries), project handbook, main FastAPI/auth/catalog/submission code, targeted frontend and judge modules, tests and CI, all 20 listed upstream repository metadata records, and source in the two selected research references. The original reference inventory is `docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt`.
 
-**Evidence rules:** VERIFIED = inspected source/API metadata; DOCUMENTED, NOT REPRODUCED = prior project ledger; INFERRED = a reasoned design implication; UNKNOWN = not independently established. A local clone could not be downloaded in this research environment (DNS to GitHub unavailable). Consequently **no repository tests, browser runs, sandbox probes or hosted GitHub CI checks were executed as part of this audit**. Existing past-run counts remain historical claims in `docs/PROJECT_STATUS.md`, not new verification. No deployment or production security certification is claimed.
+**Evidence rules:** VERIFIED = inspected source/API metadata; DOCUMENTED, NOT REPRODUCED = prior project ledger; INFERRED = a reasoned design implication; UNKNOWN = not independently established. A local clone could not be downloaded in this research environment (DNS to GitHub unavailable). The initial source audit did not run a local clone/test environment. **Subsequent hosted GitHub Actions validation was observed and inspected for the SAI-010 PR**: [run 43737836616](https://github.com/arunabanarjee32-bit/solver-ai/actions/runs/43737836616) passed at `9df915a422c2a45d93d967b66a6cd30a228e6914`, including 137 API passes (29 new hint tests), auth, 91 judge-unit passes (15 gated integration skips), Ruff, TypeScript, build and 17 Playwright passes (1 gated full-judge skip). The historical local sandbox evidence remains separate. No deployment or production security certification is claimed.
 
 ## A. Executive assessment
 
@@ -199,7 +199,7 @@ No delivery dates or benchmark improvements are promised. C–H have no existing
 **Proposed branch:** `feat/sai-010-authored-hint-contract`.
 **Targeted files:** `services/api/solver_api/hints.py` (new), `services/api/solver_api/main.py` (one authenticated route), `services/api/tests/test_hints.py` (new), and this audit note. Existing public problem hints remain available without auth through `GET /api/v1/problems/{slug}`. Unconfigured alternate backends fail safely. The offline path makes no model call, reads no submissions, and executes no code.
 
-**Commands to run (NOT run as part of this audit):**
+**Commands verified by hosted GitHub Actions** (the real gVisor integration suites require the separate local runner):
 ```sh
 npm run test:api
 npm run test:auth
@@ -209,7 +209,7 @@ npm run typecheck
 npm run build
 npm run test:e2e
 ```
-The sandbox integration is only required if its execution boundary changes; it does not in SAI-010. Observe hosted CI separately and annotate actual outcomes; a green CI is not a production security certification. No fresh local/full-workspace tests were possible here because git clone failed on DNS.
+The sandbox integration is only required if its execution boundary changes; it does not in SAI-010. Observe hosted CI separately and annotate actual outcomes; a green CI is not a production security certification. No fresh local gVisor sandbox runs were conducted; the hosted CI passed the standard non-gVisor tests, build and browser checks.
 
 ## H. Next three independently testable tasks
 
