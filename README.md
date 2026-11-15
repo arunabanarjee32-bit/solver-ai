@@ -55,7 +55,7 @@ It aims to support:
 5. Check [Project Status](docs/PROJECT_STATUS.md) before assuming a feature exists.
 6. Follow [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and [AGENTS.md](AGENTS.md) for agent-assisted work.
 
-**All project documents:** [Documentation index](docs/INDEX.md).
+**All project documents:** [Documentation index](docs/INDEX.md). **Previously suggested public repositories:** [complete TXT reference list](docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt).
 
 ## Target architecture
 
