@@ -8,7 +8,7 @@ import asyncio
 import os
 from typing import Literal, Protocol
 
-from pydantic import BaseModel, ConfigDict, Field, computed_field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, computed_field, field_validator, model_validator
 
 from solver_api.errors import APIError
 from solver_api.models import Problem, Sample
@@ -25,6 +25,14 @@ class HintRequest(BaseModel):
         pattern=r"^[a-z0-9]+(?:-[a-z0-9]+)*$",
     )
     level: Literal[1, 2, 3]
+
+    @field_validator("level", mode="before")
+    @classmethod
+    def reject_non_integer_levels(cls, value):
+        # Python bool is an int subtype; Pydantic Literal otherwise accepts true as 1.
+        if type(value) is not int:
+            raise ValueError("The hint level must be an integer")
+        return value
 
 
 class PublicHintContext(BaseModel):
