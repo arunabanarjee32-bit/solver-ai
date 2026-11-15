@@ -1,0 +1,178 @@
+SOLVER AI - PUBLIC REPOSITORIES AND STUDY RESOURCES
+Project: https://github.com/arunabanarjee32-bit/solver-ai
+Updated: 2026-11-15
+
+PURPOSE
+Consolidated inventory of repositories and resources previously discussed
+for the Solver AI / AlgoMind AI vision: a LeetCode/Codeforces/ICPC
+practice platform with secure judging, explainable AI solving, adaptive
+tutoring, and optional self-hosted fine-tuned models.
+
+IMPORTANT
+- This is a STUDY / CANDIDATE list, not a list of installed dependencies.
+- Do not merge or fork all repositories wholesale into Solver AI.
+- Review exact versions, copyright, upstream licenses, security, activity,
+  maintenance and operational requirements before reusing anything.
+- Public source code does not imply unrestricted commercial rights.
+- Dataset and problem-statement rights are separate from repository licenses.
+- Favor one modular Solver AI monorepo; use adapters/dependencies/services.
+- The current Solver AI repository has working local web, auth, API,
+  and gVisor judge foundations according to docs/PROJECT_STATUS.md.
+- In particular Monaco, Better Auth and FastAPI have been integrated.
+  Keep existing tested functionality unless a technical audit justifies change.
+- The status of each OTHER candidate is not asserted here.
+
+REPOSITORIES PREVIOUSLY SUGGESTED FOR STUDY
+Total GitHub repositories in this core list: 20
+
+==============================================================================
+A. AI COMPETITIVE PROGRAMMING SOLVERS AND TUTORS
+==============================================================================
+01. Nan-Do/phi-code
+    URL: https://github.com/Nan-Do/phi-code
+    Why: Study multi-candidate competition problem solving, tests and solution ranking; research reference, not a ready-made product.
+
+02. kagnlp/CodeGenerator (CodeSIM/MapCoder)
+    URL: https://github.com/kagnlp/CodeGenerator
+    Why: Study algorithm planning, generation, simulation/debugging and multi-agent research. Confirm current branch and maintenance.
+
+03. 0xmetaschool/dsa-gpt-tutor
+    URL: https://github.com/0xmetaschool/dsa-gpt-tutor
+    Why: Study DSA-tutor user experience, explanations and chat; not an ICPC-capable solver out of the box.
+
+==============================================================================
+B. ONLINE JUDGES, CONTESTS, CODE EXECUTION
+==============================================================================
+04. QingdaoU/OnlineJudge
+    URL: https://github.com/QingdaoU/OnlineJudge
+    Why: Study problem administration, submissions, judging and contests; audit current security, maintenance and fit.
+
+05. MonashAPS/MOJ
+    URL: https://github.com/MonashAPS/MOJ
+    Why: Study TypeScript/contest platform, ICPC scoring, scoreboards and workflows; verify AGPL obligations.
+
+06. DMOJ/online-judge
+    URL: https://github.com/DMOJ/online-judge
+    Why: Study mature online judge and contest website; GPL/AGPL obligations need review.
+
+07. DMOJ/judge-server
+    URL: https://github.com/DMOJ/judge-server
+    Why: Study advanced language runners, custom graders, interactive tasks and judge workers; review isolation.
+
+08. engineer-man/piston
+    URL: https://github.com/engineer-man/piston
+    Why: Evaluate self-hosted code execution as an alternative runner, NOT an unrestricted public execution API. Current gVisor work should not be replaced without evidence.
+
+==============================================================================
+C. WEB APP, EDITOR, UI, AUTHENTICATION, API
+==============================================================================
+09. microsoft/monaco-editor
+    URL: https://github.com/microsoft/monaco-editor
+    Why: Browser programming editor; already used by current Solver AI implementation, per project status.
+
+10. shadcn-ui/ui
+    URL: https://github.com/shadcn-ui/ui
+    Why: Reusable UI components and patterns; selectively adopt only if useful, avoid replacing working UI.
+
+11. better-auth/better-auth
+    URL: https://github.com/better-auth/better-auth
+    Why: Authentication and session library; already used in current Solver AI implementation, per project status.
+
+12. fastapi/fastapi
+    URL: https://github.com/fastapi/fastapi
+    Why: Python backend API framework; already used in Solver AI.
+
+==============================================================================
+D. MODEL FINE-TUNING, MACHINE LEARNING AND INFERENCE
+==============================================================================
+13. huggingface/transformers
+    URL: https://github.com/huggingface/transformers
+    Why: Loading and training open-weight coding/reasoning models; model licenses need separate checks.
+
+14. huggingface/peft
+    URL: https://github.com/huggingface/peft
+    Why: LoRA/QLoRA parameter-efficient fine-tuning.
+
+15. huggingface/trl
+    URL: https://github.com/huggingface/trl
+    Why: Supervised fine-tuning and preference/RL algorithms including GRPO; use after baseline evaluation.
+
+16. unslothai/unsloth
+    URL: https://github.com/unslothai/unsloth
+    Why: Efficient LoRA/QLoRA training; core vs optional component licenses may differ.
+
+17. vllm-project/vllm
+    URL: https://github.com/vllm-project/vllm
+    Why: High-throughput serving of compatible open-weight models, typically on separate GPU infrastructure.
+
+==============================================================================
+E. SEARCH, TELEMETRY, INFRASTRUCTURE
+==============================================================================
+18. meilisearch/meilisearch
+    URL: https://github.com/meilisearch/meilisearch
+    Why: Optional fast problem library search; PostgreSQL search may suffice initially; review edition terms.
+
+19. open-telemetry/opentelemetry-js
+    URL: https://github.com/open-telemetry/opentelemetry-js
+    Why: Traces and metrics for web/Node services; add when required by running services.
+
+==============================================================================
+F. DATASET / RESEARCH REPOSITORY
+==============================================================================
+20. google-deepmind/code_contests
+    URL: https://github.com/google-deepmind/code_contests
+    Why: Competitive-programming dataset/reference from AlphaCode research; check rights for all included content before training or redistribution.
+
+==============================================================================
+OTHER PUBLIC RESOURCES DISCUSSED (NOT ALL GITHUB REPOSITORIES)
+==============================================================================
+
+MODEL CHECKPOINTS (Hugging Face - specific licenses/version changes apply)
+- Qwen2.5-Coder-7B-Instruct:
+  https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct
+- Qwen3-4B-Thinking-2507:
+  https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507
+- Qwen3-Coder-Next:
+  https://huggingface.co/Qwen/Qwen3-Coder-Next
+
+DATASETS / BENCHMARKS
+- TACO (Hugging Face dataset):
+  https://huggingface.co/datasets/BAAI/TACO
+- LiveCodeBench (benchmark website):
+  https://livecodebench.github.io/
+- Google DeepMind CodeContests: see the GitHub repository listed above.
+- USACO Guide (learning reference; content permissions must be checked):
+  https://usaco.guide/
+
+COMPETITOR / PRODUCT REFERENCES (STUDY WORKFLOWS, DO NOT CLONE CONTENT)
+- LeetCode: https://leetcode.com/
+- Codeforces: https://codeforces.com/
+- AtCoder: https://atcoder.jp/
+- HackerRank: https://www.hackerrank.com/
+
+==============================================================================
+RECOMMENDED STUDY ORDER TO AVOID UNNECESSARY CODEX SPEND
+==============================================================================
+1. Read docs/PROJECT_STATUS.md and existing tests before adding dependencies.
+2. Keep existing Next.js/Monaco, Better Auth, FastAPI and gVisor work.
+3. Review phi-code and CodeSIM as AI research references, not copy-paste APIs.
+4. Use judge references (Piston/QingdaoU/DMOJ/MOJ) only for specific gaps,
+   after threat model, license review and proof that current judge needs change.
+5. Add a model-provider interface and verifiable tutor workflow before training.
+6. Benchmark untuned models before choosing Hugging Face/Unsloth/vLLM stack.
+7. Defer enterprise search, large contest engines and expensive GPU work
+   until validated feature requirements demand them.
+
+HOW TO CONTRIBUTE A NEW REFERENCE
+- Provide exact repository URL and the problem it solves.
+- Note whether it is a dependency, service, reference or rejected option.
+- Review license, health, security, integration cost and current alternatives.
+- Record an ADR for a major architecture choice, and test actual integration.
+- Update this file plus docs/OPEN_SOURCE_STRATEGY.md when adopted or rejected.
+
+SEE ALSO
+- docs/INDEX.md
+- docs/OPEN_SOURCE_STRATEGY.md
+- docs/ARCHITECTURE.md
+- docs/PROJECT_STATUS.md
+- docs/CODEX_PLAYBOOK.md
