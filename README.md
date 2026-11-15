@@ -2,7 +2,7 @@
 
 **An open-development project aiming to build an AI-native platform for DSA, competitive programming and ICPC preparation.**
 
-> **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. AI, contests and production deployment remain planned. See [Project status](docs/PROJECT_STATUS.md) for executed validation and limitations.
+> **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. An authenticated, author-written **offline hint API** is available as a foundation for future AI; model inference, contests and production deployment remain planned. See [Project status](docs/PROJECT_STATUS.md) for executed validation and limitations.
 
 ## Run locally
 
@@ -55,7 +55,7 @@ It aims to support:
 5. Check [Project Status](docs/PROJECT_STATUS.md) before assuming a feature exists.
 6. Follow [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and [AGENTS.md](AGENTS.md) for agent-assisted work.
 
-**All project documents:** [Documentation index](docs/INDEX.md). **Previously suggested public repositories:** [complete TXT reference list](docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt).
+**All project documents:** [Documentation index](docs/INDEX.md). **Previously suggested public repositories:** [complete TXT reference list](docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt). **Audited AI implementation plan:** [2026-11-15 architecture and research report](docs/AUDIT_AND_AI_PLAN_2026-11-15.md).
 
 ## Target architecture
 

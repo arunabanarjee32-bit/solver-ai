@@ -219,7 +219,8 @@ def test_stale_keys_refresh_before_accepting_valid_signature(issuer):
     token, _, urls = issuer
     assert authenticate(token()) == "user_123"
     state = next(iter(auth._caches.values()))
-    state.fetched_at = 0
+    # A runner may have uptime under 60 seconds; zero is not necessarily stale.
+    state.fetched_at = time.monotonic() - auth._CACHE_SECONDS - 1
     state.next_refresh_at = 0
     assert authenticate(token()) == "user_123"
     assert len(urls) == 2

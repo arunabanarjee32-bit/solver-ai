@@ -32,6 +32,12 @@ cd services/api
 npm run dev:web
 ```
 
+## Offline hint API (SAI-010)
+
+The API has an optional authenticated `POST /api/v1/hints` contract, with a JSON object `{"problem_slug":"signal-sum","level":1}` and a valid short-lived `solver-api` Bearer token issued by Better Auth. Levels 1–3 return the existing **author-written** public hint with `source="authored"`, `provider=null`, `ai_generated=false` and `schema_version="1"`. The browser currently reveals authored hints directly from the public problem catalog; it does not call this endpoint.
+
+`SOLVER_HINT_BACKEND=authored` (the default) requires no AI provider key, outbound model request, new database, or paid service. Any other setting fails with `HINT_PROVIDER_UNAVAILABLE` until a separately reviewed provider is implemented. Source code, hidden grading tests and worker credentials are not inputs to this hint API. The future real-provider adapter must supply per-account quotas, token and cost budgets, controlled egress, contest-integrity enforcement and privacy review before enablement.
+
 ## Real isolated judging
 
 The trusted control worker requires a working **rootless** Docker daemon with the gVisor `runsc` runtime registered. This managed image supplies it. Ordinary Docker containers or host subprocesses are never a fallback. Other development machines need a supported gVisor installation; see [upstream instructions](https://gvisor.dev/docs/user_guide/install/). Do not change the managed cloud daemon or install an unrelated VPN to bypass restrictions.
