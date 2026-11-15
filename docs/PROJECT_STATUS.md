@@ -2,6 +2,10 @@
 
 Last verified: 2026-11-14 (Asia/Calcutta). Evidence describes local development checks, not a hosted CI result or public production release.
 
+## In review: SAI-010 offline hint API
+
+A separate review branch, `feat/sai-010-authored-hint-contract`, proposes an authenticated `POST /api/v1/hints` contract with a provider-neutral interface, bounded inputs/outputs and honest author-written/offline provenance. It does **not** integrate a real AI model, change the public authored hints, or touch the judge. This proposed work is **not included in the baseline validation counts below**; fresh hosted CI and end-to-end outcomes are not asserted. See [2026-11-15 audit](AUDIT_AND_AI_PLAN_2026-11-15.md).
+
 ## Present now
 
 - `apps/web`: Next.js/TypeScript practice catalog, original statements/samples, locally bundled Monaco Python/C++17 editor, isolated browser drafts, authored hint ladder and responsive UI.
