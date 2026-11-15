@@ -15,6 +15,7 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 | [Project status](PROJECT_STATUS.md) | Honest implemented-versus-planned ledger |
 | [Open-source strategy](OPEN_SOURCE_STRATEGY.md) | Public repository candidates, licenses and integration logic |
 | [Public repositories and resources (TXT)](PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | All 20 previously suggested GitHub repositories plus models, datasets and benchmarks |
+| [Audit and AI plan (2026-11-15)](AUDIT_AND_AI_PLAN_2026-11-15.md) | Source-based architecture review, 20 references, two AI research selections and implementation roadmap |
 | [AI solver](AI_SOLVER.md) | Planning, testing, hints and agent workflow |
 | [Judge security](JUDGE_SECURITY.md) | Threat model and untrusted code execution |
 | [Model/data/evaluation](MODEL_DATA_EVALUATION.md) | Training plan, dataset rights and benchmarking |
