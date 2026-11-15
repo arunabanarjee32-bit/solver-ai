@@ -14,6 +14,7 @@ from solver_api.auth import require_user
 from solver_api.body_limit import BodyLimitMiddleware
 from solver_api.catalog import PROBLEMS
 from solver_api.errors import APIError
+from solver_api.hints import HintRequest, HintResponse, request_hint
 from solver_api.models import Difficulty, ErrorResponse, Problem, ProblemPage, ProblemSummary
 from solver_api.submissions import (
     Capabilities,
@@ -145,6 +146,18 @@ def get_problem(slug: str, request: Request) -> Problem | JSONResponse:
         if problem.slug == slug:
             return problem
     return error_response(request, 404, "PROBLEM_NOT_FOUND", "This problem does not exist.")
+
+
+@app.post("/api/v1/hints", response_model=HintResponse)
+async def create_hint(
+    payload: HintRequest,
+    _user_id: Annotated[str, Depends(require_user)],
+) -> HintResponse:
+    # Only a signed account and a publicly readable seed problem may request help.
+    problem = next((p for p in PROBLEMS if p.slug == payload.problem_slug), None)
+    if problem is None:
+        raise APIError(404, "PROBLEM_NOT_FOUND", "This problem does not exist.")
+    return await request_hint(problem, payload.level)
 
 
 @app.get("/api/v1/capabilities", response_model=Capabilities)
