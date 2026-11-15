@@ -27,7 +27,11 @@ def client(monkeypatch):
     ).decode()
 
     async def fetch(_url):
-        return {"keys": [{"kid": "hint-key", "kty": "OKP", "crv": "Ed25519", "alg": "EdDSA", "x": x}]}
+        return {
+            "keys": [
+                {"kid": "hint-key", "kty": "OKP", "crv": "Ed25519", "alg": "EdDSA", "x": x}
+            ]
+        }
 
     monkeypatch.setattr(auth, "_fetch_jwks", fetch)
 
@@ -163,7 +167,7 @@ def test_provider_failure_and_malformed_response_are_redacted(client, monkeypatc
             }
 
     for backend in (Broken(), Malformed()):
-        monkeypatch.setattr(hints, "select_hint_backend", lambda: backend)
+        monkeypatch.setattr(hints, "select_hint_backend", lambda backend=backend: backend)
         response = ask(client)
         assert response.status_code == 503
         assert response.json()["error"]["code"] == "HINT_PROVIDER_UNAVAILABLE"
