@@ -111,6 +111,33 @@ Repository metadata and default-branch SHA were fetched on **2026-11-15**. The a
 
 **Unverified for 18 non-primary candidates:** exact transitive dependency exposure, full architecture, production threat models and compatibility tests. No external project source is incorporated in this branch.
 
+### Source-tree triage: 18 additional candidates
+
+Beyond the two deep AI references, GitHub README and top-level tree were inspected for the other 18 candidates. This verifies project structure and stated purpose, but **not full dependency trees, runnable integration or security**. No such code was imported.
+
+| Candidate | Observed upstream directories / workflow | Compatibility, limits and action |
+| --- | --- | --- |
+| dsa-gpt-tutor | Next.js `src/`, application config and package manifest | AI chat and guided-question UX could inspire a future tutor UI. No demonstrated isolated CP judge; maintain separate ownership and no copied content |
+| QingdaoU OnlineJudge | Django services `account/`, `contest/`, `judge/`, `problem/`, `submission/` | Educational contest admin design; old default-branch head (2024-10). Whole Python/Vue platform would duplicate auth/API and expand deployment/security surface |
+| MOJ | `apps/`, `packages/`, `convex/`, `infra/`, `actions/`, `docs/`; describes live verdicts and ICPC/IOI contest formats | Valuable contest model, but Convex/TS platform does not replace current Python judge. **LICENSE inspected:** AGPL-3.0-or-later, requiring deliberate legal review of network-use and distributed modifications |
+| DMOJ online-judge | Django `judge/`, `websocket/`, `templates/`, `dmoj/`, `requirements.txt` | Extensive contest and verdict workflows; integrating wholesale conflicts with existing auth + FastAPI. AGPL-3.0 and operational dependency review necessary |
+| DMOJ judge-server | `dmoj/`, `testsuite/`, `contrib/`, Python `pyproject.toml` plus runtime support docs | Interactive grading and custom validators worth studying if product needs them. Host OS and security assumptions need assessment; no direct substitution for gVisor, AGPL-3.0 |
+| Piston | `api/`, `builder/`, `cli/`, `packages/`, `piston/`, lowercase `readme.md` | General execution framework; documented stock deployment/runtime restrictions in ADR 0002. Wrapper MIT, bundled isolation dependency obligations and privileged operation require separate assessment. Existing controlled runner preferred |
+| Monaco Editor | `src/`, `webpack-plugin/`, `samples/`, `test/`, `ThirdPartyNotices.txt` | Bundled editor in existing web app. Keep tested version and notices; upstream latest is not automatically the release currently installed |
+| shadcn/ui | `apps/`, `packages/`, `templates/`, `skills/`, pnpm monorepo | Incremental components only, while keeping existing accessible workflow; importing whole design system creates churn without direct learner value |
+| Better Auth | `packages/`, `docs/`, `test/`, `e2e/`, `SECURITY.md` | Existing signed auth authority. Scope future upgrade to pin/version and run real auth regression suite; avoid creating second identity service |
+| FastAPI | `fastapi/`, `docs_src/`, `tests/`, `pyproject.toml` | Existing Pydantic/FastAPI system; reuse the current API. Avoid replacing it with another upstream backend |
+| Transformers | `src/`, `tests/`, `examples/`, `benchmark_v2/` | Model training/inference framework on adequately provisioned hardware. Not required for API-based tutoring; checkpoints have separate model terms |
+| PEFT | `src/`, `method_comparison/`, `examples/`, `tests/` | Low-rank fine-tuning only after rights-approved dataset, reproducible baselines and external GPU budget |
+| TRL | `trl/`, `examples/`, `tests/`, `MIGRATION.md` | Training algorithms such as SFT/GRPO; environment and reward correctness costs unjustified before verified judge/evals |
+| Unsloth | `unsloth/`, `studio/`, `docker/`, `tests/` | Optional efficient training and desktop tools; GPU and optional-component license checks needed; no immediate integration |
+| vLLM | `vllm/`, `csrc/`, `rust/`, `docker/`, `benchmarks/` | High-throughput GPU inference service; only add if own throughput and economics exceed simpler provider API. Separate service/resource isolation |
+| Meilisearch | Rust `crates/`, `workloads/`, `Cargo.toml`, `LICENSE`, `LICENSE-MIT`, `LICENSE-EE` | Current 3-problem catalog needs no standalone search. **LICENSE inspected:** MIT **and** BUSL-1.1 (enterprise sections); evaluate exact edition on adoption |
+| OpenTelemetry JS | `api/`, `packages/`, `experimental/`, `integration-tests/`, `e2e-tests/` | Trace/metrics instrumentation when live operations require it; never emit source, model prompts, tokens or hidden tests |
+| DeepMind CodeContests | `contest_problem.proto`, `execution/`, `third_party/`, `WORKSPACE`; repository archived | Useful dataset schema and baseline reference, not a blanket import. **LICENSE/README inspected:** Apache-2.0 for code, CC BY 4.0 claimed for non-code; source platform/problem rights still require legal review before usage/training |
+
+**Maintenance snapshot:** Head commits and licenses in the matrix above were retrieved on 2026-11-15. Most popular frameworks and model libraries had commits during October–November 2026; CodeSIM's reference head dates June 2025, phi-code's December 2025, QingdaoU's October 2024, and DeepMind CodeContests' latest default head dates January 2023. Repository star counts and GitHub `updated_at` are not proof of active code maintenance. Model weights, training accelerators and licensed data are **not installed** in Solver AI. Copying code, running bulk dataset ingestion, or provisioning external GPUs would require later approval.
+
 ## D. Exactly TWO selected primary research repositories
 
 ### 1. CodeSIM / MapCoder (`kagnlp/CodeGenerator`, `9cf09ee6c788bfda3b7e1524e88be3447098eb24`)
