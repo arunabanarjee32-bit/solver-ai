@@ -1,0 +1,1672 @@
+{
+  "baseline_commit": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
+  "tracked_files": 238,
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 192,
+      "sha256": "2d3c19b4aac52c2b695ced562d47bafda7501300a2f5d4aa3f513ecf17868ef9",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 751,
+      "sha256": "3544d6fc4833eb8380faff6d7ba7a2a2c7608d754150b7d4b395a290e8d7f36e",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 1130,
+      "sha256": "8b38d6f0fa9d5b25643c5b0dc9f0018117c93097f01434d9fda37e21b9a8c3fb",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 578,
+      "sha256": "18fff8cf8bc5612facb44945e4bc11848c297c7bfbf7c8ae20a598fb24156c16",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": ".node-version",
+      "bytes": 8,
+      "sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": ".npmrc",
+      "bytes": 42,
+      "sha256": "dc9a82b186d9fa042dae69feff0b8b63caf7fd20c0975d79961c4029a0b7f4eb",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": ".python-version",
+      "bytes": 8,
+      "sha256": "f50159fad3f4319868eb38717b91d55843c41e9803014c8de05e116a6d0bcfdc",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2841,
+      "sha256": "c5a8acad764d34f4d8a3c1d93d588be6a0f17b21cc2d35ae54173ed8eb12457c",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/.gitattributes",
+      "bytes": 136,
+      "sha256": "a0a0bf50ea0eb2734ab720d39ce039ba5aabf9e500a27779f8e6a50fab8abee0",
+      "ownership": "preservation and recovery",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/.gitignore",
+      "bytes": 177,
+      "sha256": "9308484ce44b2e3f09e9388681973a997a4f14dff98d119295be3e11f5b1f768",
+      "ownership": "preservation and recovery",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/README.md",
+      "bytes": 2876,
+      "sha256": "49a839f7036e6511ed9387fafc473c00c5a46cb3a8ef035313f7de103d7ab6c8",
+      "ownership": "preservation and recovery",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/archives/CodeGenerator-master.zip",
+      "bytes": 11303470,
+      "sha256": "0aaf432271c1381e11eaaf96dcfe10e3c7031f01c49e6c359a9b4fda67646ddb",
+      "ownership": "preservation and recovery",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/archives/phi-code-main.zip",
+      "bytes": 1380896,
+      "sha256": "89aab1ad1cd2b9be99713563a0929df92e91ddaeb04e656b28ce4d558fb17582",
+      "ownership": "preservation and recovery",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/.env.example",
+      "bytes": 302,
+      "sha256": "18b493a0a6651ff53032536a752ff28763f4bbe26fb982fd23db2c5d548ab739",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream",
+      "bytes": 139,
+      "sha256": "5371b8e1481bbd6f902c7f308b748ef417daeaeb991f303e8118e21c9b4f834c",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/LICENSE",
+      "bytes": 1063,
+      "sha256": "7eee89d11ebb0e506e105a22c9f66c4a85615c7552bcba98f3f0c46d6c31cdbc",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/README.md",
+      "bytes": 8824,
+      "sha256": "0ffca945d78dcb2e69376425498230923ff80ffcb65d15e4ed82cd7746ee1358",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl",
+      "bytes": 390728,
+      "sha256": "5d76c903bf3a997ca0cc59b7f7cf9765434a87e8d742868db5a4b3f7fef7a1cb",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl",
+      "bytes": 238806,
+      "sha256": "1ee3131f7bca60c22cae3bd6d695022c2aaa56d8df39fbf1e1fb64976953e3d9",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl",
+      "bytes": 1321259,
+      "sha256": "1c22b1f71e3ed79bc90ce2a2b70e10c9d5dcbae8a4b25ec82e4cc0ffc6301848",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl",
+      "bytes": 289463,
+      "sha256": "9985043411e4aab4462263009f60d38cbebccda3fdc7fcae8797510fbe6339ff",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl",
+      "bytes": 563743,
+      "sha256": "ccf64ceae9c5403bf50a044cb6d505bfd2a2963ee58338ba268fd65beab92a9f",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl",
+      "bytes": 9258047,
+      "sha256": "7c4b41c363f25a8b5a764478c8ca8e14fd1cf35f86b6f665a092f8bde14e41f9",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl",
+      "bytes": 346178,
+      "sha256": "20de4e7d41953df164bc96106d265e13b200323e29527508ced5b7d28a8b9075",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl",
+      "bytes": 18159029,
+      "sha256": "bda417d0e06ded34ee62255b84ac386e8535137b82f8c4f905adda0b93d9f78b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl",
+      "bytes": 203433,
+      "sha256": "4d596fca3dc2318e1469ed17517e72d2477f3b6d0943d658a9917d4a0ca11b5b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json",
+      "bytes": 11346609,
+      "sha256": "26b0b526ad96f7abbf11057b9547febf8237ce0bff00cad96fefc650e34374d5",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png",
+      "bytes": 952858,
+      "sha256": "399174882418d71a580217f7b8aa8306d63bd4a8139af65af99655d585ae2719",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png",
+      "bytes": 233684,
+      "sha256": "5f9b2345c916182881bbfd2817fa74510d7fe80fc2829b0912bfae8462819da8",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png",
+      "bytes": 143142,
+      "sha256": "1c0073533dd67a3a23dab41c450252773c5b7ba4623ee24d8fb518e4529a863d",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png",
+      "bytes": 191444,
+      "sha256": "aa5af520de2354d98edba347cb4ac9e3510d981d882805549c58044837139b7b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/requirements.txt",
+      "bytes": 161,
+      "sha256": "8cb3ad5a0880ca7372deaeb2b59127c55b3356054c7d4658e5e38165d00bb2c4",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py",
+      "bytes": 291,
+      "sha256": "1fcdef1fe286ccca46c73f5a0a779a5fdf725072f33739ff8104362c33f7a16e",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py",
+      "bytes": 2040,
+      "sha256": "3d601c742501774fadd3c98d89850f51a431b20d2af70dfd9f18b186603b0032",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py",
+      "bytes": 57,
+      "sha256": "0ba4318dc7c622eadfe726b93b85a15fccff6a3ab3803528df7d8a05d6e90459",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py",
+      "bytes": 2041,
+      "sha256": "38f95b0c91efc46ee702850ed90168cf552ef1459a5ad1c2d83e9c09e9d85b1f",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py",
+      "bytes": 1621,
+      "sha256": "f51533cb313f7ce10a31c9f199b88016372ff2bda50353f23cb33b09b2df425a",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py",
+      "bytes": 611,
+      "sha256": "a2b4b107f57cdf3ab376f76453807ad27a3356c125775762d30aa29088982cdc",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py",
+      "bytes": 988,
+      "sha256": "08f597bca5743d4ed3705718ac75d5a68a0b3c255e90ddf6c78385535a576db5",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py",
+      "bytes": 1474,
+      "sha256": "4384f9f308ce4fe3066a3003aa204433805a99afb2a4050fa6c461866864ac53",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py",
+      "bytes": 1625,
+      "sha256": "db9ce9b3d017d22cb50be43ceaaf5302fad08672d43dadcbf0d9f06d2e9c5991",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py",
+      "bytes": 2084,
+      "sha256": "ad9394b0d4b39903dd4ceb7b90907d3b09926562315cd6fb4b8b5e193906a8d7",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py",
+      "bytes": 3911,
+      "sha256": "9cfa7e5d0e43485fc135a859bc48bc255f70b5152dccf3c9536541e6b07580db",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py",
+      "bytes": 1919,
+      "sha256": "d8fa82c5fdcf939744d681d5deef0a84cd7ba1e0bd21afda7389977fe6ae9e62",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py",
+      "bytes": 3320,
+      "sha256": "fc052b1d4e2eaa2285dea91d7845a7424d8dfdac33c84f334742355e52816d5e",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py",
+      "bytes": 4930,
+      "sha256": "2847b67050f67fd2605f126ac4e0e06c3240f02e276854a83b87669b35410fd8",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py",
+      "bytes": 612,
+      "sha256": "1a270f58061b9f649e6189668af6440581e7205c7f1978bbcbb6d11e7e345252",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py",
+      "bytes": 1784,
+      "sha256": "1a5c2d5ab990d4e8a56abe45a16055b17aef6a5c1f76278a072f2c88f8170f39",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py",
+      "bytes": 1948,
+      "sha256": "1c08aebece1b3f8b89d37097796ecdbafb1a4cf04b4e1bff49a53a1ffadf9106",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml",
+      "bytes": 1754,
+      "sha256": "d28676134201c30dc4301423093a110c74497cad507fe592eab3658fe355dab2",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py",
+      "bytes": 1107,
+      "sha256": "c4ba19ffc459bf333e6e0252ba49cd18e62cacad85e80708b4e0b55590daff8f",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/main.py",
+      "bytes": 5066,
+      "sha256": "10e76dd1d70e26099f5066ba85d93e4348faffcb6052a77ef3ed1ce7f623420b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py",
+      "bytes": 2929,
+      "sha256": "1ca8ec334a817891db03b7aa90763f3c1c0c0fa0b776471f691001625ee8705b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py",
+      "bytes": 368,
+      "sha256": "f2283c73dba72911d20183d632295a53ceba3cad31ce84a1797d4700556146b0",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py",
+      "bytes": 2886,
+      "sha256": "97a819d5deb3d1f6fa70629ea5ca8392c7ee3ff63846c1cd704f6303efc8a475",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py",
+      "bytes": 2247,
+      "sha256": "5695ad8e3a23b978a0204dac49108ec5a253e217398db4a09ab8cdad41f6128c",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py",
+      "bytes": 749,
+      "sha256": "3f97734a3df40f7ce2fe215e4cee527d2b3ef2e42157e16be99448ec9427a2d1",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py",
+      "bytes": 6477,
+      "sha256": "931a5e39b17c09c88add0541184aeb542dc0f96a5525b63e303cb00857699dd5",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py",
+      "bytes": 1480,
+      "sha256": "c2e0d695955554a81aad9bb6fef87a57c1adf20abe0b47505eb09bdbee1f06c8",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py",
+      "bytes": 4840,
+      "sha256": "03937a8f21334b0dedfad8d953e975d058c95769b1789357cad42c3ae15889d9",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py",
+      "bytes": 36627,
+      "sha256": "80663d99818f6b92ea7bd28ba52199a14a2296999c8abd895a4c2572802ba602",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py",
+      "bytes": 17822,
+      "sha256": "1bda0671ef4d5b77b4ea1cd771b3ad9a25ea1c76359fedc4f2ec3a9a68d523ce",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py",
+      "bytes": 596,
+      "sha256": "ac9357a9fc8c3386dae532986a04dd6997a1e0923c1f611d529c7e270f3818b9",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py",
+      "bytes": 16369,
+      "sha256": "54a5d32dd3d56e553c674dda595c17b3d8762cc2bb67ad6e121bc7c8a948227a",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py",
+      "bytes": 1540,
+      "sha256": "51322030955d876d5bc80f08621ae85846930a9a12b04360d3892a92865c9355",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py",
+      "bytes": 32477,
+      "sha256": "06149bc1c71438fcd016caa7e7d8e1075c03b6c3cfcbc5399291e39779f460ed",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py",
+      "bytes": 20591,
+      "sha256": "70e9f20f9d482668334971829674ad7759d9e674f630cdfa3c66bc3159a35775",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py",
+      "bytes": 21379,
+      "sha256": "498149f0f9b4cab5fcf4324f8f9a3f3f003ffcbfca8afc2de97deb22108440ca",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py",
+      "bytes": 16897,
+      "sha256": "af6a10a36aeb726ad105d64762fbd73231f26d9a05fab10118b7892620aba841",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py",
+      "bytes": 16568,
+      "sha256": "386f5d46e34014290b158b03b65c6b2718c5fccf1a66e2fd75f4c578c032f003",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py",
+      "bytes": 15008,
+      "sha256": "5395f442fc70211e56f44e7f8c01293a6a08604aec7c759e3cc993b8a9439ac7",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py",
+      "bytes": 1380,
+      "sha256": "d5e975c7f58ab3f1da8637b866b4f2199f49aad6d10c96c0bb815d8757191a7f",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py",
+      "bytes": 2970,
+      "sha256": "4b10b75d0c2fbb3c4c85af4a47eb0fb52dfbda0b1b8d476b6ee0964d4542a52c",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py",
+      "bytes": 1669,
+      "sha256": "a87093218af0fd50cb543e1e7b30c9d27862f8522211a9b44f1aeddf5c1d62f2",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py",
+      "bytes": 1053,
+      "sha256": "067d95670b98c40ac07e1db240fad04f66f922f8cf54174cb24fcc81dd4cbca7",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py",
+      "bytes": 3035,
+      "sha256": "d4b28e702482e70cce16998f047ad5ffdd1a98b7d134eda3b16803d68fd32afc",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py",
+      "bytes": 1377,
+      "sha256": "ba7470dbc6e4dd3bf7c37b9de3409a9e8b0b4a627736b27229bac8c9926dd1c6",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py",
+      "bytes": 4744,
+      "sha256": "ed4d32a985b7fa7d55d7c115ff856354da2aff8739f25b7a391b3302527ae628",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py",
+      "bytes": 1561,
+      "sha256": "602b580bffbba2c3db2493771c56dd130b832b45fa0f2d456c998dfbbd5619b1",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream",
+      "bytes": 312,
+      "sha256": "9a551ad26a55806e598280e089243881ce5fad1dca026493f71062775c23dc0b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/.gitignore.upstream",
+      "bytes": 34,
+      "sha256": "f1f9b27485dc873cbc0e9ebbba5b9482f80798e43770616eb49e78cb3cde0d23",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/README.md",
+      "bytes": 9461,
+      "sha256": "c48b9f38e366542d12a9640ad843967013c37cac572b7af51b1ce63e2751f80d",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt",
+      "bytes": 670,
+      "sha256": "685912f40483981a366251d00438834c07477118ea5f21f254bd64feb682c2c8",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt",
+      "bytes": 1106,
+      "sha256": "2b69302d80d5f5cf5f307d8fd5ca0e9c17263333f8f8e58e1917d39c7b8a2cd6",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt",
+      "bytes": 589,
+      "sha256": "f625f1985600be9efc5b5c8f50cf1f49beae6b6b03eeafc118a906a564f20d8b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt",
+      "bytes": 1786,
+      "sha256": "22d1ed0b24e87214dbd6295e221811c2962e35d64ed2799e7bc68deab4e27150",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt",
+      "bytes": 2509,
+      "sha256": "4a66d69f8a51d5536abeb7058897ceb79318496feeaa116deab91908bf54e076",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl",
+      "bytes": 12282,
+      "sha256": "93416483ea5db82efa82024d231272849c0d6d1006f3ebffa41a59c6b4097e35",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt",
+      "bytes": 2200,
+      "sha256": "4fa08aa11fdc6aede457ae85fee45127dbf680151044b9fae1c2dd86476b1067",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl",
+      "bytes": 2963,
+      "sha256": "6ed501413e10f9c7d41d79c2c2365af7c57ec81ad1fb3d3e257ee1fde4a9bd1a",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt",
+      "bytes": 2627,
+      "sha256": "488e640a75f59e51348b0ed7d6a9eec10b4e06f997d82c2aa2881a324b3284b5",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl",
+      "bytes": 36868,
+      "sha256": "07a41e0702966a00bd71ff9aaa2a2838fdcc20489265e75f3f75b00602c0e604",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt",
+      "bytes": 10094,
+      "sha256": "6440da4e0af77b161cc29112bb7ed2fcb65ef9915a67aefd3a63e4de18ab4cc7",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl",
+      "bytes": 66609,
+      "sha256": "b6843344d8eec2ca99687119baada37da7bec23b741d049825d4827f3507db43",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt",
+      "bytes": 681,
+      "sha256": "49cbe7933208eacc8595c0669a9d7b4bd9a9001d9e013a8c68a232a7e181c0ff",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt",
+      "bytes": 691,
+      "sha256": "a4098eb12fed03b1c36f0b17805af9bd721b14573aad81d8ad4c38d4a10a81da",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt",
+      "bytes": 1753,
+      "sha256": "89dc0f438680999724e6bb7a656582f9263745c5c04457d7f71d4f53990d639b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt",
+      "bytes": 2220,
+      "sha256": "46661eb2202ef211d6befdbb7121f8bf1dbe86c30965de8c2d8044852d7d21e6",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl",
+      "bytes": 11527,
+      "sha256": "d57e8a52badc2b4d72061d8a1f11f406f73e078a0865032ba3de53fae9425614",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl",
+      "bytes": 20671,
+      "sha256": "b6691615bcba96e0b3e105e6e82f4d67293634eea5e146188e696440d3d59fd3",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl",
+      "bytes": 38570,
+      "sha256": "930c3b63ca5947c278f35adc0f2a73d07036465c1b8f392b9e5ccc7694efd0fa",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl",
+      "bytes": 33392,
+      "sha256": "8f3daf0fc627679ff33726da18a2792462da6b87b04aac7e18c0582d2eb84b75",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/curses_ui.png",
+      "bytes": 95963,
+      "sha256": "15aac3d48751ac3c5f991047e91ff8bafe32088d941f69f2876b710587a80008",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl",
+      "bytes": 134,
+      "sha256": "0d3bc016cce6e9c432cee4db574a8832f1852b57d5803d0d959525381f2f679b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl",
+      "bytes": 133,
+      "sha256": "fb324a6cde583e1f8b7230c0650ea81702f4402c42712946be8f42db410dab72",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl",
+      "bytes": 134,
+      "sha256": "104c37dd47027ce03750bcfa50e92d43a31fac5a40731318e8b275777a98f71a",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl",
+      "bytes": 134,
+      "sha256": "44589fcb1d3d8280dbaa0623b21649cc2002142cb1f40c30914f36cf5ba6b965",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl",
+      "bytes": 133,
+      "sha256": "440f85b46fa25fc0f6c4edc2ca6bd23989d9bc95efc0cccfea520eaad62cc4c8",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py",
+      "bytes": 3233,
+      "sha256": "e15d53930b592ec775f24b2f20ae16dff23813e8b6c0f7d020e69c5f170634da",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py",
+      "bytes": 3309,
+      "sha256": "b9245121f9141ff306ffe6491af4f693e3c9eac0da67820caf5c3651b3cb1f54",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/log_config.py",
+      "bytes": 628,
+      "sha256": "6eb7e8fd4da7739f188e0b9c846b50a2602c8015b611504d1e3bfdaca9418006",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py",
+      "bytes": 1163,
+      "sha256": "791587d1126d4effb291e7abefabd1ce532ea3e5f89b8492cb799b40beecd3a0",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/train.py",
+      "bytes": 6361,
+      "sha256": "2893154c9c519cf3cfdceb4189cbab78a668d662827498877bed2bda3f67b84c",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+      "bytes": 5020,
+      "sha256": "2208031441ddc0d457db56863275de4e992439cbfb0bb94bb96d2d74833e4f50",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py",
+      "bytes": 5061,
+      "sha256": "826a1a44d8b7c54b0fb58f9c196582ad91cebb9bff5bfbaf4f3e85576c5aa110",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py",
+      "bytes": 13792,
+      "sha256": "ec8dfe4b243dcb374b3b538ce4091d76e90596044c27a38c8d4b9af41c23341a",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt",
+      "bytes": 2181,
+      "sha256": "b244bb6863a4b0380135d5f0c551e05a421a8beee87dcc56a3bf2f7dc26e450c",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+      "bytes": 5906,
+      "sha256": "0c134f89009060bf39a765a7d3b8d8916ee57f78c0054712bc765de2b5076c13",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt",
+      "bytes": 1990,
+      "sha256": "4c884e7e1feea744460052135e596c926b63fbfed1fc4aae0f9968cca8442a1d",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/log_config.py",
+      "bytes": 628,
+      "sha256": "6eb7e8fd4da7739f188e0b9c846b50a2602c8015b611504d1e3bfdaca9418006",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/main.py",
+      "bytes": 6279,
+      "sha256": "1f654fdaf86183412c0141a8c4534391f7ea67f76f190f26a582da8c7e5f552b",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/requirements.txt",
+      "bytes": 96,
+      "sha256": "39e1e5f86ecdf224adbf02c6b8381c55917f4e4b965dff13dc3c93d09d4d8b48",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/terminal.py",
+      "bytes": 3248,
+      "sha256": "606c0a7325e06f9892e8e6cf32a39fd775deaddb9e7967e334a60c51973c1f63",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/utils.py",
+      "bytes": 2890,
+      "sha256": "a8a8052c45dfa24b932bf72eca0cdd6d1e4aa1191ad34b3fdc4037e7b2f820ae",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/web_ui.py",
+      "bytes": 6390,
+      "sha256": "d40c7a2a93f371756af2acc5d997e1cecd231b8d35462a189eb30e017b8ec78f",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/terminal_mode.png",
+      "bytes": 718796,
+      "sha256": "bd44f1018f12b2c0386ba57e01b5f0caebc0ba583810ed03250b99fe158ef65f",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/webui.png",
+      "bytes": 562377,
+      "sha256": "b5af382a7d32458430e7bab55bf0e3e0cf446ec6163e47b904bfb3c51a41a975",
+      "ownership": "inactive upstream research",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "AnalyseFuture/manifest.json",
+      "bytes": 61949,
+      "sha256": "092b5d22805ff4f15ee0767c7bccd0a5955f3312f7369de3c7bdd15b1fb7fe1b",
+      "ownership": "preservation and recovery",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2797,
+      "sha256": "024e895eab0584423667d569fc9aa9236ec9f9647344c95ad4f8703991b05f8d",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "PROJECT_IDEA.txt",
+      "bytes": 25049,
+      "sha256": "de24a3d98f3f69d7edb33d3701a67649813c98e9334888957c68af8b64e2476f",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "README.md",
+      "bytes": 7012,
+      "sha256": "6ce90a63b799ca9536bf81f2e6e3284a52514889d4c0032e7b55c37fc0da4256",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1355,
+      "sha256": "4262d38c6a615c9fae6105049d989e3d92cad7258d0c1407a72ca71855d33fd7",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/AGENTS.md",
+      "bytes": 679,
+      "sha256": "063098f6cb31bb44c6f8fbea25b3876de7ee1e5f7d00a50dbab506f6415eb7f0",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/Dockerfile",
+      "bytes": 1076,
+      "sha256": "622c8c73333e9ebd71a7cdb0035af6f7ecdf5fb482c87620e669d7d5a97f1250",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/account/page.tsx",
+      "bytes": 331,
+      "sha256": "f2d2475d32aa66b76e1667d31dbd510cd7ddbc0178abf1d108de88a2164d184c",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/api/auth/[...all]/route.ts",
+      "bytes": 360,
+      "sha256": "f5f80ff6fee580a7ac47f47bfd84a1b56d39168532e90cd6275a6978f60760cf",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/globals.css",
+      "bytes": 33743,
+      "sha256": "ba212e903c737cf06da2fa3d0287dd1c7b331c4dc123f8faeafa4f49f926e813",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/layout.tsx",
+      "bytes": 564,
+      "sha256": "90346aa718692981a70faa581ca39a9fa481899dae1f8303d4d44c6a10bdec1e",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/not-found.tsx",
+      "bytes": 289,
+      "sha256": "a53345e77a3cc8191cf73195167878b4fa483691e0a4b2a780e8d4b66309ef75",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/page.tsx",
+      "bytes": 105,
+      "sha256": "db49bbcbe43ec1879ecc53b1486aea9616e10992a08d5675a716c995f1197cea",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/problems/[slug]/page.tsx",
+      "bytes": 225,
+      "sha256": "e2f8d4c91255545ee4010a65bad6a6b4ba3ec2ec0b500d966c6982ad1bff03ba",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/app/submissions/page.tsx",
+      "bytes": 148,
+      "sha256": "18c4e8c9993d3f66eed7d3132a55f4f231c0846456d662c955c75754b1f224af",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/account-form.tsx",
+      "bytes": 6630,
+      "sha256": "31c976b96aec4ba8c180c3163c143b5aac3d99f86b4faf98737a4d4682e5b90f",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/catalog.tsx",
+      "bytes": 9123,
+      "sha256": "bbcb1f9b97fea19235b736004a0c71352996b38377e18b2becd06286cc2ac1a4",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/code-pane.tsx",
+      "bytes": 6774,
+      "sha256": "646389beca29f74db37700bf92176ab059c60f42791a293cb586e468dec9110e",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/icons.tsx",
+      "bytes": 1773,
+      "sha256": "471dfc67a8797d5233fea5a872b179b9ad34dfb9417e75006396c08b23e385cd",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/shell.tsx",
+      "bytes": 4289,
+      "sha256": "33d5c3dd56d7b5cf386c2e62491c0320d07edc3093bf8c0e0fb4f7a53bce5490",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/submission-history.tsx",
+      "bytes": 7302,
+      "sha256": "9819edd5d6d7c632e50ea8fd3b0c587986d6a3c7edc61562d13aea88914c39ee",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/submission-panel.tsx",
+      "bytes": 9123,
+      "sha256": "f97634c95d9db27cb689648710285f6c93d9f9cfffdeb52bfaa67e83d15cbeac",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/components/workspace.tsx",
+      "bytes": 7269,
+      "sha256": "f88ff1044977dc9d7ce5d0c9fad9008b5cfdcbb7e42fec7ee1989c61af6b3b07",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/lib/api.ts",
+      "bytes": 4213,
+      "sha256": "f66a54c79e859edbcfa3c67c909995e5e92ffe7e9bc323ec5fd5936440fb8050",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/lib/auth-client.ts",
+      "bytes": 198,
+      "sha256": "9e3cb06d9e4d29a611bee6fe6f7466432dd1c537c5878cf03013296dcc11dbe1",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/lib/auth.ts",
+      "bytes": 5628,
+      "sha256": "f1f9d28dca33dd6b99a908ffc804db44f258daa5bdd6fc3b092ca0e2ed6b8c37",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/lib/submissions.ts",
+      "bytes": 6835,
+      "sha256": "ceff2cc35d0eda7d01f8a9e835fb5f01a734be6711683afd1269495b228f1590",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/next-env.d.ts",
+      "bytes": 288,
+      "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/next.config.ts",
+      "bytes": 818,
+      "sha256": "4e35e751f0e7eae858df6665e1d88c07b33911fffcdd4034108d6399f5eb7dba",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/package.json",
+      "bytes": 782,
+      "sha256": "c53dddd2a632edbf81c6d36072cde4700a00a5775b0d9aa6ea84a55ee900b4d5",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/scripts/auth-migrate.mjs",
+      "bytes": 586,
+      "sha256": "0190e5a4153c59d62ffab22a234a69c8e3ec01460a63fb5b8b2e84496e5f5c63",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/scripts/copy-monaco.mjs",
+      "bytes": 2852,
+      "sha256": "224167724fea595630d9a91fb7454e5ce4e4cc94993c488c1082b7bc0bc12b2b",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/tests/auth.test.mjs",
+      "bytes": 5809,
+      "sha256": "46da48c8a6b9da1bdfa1d22ebe7d575246319ebc083114a802df6c2795b396a4",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "bytes": 615,
+      "sha256": "17150f3043746b2634cb893a93016650c259de9d083b076f1abbfd11e7ba390d",
+      "ownership": "web application",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "compose.cloud.yaml",
+      "bytes": 229,
+      "sha256": "f650c67dfc15092e4eedc94cdec28384e286e1383d89744546e4a2c71ac5b771",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "compose.yaml",
+      "bytes": 1654,
+      "sha256": "aaf7a96f9cde97cace9c3222c42097fcdb63cc5fed9963d74b8302abc3e9ded0",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/AI_SOLVER.md",
+      "bytes": 3023,
+      "sha256": "50eaddd2316920b37778b79ba2e95dffcbc9d6b00ec665f612c08c5d914c46bc",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 5031,
+      "sha256": "7b8347715333b03071573cdf62b5acd0ac8add6d488ede8cb5a00fa9b89dbd0f",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/AUDIT_AND_AI_PLAN_2026-11-15.md",
+      "bytes": 26863,
+      "sha256": "96133b06c892dd500b72745b02f999c7563f825c99798d276709f3997439b410",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/CODEX_PLAYBOOK.md",
+      "bytes": 2535,
+      "sha256": "4cee0565bba96ffe7d4fbc006ed871d340f4e8e640a41c50fec7753672c2e453",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/COMPETITIVE_LANDSCAPE.md",
+      "bytes": 2279,
+      "sha256": "efe4629179e85104f9c2ea633895461be1ece451a2d68fed7afadc1a2202db13",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/CONTRIBUTOR_TASKS.md",
+      "bytes": 3535,
+      "sha256": "373b518d83ce9cfa954beb5c170be520d9f6ad33643a5f88c0bbef008dc550bf",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/DATA_AND_LICENSES.md",
+      "bytes": 2561,
+      "sha256": "f4e2b47ee7ee47dff9fd95ae0e6b3279ff227b4b142cc45d30da1f70002fe39f",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "bytes": 10315,
+      "sha256": "7d0be3262d31f56b7c7cb3205c58fb23556919d7a9d2144c2142d6ec04d00714",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/INDEX.md",
+      "bytes": 2882,
+      "sha256": "04147956df27b8175481c66b25a08ec0c4912e7f24cd88c928a87fa784d3c42b",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/JUDGE_SECURITY.md",
+      "bytes": 2846,
+      "sha256": "527a91bcfd13c0531e9d7e6cff4611cbe4700ff02ff7bb8a281d6f8824448c5e",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/MODEL_DATA_EVALUATION.md",
+      "bytes": 3358,
+      "sha256": "25a2a5ead3aa5bb5b7119e216b50013fd8eb7cf4a0e2d63d21b5af470972a5f8",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/OPEN_DECISIONS.md",
+      "bytes": 1706,
+      "sha256": "ba9d80a5c783e966b75fb2f52175ea6ccddd6b26cce07721a4bfa5a4382c2df4",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/OPEN_SOURCE_STRATEGY.md",
+      "bytes": 5660,
+      "sha256": "594ca78a81262571e6cd18ce837e3f1a53aa9a7ca0a750fd0a5c99eff592f7c4",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/PRODUCT_REQUIREMENTS.md",
+      "bytes": 4041,
+      "sha256": "84f90c8e8149a79eaebdb9c0ce1e6665d8bf3499fb8f63d659373f2e72151ca5",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/PROJECT_STATUS.md",
+      "bytes": 9733,
+      "sha256": "dac3d05e629be78a5774d40ca9d4b45183660b57766c2f9a899787aaa6bf3031",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/PROJECT_VISION.md",
+      "bytes": 3756,
+      "sha256": "c330d8cad27c9304a9bb3acdd262d56ccf779f4f94ee3db294ef3baf26ac4cda",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "bytes": 8762,
+      "sha256": "8fdf5f1bfdf7b591b2122e4ef438f28b6f9994619ed4327e779c02174f082f17",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/REPOSITORY_STRUCTURE.md",
+      "bytes": 7982,
+      "sha256": "23f3395073ecb18b04a0f5f218f3bd8e98a1676ed8051bb7891a3da450012dcd",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "bytes": 3037,
+      "sha256": "ba455d1c654a03d844b19dc098162fa17c515559dafb7d7f3e5252665e26d289",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/START_HERE.md",
+      "bytes": 2599,
+      "sha256": "1a3325b63a40e02957245f636067db2d6281f2a7eef0459326f3dbb5b75a280f",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/adr/0001-practice-foundation.md",
+      "bytes": 4715,
+      "sha256": "bc3f5b443504de3739703541eb204f974c7103c7e6376b7374da0896468726ce",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "docs/adr/0002-authenticated-isolated-submissions.md",
+      "bytes": 6667,
+      "sha256": "13a12f9da52ca98c05819acc42c86f3bd6f1f8fec1f6da5f3927a35f1c4dd8e4",
+      "ownership": "project documentation and governance",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 64303,
+      "sha256": "92a9278172e611acaf8dda5ac64bffd9c578d6752f79865bf8d8cd0da50ba097",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "package.json",
+      "bytes": 1552,
+      "sha256": "07abc82870993e06a41f25325408223cd273f0d764064c170778eb35e9176b47",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 1416,
+      "sha256": "a526d9e0e756c594ce8126e24fdc142699509bf593252839d438252361eee69c",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "scripts/check-standalone.mjs",
+      "bytes": 1090,
+      "sha256": "0141742821ce6d84e7a8aa82d22f5b6ce6e016ef6ceb3f5a5b52fdd9092163fd",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "scripts/dev.py",
+      "bytes": 2956,
+      "sha256": "202b0bf6abdfdde8bbd769c4113b477dbe78275d15146bb7e87ad90038d927f9",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "scripts/judge-worker.py",
+      "bytes": 325,
+      "sha256": "3c865ea22f368a05d3a57f9e5a64c85ab89791ef044c594bfc6dd01916363162",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "scripts/local_config.py",
+      "bytes": 1228,
+      "sha256": "64563e0df785ccde15e4d8473e5a5abe253a8af3b5022f1f5abe10c0dc81b758",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "scripts/verify_preserved_archives.py",
+      "bytes": 2114,
+      "sha256": "cdeafc8658f8c3347c375c1ebdcc52c76fddd002222b58045df48e11f348de7e",
+      "ownership": "development, dependency and deployment configuration",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/.dockerignore",
+      "bytes": 75,
+      "sha256": "3a1475aa140c2eafd930146bbcff5788241387f856614efbbf0029e23e79d25d",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/.python-version",
+      "bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/Dockerfile",
+      "bytes": 903,
+      "sha256": "b81066ab0a61ee5f4f2df5a4e73aee3d8e0fb7220ce0669b8b1351318553add8",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/pyproject.toml",
+      "bytes": 546,
+      "sha256": "404f76273464a83b0460976fb853f7a6ac0ff87fe8ca0b6e0dd2a68a6065b39e",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/__init__.py",
+      "bytes": 78,
+      "sha256": "dd4d1de440d9556598d4bbb70c51a79d91decc0e6c7097caccfce66fba0e0522",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/auth.py",
+      "bytes": 6911,
+      "sha256": "292f29cdca760af08dde3bec594fcbb4f04c8b775f185e2f3c70d37ad999c6e1",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/body_limit.py",
+      "bytes": 2753,
+      "sha256": "58aa67101f282aa2b8d9019cb26498717fd1dccfcfc9c59601be196cc695bd9b",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/catalog.py",
+      "bytes": 8345,
+      "sha256": "4c86099a799ef53901aae508206b0b7ad3f60fbf4e388f989344334e6e0caebd",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/errors.py",
+      "bytes": 427,
+      "sha256": "97adb204a96154ca0dc56e09d5c3a6efc19fca718c57a66baa888ac08da77ae3",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/hints.py",
+      "bytes": 4629,
+      "sha256": "17b91a41f7747da27e71d762bbd9fdbfc3c2229ffce87f918d6443467c7b1845",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/main.py",
+      "bytes": 8204,
+      "sha256": "708645fa6303559d2d7c359185350c0f45b3b880ac092b6514fc00a7b8424981",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/models.py",
+      "bytes": 1133,
+      "sha256": "a469803c734dc4628bdd7f21759bfbf1d95d9c1bd822881462bb046fb74d0e2a",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/solver_api/submissions.py",
+      "bytes": 16979,
+      "sha256": "cec1065962fd73fe8a70ba52efb37efa136ab27b74f8dbb9fe26954faac0d766",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/tests/test_api.py",
+      "bytes": 7235,
+      "sha256": "83341f7f3a726e6996f1365d82886dd09a1d1a105904a4b5a54e03c189b2d2d5",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/tests/test_auth.py",
+      "bytes": 8436,
+      "sha256": "22121e7410bc3ed0ad5eaee6a6b9257b37edb859cd454fb9f12ecafbbd4c9aaa",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/tests/test_hints.py",
+      "bytes": 7930,
+      "sha256": "75e322bcd3f21623000e2688b2479ceb436627dc5b25b5cdd033aea6b12ea757",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/tests/test_submissions.py",
+      "bytes": 16037,
+      "sha256": "0775870c17838be18ea99355fbe41fd609fea0fadd9769ec3c53445342bdad07",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/api/uv.lock",
+      "bytes": 48700,
+      "sha256": "656a0f13125f8040e31713ebc4d7ee5b68e516e88772aba630b24bd764ba94f3",
+      "ownership": "API catalog, identity, hints and queue",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/.dockerignore",
+      "bytes": 55,
+      "sha256": "d97fb40f032d3fdb93ec441d2fbf6466da2b5d99ce84c22457423da19267cdc0",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/Dockerfile",
+      "bytes": 768,
+      "sha256": "e0a9574cf8349c055e03949968f117075d9efcfb71c6df0dbb1edd24876ddfbf",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/UPSTREAM_REVIEW.md",
+      "bytes": 8914,
+      "sha256": "04969e4acdaa16860afc906bf3683019e6705a374a2a7c8aa2f645436df97c91",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/pytest.ini",
+      "bytes": 42,
+      "sha256": "b160d82f7811555051f8966d8e02750a985227c1d022208c784e606946f2eada",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/__init__.py",
+      "bytes": 65,
+      "sha256": "385a011f259d600b720b12e64765f15e617421a1a90e38e9616b17ede0821cc9",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/bounded.py",
+      "bytes": 4214,
+      "sha256": "b28b51bdf1d4142924029aa99a880240a6417173db7ae82c214293a5ba855450",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/cases.py",
+      "bytes": 4440,
+      "sha256": "ca32f0bb3da09632a358f9efce0ed16051dc5a6165a9432ca980b0f45991a7bc",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/diagnostics.py",
+      "bytes": 990,
+      "sha256": "77f6e03f5376e7a8b7e46823cbcea01f938658df825d678819f42181b70fab9d",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/harness.py",
+      "bytes": 8382,
+      "sha256": "0df38a40629085c168e4b8dfc3d32307124056f20c386c29ef686a252c23450a",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/runner.py",
+      "bytes": 9774,
+      "sha256": "59233f9d4bd9e3febd41f21651f52f79713a0b289a4b9ec96a38ca7d3cecd041",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/solver_judge/worker.py",
+      "bytes": 11632,
+      "sha256": "d0e6041ba8d2b1ee838c2b761e8fc985f9fe27f76e2cd68bdd5cb8bbde24ec05",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/tests/test_bounded.py",
+      "bytes": 1007,
+      "sha256": "6989bf3d8be839bce096e53f7fcc8654567309b541091b2bd7ee1834b8dae3da",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/tests/test_cases.py",
+      "bytes": 3345,
+      "sha256": "d2d8ccb1025869aa8d0d5aa24d712a7938be75bb99f25c26bc9e88f956857c80",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/tests/test_runner.py",
+      "bytes": 4123,
+      "sha256": "c75edb283ea7ce2d78201ca3960f729564b60e4371601422187acb87dcaedeaa",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/tests/test_sandbox.py",
+      "bytes": 3953,
+      "sha256": "4f4ba23cf45506e4a76087f4e8b35520feee21018678e0bb18fd15d6e89e098c",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "services/judge/tests/test_worker.py",
+      "bytes": 11291,
+      "sha256": "746148b7b99ff82087eb309f230100a3a785c8d0c63f65a89a892c3ea9b8a739",
+      "ownership": "isolated judge",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "tests/e2e/practice.spec.ts",
+      "bytes": 6967,
+      "sha256": "d5041bc2adb60626ff2b09f7a26442570eb62a057597925ba6ea4bff31bab35a",
+      "ownership": "cross-service browser validation",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "tests/e2e/resilience.spec.ts",
+      "bytes": 5029,
+      "sha256": "c39165c2c4c8f09c014e4a77baf23e3566a0b0703885792d9d55ea7eb079b1d5",
+      "ownership": "cross-service browser validation",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    },
+    {
+      "path": "tests/e2e/submissions.spec.ts",
+      "bytes": 6124,
+      "sha256": "8ea0197e186423ded0d9d24cefd8eb6d16d0514aaeed16204f723d61b5707d9e",
+      "ownership": "cross-service browser validation",
+      "inspection": "Inventory complete; deep review recorded in final assessments."
+    }
+  ]
+}

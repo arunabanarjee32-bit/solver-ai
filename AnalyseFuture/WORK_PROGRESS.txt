@@ -1,0 +1,15 @@
+WORK PROGRESS - 17 November 2026, Asia/Kolkata
+
+Starting commit: a00894df45e5b451d3261ed374b36e8d2c208ad6
+Intended repository: https://github.com/arunabanarjee32-bit/solver-ai
+Default/delivery branch: main; direct pushes authorized by owner.
+
+Completed: fetched all advertised branches/tags (63 reachable commits; 4 remote branches; no tags). Clean baseline. Inventoried all 238 baseline tracked paths. Verified full-history Git bundle outside checkout at /workspace/recovery-snapshots/solver-ai-a00894d-before-full-review.bundle; SHA256 059aebbfa537a904b70bba8b6d0c13a275aa4d37e33d9e97a10d377b2909f125.
+
+Current: deep source/history/security reviews; API/judge/web/docs/archive ownership reviews running independently.
+Discovery: unmerged SAI-011 authenticated hint UI exists on origin/feat/sai-011-frontend-hint-api, and five project-memory docs exist on another branch. SAI-010 implementation already matches main.
+
+Pending: finish per-file assessments; record consolidation design; recover compatible hint UI/tests; group frontend features; preserve branch-only documents; implement justified repairs; run checks; publish complete requested reports and verify main.
+
+Limits: gh API metadata/protection checks unavailable with existing CLI authentication. Native HTTPS Git read/fetch works. Do not bypass protections or force-push. Account compromise attribution and credential/access review remain unverified.
+Validation: prior session validated a00894d source through 137 API/7 auth/106 judge/18 browser checks; fresh checks required after current changes. No archive code executed.
