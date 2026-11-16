@@ -16,6 +16,11 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 | [Open-source strategy](OPEN_SOURCE_STRATEGY.md) | Public repository candidates, licenses and integration logic |
 | [Public repositories and resources (TXT)](PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | All 20 previously suggested GitHub repositories plus models, datasets and benchmarks |
 | [Audit and AI plan (2026-11-15)](AUDIT_AND_AI_PLAN_2026-11-15.md) | Source-based architecture review, 20 references, two AI research selections and implementation roadmap |
+| [Current repository audit](REPOSITORY_AUDIT.md) | Main SHA, source inventory, risks and refreshed 20 upstream references |
+| [Two primary AI research repositories](PRIMARY_RESEARCH_REPOS.md) | CodeSIM and phi-code: inspected modules, licenses, safe design patterns |
+| [Incremental AI architecture](AI_ARCHITECTURE_PLAN.md) | Tutor, debugger, verified solver, security and model gates |
+| [Implementation backlog](IMPLEMENTATION_BACKLOG.md) | P0–P4 task IDs, acceptance criteria, security, cost and rollback |
+| [Implementation progress and handoff](IMPLEMENTATION_PROGRESS.md) | SAI-011 branch changes, actual test evidence and Codex resume task |
 | [AI solver](AI_SOLVER.md) | Planning, testing, hints and agent workflow |
 | [Judge security](JUDGE_SECURITY.md) | Threat model and untrusted code execution |
 | [Model/data/evaluation](MODEL_DATA_EVALUATION.md) | Training plan, dataset rights and benchmarking |

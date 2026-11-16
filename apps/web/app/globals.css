@@ -963,6 +963,43 @@ button {
   color: #81748f;
   line-height: 1.8;
 }
+.account-hint {
+  border-top: 1px solid #e8e6ed;
+  margin-top: 22px;
+  padding-top: 18px;
+}
+.account-hint h3 {
+  margin: 0 0 8px;
+  color: #65527c;
+  font-size: 13px;
+}
+.account-hint p {
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.account-hint-note {
+  font-size: 11px;
+  color: #81748f;
+}
+.account-hint-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+.account-hint-actions button {
+  font-size: 11px;
+}
+.account-hint-output {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.account-hint-output > span {
+  letter-spacing: normal;
+  font-size: 10px;
+}
+
 .provenance {
   font-size: 9px;
   color: #a6a09d;

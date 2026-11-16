@@ -33,11 +33,11 @@ Purpose: maximize useful verified output and minimize repeated/credit-wasting co
 - Security/licensing implications.
 - Known limitations and proposed next independent task.
 
-## Suggested first agent task
+## Current next agent task — not the obsolete scaffold
 
-"Inspect repo. Implement only the smallest reproducible full-stack skeleton: Next.js frontend, FastAPI health endpoint, scripts, Docker Compose local setup, basic API integration test and CI. Add clear run instructions. Do not implement auth, contest, AI or sandbox until foundations are tested. Keep repo working and update PROJECT_STATUS."
+The foundation, owned isolated submissions, and signed authored hint API exist on `main`; do **not** restart a skeleton or recreate `POST /api/v1/hints`. The SAI-011 typed signed-in frontend integration is on [PR #5](https://github.com/arunabanarjee32-bit/solver-ai/pull/5). Verify the current PR head and workflow, review it, and merge only after maintainer approval. Resume context, precise paths and tests are in [IMPLEMENTATION_PROGRESS](IMPLEMENTATION_PROGRESS.md) and [IMPLEMENTATION_BACKLOG](IMPLEMENTATION_BACKLOG.md).
 
-Next agent task: design and threat-model judge adapter, integrate self-hosted sandbox, run malicious-program tests before public deployment. Then problem catalog and editor.
+After that, the next independent task is a narrowly scoped provider-threat-model ADR: fixed egress, quotas and hard cost limits, model/output provenance, public-only context, data retention and privacy, contest rules and a kill switch. Get explicit approval before paid providers or GPU spending. Read [AI_ARCHITECTURE_PLAN](AI_ARCHITECTURE_PLAN.md) and [PRIMARY_RESEARCH_REPOS](PRIMARY_RESEARCH_REPOS.md).
 
 ## Verification ladder
 

@@ -1,6 +1,6 @@
 SOLVER AI - PUBLIC REPOSITORIES AND STUDY RESOURCES
 Project: https://github.com/arunabanarjee32-bit/solver-ai
-Updated: 2026-11-15
+Updated: 2026-11-16
 
 PURPOSE
 Consolidated inventory of repositories and resources previously discussed
@@ -176,3 +176,16 @@ SEE ALSO
 - docs/ARCHITECTURE.md
 - docs/PROJECT_STATUS.md
 - docs/CODEX_PLAYBOOK.md
+
+2026-11-16 RESEARCH VERIFICATION
+- All 20 current default branches and HEAD SHAs refreshed through GitHub;
+  see docs/REPOSITORY_AUDIT.md for the precise matrix and 2026-11-15
+  audit for triaged architecture, maintenance and license caveats.
+- EXACTLY TWO selected primary AI solver references remain
+  kagnlp/CodeGenerator (CodeSIM) and Nan-Do/phi-code.
+- Their key source and license files were reinspected; see
+  docs/PRIMARY_RESEARCH_REPOS.md for safe/non-safe reuse boundaries.
+- The current SAI-011 browser integration imports NONE of these source
+  trees, models or datasets. No paid model, provider or GPU was provisioned.
+- New engineers should read docs/IMPLEMENTATION_PROGRESS.md and
+  docs/IMPLEMENTATION_BACKLOG.md before adding a new capability.
