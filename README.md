@@ -4,6 +4,12 @@
 
 > **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. An authenticated, author-written **offline hint API** is available as a foundation for future AI; model inference, contests and production deployment remain planned. See [Project status](docs/PROJECT_STATUS.md) for executed validation and limitations.
 
+Read the expanded [project idea in plain text](PROJECT_IDEA.txt) for the product,
+AI workflow, realistic limits and conditional one-year, two-year and longer-term
+roadmap. The [repository map](docs/REPOSITORY_STRUCTURE.md) explains the active
+application. Both uploaded ZIPs and all 122 extracted files are preserved under
+[AnalyseFuture](AnalyseFuture/README.md) for reference and future analysis.
+
 ## Run locally
 
 Requirements: Node.js24 (see `.node-version`), Python3.12 and [uv](https://docs.astral.sh/uv/). No external API keys, database server or paid service is needed. Local account/submission data uses ignored SQLite files.

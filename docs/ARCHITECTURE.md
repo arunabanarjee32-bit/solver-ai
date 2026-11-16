@@ -25,6 +25,11 @@ All code, model output, embedded problem text and incoming user input are untrus
 
 ## Proposed repository layout (create only as code is implemented)
 
+For the actual current tree and archive organization, see
+[Repository structure](REPOSITORY_STRUCTURE.md). The uploaded research projects
+are preserved under `AnalyseFuture/` and are not installed application services.
+The layout below includes proposed components that do not yet exist.
+
 ~~~text
 apps/web/                Next.js pages, practice UI, contest UI, Monaco
 services/api/            FastAPI endpoints, auth integration, persistence

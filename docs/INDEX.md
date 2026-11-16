@@ -5,6 +5,9 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 | Document | Purpose |
 | --- | --- |
 | [Start here](START_HERE.md) | First-day orientation and workflow |
+| [Detailed project idea (TXT)](../PROJECT_IDEA.txt) | Product vision, AI-era features, staged horizons, responsibilities and limits |
+| [Repository structure and review](REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |
+| [Preserved future-analysis material](../AnalyseFuture/README.md) | Original uploads, complete extraction and reuse boundaries |
 | [Development](DEVELOPMENT.md) | Tested setup, service commands and verification |
 | [Foundation decision](adr/0001-practice-foundation.md) | Initial scope, dependencies and safety boundaries |
 | [Accounts and isolated submissions](adr/0002-authenticated-isolated-submissions.md) | Upstream evaluation, identity boundary and gVisor integration |
