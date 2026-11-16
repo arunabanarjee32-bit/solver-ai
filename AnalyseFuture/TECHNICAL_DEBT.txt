@@ -1,0 +1,141 @@
+SOLVER AI — TECHNICAL DEBT AND RELEASE GATES
+Recorded 17 November 2026 (Asia/Kolkata)
+
+This is source-review triage, not an independent complete security audit.
+Confirmed inactive archive risks must not be reported as active product exploits.
+Production limitations are conditional release gates, not reasons to claim the local workflow failed.
+P0: confirmed local reliability weakness being corrected now.
+P1: required before corresponding public deployment/provider/training activation.
+P2: focused reliability, reproducibility, contract and recovery validation work.
+P3: measured maintainability, UX and planning improvements.
+Root owns final runtime/test metrics; this document does not invent executed checks.
+
+TD-001 | P0 local reliability | Judge container cleanup outcome and tracked orphans
+Status: Confirmed source defect; FIX IN PROGRESS, VERIFICATION PENDING
+Evidence: services/judge/solver_judge/runner.py:93-98,163-166 (pre-fix); services/judge/tests/test_runner.py
+Implication: Source review JUDGE-001 found that removal failures were suppressed and active names discarded. Root is implementing outcome tracking/reconciliation and failure regression. Do not call this resolved until targeted checks, failure-path assertions and relevant isolation workflow pass.
+Next action: Retain/report unresolved container identity safely; fail closed before new work and verify daemon-failure handling. Root must replace this pending status with final evidence.
+
+TD-002 | P1 before public exposure | Maintained runtime and aggregate execution budgets
+Status: Documented production release gate
+Evidence: services/judge/UPSTREAM_REVIEW.md; docs/JUDGE_SECURITY.md; runner.py and harness.py
+Implication: Recorded gVisor version is older than the previously reviewed upstream release. Rootless per-process rlimits/tmpfs do not establish aggregate cgroup memory/PID accounting, host-wide CPU/disk quotas or a security certification.
+Next action: Maintain a dedicated supported runtime; independently review sandbox controls, update process, aggregate budgets, monitoring and incident/recovery drills.
+
+TD-003 | P1 before production accounts | Verified identity recovery and trusted ingress
+Status: Known incomplete feature
+Evidence: apps/web/features/accounts/server.ts (moved from lib/auth.ts):92-128; services/api/solver_api/auth.py:163-201
+Implication: Local email/password login has no delivered verification/recovery. Shared per-path throttles deliberately reject spoofable forwarded identity; they are not a finished trusted-ingress policy. API tokens can survive logout for up to five minutes.
+Next action: Define delivery/recovery and abuse policy, trusted ingress headers, session/token lifecycle and account administration; preserve local defenses while testing production behavior.
+
+TD-004 | P1 before storing real user data | Retention, deletion, backups and storage protection
+Status: Production privacy/capacity limitation
+Evidence: services/api/solver_api/submissions.py:141-169,288-315,332-360; web accounts SQLite configuration
+Implication: Completed private source/history has no cumulative retention/storage cap or deletion lifecycle. File mode/owned queries are useful local controls but do not supply production encrypted storage, restore drills or retention consent.
+Next action: Agree ownership/consent/retention, deletion and source budgets; implement tested backup/restore, access review, logging redaction and applicable storage protection.
+
+TD-005 | P1 before external deployment | JWKS and worker transport plus credential rotation
+Status: Configuration/trust limitation
+Evidence: services/api/solver_api/auth.py:163-175; main.py:208-230; submissions.py:362-390
+Implication: Configured JWKS permits HTTP for any hostname; appropriate for supported local/Compose routes but unsafe across untrusted networks. One worker bearer defines a shared controller trust domain; API does not independently require token strength.
+Next action: Use external TLS or explicitly trusted private routes, high-entropy worker provisioning, private control endpoints and tested rotation; consider per-worker identity as operations grow.
+
+TD-006 | P1 before public traffic | Ingress concurrency and cumulative resource budgets
+Status: Aggregate abuse-control limitation
+Evidence: services/api/solver_api/body_limit.py:9-45; main.py:104-165; submissions.py:278-310
+Implication: 128 KiB/ten-second request bounds and submission quotas do not cap simultaneous callers, storage growth or whole-host capacity. No general API concurrency/request budget exists here.
+Next action: Apply bounded ingress and account/network policies with observable admission/failure behavior. Keep per-user queue and atomicity controls.
+
+TD-007 | P1 before real model activation | Model entitlement, privacy and hard token/cost quotas
+Status: Future feature prerequisite
+Evidence: services/api/solver_api/hints.py:38-78,111-142; docs/AI_SOLVER.md; docs/DATA_AND_LICENSES.md
+Implication: Only authored hints are active; real model-backed hints, debugging and candidates require approved provider access, source/privacy scope, per-account entitlement, token/test/deadline/spend limits and failure policy.
+Next action: Start with one bounded reviewed adapter, public-only consented context, truthful provenance and outage/quota tests. Do not treat an archive import or backend environment string as implementation.
+
+TD-008 | P1 conditional on any archive reuse | Reject archive host execution and shell-based evaluators
+Status: Confirmed inactive-code risks; not active product vulnerabilities
+Evidence: CodeGenerator src/evaluations/{func_evaluate,executor_utils}.py and src/utils/runEP.py; phi-code solver/{leetcode,atcoder,codeforces}.py under AnalyseFuture/extracted/
+Implication: Archive generated programs use host exec/multiprocessing/subprocess, external execution APIs and shell/developer-specific mounts. They do not share the current credential/isolation boundary.
+Next action: Keep inactive; replace execution adapters with reviewed queue/gVisor contracts before any approved reuse. Preserve original snapshots and never add a host/ordinary-container fallback.
+
+TD-009 | P1 before training or content ingestion | Licensed data, missing LFS objects and contamination controls
+Status: Unresolved rights/provenance and evaluation methodology
+Evidence: AnalyseFuture/extracted/*/data*; phi-code contests_results/ and ranker/; docs/MODEL_DATA_EVALUATION.md
+Implication: Five phi datasets are only LFS pointers. Dataset/problem/model rights have not been established separately from source licenses. Benchmark variants share projected core tasks; archive results do not establish current improvement.
+Next action: Use authorized complete inputs, versioned provenance, disjoint splits and fixed budgets; verify baseline/negative results. No bulk ingestion, GPU training or claimed pass@k gain follows from preservation.
+
+TD-010 | P1 conditional on external model loading | Remote-code model loads and pinned artifacts
+Status: Inactive supply-chain risk
+Evidence: AnalyseFuture/extracted/phi-code-main/solver/main.py:164; ranker/train.py:86; ranker/{check_datasets,filter_datasets}.py:13
+Implication: Research model loads permit trust_remote_code=True without a pinned revision; no weights/model code were loaded here. Actual risk depends on the selected artifact and library behavior.
+Next action: Review artifact code/license, pin identity and integrity and avoid arbitrary remote code; isolate any authorized experiment from application credentials.
+
+TD-011 | P2 before archive dependency reuse | Archived dependency drift and static source defects
+Status: Confirmed archived reproducibility gap
+Evidence: AnalyseFuture/extracted/CodeGenerator-master/requirements.txt; phi-code-main/solver/requirements.txt; CodeGenerator src/models/Gemini.py:69; phi solver/main.py:116 and web_ui.py:62
+Implication: CodeGenerator requirements are largely unpinned and include pyyml while source imports yaml; source suggests Python 3.11 against current API 3.12. Some training/provider imports lack complete declarations. Gemini metadata references undefined model_name; phi UI has None-statement/return-arity edge cases.
+Next action: Do not install these requirements into the active environment. A later approved adapter needs an isolated locked dependency plan, source correction and meaningful tests; leave original evidence unchanged.
+
+TD-012 | P2 reproducibility/supply-chain hardening | Actions commit digests and maintained image identities
+Status: Mutable reference limitation; no compromise established
+Evidence: .github/workflows/ci.yml; apps/web/Dockerfile; services/api/Dockerfile:2-9; services/api/.python-version
+Implication: Actions checkout/setup-node/upload-artifact use major tags and setup-uv uses a major tag; action implementation is not commit-digest pinned. Web/API image tags remain mutable, and API Python pin is broader than the root patch version. Judge base image is already digest-pinned.
+Next action: Choose maintained immutable Actions/image references with an update policy, align intended Python patch behavior and retain frozen package/hash verification. No claim that a mutable tag is itself malicious.
+
+TD-013 | P2 reliability | Total JWKS deadline and concrete transport tests
+Status: Source-observed availability/coverage gap
+Evidence: services/api/solver_api/auth.py:59-76,116-130; services/api/tests/test_auth.py:54-63,229-259
+Implication: HTTPX supplies per-operation timeouts plus a document-size cap, but not an outer total fetch deadline. Slow chunks can hold refresh longer than five seconds; tests largely stub _fetch_jwks and do not exercise transport chunk/redirect bounds.
+Next action: Add a total fetch deadline and focused HTTPX transport tests when this path is next changed; keep fixed destination, bounded keys/body and fail-closed behavior.
+
+TD-014 | P2 recovery validation | Recovered SAI-011 UI and feature path migration
+Status: Implementation recovery pending current-revision evidence
+Evidence: apps/web/features/hints/; apps/web/features/{accounts,practice,submissions}/; tests/e2e/hints.spec.ts; /tmp/solver-web-moves.json
+Implication: Unique unmerged hint UI is being recovered and ten baseline modules grouped by feature. Existing branch test titles overstate direct cancellation assertion coverage. Tests run on old paths/branch revisions are not proof of this revision.
+Next action: Repair all imports, migration/test source paths and API/browser contracts; run relevant typecheck/build/auth/browser suites. Add direct cancellation coverage if changing behavior. Update this item and F011 only with actual final evidence.
+
+TD-015 | P2 runtime semantics | Reserved MLE and finite verdict claims
+Status: Documented diagnostic limitation
+Evidence: services/judge/solver_judge/harness.py:53-70; runner.py verdict vocabulary; API safe_summary
+Implication: MLE exists in protocol vocabularies, but ambiguous memory allocation failures currently map conservatively to RE and trustworthy aggregate peak accounting is absent. An AC only means the finite selected checks passed.
+Next action: Keep language precise; do not claim live measured MLE or universal correctness. Enable measured MLE only with trustworthy runtime accounting and relevant hostile fixtures.
+
+TD-016 | P2 product/contract quality | Public sample consistency and OpenAPI auth metadata
+Status: Coverage and usability gaps
+Evidence: services/api/solver_api/catalog.py; services/judge/solver_judge/cases.py; services/api/solver_api/auth.py:137-150; main.py:151-172
+Implication: Public samples live across API/judge deployments, requiring drift checks. Manual Bearer parsing enforces authentication but does not describe a Swagger bearer security scheme; schema tests only assert paths/models.
+Next action: Preserve deployment boundaries and add contract consistency checks when content changes. If interactive protected docs are desired, declare auth metadata without relaxing strict duplicate-header/signature validation.
+
+TD-017 | P3 maintainability/performance | Summary queries, repeated lookups and fixture plumbing
+Status: Focused opportunities; not reasons for a rewrite
+Evidence: services/api/solver_api/submissions.py:342-356; main.py catalog lookups; API tests JWT fixtures
+Implication: History summary SELECT * reads full source and builds details before discarding source. Three-item catalog lookups and test signing fixtures repeat simple logic.
+Next action: Optimize summary field selection when justified; optionally share lookup/fixture plumbing while preserving transactional checks and independent runtime validation. Do not delete meaningful tests.
+
+TD-018 | P3 documentation governance | Current status versus historical proposals and ownership decisions
+Status: Dated-status/authority drift
+Evidence: docs/PROJECT_STATUS.md; CONTRIBUTING.md; SECURITY.md; docs/{ROADMAP,CONTRIBUTOR_TASKS,OPEN_DECISIONS,AI_SOLVER}.md; historical branch snapshots
+Implication: Several documents contain historical scaffold-only or before-hint wording. Current owner instructions authorize direct-main work, whereas default contributor docs recommend branches/PRs. Original-code license and inbound policy remain maintainer choices.
+Next action: Retain historical text as dated evidence and point to one current status/vision. Reconcile superseded stage labels and locally resolved runtime choices without inventing licensing, deployment or compromise findings.
+
+TD-019 | P3 learning UX | Browser draft privacy, accessibility and localization
+Status: Known product limitation
+Evidence: apps/web/features/practice/code-pane.tsx; shared shell/styles; tests/e2e/practice.spec.ts
+Implication: Drafts are per-browser/problem/language best effort rather than per-account encrypted backups. Basic responsive/keyboard behavior is implemented, but no dedicated accessibility conformance or localization audit is established.
+Next action: Explain storage scope to learners, avoid silent source sync, and evaluate accessibility with intended users. Add cloud draft sync or localization only after concrete need/privacy decisions.
+
+TD-020 | P3 future scope control | Additional languages, contests, coaches and ML are not placeholders to activate
+Status: Planned product gates
+Evidence: docs/PRODUCT_REQUIREMENTS.md; docs/JUDGE_SECURITY.md; FEATURE_INVENTORY F023-F042
+Implication: New compiler/runtime support needs isolated limits/probes/maintenance; contests need server-side integrity/scoring tests; training needs external approved budgets. Research UIs/providers are not equivalent active features.
+Next action: Add one bounded, tested increment at a time after owner direction. Preserve TypeScript/Python boundaries and existing work instead of rewriting to one language or creating empty future services.
+
+Intentional boundaries to retain
+- Web token authority and API signature verification.
+- Public model context versus private grading answers.
+- Trusted host runner versus in-container learner execution.
+- Independent worker/API summary sanitation.
+- Transactional idempotency recheck and owned data selection.
+- Original archives/history even where research variants overlap.
+
+No user data/credential rotation, paid provider use, GPU provisioning, dataset import or public deployment is authorized merely by this debt list.

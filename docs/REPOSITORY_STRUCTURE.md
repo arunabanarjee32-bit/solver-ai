@@ -1,7 +1,10 @@
 # Repository structure and preservation review
 
-Reviewed: 2026-11-17 (Asia/Kolkata). Baseline:
-`d4e1fc66e9cbf87bfa13d5e7bf4dd02ea4756e9e` (109 tracked files).
+Reviewed: 2026-11-17 (Asia/Kolkata). Full-review baseline:
+`a00894df45e5b451d3261ed374b36e8d2c208ad6` (238 tracked files), with
+63 fetched commits and 253 historical paths. The earlier upload-preservation
+baseline was `d4e1fc66e9cbf87bfa13d5e7bf4dd02ea4756e9e` (109 tracked files).
+See the [complete recovery audit](../AnalyseFuture/REPOSITORY_AUDIT.txt).
 
 ## One product, with clear responsibilities
 
@@ -14,8 +17,12 @@ solver-ai/
 ├── apps/
 │   └── web/                     Next.js/TypeScript UI, accounts, Monaco, history
 │       ├── app/                 Pages, layout and auth routes
-│       ├── components/          Practice, account and submission interfaces
-│       ├── lib/                 API clients, auth and submission helpers
+│       ├── features/
+│       │   ├── accounts/        Account form and browser/server auth adapters
+│       │   ├── practice/        Catalog, editor, workspace and public API client
+│       │   ├── hints/           Recovered authenticated authored-hint UI/client
+│       │   └── submissions/     Submission panel, history and queue client
+│       ├── components/          Shared navigation shell and icons
 │       ├── scripts/             Auth migration and editor asset preparation
 │       └── tests/               Actual Better Auth integration tests
 ├── services/
@@ -34,6 +41,8 @@ solver-ai/
 │   ├── README.md                Preservation rationale and integration boundaries
 │   ├── manifest.json            Original file inventory and archive/member hashes
 │   ├── archives/                Both original ZIPs, unchanged
+│   ├── historical-implementations/ Original branch versions (23 files)
+│   ├── repository-inventory/    Current/baseline paths, hashes and assessments
 │   └── extracted/
 │       ├── CodeGenerator-master/ 73 preserved files
 │       └── phi-code-main/       49 preserved files
@@ -56,10 +65,17 @@ folders suggesting features already exist.
 
 ## What the review found
 
-The latest baseline commit added only `CodeGenerator-master.zip` and
+The earlier upload commit `d4e1fc6` added only `CodeGenerator-master.zip` and
 `phi-code-main.zip`. Native scripts, npm workspaces, Python project configuration,
 Docker builds, Compose and CI consistently reference the existing active paths.
 Those paths were retained to preserve the already implemented workflow.
+
+Fetching the other branches revealed the disconnected SAI-011 authored-hint
+frontend and permanent-memory records. Five source/test versions were selectively
+recovered, ten web modules moved to their feature owners, and 23 original branch
+versions preserved. SAI-010 already matched main and was not applied again. The
+[full path mapping](../AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt) accounts
+for every baseline path and all recovered branch inputs.
 
 The maintainer reports unwanted changes and disruption. A file-tree/history
 review cannot authenticate historical account activity or attribute a compromise.
@@ -120,7 +136,7 @@ python3 scripts/verify_preserved_archives.py
 python3 scripts/verify_preserved_archives.py --git-index
 ```
 
-Both checks must report two ZIPs and 122 files. A missing member, changed hash,
+Both checks must report two ZIPs, 122 members and 23 branch snapshots. A missing member, changed hash,
 missing staged file or transformed staged blob fails the check. This verifies
 preservation, not the correctness or licensing of archived research code.
 

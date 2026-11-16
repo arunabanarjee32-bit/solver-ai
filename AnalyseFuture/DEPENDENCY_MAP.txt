@@ -1,0 +1,48 @@
+SOLVER AI — RUNTIME AND DEPENDENCY MAP
+
+Browser -> Next.js routes/shared shell -> feature-owned components and clients.
+accounts/client wraps Better Auth browser sessions and short-lived JWT requests;
+accounts/server configures official Better Auth migrations, private SQLite state
+and EdDSA JWKS. The API auth route initializes it lazily. Auth tests import that
+same module, not a parallel schema implementation.
+
+practice/api uses Zod to validate public catalog data. Monaco React/monaco-editor
+are bundled by copy-monaco.mjs so normal editor startup has no editor CDN/model
+request. Practice workspace calls submissions and optional account-hints features.
+submissions/api and hints/api obtain short-lived JWTs through accounts/client.
+The server-side Next rewrite sends /api/v1/* to configured FastAPI upstream.
+
+FastAPI main composes public catalog, errors/body limits, auth/JWKS, hints and
+submission endpoints. Auth verifies configured issuer/audience/EdDSA keys through
+HTTPX/PyJWT/cryptography. catalog/models define original public problem data.
+hints.py exposes an authored backend and bounded future-provider protocol.
+submissions.py owns SQLite persistence, user ownership, idempotency, quotas,
+worker readiness and leased completion; no learner code execution occurs here.
+
+Trusted judge worker -> authenticated internal queue/control endpoints -> runner.
+runner uses local Docker with gVisor only, verifies image identity/runtime and
+passes source/inputs (not expected answers) to bounded sandbox harness. cases.py
+and expected answers remain in trusted control. bounded.py enforces subprocess
+output/deadline/process-group behavior; harness enforces language/process/temp
+limits. Worker normalizes completion independently. This separation is purposeful.
+
+Local scripts select/generate the private worker token and start owned process
+groups. Compose runs web/API containers only; application containers have no
+Docker socket. Native optional control worker is separate. Root .dockerignore,
+Next tracing and standalone guard exclude all AnalyseFuture contents.
+
+Locked external families
+- npm workspace: Next/React, Better Auth, Monaco, Zod; TS/esbuild/types; Playwright.
+  package-lock: 121 records,118 official registry artifact URLs with integrity.
+- API uv: FastAPI/Uvicorn, PyJWT/cryptography, HTTPX and Pydantic; pytest/Ruff dev.
+  uv.lock:29 records including virtual project; official PyPI artifacts SHA256 pinned.
+- Runtime: Node24.22.1, Python3.12.14, uv0.13.6; rootless Docker/runsc plus isolated
+  Python/C++ compiler image. Mutable web/API base tags remain an operational debt.
+- npm audit found zero advisories in the current locked npm dependency graph.
+  Python advisory scanning is not represented by lock-hash verification.
+
+Upstream research dependencies remain inactive and unpinned separately. They
+include provider SDKs, model/ranker frameworks, Gradio, NumPy/Pandas and external
+execution assumptions. They were not merged into package.json or pyproject.toml.
+Per-file imports/dependencies are in COMPLETE_FILE_INVENTORY.txt/current-files.json;
+source review details and source-version limits are in repository-inventory/reviews/.

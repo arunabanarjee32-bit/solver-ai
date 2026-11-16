@@ -1,0 +1,426 @@
+{
+  "scope": "all 16 tracked services/judge files read in full; 1906 Python lines plus configs/docs",
+  "method": "static source/configuration/test inspection only; no scripts/dependencies executed and no repository files modified",
+  "files": [
+    {
+      "path": "services/judge/.dockerignore",
+      "purpose": "Exclude caches, virtualenv and tests from sandbox image context",
+      "feature": "sandbox packaging",
+      "dependencies": [],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Does not broadly exclude arbitrary future credentials; keep sandbox context minimal and review new files."
+      ]
+    },
+    {
+      "path": "services/judge/Dockerfile",
+      "purpose": "Build nonroot Python/C++17 supervisor image from digest-pinned Python base with signed Debian compiler packages",
+      "feature": "sandbox packaging",
+      "dependencies": [
+        "python:3.12-slim-bookworm pinned digest",
+        "Debian apt repositories/g++",
+        "solver_judge/harness.py",
+        "solver_judge/bounded.py"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Compiler package version is not pinned independently of apt repository state.",
+        "Runtime image needs ongoing vulnerability maintenance and release provenance."
+      ]
+    },
+    {
+      "path": "services/judge/UPSTREAM_REVIEW.md",
+      "purpose": "Record runtime selection, installed gVisor age, limits, boundary and finite checks",
+      "feature": "judge architecture/governance",
+      "dependencies": [
+        "gVisor runtime",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Historical review is not a current runtime attestation or independent certification."
+      ]
+    },
+    {
+      "path": "services/judge/pytest.ini",
+      "purpose": "Configure judge Python import and test roots",
+      "feature": "judge validation",
+      "dependencies": [
+        "pytest",
+        "services/api development environment"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    },
+    {
+      "path": "services/judge/solver_judge/__init__.py",
+      "purpose": "Mark trusted judge controller package",
+      "feature": "judge package",
+      "dependencies": [],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    },
+    {
+      "path": "services/judge/solver_judge/bounded.py",
+      "purpose": "Supervise trusted control or sandbox processes using bounded nonblocking stdin/stdout/stderr, deadlines and process-group cleanup",
+      "feature": "bounded process transport",
+      "dependencies": [
+        "stdlib selectors/os/signal/subprocess/time"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Helper legitimately invokes host subprocesses for fixed trusted probes/Docker control; learner code must never be passed to this host helper directly."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/cases.py",
+      "purpose": "Provide three original problem oracles, two public examples and six bounded generated submission cases per problem",
+      "feature": "grading cases",
+      "dependencies": [
+        "stdlib random/secrets/defaultdict/dataclasses"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Finite eight-case submission grading does not prove correctness.",
+        "Worker-side public samples duplicate the API public contract intentionally across execution boundary; cross-service consistency should remain tested."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/diagnostics.py",
+      "purpose": "Run finite sandbox preflight and print controlled readiness/check fields",
+      "feature": "judge readiness",
+      "dependencies": [
+        "solver_judge.runner.SandboxRunner",
+        "JUDGE_SANDBOX_IMAGE optional variable"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    },
+    {
+      "path": "services/judge/solver_judge/harness.py",
+      "purpose": "Trusted image entrypoint that validates source/input bounds, compiles Python/C++17, applies rlimits and emits one bounded response",
+      "feature": "isolated execution",
+      "dependencies": [
+        "Linux resource limits",
+        "bounded.limited_process copied into image",
+        "Python isolated mode",
+        "g++"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Per-process address-space/process limits are not aggregate cgroup accounting.",
+        "Programs share a sandbox UID with supervisor; strict protocol/failure tests mitigate specific cases but are not a complete security proof.",
+        "Harness emits RE for ambiguous memory allocation failure; MLE enum is not a measured live verdict here."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/runner.py",
+      "purpose": "Resolve immutable image identity, require rootless runsc, create per-job isolated containers, validate protocol and grade outputs externally",
+      "feature": "gVisor control and grading",
+      "dependencies": [
+        "local Docker unix socket",
+        "runsc runtime",
+        "bounded.limited_process",
+        "cases.cases_for"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Cleanup failures are silently suppressed and active container name discarded, so an orphan can be untracked.",
+        "Host-wide memory/CPU/disk accounting and independent sandbox security review remain production prerequisites."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/worker.py",
+      "purpose": "Validate leased jobs and trusted API origin, maintain readiness heartbeat, run one lease at a time, sanitize completion and handle shutdown",
+      "feature": "leased judge worker",
+      "dependencies": [
+        "stdlib urllib/json/threading",
+        "solver_judge.runner",
+        "internal API heartbeat/lease/complete contract",
+        "JUDGE_WORKER_TOKEN"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Worker bearer token authorizes trusted internal control; requires secure provisioning/rotation and logs must remain redacted.",
+        "Fixed summaries deliberately do not expose runner output; duplicate vocabulary serves a sanitization boundary."
+      ]
+    },
+    {
+      "path": "services/judge/tests/test_bounded.py",
+      "purpose": "Exercise fixed trusted probes for output cap, deadline and nonblocking large input",
+      "feature": "bounded process validation",
+      "dependencies": [
+        "pytest",
+        "solver_judge.bounded",
+        "host Python fixed probes"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    },
+    {
+      "path": "services/judge/tests/test_cases.py",
+      "purpose": "Check oracle correctness, public/generated bounds, deterministic test seed and failure cases",
+      "feature": "grading validation",
+      "dependencies": [
+        "pytest",
+        "solver_judge.cases",
+        "independent small-array brute force"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    },
+    {
+      "path": "services/judge/tests/test_runner.py",
+      "purpose": "Mock sandbox exchange to test no expected-answer transmission, protocol failure, count/output/exit validation and no runc fallback",
+      "feature": "control protocol validation",
+      "dependencies": [
+        "pytest",
+        "unittest.mock",
+        "solver_judge.runner"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    },
+    {
+      "path": "services/judge/tests/test_sandbox.py",
+      "purpose": "Opt-in real gVisor integration fixtures: three Python AC, C++64-bit AC, WA/CE/RE/TLE/OLE, isolation, forged output, supervisor kill and tmpfs quota",
+      "feature": "sandbox validation",
+      "dependencies": [
+        "pytest",
+        "SOLVER_JUDGE_INTEGRATION=1",
+        "actual rootless runsc",
+        "built sandbox image"
+      ],
+      "active": true,
+      "status": "active but intentionally skipped unless opt-in integration flag is set; 15 parametrized cases; not run by this review",
+      "risks": [
+        "Selected hostile fixtures are finite regression checks rather than certification."
+      ]
+    },
+    {
+      "path": "services/judge/tests/test_worker.py",
+      "purpose": "Use fakes/local HTTP to check lease validation, retry, startup readiness, shutdown, response limits and no bearer redirects",
+      "feature": "worker transport validation",
+      "dependencies": [
+        "pytest",
+        "stdlib ThreadingHTTPServer",
+        "solver_judge.worker"
+      ],
+      "active": true,
+      "status": "active; inspected statically; not executed by this review",
+      "risks": []
+    }
+  ],
+  "features": [
+    {
+      "name": "Isolated Python/C++17 execution",
+      "status": "implemented local prototype; historical end-to-end validation recorded elsewhere",
+      "files": [
+        "services/judge/solver_judge/harness.py",
+        "services/judge/solver_judge/runner.py",
+        "services/judge/Dockerfile"
+      ],
+      "tests": [
+        "services/judge/tests/test_sandbox.py",
+        "services/judge/tests/test_runner.py"
+      ],
+      "missing": [
+        "maintained independently reviewed dedicated production runtime",
+        "aggregate host budgets",
+        "reliable orphan-container remediation"
+      ],
+      "recommended_location": "services/judge; keep distinct trusted controller and in-container supervisor responsibilities"
+    },
+    {
+      "name": "Original finite grading and oracles",
+      "status": "implemented for exactly three original problems; two public cases for runs/eight cases for submissions",
+      "files": [
+        "services/judge/solver_judge/cases.py",
+        "services/judge/solver_judge/runner.py"
+      ],
+      "tests": [
+        "services/judge/tests/test_cases.py",
+        "services/judge/tests/test_sandbox.py"
+      ],
+      "missing": [
+        "broader permissioned problem authoring/versioning system",
+        "interactive/custom validators",
+        "proof of arbitrary correctness is not provided"
+      ],
+      "recommended_location": "services/judge/solver_judge/cases.py until expanded catalog justifies per-problem modules"
+    },
+    {
+      "name": "Durable API lease consumption, worker heartbeat and safe completion",
+      "status": "implemented via authenticated internal API; storage/lease authority belongs to API service",
+      "files": [
+        "services/judge/solver_judge/worker.py"
+      ],
+      "tests": [
+        "services/judge/tests/test_worker.py"
+      ],
+      "missing": [
+        "production deployment management and observability",
+        "secure worker-token rotation operations"
+      ],
+      "recommended_location": "services/judge/solver_judge/worker.py; do not merge state authority into worker"
+    },
+    {
+      "name": "Bounded process transport and cancellation",
+      "status": "implemented shared helper for fixed host control and in-container supervision",
+      "files": [
+        "services/judge/solver_judge/bounded.py",
+        "services/judge/solver_judge/runner.py",
+        "services/judge/solver_judge/worker.py"
+      ],
+      "tests": [
+        "services/judge/tests/test_bounded.py",
+        "services/judge/tests/test_worker.py"
+      ],
+      "missing": [
+        "container cleanup success accounting/reconciliation after daemon failures"
+      ],
+      "recommended_location": "keep bounded.py shared explicitly by image copy and host import"
+    },
+    {
+      "name": "Runtime readiness diagnostics",
+      "status": "implemented finite probes and controlled local diagnostic CLI",
+      "files": [
+        "services/judge/solver_judge/diagnostics.py",
+        "services/judge/solver_judge/harness.py",
+        "services/judge/solver_judge/runner.py"
+      ],
+      "tests": [
+        "services/judge/tests/test_runner.py",
+        "services/judge/tests/test_sandbox.py",
+        "services/judge/tests/test_worker.py"
+      ],
+      "missing": [
+        "continuous host health/runtime patch management; preflight is a startup point-in-time observation"
+      ],
+      "recommended_location": "services/judge/solver_judge/diagnostics.py"
+    }
+  ],
+  "security_findings": [
+    {
+      "id": "JUDGE-001",
+      "category": "confirmed operational weakness",
+      "severity": "medium availability/recoverability",
+      "evidence": [
+        "services/judge/solver_judge/runner.py:93-98",
+        "services/judge/solver_judge/runner.py:163-166"
+      ],
+      "finding": "_remove suppresses every Docker removal RuntimeError/OSError and the finally block discards the name without verifying deletion. Missing containers and daemon/removal failures are indistinguishable, so failed cleanup can leave a sandbox untracked.",
+      "recommendation": "Track removal outcome, distinguish missing container from control failure, retain/report unresolved names without learner data, fail closed or reconcile before further work; add a mocked removal-failure regression.",
+      "exploitation_observed": false
+    },
+    {
+      "id": "JUDGE-002",
+      "category": "documented production limitation",
+      "severity": "release gate",
+      "evidence": [
+        "services/judge/solver_judge/runner.py:108-135",
+        "services/judge/solver_judge/harness.py:25-41",
+        "services/judge/UPSTREAM_REVIEW.md"
+      ],
+      "finding": "Rootless prototype relies on per-process rlimits and tmpfs bounds rather than aggregate cgroup memory/PID accounting and host-wide resource budgets. The recorded installed runtime is older than the reviewed upstream release.",
+      "recommendation": "Maintain a dedicated audited runtime and host-level quotas/monitoring before public exposure. Current tests cannot certify sandbox security.",
+      "exploitation_observed": false
+    },
+    {
+      "id": "JUDGE-003",
+      "category": "semantic/contract limitation",
+      "severity": "low",
+      "evidence": [
+        "services/judge/solver_judge/harness.py:53-70",
+        "services/judge/solver_judge/runner.py:33",
+        "services/judge/solver_judge/runner.py:248-258",
+        "services/judge/solver_judge/worker.py:29"
+      ],
+      "finding": "MLE remains accepted in protocol and summary vocabularies, while this harness intentionally emits RE for ambiguous allocation failures and has no trustworthy aggregate accounting. Do not describe MLE as an exercised live result.",
+      "recommendation": "Document reserved/unsupported measured memory verdict semantics; only enable precise MLE with trustworthy runtime accounting.",
+      "exploitation_observed": false
+    }
+  ],
+  "consolidation": [
+    {
+      "items": [
+        "runner.SUMMARIES",
+        "worker.SUMMARIES"
+      ],
+      "decision": "retain separate intentionally",
+      "reason": "Worker reselects a fixed safe vocabulary and discards arbitrary runner summary; merging would blur the independent sanitation boundary. Wording differences are not competing implementations."
+    },
+    {
+      "items": [
+        "host controller runner.py",
+        "in-container harness.py"
+      ],
+      "decision": "retain separate runtime locations",
+      "reason": "Host holds expected answers and credentials; sandbox receives only source and selected inputs. Feature grouping must not collapse this security boundary."
+    },
+    {
+      "items": [
+        "bounded.py host import",
+        "bounded.py Docker COPY"
+      ],
+      "decision": "already one source of truth",
+      "reason": "A single shared implementation is explicitly copied into the runtime image; no duplicate source file exists in Git."
+    },
+    {
+      "items": [
+        "cases.PUBLIC_SAMPLES",
+        "API catalog public samples"
+      ],
+      "decision": "keep boundary; cross-service consistency validation useful",
+      "reason": "Same public problem contract appears at two trust/runtime boundaries. Shared heavy imports into judge would be worse; a serialization contract or integration check can catch drift."
+    }
+  ],
+  "unknowns": [
+    "No current runtime, container, hosted CI or exploitation observation was performed by this subreview. Parent owns actual validation.",
+    "Not an independent sandbox penetration test or artifact provenance attestation."
+  ],
+  "remediation": {
+    "finding": "JUDGE-001",
+    "status": "implemented in working tree; parent owns commit/live integration",
+    "files": [
+      "services/judge/solver_judge/runner.py",
+      "services/judge/solver_judge/worker.py",
+      "services/judge/tests/test_runner.py",
+      "services/judge/tests/test_worker.py"
+    ],
+    "behavior": [
+      "Failed Docker rm uses one bounded successful container-list query to establish absence.",
+      "Unresolved names remain tracked and runner readiness is revoked; _container fails with a sanitized error instead of returning a successful response.",
+      "Cancellation attempts all tracked names, retains failures for a later cancellation attempt and emits a controlled error after best effort.",
+      "Pending cleanup prevents the same instance from regaining readiness through preflight.",
+      "Worker stops heartbeats and further job claims when readiness is revoked, completes the current leased job with its controlled verdict and triggers cancellation without blocking forever.",
+      "limited_process cancellation callback may ignore a False return, but _remove immediately revokes readiness and retains the name; _container finally retries bounded removal and checks its outcome."
+    ],
+    "validation": {
+      "runner_and_worker": "83 passed",
+      "judge_unit_excluding_optin_sandbox": "103 passed in 3.43s; no skipped tests",
+      "ruff_owned_four_files": "passed",
+      "git_diff_check": "passed",
+      "live_sandbox": "not run by child; root owns integration"
+    },
+    "remaining_limitations": [
+      "API capabilities use the existing 60-second heartbeat freshness window. This patch stops renewals; it does not add an immediate server-side revocation endpoint.",
+      "An already in-flight heartbeat can finish during a concurrent readiness transition; there are no further renewals or claims after the worker observes it.",
+      "Unresolved container names remain in process memory and sanitized operator error, not a durable reconciliation store; production orphan reconciliation remains future work."
+    ]
+  }
+}

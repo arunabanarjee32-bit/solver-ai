@@ -1,6 +1,6 @@
 # Start here — first-day contributor onboarding
 
-Welcome. You do not need access to any previous private chats to contribute. This repository now has a runnable practice foundation. The larger judge, AI and contest platform remains a proposal.
+Welcome. You do not need access to any previous private chats to contribute. This repository has a runnable local practice foundation with accounts, owned submission history and an optional gVisor-isolated Python/C++17 judge. Generated AI tutoring, contests and production operations remain proposed. Read the current status ledger before interpreting older plans as missing work.
 
 ## Understand the purpose in 10 minutes
 
@@ -12,9 +12,9 @@ Welcome. You do not need access to any previous private chats to contribute. Thi
 - How to use upstream projects: [OPEN_SOURCE_STRATEGY](OPEN_SOURCE_STRATEGY.md).
 - Contributor etiquette and PR workflow: [CONTRIBUTING](../CONTRIBUTING.md).
 
-## What should I build first?
+## What should I work on next?
 
-The first end-to-end capability is: choose an authorized sample problem -> edit C++17/Python -> submit -> receive real sandboxed verdict. Use [CONTRIBUTOR_TASKS](CONTRIBUTOR_TASKS.md) as the ordered backlog. Do not start by adding an AI chat widget that cannot verify code, or building a full contest platform first.
+The local end-to-end capability already includes: choose an authorized sample problem -> edit C++17/Python -> submit -> receive real sandboxed verdict. Preserve and verify this workflow before extending it. Use [PROJECT_STATUS](PROJECT_STATUS.md) to identify completed work and [CONTRIBUTOR_TASKS](CONTRIBUTOR_TASKS.md) as a suggested backlog, rather than rebuilding the scaffold. A recovered authenticated authored-hint browser integration is under review in the current task; it is not a claim of model-generated tutoring. Do not start by adding an AI chat widget that cannot verify code, or building a full contest platform first.
 
 ## Local development today
 
@@ -24,7 +24,7 @@ Follow [Development](DEVELOPMENT.md) for tests and Docker Compose. The optional 
 
 ## Contribution expectations
 
-One reviewable objective per PR; avoid unrequested frameworks or rewrites. Tests should demonstrate behavior, not only presence of files. Do not commit credentials or private datasets. Be explicit when functionality is mocked. Include docs and licenses as appropriate.
+Keep one reviewable objective per change; use the normal PR workflow unless the owner explicitly directs another workflow. The current repository recovery task authorizes checkpoint commits and pushes directly to `main`. Avoid unrequested frameworks or rewrites. Tests should demonstrate behavior, not only presence of files. Do not commit credentials or private datasets. Be explicit when functionality is authored, mocked or model-generated. Include docs and licenses as appropriate.
 
 ## Definition of ready for an implementation issue
 

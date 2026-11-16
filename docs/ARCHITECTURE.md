@@ -23,6 +23,12 @@ Status: target architecture with local implementation. `apps/web` implements Bet
 
 All code, model output, embedded problem text and incoming user input are untrusted at relevant boundaries. Judge workers must not access database credentials, cloud instance metadata, production networks or other users' data.
 
+The current frontend groups account, practice, submission and authenticated-hint
+modules under `apps/web/features/`. Routes remain in Next.js `app/`; shared shell
+and icons remain in `components/`. The recovered hints feature uses the existing
+authored FastAPI contract, with no model/provider dependency. See
+[dependency map](../AnalyseFuture/DEPENDENCY_MAP.txt) for actual call boundaries.
+
 ## Proposed repository layout (create only as code is implemented)
 
 For the actual current tree and archive organization, see

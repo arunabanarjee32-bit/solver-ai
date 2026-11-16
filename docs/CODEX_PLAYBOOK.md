@@ -13,7 +13,7 @@ Purpose: maximize useful verified output and minimize repeated/credit-wasting co
 
 ## Implementation discipline
 
-- One milestone / focused PR at a time, with a small diff.
+- One milestone / reviewable change at a time, with a small diff. Use the normal PR workflow unless explicit owner instructions authorize another process; the current recovery task requests checkpoint commits and pushes directly to `main`.
 - Prefer mature libraries or narrow service adapters for commodity features.
 - Do not merge entire upstream Git repositories or copy their code automatically.
 - Avoid UI-only fake implementations presented as real features.
@@ -33,7 +33,9 @@ Purpose: maximize useful verified output and minimize repeated/credit-wasting co
 - Security/licensing implications.
 - Known limitations and proposed next independent task.
 
-## Suggested first agent task
+## Historical starter tasks
+
+The scaffold, local accounts, submission ownership and optional gVisor judge below are now implemented. These prompts explain the original sequence; do not repeat them as missing work. Check PROJECT_STATUS.md for the current state and remaining production limits. A prior authenticated authored-hint browser integration is being recovered during the current task and needs final validation before further hint work.
 
 "Inspect repo. Implement only the smallest reproducible full-stack skeleton: Next.js frontend, FastAPI health endpoint, scripts, Docker Compose local setup, basic API integration test and CI. Add clear run instructions. Do not implement auth, contest, AI or sandbox until foundations are tested. Keep repo working and update PROJECT_STATUS."
 
@@ -41,4 +43,4 @@ Next agent task: design and threat-model judge adapter, integrate self-hosted sa
 
 ## Verification ladder
 
-Read -> Plan -> Small change -> Focused unit tests -> Integration test -> Build/lint -> Docs -> PR. Do not run repeated expensive suites without cause. Report remaining gaps, not '100% done' from successful mocks.
+Read -> Plan -> Small change -> Focused unit tests -> Integration test -> Build/lint -> Docs -> Reviewable commit or PR according to the owner's workflow. Do not run repeated expensive suites without cause. Report remaining gaps, not '100% done' from successful mocks.

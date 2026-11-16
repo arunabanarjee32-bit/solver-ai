@@ -1,0 +1,979 @@
+{
+  "review_date": "2026-11-17",
+  "timezone": "Asia/Kolkata",
+  "scope": "27 tracked active/source documents, 18 preserved historical prose snapshots and the new canonical future proposal. Runtime/test copies delegated to other reviewers. Source claims remain distinct from new runtime proof.",
+  "entry_count": 46,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "purpose": "Agent operating rules and project priorities.",
+      "active_use": "Active contributor guidance.",
+      "status": "Current boundaries; some priority ordering predates completed foundation.",
+      "dependencies": [
+        "README.md",
+        "docs/INDEX.md",
+        "docs/PROJECT_STATUS.md",
+        "docs/CODEX_PLAYBOOK.md"
+      ],
+      "risks": [
+        "Mistaking future roadmap for current implementation.",
+        "This task explicitly authorizes main commits instead of the default PR workflow."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "c5a8acad764d34f4d8a3c1d93d588be6a0f17b21cc2d35ae54173ed8eb12457c",
+      "bytes": 2841
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "purpose": "Contributor workflow, scope, review and licensing expectations.",
+      "active_use": "Active human-contributor guidance.",
+      "status": "Partly stale: documentation-first wording and foundation-only verification no longer describe current implementation.",
+      "dependencies": [
+        "docs/START_HERE.md",
+        "docs/PROJECT_STATUS.md",
+        "docs/DATA_AND_LICENSES.md"
+      ],
+      "risks": [
+        "Feature-branch and PR default differs from explicit owner instructions in this task.",
+        "No selected outbound original-code license."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "024e895eab0584423667d569fc9aa9236ec9f9647344c95ad4f8703991b05f8d",
+      "bytes": 2797,
+      "remediation": "Clarified local implemented stage, historical starter tasks and explicit owner workflow without discarding useful specifications. Authenticated authored-hint browser recovery is described as awaiting final integration validation.",
+      "post_review_sha256": "59c982c62a10613b69b8c7b8d09202dd634f5e1da13041d3d84834893b395aea",
+      "current_status": "Stale wording corrected in this task; implementation evidence remains in PROJECT_STATUS.md."
+    },
+    {
+      "path": "PROJECT_IDEA.txt",
+      "purpose": "Earlier detailed plain-text product proposal.",
+      "active_use": "Preserved prior proposal, not runtime configuration.",
+      "status": "Proposal; existing foundation and conditional ambitions clearly separated.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/PROJECT_VISION.md",
+        "docs/AI_SOLVER.md"
+      ],
+      "risks": [
+        "Must not be treated as implemented feature list or date commitment.",
+        "Canonical new AnalyseFuture vision should explain relationship without deleting this version."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "de24a3d98f3f69d7edb33d3701a67649813c98e9334888957c68af8b64e2476f",
+      "bytes": 25049
+    },
+    {
+      "path": "README.md",
+      "purpose": "Primary orientation, current capabilities and development entry point.",
+      "active_use": "Active root entry point.",
+      "status": "Current local workflow; future target architecture explicitly broader.",
+      "dependencies": [
+        "package.json",
+        "services/api/pyproject.toml",
+        "docs/DEVELOPMENT.md",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "risks": [
+        "One-line setup cannot cover all platform-specific judge/browser conditions.",
+        "Roadmap and architecture diagram include unimplemented components."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "6ce90a63b799ca9536bf81f2e6e3284a52514889d4c0032e7b55c37fc0da4256",
+      "bytes": 7012
+    },
+    {
+      "path": "SECURITY.md",
+      "purpose": "Private vulnerability reporting and key execution/data boundaries.",
+      "active_use": "Active security policy.",
+      "status": "Partly stale stage label: local software exists, production support is still not established.",
+      "dependencies": [
+        "docs/JUDGE_SECURITY.md",
+        "docs/DATA_AND_LICENSES.md"
+      ],
+      "risks": [
+        "No guaranteed private reporting channel or response SLA.",
+        "A policy document does not certify an execution environment."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "4262d38c6a615c9fae6105049d989e3d92cad7258d0c1407a72ca71855d33fd7",
+      "bytes": 1355,
+      "remediation": "Clarified local implemented stage, historical starter tasks and explicit owner workflow without discarding useful specifications. Authenticated authored-hint browser recovery is described as awaiting final integration validation.",
+      "post_review_sha256": "21e364421f7d4523eae43e8066a0869e9e90ca679ee04e49845a4fa6d956ff48",
+      "current_status": "Stale wording corrected in this task; implementation evidence remains in PROJECT_STATUS.md."
+    },
+    {
+      "path": "docs/AI_SOLVER.md",
+      "purpose": "Design proposal for tutor/debugger/candidate solver contracts.",
+      "active_use": "Active planning reference.",
+      "status": "Mostly future design; first offline hint contract exists according to status ledger.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/MODEL_DATA_EVALUATION.md",
+        "services/api/solver_api/hints.py"
+      ],
+      "risks": [
+        "Last section proposing initial stub is partly superseded.",
+        "Private grading tests must not become model feedback.",
+        "Finite tests and model confidence do not prove correctness."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "50eaddd2316920b37778b79ba2e95dffcbc9d6b00ec665f612c08c5d914c46bc",
+      "bytes": 3023
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "purpose": "Current local boundaries and proposed larger architecture.",
+      "active_use": "Active architecture reference.",
+      "status": "Mixed current implementation and expressly future candidates/layout.",
+      "dependencies": [
+        "docs/adr/0001-practice-foundation.md",
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/REPOSITORY_STRUCTURE.md"
+      ],
+      "risks": [
+        "Diagram includes unimplemented PostgreSQL/AI service/ML.",
+        "Piston remains candidate language while ADR 0002 defers stock integration.",
+        "Do not create empty service packages merely to match proposed tree."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "7b8347715333b03071573cdf62b5acd0ac8add6d488ede8cb5a00fa9b89dbd0f",
+      "bytes": 5031
+    },
+    {
+      "path": "docs/AUDIT_AND_AI_PLAN_2026-11-15.md",
+      "purpose": "Dated source audit and provider-neutral AI delivery plan with upstream triage.",
+      "active_use": "Historical evidence and research decisions.",
+      "status": "Snapshot at documented baseline with subsequent hosted evidence; not a current full audit.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+        "docs/OPEN_SOURCE_STRATEGY.md"
+      ],
+      "risks": [
+        "Tables retain initial missing-SAI-010/unknown-hosted observations that later sections supersede.",
+        "18 non-primary upstreams received triage, not full source/security audits.",
+        "Upstream metadata and maintenance facts are dated."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "96133b06c892dd500b72745b02f999c7563f825c99798d276709f3997439b410",
+      "bytes": 26863
+    },
+    {
+      "path": "docs/CODEX_PLAYBOOK.md",
+      "purpose": "Agent scope, verification ladder and implementation discipline.",
+      "active_use": "Active operating guidance with historical suggested starter tasks.",
+      "status": "Principles current; suggested initial scaffold is already implemented.",
+      "dependencies": [
+        "AGENTS.md",
+        "docs/PROJECT_STATUS.md",
+        "docs/OPEN_SOURCE_STRATEGY.md"
+      ],
+      "risks": [
+        "Repeating the initial scaffold would waste existing work.",
+        "Default PR workflow is superseded by explicit current user instructions."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "4cee0565bba96ffe7d4fbc006ed871d340f4e8e640a41c50fec7753672c2e453",
+      "bytes": 2535,
+      "remediation": "Clarified local implemented stage, historical starter tasks and explicit owner workflow without discarding useful specifications. Authenticated authored-hint browser recovery is described as awaiting final integration validation.",
+      "post_review_sha256": "3b5951e724a89d896d0f1e3415983e42290b4bada5b1cac9f6e77d979324da44",
+      "current_status": "Stale wording corrected in this task; implementation evidence remains in PROJECT_STATUS.md."
+    },
+    {
+      "path": "docs/COMPETITIVE_LANDSCAPE.md",
+      "purpose": "Qualitative user jobs, positioning and differentiation hypotheses.",
+      "active_use": "Active product research reference.",
+      "status": "Hypotheses rather than verified market share or product superiority.",
+      "dependencies": [
+        "docs/PROJECT_VISION.md",
+        "docs/PRODUCT_REQUIREMENTS.md"
+      ],
+      "risks": [
+        "Comparisons require refreshed evidence before external claims.",
+        "Competitor workflows do not confer content reuse rights."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "efe4629179e85104f9c2ea633895461be1ece451a2d68fed7afadc1a2202db13",
+      "bytes": 2279
+    },
+    {
+      "path": "docs/CONTRIBUTOR_TASKS.md",
+      "purpose": "Suggested issue backlog, initial sequencing and acceptance template.",
+      "active_use": "Planning inventory, not issue tracker authority.",
+      "status": "Partly stale progress summary: newer CI, submission and hint-contract work exists.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/OPEN_DECISIONS.md",
+        "docs/ROADMAP.md"
+      ],
+      "risks": [
+        "May cause rebuilding completed scaffold or treating authored API as unimplemented.",
+        "Suggested tasks are not actual GitHub issues or completion records."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "373b518d83ce9cfa954beb5c170be520d9f6ad33643a5f88c0bbef008dc550bf",
+      "bytes": 3535,
+      "remediation": "Clarified local implemented stage, historical starter tasks and explicit owner workflow without discarding useful specifications. Authenticated authored-hint browser recovery is described as awaiting final integration validation.",
+      "post_review_sha256": "815cd0cdcf97ad223c280ee856fab5017b316641957930b02d6927359a843929",
+      "current_status": "Stale wording corrected in this task; implementation evidence remains in PROJECT_STATUS.md."
+    },
+    {
+      "path": "docs/DATA_AND_LICENSES.md",
+      "purpose": "Original-code, content, dataset, model and privacy rights boundaries.",
+      "active_use": "Active rights and provenance policy.",
+      "status": "Current unresolved original-code license/inbound policy; other approvals per artifact.",
+      "dependencies": [
+        "docs/OPEN_DECISIONS.md",
+        "docs/OPEN_SOURCE_STRATEGY.md"
+      ],
+      "risks": [
+        "Public availability is not permission for training, redistribution or commercialization.",
+        "Private submissions cannot silently become training data."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "f4e2b47ee7ee47dff9fd95ae0e6b3279ff227b4b142cc45d30da1f70002fe39f",
+      "bytes": 2561
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "purpose": "Pinned native setup, startup, tests, local secrets and Compose workflows.",
+      "active_use": "Active development runbook.",
+      "status": "Current documented local workflow; hardware/network/runtime conditions must be verified per instance.",
+      "dependencies": [
+        "package.json",
+        "services/api/pyproject.toml",
+        "playwright.config.ts",
+        "compose.yaml",
+        "compose.cloud.yaml"
+      ],
+      "risks": [
+        "Installed runtime/browser assumptions are environment-specific.",
+        "Default suites intentionally skip actual sandbox/full-judge coverage.",
+        "Local data deletion and Compose volume removal can destroy accounts/history."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "7d0be3262d31f56b7c7cb3205c58fb23556919d7a9d2144c2142d6ec04d00714",
+      "bytes": 10315
+    },
+    {
+      "path": "docs/INDEX.md",
+      "purpose": "Navigation and truth convention for project documents.",
+      "active_use": "Active documentation entry point.",
+      "status": "Current links with canonical future file to be added by parent task.",
+      "dependencies": [
+        "docs/START_HERE.md",
+        "docs/PROJECT_STATUS.md",
+        "README.md"
+      ],
+      "risks": [
+        "Readers may conflate linked proposals and executed implementation without status labels."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "04147956df27b8175481c66b25a08ec0c4912e7f24cd88c928a87fa784d3c42b",
+      "bytes": 2882
+    },
+    {
+      "path": "docs/JUDGE_SECURITY.md",
+      "purpose": "Threat model, required controls, judge vocabulary and public-release gate.",
+      "active_use": "Active security design and review checklist.",
+      "status": "Design requirements; implementation and enforcement evidence live elsewhere.",
+      "dependencies": [
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "services/judge/UPSTREAM_REVIEW.md",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "risks": [
+        "No security certification.",
+        "Generic verdict list includes MLE while current resource accounting remains limited.",
+        "Piston candidates do not supersede adopted local gVisor boundary."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "527a91bcfd13c0531e9d7e6cff4611cbe4700ff02ff7bb8a281d6f8824448c5e",
+      "bytes": 2846
+    },
+    {
+      "path": "docs/MODEL_DATA_EVALUATION.md",
+      "purpose": "Future permitted data pipeline, model baselines, tuning and evaluation.",
+      "active_use": "Active research proposal.",
+      "status": "No trained model or benchmark run is claimed.",
+      "dependencies": [
+        "docs/DATA_AND_LICENSES.md",
+        "docs/AI_SOLVER.md",
+        "docs/OPEN_DECISIONS.md"
+      ],
+      "risks": [
+        "Training requires separate rights and external compute budget.",
+        "Model/provider family names are candidates, not installed dependencies.",
+        "Benchmark contamination and invalid rewards can create misleading gains."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "25a2a5ead3aa5bb5b7119e216b50013fd8eb7cf4a0e2d63d21b5af470972a5f8",
+      "bytes": 3358
+    },
+    {
+      "path": "docs/OPEN_DECISIONS.md",
+      "purpose": "Maintainer-owned licensing, audience, runtime, provider and policy decisions.",
+      "active_use": "Active decision register needing reconciliation with ADRs.",
+      "status": "Mixed open business/legal choices and partly resolved local technical choices.",
+      "dependencies": [
+        "docs/adr/0001-practice-foundation.md",
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "risks": [
+        "D-06 presents Piston/alternate choice before local gVisor adoption.",
+        "Local adoption does not settle production deployment or licensing policy."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "ba9d80a5c783e966b75fb2f52175ea6ccddd6b26cce07721a4bfa5a4382c2df4",
+      "bytes": 1706,
+      "remediation": "Clarified local implemented stage, historical starter tasks and explicit owner workflow without discarding useful specifications. Authenticated authored-hint browser recovery is described as awaiting final integration validation.",
+      "post_review_sha256": "74ca389cfd3f9baf06115e11ebdfd7aa7a75767734429317fefe3f3bc863c621",
+      "current_status": "Stale wording corrected in this task; implementation evidence remains in PROJECT_STATUS.md."
+    },
+    {
+      "path": "docs/OPEN_SOURCE_STRATEGY.md",
+      "purpose": "Build/reuse policy and dependency/service/reference candidate matrix.",
+      "active_use": "Active upstream assessment reference.",
+      "status": "Existing Monaco/Better Auth/gVisor adoption with many deferred candidates.",
+      "dependencies": [
+        "docs/adr/0001-practice-foundation.md",
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/DATA_AND_LICENSES.md"
+      ],
+      "risks": [
+        "Some candidate language predates implemented auth; verify recorded adoption.",
+        "GPL/AGPL, enterprise, data and model terms differ.",
+        "Stars/activity do not establish fit or security."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "594ca78a81262571e6cd18ce837e3f1a53aa9a7ca0a750fd0a5c99eff592f7c4",
+      "bytes": 5660
+    },
+    {
+      "path": "docs/PRODUCT_REQUIREMENTS.md",
+      "purpose": "Proposed P0/P1/P2 features, modes and acceptance conditions.",
+      "active_use": "Active requirements reference.",
+      "status": "Priorities are explicitly not implementation status.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/ARCHITECTURE.md",
+        "docs/AI_SOLVER.md"
+      ],
+      "risks": [
+        "No full production P0 release should be inferred from partial local implementation.",
+        "Generic MLE/result descriptions must respect actual resource evidence."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "84f90c8e8149a79eaebdb9c0ce1e6665d8bf3499fb8f63d659373f2e72151ca5",
+      "bytes": 4041
+    },
+    {
+      "path": "docs/PROJECT_STATUS.md",
+      "purpose": "Executed implementation, test evidence, limitations and current facts.",
+      "active_use": "Primary active implementation ledger.",
+      "status": "Current local 2026-11-17 preservation validation separated from historical/hosted evidence.",
+      "dependencies": [
+        "docs/DEVELOPMENT.md",
+        "docs/REPOSITORY_STRUCTURE.md",
+        "docs/AUDIT_AND_AI_PLAN_2026-11-15.md"
+      ],
+      "risks": [
+        "Recorded checks apply to named revision, not all later changes.",
+        "Local passes and earlier hosted run do not prove production readiness or account recovery."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "dac3d05e629be78a5774d40ca9d4b45183660b57766c2f9a899787aaa6bf3031",
+      "bytes": 9733
+    },
+    {
+      "path": "docs/PROJECT_VISION.md",
+      "purpose": "Original mission, users, product pillars and non-goals.",
+      "active_use": "Active original-intent reference.",
+      "status": "Proposed charter with November 13 date; later status provides implementation facts.",
+      "dependencies": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/ROADMAP.md",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "risks": [
+        "Opening proposal disclaimer predates actual local software.",
+        "Competitive ambition is not measured superiority."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "c330d8cad27c9304a9bb3acdd262d56ccf779f4f94ee3db294ef3baf26ac4cda",
+      "bytes": 3756
+    },
+    {
+      "path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "purpose": "Complete 20-repository and model/dataset study inventory.",
+      "active_use": "Historical research catalog, not dependency manifest.",
+      "status": "Candidates and adoption distinctions explicit, dated 2026-11-15.",
+      "dependencies": [
+        "docs/OPEN_SOURCE_STRATEGY.md",
+        "docs/AUDIT_AND_AI_PLAN_2026-11-15.md"
+      ],
+      "risks": [
+        "External licenses, versions and links may change.",
+        "No blanket rights to underlying problems/models/datasets."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "8fdf5f1bfdf7b591b2122e4ef438f28b6f9994619ed4327e779c02174f082f17",
+      "bytes": 8762
+    },
+    {
+      "path": "docs/REPOSITORY_STRUCTURE.md",
+      "purpose": "Current tree, preservation rationale, hashes, boundaries and recovery limitations.",
+      "active_use": "Active organization and preservation runbook.",
+      "status": "Current reorganization record; not proof of compromise attribution.",
+      "dependencies": [
+        "AnalyseFuture/manifest.json",
+        "scripts/verify_preserved_archives.py",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "risks": [
+        "Five supplied LFS pointers are not underlying datasets.",
+        "Static scan and hash preservation do not certify archived code or resolve account security."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "23f3395073ecb18b04a0f5f218f3bd8e98a1676ed8051bb7891a3da450012dcd",
+      "bytes": 7982
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "purpose": "Dependency-ordered phases and acceptance gates.",
+      "active_use": "Active high-level proposal.",
+      "status": "No committed dates; phases partially implemented per status ledger.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/MODEL_DATA_EVALUATION.md"
+      ],
+      "risks": [
+        "Phase zero/one text predates completed foundation; must not trigger reset.",
+        "Default issue/PR wording differs from current direct-main authorization."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "ba455d1c654a03d844b19dc098162fa17c515559dafb7d7f3e5252665e26d289",
+      "bytes": 3037
+    },
+    {
+      "path": "docs/START_HERE.md",
+      "purpose": "First-day reading, local workflow and contribution expectations.",
+      "active_use": "Active onboarding reference.",
+      "status": "Mostly usable; opening larger-judge-proposal wording predates local integration.",
+      "dependencies": [
+        "README.md",
+        "docs/DEVELOPMENT.md",
+        "docs/PROJECT_STATUS.md",
+        "docs/CONTRIBUTOR_TASKS.md"
+      ],
+      "risks": [
+        "Suggested first build and backlog can duplicate implemented work.",
+        "Local startup does not establish public operational readiness."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "1a3325b63a40e02957245f636067db2d6281f2a7eef0459326f3dbb5b75a280f",
+      "bytes": 2599,
+      "remediation": "Clarified local implemented stage, historical starter tasks and explicit owner workflow without discarding useful specifications. Authenticated authored-hint browser recovery is described as awaiting final integration validation.",
+      "post_review_sha256": "662644254cca00f463054a016f2a5ce4b667d842031aea22cb802fd82dacd84d",
+      "current_status": "Stale wording corrected in this task; implementation evidence remains in PROJECT_STATUS.md."
+    },
+    {
+      "path": "docs/adr/0001-practice-foundation.md",
+      "purpose": "Historical first-increment decision and exact initial dependency choices.",
+      "active_use": "Active historical ADR used to explain design.",
+      "status": "Implemented first increment; later ADR supersedes disabled submission/auth scope.",
+      "dependencies": [
+        "package-lock.json",
+        "services/api/uv.lock",
+        "docs/adr/0002-authenticated-isolated-submissions.md"
+      ],
+      "risks": [
+        "Initial no-auth/no-execution wording must be read as dated scope.",
+        "Dependency audit claims are initial observations, not current guarantees."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "bc3f5b443504de3739703541eb204f974c7103c7e6376b7374da0896468726ce",
+      "bytes": 4715
+    },
+    {
+      "path": "docs/adr/0002-authenticated-isolated-submissions.md",
+      "purpose": "Local identity/ownership/gVisor decisions, alternatives and limits.",
+      "active_use": "Active design and security boundary ADR.",
+      "status": "Implemented for local validation; production approval remains open.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "services/judge/UPSTREAM_REVIEW.md",
+        "docs/JUDGE_SECURITY.md"
+      ],
+      "risks": [
+        "Runtime age, absent aggregate cgroup accounting and identity recovery limits remain.",
+        "Existing account JWTs can remain valid briefly after logout.",
+        "Stock Piston/nsjail were deferred, not safe fallback runners."
+      ],
+      "recommendation": "Keep in current location; clarify status where noted rather than remove or rewrite history.",
+      "review_method": "Full text review; no code execution or external revalidation.",
+      "sha256": "13a12f9da52ca98c05819acc42c86f3bd6f1f8fec1f6da5f3927a35f1c4dd8e4",
+      "bytes": 6667
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md",
+      "purpose": "Historical staged AI architecture with exact authored provenance, bounded UI requests and future provider/debugger/solver gates.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Existing API and recovered typed UI",
+        "fixed provider egress and approved spend",
+        "isolated judge and evaluation"
+      ],
+      "risks": [
+        "Opening awaiting-hosted-validation note is an earlier snapshot; later historical CI summaries exist.",
+        "No real model provider or proposed solver service was implemented by this plan.",
+        "Relative links now describe source-branch locations."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/AI_ARCHITECTURE_PLAN.md",
+      "sha256": "3ee4afb78198c398447dcd833e93c4a47156c71248e86495dbab7db1b229f2c0",
+      "bytes": 5284
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md",
+      "purpose": "Historical corrected agent playbook recognizing implemented foundation and identifying SAI-011/provider ADR next steps.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical PR #5 review",
+        "source status verification",
+        "provider threat model and approval"
+      ],
+      "risks": [
+        "PR state and next-task directions are historical, not current instructions.",
+        "Does not supersede current owner-authorized direct-main workflow."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/CODEX_PLAYBOOK.md",
+      "sha256": "eae8246d1a5970800b69366620ba49bc9e6e7c253c8e115bfa95f60dcca0b3b6",
+      "bytes": 2980
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md",
+      "purpose": "Historical P0-P4 backlog with user value, source paths, dependencies, acceptance, cost and rollback.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Original-code license decision",
+        "identity/judge production gates",
+        "provider entitlement and budget",
+        "held-out evaluation"
+      ],
+      "risks": [
+        "Task statuses apply to the historical main/branch split.",
+        "Suggested service/model work and costs were not approved or executed.",
+        "Candidate/repair numbers are experiment proposals, not deployed product limits."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/IMPLEMENTATION_BACKLOG.md",
+      "sha256": "b6e0aebd7d6714ea9607cb12a2c1ec328b2f86f672dc7ad9f2f87979774ea3d2",
+      "bytes": 8111
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md",
+      "purpose": "Historical SAI-011 change log, hosted evidence, test-selector regression and resume handoff.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Source branch at b591db142d7b65c306769a59251ed4129f42118a",
+        "recorded CI at earlier 294c6a3",
+        "current recovery validation"
+      ],
+      "risks": [
+        "Records earlier hosted run 43837562181, while project-memory records later head run 43837980897; neither is current-task validation.",
+        "Its branch checkout/PR commands are historical and not authorized live actions.",
+        "No local clone, sandbox rerun, provider or deployment was claimed in that session."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/IMPLEMENTATION_PROGRESS.md",
+      "sha256": "70faced06998f157f86ab7adfaa05b4f7e39297eb7699a3bcd709eb90e8c61c6",
+      "bytes": 4739
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md",
+      "purpose": "Historical navigation for five SAI-011 research/backlog documents plus existing handbook.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Source-branch docs tree",
+        "current docs/INDEX.md for live navigation"
+      ],
+      "risks": [
+        "Preserved relative links may not resolve in an isolated snapshot.",
+        "An index does not make referenced plans implemented."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/INDEX.md",
+      "sha256": "19ce79df4677f5536cd8fcac64f0dd98d7f06f83fd36e4e9ecc83e3d24baab41",
+      "bytes": 3140
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md",
+      "purpose": "Historical exact-two-reference assessment of CodeSIM/MapCoder and phi-code, source modules, unsafe execution and acceptance gates.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Recorded upstream SHAs/licenses",
+        "current provider/judge contracts",
+        "rights-approved held-out evaluation"
+      ],
+      "risks": [
+        "Upstream maintenance/license facts are dated and require recheck for adoption.",
+        "No claimed benchmark reproduction or safe execution framework adoption.",
+        "Similarity and finite tests are not proofs."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/PRIMARY_RESEARCH_REPOS.md",
+      "sha256": "ad800839c32e860bcf2d4dcfbffa97d410fda99c63dfaf77a0f0f88348a64baa",
+      "bytes": 5649
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md",
+      "purpose": "Historical implementation ledger distinguishing merged SAI-010, branch-only SAI-011 and recorded tests.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical SAI-010 and SAI-011 hosted runs",
+        "earlier local judge evidence",
+        "current root status ledger"
+      ],
+      "risks": [
+        "Mixed historical 108/137 API results and earlier branch green SHA need date/revision context.",
+        "No hosted real-gVisor rerun, merge or production deployment established.",
+        "Its not-yet-browser-integrated main statement is historical."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/PROJECT_STATUS.md",
+      "sha256": "dcd5005f4cc4c84ff6f857b543565a5658050ebf6facd7b665040a3e054c7f6b",
+      "bytes": 9455
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "purpose": "Historical complete 20-repository inventory with refreshed November 16 verification note and adoption boundaries.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical REPOSITORY_AUDIT.md and PRIMARY_RESEARCH_REPOS.md",
+        "source/data/model rights review"
+      ],
+      "risks": [
+        "Study resources are not installed dependencies or blanket commercial permission.",
+        "No current external-source or license revalidation performed here."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "sha256": "3f0440e68468531d8eb11bc99773b3fb50cd2e056ebb28eb71a04cb0a698741d",
+      "bytes": 9524
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md",
+      "purpose": "Historical source-path audit of main 9952f8b and refreshed 20-reference default-head matrix.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Recorded GitHub source API inspection",
+        "prior November 15 audit",
+        "current source and tests"
+      ],
+      "risks": [
+        "No local clone or full transitive dependency/security review was performed in that historical session.",
+        "Stale main/branch gap must not override recovered implementation status.",
+        "Source and metadata inspection do not certify production or benchmark claims."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "source_ref": "origin/feat/sai-011-frontend-hint-api",
+      "original_path": "docs/REPOSITORY_AUDIT.md",
+      "sha256": "4f5189ce4f6c5db2635dc0bbdd4547fb7b51315cc46244f1e7bd4883a5816f17",
+      "bytes": 9998
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream",
+      "purpose": "Inert historical agent-instruction snapshot adding continuity-document reading requirements.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical continuity pack",
+        "live root AGENTS.md for actual instructions"
+      ],
+      "risks": [
+        "Embedded instructions are preserved evidence only, not active authority.",
+        "Renamed .upstream to prevent accidental instruction activation.",
+        "Historical PR/spending processes do not override current owner scope."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "AGENTS.md",
+      "sha256": "8000e8a94a6e627c341193a62837e89f0cb4caeca97ebac2faac617744557010",
+      "bytes": 3440
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/README.md",
+      "purpose": "Historical root orientation augmented with project-memory, RTF handbook and continuity links.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical continuity pack",
+        "root current README.md for active status"
+      ],
+      "risks": [
+        "Old status and relative links reflect branch snapshot.",
+        "Future Postgres/AI architecture remains proposed; no model inferred from prose."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "README.md",
+      "sha256": "a325c60f0f8af5548b468925a093ca66c179f2c57bdcff20f3c8839b86720879",
+      "bytes": 7413
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md",
+      "purpose": "Historical accessible-conversation summaries, explicit excerpts, engineering timeline, decision table and handoff template.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical SAI-010/011 source and CI links",
+        "structured master development specification"
+      ],
+      "risks": [
+        "Not a complete chat export or independent authentication of every recalled event.",
+        "Old PR-open/main SHA and branch-workflow statements are date-bound.",
+        "Conversation excerpts must not be treated as current permissions."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/CHAT_CONTINUITY_LOG.md",
+      "sha256": "3620b489c426dab8e11f76d5b79d16ffe4a33c9e892f2c86c2320b893a092919",
+      "bytes": 8482
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md",
+      "purpose": "Historical navigation introducing memory, RTF, master spec, chat log and resume prompt.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Source-branch handbook and existing docs",
+        "current active index"
+      ],
+      "risks": [
+        "Preserved links can refer to files outside this partial snapshot.",
+        "Instruction-like navigation text is not active agent policy."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/INDEX.md",
+      "sha256": "593212097137d9212f4e124e872b136c40940330ae1cddb3851c32e7213ecf4a",
+      "bytes": 3225
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md",
+      "purpose": "Historical structured restatement of the owner's ten-task development brief and original project constraints.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Existing foundation and SAI-010",
+        "historical SAI-011 work",
+        "20-study-repository catalog"
+      ],
+      "risks": [
+        "Explicitly not guaranteed verbatim source transcript.",
+        "Broad roles and commands are preserved requirements history, not new task authorization.",
+        "PR defaults and previous smallest milestone are superseded by current owner directions and source state."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/MASTER_DEVELOPMENT_SPEC.md",
+      "sha256": "a1741e4e8ba26a6bebcb1ed93497d8dafab18fadb5470421b672f08122a9bd1c",
+      "bytes": 10235
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md",
+      "purpose": "Historical comprehensive continuity handbook: original intent, code map, diagrams, 20 references, two primary solvers, P0-P4 backlog, owner decisions and commands.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Main 9952f8b and historical SAI-011 head b591db1",
+        "historical final branch CI run 43837980897",
+        "source docs and provider/judge budgets"
+      ],
+      "risks": [
+        "A dated snapshot, not live current-source authority despite GitHub-first title.",
+        "Old PR #5 unmerged and previous next-task assertions require current recheck.",
+        "Historical CI pass claims are not reexecuted/current validation.",
+        "Original-code licensing, data rights and public-judge operations remain open."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/PROJECT_MEMORY.md",
+      "sha256": "2c2a78940655a73a19673072cb7db583a9744c0ff36a79a1e53b60a61cae2789",
+      "bytes": 26314
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md",
+      "purpose": "Historical copy/paste startup prompt preserving continuity, source verification and next provider-design idea.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical memory/master spec/log",
+        "current source, owner instructions and status ledger"
+      ],
+      "risks": [
+        "Prompt contents are untrusted archived text, not active instructions.",
+        "Old branch/PR steps are not current workflow authorization.",
+        "Unknown chats cannot be recovered from this prompt."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/RESUME_PROMPT.md",
+      "sha256": "82b9d2fe6d9b6ec4d59bdcca0b8a36b1a9cc062abee7b1be2da744c4a37a6efb",
+      "bytes": 2584
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf",
+      "purpose": "Historical Word-readable compilation of project memory, conversation log, master development specification and resume prompt.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "The four source Markdown documents in project-memory snapshot",
+        "basic RTF text decoder for inspection only"
+      ],
+      "risks": [
+        "Duplicated compilation; stale statuses/CI/PR claims retain historical dates and scope.",
+        "Read as text only; no document application, macro, embedded command or archived instruction executed.",
+        "Formatting/Markdown conversion artifacts do not change its historical evidence status."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf",
+      "sha256": "4125eaa23fbe5c271453a36fb7ffb7f9e55f7dda83fa4028476f4f3f40baf43b",
+      "bytes": 57912
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md",
+      "purpose": "Historical onboarding augmented with continuity-pack instructions and RTF link.",
+      "active_use": "Historical preserved source only; not an active instruction, dependency or current validation record.",
+      "status": "Dated snapshot preserved unchanged. Useful context remains available; current capability and test status must be reestablished on active source.",
+      "dependencies": [
+        "Historical PROJECT_MEMORY.md and RESUME_PROMPT.md",
+        "existing local development guide"
+      ],
+      "risks": [
+        "Opening larger-judge-proposal wording predates implemented local judge.",
+        "Historical starter/PR instructions can duplicate existing work if mistaken for current tasks."
+      ],
+      "recommendation": "Preserve unchanged under AnalyseFuture with exact source provenance; selectively recover useful work only through current review and tests.",
+      "review_method": "Full prose read. RTF inspected using basic escape decoding into a temporary text file; no archive/document code executed.",
+      "source_commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "source_ref": "origin/docs/solver-ai-permanent-project-memory",
+      "original_path": "docs/START_HERE.md",
+      "sha256": "fad5bf0421ed7237cefb872d5d08d123b3806297bb71ae247892447a7cbd22ba",
+      "bytes": 3198
+    },
+    {
+      "path": "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "purpose": "Canonical detailed future proposal grounded in current project and preserved history; adds explicit feasibility, decision register, resources and conditional 1/2/3-5-year horizons.",
+      "active_use": "Current planning artifact; not runtime implementation or release claim.",
+      "status": "New reviewed proposal; earlier PROJECT_IDEA.txt retained intact. Authored-hint UI recovery awaits root final validation.",
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/DEVELOPMENT.md",
+        "docs/adr/",
+        "PROJECT_IDEA.txt",
+        "AnalyseFuture/repository-inventory/historical-branches.json"
+      ],
+      "risks": [
+        "Dates depend on resources and acceptance gates.",
+        "No new runtime validation, model service, paid compute or production guarantee follows from this file."
+      ],
+      "recommendation": "Keep as requested detailed planning document and update current evidence only after observed checks.",
+      "review_method": "Authored after full current/historical documentation review.",
+      "sha256": "b0ed6167a555d659e86590fc071ee100f2221c7114f9e33f38e80f5e2d694f35",
+      "bytes": 33846
+    }
+  ],
+  "historical_prose_count": 18,
+  "edited_paths": [
+    "docs/START_HERE.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/CONTRIBUTOR_TASKS.md",
+    "docs/CODEX_PLAYBOOK.md",
+    "docs/OPEN_DECISIONS.md",
+    "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt"
+  ]
+}

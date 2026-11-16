@@ -1,3 +1,4 @@
 # Keep archived file bytes intact and do not invoke external clean/smudge filters.
 archives/** -text -filter
 extracted/** -text -filter
+historical-implementations/** -text -filter

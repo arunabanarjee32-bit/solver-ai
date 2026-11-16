@@ -2,16 +2,18 @@
 
 These are not silently settled by an AI coding agent.
 
+This register began before the local identity and judge implementation. ADR 0001 and ADR 0002 record the adopted development choices; they do not resolve original-code licensing, production deployment or provider spending. Read technical rows as production/review decisions where a local choice already exists, rather than instructions to rebuild working services.
+
 | ID | Decision | Initial proposed default | Why it matters |
 | --- | --- | --- | --- |
 | D-01 | Original code outbound license | Undecided | Public repo without a LICENSE is not automatically open source |
 | D-02 | Contributor inbound IP policy | Undecided | Ownership/permissions for future commercial product |
 | D-03 | First launch audience | DSA learners + early contest programmers | Narrows scope |
 | D-04 | First languages | C++17, Python 3; C++20 next | Runtime/test burden |
-| D-05 | Backend identity architecture | Better Auth + API verification, subject to audit | Avoid split auth |
-| D-06 | Judge service | Piston self-hosted versus hardened alternate | Most important security decision |
+| D-05 | Production identity operations and review | Retain adopted Better Auth + API verification; review recovery, trusted ingress and deployment policy | Avoid split auth; local adoption is recorded in ADR 0002 |
+| D-06 | Production judge infrastructure | Retain local gVisor boundary; choose maintained dedicated production runtime/operations after review | ADR 0002 adopted local gVisor and deferred stock Piston; public isolation/resource review remains open |
 | D-07 | Allowed initial problem sources | Original seed problems and explicit permissions | Copyright and trust |
-| D-08 | First AI provider | Provider-neutral mocked adapter, then chosen API/model | Cost and flexibility |
+| D-08 | First real AI provider | Existing provider-neutral authored backend, then owner-approved API/model and budget | Authored hints are implemented, not model inference; cost and privacy need approval |
 | D-09 | Training data / model | Benchmark first; external-GPU LoRA later | Legal rights/compute budget |
 | D-10 | Hosting/budget | Local dev first; vendor later | Operational ownership |
 | D-11 | Brand/name | Working title 'Solver AI' | Avoid trademark conflicts |

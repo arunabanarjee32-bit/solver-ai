@@ -1,0 +1,632 @@
+SOLVER AI
+PROJECT VISION AND FUTURE ROADMAP
+
+Planning review: 17 November 2026, Asia/Kolkata
+Scope: existing project, preserved research references and conditional future work
+Status: canonical detailed planning proposal; not a release or implementation claim
+
+
+01. HOW TO USE THIS DOCUMENT
+
+This file turns the project's original intent and current evidence into choices
+about what to keep, improve, investigate and defer. It is the detailed future
+planning document requested for AnalyseFuture. Its location does not mean that
+the proposal is abandoned or that other preserved material is safe to execute.
+
+PROJECT_IDEA.txt at the repository root remains intact as the earlier narrative
+proposal. It explains the product experience and broad ambition. This document
+adds a more explicit feasibility register, dependencies, ownership, delivery gates
+and three-to-five-year research horizon. Neither file replaces the implementation
+ledger, development runbook, security boundaries or architecture decisions.
+
+Read source documents in this order when their dates or statements differ:
+
+1. docs/PROJECT_STATUS.md for named-revision implementation and test evidence.
+2. docs/DEVELOPMENT.md and the actual scripts/manifests for startup and checks.
+3. docs/adr/ for decisions and their historical scope.
+4. docs/PRODUCT_REQUIREMENTS.md and docs/ARCHITECTURE.md for proposed contracts.
+5. The vision, roadmap, research inventories and these plain-text proposals.
+
+This planning review read all tracked docs/ files, plus README.md, AGENTS.md,
+CONTRIBUTING.md, SECURITY.md and PROJECT_IDEA.txt. It also read the historical
+SAI-011 and project-memory prose snapshots, including the RTF handbook as text.
+Archived prompts and instructions are historical evidence, not current authority.
+Reading a claim is not a new execution of its tests. Exact local, hosted,
+historical and unrun checks must stay separate. Dates below are planning horizons
+contingent on people and resources.
+
+
+02. ORIGINAL INTENT: WHAT WE ARE TRYING TO BUILD
+
+The original project charter is an independently controlled DSA, competitive
+programming and ICPC preparation platform with safe judging, useful AI tutoring
+and eventually measured solution generation. Its purpose is to improve reasoning
+and learning through a complete workflow, rather than combine many unrelated
+repositories or attach a generic chatbot to an editor.
+
+The strongest initial product is an algorithm learning and evidence studio:
+
+    Understand a problem -> form a plan -> implement -> run -> inspect evidence
+        -> get appropriate help -> reflect -> solve a related problem alone
+
+The learner should understand why a plan fits the constraints, what the judge
+observed, where uncertainty remains and what to practice next. The research user
+should be able to compare solving methods under transparent budgets. Those are
+different goals within one project, with different assistance permissions.
+
+The preserved project-memory branch reinforces that this is an existing product,
+not a request to restart it. Its structured master specification, continuity log
+and handbook are dated summaries of accessible conversations, not a recovered
+verbatim export of unavailable chats. They record a previously completed SAI-011
+frontend implementation; that evidence supports recovery and revalidation rather
+than building a duplicate endpoint or pretending the work never existed.
+
+Keep these original commitments:
+
+* Own the original application, brand, domain model and product direction while
+  respecting third-party source, model, dataset and problem rights.
+* Use actual execution evidence, not fabricated verdicts or success statistics.
+* Preserve a secure boundary between untrusted code and application credentials.
+* Make authored hints, generated assistance and research hypotheses distinct.
+* Start with a small useful workflow before scaling contests, providers or ML.
+
+The project is not yet an established competitor to mature learning platforms.
+Competitive ambition is a hypothesis to earn through reliable operations, useful
+teaching, original content and measured outcomes.
+
+
+03. EVIDENCE AND FEASIBILITY LABELS
+
+VERIFIED CURRENT
+Present implementation with the evidence described in the current status ledger.
+Verification applies to the named revision and scope; it is not a blanket security
+or production claim. This document itself performs no new runtime validation.
+
+BROKEN OR INCONSISTENT
+An observed failure or contradiction with a reproducible description. Absence of
+a proposed feature is a gap, not automatically a defect. A failed check needs
+diagnosis before assigning this label to application behavior.
+
+FEASIBLE NOW
+A focused feature that can be built using the existing stack and ordinary
+development resources. It still needs implementation, tests, an owner and review.
+
+FEASIBLE WITH RESOURCES
+Technically practical, but dependent on funded infrastructure, specialist work,
+approved data, operational staffing or enough users to justify recurring cost.
+
+EXPERIMENTAL
+A testable research proposition whose quality or cost benefit is unknown. It must
+have a baseline, an experiment budget and a clear stop condition.
+
+SPECULATIVE
+A plausible longer-term direction without sufficient current product, technical
+or economic evidence. Do not make it a dependency of the useful first release.
+
+INFEASIBLE AS STATED
+A promise that is impossible in its general form, lacks the required rights, or
+contradicts the project's trust and integrity requirements. Narrowing the claim
+may create a feasible experiment; marketing the broad promise is unacceptable.
+
+
+04. CURRENT FOUNDATION: PRESERVE BEFORE EXPANDING
+
+VERIFIED CURRENT: the repository has a Next.js/TypeScript practice interface,
+locally bundled Monaco editor, original three-problem catalog and browser drafts.
+Better Auth accounts and a Python FastAPI service support signed API identity,
+owned submission history, SQLite persistence, quotas and leased jobs. A separate
+gVisor-only judge pathway runs bounded Python and C++17 programs. The offline hint
+contract returns explicitly authored content, not an actual model response.
+
+docs/PROJECT_STATUS.md records the current local preservation checks separately
+from historical and hosted evidence. Refer there for exact commits, counts and
+limits. The architecture has useful tests, but a historical pass does not validate
+an altered revision or prove internet-facing operation is ready.
+
+Keep the active responsibilities:
+
+apps/web/        Browser pages, accounts, drafts, editor and user-facing history.
+services/api/    Catalog, validation, identity verification, ownership and queue.
+services/judge/  Trusted controller and separate isolated execution boundary.
+scripts/         Startup, packaging and preservation tools.
+tests/e2e/       Whole-workflow browser behavior with independent test state.
+docs/           Decisions, development, current status and requirements.
+AnalyseFuture/   Preserved uploads, extracted references and future analysis.
+
+The two uploaded research archives and their regular members are preserved under
+AnalyseFuture. Five supplied dataset entries are LFS pointer files; the referenced
+large objects are absent. Extraction cannot reconstruct data that was not in the
+archive. Their existence is a documented resource gap, not evidence of corruption.
+
+Do not treat archived code as installed application functionality. Preservation
+and byte-level verification establish what was kept, not its correctness, rights,
+maintenance state or security.
+
+
+05. WHAT IS BROKEN, WHAT IS MISSING, AND WHAT IS UNKNOWN
+
+BROKEN OR INCONSISTENT DOCUMENTATION
+Some older texts describe the project as planning-only or documentation-first,
+call the local judge future work, or suggest rebuilding the initial scaffold.
+The contributor backlog and open-decision register partly predate the completed
+identity/submission/hint contract work. The initial foundation ADR correctly
+describes its own earlier no-auth/no-execution increment; it should not be read as
+the present product. Dated audit tables also retain observations superseded by
+later sections and the status ledger. Clarify these distinctions without erasing
+history or repeating implemented work.
+
+MISSING, NOT A CLAIM OF A BROKEN EXISTING FEATURE
+Real model inference, an AI debugger, candidate solver orchestration, adaptive
+practice, contests, training and production operations are not implemented.
+The initial review baseline did not connect the browser to the authenticated
+hint API. A previously authored browser integration is being recovered during
+this task; final implementation status depends on the task's integration checks.
+That authored UI is distinct from a real model-backed tutor.
+Configuring an unsupported hint backend to fail safely does not constitute a
+working provider, and authored text must never be relabeled as AI inference.
+
+UNKNOWN OR INCOMPLETE
+There is no demonstrated production isolation certification, general learning
+effect, commercial demand, model quality advantage or account recovery outcome.
+Source inspection cannot establish who made reported unwanted repository changes.
+Preserving and organizing files is not a forensic investigation or a guarantee
+that an account's access controls are secure.
+
+No new application runtime failure is asserted by this documentation review.
+Actual failing checks should be recorded with the command, revision, environment,
+symptom and diagnosis in the implementation report.
+
+
+06. USERS AND THE FIRST VALUABLE EXPERIENCE
+
+Start with DSA learners and early competitive programmers who need help finding
+the gap between a plausible idea and a working algorithm. Let them complete an
+attempt without assistance, ask for progressive help and revisit related tasks.
+
+A practical first experience:
+
+* Open an original or explicitly permissioned problem with clear constraints.
+* Write Python or C++17 code in an accessible editor with private local drafts.
+* Run public samples and submit deliberately to the isolated judge.
+* Read a real finite verdict with useful, capped and safe diagnostics.
+* Request a concept hint, observation or pseudocode before choosing full code.
+* Review private history and record the mistake or invariant learned.
+* Solve a nearby problem later with less assistance.
+
+Experienced competitors, coaches, problem authors and research users can follow
+once this loop is reliable. Assessment customers need stronger identity,
+administration and integrity operations; they should not dictate the first MVP.
+
+Make four modes explicit: tutor, debug, solver/research and contest. The same
+person may use all four, but an event's permission policy must be enforced on the
+server. Disabling a browser control alone does not enforce restricted assistance.
+
+
+07. ARCHITECTURE AND LANGUAGE STRATEGY
+
+Keep one modular project rather than one language at any cost. TypeScript and
+Next.js already fit the browser interface and session integration. Python and
+FastAPI already fit application orchestration and the future AI ecosystem.
+Validated APIs allow each component to evolve without a total rewrite.
+
+An appropriate next architecture is:
+
+    Web + Better Auth
+          |
+    FastAPI authorization, policy, budgets and domain contracts
+          |                                  |
+    Existing submission queue         Tutor / solver modules
+          |                                  |
+    Isolated judge worker              Fixed provider adapters
+          \                                  /
+         Bounded results and user-owned history
+
+Start future AI modules inside the existing backend unless a measured need
+justifies a separate service. PostgreSQL, a dedicated queue, model serving and
+contract packages are possible later migrations, not prerequisites for every
+feature. Add real modules when needed instead of empty future-service folders.
+
+Learner execution languages are independent from implementation languages.
+Python/C++17 are the current interface. Each later runtime needs a compiler or
+interpreter contract, isolated image, limits, hostile-code tests, diagnostics and
+update owner. Do not advertise Java, Rust or C++20 merely by adding an editor mode.
+
+A full TypeScript backend would require porting useful Python integration; a
+full Python frontend would replace an existing web implementation. Reconsider a
+rewrite only with measured maintenance, staffing or deployment benefits and a
+migration/rollback plan. Language uniformity is not itself user value.
+
+
+08. PRIORITIZED CAPABILITY REGISTER
+
+F01. Authenticated typed hint UI
+Class: FEASIBLE NOW; prior implementation recovery is awaiting final validation.
+Value: makes the existing explicit provenance contract useful in the browser.
+Dependencies: current auth, hint API, validated frontend schemas, accessible UI.
+Gate: authored mode and errors are honestly labeled; guest hints remain usable;
+ownership, timeout, retry and accessibility regressions pass. No model key needed.
+
+F02. More original problems and teaching material
+Class: FEASIBLE NOW, limited by author/reviewer time.
+Value: makes the small existing loop educationally useful.
+Dependencies: provenance, statement review, independent reference checks, tests.
+Gate: every problem has clear rights, constraints, samples and reproducible
+grading. Stop expansion when review capacity cannot support quality.
+
+F03. One real tutor provider
+Class: FEASIBLE WITH RESOURCES; integration is ordinary engineering, helpfulness
+and economics must be tested.
+Dependencies: owner-approved provider, consent, credentials, egress, quotas,
+token/spend caps, safe output validation and outage fallback.
+Gate: bounded authorized calls; no secret/private-test leakage; pilot feedback
+and cost observed; feature can be disabled without breaking ordinary practice.
+
+F04. Evidence-linked debugger
+Class: FEASIBLE WITH RESOURCES plus EXPERIMENTAL teaching quality.
+Value: connects an observed failure to an understandable minimal correction.
+Dependencies: F03, explicit code-sharing consent and approved public evidence.
+Gate: reproduced failures distinguished from hypotheses; private grading data
+never enters prompts; budget/cancellation works; users understand corrections.
+
+F05. Bounded candidate solver
+Class: EXPERIMENTAL.
+Value hypothesis: planning, diverse attempts and repair improve useful outcomes
+per budget compared with one generated answer.
+Dependencies: F03, isolated execution entitlement, versioned run records, evals.
+Gate: compare fixed baselines and budgets on held-out tasks; report cost,
+latency, failures and uncertainty. Remove complexity that adds no measured value.
+
+F06. Learning paths and revisit schedules
+Class: FEASIBLE NOW for curated paths; EXPERIMENTAL for adaptive recommendations.
+Dependencies: reviewed topic map, explicit assistance history and user controls.
+Gate: recommendations are explainable and editable; delayed independent attempts
+measure transfer. Do not infer enduring ability from a few mistakes.
+
+F07. Virtual contests and ICPC practice
+Class: FEASIBLE WITH RESOURCES.
+Dependencies: problem/version governance, clock/scoring tests, registrations,
+server-side assistance rules, capacity and support.
+Gate: seeded event has correct scoring, freeze behavior, ownership and recovery;
+post-contest help follows event policy. Rated public competition comes later.
+
+F08. Production identity and judge operations
+Class: FEASIBLE WITH RESOURCES, required before public deployment.
+Dependencies: maintained isolation runtime, aggregate budgets, trusted ingress,
+account recovery/verification policy, backups, monitoring and incident ownership.
+Gate: independent review, hostile-program regression, restore drills and quota
+enforcement. Local per-process limits are not aggregate peak-memory accounting.
+
+F09. Additional languages and richer grading
+Class: FEASIBLE WITH RESOURCES.
+Dependencies: runtime owner, audited images, representative and hostile tests.
+Gate: genuine compile/run/submission coverage, bounded compiler behavior and
+correct verdicts. Interactive tasks and custom checkers need separate designs.
+
+F10. Fine-tuned or self-hosted models
+Class: EXPERIMENTAL research with substantial resources.
+Dependencies: approved model/data rights, external compute, baseline and serving
+operations. Gate: reproducible improvement or a documented negative result;
+include utilization, maintenance and total cost rather than token price alone.
+
+F11. Formal verification assistance
+Class: EXPERIMENTAL for restricted specifications; SPECULATIVE as a general
+competitive-programming product.
+Dependencies: proof expertise, precise specifications, trusted toolchain and
+user-understandable proof results. Gate: clearly state proved property and all
+assumptions; no claim that arbitrary natural-language tasks are universally solved.
+
+F12. Universal correctness / all-contest victory
+Class: INFEASIBLE AS STATED.
+No general procedure guarantees arbitrary program correctness and termination.
+Finite tests cannot provide that guarantee. Better models and bounded proofs do
+not remove this general limitation or justify an unconditional marketing claim.
+
+
+09. USING CODEGENERATOR AND PHI-CODE DELIBERATELY
+
+CodeGenerator is a reference for staged planning, simulation, code generation and
+limited debugging. phi-code is a reference for candidate diversity and ranking.
+Both use Python orchestration, so there is no language barrier requiring a whole
+project rewrite. Their dependencies and runners are not automatically compatible
+with the active application's security or lockfiles.
+
+Bring ideas into original interfaces: ProblemSpec, Candidate, SolverRun, Budget,
+ExecutionEvidence and ProviderResult. Record the exact upstream artifact and
+preserve required license notices if code is reused. Data and model rights need
+their own approval regardless of source licenses.
+
+Do not transfer host-side exec/subprocess execution, private-test feedback,
+site-specific scraping assumptions or published performance claims into the
+product. Do not download absent LFS objects or model weights just to make the
+archive appear complete. A research framework is not a deployed learner service.
+
+
+10. AI WORKFLOW AND STOP RULES
+
+Use authorized public context and deliberately shared user input. Check identity,
+mode, event policy and remaining budget before sending anything to a provider.
+Generate a concise user-facing plan and explicit assumptions, not claims that a
+model's internal reasoning is a proof. Compile and test generated code through
+the same isolated boundary used for learner programs.
+
+Limit input length, output tokens, candidates, repair attempts, test jobs,
+concurrency, elapsed time and monetary spend. Enforce these limits on the server,
+not only in prompt instructions. A run ends on cancellation, exhausted budget,
+unsafe/invalid context, provider failure or completed useful work.
+
+Keep private tests, expected answers, credentials and other users' submissions
+out of model requests. Public examples, valid generated checks and authorized
+user cases can inform debugging. Differential testing needs a trustworthy oracle;
+metamorphic testing needs a valid relationship. Two model-created artifacts may
+share the same mistake, so seek independent checks where possible.
+
+Return observed facts, uncertainty and a small explanation of why the proposed
+algorithm fits. Rank by permitted execution evidence before speculative model
+scores. Similarity, confidence and passing examples are not correctness proofs.
+
+
+11. RESEARCH QUESTIONS FOR THE AI ERA
+
+R1. Does progressive assistance improve later independent problem solving more
+than immediately returning a full solution? Compare similar learner groups with
+appropriate consent, delayed tasks and clear limits to causal conclusions.
+
+R2. Does a bounded plan/test/repair workflow improve pass rate per unit cost over
+a single candidate or spending the same budget on independent candidates?
+Use fixed evaluation tasks, models, limits and a published sampling procedure.
+
+R3. Can counterexamples help learners identify misconceptions without leaking
+private grading data? Evaluate validity, teaching value and spoiler levels.
+
+R4. Can learners become better reviewers of AI-generated code? Test whether they
+notice invalid assumptions, missing invariants and complexity errors on new tasks.
+
+R5. Can a model say "insufficient evidence" at useful times? Evaluate whether
+calibrated abstention avoids confidently wrong advice without making help useless.
+
+R6. Do personalized paths outperform simple curated schedules? Measure retention
+and transfer, not engagement alone. Permit users and coaches to override choices.
+
+R7. Can restricted proof tools or program analyses improve reliability enough to
+justify their complexity? Start with small, explicit domains and known properties.
+
+These are experiments with failure outcomes, not features promised to succeed.
+Newer models may improve them, but future capability forecasts cannot replace an
+evaluation harness or a viable current product.
+
+
+12. IMMEDIATE IMPROVEMENTS AND THE NEXT RELEASE
+
+Immediate work should preserve and document the known foundation, reconcile
+outdated planning language and confirm reproducible checks. Retain all displaced
+material with its original-path record; do not reset history or discard work to
+make a cleaner-looking tree. Continue to exclude references from application
+packaging and run preservation verification after archive changes.
+
+The next useful delivery is validation of F01 recovery and a small reviewed
+content improvement, followed
+by the threat model and provider budget design for F03. Do not add chat, training,
+contests, payments and new runtimes in one patch.
+
+For each change specify the user problem, owner, exact scope, dependencies,
+acceptance tests, resource limit and rollback. Update the implementation ledger
+only after observing behavior. Keep direct-main checkpoints and pushes consistent
+with the owner's current workflow; avoid history rewriting and respect remote
+updates. A Git commit alone does not survive losing an unsynchronized workspace.
+
+
+13. CONDITIONAL ONE-YEAR HORIZON: THROUGH APPROXIMATELY NOVEMBER 2027
+
+Objective: a useful, bounded learning pilot with reliable operations, rather than
+a broad feature checklist.
+
+Possible sequence: clarify original-code licensing/inbound policy; maintain local
+web/API/judge regressions; integrate the typed authored-hint UI; curate original
+problems; obtain a fixed provider budget and consent policy; pilot progressive
+AI help; develop evidence-linked debugging; evaluate a small candidate workflow.
+
+Public release is optional and conditional on F08. A closed local or controlled
+pilot can still test educational value without pretending to have a production
+judge. If infrastructure staffing is unavailable, defer public execution.
+
+People: named owner, application developer, problem author/reviewer and someone
+responsible for judge operations; roles may initially overlap. Resources: modest
+development infrastructure, small capped provider allowance and time for user
+feedback. No GPU training is required for the first tutor experiment.
+
+Exit gates: reproducible startup; correct owned submissions; maintained isolation
+tests; honest hint provenance; enforced cost/outage controls; documented pilot
+feedback and a decision to improve, narrow or stop. The calendar does not waive
+these gates or guarantee completion by the stated horizon.
+
+
+14. CONDITIONAL TWO-YEAR HORIZON: APPROXIMATELY NOVEMBER 2028
+
+Objective: deepen a validated learning product and selectively support coaches
+or team practice.
+
+If the first pilot retains users and costs are acceptable, expand original
+content, revisits, learning history and coach views. Consider virtual contests
+and ICPC review after scoring, assistance and operational tests. Add one runtime
+when demand justifies ongoing maintenance. Improve observability and migration
+planning based on measured load rather than assumed internet scale.
+
+Investigate self-hosted inference or small tuning only when a baseline reveals a
+specific quality/cost gap and an owner can maintain the result. Compare retrieval,
+prompting, more inference and tuning fairly before choosing a training program.
+
+People: teaching/content ownership, backend/frontend maintenance, judge/platform
+operations and AI evaluation coverage. Resources: dependable hosting, support,
+backups and an optional fixed research budget. Exit gates: learning value on
+unassisted follow-up tasks, stable unit economics, tested event rules and evidence
+that each added service or language earns its cost.
+
+
+15. CONDITIONAL THREE-TO-FIVE-YEAR HORIZON: APPROXIMATELY 2029-2031
+
+Objective: become a trusted learning and evaluation environment in a world where
+generating plausible code is increasingly commonplace.
+
+Possible directions include institution-controlled deployments, multilingual
+teaching, richer accessible visualizations, team reflection, personalized study
+with user control and independent reports comparing solving strategies. Small
+formal domains could combine specifications, proof assistance and executed tests.
+
+More ambitious model research may become worthwhile if the project has unique,
+rights-approved data, useful evaluation methods, compute funding and researchers
+who own reproducibility. Interactive grading or richer proof systems require
+specialists and separate threat models; they are not automatic extensions.
+
+These directions are SPECULATIVE until demand and evidence exist. Do not assume
+new funding, GPUs, a large volunteer community or a future model breakthrough.
+If the project remains small, a focused, dependable practice/tutor product is a
+valid outcome. Avoid making financial or educational promises based on forecasts.
+
+
+16. TECHNOLOGY AND RESOURCE DECISION GATES
+
+Current stack: keep Next.js/React/TypeScript, Monaco, Better Auth, FastAPI/Python,
+SQLite and the documented isolated judge while their tested limits fit the task.
+Use frozen dependency installs and supported trust verification.
+
+PostgreSQL: FEASIBLE WITH RESOURCES when concurrent durable operations, reporting
+or deployment require it. Need schema/migration/backups/restore tests and an
+operator. SQLite being simple is not itself evidence of failure.
+
+Dedicated queue: add only when measured lease/throughput needs exceed the current
+store. Need idempotency, retry, cancellation, visibility and migration tests.
+
+Search service: defer for a three-problem catalog. Try simple metadata/database
+search first; assess edition terms and operational cost before separate search.
+
+Telemetry: instrument required behavior with redaction, sampling and retention.
+Never collect raw source, prompts, credentials or private tests by default.
+
+Transformers/PEFT/TRL or optional training tools: research dependencies on separate
+approved compute, not required installation for an API-based tutor. Pin code,
+model, data manifests and terms. A model download is not a successful experiment.
+
+vLLM or another serving backend: evaluate supported hardware, utilization, memory,
+latency, energy/hosting, staff time and failover against an API baseline. Owning
+hardware does not make inference free, and self-hosting does not settle privacy.
+
+Cost review should include provider tokens, repeated attempts, judge CPU/memory,
+storage, network, monitoring, support and maintenance. Set hard ceilings before
+running an experiment; stop rather than silently spend beyond them.
+
+
+17. WHO OWNS DECISIONS AND WHO WILL TRY THE FEATURES
+
+The project owner remains accountable for direction, spending, publishing,
+licensing, privacy and deployment decisions. An AI assistant can implement and
+check approved work; it cannot become the legal owner or guaranteed operator.
+
+Application maintainers own contracts, identity, persistence and UI regressions.
+Judge/platform maintainers own runtime updates, quotas, isolation reviews,
+incident response and recovery. Content educators own problem quality, hints,
+provenance and learner evaluation. AI researchers own baselines, contamination
+checks, budgets and honest reports. A small team can combine roles but cannot
+eliminate the responsibilities.
+
+Early learners test comprehension and usability. Coaches assess whether hints
+develop independence. Problem authors validate graders and statements. Research
+collaborators can compare bounded methods on held-out tasks. Institutions should
+pilot assessment only after integrity and identity gates exist.
+
+No person or organization is assumed to have agreed to future work. Every
+milestone needs a named accepting owner before it becomes a delivery commitment.
+
+
+18. OWNERSHIP, DATA AND COMPETITIVE ADVANTAGE
+
+Independence means control of original product design, domain contracts,
+permissioned content, evaluation methods and deployment choices. It does not mean
+owning third-party libraries, model weights or user submissions by default.
+The original-code license and inbound contribution policy remain explicit owner
+decisions; public visibility is not an open-source license.
+
+Credible differentiation can come from original problem quality, trustworthy
+evidence, helpful feedback with less spoilage, privacy controls, long-term
+learning insight and reproducible evaluation. A growing catalog of imported
+repositories is not a moat. Neither are unverified model claims or a large corpus
+without usable rights.
+
+Keep consent and permitted uses distinct: displaying a statement, grading a
+submission, training a model and redistributing a dataset require different
+authority. Provide correction/removal paths. Never silently train on private
+submissions. Preserve notices and review model/dataset terms independently of
+the archive's source-code license.
+
+
+19. MEASUREMENT, CONTINUATION AND STOPPING
+
+Choose targets after observing a baseline. Report the exact application/model
+revision, task manifest, compiler/runtime, budget and sampling method.
+
+Learning: useful completion, hint helpfulness, independent follow-up performance,
+retention and accessibility. Separate assisted from unassisted work. Engagement
+does not alone demonstrate learning; an observational pilot has causal limits.
+
+System: correct verdict fixtures, cross-user isolation, queue failure/cancellation,
+tail latency, resource enforcement and restore success. Separate infrastructure
+errors from user-program verdicts and known missing capabilities.
+
+Research: pass@1/pass@k under a stated procedure, cost, latency, failure categories
+and uncertainty. Deduplicate and separate evaluation from training. Compare
+strategies under fair budgets, including negative findings.
+
+Continue a feature when user value and evidence justify its recurring cost.
+Revise it when failure is understandable and an affordable hypothesis exists.
+Stop when safety, rights, budget or quality gates cannot be met, or complexity
+adds no measured value. A stop decision preserves learning; it need not delete
+the reference material or rewrite the history.
+
+
+20. DO NOT PURSUE AS CURRENT PRODUCT COMMITMENTS
+
+* A universal solver, guaranteed accepted answers, perfect proof of arbitrary
+  programs or unconditional victory over human competitors.
+* Cheating assistance in restricted live events or hidden-test extraction.
+* Bulk copying competitors' problems, tests, editorials or branding without rights.
+* Host-side execution, ordinary-container fallback or a model-selected security
+  policy. Trust boundaries are implemented controls, not prompt requests.
+* An immediate rewrite into one language solely to make the tree look uniform.
+* Combining entire foreign account/contest/judge stacks with duplicate ownership.
+* Training a foundation model, unlimited repair loops or paid GPU provisioning
+  without approved resources, a baseline and a concrete research question.
+* Broad rated contests, payment systems or multi-region operations before the
+  core learning and operational workflow is useful and maintainable.
+* Declaring account compromise resolved, archived code safe or production ready
+  from a folder review, static scan or passing local tests alone.
+* A fixed one-year/two-year promise that ignores team, data, budget and evidence.
+
+The project can be ambitious without making these promises. Its next advantage
+should be small and demonstrable: a learner understands one difficult idea,
+tests one program safely, gets honest help and becomes more independent on the
+next problem. Every larger horizon should grow from that evidence.
+
+Historical source provenance
+----------------------------
+SAI-011 snapshots: source b591db142d7b65c306769a59251ed4129f42118a,
+  AnalyseFuture/historical-implementations/sai-011/.
+Project-memory snapshots: source 48192a87652f523818f1dea29caa54fe46e163a7,
+  AnalyseFuture/historical-implementations/project-memory/.
+Original paths and exact hashes: AnalyseFuture/repository-inventory/
+  historical-branches.json.
+Old PR states, CI claims, branch prompts and next-task instructions in these
+snapshots remain historical. They do not establish current hosted validation or
+override the owner's present direct-main instructions. Preserve their bytes and
+recover useful work through explicit current review and tests.
+
+Primary source map
+------------------
+Original intent: docs/PROJECT_VISION.md, docs/PRODUCT_REQUIREMENTS.md
+Current evidence: docs/PROJECT_STATUS.md, docs/REPOSITORY_STRUCTURE.md
+Operation and decisions: docs/DEVELOPMENT.md, docs/adr/
+AI design and dated audit: docs/AI_SOLVER.md,
+  docs/AUDIT_AND_AI_PLAN_2026-11-15.md
+Research and rights: docs/MODEL_DATA_EVALUATION.md, docs/DATA_AND_LICENSES.md,
+  docs/OPEN_SOURCE_STRATEGY.md, docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt
+Boundaries and decisions: docs/JUDGE_SECURITY.md, SECURITY.md,
+  docs/OPEN_DECISIONS.md, AGENTS.md
+Earlier proposal retained: PROJECT_IDEA.txt

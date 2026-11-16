@@ -1,0 +1,31 @@
+{
+  "source_ref": "b591db142d7b65c306769a59251ed4129f42118a",
+  "baseline_module_moves": {
+    "apps/web/components/account-form.tsx": "apps/web/features/accounts/account-form.tsx",
+    "apps/web/lib/auth-client.ts": "apps/web/features/accounts/client.ts",
+    "apps/web/lib/auth.ts": "apps/web/features/accounts/server.ts",
+    "apps/web/components/catalog.tsx": "apps/web/features/practice/catalog.tsx",
+    "apps/web/components/workspace.tsx": "apps/web/features/practice/workspace.tsx",
+    "apps/web/components/code-pane.tsx": "apps/web/features/practice/code-pane.tsx",
+    "apps/web/lib/api.ts": "apps/web/features/practice/api.ts",
+    "apps/web/components/submission-history.tsx": "apps/web/features/submissions/submission-history.tsx",
+    "apps/web/components/submission-panel.tsx": "apps/web/features/submissions/submission-panel.tsx",
+    "apps/web/lib/submissions.ts": "apps/web/features/submissions/api.ts"
+  },
+  "baseline_module_move_count": 10,
+  "recovered_file_destinations": {
+    "apps/web/components/account-hint.tsx": "apps/web/features/hints/account-hint.tsx",
+    "apps/web/lib/hints.ts": "apps/web/features/hints/api.ts",
+    "apps/web/components/workspace.tsx": "apps/web/features/practice/workspace.tsx",
+    "apps/web/app/globals.css": "apps/web/app/globals.css",
+    "tests/e2e/hints.spec.ts": "tests/e2e/hints.spec.ts"
+  },
+  "source_recovery_count": 5,
+  "runtime_paths_preserved": {
+    "auth_database_default": ".local/auth.sqlite relative to web process cwd",
+    "auth_secret_default": "auth-secret beside auth database",
+    "auth_migration_cwd": "apps/web",
+    "framework_routes": "unchanged"
+  },
+  "additional_extractions": []
+}

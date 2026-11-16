@@ -1,15 +1,13 @@
-WORK PROGRESS - 17 November 2026, Asia/Kolkata
+WORK PROGRESS - recovery checkpoint
+Date:17 November2026 Asia/Kolkata
+Starting main:a00894df45e5b451d3261ed374b36e8d2c208ad6
 
-Starting commit: a00894df45e5b451d3261ed374b36e8d2c208ad6
-Intended repository: https://github.com/arunabanarjee32-bit/solver-ai
-Default/delivery branch: main; direct pushes authorized by owner.
+Completed: all238 baseline files inventoried; all63 fetched commits/253 historical paths reviewed; API18/judge16/web33/docs and128 archive metadata/member records deeply assessed;23 branch versions preserved;5 SAI011 source/test inputs recovered;10 modules feature-grouped; cleanup/readiness defect fixed with12 regression cases; requested14 reports authored.
 
-Completed: fetched all advertised branches/tags (63 reachable commits; 4 remote branches; no tags). Clean baseline. Inventoried all 238 baseline tracked paths. Verified full-history Git bundle outside checkout at /workspace/recovery-snapshots/solver-ai-a00894d-before-full-review.bundle; SHA256 059aebbfa537a904b70bba8b6d0c13a275aa4d37e33d9e97a10d377b2909f125.
+Current validation: frozen npm/uv install, API137/auth7/judge118, Ruff, TypeScript and optimized native build passed. npm audit0 advisories. Explicit auth migrations ran twice successfully. Compose image build passed. Browser initial24passed/1failed from shared signup429; hint fixture now uses normal per-worker accounts/fresh sessions; rerun pending. Local production Compose smoke in progress.
 
-Current: deep reviews finished for all baseline source/document groups and archive members. Recovering reviewed SAI-011 authored hint UI and feature-grouping 10 frontend modules. API/judge runtime boundaries retained. Judge cleanup failure fix in progress; full validation pending.
-Discovery: unmerged SAI-011 authenticated hint UI exists on origin/feat/sai-011-frontend-hint-api, and five project-memory docs exist on another branch. SAI-010 implementation already matches main.
+Pending: finish production/browser checks, update all pending statuses, regenerate final ledger, inspect final diff and verify final main push.
 
-Pending: finish per-file assessments; record consolidation design; recover compatible hint UI/tests; group frontend features; preserve branch-only documents; implement justified repairs; run checks; publish complete requested reports and verify main.
+Important decisions: keep service/runtime boundaries, preserve all evidence, do not replay already-integrated SAI010, no host execution fallback, no paid models/training. Unknown account compromise attribution and unavailable GitHub permission/protection API are external limits, not confirmed malicious files.
 
-Limits: gh API metadata/protection checks unavailable with existing CLI authentication. Native HTTPS Git read/fetch works. Do not bypass protections or force-push. Account compromise attribution and credential/access review remain unverified.
-Validation: prior session validated a00894d source through 137 API/7 auth/106 judge/18 browser checks; fresh checks required after current changes. No archive code executed.
+Preservation backup: /workspace/recovery-snapshots/solver-ai-a00894d-before-full-review.bundle (verified full history; hash recorded in MIGRATION_SUMMARY). Private generated traces/runtime databases remain outside published evidence.

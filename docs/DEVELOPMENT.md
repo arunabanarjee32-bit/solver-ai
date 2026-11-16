@@ -34,7 +34,13 @@ npm run dev:web
 
 ## Offline hint API (SAI-010)
 
-The API has an optional authenticated `POST /api/v1/hints` contract, with a JSON object `{"problem_slug":"signal-sum","level":1}` and a valid short-lived `solver-api` Bearer token issued by Better Auth. Levels 1–3 return the existing **author-written** public hint with `source="authored"`, `provider=null`, `ai_generated=false` and `schema_version="1"`. The browser currently reveals authored hints directly from the public problem catalog; it does not call this endpoint.
+The API has an optional authenticated `POST /api/v1/hints` contract, with a JSON object `{"problem_slug":"signal-sum","level":1}` and a valid short-lived `solver-api` Bearer token issued by Better Auth. Levels 1–3 return the existing **author-written** public hint with `source="authored"`, `provider=null`, `ai_generated=false` and `schema_version="1"`. The browser preserves its public authored hint ladder and also mounts the recovered signed-in account-hint service. Its typed client validates provenance, uses the existing JWT boundary and supports cancellation, a ten-second deadline and retry. Neither path makes a model call.
+
+The web feature owners are `features/accounts`, `features/practice`,
+`features/hints` and `features/submissions`, below `apps/web`. Framework routes
+remain in `app/`, and shared navigation/icons remain in `components/`. See
+[repository structure](REPOSITORY_STRUCTURE.md) and the
+[path mapping](../AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt).
 
 `SOLVER_HINT_BACKEND=authored` (the default) requires no AI provider key, outbound model request, new database, or paid service. Any other setting fails with `HINT_PROVIDER_UNAVAILABLE` until a separately reviewed provider is implemented. Source code, hidden grading tests and worker credentials are not inputs to this hint API. The future real-provider adapter must supply per-account quotas, token and cost budgets, controlled egress, contest-integrity enforcement and privacy review before enablement.
 

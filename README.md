@@ -4,11 +4,17 @@
 
 > **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. An authenticated, author-written **offline hint API** is available as a foundation for future AI; model inference, contests and production deployment remain planned. See [Project status](docs/PROJECT_STATUS.md) for executed validation and limitations.
 
-Read the expanded [project idea in plain text](PROJECT_IDEA.txt) for the product,
-AI workflow, realistic limits and conditional one-year, two-year and longer-term
-roadmap. The [repository map](docs/REPOSITORY_STRUCTURE.md) explains the active
-application. Both uploaded ZIPs and all 122 extracted files are preserved under
-[AnalyseFuture](AnalyseFuture/README.md) for reference and future analysis.
+Read the [current project vision and future roadmap](AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt)
+for the product, feasibility, AI workflow and conditional one-year, two-year and
+three-to-five-year horizons. The earlier [project idea](PROJECT_IDEA.txt) is
+retained. The [repository map](docs/REPOSITORY_STRUCTURE.md) explains the active
+application. [AnalyseFuture](AnalyseFuture/README.md) contains the complete
+file/feature inventories, security and recovery reports, both original uploads,
+all 122 extracted members and 23 historical branch snapshots.
+
+The recovered account-hint interface calls the existing authenticated hint API,
+labels its author-written content, and supports cancellation, timeout and retry.
+The web code is grouped under `apps/web/features/{accounts,practice,hints,submissions}`.
 
 ## Run locally
 

@@ -1,0 +1,275 @@
+ORIGINAL TO NEW PATH MAPPING
+Baseline a00894df45e5b451d3261ed374b36e8d2c208ad6
+10 existing module relocations; all other baseline paths retained.
+Changed content remains recoverable through normal Git history.
+
+.dockerignore -> .dockerignore | retained path
+.github/PULL_REQUEST_TEMPLATE.md -> .github/PULL_REQUEST_TEMPLATE.md | retained path
+.github/workflows/ci.yml -> .github/workflows/ci.yml | retained path
+.gitignore -> .gitignore | retained path
+.node-version -> .node-version | retained path
+.npmrc -> .npmrc | retained path
+.python-version -> .python-version | retained path
+AGENTS.md -> AGENTS.md | retained path
+AnalyseFuture/.gitattributes -> AnalyseFuture/.gitattributes | retained path
+AnalyseFuture/.gitignore -> AnalyseFuture/.gitignore | retained path
+AnalyseFuture/README.md -> AnalyseFuture/README.md | retained path
+AnalyseFuture/archives/CodeGenerator-master.zip -> AnalyseFuture/archives/CodeGenerator-master.zip | retained path
+AnalyseFuture/archives/phi-code-main.zip -> AnalyseFuture/archives/phi-code-main.zip | retained path
+AnalyseFuture/extracted/CodeGenerator-master/.env.example -> AnalyseFuture/extracted/CodeGenerator-master/.env.example | retained path
+AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream -> AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream | retained path
+AnalyseFuture/extracted/CodeGenerator-master/LICENSE -> AnalyseFuture/extracted/CodeGenerator-master/LICENSE | retained path
+AnalyseFuture/extracted/CodeGenerator-master/README.md -> AnalyseFuture/extracted/CodeGenerator-master/README.md | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl | retained path
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json | retained path
+AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png -> AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png | retained path
+AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png | retained path
+AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png | retained path
+AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png | retained path
+AnalyseFuture/extracted/CodeGenerator-master/requirements.txt -> AnalyseFuture/extracted/CodeGenerator-master/requirements.txt | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/main.py -> AnalyseFuture/extracted/CodeGenerator-master/src/main.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py -> AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py | retained path
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py | retained path
+AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream -> AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream | retained path
+AnalyseFuture/extracted/phi-code-main/.gitignore.upstream -> AnalyseFuture/extracted/phi-code-main/.gitignore.upstream | retained path
+AnalyseFuture/extracted/phi-code-main/LICENSE -> AnalyseFuture/extracted/phi-code-main/LICENSE | retained path
+AnalyseFuture/extracted/phi-code-main/README.md -> AnalyseFuture/extracted/phi-code-main/README.md | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/curses_ui.png -> AnalyseFuture/extracted/phi-code-main/curses_ui.png | retained path
+AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl | retained path
+AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py -> AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py | retained path
+AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py -> AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py | retained path
+AnalyseFuture/extracted/phi-code-main/ranker/log_config.py -> AnalyseFuture/extracted/phi-code-main/ranker/log_config.py | retained path
+AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py -> AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py | retained path
+AnalyseFuture/extracted/phi-code-main/ranker/train.py -> AnalyseFuture/extracted/phi-code-main/ranker/train.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/atcoder.py -> AnalyseFuture/extracted/phi-code-main/solver/atcoder.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/codeforces.py -> AnalyseFuture/extracted/phi-code-main/solver/codeforces.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py -> AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt -> AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt | retained path
+AnalyseFuture/extracted/phi-code-main/solver/leetcode.py -> AnalyseFuture/extracted/phi-code-main/solver/leetcode.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt -> AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt | retained path
+AnalyseFuture/extracted/phi-code-main/solver/log_config.py -> AnalyseFuture/extracted/phi-code-main/solver/log_config.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/main.py -> AnalyseFuture/extracted/phi-code-main/solver/main.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/requirements.txt -> AnalyseFuture/extracted/phi-code-main/solver/requirements.txt | retained path
+AnalyseFuture/extracted/phi-code-main/solver/terminal.py -> AnalyseFuture/extracted/phi-code-main/solver/terminal.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/utils.py -> AnalyseFuture/extracted/phi-code-main/solver/utils.py | retained path
+AnalyseFuture/extracted/phi-code-main/solver/web_ui.py -> AnalyseFuture/extracted/phi-code-main/solver/web_ui.py | retained path
+AnalyseFuture/extracted/phi-code-main/terminal_mode.png -> AnalyseFuture/extracted/phi-code-main/terminal_mode.png | retained path
+AnalyseFuture/extracted/phi-code-main/webui.png -> AnalyseFuture/extracted/phi-code-main/webui.png | retained path
+AnalyseFuture/manifest.json -> AnalyseFuture/manifest.json | retained path
+CONTRIBUTING.md -> CONTRIBUTING.md | retained path
+PROJECT_IDEA.txt -> PROJECT_IDEA.txt | retained path
+README.md -> README.md | retained path
+SECURITY.md -> SECURITY.md | retained path
+apps/web/AGENTS.md -> apps/web/AGENTS.md | retained path
+apps/web/Dockerfile -> apps/web/Dockerfile | retained path
+apps/web/app/account/page.tsx -> apps/web/app/account/page.tsx | retained path
+apps/web/app/api/auth/[...all]/route.ts -> apps/web/app/api/auth/[...all]/route.ts | retained path
+apps/web/app/globals.css -> apps/web/app/globals.css | retained path
+apps/web/app/layout.tsx -> apps/web/app/layout.tsx | retained path
+apps/web/app/not-found.tsx -> apps/web/app/not-found.tsx | retained path
+apps/web/app/page.tsx -> apps/web/app/page.tsx | retained path
+apps/web/app/problems/[slug]/page.tsx -> apps/web/app/problems/[slug]/page.tsx | retained path
+apps/web/app/submissions/page.tsx -> apps/web/app/submissions/page.tsx | retained path
+apps/web/components/account-form.tsx -> apps/web/features/accounts/account-form.tsx | moved to feature owner; references repaired
+apps/web/components/catalog.tsx -> apps/web/features/practice/catalog.tsx | moved to feature owner; references repaired
+apps/web/components/code-pane.tsx -> apps/web/features/practice/code-pane.tsx | moved to feature owner; references repaired
+apps/web/components/icons.tsx -> apps/web/components/icons.tsx | retained path
+apps/web/components/shell.tsx -> apps/web/components/shell.tsx | retained path
+apps/web/components/submission-history.tsx -> apps/web/features/submissions/submission-history.tsx | moved to feature owner; references repaired
+apps/web/components/submission-panel.tsx -> apps/web/features/submissions/submission-panel.tsx | moved to feature owner; references repaired
+apps/web/components/workspace.tsx -> apps/web/features/practice/workspace.tsx | moved to feature owner; references repaired
+apps/web/lib/api.ts -> apps/web/features/practice/api.ts | moved to feature owner; references repaired
+apps/web/lib/auth-client.ts -> apps/web/features/accounts/client.ts | moved to feature owner; references repaired
+apps/web/lib/auth.ts -> apps/web/features/accounts/server.ts | moved to feature owner; references repaired
+apps/web/lib/submissions.ts -> apps/web/features/submissions/api.ts | moved to feature owner; references repaired
+apps/web/next-env.d.ts -> apps/web/next-env.d.ts | retained path
+apps/web/next.config.ts -> apps/web/next.config.ts | retained path
+apps/web/package.json -> apps/web/package.json | retained path
+apps/web/scripts/auth-migrate.mjs -> apps/web/scripts/auth-migrate.mjs | retained path
+apps/web/scripts/copy-monaco.mjs -> apps/web/scripts/copy-monaco.mjs | retained path
+apps/web/tests/auth.test.mjs -> apps/web/tests/auth.test.mjs | retained path
+apps/web/tsconfig.json -> apps/web/tsconfig.json | retained path
+compose.cloud.yaml -> compose.cloud.yaml | retained path
+compose.yaml -> compose.yaml | retained path
+docs/AI_SOLVER.md -> docs/AI_SOLVER.md | retained path
+docs/ARCHITECTURE.md -> docs/ARCHITECTURE.md | retained path
+docs/AUDIT_AND_AI_PLAN_2026-11-15.md -> docs/AUDIT_AND_AI_PLAN_2026-11-15.md | retained path
+docs/CODEX_PLAYBOOK.md -> docs/CODEX_PLAYBOOK.md | retained path
+docs/COMPETITIVE_LANDSCAPE.md -> docs/COMPETITIVE_LANDSCAPE.md | retained path
+docs/CONTRIBUTOR_TASKS.md -> docs/CONTRIBUTOR_TASKS.md | retained path
+docs/DATA_AND_LICENSES.md -> docs/DATA_AND_LICENSES.md | retained path
+docs/DEVELOPMENT.md -> docs/DEVELOPMENT.md | retained path
+docs/INDEX.md -> docs/INDEX.md | retained path
+docs/JUDGE_SECURITY.md -> docs/JUDGE_SECURITY.md | retained path
+docs/MODEL_DATA_EVALUATION.md -> docs/MODEL_DATA_EVALUATION.md | retained path
+docs/OPEN_DECISIONS.md -> docs/OPEN_DECISIONS.md | retained path
+docs/OPEN_SOURCE_STRATEGY.md -> docs/OPEN_SOURCE_STRATEGY.md | retained path
+docs/PRODUCT_REQUIREMENTS.md -> docs/PRODUCT_REQUIREMENTS.md | retained path
+docs/PROJECT_STATUS.md -> docs/PROJECT_STATUS.md | retained path
+docs/PROJECT_VISION.md -> docs/PROJECT_VISION.md | retained path
+docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt -> docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt | retained path
+docs/REPOSITORY_STRUCTURE.md -> docs/REPOSITORY_STRUCTURE.md | retained path
+docs/ROADMAP.md -> docs/ROADMAP.md | retained path
+docs/START_HERE.md -> docs/START_HERE.md | retained path
+docs/adr/0001-practice-foundation.md -> docs/adr/0001-practice-foundation.md | retained path
+docs/adr/0002-authenticated-isolated-submissions.md -> docs/adr/0002-authenticated-isolated-submissions.md | retained path
+package-lock.json -> package-lock.json | retained path
+package.json -> package.json | retained path
+playwright.config.ts -> playwright.config.ts | retained path
+scripts/check-standalone.mjs -> scripts/check-standalone.mjs | retained path
+scripts/dev.py -> scripts/dev.py | retained path
+scripts/judge-worker.py -> scripts/judge-worker.py | retained path
+scripts/local_config.py -> scripts/local_config.py | retained path
+scripts/verify_preserved_archives.py -> scripts/verify_preserved_archives.py | retained path
+services/api/.dockerignore -> services/api/.dockerignore | retained path
+services/api/.python-version -> services/api/.python-version | retained path
+services/api/Dockerfile -> services/api/Dockerfile | retained path
+services/api/pyproject.toml -> services/api/pyproject.toml | retained path
+services/api/solver_api/__init__.py -> services/api/solver_api/__init__.py | retained path
+services/api/solver_api/auth.py -> services/api/solver_api/auth.py | retained path
+services/api/solver_api/body_limit.py -> services/api/solver_api/body_limit.py | retained path
+services/api/solver_api/catalog.py -> services/api/solver_api/catalog.py | retained path
+services/api/solver_api/errors.py -> services/api/solver_api/errors.py | retained path
+services/api/solver_api/hints.py -> services/api/solver_api/hints.py | retained path
+services/api/solver_api/main.py -> services/api/solver_api/main.py | retained path
+services/api/solver_api/models.py -> services/api/solver_api/models.py | retained path
+services/api/solver_api/submissions.py -> services/api/solver_api/submissions.py | retained path
+services/api/tests/test_api.py -> services/api/tests/test_api.py | retained path
+services/api/tests/test_auth.py -> services/api/tests/test_auth.py | retained path
+services/api/tests/test_hints.py -> services/api/tests/test_hints.py | retained path
+services/api/tests/test_submissions.py -> services/api/tests/test_submissions.py | retained path
+services/api/uv.lock -> services/api/uv.lock | retained path
+services/judge/.dockerignore -> services/judge/.dockerignore | retained path
+services/judge/Dockerfile -> services/judge/Dockerfile | retained path
+services/judge/UPSTREAM_REVIEW.md -> services/judge/UPSTREAM_REVIEW.md | retained path
+services/judge/pytest.ini -> services/judge/pytest.ini | retained path
+services/judge/solver_judge/__init__.py -> services/judge/solver_judge/__init__.py | retained path
+services/judge/solver_judge/bounded.py -> services/judge/solver_judge/bounded.py | retained path
+services/judge/solver_judge/cases.py -> services/judge/solver_judge/cases.py | retained path
+services/judge/solver_judge/diagnostics.py -> services/judge/solver_judge/diagnostics.py | retained path
+services/judge/solver_judge/harness.py -> services/judge/solver_judge/harness.py | retained path
+services/judge/solver_judge/runner.py -> services/judge/solver_judge/runner.py | retained path
+services/judge/solver_judge/worker.py -> services/judge/solver_judge/worker.py | retained path
+services/judge/tests/test_bounded.py -> services/judge/tests/test_bounded.py | retained path
+services/judge/tests/test_cases.py -> services/judge/tests/test_cases.py | retained path
+services/judge/tests/test_runner.py -> services/judge/tests/test_runner.py | retained path
+services/judge/tests/test_sandbox.py -> services/judge/tests/test_sandbox.py | retained path
+services/judge/tests/test_worker.py -> services/judge/tests/test_worker.py | retained path
+tests/e2e/practice.spec.ts -> tests/e2e/practice.spec.ts | retained path
+tests/e2e/resilience.spec.ts -> tests/e2e/resilience.spec.ts | retained path
+tests/e2e/submissions.spec.ts -> tests/e2e/submissions.spec.ts | retained path
+
+RECOVERED SAI-011 SOURCE INPUTS: b591db142d7b65c306769a59251ed4129f42118a
+apps/web/components/account-hint.tsx -> apps/web/features/hints/account-hint.tsx | selective branch recovery/integration
+apps/web/lib/hints.ts -> apps/web/features/hints/api.ts | selective branch recovery/integration
+apps/web/components/workspace.tsx -> apps/web/features/practice/workspace.tsx | selective branch recovery/integration
+apps/web/app/globals.css -> apps/web/app/globals.css | selective branch recovery/integration
+tests/e2e/hints.spec.ts -> tests/e2e/hints.spec.ts | selective branch recovery/integration
+
+PRESERVED BRANCH VERSIONS (23)
+b591db142d7b65c306769a59251ed4129f42118a:apps/web/app/globals.css -> AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css
+b591db142d7b65c306769a59251ed4129f42118a:apps/web/components/account-hint.tsx -> AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx
+b591db142d7b65c306769a59251ed4129f42118a:apps/web/components/workspace.tsx -> AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx
+b591db142d7b65c306769a59251ed4129f42118a:apps/web/lib/hints.ts -> AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts
+b591db142d7b65c306769a59251ed4129f42118a:docs/AI_ARCHITECTURE_PLAN.md -> AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/CODEX_PLAYBOOK.md -> AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/IMPLEMENTATION_BACKLOG.md -> AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/IMPLEMENTATION_PROGRESS.md -> AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/INDEX.md -> AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/PRIMARY_RESEARCH_REPOS.md -> AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/PROJECT_STATUS.md -> AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md
+b591db142d7b65c306769a59251ed4129f42118a:docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt -> AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt
+b591db142d7b65c306769a59251ed4129f42118a:docs/REPOSITORY_AUDIT.md -> AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md
+b591db142d7b65c306769a59251ed4129f42118a:tests/e2e/hints.spec.ts -> AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts
+48192a87652f523818f1dea29caa54fe46e163a7:AGENTS.md -> AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream
+48192a87652f523818f1dea29caa54fe46e163a7:README.md -> AnalyseFuture/historical-implementations/project-memory/README.md
+48192a87652f523818f1dea29caa54fe46e163a7:docs/CHAT_CONTINUITY_LOG.md -> AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md
+48192a87652f523818f1dea29caa54fe46e163a7:docs/INDEX.md -> AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md
+48192a87652f523818f1dea29caa54fe46e163a7:docs/MASTER_DEVELOPMENT_SPEC.md -> AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md
+48192a87652f523818f1dea29caa54fe46e163a7:docs/PROJECT_MEMORY.md -> AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md
+48192a87652f523818f1dea29caa54fe46e163a7:docs/RESUME_PROMPT.md -> AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md
+48192a87652f523818f1dea29caa54fe46e163a7:docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf -> AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf
+48192a87652f523818f1dea29caa54fe46e163a7:docs/START_HERE.md -> AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md

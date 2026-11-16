@@ -48,7 +48,14 @@ def main() -> None:
                 if digest(source.read(name)) != record["sha256"]:
                     raise ValueError(f"Archive member differs: {name}")
                 count += 1
-    print(f"Preservation verified: {len(manifest['archives'])} ZIPs, {count} files.")
+    history_path = ROOT / "AnalyseFuture/repository-inventory/historical-branches.json"
+    history = json.loads(history_path.read_text()) if history_path.exists() else {"files": []}
+    for record in history["files"]:
+        verify_record(record, args.git_index)
+    print(
+        f"Preservation verified: {len(manifest['archives'])} ZIPs, {count} members, "
+        f"{len(history['files'])} branch snapshots."
+    )
 
 
 if __name__ == "__main__":

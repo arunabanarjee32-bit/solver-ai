@@ -1,0 +1,1063 @@
+{
+  "scope": {
+    "repository": "arunabanarjee32-bit/solver-ai",
+    "starting_commit": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
+    "fetched_history": {
+      "stable_tips": {
+        "main": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
+        "origin/docs/solver-ai-permanent-project-memory": "48192a87652f523818f1dea29caa54fe46e163a7",
+        "origin/feat/sai-010-authored-hint-contract": "2d1552ed31d2424ee3af8a8dbaf3ec4cea27af29",
+        "origin/feat/sai-011-frontend-hint-api": "b591db142d7b65c306769a59251ed4129f42118a"
+      },
+      "stable_commit_count": 63,
+      "historical_path_count": 253,
+      "branches": {
+        "origin/docs/solver-ai-permanent-project-memory": {
+          "tip": "48192a87652f523818f1dea29caa54fe46e163a7",
+          "merge_base": "9952f8b5fa74f6900d57d1b48e3a26f3e962a358",
+          "unique_commits_not_reachable_from_start": 6,
+          "main_only_commits": 4
+        },
+        "origin/feat/sai-010-authored-hint-contract": {
+          "tip": "2d1552ed31d2424ee3af8a8dbaf3ec4cea27af29",
+          "merge_base": "b6f9fe90a05046dfc8adf879d09f91cd2fd5c32a",
+          "unique_commits_not_reachable_from_start": 14,
+          "main_only_commits": 5
+        },
+        "origin/feat/sai-011-frontend-hint-api": {
+          "tip": "b591db142d7b65c306769a59251ed4129f42118a",
+          "merge_base": "9952f8b5fa74f6900d57d1b48e3a26f3e962a358",
+          "unique_commits_not_reachable_from_start": 10,
+          "main_only_commits": 4
+        }
+      },
+      "submodules": []
+    },
+    "review_method": "All 63 accessible commits inspected as graph/change metadata; all unique reachable text blobs pattern scanned; meaningful runtime/config deltas inspected, with branch content comparisons. No code executed, deps installed or git state mutated by this agent.",
+    "tracked_current_files_at_start": 238,
+    "historical_unique_blobs": 291,
+    "historical_text_blobs_pattern_scanned": 282,
+    "binary_blobs_metadata_only": 9,
+    "credential_pattern_hits": [
+      {
+        "blob": "64a4a433bdf0fd6b33d8a0d0e16a41dcc8ac5f2b",
+        "paths": [
+          "services/judge/tests/test_worker.py"
+        ],
+        "category": "url_userinfo",
+        "classification": "synthetic invalid-origin test fixture"
+      }
+    ],
+    "no_submodules": true,
+    "no_tags": true
+  },
+  "branch_assessment": [
+    {
+      "ref": "origin/feat/sai-010-authored-hint-contract",
+      "tip": "2d1552ed31d2424ee3af8a8dbaf3ec4cea27af29",
+      "conclusion": "Already squash-integrated in main commit 9952f8b. Exact diff of services/api and apps/web/tests/auth.test.mjs between this branch tip and starting main is empty.",
+      "action": "Do not reapply the 14 unique branch commits as though missing; preserve history and inspect future divergence before reuse."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "tip": "b591db142d7b65c306769a59251ed4129f42118a",
+      "conclusion": "Meaningful authenticated hint frontend exists here but is absent starting main. Ten unique commits; runtime/test delta is five files, no new dependency/backend requirements.",
+      "recoverable_files": [
+        "apps/web/components/account-hint.tsx",
+        "apps/web/lib/hints.ts",
+        "apps/web/components/workspace.tsx",
+        "apps/web/app/globals.css",
+        "tests/e2e/hints.spec.ts"
+      ],
+      "doc_additions": [
+        "docs/AI_ARCHITECTURE_PLAN.md",
+        "docs/IMPLEMENTATION_BACKLOG.md",
+        "docs/IMPLEMENTATION_PROGRESS.md",
+        "docs/PRIMARY_RESEARCH_REPOS.md",
+        "docs/REPOSITORY_AUDIT.md"
+      ],
+      "action": "Recover reviewed runtime/test delta into existing main implementation and adapt imports to any feature moves; preserve branch docs as dated evidence or merge facts selectively, never overwrite current status."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "tip": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "conclusion": "Six unique documentation commits add five new continuity documents and navigation links. No unique runtime feature.",
+      "new_files": [
+        "docs/PROJECT_MEMORY.md",
+        "docs/CHAT_CONTINUITY_LOG.md",
+        "docs/MASTER_DEVELOPMENT_SPEC.md",
+        "docs/RESUME_PROMPT.md",
+        "docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf"
+      ],
+      "action": "Preserve dated snapshots. Some instructions require branches/PRs and stale SAI011-unmerged status; current explicit user direct-main workflow governs. Consolidate current handoff into new recovery reports rather than giving old snapshots authority."
+    }
+  ],
+  "recoverable_feature": {
+    "name": "Authenticated authored-hint frontend",
+    "source_branch": "origin/feat/sai-011-frontend-hint-api",
+    "components": "Signed-in panel on problem workspace, validated JWT API client, accessible styles and five browser tests.",
+    "security_properties": [
+      "Same-origin fixed /api/v1/hints URL",
+      "Existing short-lived Better Auth API JWT, not exposed to model endpoint",
+      "Zod strict bounded request/response validation, matched slug/level and consistent authored/mock/model provenance",
+      "10-second AbortController deadline and explicit cancellation; abort state cleared on account/level/problem changes",
+      "React text rendering rather than HTML execution",
+      "Safe generic errors discard upstream diagnostic message",
+      "No learner editor source submitted by this feature",
+      "Public authored hint ladder preserved for guests"
+    ],
+    "test_coverage": [
+      "Guest no API request and401",
+      "JWT request+authored output",
+      "Mock/model provenance distinction",
+      "Invalid provenance/service errors safe display+retry",
+      "Timeout+retry+cancel UI state"
+    ],
+    "missing_or_not_claimed": [
+      "Real model provider/inference",
+      "Production quotas, privacy review or budget policy",
+      "Browser tests must rerun after recovery; historical recorded CI is not current validation"
+    ]
+  },
+  "workflow_findings": {
+    "file": ".github/workflows/ci.yml",
+    "history": [
+      "Added in cfedbbc foundational implementation",
+      "Only later change before this task:596d9c2 adds archived-byte verifier step"
+    ],
+    "permissions": "contents:read",
+    "triggers": [
+      "push",
+      "pull_request"
+    ],
+    "no_privileged_pr_trigger": true,
+    "steps": "checkout; archive verification; Node/uv setup; pinned uv install+frozen dependency sync; npm ci; Playwright install; API/auth/judge-unit/lint/typecheck/build/browser checks; failure artifact upload",
+    "reference_execution": "No archive source execution/import/install path in workflow. Archive verifier only compares ZIP/file bytes.",
+    "limitations": [
+      "Action dependencies use mutable major tags rather than immutable commit SHAs",
+      "Standard hosted workflow intentionally skips15 real gVisor tests and1 full-judge browser flow",
+      "Workflow text alone does not prove latest hosted outcome",
+      "Branch protection, repository permissions, account audit logs and secrets settings require separately authenticated service evidence; this agent did not inspect them"
+    ]
+  },
+  "dependencies": {
+    "npm_lockfile_version": 3,
+    "npm_package_records": 121,
+    "registry_host": "registry.npmjs.org",
+    "registry_urls": 118,
+    "all_https_npm_artifacts_have_integrity": true,
+    "npm_install_script_packages": [
+      {
+        "path": "node_modules/esbuild",
+        "version": "0.28.2"
+      }
+    ],
+    "repository_install_hooks": "No root/workspace preinstall/install/postinstall/prepare hooks. prepare:editor is explicit, not npm lifecycle prepare.",
+    "uv_records": 29,
+    "uv_registry_packages": 28,
+    "uv_registry_host": "pypi.org",
+    "uv_artifact_hashes": "All sdist/wheel artifacts declare SHA256 hashes.",
+    "unusual_sources": "No npm nonregistry tarball/git dependency or Python alternate registry found.",
+    "artifact_verification_limits": "Integrity fields/source locations inspected; network vulnerability intelligence and trustworthiness of every upstream package not independently established."
+  },
+  "security_findings": [
+    {
+      "id": "HIST-01",
+      "classification": "confirmed recoverability gap, not compromise",
+      "severity": "functional",
+      "evidence": "SAI011 frontend exists only on accessible feature ref at baseline; main has backend but no corresponding UI",
+      "recommendation": "Recover reviewed source/test feature without replacing current auth/judge/backends."
+    },
+    {
+      "id": "HIST-02",
+      "classification": "confirmed supply-chain hardening opportunity",
+      "severity": "low",
+      "evidence": ".github/workflows/ci.yml uses actions/checkout@v4, actions/setup-node@v4, astral-sh/setup-uv@v6 and actions/upload-artifact@v4",
+      "recommendation": "Pin vetted immutable action commits in a follow-up with update automation; do not invent SHAs."
+    },
+    {
+      "id": "HIST-03",
+      "classification": "confirmed reproducibility limitation",
+      "severity": "low",
+      "evidence": "services/api/Dockerfile FROM python:3.12-slim and apps/web/Dockerfile FROM node:24.22.1-bookworm-slim are mutable tags; judge image base includes digest",
+      "recommendation": "Record and pin verified approved image digests through a maintained update process; not evidence of malicious image."
+    },
+    {
+      "id": "HIST-04",
+      "classification": "synthetic scan hit, not exposed live credential",
+      "severity": "informational",
+      "evidence": "services/judge/tests/test_worker.py:259 contains URL-userinfo negative-test fixture under test_untrusted_api_origins_are_rejected",
+      "recommendation": "Keep regression fixture; do not report credential values or claim live leak."
+    },
+    {
+      "id": "HIST-05",
+      "classification": "unresolved attribution/account access",
+      "severity": "unknown",
+      "evidence": "User reports compromise; Git content/authors/timestamps cannot authenticate actor intent or account access. No evidence-backed malicious workflow/source event identified in inspected history.",
+      "recommendation": "Owner review GitHub access/security log, collaborator/app/deploy-key/session/workflow changes; rotate credentials if actual exposure or unauthorized access established."
+    }
+  ],
+  "other_history_evidence": {
+    "deleted_historical_paths": [
+      "CodeGenerator-master.zip",
+      "phi-code-main.zip"
+    ],
+    "explanation": "Both are R100 renames into AnalyseFuture/archives in596d9c2, not discarded content.",
+    "executable_mode_changes": "No100755 introductions or executable permission changes across baseline fetched history.",
+    "submodule_or_linked_repo_entries": "No160000 Git tree entries.",
+    "rtf_static_check": "Recovered handbook has no object/objdata/field/pict controls; treated as text snapshot, not opened in office automation.",
+    "signature_limit": "Commit metadata/signatures were not verified against trusted account identities; author names are not proof of compromise or authorization."
+  },
+  "limitations": [
+    "Only reachable fetched public/scoped refs were inspected; deleted remote branches, unreachable server objects, private forks, account audit logs and expired CI artifacts are outside available Git history.",
+    "No claim every historical data/image byte has semantic security analysis; binary objects received metadata checks, archive current text is separately assigned to archive reviewer.",
+    "Known-key regex checks cannot prove absence of secrets, custom encodings, PII or obfuscated data.",
+    "No unknown scripts, recovered feature or archive code executed by this agent.",
+    "Parent owns final active tests, API branch-protection probe, credentials scans and direct main delivery."
+  ],
+  "commits": [
+    {
+      "sha": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
+      "author_date": "2026-11-16T22:55:08Z",
+      "subject": "Record successful preservation, build and full isolated workflow validation",
+      "changed_paths": [
+        "M\tdocs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "sha": "9bd6869c5dc27b8d9b6b7f8c5ad613eda9bb9b11",
+      "author_date": "2026-11-16T22:53:41Z",
+      "subject": "Document project vision, future roadmap and preserved repository structure",
+      "changed_paths": [
+        "A\tPROJECT_IDEA.txt",
+        "M\tREADME.md",
+        "M\tdocs/ARCHITECTURE.md",
+        "M\tdocs/INDEX.md",
+        "M\tdocs/PROJECT_STATUS.md",
+        "A\tdocs/REPOSITORY_STRUCTURE.md"
+      ]
+    },
+    {
+      "sha": "596d9c24e451dfcb84bde29d1cd5cb0203ed4f53",
+      "author_date": "2026-11-16T22:51:30Z",
+      "subject": "Organize and preserve uploaded research archives in AnalyseFuture",
+      "changed_paths": [
+        "M\t.dockerignore",
+        "M\t.github/workflows/ci.yml",
+        "A\tAnalyseFuture/.gitattributes",
+        "A\tAnalyseFuture/.gitignore",
+        "A\tAnalyseFuture/README.md",
+        "A\tAnalyseFuture/archives/CodeGenerator-master.zip",
+        "A\tAnalyseFuture/archives/phi-code-main.zip",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/.env.example",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/LICENSE",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/README.md",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/requirements.txt",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/main.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py",
+        "A\tAnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/.gitattributes.upstream",
+        "A\tAnalyseFuture/extracted/phi-code-main/.gitignore.upstream",
+        "A\tAnalyseFuture/extracted/phi-code-main/LICENSE",
+        "A\tAnalyseFuture/extracted/phi-code-main/README.md",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/curses_ui.png",
+        "A\tAnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl",
+        "A\tAnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/ranker/log_config.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/ranker/train.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/codeforces.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/curses_ui.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/log_config.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/main.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/requirements.txt",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/terminal.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/utils.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/solver/web_ui.py",
+        "A\tAnalyseFuture/extracted/phi-code-main/terminal_mode.png",
+        "A\tAnalyseFuture/extracted/phi-code-main/webui.png",
+        "A\tAnalyseFuture/manifest.json",
+        "D\tCodeGenerator-master.zip",
+        "M\tapps/web/next.config.ts",
+        "D\tphi-code-main.zip",
+        "M\tscripts/check-standalone.mjs",
+        "A\tscripts/verify_preserved_archives.py"
+      ]
+    },
+    {
+      "sha": "d4e1fc66e9cbf87bfa13d5e7bf4dd02ea4756e9e",
+      "author_date": "2026-11-17T03:41:59+05:30",
+      "subject": "Add files via upload",
+      "changed_paths": [
+        "A\tCodeGenerator-master.zip",
+        "A\tphi-code-main.zip"
+      ]
+    },
+    {
+      "sha": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "author_date": "2026-11-16T16:03:53+05:30",
+      "subject": "docs: link permanent context pack from README, agents and onboarding",
+      "changed_paths": [
+        "M\tAGENTS.md",
+        "M\tREADME.md",
+        "M\tdocs/INDEX.md",
+        "M\tdocs/START_HERE.md"
+      ]
+    },
+    {
+      "sha": "de09ab46debe4097ff6388fe1e370bd06bf7dc38",
+      "author_date": "2026-11-16T16:03:11+05:30",
+      "subject": "docs: add Word-compatible project handbook with charts, links and chat history",
+      "changed_paths": [
+        "A\tdocs/SOLVER_AI_COMPLETE_HANDBOOK.rtf"
+      ]
+    },
+    {
+      "sha": "046234945eceb9c0f7bbc68f34cc421a111e9404",
+      "author_date": "2026-11-16T16:02:30+05:30",
+      "subject": "docs: add copy-paste resume prompt for new ChatGPT and Codex sessions",
+      "changed_paths": [
+        "A\tdocs/RESUME_PROMPT.md"
+      ]
+    },
+    {
+      "sha": "a4c174d6ee8e3e531ad2271e9efdefc59343f08d",
+      "author_date": "2026-11-16T16:01:50+05:30",
+      "subject": "docs: preserve complete Solver AI development requirements and safeguards",
+      "changed_paths": [
+        "A\tdocs/MASTER_DEVELOPMENT_SPEC.md"
+      ]
+    },
+    {
+      "sha": "144b43ffaaef4b69f52c44bce6cadcae3af2e000",
+      "author_date": "2026-11-16T16:01:02+05:30",
+      "subject": "docs: archive accessible project conversation and decision timeline",
+      "changed_paths": [
+        "A\tdocs/CHAT_CONTINUITY_LOG.md"
+      ]
+    },
+    {
+      "sha": "aa3075c7c045c555b476776a098c0a89a790fec2",
+      "author_date": "2026-11-16T16:00:18+05:30",
+      "subject": "docs: create permanent Solver AI architecture and research memory",
+      "changed_paths": [
+        "A\tdocs/PROJECT_MEMORY.md"
+      ]
+    },
+    {
+      "sha": "b591db142d7b65c306769a59251ed4129f42118a",
+      "author_date": "2026-11-16T14:44:32+05:30",
+      "subject": "docs: record verified SAI-011 CI and updated Codex handoff",
+      "changed_paths": [
+        "M\tdocs/CODEX_PLAYBOOK.md",
+        "M\tdocs/IMPLEMENTATION_PROGRESS.md",
+        "M\tdocs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "sha": "294c6a377316a7dadd07956bfe6985b5331345cb",
+      "author_date": "2026-11-16T14:41:43+05:30",
+      "subject": "docs: synchronize project status, research inventory and navigation",
+      "changed_paths": [
+        "M\tdocs/INDEX.md",
+        "M\tdocs/PROJECT_STATUS.md",
+        "M\tdocs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt"
+      ]
+    },
+    {
+      "sha": "7b42e67641d99f3ac2687bb96766982a4d0d29a2",
+      "author_date": "2026-11-16T14:41:05+05:30",
+      "subject": "test(web): scope hint error assertions to account panel",
+      "changed_paths": [
+        "M\ttests/e2e/hints.spec.ts"
+      ]
+    },
+    {
+      "sha": "7c9dc3fa28fcd6d28551c634d60547ce664ae7be",
+      "author_date": "2026-11-16T14:39:20+05:30",
+      "subject": "docs: publish refreshed repo research, AI architecture and prioritized backlog",
+      "changed_paths": [
+        "A\tdocs/AI_ARCHITECTURE_PLAN.md",
+        "A\tdocs/IMPLEMENTATION_BACKLOG.md",
+        "A\tdocs/IMPLEMENTATION_PROGRESS.md",
+        "A\tdocs/PRIMARY_RESEARCH_REPOS.md",
+        "A\tdocs/REPOSITORY_AUDIT.md"
+      ]
+    },
+    {
+      "sha": "0a4d9a17ab2637127a6d8571eca4750e3d3fc176",
+      "author_date": "2026-11-16T14:36:10+05:30",
+      "subject": "fix(web): release aborted hint requests on account or level change",
+      "changed_paths": [
+        "M\tapps/web/components/account-hint.tsx"
+      ]
+    },
+    {
+      "sha": "99151d66814369ac7b6db0fb5ae55f767ad599ee",
+      "author_date": "2026-11-16T14:34:32+05:30",
+      "subject": "test(web): cover authenticated hints, provenance, failures and timeout",
+      "changed_paths": [
+        "A\ttests/e2e/hints.spec.ts"
+      ]
+    },
+    {
+      "sha": "735727ef20f2d3690752dba1223cb52d53b3122d",
+      "author_date": "2026-11-16T14:33:48+05:30",
+      "subject": "style(web): accessible responsive account-hint states",
+      "changed_paths": [
+        "M\tapps/web/app/globals.css"
+      ]
+    },
+    {
+      "sha": "009713cc29acf50159f35d90181104b8a458dc1f",
+      "author_date": "2026-11-16T14:33:36+05:30",
+      "subject": "feat(web): add account hint option to existing authored hint ladder",
+      "changed_paths": [
+        "M\tapps/web/components/workspace.tsx"
+      ]
+    },
+    {
+      "sha": "bdf773aed312d84a6250e5ec1f302e32cc0194cb",
+      "author_date": "2026-11-16T14:33:24+05:30",
+      "subject": "feat(web): show signed-in hint service with verified provenance",
+      "changed_paths": [
+        "A\tapps/web/components/account-hint.tsx"
+      ]
+    },
+    {
+      "sha": "771eb4f8a86dc374eb9c5012e610625c112a74c5",
+      "author_date": "2026-11-16T14:32:57+05:30",
+      "subject": "feat(web): add authenticated validated hint API client",
+      "changed_paths": [
+        "A\tapps/web/lib/hints.ts"
+      ]
+    },
+    {
+      "sha": "9952f8b5fa74f6900d57d1b48e3a26f3e962a358",
+      "author_date": "2026-11-15T22:35:04+05:30",
+      "subject": "feat: establish authenticated offline AI hint foundation (SAI-010)",
+      "changed_paths": [
+        "M\tREADME.md",
+        "A\tdocs/AUDIT_AND_AI_PLAN_2026-11-15.md",
+        "M\tdocs/DEVELOPMENT.md",
+        "M\tdocs/INDEX.md",
+        "M\tdocs/PROJECT_STATUS.md",
+        "A\tservices/api/solver_api/hints.py",
+        "M\tservices/api/solver_api/main.py",
+        "M\tservices/api/tests/test_auth.py",
+        "A\tservices/api/tests/test_hints.py"
+      ]
+    },
+    {
+      "sha": "2d1552ed31d2424ee3af8a8dbaf3ec4cea27af29",
+      "author_date": "2026-11-15T22:31:13+05:30",
+      "subject": "docs: reflect verified SAI-010 CI and offline hint contract (docs/DEVELOPMENT.md)",
+      "changed_paths": [
+        "M\tdocs/DEVELOPMENT.md"
+      ]
+    },
+    {
+      "sha": "7ee9fe57a5df217bedee3dea23fc1d8a324ae7cc",
+      "author_date": "2026-11-15T22:31:10+05:30",
+      "subject": "docs: reflect verified SAI-010 CI and offline hint contract (README.md)",
+      "changed_paths": [
+        "M\tREADME.md"
+      ]
+    },
+    {
+      "sha": "6c086d1546f4aa0a623898e678fc68c41f4e3c85",
+      "author_date": "2026-11-15T22:31:05+05:30",
+      "subject": "docs: reflect verified SAI-010 CI and offline hint contract (docs/AUDIT_AND_AI_PLAN_2026-11-15.md)",
+      "changed_paths": [
+        "M\tdocs/AUDIT_AND_AI_PLAN_2026-11-15.md"
+      ]
+    },
+    {
+      "sha": "e9e504059a69e4e4f930c878af8b3cb03573eb13",
+      "author_date": "2026-11-15T22:31:00+05:30",
+      "subject": "docs: reflect verified SAI-010 CI and offline hint contract (docs/PROJECT_STATUS.md)",
+      "changed_paths": [
+        "M\tdocs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "sha": "0420b2de12acf3d7cbaba54d8b3ca7939bf08388",
+      "author_date": "2026-11-15T22:29:47+05:30",
+      "subject": "docs(research): inspect all 20 upstream tree layouts and specific licensing constraints",
+      "changed_paths": [
+        "M\tdocs/AUDIT_AND_AI_PLAN_2026-11-15.md"
+      ]
+    },
+    {
+      "sha": "9df915a422c2a45d93d967b66a6cd30a228e6914",
+      "author_date": "2026-11-15T22:21:38+05:30",
+      "subject": "test(auth): make JWKS stale-key check independent of runner uptime",
+      "changed_paths": [
+        "M\tservices/api/tests/test_auth.py"
+      ]
+    },
+    {
+      "sha": "7d1381106fec6132362cf60a301915dbe7e3a985",
+      "author_date": "2026-11-15T22:18:53+05:30",
+      "subject": "test(api): resolve Ruff line length and captured fixture warning",
+      "changed_paths": [
+        "M\tservices/api/tests/test_hints.py"
+      ]
+    },
+    {
+      "sha": "2ef3005d09ae0a76ee3ea87b432e50dd1c405238",
+      "author_date": "2026-11-15T22:17:47+05:30",
+      "subject": "docs: link SAI-010 audit and mark unverified in docs/PROJECT_STATUS.md",
+      "changed_paths": [
+        "M\tdocs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "sha": "69cfb8d9f90c7482941a2dc746f7e6934956f39c",
+      "author_date": "2026-11-15T22:17:44+05:30",
+      "subject": "docs: link SAI-010 audit and mark unverified in docs/INDEX.md",
+      "changed_paths": [
+        "M\tdocs/INDEX.md"
+      ]
+    },
+    {
+      "sha": "e2b7af910de8dca98256bca68fb3cf0b552771dc",
+      "author_date": "2026-11-15T22:17:09+05:30",
+      "subject": "docs: audit current architecture, compare 20 references and prioritize AI milestones",
+      "changed_paths": [
+        "A\tdocs/AUDIT_AND_AI_PLAN_2026-11-15.md"
+      ]
+    },
+    {
+      "sha": "32804f581ef97487c97ecfc88147c51c86a3d014",
+      "author_date": "2026-11-15T22:14:22+05:30",
+      "subject": "fix(api): reject boolean hint levels before Literal coercion",
+      "changed_paths": [
+        "M\tservices/api/solver_api/hints.py"
+      ]
+    },
+    {
+      "sha": "b7095f2e0381456138197a98621d3f60fa7dc008",
+      "author_date": "2026-11-15T22:13:48+05:30",
+      "subject": "test(api): validate authenticated hint contract and failure boundaries",
+      "changed_paths": [
+        "A\tservices/api/tests/test_hints.py"
+      ]
+    },
+    {
+      "sha": "a5c85457b8d7a5bb40a743544f22d42dce0fb049",
+      "author_date": "2026-11-15T22:13:03+05:30",
+      "subject": "feat(api): require verified accounts for offline hint requests",
+      "changed_paths": [
+        "M\tservices/api/solver_api/main.py"
+      ]
+    },
+    {
+      "sha": "dfca7be9f2de4aa00c186af15cfe349c8b7d3869",
+      "author_date": "2026-11-15T22:12:48+05:30",
+      "subject": "feat(api): define bounded offline hint provider contract",
+      "changed_paths": [
+        "A\tservices/api/solver_api/hints.py"
+      ]
+    },
+    {
+      "sha": "b6f9fe90a05046dfc8adf879d09f91cd2fd5c32a",
+      "author_date": "2026-11-15T18:44:33+05:30",
+      "subject": "docs: link complete public repository reference inventory from README.md",
+      "changed_paths": [
+        "M\tREADME.md"
+      ]
+    },
+    {
+      "sha": "8d3ef388a72f57d55aa5bf353d749c0e17a6fe51",
+      "author_date": "2026-11-15T18:44:30+05:30",
+      "subject": "docs: link complete public repository reference inventory from docs/INDEX.md",
+      "changed_paths": [
+        "M\tdocs/INDEX.md"
+      ]
+    },
+    {
+      "sha": "2a21fb75a78b3f0e2d439b88849a8ea0870fb9cd",
+      "author_date": "2026-11-15T18:44:16+05:30",
+      "subject": "docs: catalog all previously recommended public repositories and research resources",
+      "changed_paths": [
+        "A\tdocs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt"
+      ]
+    },
+    {
+      "sha": "3b09b8694b4fb1bf13a2f7482bb355ea0b74e840",
+      "author_date": "2026-11-13T22:44:52Z",
+      "subject": "Merge tested practice, accounts and isolated judging",
+      "changed_paths": [
+        "A\t.dockerignore",
+        "A\t.github/workflows/ci.yml",
+        "M\t.gitignore",
+        "A\t.node-version",
+        "A\t.npmrc",
+        "A\t.python-version",
+        "M\tAGENTS.md",
+        "M\tCONTRIBUTING.md",
+        "M\tREADME.md",
+        "A\tapps/web/AGENTS.md",
+        "A\tapps/web/Dockerfile",
+        "A\tapps/web/app/account/page.tsx",
+        "A\tapps/web/app/api/auth/[...all]/route.ts",
+        "A\tapps/web/app/globals.css",
+        "A\tapps/web/app/layout.tsx",
+        "A\tapps/web/app/not-found.tsx",
+        "A\tapps/web/app/page.tsx",
+        "A\tapps/web/app/problems/[slug]/page.tsx",
+        "A\tapps/web/app/submissions/page.tsx",
+        "A\tapps/web/components/account-form.tsx",
+        "A\tapps/web/components/catalog.tsx",
+        "A\tapps/web/components/code-pane.tsx",
+        "A\tapps/web/components/icons.tsx",
+        "A\tapps/web/components/shell.tsx",
+        "A\tapps/web/components/submission-history.tsx",
+        "A\tapps/web/components/submission-panel.tsx",
+        "A\tapps/web/components/workspace.tsx",
+        "A\tapps/web/lib/api.ts",
+        "A\tapps/web/lib/auth-client.ts",
+        "A\tapps/web/lib/auth.ts",
+        "A\tapps/web/lib/submissions.ts",
+        "A\tapps/web/next-env.d.ts",
+        "A\tapps/web/next.config.ts",
+        "A\tapps/web/package.json",
+        "A\tapps/web/scripts/auth-migrate.mjs",
+        "A\tapps/web/scripts/copy-monaco.mjs",
+        "A\tapps/web/tests/auth.test.mjs",
+        "A\tapps/web/tsconfig.json",
+        "A\tcompose.cloud.yaml",
+        "A\tcompose.yaml",
+        "M\tdocs/ARCHITECTURE.md",
+        "M\tdocs/CONTRIBUTOR_TASKS.md",
+        "A\tdocs/DEVELOPMENT.md",
+        "M\tdocs/INDEX.md",
+        "M\tdocs/OPEN_SOURCE_STRATEGY.md",
+        "M\tdocs/PROJECT_STATUS.md",
+        "M\tdocs/START_HERE.md",
+        "A\tdocs/adr/0001-practice-foundation.md",
+        "A\tdocs/adr/0002-authenticated-isolated-submissions.md",
+        "A\tpackage-lock.json",
+        "A\tpackage.json",
+        "A\tplaywright.config.ts",
+        "A\tscripts/check-standalone.mjs",
+        "A\tscripts/dev.py",
+        "A\tscripts/judge-worker.py",
+        "A\tscripts/local_config.py",
+        "A\tservices/api/.dockerignore",
+        "A\tservices/api/.python-version",
+        "A\tservices/api/Dockerfile",
+        "A\tservices/api/pyproject.toml",
+        "A\tservices/api/solver_api/__init__.py",
+        "A\tservices/api/solver_api/auth.py",
+        "A\tservices/api/solver_api/body_limit.py",
+        "A\tservices/api/solver_api/catalog.py",
+        "A\tservices/api/solver_api/errors.py",
+        "A\tservices/api/solver_api/main.py",
+        "A\tservices/api/solver_api/models.py",
+        "A\tservices/api/solver_api/submissions.py",
+        "A\tservices/api/tests/test_api.py",
+        "A\tservices/api/tests/test_auth.py",
+        "A\tservices/api/tests/test_submissions.py",
+        "A\tservices/api/uv.lock",
+        "A\tservices/judge/.dockerignore",
+        "A\tservices/judge/Dockerfile",
+        "A\tservices/judge/UPSTREAM_REVIEW.md",
+        "A\tservices/judge/pytest.ini",
+        "A\tservices/judge/solver_judge/__init__.py",
+        "A\tservices/judge/solver_judge/bounded.py",
+        "A\tservices/judge/solver_judge/cases.py",
+        "A\tservices/judge/solver_judge/diagnostics.py",
+        "A\tservices/judge/solver_judge/harness.py",
+        "A\tservices/judge/solver_judge/runner.py",
+        "A\tservices/judge/solver_judge/worker.py",
+        "A\tservices/judge/tests/test_bounded.py",
+        "A\tservices/judge/tests/test_cases.py",
+        "A\tservices/judge/tests/test_runner.py",
+        "A\tservices/judge/tests/test_sandbox.py",
+        "A\tservices/judge/tests/test_worker.py",
+        "A\ttests/e2e/practice.spec.ts",
+        "A\ttests/e2e/resilience.spec.ts",
+        "A\ttests/e2e/submissions.spec.ts"
+      ]
+    },
+    {
+      "sha": "cfedbbcb7da1e02578f3d2e49b6a428a6748cbfe",
+      "author_date": "2026-11-13T22:44:28Z",
+      "subject": "feat: add authenticated practice and isolated gVisor judging",
+      "changed_paths": [
+        "A\t.dockerignore",
+        "A\t.github/workflows/ci.yml",
+        "M\t.gitignore",
+        "A\t.node-version",
+        "A\t.npmrc",
+        "A\t.python-version",
+        "M\tAGENTS.md",
+        "M\tCONTRIBUTING.md",
+        "M\tREADME.md",
+        "A\tapps/web/AGENTS.md",
+        "A\tapps/web/Dockerfile",
+        "A\tapps/web/app/account/page.tsx",
+        "A\tapps/web/app/api/auth/[...all]/route.ts",
+        "A\tapps/web/app/globals.css",
+        "A\tapps/web/app/layout.tsx",
+        "A\tapps/web/app/not-found.tsx",
+        "A\tapps/web/app/page.tsx",
+        "A\tapps/web/app/problems/[slug]/page.tsx",
+        "A\tapps/web/app/submissions/page.tsx",
+        "A\tapps/web/components/account-form.tsx",
+        "A\tapps/web/components/catalog.tsx",
+        "A\tapps/web/components/code-pane.tsx",
+        "A\tapps/web/components/icons.tsx",
+        "A\tapps/web/components/shell.tsx",
+        "A\tapps/web/components/submission-history.tsx",
+        "A\tapps/web/components/submission-panel.tsx",
+        "A\tapps/web/components/workspace.tsx",
+        "A\tapps/web/lib/api.ts",
+        "A\tapps/web/lib/auth-client.ts",
+        "A\tapps/web/lib/auth.ts",
+        "A\tapps/web/lib/submissions.ts",
+        "A\tapps/web/next-env.d.ts",
+        "A\tapps/web/next.config.ts",
+        "A\tapps/web/package.json",
+        "A\tapps/web/scripts/auth-migrate.mjs",
+        "A\tapps/web/scripts/copy-monaco.mjs",
+        "A\tapps/web/tests/auth.test.mjs",
+        "A\tapps/web/tsconfig.json",
+        "A\tcompose.cloud.yaml",
+        "A\tcompose.yaml",
+        "M\tdocs/ARCHITECTURE.md",
+        "M\tdocs/CONTRIBUTOR_TASKS.md",
+        "A\tdocs/DEVELOPMENT.md",
+        "M\tdocs/INDEX.md",
+        "M\tdocs/OPEN_SOURCE_STRATEGY.md",
+        "M\tdocs/PROJECT_STATUS.md",
+        "M\tdocs/START_HERE.md",
+        "A\tdocs/adr/0001-practice-foundation.md",
+        "A\tdocs/adr/0002-authenticated-isolated-submissions.md",
+        "A\tpackage-lock.json",
+        "A\tpackage.json",
+        "A\tplaywright.config.ts",
+        "A\tscripts/check-standalone.mjs",
+        "A\tscripts/dev.py",
+        "A\tscripts/judge-worker.py",
+        "A\tscripts/local_config.py",
+        "A\tservices/api/.dockerignore",
+        "A\tservices/api/.python-version",
+        "A\tservices/api/Dockerfile",
+        "A\tservices/api/pyproject.toml",
+        "A\tservices/api/solver_api/__init__.py",
+        "A\tservices/api/solver_api/auth.py",
+        "A\tservices/api/solver_api/body_limit.py",
+        "A\tservices/api/solver_api/catalog.py",
+        "A\tservices/api/solver_api/errors.py",
+        "A\tservices/api/solver_api/main.py",
+        "A\tservices/api/solver_api/models.py",
+        "A\tservices/api/solver_api/submissions.py",
+        "A\tservices/api/tests/test_api.py",
+        "A\tservices/api/tests/test_auth.py",
+        "A\tservices/api/tests/test_submissions.py",
+        "A\tservices/api/uv.lock",
+        "A\tservices/judge/.dockerignore",
+        "A\tservices/judge/Dockerfile",
+        "A\tservices/judge/UPSTREAM_REVIEW.md",
+        "A\tservices/judge/pytest.ini",
+        "A\tservices/judge/solver_judge/__init__.py",
+        "A\tservices/judge/solver_judge/bounded.py",
+        "A\tservices/judge/solver_judge/cases.py",
+        "A\tservices/judge/solver_judge/diagnostics.py",
+        "A\tservices/judge/solver_judge/harness.py",
+        "A\tservices/judge/solver_judge/runner.py",
+        "A\tservices/judge/solver_judge/worker.py",
+        "A\tservices/judge/tests/test_bounded.py",
+        "A\tservices/judge/tests/test_cases.py",
+        "A\tservices/judge/tests/test_runner.py",
+        "A\tservices/judge/tests/test_sandbox.py",
+        "A\tservices/judge/tests/test_worker.py",
+        "A\ttests/e2e/practice.spec.ts",
+        "A\ttests/e2e/resilience.spec.ts",
+        "A\ttests/e2e/submissions.spec.ts"
+      ]
+    },
+    {
+      "sha": "bd51439eb6b60b10f6a285a443265a3dfb17d67c",
+      "author_date": "2026-11-13T21:23:03+05:30",
+      "subject": "docs: add .github/PULL_REQUEST_TEMPLATE.md project handbook",
+      "changed_paths": [
+        "A\t.github/PULL_REQUEST_TEMPLATE.md"
+      ]
+    },
+    {
+      "sha": "c6bac0072a343fa560da385c328c396bd2589f1e",
+      "author_date": "2026-11-13T21:23:01+05:30",
+      "subject": "docs: add .gitignore project handbook",
+      "changed_paths": [
+        "A\t.gitignore"
+      ]
+    },
+    {
+      "sha": "6e31b2d4ec620fda9c4d68e31545b8d274c34bb0",
+      "author_date": "2026-11-13T21:22:59+05:30",
+      "subject": "docs: add SECURITY.md project handbook",
+      "changed_paths": [
+        "A\tSECURITY.md"
+      ]
+    },
+    {
+      "sha": "7ac4820324b8daf8238c5d40e5f74d19cd9a5b48",
+      "author_date": "2026-11-13T21:22:56+05:30",
+      "subject": "docs: add AGENTS.md project handbook",
+      "changed_paths": [
+        "A\tAGENTS.md"
+      ]
+    },
+    {
+      "sha": "0f18b0b6610481dbdc8655c330365dd530d50571",
+      "author_date": "2026-11-13T21:22:54+05:30",
+      "subject": "docs: add CONTRIBUTING.md project handbook",
+      "changed_paths": [
+        "A\tCONTRIBUTING.md"
+      ]
+    },
+    {
+      "sha": "4d16d3086e9f0c036de4e739eb85e14a6e34d826",
+      "author_date": "2026-11-13T21:22:52+05:30",
+      "subject": "docs: add docs/CONTRIBUTOR_TASKS.md project handbook",
+      "changed_paths": [
+        "A\tdocs/CONTRIBUTOR_TASKS.md"
+      ]
+    },
+    {
+      "sha": "bde2c1d3550bbc07dc85325b9ee26cb9c43b0268",
+      "author_date": "2026-11-13T21:22:50+05:30",
+      "subject": "docs: add docs/CODEX_PLAYBOOK.md project handbook",
+      "changed_paths": [
+        "A\tdocs/CODEX_PLAYBOOK.md"
+      ]
+    },
+    {
+      "sha": "84baf8661a445c166f52d82b29068fe6a547e593",
+      "author_date": "2026-11-13T21:22:48+05:30",
+      "subject": "docs: add docs/OPEN_DECISIONS.md project handbook",
+      "changed_paths": [
+        "A\tdocs/OPEN_DECISIONS.md"
+      ]
+    },
+    {
+      "sha": "89ab51ad4f6a4097625cd8956e800b090385f78c",
+      "author_date": "2026-11-13T21:22:46+05:30",
+      "subject": "docs: add docs/COMPETITIVE_LANDSCAPE.md project handbook",
+      "changed_paths": [
+        "A\tdocs/COMPETITIVE_LANDSCAPE.md"
+      ]
+    },
+    {
+      "sha": "c424e605a18c25fe690286ae243279f0930f46e7",
+      "author_date": "2026-11-13T21:22:43+05:30",
+      "subject": "docs: add docs/DATA_AND_LICENSES.md project handbook",
+      "changed_paths": [
+        "A\tdocs/DATA_AND_LICENSES.md"
+      ]
+    },
+    {
+      "sha": "e531ea86b9a219e8b0ca027c171f31423008fe3e",
+      "author_date": "2026-11-13T21:22:42+05:30",
+      "subject": "docs: add docs/MODEL_DATA_EVALUATION.md project handbook",
+      "changed_paths": [
+        "A\tdocs/MODEL_DATA_EVALUATION.md"
+      ]
+    },
+    {
+      "sha": "c9870cb64de1aff4bb746ac2463e6b242603d0e2",
+      "author_date": "2026-11-13T21:22:39+05:30",
+      "subject": "docs: add docs/JUDGE_SECURITY.md project handbook",
+      "changed_paths": [
+        "A\tdocs/JUDGE_SECURITY.md"
+      ]
+    },
+    {
+      "sha": "0a8aaff5e15ac02cdbc24b4e5fecc0d43eb6655b",
+      "author_date": "2026-11-13T21:22:37+05:30",
+      "subject": "docs: add docs/AI_SOLVER.md project handbook",
+      "changed_paths": [
+        "A\tdocs/AI_SOLVER.md"
+      ]
+    },
+    {
+      "sha": "7f190b5fd42185011410f22e11fc0ccc43711a50",
+      "author_date": "2026-11-13T21:22:35+05:30",
+      "subject": "docs: add docs/OPEN_SOURCE_STRATEGY.md project handbook",
+      "changed_paths": [
+        "A\tdocs/OPEN_SOURCE_STRATEGY.md"
+      ]
+    },
+    {
+      "sha": "59a05950c8d45728324f48c2cb57285669e902ca",
+      "author_date": "2026-11-13T21:22:33+05:30",
+      "subject": "docs: add docs/START_HERE.md project handbook",
+      "changed_paths": [
+        "A\tdocs/START_HERE.md"
+      ]
+    },
+    {
+      "sha": "cc3df8857f37a02e5765d4591e321156c85a5e80",
+      "author_date": "2026-11-13T21:22:31+05:30",
+      "subject": "docs: introduce Solver AI mission and contributor entrypoint",
+      "changed_paths": [
+        "M\tREADME.md"
+      ]
+    },
+    {
+      "sha": "5fcfbb51985806cc2f9448e328e58f55abeb49c7",
+      "author_date": "2026-11-13T21:18:31+05:30",
+      "subject": "docs: add docs/INDEX.md project handbook",
+      "changed_paths": [
+        "A\tdocs/INDEX.md"
+      ]
+    },
+    {
+      "sha": "1d731a61b554fca15ec9f7f2589fc91eb61953a6",
+      "author_date": "2026-11-13T21:18:29+05:30",
+      "subject": "docs: add docs/PROJECT_STATUS.md project handbook",
+      "changed_paths": [
+        "A\tdocs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "sha": "7cda64ccbace693a280d834bcb3cd8adff4e7163",
+      "author_date": "2026-11-13T21:18:27+05:30",
+      "subject": "docs: add docs/ROADMAP.md project handbook",
+      "changed_paths": [
+        "A\tdocs/ROADMAP.md"
+      ]
+    },
+    {
+      "sha": "fc818974bcdc0aa972e45c48ff503479b53c63ef",
+      "author_date": "2026-11-13T21:18:25+05:30",
+      "subject": "docs: add docs/ARCHITECTURE.md project handbook",
+      "changed_paths": [
+        "A\tdocs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "sha": "134179f1aee4d13e63e6afeddf57fc84d54b059b",
+      "author_date": "2026-11-13T21:18:22+05:30",
+      "subject": "docs: add docs/PRODUCT_REQUIREMENTS.md project handbook",
+      "changed_paths": [
+        "A\tdocs/PRODUCT_REQUIREMENTS.md"
+      ]
+    },
+    {
+      "sha": "dda759aa150af1256274ac2330f2e6eeddd78105",
+      "author_date": "2026-11-13T21:18:19+05:30",
+      "subject": "docs: add docs/PROJECT_VISION.md project handbook",
+      "changed_paths": [
+        "A\tdocs/PROJECT_VISION.md"
+      ]
+    },
+    {
+      "sha": "1cbc1c79d619018734c0c6d826cdb49c399ff303",
+      "author_date": "2026-11-13T21:09:19+05:30",
+      "subject": "Initial commit",
+      "changed_paths": [
+        "A\tREADME.md"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Security policy
 
-**Project stage:** planning. No deployed production environment or supported version yet.
+**Project stage:** local development implementation, with accounts, owned submissions and an optional gVisor-isolated judge. No public production deployment, security certification or production support policy is established. See [current status](docs/PROJECT_STATUS.md) for executed checks and runtime limitations.
 
 ## Reporting security vulnerabilities
 

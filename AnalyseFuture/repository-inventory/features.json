@@ -1,0 +1,1277 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-17",
+  "timezone": "Asia/Kolkata",
+  "method": "Cross-service full-source/static review reports plus inspectable Git history and structural archive checks. Feature identity is semantic; no product roadmap is counted as implementation. Root owns runtime validation. This is not an independent security certification.",
+  "feature_count": 42,
+  "status_counts": {
+    "active": 21,
+    "partial": 1,
+    "feasible_proposal": 11,
+    "research_only": 9
+  },
+  "features": [
+    {
+      "id": "F001",
+      "name": "Monorepo toolchain and native startup",
+      "status": "active",
+      "active": true,
+      "service": "repository orchestration",
+      "files": [
+        "package.json",
+        ".node-version",
+        ".python-version",
+        "scripts/dev.py",
+        "scripts/local_config.py",
+        "scripts/judge-worker.py"
+      ],
+      "dependencies": [
+        "Node 24",
+        "Python 3.12",
+        "uv",
+        "npm workspaces"
+      ],
+      "tests": [
+        "npm run dev",
+        "npm run dev:judge"
+      ],
+      "behavior": "One product with independent web/API/trusted worker processes, pinned tools and generated private local worker credential.",
+      "gaps": [
+        "Live processes restart in each task; environment-specific runtime assumptions must be checked."
+      ],
+      "final_location": "Root package scripts and scripts/; preserve component deployment boundaries.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F002",
+      "name": "Continuous checks and regression orchestration",
+      "status": "active",
+      "active": true,
+      "service": "repository CI",
+      "files": [
+        ".github/workflows/ci.yml",
+        "playwright.config.ts",
+        "package.json"
+      ],
+      "dependencies": [
+        "GitHub Actions",
+        "pytest",
+        "Ruff",
+        "TypeScript",
+        "Playwright"
+      ],
+      "tests": [
+        "API/auth/judge suites",
+        "typecheck",
+        "build",
+        "browser suites"
+      ],
+      "behavior": "Run meaningful source/unit/browser/build checks and retain failure artifacts.",
+      "gaps": [
+        "Hosted default CI skips real sandbox/full-judge integrations; pin Actions immutably and keep separate integration evidence."
+      ],
+      "final_location": "Existing .github/workflows and root verification configuration.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F003",
+      "name": "Catalog search, filters and pagination",
+      "status": "active",
+      "active": true,
+      "service": "web + API",
+      "files": [
+        "apps/web/features/practice/catalog.tsx",
+        "apps/web/features/practice/api.ts",
+        "apps/web/app/page.tsx",
+        "services/api/solver_api/main.py"
+      ],
+      "dependencies": [
+        "Next.js",
+        "FastAPI",
+        "validated catalog contract"
+      ],
+      "tests": [
+        "services/api/tests/test_api.py",
+        "tests/e2e/practice.spec.ts",
+        "tests/e2e/resilience.spec.ts"
+      ],
+      "behavior": "Search/filter original exercises through validated API-backed UI.",
+      "gaps": [
+        "Only three seed problems; current client fetch cap is 100; no large catalog search/indexing."
+      ],
+      "final_location": "apps/web/features/practice and services/api/solver_api catalog routes.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F004",
+      "name": "Original statements, samples, starters and provenance",
+      "status": "active",
+      "active": true,
+      "service": "API content + web workspace",
+      "files": [
+        "services/api/solver_api/catalog.py",
+        "services/api/solver_api/models.py",
+        "apps/web/features/practice/workspace.tsx",
+        "apps/web/app/problems/[slug]/page.tsx"
+      ],
+      "dependencies": [
+        "Pydantic",
+        "original problem content",
+        "Python/C++17 starter templates"
+      ],
+      "tests": [
+        "services/api/tests/test_api.py",
+        "tests/e2e/practice.spec.ts"
+      ],
+      "behavior": "Three original problems expose readable constraints, examples, starter code and author/source information without hidden cases.",
+      "gaps": [
+        "No permissioned authoring/versioning/import workflow yet."
+      ],
+      "final_location": "services/api/solver_api/catalog.py and feature-owned practice workspace.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F005",
+      "name": "Responsive shared UI and basic accessibility",
+      "status": "active",
+      "active": true,
+      "service": "web",
+      "files": [
+        "apps/web/components/shell.tsx",
+        "apps/web/components/icons.tsx",
+        "apps/web/app/layout.tsx",
+        "apps/web/app/not-found.tsx",
+        "apps/web/app/globals.css"
+      ],
+      "dependencies": [
+        "Next.js",
+        "React",
+        "CSS"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts"
+      ],
+      "behavior": "Shared navigation/layout, labels, focus/reduced-motion/mobile behavior and useful missing-page states.",
+      "gaps": [
+        "No dedicated accessibility conformance audit or localization testing."
+      ],
+      "final_location": "Shared shell/icons remain components; routes/layout stay under app/.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F006",
+      "name": "Local Monaco editor and private browser drafts",
+      "status": "active",
+      "active": true,
+      "service": "web practice",
+      "files": [
+        "apps/web/features/practice/code-pane.tsx",
+        "apps/web/scripts/copy-monaco.mjs"
+      ],
+      "dependencies": [
+        "Monaco",
+        "React Monaco wrapper",
+        "pinned patched DOMPurify",
+        "localStorage"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts",
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "behavior": "Bundle editor locally; preserve per-problem/language guest drafts, fallback/retry and storage-failure behavior without automatic source upload.",
+      "gaps": [
+        "Storage is local best effort, not encrypted per-account cloud sync or a backup."
+      ],
+      "final_location": "apps/web/features/practice/code-pane.tsx; editor build helper stays scripts/.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F007",
+      "name": "Public author-written hint ladder",
+      "status": "active",
+      "active": true,
+      "service": "web practice + API content",
+      "files": [
+        "apps/web/features/practice/workspace.tsx",
+        "services/api/solver_api/catalog.py"
+      ],
+      "dependencies": [
+        "original catalog hints"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts"
+      ],
+      "behavior": "Reveal three author-written hints with honest offline provenance.",
+      "gaps": [
+        "Not model inference; separate authenticated request UI is F011."
+      ],
+      "final_location": "apps/web/features/practice workspace; original text remains in API catalog.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F008",
+      "name": "Local accounts, sessions and signing keys",
+      "status": "active",
+      "active": true,
+      "service": "web accounts",
+      "files": [
+        "apps/web/features/accounts/account-form.tsx",
+        "apps/web/features/accounts/server.ts",
+        "apps/web/features/accounts/client.ts",
+        "apps/web/app/api/auth/[...all]/route.ts",
+        "apps/web/scripts/auth-migrate.mjs"
+      ],
+      "dependencies": [
+        "Better Auth",
+        "Node SQLite",
+        "private local key/database",
+        "Ed25519 JWT plugin"
+      ],
+      "tests": [
+        "apps/web/tests/auth.test.mjs",
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "behavior": "Signup/signin/signout, migrations, hashed passwords, cookie sessions, origin/redirect controls and private persistent local signing material.",
+      "gaps": [
+        "No delivered email verification/recovery, trusted production ingress policy or full data lifecycle operations."
+      ],
+      "final_location": "apps/web/features/accounts; framework auth route and migration helper retain entrypoint locations.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F009",
+      "name": "Fixed-JWKS API identity verification",
+      "status": "active",
+      "active": true,
+      "service": "API identity",
+      "files": [
+        "services/api/solver_api/auth.py",
+        "apps/web/features/accounts/server.ts"
+      ],
+      "dependencies": [
+        "PyJWT",
+        "cryptography",
+        "HTTPX",
+        "Better Auth JWKS"
+      ],
+      "tests": [
+        "services/api/tests/test_auth.py",
+        "apps/web/tests/auth.test.mjs"
+      ],
+      "behavior": "Validate exactly one bounded Bearer token with fixed EdDSA/issuer/audience/use/lifetime and cached bounded fixed-source JWKS.",
+      "gaps": [
+        "Offline API JWT can remain valid for up to five minutes after web logout; production transport trust and total fetch deadline need attention."
+      ],
+      "final_location": "Web account token authority remains separate from services/api/solver_api/auth.py verification.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F010",
+      "name": "Versioned authenticated authored hint API",
+      "status": "active",
+      "active": true,
+      "service": "API hints",
+      "files": [
+        "services/api/solver_api/hints.py",
+        "services/api/solver_api/main.py",
+        "services/api/tests/test_hints.py"
+      ],
+      "dependencies": [
+        "FastAPI",
+        "Pydantic",
+        "JWT dependency",
+        "authored backend"
+      ],
+      "tests": [
+        "services/api/tests/test_hints.py"
+      ],
+      "behavior": "Strict levels 1-3, public-only context, honest authored/mock/model provenance, bounded output, timeout and safe provider failures.",
+      "gaps": [
+        "Only authored backend is configured; no real provider request, source debugging or model quotas. SAI-010 is already squash-integrated and counted once."
+      ],
+      "final_location": "services/api/solver_api/hints.py and API routes; retain current public context boundary.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F011",
+      "name": "Recovered authenticated hint request frontend SAI-011",
+      "status": "partial",
+      "active": true,
+      "service": "web hints",
+      "files": [
+        "apps/web/features/hints/account-hint.tsx",
+        "apps/web/features/hints/api.ts",
+        "apps/web/features/practice/workspace.tsx",
+        "tests/e2e/hints.spec.ts"
+      ],
+      "dependencies": [
+        "F008",
+        "F009",
+        "F010",
+        "AbortController",
+        "validated provenance schema"
+      ],
+      "tests": [
+        "tests/e2e/hints.spec.ts"
+      ],
+      "behavior": "Recover unique unmerged SAI-011 request/cancel/retry/signin UI and client into a dedicated hints feature.",
+      "gaps": [
+        "Current-revision recovery/typecheck/build/browser validation pending when this inventory was assembled; cancellation behavior needs direct coverage. Still authored content, not model inference."
+      ],
+      "final_location": "apps/web/features/hints; workspace mounts this feature; browser regression remains tests/e2e/.",
+      "validation": "PENDING: recovered from b591db142d7b65c306769a59251ed4129f42118a; do not report historical branch tests as current-task passes."
+    },
+    {
+      "id": "F012",
+      "name": "Bounded API requests and safe correlated errors",
+      "status": "active",
+      "active": true,
+      "service": "API shared middleware",
+      "files": [
+        "services/api/solver_api/body_limit.py",
+        "services/api/solver_api/errors.py",
+        "services/api/solver_api/main.py"
+      ],
+      "dependencies": [
+        "Starlette ASGI",
+        "FastAPI",
+        "asyncio"
+      ],
+      "tests": [
+        "services/api/tests/test_api.py",
+        "services/api/tests/test_submissions.py",
+        "services/api/tests/test_hints.py"
+      ],
+      "behavior": "Bound each body to 128 KiB/ten-second receive time; generate request IDs and redact validation/internal failures.",
+      "gaps": [
+        "Per-request bounds do not cap aggregate ingress concurrency or provide operational observability."
+      ],
+      "final_location": "services/api/solver_api middleware/error modules; retain cross-feature shared boundary.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F013",
+      "name": "Idempotent owned submission queue and quotas",
+      "status": "active",
+      "active": true,
+      "service": "API submissions",
+      "files": [
+        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/main.py",
+        "apps/web/features/submissions/submission-panel.tsx",
+        "apps/web/features/submissions/api.ts"
+      ],
+      "dependencies": [
+        "SQLite WAL",
+        "Pydantic",
+        "authenticated account ID",
+        "UUID idempotency"
+      ],
+      "tests": [
+        "services/api/tests/test_submissions.py",
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "behavior": "Deliberate run/submit, UTF-8 source bounds, per-account idempotency and in-flight/rate/global active queue controls.",
+      "gaps": [
+        "Local SQLite queue; no production scheduling fairness, cumulative retention/storage budget or distributed queue deployment."
+      ],
+      "final_location": "services/api/solver_api/submissions.py and apps/web/features/submissions/.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F014",
+      "name": "Private attempt source and verdict history",
+      "status": "active",
+      "active": true,
+      "service": "API storage + web submissions",
+      "files": [
+        "services/api/solver_api/submissions.py",
+        "apps/web/features/submissions/submission-history.tsx",
+        "apps/web/features/submissions/api.ts",
+        "apps/web/app/submissions/page.tsx"
+      ],
+      "dependencies": [
+        "SQLite",
+        "verified ownership",
+        "bounded validated responses"
+      ],
+      "tests": [
+        "services/api/tests/test_submissions.py",
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "behavior": "Persist source and actual finite verdicts; list summaries and detail only for the owning account.",
+      "gaps": [
+        "No retention/deletion/backup/encryption operations; summary query unnecessarily materializes source before dropping it."
+      ],
+      "final_location": "Feature-owned web submissions files and owned API store; keep browser routes thin.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F015",
+      "name": "Worker readiness, heartbeat and exclusive expiring leases",
+      "status": "active",
+      "active": true,
+      "service": "API authority + judge controller",
+      "files": [
+        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/main.py",
+        "services/judge/solver_judge/worker.py"
+      ],
+      "dependencies": [
+        "dedicated worker bearer",
+        "per-job hashed random lease tokens",
+        "SQLite transactions"
+      ],
+      "tests": [
+        "services/api/tests/test_submissions.py",
+        "services/judge/tests/test_worker.py"
+      ],
+      "behavior": "Advertise verified runtime/languages, admit jobs only with fresh workers, lease once and accept one bounded authenticated completion.",
+      "gaps": [
+        "Shared controller trust domain requires private transport, rotation and production identity operations."
+      ],
+      "final_location": "API owns queue/lease authority; separate worker consumes leases in services/judge/.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F016",
+      "name": "gVisor-isolated Python and C++17 execution",
+      "status": "active",
+      "active": true,
+      "service": "judge sandbox",
+      "files": [
+        "services/judge/Dockerfile",
+        "services/judge/solver_judge/runner.py",
+        "services/judge/solver_judge/harness.py"
+      ],
+      "dependencies": [
+        "rootless Docker",
+        "runsc",
+        "Linux rlimits",
+        "g++",
+        "Python isolated mode"
+      ],
+      "tests": [
+        "services/judge/tests/test_sandbox.py",
+        "services/judge/tests/test_runner.py"
+      ],
+      "behavior": "Run learner programs only inside required isolated per-job containers; host controller retains credentials and expected answers.",
+      "gaps": [
+        "Local bounded prototype, runtime maintenance and aggregate host accounting required; no ordinary-container/host fallback or security certification."
+      ],
+      "final_location": "Retain trusted host runner and in-container harness as separate files/trust zones.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F017",
+      "name": "Original finite grading cases and trusted oracles",
+      "status": "active",
+      "active": true,
+      "service": "judge grading",
+      "files": [
+        "services/judge/solver_judge/cases.py",
+        "services/judge/solver_judge/runner.py"
+      ],
+      "dependencies": [
+        "original public samples",
+        "worker-generated bounded cases",
+        "independent expected-answer computation"
+      ],
+      "tests": [
+        "services/judge/tests/test_cases.py",
+        "services/judge/tests/test_sandbox.py"
+      ],
+      "behavior": "Two public cases for run mode and eight finite checks per submission for each original problem; compare outside sandbox.",
+      "gaps": [
+        "No arbitrary correctness proof, authoring/versioning system or interactive/custom validator ecosystem."
+      ],
+      "final_location": "services/judge/solver_judge/cases.py until broader content warrants per-problem modules.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F018",
+      "name": "Bounded process transport, cancellation and cleanup",
+      "status": "active",
+      "active": true,
+      "service": "judge controller + sandbox",
+      "files": [
+        "services/judge/solver_judge/bounded.py",
+        "services/judge/solver_judge/runner.py",
+        "services/judge/solver_judge/worker.py"
+      ],
+      "dependencies": [
+        "selectors",
+        "bounded stdin/stdout/stderr",
+        "deadlines",
+        "process groups",
+        "Docker cleanup"
+      ],
+      "tests": [
+        "services/judge/tests/test_bounded.py",
+        "services/judge/tests/test_runner.py",
+        "services/judge/tests/test_worker.py"
+      ],
+      "behavior": "Use one bounded transport helper in host control and image supervisor; cancel/shutdown work and clean resources.",
+      "gaps": [
+        "JUDGE-001 silent-removal/untracked-container weakness found by source review; root fix underway, targeted and integration verification pending."
+      ],
+      "final_location": "Keep bounded.py shared by explicit import/COPY; maintain container cleanup in host runner.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F019",
+      "name": "Finite runtime preflight and readiness diagnostics",
+      "status": "active",
+      "active": true,
+      "service": "judge operations",
+      "files": [
+        "services/judge/solver_judge/diagnostics.py",
+        "services/judge/solver_judge/runner.py",
+        "services/judge/solver_judge/harness.py"
+      ],
+      "dependencies": [
+        "required runtime inspection",
+        "finite compiler/isolation/resource probes"
+      ],
+      "tests": [
+        "services/judge/tests/test_runner.py",
+        "services/judge/tests/test_sandbox.py",
+        "services/judge/tests/test_worker.py"
+      ],
+      "behavior": "Fail closed before worker heartbeat and print controlled readiness/check fields.",
+      "gaps": [
+        "Point-in-time probes do not replace continuous host health, patching or independent review."
+      ],
+      "final_location": "services/judge/solver_judge/diagnostics.py and runner preflight.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F020",
+      "name": "Production-mode build, Compose and private-state packaging guard",
+      "status": "active",
+      "active": true,
+      "service": "web/API packaging",
+      "files": [
+        "apps/web/Dockerfile",
+        "services/api/Dockerfile",
+        "apps/web/next.config.ts",
+        "compose.yaml",
+        "compose.cloud.yaml",
+        "scripts/check-standalone.mjs",
+        ".dockerignore"
+      ],
+      "dependencies": [
+        "Next standalone",
+        "nonroot containers",
+        "private volumes",
+        "optional managed TLS CA secret"
+      ],
+      "tests": [
+        "npm run build",
+        "scripts/check-standalone.mjs",
+        "Compose smoke workflow in docs/DEVELOPMENT.md"
+      ],
+      "behavior": "Build distributable web/API components excluding credentials/local state and inactive AnalyseFuture content; preserve local account/submission volumes.",
+      "gaps": [
+        "Build mode is not deployment; API/web base tags and Actions refs need maintained immutable reproducibility policy."
+      ],
+      "final_location": "Keep Dockerfiles by deployment component and root Compose orchestration.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F021",
+      "name": "Archive and history preservation with integrity inventories",
+      "status": "active",
+      "active": true,
+      "service": "repository evidence",
+      "files": [
+        "AnalyseFuture/manifest.json",
+        "AnalyseFuture/archives/",
+        "AnalyseFuture/extracted/",
+        "scripts/verify_preserved_archives.py",
+        "AnalyseFuture/repository-inventory/"
+      ],
+      "dependencies": [
+        "SHA-256 inventories",
+        "original ZIPs",
+        "Git blobs/history"
+      ],
+      "tests": [
+        "python3 scripts/verify_preserved_archives.py",
+        "python3 scripts/verify_preserved_archives.py --git-index"
+      ],
+      "behavior": "Keep original archives and all 122 member contents, map renamed Git controls and preserve historical variants outside runtime.",
+      "gaps": [
+        "Five supplied datasets are only LFS pointers; hashes prove byte preservation, not safety, rights or recovery of unavailable history."
+      ],
+      "final_location": "AnalyseFuture for inactive evidence, scripts/ for verification; exclude research snapshots from application artifacts.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F022",
+      "name": "Project intent, decisions, historical memory and delivery evidence",
+      "status": "active",
+      "active": true,
+      "service": "documentation governance",
+      "files": [
+        "README.md",
+        "PROJECT_IDEA.txt",
+        "docs/PROJECT_STATUS.md",
+        "docs/INDEX.md",
+        "docs/adr/",
+        "AnalyseFuture/historical-implementations/"
+      ],
+      "dependencies": [
+        "reviewed source/history",
+        "owner decisions",
+        "honest validation ledger"
+      ],
+      "tests": [
+        "link/path review",
+        "root validation record"
+      ],
+      "behavior": "Preserve competing historical proposals while maintaining discoverable current status, decisions, future vision and progress.",
+      "gaps": [
+        "Dated proposals must not override current implementation; account compromise attribution and inaccessible deleted work remain unproven."
+      ],
+      "final_location": "Root/docs entrypoints for current work; displaced branch snapshots remain AnalyseFuture/historical-implementations/.",
+      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+    },
+    {
+      "id": "F023",
+      "name": "Bounded live model-backed tutor provider",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future API hints",
+      "files": [
+        "services/api/solver_api/hints.py",
+        "docs/AI_SOLVER.md"
+      ],
+      "dependencies": [
+        "F009",
+        "F010",
+        "approved model endpoint",
+        "per-account token/cost/time quotas",
+        "consent and rights policy"
+      ],
+      "tests": [],
+      "behavior": "Add one reviewed provider behind the existing public hint context, with explicit model provenance and outages/quotas.",
+      "gaps": [
+        "No provider implemented; cannot enable by setting an arbitrary backend name; provider selection, credentials and spending require owner decision."
+      ],
+      "final_location": "Proposed extension inside services/api/solver_api hints/provider modules; no empty service created.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F024",
+      "name": "Consent-driven debugging and bounded repair",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future API orchestration + judge",
+      "files": [
+        "docs/AI_SOLVER.md",
+        "docs/JUDGE_SECURITY.md"
+      ],
+      "dependencies": [
+        "F013",
+        "F016",
+        "F023",
+        "approved user source/public evidence",
+        "privacy controls"
+      ],
+      "tests": [],
+      "behavior": "Use deliberately supplied source/evidence to form bounded diagnosis/repair hypotheses and test them through isolated execution.",
+      "gaps": [
+        "No debugger workflow exists; do not leak private grading data or claim model diagnosis is observed fact."
+      ],
+      "final_location": "Proposed API feature modules and web feature UI; existing judge remains execution authority.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F025",
+      "name": "Budgeted candidate solver and evidence-based selection",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future solver orchestration",
+      "files": [
+        "docs/AI_SOLVER.md",
+        "docs/MODEL_DATA_EVALUATION.md"
+      ],
+      "dependencies": [
+        "F016",
+        "F017",
+        "F023",
+        "candidate/test/token/time budget",
+        "authorized tasks"
+      ],
+      "tests": [],
+      "behavior": "Plan, generate a limited candidate set, run permitted tests, optionally repair and rank by authorized execution evidence.",
+      "gaps": [
+        "No active generated solver; similarity/confidence/finite acceptance do not prove correctness; no unlimited retries."
+      ],
+      "final_location": "Proposed API solver modules; separate service only when measured resource/isolation need justifies it.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F026",
+      "name": "Rights-approved held-out AI evaluation and research reports",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future offline evaluation",
+      "files": [
+        "docs/MODEL_DATA_EVALUATION.md",
+        "docs/DATA_AND_LICENSES.md"
+      ],
+      "dependencies": [
+        "approved datasets",
+        "disjoint splits",
+        "fixed model/prompt/seed/budget",
+        "isolated judge"
+      ],
+      "tests": [],
+      "behavior": "Compare baselines and candidate/repair/ranking strategies using pass@1/pass@k, latency, cost and failures.",
+      "gaps": [
+        "No new benchmark results reproduced; archive output anecdotes are not project performance evidence."
+      ],
+      "final_location": "Proposed offline evaluation tooling outside runtime; activate only with approved data and bounded compute.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F027",
+      "name": "Original content authoring, versioning and validators",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future API content + judge content",
+      "files": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/DATA_AND_LICENSES.md"
+      ],
+      "dependencies": [
+        "F004",
+        "F017",
+        "author permissions",
+        "versioned problem/test contracts"
+      ],
+      "tests": [],
+      "behavior": "Manage licensed/original statements, sample correctness, validators, test versions and content provenance.",
+      "gaps": [
+        "No authoring/import pipeline or permissioned content administration yet."
+      ],
+      "final_location": "Proposed API content modules and isolated judge validators; keep private tests out of public web/model context.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F028",
+      "name": "Learning paths, reflection and progress retention",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future learning features",
+      "files": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/PROJECT_VISION.md"
+      ],
+      "dependencies": [
+        "F008",
+        "F014",
+        "consented learning data",
+        "original problem taxonomy"
+      ],
+      "tests": [],
+      "behavior": "Offer progressive topic practice, mistake reflection and transfer/retention measures.",
+      "gaps": [
+        "No personalized progress system; acceptance counts/time alone do not prove learning."
+      ],
+      "final_location": "Proposed web learning feature and owned API progress storage; define privacy lifecycle first.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F029",
+      "name": "Virtual contests, ICPC teams and scoring",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future event features",
+      "files": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/ROADMAP.md"
+      ],
+      "dependencies": [
+        "F008",
+        "F013",
+        "F016",
+        "server-enforced assistance policy",
+        "scoreboard/time/freeze tests"
+      ],
+      "tests": [],
+      "behavior": "Support timed original/permissioned events, team workflows and post-contest review.",
+      "gaps": [
+        "Contests/teams/scoreboards are not implemented; rules and abuse/integrity controls remain prerequisites."
+      ],
+      "final_location": "Proposed event/contest modules after practice and operational gates; no speculative folders added.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F030",
+      "name": "Additional audited learner runtime languages",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future judge runtimes",
+      "files": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/JUDGE_SECURITY.md"
+      ],
+      "dependencies": [
+        "F016",
+        "compiler/runtime lifecycle",
+        "protocol limits/diagnostics",
+        "hostile fixtures"
+      ],
+      "tests": [],
+      "behavior": "Add Java, JavaScript, Rust, Go or C++20 individually behind reviewed runtime contracts.",
+      "gaps": [
+        "Current supported execution languages are Python/C++17 only. A UI dropdown is insufficient."
+      ],
+      "final_location": "Proposed judge runtime adapters with matching API/web capability contracts and isolated tests.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F031",
+      "name": "Production identity, recovery and data administration",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future account operations",
+      "files": [
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/OPEN_DECISIONS.md"
+      ],
+      "dependencies": [
+        "F008",
+        "F009",
+        "trusted ingress",
+        "email delivery",
+        "retention/deletion/backup policy"
+      ],
+      "tests": [],
+      "behavior": "Make accounts and private learning data operable with verified recovery, access review and safe lifecycle controls.",
+      "gaps": [
+        "No production identity/recovery operation, immediate API-token revocation or full deletion/restore capability."
+      ],
+      "final_location": "Extend accounts/API operations without collapsing token authority and resource authorization boundaries.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F032",
+      "name": "Maintained public judge operations and host-wide budgets",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future judge infrastructure",
+      "files": [
+        "services/judge/UPSTREAM_REVIEW.md",
+        "docs/JUDGE_SECURITY.md"
+      ],
+      "dependencies": [
+        "F016",
+        "F018",
+        "maintained runtime",
+        "aggregate CPU/memory/PID/disk limits",
+        "independent review",
+        "incident drills"
+      ],
+      "tests": [],
+      "behavior": "Operate a maintained dedicated execution host with audited updates, monitoring, cleanup reconciliation and bounded capacity.",
+      "gaps": [
+        "Local prototype is not certified; old recorded runtime and missing aggregate accounting block public-readiness claims."
+      ],
+      "final_location": "Dedicated infrastructure around services/judge; retain credential-separated application containers.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F033",
+      "name": "Model/ranker fine-tuning on licensed data",
+      "status": "research_only",
+      "active": false,
+      "service": "future external ML workflow",
+      "files": [
+        "docs/MODEL_DATA_EVALUATION.md",
+        "AnalyseFuture/extracted/phi-code-main/ranker/"
+      ],
+      "dependencies": [
+        "F026",
+        "separate data/model rights",
+        "approved external compute/spend",
+        "baseline comparison"
+      ],
+      "tests": [],
+      "behavior": "Investigate measured task-specific fine-tuning only after a bounded baseline and clean evaluation exist.",
+      "gaps": [
+        "No training run, GPU provisioning or improvement claimed; five archive datasets are absent LFS objects."
+      ],
+      "final_location": "Inactive research under AnalyseFuture; a future isolated offline ML workspace only after owner approval.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F034",
+      "name": "Coach, educator and institutional workspaces",
+      "status": "feasible_proposal",
+      "active": false,
+      "service": "future product features",
+      "files": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/PROJECT_VISION.md"
+      ],
+      "dependencies": [
+        "F008",
+        "F027",
+        "F028",
+        "role permissions",
+        "consented reports and assessment policy"
+      ],
+      "tests": [],
+      "behavior": "Support permissioned content assignment, learning evidence and policy-bound assessments.",
+      "gaps": [
+        "No coach dashboard or institution deployment exists; pilot user need and privacy controls required."
+      ],
+      "final_location": "Proposed role-scoped web/API features; retain one product identity.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F035",
+      "name": "Self-hosted model inference and independent providers",
+      "status": "research_only",
+      "active": false,
+      "service": "future model operations",
+      "files": [
+        "docs/AI_SOLVER.md",
+        "docs/OPEN_DECISIONS.md"
+      ],
+      "dependencies": [
+        "F023",
+        "approved model license",
+        "hardware/economics/security review"
+      ],
+      "tests": [],
+      "behavior": "Compare hosted APIs and owned inference without making one provider permanent infrastructure.",
+      "gaps": [
+        "No weights or inference daemon installed; self-hosting is not automatically cheaper and requires ongoing operations."
+      ],
+      "final_location": "Inactive architecture research; separate inference service only after evidence and owner decision.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F036",
+      "name": "CodeSIM/MapCoder planning and ablation strategies",
+      "status": "research_only",
+      "active": false,
+      "service": "archived CodeGenerator",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/",
+        "AnalyseFuture/extracted/CodeGenerator-master/README.md"
+      ],
+      "dependencies": [
+        "archived provider interfaces",
+        "research prompts",
+        "benchmark adapters"
+      ],
+      "tests": [],
+      "behavior": "Study direct/analogical/self-planning/CodeSIM/MapCoder methods and purposeful stage ablations.",
+      "gaps": [
+        "Archive strategies not executed or adopted; require held-out authorized evaluation and strict budgets."
+      ],
+      "final_location": "Preserve under AnalyseFuture/extracted/CodeGenerator-master; future conceptual reuse belongs to F025.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F037",
+      "name": "Archived provider adapters and token accounting",
+      "status": "research_only",
+      "active": false,
+      "service": "archived CodeGenerator",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/models/",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/results/"
+      ],
+      "dependencies": [
+        "OpenAI/Azure/OpenRouter/Anthropic/Gemini/Groq external SDKs",
+        "archived accounting"
+      ],
+      "tests": [],
+      "behavior": "Preserve generation provider abstractions and accounting/resume approaches as references.",
+      "gaps": [
+        "Unpinned/incomplete dependencies, no product quotas, privacy/deadline gaps and Gemini undefined model_name defect; no compatible drop-in integration."
+      ],
+      "final_location": "Archive remains inactive; reviewed original provider-neutral integration would extend F023.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F038",
+      "name": "Archived benchmark loaders, variants and result analysis",
+      "status": "research_only",
+      "active": false,
+      "service": "archived CodeGenerator + phi outputs",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/results/",
+        "AnalyseFuture/extracted/CodeGenerator-master/data/",
+        "AnalyseFuture/extracted/phi-code-main/contests_results/"
+      ],
+      "dependencies": [
+        "benchmark formats",
+        "JSON/JSONL",
+        "unverified upstream result files"
+      ],
+      "tests": [],
+      "behavior": "Preserve dataset normalization, sample/test variants, results/resume and published contest-output evidence.",
+      "gaps": [
+        "Source-code licenses do not settle dataset/contest/model rights; projection overlaps do not justify deleting variants or prove evaluation independence."
+      ],
+      "final_location": "AnalyseFuture only; future authorized evaluation uses F026 and ownership-safe history remains F014.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F039",
+      "name": "Archived host/external execution helpers",
+      "status": "research_only",
+      "active": false,
+      "service": "archived execution research",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py"
+      ],
+      "dependencies": [
+        "exec/multiprocessing/subprocess",
+        "external execution endpoint",
+        "developer-specific shell/Docker mounts"
+      ],
+      "tests": [],
+      "behavior": "Keep original evaluator mechanics inspectable as supplied evidence.",
+      "gaps": [
+        "Critical if transplanted into app: host execution of untrusted code, shell construction, missing current sandbox/credential boundary. Never activate as fallback."
+      ],
+      "final_location": "Inactive archival snapshots; safe execution must go through F016/F015 only.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F040",
+      "name": "phi-code multi-candidate sample/rank pipeline",
+      "status": "research_only",
+      "active": false,
+      "service": "archived phi-code solver",
+      "files": [
+        "AnalyseFuture/extracted/phi-code-main/solver/terminal.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/utils.py"
+      ],
+      "dependencies": [
+        "LLM endpoint",
+        "sentence-transformers ranker",
+        "site-specific parsers"
+      ],
+      "tests": [],
+      "behavior": "Study diverse Python attempts and ranking by passed examples followed by embedding similarity.",
+      "gaps": [
+        "Host code execution unsuitable; ranking semantics, safe execution, rights, deadlines and cost budgets unresolved; upstream contest claims not reproduced."
+      ],
+      "final_location": "Preserve archive; candidate selection ideas may inform F025 after original safe integration.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F041",
+      "name": "phi-code ranker data preparation and training",
+      "status": "research_only",
+      "active": false,
+      "service": "archived phi-code ranker",
+      "files": [
+        "AnalyseFuture/extracted/phi-code-main/ranker/",
+        "AnalyseFuture/extracted/phi-code-main/datasets/"
+      ],
+      "dependencies": [
+        "sentence-transformers",
+        "Transformers",
+        "datasets",
+        "five missing LFS data objects"
+      ],
+      "tests": [],
+      "behavior": "Preserve token-length filtering, dataset sampling and triplet/contrastive ranker training references.",
+      "gaps": [
+        "Unpinned remote-code-enabled model loads, incomplete dependencies, missing datasets, nondeterministic splits and unreviewed data rights; no training executed."
+      ],
+      "final_location": "Inactive AnalyseFuture research; possible future F033 offline workflow only.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F042",
+      "name": "phi-code standalone CLI, curses and Gradio interfaces",
+      "status": "research_only",
+      "active": false,
+      "service": "archived phi-code UI",
+      "files": [
+        "AnalyseFuture/extracted/phi-code-main/solver/main.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/web_ui.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/terminal.py"
+      ],
+      "dependencies": [
+        "Gradio",
+        "curses",
+        "Python",
+        "archived solver pipeline"
+      ],
+      "tests": [],
+      "behavior": "Preserve alternative standalone research interaction modes as examples, not additional active products.",
+      "gaps": [
+        "No application account/ownership policy; static None-statement and return-arity defects; no current runtime validation."
+      ],
+      "final_location": "Keep inactive archive UI; existing Next.js product remains canonical.",
+      "validation": "No current implementation validation is claimed for this proposal/research reference."
+    }
+  ],
+  "sources": [
+    "/tmp/solver-api-review.json",
+    "/tmp/solver-judge-review.json",
+    "/tmp/solver-web-review.json",
+    "/tmp/solver-docs-review.json",
+    "/tmp/solver-archive-review.json",
+    "/tmp/solver-web-moves.json",
+    "/tmp/solver-history-refs.json",
+    "/tmp/solver-history-scan.json"
+  ],
+  "technical_debt_count": 20,
+  "technical_debt_ids": [
+    "TD-001",
+    "TD-002",
+    "TD-003",
+    "TD-004",
+    "TD-005",
+    "TD-006",
+    "TD-007",
+    "TD-008",
+    "TD-009",
+    "TD-010",
+    "TD-011",
+    "TD-012",
+    "TD-013",
+    "TD-014",
+    "TD-015",
+    "TD-016",
+    "TD-017",
+    "TD-018",
+    "TD-019",
+    "TD-020"
+  ],
+  "duplicate_evidence": {
+    "whole_file_groups": [
+      {
+        "kind": "empty_package_markers",
+        "files": 7,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "kind": "phi_logging_helpers",
+        "files": 2,
+        "sha256": "6eb7e8fd4da7739f188e0b9c846b50a2602c8015b611504d1e3bfdaca9418006"
+      }
+    ],
+    "projected_hash_overlap": [
+      {
+        "pair": [
+          "MBPP",
+          "MBPP_ET"
+        ],
+        "fields": [
+          "task_id",
+          "text",
+          "code"
+        ],
+        "shared": 974,
+        "input_counts": [
+          974,
+          974
+        ]
+      },
+      {
+        "pair": [
+          "HumanEval",
+          "HumanEvalET"
+        ],
+        "fields": [
+          "task_id",
+          "prompt",
+          "entry_point",
+          "canonical_solution"
+        ],
+        "shared": 158,
+        "input_counts": [
+          164,
+          164
+        ]
+      },
+      {
+        "pair": [
+          "HumanEval",
+          "HumanEvalIncreasedSampleIO"
+        ],
+        "fields": [
+          "task_id",
+          "prompt",
+          "entry_point",
+          "canonical_solution"
+        ],
+        "shared": 161,
+        "input_counts": [
+          164,
+          164
+        ]
+      },
+      {
+        "pair": [
+          "HumanEvalET",
+          "HumanEvalIncreasedSampleIO"
+        ],
+        "fields": [
+          "task_id",
+          "prompt",
+          "entry_point",
+          "canonical_solution"
+        ],
+        "shared": 161,
+        "input_counts": [
+          164,
+          164
+        ]
+      },
+      {
+        "pair": [
+          "xCodeEval/problem_descriptions",
+          "xCodeEval/prog_syn_val"
+        ],
+        "fields": [
+          "description",
+          "difficulty",
+          "input_from",
+          "input_spec",
+          "memory_limit",
+          "notes",
+          "output_spec",
+          "output_to",
+          "sample_inputs",
+          "sample_outputs",
+          "src_uid",
+          "tags",
+          "time_limit"
+        ],
+        "shared": 45,
+        "input_counts": [
+          7635,
+          106
+        ]
+      }
+    ],
+    "projection_serialization": "UTF-8 json.dumps with sort_keys=True,separators=(comma,colon),ensure_ascii=False, then SHA-256; selected fields only, not whole-file or full-record identity.",
+    "full_record_canonical_overlap_across_nine_CodeGenerator_JSONL_inputs": 0,
+    "action": "preserve all variants; do not infer disjoint task splits"
+  }
+}

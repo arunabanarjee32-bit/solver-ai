@@ -1,18 +1,46 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test as base, type Page } from "@playwright/test";
 import { HINT_REQUEST_TIMEOUT_MS } from "../../apps/web/features/hints/api";
 
-async function signUp(page: Page) {
+type HintAccount = { email: string; password: string };
+
+// Hint cases only read public authored content. Reuse account identity per
+// worker while each test keeps Playwright's fresh browser context and session.
+// The submissions suite independently exercises signup and cross-user ownership.
+const test = base.extend<object, { hintAccount: HintAccount }>({
+  hintAccount: [
+    async ({ playwright }, use, workerInfo) => {
+      const baseURL = workerInfo.project.use.baseURL;
+      if (!baseURL) throw new Error("The hint fixture requires a configured baseURL.");
+      const origin = new URL(baseURL).origin;
+      const account = {
+        email: "hints-" + crypto.randomUUID() + "@example.test",
+        password: "local-hint-password-42",
+      };
+      const registration = await playwright.request.newContext({
+        baseURL,
+        extraHTTPHeaders: { Origin: origin },
+      });
+      try {
+        const response = await registration.post("/api/auth/sign-up/email", {
+          data: { name: "Hint Learner", ...account },
+        });
+        expect(response.status(), "Worker hint account registration must succeed").toBe(200);
+      } finally {
+        // Never reuse the registration cookies as a test's browser session.
+        await registration.dispose();
+      }
+      await use(account);
+    },
+    { scope: "worker" },
+  ],
+});
+
+async function signIn(page: Page, account: HintAccount) {
   await page.goto("/account?next=%2Fproblems%2Fsignal-sum");
-  await page.getByRole("button", { name: "Create account", exact: true }).click();
-  await page.getByLabel("Display name", { exact: true }).fill("Hint Learner");
+  await page.getByLabel("Email address", { exact: true }).fill(account.email);
+  await page.getByLabel("Password", { exact: true }).fill(account.password);
   await page
-    .getByLabel("Email address", { exact: true })
-    .fill("hints-" + crypto.randomUUID() + "@example.test");
-  await page
-    .getByLabel("Password", { exact: true })
-    .fill("local-hint-password-42");
-  await page
-    .getByRole("button", { name: "Create your account", exact: true })
+    .getByRole("button", { name: "Sign in to Solver AI", exact: true })
     .click();
   await expect(page).toHaveURL(/\/problems\/signal-sum$/);
   await expect(
@@ -44,8 +72,9 @@ test("guest retains free authored hints without submitting a hint API request", 
 
 test("signed-in request uses API JWT and labels offline content as authored", async ({
   page,
+  hintAccount,
 }) => {
-  await signUp(page);
+  await signIn(page, hintAccount);
   const responsePromise = page.waitForResponse(
     (response) =>
       response.url().endsWith("/api/v1/hints") &&
@@ -75,8 +104,9 @@ test("signed-in request uses API JWT and labels offline content as authored", as
 
 test("mock provenance is not passed off as AI, but genuine model flag is distinct", async ({
   page,
+  hintAccount,
 }) => {
-  await signUp(page);
+  await signIn(page, hintAccount);
   await page.route("**/api/v1/hints", async (route) => {
     const request = route.request().postDataJSON() as {
       problem_slug: string;
@@ -126,8 +156,9 @@ test("mock provenance is not passed off as AI, but genuine model flag is distinc
 
 test("invalid provenance, upstream failures and recovery never expose private diagnostics", async ({
   page,
+  hintAccount,
 }) => {
-  await signUp(page);
+  await signIn(page, hintAccount);
   await page.route("**/api/v1/hints", (route) =>
     route.fulfill({
       status: 200,
@@ -166,8 +197,9 @@ test("invalid provenance, upstream failures and recovery never expose private di
 
 test("stalled request has a visible timeout and remains retryable", async ({
   page,
+  hintAccount,
 }) => {
-  await signUp(page);
+  await signIn(page, hintAccount);
   await page.clock.install();
   await page.route("**/api/v1/hints", () => {
     // Keep the request pending; the client's AbortController owns the deadline.
@@ -189,8 +221,9 @@ test("stalled request has a visible timeout and remains retryable", async ({
 
 test("canceling an account hint aborts the request and permits a fresh attempt", async ({
   page,
+  hintAccount,
 }) => {
-  await signUp(page);
+  await signIn(page, hintAccount);
   await page.route("**/api/v1/hints", () => {
     // Hold the request until the learner explicitly cancels it.
   });
@@ -216,8 +249,9 @@ test("canceling an account hint aborts the request and permits a fresh attempt",
 
 test("changing hint level aborts the old request and releases the next level", async ({
   page,
+  hintAccount,
 }) => {
-  await signUp(page);
+  await signIn(page, hintAccount);
   await page.route("**/api/v1/hints", () => {
     // Keep the previous level pending while the learner changes context.
   });

@@ -1,0 +1,4732 @@
+{
+  "scope": "All 122 tracked extracted files plus 6 preservation/ZIP metadata files as present at review start",
+  "files": [
+    {
+      "path": "AnalyseFuture/.gitattributes",
+      "purpose": "Preservation-folder Git inclusion and byte/filter policy",
+      "feature": "preservation-integrity",
+      "dependencies": [],
+      "active": true,
+      "status": "active Git metadata for evidence storage",
+      "risks": [],
+      "bytes": 136,
+      "sha256": "a0a0bf50ea0eb2734ab720d39ce039ba5aabf9e500a27779f8e6a50fab8abee0",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/.gitignore",
+      "purpose": "Preservation-folder Git inclusion and byte/filter policy",
+      "feature": "preservation-integrity",
+      "dependencies": [],
+      "active": true,
+      "status": "active Git metadata for evidence storage",
+      "risks": [],
+      "bytes": 177,
+      "sha256": "9308484ce44b2e3f09e9388681973a997a4f14dff98d119295be3e11f5b1f768",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/README.md",
+      "purpose": "Preservation rationale, inventory map and inactive-reference boundaries",
+      "feature": "preservation-reference",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2876,
+      "sha256": "49a839f7036e6511ed9387fafc473c00c5a46cb3a8ef035313f7de103d7ab6c8",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/archives/CodeGenerator-master.zip",
+      "purpose": "Original user-supplied research archive, byte-preserved evidence",
+      "feature": "preservation-reference",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Opaque archive contains inactive research code/data; not a package dependency or deployed asset."
+      ],
+      "bytes": 11303470,
+      "sha256": "0aaf432271c1381e11eaaf96dcfe10e3c7031f01c49e6c359a9b4fda67646ddb",
+      "zip": {
+        "files": 73,
+        "directories": 16,
+        "unpacked_bytes": 43923734,
+        "encrypted_members": 0,
+        "nested_archives": []
+      },
+      "inspection": "Entire ZIP read for SHA-256, central directory and member CRC validation; member metadata inspected without execution"
+    },
+    {
+      "path": "AnalyseFuture/archives/phi-code-main.zip",
+      "purpose": "Original user-supplied research archive, byte-preserved evidence",
+      "feature": "preservation-reference",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Opaque archive contains inactive research code/data; not a package dependency or deployed asset."
+      ],
+      "bytes": 1380896,
+      "sha256": "89aab1ad1cd2b9be99713563a0929df92e91ddaeb04e656b28ce4d558fb17582",
+      "zip": {
+        "files": 49,
+        "directories": 9,
+        "unpacked_bytes": 1716951,
+        "encrypted_members": 0,
+        "nested_archives": []
+      },
+      "inspection": "Entire ZIP read for SHA-256, central directory and member CRC validation; member metadata inspected without execution"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/.env.example",
+      "purpose": "Research provider configuration example with empty credential fields",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Template only; copying real values here would expose credentials."
+      ],
+      "bytes": 302,
+      "sha256": "18b493a0a6651ff53032536a752ff28763f4bbe26fb982fd23db2c5d548ab739",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed",
+      "environment_names": [
+        "API_TYPE",
+        "AZURE_API_VERSION",
+        "AZURE_API_URL",
+        "AZURE_API_KEY",
+        "OPENAI_API_KEY",
+        "OPENAI_API_URL",
+        "GEMINI_API_KEY",
+        "GROQ_API_KEY"
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream",
+      "purpose": "Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "inert text; original also retained inside ZIP",
+      "risks": [],
+      "bytes": 139,
+      "sha256": "5371b8e1481bbd6f902c7f308b748ef417daeaeb991f303e8118e21c9b4f834c",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/LICENSE",
+      "purpose": "Original MIT source license notice",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Source license does not settle separate problem, dataset or model rights."
+      ],
+      "bytes": 1063,
+      "sha256": "7eee89d11ebb0e506e105a22c9f66c4a85615c7552bcba98f3f0c46d6c31cdbc",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/README.md",
+      "purpose": "Research framework purpose, setup and benchmark claims",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 8824,
+      "sha256": "0ffca945d78dcb2e69376425498230923ff80ffcb65d15e4ed82cd7746ee1358",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl",
+      "purpose": "Preserved APPS benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 390728,
+      "sha256": "5d76c903bf3a997ca0cc59b7f7cf9765434a87e8d742868db5a4b3f7fef7a1cb",
+      "jsonl": {
+        "records": 150,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 150
+        },
+        "schemas": [
+          {
+            "fields": [
+              "description",
+              "difficulty",
+              "id",
+              "name",
+              "sample_io",
+              "starter_code",
+              "test_list"
+            ],
+            "records": 150
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl",
+      "purpose": "Preserved HumanEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 238806,
+      "sha256": "1ee3131f7bca60c22cae3bd6d695022c2aaa56d8df39fbf1e1fb64976953e3d9",
+      "jsonl": {
+        "records": 164,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 164
+        },
+        "schemas": [
+          {
+            "fields": [
+              "canonical_solution",
+              "entry_point",
+              "prompt",
+              "sample_io",
+              "task_id",
+              "test"
+            ],
+            "records": 164
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl",
+      "purpose": "Preserved HumanEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 1321259,
+      "sha256": "1c22b1f71e3ed79bc90ce2a2b70e10c9d5dcbae8a4b25ec82e4cc0ffc6301848",
+      "jsonl": {
+        "records": 164,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 164
+        },
+        "schemas": [
+          {
+            "fields": [
+              "canonical_solution",
+              "entry_point",
+              "prompt",
+              "task_id",
+              "test",
+              "test_case_list"
+            ],
+            "records": 164
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl",
+      "purpose": "Preserved HumanEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 289463,
+      "sha256": "9985043411e4aab4462263009f60d38cbebccda3fdc7fcae8797510fbe6339ff",
+      "jsonl": {
+        "records": 164,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 164
+        },
+        "schemas": [
+          {
+            "fields": [
+              "canonical_solution",
+              "entry_point",
+              "prompt",
+              "sample_io",
+              "task_id",
+              "test"
+            ],
+            "records": 164
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl",
+      "purpose": "Preserved MBPPEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 563743,
+      "sha256": "ccf64ceae9c5403bf50a044cb6d505bfd2a2963ee58338ba268fd65beab92a9f",
+      "jsonl": {
+        "records": 974,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 974
+        },
+        "schemas": [
+          {
+            "fields": [
+              "challenge_test_list",
+              "code",
+              "task_id",
+              "test_list",
+              "test_setup_code",
+              "text"
+            ],
+            "records": 974
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl",
+      "purpose": "Preserved MBPPEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 9258047,
+      "sha256": "7c4b41c363f25a8b5a764478c8ca8e14fd1cf35f86b6f665a092f8bde14e41f9",
+      "jsonl": {
+        "records": 974,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 974
+        },
+        "schemas": [
+          {
+            "fields": [
+              "challenge_test_list",
+              "code",
+              "entry_point",
+              "task_id",
+              "test_list",
+              "test_setup_code",
+              "text"
+            ],
+            "records": 974
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl",
+      "purpose": "Preserved MBPPEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 346178,
+      "sha256": "20de4e7d41953df164bc96106d265e13b200323e29527508ced5b7d28a8b9075",
+      "jsonl": {
+        "records": 397,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 397
+        },
+        "schemas": [
+          {
+            "fields": [
+              "doctests",
+              "entry_point",
+              "language",
+              "name",
+              "original",
+              "prompt",
+              "prompt_terminology",
+              "sample_io",
+              "stop_tokens",
+              "test"
+            ],
+            "records": 397
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl",
+      "purpose": "Preserved xCodeEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 18159029,
+      "sha256": "bda417d0e06ded34ee62255b84ac386e8535137b82f8c4f905adda0b93d9f78b",
+      "jsonl": {
+        "records": 7635,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 7635
+        },
+        "schemas": [
+          {
+            "fields": [
+              "created_at",
+              "description",
+              "difficulty",
+              "input_from",
+              "input_spec",
+              "memory_limit",
+              "notes",
+              "output_spec",
+              "output_to",
+              "sample_inputs",
+              "sample_outputs",
+              "src_uid",
+              "tags",
+              "time_limit"
+            ],
+            "records": 7635
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl",
+      "purpose": "Preserved xCodeEval benchmark problem/completion/test records",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 203433,
+      "sha256": "4d596fca3dc2318e1469ed17517e72d2477f3b6d0943d658a9917d4a0ca11b5b",
+      "jsonl": {
+        "records": 106,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 106
+        },
+        "schemas": [
+          {
+            "fields": [
+              "description",
+              "difficulty",
+              "input_from",
+              "input_spec",
+              "memory_limit",
+              "notes",
+              "output_spec",
+              "output_to",
+              "sample_inputs",
+              "sample_outputs",
+              "src_uid",
+              "tags",
+              "time_limit"
+            ],
+            "records": 106
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json",
+      "purpose": "xCodeEval source-ID to reference test-list database",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Benchmark test rights unreviewed; not application private grading data or product input."
+      ],
+      "bytes": 11346609,
+      "sha256": "26b0b526ad96f7abbf11057b9547febf8237ce0bff00cad96fefc650e34374d5",
+      "inspection": "Whole JSON parsed and structure inspected",
+      "json": {
+        "type": "dict",
+        "top_level_items": 1379,
+        "total_test_records": 70474
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png",
+      "purpose": "Research pipeline illustration or reported benchmark figure",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 952858,
+      "sha256": "399174882418d71a580217f7b8aa8306d63bd4a8139af65af99655d585ae2719",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 2260,
+        "height": 990,
+        "chunks": 81
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png",
+      "purpose": "Research pipeline illustration or reported benchmark figure",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 233684,
+      "sha256": "5f9b2345c916182881bbfd2817fa74510d7fe80fc2829b0912bfae8462819da8",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 1411,
+        "height": 1076,
+        "chunks": 9
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png",
+      "purpose": "Research pipeline illustration or reported benchmark figure",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 143142,
+      "sha256": "1c0073533dd67a3a23dab41c450252773c5b7ba4623ee24d8fb518e4529a863d",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 866,
+        "height": 747,
+        "chunks": 8
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png",
+      "purpose": "Research pipeline illustration or reported benchmark figure",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 191444,
+      "sha256": "aa5af520de2354d98edba347cb4ac9e3510d981d882805549c58044837139b7b",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 871,
+        "height": 817,
+        "chunks": 8
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/requirements.txt",
+      "purpose": "Archived research dependency declarations",
+      "feature": "codesim-research",
+      "dependencies": [
+        "openai",
+        "numpy",
+        "pandas",
+        "python-dotenv",
+        "pyyml",
+        "tenacity",
+        "tiktoken",
+        "tqdm",
+        "gensim",
+        "jsonlines",
+        "astunparse",
+        "pyarrow",
+        "google-generativeai",
+        "accelerate",
+        "groq",
+        "matplotlib"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Not the application lockfile; unpinned/transitive gaps and Python compatibility require independent resolution."
+      ],
+      "bytes": 161,
+      "sha256": "8cb3ad5a0880ca7372deaeb2b59127c55b3356054c7d4658e5e38165d00bb2c4",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py",
+      "purpose": "Map research language labels to external ExecEval runtime names",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 291,
+      "sha256": "1fcdef1fe286ccca46c73f5a0a779a5fdf725072f33739ff8104362c33f7a16e",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 14,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py",
+      "purpose": "Relative benchmark data and output path constants",
+      "feature": "codesim-research",
+      "dependencies": [
+        "os",
+        "os.path"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2040,
+      "sha256": "3d601c742501774fadd3c98d89850f51a431b20d2af70dfd9f18b186603b0032",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 135,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py",
+      "purpose": "Verbosity level constants",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 57,
+      "sha256": "0ba4318dc7c622eadfe726b93b85a15fccff6a3ab3803528df7d8a05d6e90459",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 3,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py",
+      "purpose": "APPS statement/sample/full-test adapter for external execution",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Dataset",
+        "constants.paths",
+        "evaluations.evalute",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2041,
+      "sha256": "38f95b0c91efc46ee702850ed90168cf552ef1459a5ad1c2d83e9c09e9d85b1f",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 67,
+      "definitions": [
+        {
+          "name": "APPSDataset",
+          "line": 7,
+          "end_line": 67
+        },
+        {
+          "name": "__init__",
+          "line": 8,
+          "end_line": 13
+        },
+        {
+          "name": "evaluate",
+          "line": 15,
+          "end_line": 26
+        },
+        {
+          "name": "evaluate_sample_io",
+          "line": 28,
+          "end_line": 41
+        },
+        {
+          "name": "evaluate_additional_io",
+          "line": 43,
+          "end_line": 59
+        },
+        {
+          "name": "get_prompt",
+          "line": 62,
+          "end_line": 67
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py",
+      "purpose": "CodeContests statement/sample/full-test adapter for external execution",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Dataset",
+        "constants.paths",
+        "evaluations.evalute",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1621,
+      "sha256": "f51533cb313f7ce10a31c9f199b88016372ff2bda50353f23cb33b09b2df425a",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 60,
+      "definitions": [
+        {
+          "name": "CodeContestDataset",
+          "line": 6,
+          "end_line": 60
+        },
+        {
+          "name": "__init__",
+          "line": 7,
+          "end_line": 12
+        },
+        {
+          "name": "evaluate",
+          "line": 14,
+          "end_line": 25
+        },
+        {
+          "name": "evaluate_sample_io",
+          "line": 27,
+          "end_line": 38
+        },
+        {
+          "name": "evaluate_additional_io",
+          "line": 40,
+          "end_line": 56
+        },
+        {
+          "name": "get_prompt",
+          "line": 59,
+          "end_line": 60
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py",
+      "purpose": "Abstract JSONL dataset loader and evaluation/prompt interface",
+      "feature": "codesim-research",
+      "dependencies": [
+        "utils.jsonl"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 611,
+      "sha256": "a2b4b107f57cdf3ab376f76453807ad27a3356c125775762d30aa29088982cdc",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 33,
+      "definitions": [
+        {
+          "name": "Dataset",
+          "line": 4,
+          "end_line": 33
+        },
+        {
+          "name": "__init__",
+          "line": 5,
+          "end_line": 12
+        },
+        {
+          "name": "load",
+          "line": 14,
+          "end_line": 15
+        },
+        {
+          "name": "__len__",
+          "line": 17,
+          "end_line": 18
+        },
+        {
+          "name": "__getitem__",
+          "line": 20,
+          "end_line": 21
+        },
+        {
+          "name": "evaluate",
+          "line": 23,
+          "end_line": 29
+        },
+        {
+          "name": "get_prompt",
+          "line": 32,
+          "end_line": 33
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py",
+      "purpose": "Resolve benchmark dataset names to adapter classes",
+      "feature": "codesim-research",
+      "dependencies": [
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 988,
+      "sha256": "08f597bca5743d4ed3705718ac75d5a68a0b3c255e90ddf6c78385535a576db5",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 28,
+      "definitions": [
+        {
+          "name": "DatasetFactory",
+          "line": 9,
+          "end_line": 28
+        },
+        {
+          "name": "get_dataset_class",
+          "line": 11,
+          "end_line": 28
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py",
+      "purpose": "HumanEval functional-test and prompt adapter",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Dataset",
+        "constants.paths",
+        "evaluations.func_evaluate",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1474,
+      "sha256": "4384f9f308ce4fe3066a3003aa204433805a99afb2a4050fa6c461866864ac53",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 63,
+      "definitions": [
+        {
+          "name": "HumanDataset",
+          "line": 7,
+          "end_line": 63
+        },
+        {
+          "name": "__init__",
+          "line": 8,
+          "end_line": 13
+        },
+        {
+          "name": "evaluate",
+          "line": 15,
+          "end_line": 26
+        },
+        {
+          "name": "evaluate_sample_io",
+          "line": 28,
+          "end_line": 38
+        },
+        {
+          "name": "evaluate_additional_io",
+          "line": 41,
+          "end_line": 54
+        },
+        {
+          "name": "get_prompt",
+          "line": 57,
+          "end_line": 63
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py",
+      "purpose": "MBPP functional-test and prompt adapter",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Dataset",
+        "constants.paths",
+        "evaluations.func_evaluate",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1625,
+      "sha256": "db9ce9b3d017d22cb50be43ceaaf5302fad08672d43dadcbf0d9f06d2e9c5991",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 65,
+      "definitions": [
+        {
+          "name": "MBPPDataset",
+          "line": 7,
+          "end_line": 65
+        },
+        {
+          "name": "__init__",
+          "line": 8,
+          "end_line": 13
+        },
+        {
+          "name": "evaluate",
+          "line": 15,
+          "end_line": 28
+        },
+        {
+          "name": "evaluate_sample_io",
+          "line": 30,
+          "end_line": 43
+        },
+        {
+          "name": "evaluate_additional_io",
+          "line": 45,
+          "end_line": 58
+        },
+        {
+          "name": "get_prompt",
+          "line": 62,
+          "end_line": 65
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py",
+      "purpose": "xCodeEval standard-input/sample/full-test adapter",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Dataset",
+        "constants.paths",
+        "evaluations.evalute",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2084,
+      "sha256": "ad9394b0d4b39903dd4ceb7b90907d3b09926562315cd6fb4b8b5e193906a8d7",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 69,
+      "definitions": [
+        {
+          "name": "XCodeDataset",
+          "line": 7,
+          "end_line": 69
+        },
+        {
+          "name": "__init__",
+          "line": 8,
+          "end_line": 13
+        },
+        {
+          "name": "evaluate_sample_io",
+          "line": 15,
+          "end_line": 34
+        },
+        {
+          "name": "evaluate",
+          "line": 37,
+          "end_line": 47
+        },
+        {
+          "name": "evaluate_additional_io",
+          "line": 49,
+          "end_line": 65
+        },
+        {
+          "name": "get_prompt",
+          "line": 68,
+          "end_line": 69
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py",
+      "purpose": "Select and convert APPS data into external-executor record format",
+      "feature": "codesim-research",
+      "dependencies": [
+        "json",
+        "pandas"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 3911,
+      "sha256": "9cfa7e5d0e43485fc135a859bc48bc255f70b5152dccf3c9536541e6b07580db",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 129,
+      "definitions": [
+        {
+          "name": "read_jsonl",
+          "line": 5,
+          "end_line": 14
+        },
+        {
+          "name": "write_jsonl",
+          "line": 19,
+          "end_line": 23
+        },
+        {
+          "name": "get_test_cases",
+          "line": 96,
+          "end_line": 100
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py",
+      "purpose": "Convert CodeContests parquet public/private/generated tests to executor record format",
+      "feature": "codesim-research",
+      "dependencies": [
+        "json",
+        "pandas"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1919,
+      "sha256": "d8fa82c5fdcf939744d681d5deef0a84cd7ba1e0bd21afda7389977fe6ae9e62",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 66,
+      "definitions": [
+        {
+          "name": "read_jsonl",
+          "line": 7,
+          "end_line": 16
+        },
+        {
+          "name": "write_jsonl",
+          "line": 21,
+          "end_line": 25
+        },
+        {
+          "name": "get_test_cases",
+          "line": 33,
+          "end_line": 37
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py",
+      "purpose": "External ExecEval HTTP client and result dataclasses",
+      "feature": "codesim-research",
+      "dependencies": [
+        "dataclasses",
+        "exec_outcome",
+        "requests"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 3320,
+      "sha256": "fc052b1d4e2eaa2285dea91d7845a7424d8dfdac33c84f334742355e52816d5e",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 117,
+      "definitions": [
+        {
+          "name": "ExtendedUnittest",
+          "line": 7,
+          "end_line": 27
+        },
+        {
+          "name": "EmptyValueError",
+          "line": 30,
+          "end_line": 32
+        },
+        {
+          "name": "EmptyUnittestError",
+          "line": 35,
+          "end_line": 36
+        },
+        {
+          "name": "EmptyLanguageError",
+          "line": 39,
+          "end_line": 40
+        },
+        {
+          "name": "EmptySourceCodeError",
+          "line": 43,
+          "end_line": 44
+        },
+        {
+          "name": "APICommunication",
+          "line": 47,
+          "end_line": 117
+        },
+        {
+          "name": "json",
+          "line": 13,
+          "end_line": 18
+        },
+        {
+          "name": "from_json",
+          "line": 21,
+          "end_line": 27
+        },
+        {
+          "name": "__init__",
+          "line": 31,
+          "end_line": 32
+        },
+        {
+          "name": "__init__",
+          "line": 50,
+          "end_line": 53
+        },
+        {
+          "name": "__enter__",
+          "line": 55,
+          "end_line": 56
+        },
+        {
+          "name": "__exit__",
+          "line": 58,
+          "end_line": 59
+        },
+        {
+          "name": "get_runtimes",
+          "line": 61,
+          "end_line": 62
+        },
+        {
+          "name": "execute_code",
+          "line": 64,
+          "end_line": 117
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "self._session.get",
+          "line": 62
+        },
+        {
+          "name": "self._session.post",
+          "line": 102
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py",
+      "purpose": "Invoke external execution and construct test-result feedback",
+      "feature": "codesim-research",
+      "dependencies": [
+        "api_comm",
+        "constants.lang_mappings",
+        "exec_outcome",
+        "json",
+        "numpy",
+        "os",
+        "tqdm",
+        "typing",
+        "yaml"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 4930,
+      "sha256": "2847b67050f67fd2605f126ac4e0e06c3240f02e276854a83b87669b35410fd8",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 171,
+      "definitions": [
+        {
+          "name": "xcode_evaluate",
+          "line": 30,
+          "end_line": 57
+        },
+        {
+          "name": "xcode_execute_internal_test",
+          "line": 60,
+          "end_line": 93
+        },
+        {
+          "name": "contest_evaluate",
+          "line": 96,
+          "end_line": 121
+        },
+        {
+          "name": "contest_evaluate_public_tests",
+          "line": 124,
+          "end_line": 171
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py",
+      "purpose": "External execution verdict enum",
+      "feature": "codesim-research",
+      "dependencies": [
+        "enum"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 612,
+      "sha256": "1a270f58061b9f649e6189668af6440581e7205c7f1978bbcbb6d11e7e345252",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 14,
+      "definitions": [
+        {
+          "name": "ExecOutcome",
+          "line": 4,
+          "end_line": 14
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py",
+      "purpose": "Thread timeout/result propagation and JSONL utility",
+      "feature": "codesim-research",
+      "dependencies": [
+        "json",
+        "os",
+        "threading"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1784,
+      "sha256": "1a5c2d5ab990d4e8a56abe45a16055b17aef6a5c1f76278a072f2c88f8170f39",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 58,
+      "definitions": [
+        {
+          "name": "timeout_handler",
+          "line": 2,
+          "end_line": 3
+        },
+        {
+          "name": "to_jsonl",
+          "line": 6,
+          "end_line": 9
+        },
+        {
+          "name": "PropagatingThread",
+          "line": 12,
+          "end_line": 28
+        },
+        {
+          "name": "function_with_timeout",
+          "line": 31,
+          "end_line": 44
+        },
+        {
+          "name": "run",
+          "line": 13,
+          "end_line": 22
+        },
+        {
+          "name": "join",
+          "line": 24,
+          "end_line": 28
+        },
+        {
+          "name": "wrapper",
+          "line": 34,
+          "end_line": 35
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py",
+      "purpose": "Execute generated Python with functional/assertion tests in host globals",
+      "feature": "codesim-research",
+      "dependencies": [
+        "contextlib",
+        "executor_utils",
+        "signal",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Generated-code execution/shell/host-process pathways; incompatible with application trust boundary without replacement by isolated judge."
+      ],
+      "bytes": 1948,
+      "sha256": "1c08aebece1b3f8b89d37097796ecdbafb1a4cf04b4e1bff49a53a1ffadf9106",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 80,
+      "definitions": [
+        {
+          "name": "evaluate_io",
+          "line": 8,
+          "end_line": 35
+        },
+        {
+          "name": "evaluate_io_et",
+          "line": 38,
+          "end_line": 55
+        },
+        {
+          "name": "evaluate_functional_correctness",
+          "line": 58,
+          "end_line": 76
+        },
+        {
+          "name": "TimeoutException",
+          "line": 79,
+          "end_line": 80
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "function_with_timeout",
+          "line": 48
+        },
+        {
+          "name": "function_with_timeout",
+          "line": 69
+        },
+        {
+          "name": "function_with_timeout",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml",
+      "purpose": "Requested per-runtime resource limits for external executor",
+      "feature": "codesim-research",
+      "dependencies": [
+        "PyYAML/external executor"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Configuration requests do not prove runtime enforcement."
+      ],
+      "bytes": 1754,
+      "sha256": "d28676134201c30dc4301423093a110c74497cad507fe592eab3658fe355dab2",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py",
+      "purpose": "Resource-limit dataclass and prlimit-string example; not sandbox enforcement",
+      "feature": "codesim-research",
+      "dependencies": [
+        "dataclasses"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1107,
+      "sha256": "c4ba19ffc459bf333e6e0252ba49cd18e62cacad85e80708b4e0b55590daff8f",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 34,
+      "definitions": [
+        {
+          "name": "ResourceLimits",
+          "line": 5,
+          "end_line": 25
+        },
+        {
+          "name": "fields",
+          "line": 23,
+          "end_line": 25
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/main.py",
+      "purpose": "CLI benchmark experiment orchestration, model/dataset/strategy selection, result resume and extended-test summaries",
+      "feature": "codesim-research",
+      "dependencies": [
+        "argparse",
+        "constants.paths",
+        "constants.verboseType",
+        "datasets.DatasetFactory",
+        "datetime",
+        "dotenv",
+        "models.Gemini",
+        "models.ModelFactory",
+        "models.OpenAI",
+        "promptings.PromptingFactory",
+        "results.Results",
+        "sys",
+        "utils.evaluateET",
+        "utils.generateEP",
+        "utils.runEP",
+        "utils.summary"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 5066,
+      "sha256": "10e76dd1d70e26099f5066ba85d93e4348faffcb6052a77ef3ed1ce7f623420b",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 236,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py",
+      "purpose": "Anthropic-branded OpenRouter chat adapter with token accounting",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "base64",
+        "json",
+        "openai",
+        "os",
+        "requests",
+        "tenacity",
+        "time"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2929,
+      "sha256": "1ca8ec334a817891db03b7aa90763f3c1c0c0fa0b776471f691001625ee8705b",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 98,
+      "definitions": [
+        {
+          "name": "AnthropicModel",
+          "line": 17,
+          "end_line": 98
+        },
+        {
+          "name": "__init__",
+          "line": 18,
+          "end_line": 38
+        },
+        {
+          "name": "prompt",
+          "line": 41,
+          "end_line": 98
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py",
+      "purpose": "Abstract provider prompt interface",
+      "feature": "codesim-research",
+      "dependencies": [
+        "abc",
+        "logging",
+        "sys",
+        "traceback"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 368,
+      "sha256": "f2283c73dba72911d20183d632295a53ceba3cad31ce84a1797d4700556146b0",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 17,
+      "definitions": [
+        {
+          "name": "BaseModel",
+          "line": 8,
+          "end_line": 16
+        },
+        {
+          "name": "__init__",
+          "line": 9,
+          "end_line": 10
+        },
+        {
+          "name": "prompt",
+          "line": 15,
+          "end_line": 16
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py",
+      "purpose": "Gemini generation adapter with metadata and retry",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "dotenv",
+        "google.generativeai",
+        "os",
+        "pprint",
+        "tenacity",
+        "time"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2886,
+      "sha256": "97a819d5deb3d1f6fa70629ea5ca8392c7ee3ff63846c1cd704f6303efc8a475",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 96,
+      "definitions": [
+        {
+          "name": "Gemini",
+          "line": 14,
+          "end_line": 81
+        },
+        {
+          "name": "__init__",
+          "line": 15,
+          "end_line": 40
+        },
+        {
+          "name": "prompt",
+          "line": 44,
+          "end_line": 81
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py",
+      "purpose": "Groq chat adapter with retry and token accounting",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "base64",
+        "groq",
+        "json",
+        "os",
+        "requests",
+        "tenacity",
+        "time",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2247,
+      "sha256": "5695ad8e3a23b978a0204dac49108ec5a253e217398db4a09ab8cdad41f6128c",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 75,
+      "definitions": [
+        {
+          "name": "GroqModel",
+          "line": 18,
+          "end_line": 74
+        },
+        {
+          "name": "__init__",
+          "line": 19,
+          "end_line": 30
+        },
+        {
+          "name": "prompt",
+          "line": 33,
+          "end_line": 74
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py",
+      "purpose": "Provider name to adapter selection; eagerly imports providers",
+      "feature": "codesim-research",
+      "dependencies": [
+        "models.Anthropic",
+        "models.Gemini",
+        "models.GroqModel",
+        "models.OpenAI"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 749,
+      "sha256": "3f97734a3df40f7ce2fe215e4cee527d2b3ef2e42157e16be99448ec9427a2d1",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 21,
+      "definitions": [
+        {
+          "name": "ModelFactory",
+          "line": 6,
+          "end_line": 21
+        },
+        {
+          "name": "get_model_class",
+          "line": 8,
+          "end_line": 21
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py",
+      "purpose": "OpenAI/Azure SDK and raw HTTP chat adapters with token logs",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "base64",
+        "json",
+        "openai",
+        "os",
+        "requests",
+        "tenacity",
+        "time"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 6477,
+      "sha256": "931a5e39b17c09c88add0541184aeb542dc0f96a5525b63e303cb00857699dd5",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 206,
+      "definitions": [
+        {
+          "name": "OpenAIModel",
+          "line": 26,
+          "end_line": 39
+        },
+        {
+          "name": "OpenAIV1Model",
+          "line": 42,
+          "end_line": 125
+        },
+        {
+          "name": "OpenAIV2Model",
+          "line": 129,
+          "end_line": 205
+        },
+        {
+          "name": "__init__",
+          "line": 27,
+          "end_line": 31
+        },
+        {
+          "name": "prompt",
+          "line": 33,
+          "end_line": 39
+        },
+        {
+          "name": "__init__",
+          "line": 43,
+          "end_line": 63
+        },
+        {
+          "name": "prompt",
+          "line": 67,
+          "end_line": 125
+        },
+        {
+          "name": "__init__",
+          "line": 130,
+          "end_line": 146
+        },
+        {
+          "name": "prompt",
+          "line": 150,
+          "end_line": 205
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "requests.post",
+          "line": 172
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py",
+      "purpose": "Analogical exemplar-based generation strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "copy",
+        "datasets.Dataset",
+        "models.Base",
+        "os",
+        "re",
+        "results.Results",
+        "tiktoken",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1480,
+      "sha256": "c2e0d695955554a81aad9bb6fef87a57c1adf20abe0b47505eb09bdbee1f06c8",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 47,
+      "definitions": [
+        {
+          "name": "AnalogicalStrategy",
+          "line": 13,
+          "end_line": 45
+        },
+        {
+          "name": "run_single_pass",
+          "line": 15,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py",
+      "purpose": "Benchmark loop, resume handling, pass budget and result accumulation",
+      "feature": "codesim-research",
+      "dependencies": [
+        "constants.verboseType",
+        "copy",
+        "datasets.Dataset",
+        "models.Base",
+        "os",
+        "results.Results",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 4840,
+      "sha256": "03937a8f21334b0dedfad8d953e975d058c95769b1789357cad42c3ae15889d9",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 158,
+      "definitions": [
+        {
+          "name": "BaseStrategy",
+          "line": 14,
+          "end_line": 158
+        },
+        {
+          "name": "__init__",
+          "line": 15,
+          "end_line": 30
+        },
+        {
+          "name": "append_run_details",
+          "line": 33,
+          "end_line": 38
+        },
+        {
+          "name": "gpt_chat",
+          "line": 41,
+          "end_line": 55
+        },
+        {
+          "name": "run_single_pass",
+          "line": 58,
+          "end_line": 59
+        },
+        {
+          "name": "run",
+          "line": 61,
+          "end_line": 158
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py",
+      "purpose": "Dataset-conditioned few-shot reasoning/code prompt strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.XCodeDataset",
+        "models.Base",
+        "os",
+        "results.Results",
+        "tiktoken",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 36627,
+      "sha256": "80663d99818f6b92ea7bd28ba52199a14a2296999c8abd895a4c2572802ba602",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 924,
+      "definitions": [
+        {
+          "name": "CoTStrategy",
+          "line": 18,
+          "end_line": 923
+        },
+        {
+          "name": "run_single_pass",
+          "line": 19,
+          "end_line": 923
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py",
+      "purpose": "Exemplar/plan simulation, refinement, code generation and bounded debug strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "Direct",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 17822,
+      "sha256": "1bda0671ef4d5b77b4ea1cd771b3ad9a25ea1c76359fedc4f2ec3a9a68d523ce",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 521,
+      "definitions": [
+        {
+          "name": "CodeSIM",
+          "line": 28,
+          "end_line": 378
+        },
+        {
+          "name": "__init__",
+          "line": 29,
+          "end_line": 52
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 56,
+          "end_line": 62
+        },
+        {
+          "name": "process_test_log",
+          "line": 66,
+          "end_line": 76
+        },
+        {
+          "name": "parse_test_cases",
+          "line": 79,
+          "end_line": 84
+        },
+        {
+          "name": "check",
+          "line": 87,
+          "end_line": 112
+        },
+        {
+          "name": "run_single_pass",
+          "line": 115,
+          "end_line": 378
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py",
+      "purpose": "Single direct generation strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "copy",
+        "datasets.Dataset",
+        "models.Base",
+        "os",
+        "results.Results",
+        "tiktoken",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 596,
+      "sha256": "ac9357a9fc8c3386dae532986a04dd6997a1e0923c1f611d529c7e270f3818b9",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 20,
+      "definitions": [
+        {
+          "name": "DirectStrategy",
+          "line": 12,
+          "end_line": 20
+        },
+        {
+          "name": "run_single_pass",
+          "line": 13,
+          "end_line": 20
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py",
+      "purpose": "Multiple exemplar plans, confidence ordering and sample-based repair strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "results.Results",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 16369,
+      "sha256": "54a5d32dd3d56e553c674dda595c17b3d8762cc2bb67ad6e121bc7c8a948227a",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 394,
+      "definitions": [
+        {
+          "name": "MapCoder",
+          "line": 41,
+          "end_line": 394
+        },
+        {
+          "name": "__init__",
+          "line": 42,
+          "end_line": 51
+        },
+        {
+          "name": "xml_to_dict",
+          "line": 53,
+          "end_line": 67
+        },
+        {
+          "name": "parse_xml",
+          "line": 69,
+          "end_line": 82
+        },
+        {
+          "name": "parse_code",
+          "line": 84,
+          "end_line": 145
+        },
+        {
+          "name": "trim_text",
+          "line": 148,
+          "end_line": 149
+        },
+        {
+          "name": "replace_tag",
+          "line": 152,
+          "end_line": 156
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 159,
+          "end_line": 165
+        },
+        {
+          "name": "run_single_pass",
+          "line": 167,
+          "end_line": 394
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py",
+      "purpose": "Select named prompting/ablation strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "promptings.Analogical",
+        "promptings.CoT",
+        "promptings.CodeSIM",
+        "promptings.Direct",
+        "promptings.MapCoder",
+        "promptings.SelfPlanning",
+        "promptings.variations.CodeSIMA",
+        "promptings.variations.CodeSIMC",
+        "promptings.variations.CodeSIMWD",
+        "promptings.variations.CodeSIMWPV",
+        "promptings.variations.CodeSIMWPVD"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1540,
+      "sha256": "51322030955d876d5bc80f08621ae85846930a9a12b04360d3892a92865c9355",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 40,
+      "definitions": [
+        {
+          "name": "PromptingFactory",
+          "line": 14,
+          "end_line": 40
+        },
+        {
+          "name": "get_prompting_class",
+          "line": 16,
+          "end_line": 40
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py",
+      "purpose": "Two-stage dataset-conditioned planning then implementation strategy",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.XCodeDataset",
+        "models.Base",
+        "os",
+        "results.Results",
+        "tiktoken",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 32477,
+      "sha256": "06149bc1c71438fcd016caa7e7d8e1075c03b6c3cfcbc5399291e39779f460ed",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 643,
+      "definitions": [
+        {
+          "name": "SelfPlanningStrategy",
+          "line": 16,
+          "end_line": 642
+        },
+        {
+          "name": "run_single_pass",
+          "line": 17,
+          "end_line": 642
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py",
+      "purpose": "CodeSIM additional generated assertions variant (consensus/intersection of tests)",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "Direct",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 20591,
+      "sha256": "70e9f20f9d482668334971829674ad7759d9e674f630cdfa3c66bc3159a35775",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 622,
+      "definitions": [
+        {
+          "name": "CodeSIMA",
+          "line": 28,
+          "end_line": 372
+        },
+        {
+          "name": "__init__",
+          "line": 29,
+          "end_line": 57
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 61,
+          "end_line": 67
+        },
+        {
+          "name": "process_test_log",
+          "line": 71,
+          "end_line": 81
+        },
+        {
+          "name": "parse_test_cases",
+          "line": 85,
+          "end_line": 90
+        },
+        {
+          "name": "check",
+          "line": 93,
+          "end_line": 118
+        },
+        {
+          "name": "run_single_pass",
+          "line": 121,
+          "end_line": 372
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py",
+      "purpose": "CodeSIM competitive prompting variant",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "Direct",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 21379,
+      "sha256": "498149f0f9b4cab5fcf4324f8f9a3f3f003ffcbfca8afc2de97deb22108440ca",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 632,
+      "definitions": [
+        {
+          "name": "CodeSIMC",
+          "line": 28,
+          "end_line": 382
+        },
+        {
+          "name": "__init__",
+          "line": 29,
+          "end_line": 55
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 59,
+          "end_line": 65
+        },
+        {
+          "name": "process_test_log",
+          "line": 69,
+          "end_line": 79
+        },
+        {
+          "name": "parse_test_cases",
+          "line": 83,
+          "end_line": 88
+        },
+        {
+          "name": "check",
+          "line": 91,
+          "end_line": 116
+        },
+        {
+          "name": "run_single_pass",
+          "line": 119,
+          "end_line": 382
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py",
+      "purpose": "CodeSIM ablation omitting debugging",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "Direct",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 16897,
+      "sha256": "af6a10a36aeb726ad105d64762fbd73231f26d9a05fab10118b7892620aba841",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 523,
+      "definitions": [
+        {
+          "name": "CodeSIMWD",
+          "line": 29,
+          "end_line": 273
+        },
+        {
+          "name": "__init__",
+          "line": 30,
+          "end_line": 58
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 62,
+          "end_line": 68
+        },
+        {
+          "name": "process_test_log",
+          "line": 72,
+          "end_line": 82
+        },
+        {
+          "name": "parse_test_cases",
+          "line": 85,
+          "end_line": 90
+        },
+        {
+          "name": "check",
+          "line": 93,
+          "end_line": 118
+        },
+        {
+          "name": "run_single_pass",
+          "line": 121,
+          "end_line": 273
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py",
+      "purpose": "CodeSIM ablation omitting plan verification",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "Direct",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 16568,
+      "sha256": "386f5d46e34014290b158b03b65c6b2718c5fccf1a66e2fd75f4c578c032f003",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 517,
+      "definitions": [
+        {
+          "name": "CodeSIMWPV",
+          "line": 28,
+          "end_line": 267
+        },
+        {
+          "name": "__init__",
+          "line": 29,
+          "end_line": 57
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 61,
+          "end_line": 67
+        },
+        {
+          "name": "process_test_log",
+          "line": 71,
+          "end_line": 81
+        },
+        {
+          "name": "parse_test_cases",
+          "line": 85,
+          "end_line": 90
+        },
+        {
+          "name": "check",
+          "line": 93,
+          "end_line": 118
+        },
+        {
+          "name": "run_single_pass",
+          "line": 121,
+          "end_line": 267
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py",
+      "purpose": "CodeSIM ablation omitting plan verification and debugging",
+      "feature": "codesim-research",
+      "dependencies": [
+        "Base",
+        "Direct",
+        "constants.verboseType",
+        "copy",
+        "datasets.APPSDataset",
+        "datasets.CodeContestDataset",
+        "datasets.Dataset",
+        "datasets.HumanEvalDataset",
+        "datasets.MBPPDataset",
+        "datasets.XCodeDataset",
+        "evaluations.func_evaluate",
+        "json",
+        "models.Base",
+        "os",
+        "re",
+        "sys",
+        "tiktoken",
+        "time",
+        "typing",
+        "utils.parse",
+        "xml.etree.ElementTree"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 15008,
+      "sha256": "5395f442fc70211e56f44e7f8c01293a6a08604aec7c759e3cc993b8a9439ac7",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 477,
+      "definitions": [
+        {
+          "name": "CodeSIMWPVD",
+          "line": 28,
+          "end_line": 227
+        },
+        {
+          "name": "__init__",
+          "line": 29,
+          "end_line": 57
+        },
+        {
+          "name": "get_sample_io_str",
+          "line": 61,
+          "end_line": 67
+        },
+        {
+          "name": "process_test_log",
+          "line": 71,
+          "end_line": 81
+        },
+        {
+          "name": "parse_test_cases",
+          "line": 85,
+          "end_line": 90
+        },
+        {
+          "name": "check",
+          "line": 93,
+          "end_line": 118
+        },
+        {
+          "name": "run_single_pass",
+          "line": 121,
+          "end_line": 227
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py",
+      "purpose": "Load, append, persist and index resumable experiment JSONL results",
+      "feature": "codesim-research",
+      "dependencies": [
+        "os",
+        "utils.jsonl"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1380,
+      "sha256": "d5e975c7f58ab3f1da8637b866b4f2199f49aad6d10c96c0bb815d8757191a7f",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 53,
+      "definitions": [
+        {
+          "name": "Results",
+          "line": 17,
+          "end_line": 53
+        },
+        {
+          "name": "__init__",
+          "line": 18,
+          "end_line": 25
+        },
+        {
+          "name": "add_result",
+          "line": 27,
+          "end_line": 29
+        },
+        {
+          "name": "append_results",
+          "line": 31,
+          "end_line": 32
+        },
+        {
+          "name": "save_results",
+          "line": 34,
+          "end_line": 35
+        },
+        {
+          "name": "load_results",
+          "line": 37,
+          "end_line": 44
+        },
+        {
+          "name": "get_results",
+          "line": 46,
+          "end_line": 47
+        },
+        {
+          "name": "__len__",
+          "line": 49,
+          "end_line": 50
+        },
+        {
+          "name": "__getitem__",
+          "line": 52,
+          "end_line": 53
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py",
+      "purpose": "Empty research package marker",
+      "feature": "codesim-research",
+      "dependencies": [],
+      "active": false,
+      "status": "empty package marker; preserved for layout compatibility",
+      "risks": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 0,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py",
+      "purpose": "Re-evaluate HumanEval/MBPP completions against extended tests",
+      "feature": "codesim-research",
+      "dependencies": [
+        "evaluations.func_evaluate",
+        "os",
+        "utils.jsonl"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2970,
+      "sha256": "4b10b75d0c2fbb3c4c85af4a47eb0fb52dfbda0b1b8d476b6ee0964d4542a52c",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 104,
+      "definitions": [
+        {
+          "name": "generate_et_dataset_human",
+          "line": 6,
+          "end_line": 51
+        },
+        {
+          "name": "generate_et_dataset_mbpp",
+          "line": 54,
+          "end_line": 102
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py",
+      "purpose": "Format completions for optional EvalPlus evaluation",
+      "feature": "codesim-research",
+      "dependencies": [
+        "evaluations.func_evaluate",
+        "os",
+        "utils.jsonl"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1669,
+      "sha256": "a87093218af0fd50cb543e1e7b30c9d27862f8522211a9b44f1aeddf5c1d62f2",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 60,
+      "definitions": [
+        {
+          "name": "generate_ep_dataset_human",
+          "line": 6,
+          "end_line": 26
+        },
+        {
+          "name": "generate_ep_dataset_mbpp",
+          "line": 37,
+          "end_line": 59
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py",
+      "purpose": "JSONL read/write/append helpers with output directory creation",
+      "feature": "codesim-research",
+      "dependencies": [
+        "json",
+        "os"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1053,
+      "sha256": "067d95670b98c40ac07e1db240fad04f66f922f8cf54174cb24fcc81dd4cbca7",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 33,
+      "definitions": [
+        {
+          "name": "read_jsonl",
+          "line": 5,
+          "end_line": 11
+        },
+        {
+          "name": "write_jsonl",
+          "line": 14,
+          "end_line": 22
+        },
+        {
+          "name": "append_in_jsonl",
+          "line": 25,
+          "end_line": 32
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py",
+      "purpose": "Extract final fenced source code or numbered plans from provider text",
+      "feature": "codesim-research",
+      "dependencies": [
+        "re"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 3035,
+      "sha256": "d4b28e702482e70cce16998f047ad5ffdd1a98b7d134eda3b16803d68fd32afc",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 99,
+      "definitions": [
+        {
+          "name": "parse_response",
+          "line": 6,
+          "end_line": 78
+        },
+        {
+          "name": "extract_plans",
+          "line": 90,
+          "end_line": 99
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py",
+      "purpose": "Optional shell-based EvalPlus Docker invocation with fixed developer mounts",
+      "feature": "codesim-research",
+      "dependencies": [
+        "subprocess"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Generated-code execution/shell/host-process pathways; incompatible with application trust boundary without replacement by isolated judge."
+      ],
+      "bytes": 1377,
+      "sha256": "ba7470dbc6e4dd3bf7c37b9de3409a9e8b0b4a627736b27229bac8c9926dd1c6",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 34,
+      "definitions": [
+        {
+          "name": "run_eval_plus",
+          "line": 5,
+          "end_line": 34
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "subprocess.run",
+          "line": 14
+        },
+        {
+          "name": "subprocess.run",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py",
+      "purpose": "Aggregate solved counts, token usage, API calls and elapsed time",
+      "feature": "codesim-research",
+      "dependencies": [
+        "json",
+        "pandas",
+        "utils.jsonl"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 4744,
+      "sha256": "ed4d32a985b7fa7d55d7c115ff856354da2aff8739f25b7a391b3302527ae628",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 78,
+      "definitions": [
+        {
+          "name": "gen_summary",
+          "line": 6,
+          "end_line": 77
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py",
+      "purpose": "Approximate chat token counting with fixed tokenizer heuristics",
+      "feature": "codesim-research",
+      "dependencies": [
+        "tiktoken"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1561,
+      "sha256": "602b580bffbba2c3db2493771c56dd130b832b45fa0f2d456c998dfbbd5619b1",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 36,
+      "definitions": [
+        {
+          "name": "token_count",
+          "line": 5,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream",
+      "purpose": "Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "inert text; original also retained inside ZIP",
+      "risks": [],
+      "bytes": 312,
+      "sha256": "9a551ad26a55806e598280e089243881ce5fad1dca026493f71062775c23dc0b",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/.gitignore.upstream",
+      "purpose": "Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "inert text; original also retained inside ZIP",
+      "risks": [],
+      "bytes": 34,
+      "sha256": "f1f9b27485dc873cbc0e9ebbba5b9482f80798e43770616eb49e78cb3cde0d23",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/LICENSE",
+      "purpose": "Original Apache-2.0 source license notice",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Source license does not settle separate problem, dataset or model rights."
+      ],
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/README.md",
+      "purpose": "Research framework purpose, setup and benchmark claims",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 9461,
+      "sha256": "c48b9f38e366542d12a9640ad843967013c37cac572b7af51b1ce63e2751f80d",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 670,
+      "sha256": "685912f40483981a366251d00438834c07477118ea5f21f254bd64feb682c2c8",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 1106,
+      "sha256": "2b69302d80d5f5cf5f307d8fd5ca0e9c17263333f8f8e58e1917d39c7b8a2cd6",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 589,
+      "sha256": "f625f1985600be9efc5b5c8f50cf1f49beae6b6b03eeafc118a906a564f20d8b",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt",
+      "purpose": "Historical research command/output log",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 1786,
+      "sha256": "22d1ed0b24e87214dbd6295e221811c2962e35d64ed2799e7bc68deab4e27150",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt",
+      "purpose": "Historical research command/output log",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 2509,
+      "sha256": "4a66d69f8a51d5536abeb7058897ceb79318496feeaa116deab91908bf54e076",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 12282,
+      "sha256": "93416483ea5db82efa82024d231272849c0d6d1006f3ebffa41a59c6b4097e35",
+      "jsonl": {
+        "records": 30,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 30
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 30
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt",
+      "purpose": "Historical research command/output log",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 2200,
+      "sha256": "4fa08aa11fdc6aede457ae85fee45127dbf680151044b9fae1c2dd86476b1067",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 2963,
+      "sha256": "6ed501413e10f9c7d41d79c2c2365af7c57ec81ad1fb3d3e257ee1fde4a9bd1a",
+      "jsonl": {
+        "records": 16,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 16
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 16
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt",
+      "purpose": "Historical research command/output log",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 2627,
+      "sha256": "488e640a75f59e51348b0ed7d6a9eec10b4e06f997d82c2aa2881a324b3284b5",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 36868,
+      "sha256": "07a41e0702966a00bd71ff9aaa2a2838fdcc20489265e75f3f75b00602c0e604",
+      "jsonl": {
+        "records": 41,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 41
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 41
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt",
+      "purpose": "Historical research command/output log",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 10094,
+      "sha256": "6440da4e0af77b161cc29112bb7ed2fcb65ef9915a67aefd3a63e4de18ab4cc7",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 66609,
+      "sha256": "b6843344d8eec2ca99687119baada37da7bec23b741d049825d4827f3507db43",
+      "jsonl": {
+        "records": 37,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 37
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 37
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 681,
+      "sha256": "49cbe7933208eacc8595c0669a9d7b4bd9a9001d9e013a8c68a232a7e181c0ff",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 691,
+      "sha256": "a4098eb12fed03b1c36f0b17805af9bd721b14573aad81d8ad4c38d4a10a81da",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 1753,
+      "sha256": "89dc0f438680999724e6bb7a656582f9263745c5c04457d7f71d4f53990d639b",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt",
+      "purpose": "Historical contest problem statement",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Upstream contest-content/redistribution rights unreviewed; logs are not reproduced results."
+      ],
+      "bytes": 2220,
+      "sha256": "46661eb2202ef211d6befdbb7121f8bf1dbe86c30965de8c2d8044852d7d21e6",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 11527,
+      "sha256": "d57e8a52badc2b4d72061d8a1f11f406f73e078a0865032ba3de53fae9425614",
+      "jsonl": {
+        "records": 30,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 30
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 30
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 20671,
+      "sha256": "b6691615bcba96e0b3e105e6e82f4d67293634eea5e146188e696440d3d59fd3",
+      "jsonl": {
+        "records": 30,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 30
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 30
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 38570,
+      "sha256": "930c3b63ca5947c278f35adc0f2a73d07036465c1b8f392b9e5ccc7694efd0fa",
+      "jsonl": {
+        "records": 26,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 26
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 26
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl",
+      "purpose": "Historical generated candidate solutions, sample-pass counts and embedding scores",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation.",
+        "Self-reported finite sample scores; contest success/benchmark claims not reproduced."
+      ],
+      "bytes": 33392,
+      "sha256": "8f3daf0fc627679ff33726da18a2792462da6b87b04aac7e18c0582d2eb84b75",
+      "jsonl": {
+        "records": 26,
+        "invalid_lines": [],
+        "record_types": {
+          "dict": 26
+        },
+        "schemas": [
+          {
+            "fields": [
+              "code",
+              "score",
+              "tests_passed"
+            ],
+            "records": 26
+          }
+        ]
+      },
+      "inspection": "Every nonempty line parsed as JSON; full schema/record counts and byte-pattern scan performed. Embedded program/test/statement semantics not individually judged or executed."
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/curses_ui.png",
+      "purpose": "Research UI screenshot",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 95963,
+      "sha256": "15aac3d48751ac3c5f991047e91ff8bafe32088d941f69f2876b710587a80008",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 1889,
+        "height": 1002,
+        "chunks": 3
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl",
+      "purpose": "Git LFS pointer to upstream ranker dataset, not dataset contents",
+      "feature": "phi-research",
+      "dependencies": [
+        "unavailable upstream Git LFS object"
+      ],
+      "active": false,
+      "status": "missing underlying LFS object; pointer preserved exactly",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 134,
+      "sha256": "0d3bc016cce6e9c432cee4db574a8832f1852b57d5803d0d959525381f2f679b",
+      "inspection": "All pointer lines parsed as metadata",
+      "lfs_pointer": true
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl",
+      "purpose": "Git LFS pointer to upstream ranker dataset, not dataset contents",
+      "feature": "phi-research",
+      "dependencies": [
+        "unavailable upstream Git LFS object"
+      ],
+      "active": false,
+      "status": "missing underlying LFS object; pointer preserved exactly",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 133,
+      "sha256": "fb324a6cde583e1f8b7230c0650ea81702f4402c42712946be8f42db410dab72",
+      "inspection": "All pointer lines parsed as metadata",
+      "lfs_pointer": true
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl",
+      "purpose": "Git LFS pointer to upstream ranker dataset, not dataset contents",
+      "feature": "phi-research",
+      "dependencies": [
+        "unavailable upstream Git LFS object"
+      ],
+      "active": false,
+      "status": "missing underlying LFS object; pointer preserved exactly",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 134,
+      "sha256": "104c37dd47027ce03750bcfa50e92d43a31fac5a40731318e8b275777a98f71a",
+      "inspection": "All pointer lines parsed as metadata",
+      "lfs_pointer": true
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl",
+      "purpose": "Git LFS pointer to upstream ranker dataset, not dataset contents",
+      "feature": "phi-research",
+      "dependencies": [
+        "unavailable upstream Git LFS object"
+      ],
+      "active": false,
+      "status": "missing underlying LFS object; pointer preserved exactly",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 134,
+      "sha256": "44589fcb1d3d8280dbaa0623b21649cc2002142cb1f40c30914f36cf5ba6b965",
+      "inspection": "All pointer lines parsed as metadata",
+      "lfs_pointer": true
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl",
+      "purpose": "Git LFS pointer to upstream ranker dataset, not dataset contents",
+      "feature": "phi-research",
+      "dependencies": [
+        "unavailable upstream Git LFS object"
+      ],
+      "active": false,
+      "status": "missing underlying LFS object; pointer preserved exactly",
+      "risks": [
+        "Content/data reuse rights not established; no training or product ingestion authorized by preservation."
+      ],
+      "bytes": 133,
+      "sha256": "440f85b46fa25fc0f6c4edc2ca6bd23989d9bc95efc0cccfea520eaad62cc4c8",
+      "inspection": "All pointer lines parsed as metadata",
+      "lfs_pointer": true
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py",
+      "purpose": "Inspect triplet/pair dataset field and token-length compatibility with selected ranker",
+      "feature": "phi-research",
+      "dependencies": [
+        "argparse",
+        "glob",
+        "json",
+        "os",
+        "sentence_transformers",
+        "sys",
+        "tqdm"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Permissive external-model code loading option; model identity/revision not pinned in archive."
+      ],
+      "bytes": 3233,
+      "sha256": "e15d53930b592ec775f24b2f20ae16dff23813e8b6c0f7d020e69c5f170634da",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 105,
+      "definitions": [
+        {
+          "name": "main",
+          "line": 11,
+          "end_line": 72
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "SentenceTransformer",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py",
+      "purpose": "Write dataset subsets fitting the ranker tokenizer length limit",
+      "feature": "phi-research",
+      "dependencies": [
+        "argparse",
+        "glob",
+        "json",
+        "os",
+        "sentence_transformers",
+        "sys",
+        "tqdm"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Permissive external-model code loading option; model identity/revision not pinned in archive."
+      ],
+      "bytes": 3309,
+      "sha256": "b9245121f9141ff306ffe6491af4f693e3c9eac0da67820caf5c3651b3cb1f54",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 102,
+      "definitions": [
+        {
+          "name": "main",
+          "line": 11,
+          "end_line": 69
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "SentenceTransformer",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/log_config.py",
+      "purpose": "Install file/console logging handlers for research utilities",
+      "feature": "phi-research",
+      "dependencies": [
+        "logging"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 628,
+      "sha256": "6eb7e8fd4da7739f188e0b9c846b50a2602c8015b611504d1e3bfdaca9418006",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 20,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py",
+      "purpose": "Randomly sample a chosen percentage of JSONL records",
+      "feature": "phi-research",
+      "dependencies": [
+        "argparse",
+        "json",
+        "random",
+        "tqdm"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1163,
+      "sha256": "791587d1126d4effb291e7abefabd1ce532ea3e5f89b8492cb799b40beecd3a0",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 50,
+      "definitions": [
+        {
+          "name": "main",
+          "line": 7,
+          "end_line": 24
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/train.py",
+      "purpose": "Fine-tune sentence-transformer ranker using triplet/contrastive losses and multiple datasets",
+      "feature": "phi-research",
+      "dependencies": [
+        "argparse",
+        "collections",
+        "datasets",
+        "json",
+        "log_config",
+        "random",
+        "sentence_transformers",
+        "sentence_transformers.losses",
+        "sentence_transformers.training_args",
+        "torch"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Permissive external-model code loading option; model identity/revision not pinned in archive.",
+        "Training work requires separately authorized data, resources and budget; not run."
+      ],
+      "bytes": 6361,
+      "sha256": "2893154c9c519cf3cfdceb4189cbab78a668d662827498877bed2bda3f67b84c",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 225,
+      "definitions": [
+        {
+          "name": "Range",
+          "line": 19,
+          "end_line": 28
+        },
+        {
+          "name": "parse_datasets",
+          "line": 31,
+          "end_line": 44
+        },
+        {
+          "name": "process_data",
+          "line": 47,
+          "end_line": 52
+        },
+        {
+          "name": "load_dataset",
+          "line": 55,
+          "end_line": 64
+        },
+        {
+          "name": "main",
+          "line": 67,
+          "end_line": 125
+        },
+        {
+          "name": "__init__",
+          "line": 20,
+          "end_line": 22
+        },
+        {
+          "name": "__eq__",
+          "line": 24,
+          "end_line": 25
+        },
+        {
+          "name": "__str__",
+          "line": 27,
+          "end_line": 28
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "SentenceTransformer",
+          "line": 85
+        },
+        {
+          "name": "trainer.train",
+          "line": 125
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+      "purpose": "Parse AtCoder samples and score generated Python via host subprocesses",
+      "feature": "phi-research",
+      "dependencies": [
+        "log_config",
+        "multiprocessing",
+        "subprocess",
+        "tempfile",
+        "time",
+        "tqdm",
+        "typing",
+        "utils"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Generated-code execution/shell/host-process pathways; incompatible with application trust boundary without replacement by isolated judge."
+      ],
+      "bytes": 5020,
+      "sha256": "2208031441ddc0d457db56863275de4e992439cbfb0bb94bb96d2d74833e4f50",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 157,
+      "definitions": [
+        {
+          "name": "process_sample",
+          "line": 12,
+          "end_line": 22
+        },
+        {
+          "name": "get_atcoder_problems_tests",
+          "line": 25,
+          "end_line": 66
+        },
+        {
+          "name": "run_atcoder_test",
+          "line": 69,
+          "end_line": 106
+        },
+        {
+          "name": "run_atcoder_tests",
+          "line": 109,
+          "end_line": 157
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "subprocess.Popen",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py",
+      "purpose": "Parse Codeforces samples and score generated Python via host subprocesses",
+      "feature": "phi-research",
+      "dependencies": [
+        "log_config",
+        "multiprocessing",
+        "subprocess",
+        "tempfile",
+        "time",
+        "tqdm",
+        "typing",
+        "utils"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Generated-code execution/shell/host-process pathways; incompatible with application trust boundary without replacement by isolated judge."
+      ],
+      "bytes": 5061,
+      "sha256": "826a1a44d8b7c54b0fb58f9c196582ad91cebb9bff5bfbaf4f3e85576c5aa110",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 160,
+      "definitions": [
+        {
+          "name": "process_sample",
+          "line": 12,
+          "end_line": 27
+        },
+        {
+          "name": "get_codeforces_problems_tests",
+          "line": 30,
+          "end_line": 69
+        },
+        {
+          "name": "run_codeforces_test",
+          "line": 72,
+          "end_line": 109
+        },
+        {
+          "name": "run_codeforces_tests",
+          "line": 112,
+          "end_line": 160
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "subprocess.Popen",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py",
+      "purpose": "Interactive curses viewer/generation/save controls for ranked code candidates",
+      "feature": "phi-research",
+      "dependencies": [
+        "curses",
+        "json",
+        "sys",
+        "terminal",
+        "time",
+        "utils"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 13792,
+      "sha256": "ec8dfe4b243dcb374b3b538ce4091d76e90596044c27a38c8d4b9af41c23341a",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 426,
+      "definitions": [
+        {
+          "name": "generate_solutions",
+          "line": 16,
+          "end_line": 37
+        },
+        {
+          "name": "show_save_solutions_dialog",
+          "line": 40,
+          "end_line": 123
+        },
+        {
+          "name": "show_change_num_solutions_dialog",
+          "line": 126,
+          "end_line": 221
+        },
+        {
+          "name": "draw_box_content",
+          "line": 225,
+          "end_line": 261
+        },
+        {
+          "name": "draw_screen",
+          "line": 264,
+          "end_line": 316
+        },
+        {
+          "name": "main",
+          "line": 319,
+          "end_line": 387
+        },
+        {
+          "name": "build_curses_ui",
+          "line": 390,
+          "end_line": 426
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt",
+      "purpose": "Python standard-input program generation prompt template",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2181,
+      "sha256": "b244bb6863a4b0380135d5f0c551e05a421a8beee87dcc56a3bf2f7dc26e450c",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+      "purpose": "Parse LeetCode examples and score generated Solution classes through exec in multiprocessing",
+      "feature": "phi-research",
+      "dependencies": [
+        "ast",
+        "log_config",
+        "multiprocessing",
+        "re",
+        "time",
+        "tqdm",
+        "typing",
+        "utils"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Generated-code execution/shell/host-process pathways; incompatible with application trust boundary without replacement by isolated judge."
+      ],
+      "bytes": 5906,
+      "sha256": "0c134f89009060bf39a765a7d3b8d8916ee57f78c0054712bc765de2b5076c13",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 176,
+      "definitions": [
+        {
+          "name": "get_leetcode_problem_tests",
+          "line": 14,
+          "end_line": 73
+        },
+        {
+          "name": "run_leetcode_test",
+          "line": 76,
+          "end_line": 123
+        },
+        {
+          "name": "run_leetcode_tests",
+          "line": 126,
+          "end_line": 176
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "exec",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt",
+      "purpose": "Python Solution-class generation prompt template with optional sortedcontainers",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 1990,
+      "sha256": "4c884e7e1feea744460052135e596c926b63fbfed1fc4aae0f9968cca8442a1d",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/log_config.py",
+      "purpose": "Install file/console logging handlers for research solver",
+      "feature": "phi-research",
+      "dependencies": [
+        "logging"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 628,
+      "sha256": "6eb7e8fd4da7739f188e0b9c846b50a2602c8015b611504d1e3bfdaca9418006",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 20,
+      "definitions": []
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/main.py",
+      "purpose": "Configure local-model endpoint/ranker/site/interface and launch solver UI/CLI",
+      "feature": "phi-research",
+      "dependencies": [
+        "argparse",
+        "atcoder",
+        "codeforces",
+        "curses_ui",
+        "leetcode",
+        "log_config",
+        "openai",
+        "os",
+        "sentence_transformers",
+        "sys",
+        "terminal",
+        "torch",
+        "utils",
+        "web_ui"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Permissive external-model code loading option; model identity/revision not pinned in archive."
+      ],
+      "bytes": 6279,
+      "sha256": "1f654fdaf86183412c0141a8c4534391f7ea67f76f190f26a582da8c7e5f552b",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 212,
+      "definitions": [
+        {
+          "name": "check_positive",
+          "line": 18,
+          "end_line": 25
+        }
+      ],
+      "sensitive_calls": [
+        {
+          "name": "SentenceTransformer",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/requirements.txt",
+      "purpose": "Archived research dependency declarations",
+      "feature": "phi-research",
+      "dependencies": [
+        "gradio==5.49.1",
+        "transformers==4.49.0",
+        "sentence-transformers==5.1.1",
+        "sortedcontainers",
+        "openai==2.5.0"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Not the application lockfile; unpinned/transitive gaps and Python compatibility require independent resolution."
+      ],
+      "bytes": 96,
+      "sha256": "39e1e5f86ecdf224adbf02c6b8381c55917f4e4b965dff13dc3c93d09d4d8b48",
+      "inspection": "Full text decoded; purpose, instructions, permissions/dependency declarations and byte-pattern scan reviewed"
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/terminal.py",
+      "purpose": "Generate multiple candidates, run sample tests, embed/rank and sort by pass count then similarity",
+      "feature": "phi-research",
+      "dependencies": [
+        "log_config",
+        "tqdm",
+        "utils"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 3248,
+      "sha256": "606c0a7325e06f9892e8e6cf32a39fd775deaddb9e7967e334a60c51973c1f63",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 90,
+      "definitions": [
+        {
+          "name": "run_terminal_mode",
+          "line": 6,
+          "end_line": 90
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/utils.py",
+      "purpose": "Request compatible chat completions and save candidate JSONL output",
+      "feature": "phi-research",
+      "dependencies": [
+        "json",
+        "log_config",
+        "openai",
+        "typing"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 2890,
+      "sha256": "a8a8052c45dfa24b932bf72eca0cdd6d1e4aa1191ad34b3fdc4037e7b2f820ae",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 79,
+      "definitions": [
+        {
+          "name": "get_completions_from_prompt",
+          "line": 11,
+          "end_line": 68
+        },
+        {
+          "name": "store_solutions",
+          "line": 71,
+          "end_line": 79
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/web_ui.py",
+      "purpose": "Gradio interface for generation, evidence display and candidate navigation",
+      "feature": "phi-research",
+      "dependencies": [
+        "gradio",
+        "terminal",
+        "utils"
+      ],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [],
+      "bytes": 6390,
+      "sha256": "d40c7a2a93f371756af2acc5d997e1cecd231b8d35462a189eb30e017b8ec78f",
+      "inspection": "Entire file decoded and parsed as Python AST; imports, definitions, control flow and sensitive calls inspected; long prompt constants structurally scanned, not empirically evaluated.",
+      "lines": 193,
+      "definitions": [
+        {
+          "name": "generate_solutions",
+          "line": 11,
+          "end_line": 42
+        },
+        {
+          "name": "change_solution",
+          "line": 45,
+          "end_line": 81
+        },
+        {
+          "name": "build_web_ui",
+          "line": 85,
+          "end_line": 193
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/terminal_mode.png",
+      "purpose": "Research UI screenshot",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 718796,
+      "sha256": "bd44f1018f12b2c0386ba57e01b5f0caebc0ba583810ed03250b99fe158ef65f",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 1890,
+        "height": 1012,
+        "chunks": 3
+      }
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/webui.png",
+      "purpose": "Research UI screenshot",
+      "feature": "phi-research",
+      "dependencies": [],
+      "active": false,
+      "status": "preserved reference; not installed or executed",
+      "risks": [
+        "Figure contents are upstream claims/screenshots, not application validation evidence."
+      ],
+      "bytes": 562377,
+      "sha256": "b5af382a7d32458430e7bab55bf0e3e0cf446ec6163e47b904bfb3c51a41a975",
+      "inspection": "PNG signature, dimensions, complete chunk boundaries, CRCs and SHA-256 checked; image pixels/claims not visually reviewed.",
+      "image": {
+        "width": 2408,
+        "height": 3582,
+        "chunks": 71
+      }
+    },
+    {
+      "path": "AnalyseFuture/manifest.json",
+      "purpose": "Original tracked-path inventory, archive/member SHA-256 hashes and preserved destinations",
+      "feature": "preservation-integrity",
+      "dependencies": [
+        "scripts/verify_preserved_archives.py",
+        "both supplied ZIPs"
+      ],
+      "active": true,
+      "status": "used by preservation verifier and CI",
+      "risks": [],
+      "bytes": 61949,
+      "sha256": "092b5d22805ff4f15ee0767c7bccd0a5955f3312f7369de3c7bdd15b1fb7fe1b",
+      "inspection": "Whole JSON parsed and structure inspected",
+      "json": {
+        "type": "dict",
+        "top_level_items": 7,
+        "original_files": 109,
+        "archive_members": 122
+      }
+    }
+  ],
+  "features": [
+    {
+      "name": "Research provider adapters",
+      "status": "archived, unexecuted; static defects/dependency gaps",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/models/"
+      ],
+      "purpose": "OpenAI/Azure, OpenRouter/Anthropic, Gemini and Groq generation with accounting",
+      "missing": "Active permissions, quotas, schema enforcement, pinned deps, tests, reviewed privacy and deadlines",
+      "consolidation": "Retain current authored backend; a future single provider-neutral adapter should be original/reviewed, not factory transplant."
+    },
+    {
+      "name": "Research prompting strategies",
+      "status": "archived, no performance validation",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/"
+      ],
+      "purpose": "Direct, few-shot reasoning, analogical, self-planning, MapCoder and CodeSIM with ablations",
+      "missing": "Held-out authorized evaluation and reproducible cost/budget tests",
+      "consolidation": "Variants are purposeful research ablations, not competing active product implementations; preserve all."
+    },
+    {
+      "name": "Research benchmark adapters and evaluation",
+      "status": "archived; unsafe host/external execution paths",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/",
+        "AnalyseFuture/extracted/CodeGenerator-master/data/"
+      ],
+      "purpose": "Normalize benchmark tasks and run functional or standard-input tests",
+      "missing": "Safe execution contract, rights review, some referenced data files/external service",
+      "consolidation": "Do not merge into active judge. Future adapter can map authorized tasks to existing API/worker boundaries."
+    },
+    {
+      "name": "Research result accounting and resume",
+      "status": "archived, untested",
+      "files": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/results/",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/"
+      ],
+      "purpose": "JSONL continuation, token/API timing summaries, extended and EvalPlus outputs",
+      "missing": "Public output policy, fixed logging privacy and tests",
+      "consolidation": "Preserve as research reference; active submission history has different ownership and reliability duties."
+    },
+    {
+      "name": "Research multi-candidate sample/ranker pipeline",
+      "status": "archived, unexecuted; host execution unsuitable",
+      "files": [
+        "AnalyseFuture/extracted/phi-code-main/solver/terminal.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/utils.py"
+      ],
+      "purpose": "Generate diverse Python candidates, sample-test, embed and rank by test passes then similarity",
+      "missing": "Reviewed model endpoint, immutable evaluation tasks, budgets, safe judge adapter and contamination controls",
+      "consolidation": "Candidate-ranking concept complements CodeSIM planning; no compatible drop-in active code merge."
+    },
+    {
+      "name": "Research solver interfaces",
+      "status": "archived, known static edge cases",
+      "files": [
+        "AnalyseFuture/extracted/phi-code-main/solver/main.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/web_ui.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py"
+      ],
+      "purpose": "CLI, curses and Gradio navigation of generated candidates",
+      "missing": "Product identity/ownership/quotas, safe execution and integration tests",
+      "consolidation": "Keep existing Next practice UI; these alternative standalone UIs are preserved, not activated."
+    },
+    {
+      "name": "Research ranker preparation and fine-tuning",
+      "status": "archived, missing five LFS datasets and unexecuted training",
+      "files": [
+        "AnalyseFuture/extracted/phi-code-main/ranker/",
+        "AnalyseFuture/extracted/phi-code-main/datasets/"
+      ],
+      "purpose": "Token-length filtering, random subset generation, multi-dataset triplet/contrastive training",
+      "missing": "Rights-approved full datasets, deterministic splits/seeds, approved external compute and evaluations",
+      "consolidation": "Future isolated ML workflow only after baseline shows value; do not add to runtime or CI."
+    },
+    {
+      "name": "Preservation integrity",
+      "status": "active repository tooling; manifest independently verified",
+      "files": [
+        "AnalyseFuture/manifest.json",
+        "AnalyseFuture/.gitignore",
+        "AnalyseFuture/.gitattributes",
+        "AnalyseFuture/README.md",
+        "scripts/verify_preserved_archives.py"
+      ],
+      "purpose": "Retain original evidence and all extracted byte contents outside application",
+      "missing": "No claim that preservation proves code safe or licensed",
+      "consolidation": "One canonical byte manifest; root recovery reports should refer to it."
+    }
+  ],
+  "security_findings": [
+    {
+      "id": "ARCH-EXEC-1",
+      "classification": "confirmed inactive-code risk",
+      "severity_if_adopted": "critical",
+      "evidence": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py:21",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py:42"
+      ],
+      "finding": "Functional evaluator runs generated code in host globals using exec through a thread. Timeout cannot isolate or terminate arbitrary host effects.",
+      "action": "Keep inactive; replace execution adapter with existing gVisor judge before any future integration."
+    },
+    {
+      "id": "ARCH-EXEC-2",
+      "classification": "confirmed inactive-code risk",
+      "severity_if_adopted": "critical",
+      "evidence": [
+        "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py:90",
+        "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py:87",
+        "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py:90"
+      ],
+      "finding": "Generated code uses normal multiprocessing exec or Python host subprocesses; no application sandbox boundary, no credential/network separation. Parent process termination is not descendant cleanup.",
+      "action": "Preserve only; use isolated runner, bounded output/resource controls and cleanup on future adoption."
+    },
+    {
+      "id": "ARCH-SUPPLY-1",
+      "classification": "confirmed permissive option; exploitation untested",
+      "severity_if_adopted": "high",
+      "evidence": [
+        "AnalyseFuture/extracted/phi-code-main/solver/main.py:164",
+        "AnalyseFuture/extracted/phi-code-main/ranker/train.py:86",
+        "AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py:13",
+        "AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py:13"
+      ],
+      "finding": "Selected external ranker/model loaded with trust_remote_code=True without a pinned revision. Effect depends on model/library; no model was loaded.",
+      "action": "Review selected artifact/code, pin identity and integrity, avoid permissive remote code when possible."
+    },
+    {
+      "id": "ARCH-NET-1",
+      "classification": "confirmed inactive reliability/privacy concern",
+      "severity_if_adopted": "medium",
+      "evidence": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py:102",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py:172"
+      ],
+      "finding": "Raw HTTP requests have no explicit timeout. Source/tests/prompts are sent to configured local execution/model destinations. Request/result schemas and permissions differ from current API.",
+      "action": "Use trusted destination configuration, explicit deadlines, bounded payloads, privacy policy and isolated execution contracts."
+    },
+    {
+      "id": "ARCH-SHELL-1",
+      "classification": "confirmed inactive-code risk",
+      "severity_if_adopted": "high",
+      "evidence": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py:14",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py:28"
+      ],
+      "finding": "shell=True command construction and developer-specific host Docker bind mounts; container isolation is not the current reviewed judge.",
+      "action": "Do not enable; replace with bounded argument-array invocation against approved runtime if needed."
+    },
+    {
+      "id": "ARCH-DEFECT-1",
+      "classification": "confirmed static source defect; not runtime reproduced",
+      "evidence": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py:69"
+      ],
+      "finding": "Gemini.prompt result metadata refers to undefined local/global model_name instead of self.model_name.",
+      "action": "Archive remains unchanged; fix and test before adopting adapter."
+    },
+    {
+      "id": "ARCH-DEFECT-2",
+      "classification": "confirmed static edge-case defect; not runtime reproduced",
+      "evidence": [
+        "AnalyseFuture/extracted/phi-code-main/solver/main.py:116",
+        "AnalyseFuture/extracted/phi-code-main/solver/web_ui.py:62"
+      ],
+      "finding": "Optional statement can be None before os.path.exists; empty solution navigation returns four values while caller unpacks five.",
+      "action": "Do not represent archive UI as active functioning product. Fix only if future adoption requires it."
+    },
+    {
+      "id": "ARCH-LFS-1",
+      "classification": "confirmed missing inputs",
+      "evidence": [
+        "AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl",
+        "AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl",
+        "AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl",
+        "AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl",
+        "AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl"
+      ],
+      "finding": "Five supplied dataset members are LFS pointers. Underlying objects absent; ZIP extraction cannot recreate them.",
+      "action": "Preserve pointer bytes; retrieve only with valid rights and approved need."
+    },
+    {
+      "id": "ARCH-DEPS-1",
+      "classification": "confirmed reproducibility gap",
+      "evidence": [
+        "AnalyseFuture/extracted/CodeGenerator-master/requirements.txt",
+        "AnalyseFuture/extracted/phi-code-main/solver/requirements.txt"
+      ],
+      "finding": "CodeGenerator declares literal pyyml while source imports yaml; providers and training tools have incomplete/unpinned dependency inputs; code suggests Python 3.11, current API uses 3.12.",
+      "action": "Never install archive requirements into active environment; validate isolated pinned dependency plan before adoption."
+    },
+    {
+      "id": "ARCH-RIGHTS-1",
+      "classification": "unresolved rights and provenance",
+      "evidence": [
+        "AnalyseFuture/extracted/CodeGenerator-master/data/",
+        "AnalyseFuture/extracted/phi-code-main/contests_results/",
+        "AnalyseFuture/extracted/phi-code-main/datasets/"
+      ],
+      "finding": "Source licenses are present, but no completed separate dataset/problem/model permissions review. Upstream benchmark/contest claims not reproduced.",
+      "action": "Keep as inactive evidence, exclude from product content/training until reviewed."
+    }
+  ],
+  "exact_duplicates": [
+    {
+      "paths": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py"
+      ],
+      "reason": "empty package markers",
+      "action": "preserve originals; no active application duplication to merge"
+    },
+    {
+      "paths": [
+        "AnalyseFuture/extracted/phi-code-main/ranker/log_config.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/log_config.py"
+      ],
+      "reason": "identical archival logging helpers",
+      "action": "preserve originals; no active application duplication to merge"
+    }
+  ],
+  "conceptual_duplicates": [
+    {
+      "paths": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/"
+      ],
+      "relationship": "Shared helper/control-loop code with intentional research ablations; unique stage differences preserved."
+    },
+    {
+      "paths": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py"
+      ],
+      "relationship": "Similar fenced-code parsers; utils additionally removes think blocks, language-branch differences; no active application duplication."
+    },
+    {
+      "paths": [
+        "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+        "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py"
+      ],
+      "relationship": "Nearly same subprocess scoring control but distinct statement parsers; preserve as inactive references."
+    },
+    {
+      "paths": [
+        "AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py",
+        "AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py"
+      ],
+      "relationship": "Repeated JSONL helpers in stand-alone conversion scripts; future reuse would share a reviewed serialization module, not import side-effectful converters."
+    }
+  ],
+  "preservation_checks": [
+    {
+      "archive": "AnalyseFuture/archives/CodeGenerator-master.zip",
+      "members_matched": 73,
+      "hash": "0aaf432271c1381e11eaaf96dcfe10e3c7031f01c49e6c359a9b4fda67646ddb"
+    },
+    {
+      "archive": "AnalyseFuture/archives/phi-code-main.zip",
+      "members_matched": 49,
+      "hash": "89aab1ad1cd2b9be99713563a0929df92e91ddaeb04e656b28ce4d558fb17582"
+    }
+  ],
+  "credential_scan": {
+    "patterns": [
+      "private_key",
+      "github_token",
+      "provider_token",
+      "credential_url"
+    ],
+    "hits": [],
+    "claim": "No configured token/private-key/URL-userinfo pattern hit in these bytes is not proof that credentials never existed or cannot use other forms. Example key fields inspected empty."
+  },
+  "ast_warnings": [
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py",
+      "line": 162,
+      "category": "SyntaxWarning"
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py",
+      "line": 309,
+      "category": "SyntaxWarning"
+    }
+  ],
+  "data_stats": [
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl",
+      "records": 150,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 150
+      },
+      "schemas": [
+        {
+          "fields": [
+            "description",
+            "difficulty",
+            "id",
+            "name",
+            "sample_io",
+            "starter_code",
+            "test_list"
+          ],
+          "records": 150
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl",
+      "records": 164,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 164
+      },
+      "schemas": [
+        {
+          "fields": [
+            "canonical_solution",
+            "entry_point",
+            "prompt",
+            "sample_io",
+            "task_id",
+            "test"
+          ],
+          "records": 164
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl",
+      "records": 164,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 164
+      },
+      "schemas": [
+        {
+          "fields": [
+            "canonical_solution",
+            "entry_point",
+            "prompt",
+            "task_id",
+            "test",
+            "test_case_list"
+          ],
+          "records": 164
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl",
+      "records": 164,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 164
+      },
+      "schemas": [
+        {
+          "fields": [
+            "canonical_solution",
+            "entry_point",
+            "prompt",
+            "sample_io",
+            "task_id",
+            "test"
+          ],
+          "records": 164
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl",
+      "records": 974,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 974
+      },
+      "schemas": [
+        {
+          "fields": [
+            "challenge_test_list",
+            "code",
+            "task_id",
+            "test_list",
+            "test_setup_code",
+            "text"
+          ],
+          "records": 974
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl",
+      "records": 974,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 974
+      },
+      "schemas": [
+        {
+          "fields": [
+            "challenge_test_list",
+            "code",
+            "entry_point",
+            "task_id",
+            "test_list",
+            "test_setup_code",
+            "text"
+          ],
+          "records": 974
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl",
+      "records": 397,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 397
+      },
+      "schemas": [
+        {
+          "fields": [
+            "doctests",
+            "entry_point",
+            "language",
+            "name",
+            "original",
+            "prompt",
+            "prompt_terminology",
+            "sample_io",
+            "stop_tokens",
+            "test"
+          ],
+          "records": 397
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl",
+      "records": 7635,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 7635
+      },
+      "schemas": [
+        {
+          "fields": [
+            "created_at",
+            "description",
+            "difficulty",
+            "input_from",
+            "input_spec",
+            "memory_limit",
+            "notes",
+            "output_spec",
+            "output_to",
+            "sample_inputs",
+            "sample_outputs",
+            "src_uid",
+            "tags",
+            "time_limit"
+          ],
+          "records": 7635
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl",
+      "records": 106,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 106
+      },
+      "schemas": [
+        {
+          "fields": [
+            "description",
+            "difficulty",
+            "input_from",
+            "input_spec",
+            "memory_limit",
+            "notes",
+            "output_spec",
+            "output_to",
+            "sample_inputs",
+            "sample_outputs",
+            "src_uid",
+            "tags",
+            "time_limit"
+          ],
+          "records": 106
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl",
+      "records": 30,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 30
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 30
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl",
+      "records": 16,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 16
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 16
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl",
+      "records": 41,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 41
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 41
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl",
+      "records": 37,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 37
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 37
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl",
+      "records": 30,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 30
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 30
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl",
+      "records": 30,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 30
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 30
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl",
+      "records": 26,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 26
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 26
+        }
+      ]
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl",
+      "records": 26,
+      "invalid_lines": [],
+      "record_types": {
+        "dict": 26
+      },
+      "schemas": [
+        {
+          "fields": [
+            "code",
+            "score",
+            "tests_passed"
+          ],
+          "records": 26
+        }
+      ]
+    }
+  ],
+  "sensitive_calls": [
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py",
+      "name": "self._session.get",
+      "line": 62
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py",
+      "name": "self._session.post",
+      "line": 102
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py",
+      "name": "function_with_timeout",
+      "line": 48
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py",
+      "name": "function_with_timeout",
+      "line": 69
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py",
+      "name": "function_with_timeout",
+      "line": 23
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py",
+      "name": "requests.post",
+      "line": 172
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py",
+      "name": "subprocess.run",
+      "line": 14
+    },
+    {
+      "path": "AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py",
+      "name": "subprocess.run",
+      "line": 28
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py",
+      "name": "SentenceTransformer",
+      "line": 13
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py",
+      "name": "SentenceTransformer",
+      "line": 13
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/train.py",
+      "name": "SentenceTransformer",
+      "line": 85
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/ranker/train.py",
+      "name": "trainer.train",
+      "line": 125
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/atcoder.py",
+      "name": "subprocess.Popen",
+      "line": 87
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/codeforces.py",
+      "name": "subprocess.Popen",
+      "line": 90
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/leetcode.py",
+      "name": "exec",
+      "line": 90
+    },
+    {
+      "path": "AnalyseFuture/extracted/phi-code-main/solver/main.py",
+      "name": "SentenceTransformer",
+      "line": 163
+    }
+  ],
+  "inspection_limits": [
+    "No archived source, model download, generated candidate program, external request or training command executed.",
+    "All Python source parsed; control flow/imports/sensitive pathways manually inspected, long prompt constants scanned structurally rather than verifying every educational/research claim.",
+    "All JSON/JSONL bytes parsed for valid structure/schema and sensitive markers. Embedded benchmark/candidate solution semantics and original statement rights were not individually established.",
+    "Seven PNGs were inspected for full binary structure/CRC/dimensions/hash only; pixels and depicted claims were not visually evaluated.",
+    "Source licenses read; separate dependency, dataset, contest-platform and model permissions not legally adjudicated.",
+    "Five LFS object contents are absent and could not be inspected.",
+    "No active application code compatibility or security claim follows from static archive inspection."
+  ]
+}

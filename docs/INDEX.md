@@ -8,6 +8,12 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 | [Detailed project idea (TXT)](../PROJECT_IDEA.txt) | Product vision, AI-era features, staged horizons, responsibilities and limits |
 | [Repository structure and review](REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |
 | [Preserved future-analysis material](../AnalyseFuture/README.md) | Original uploads, complete extraction and reuse boundaries |
+| [Current recovery audit](../AnalyseFuture/REPOSITORY_AUDIT.txt) | Complete review scope, discovered branch work and repairs |
+| [Complete feature inventory](../AnalyseFuture/FEATURE_INVENTORY.txt) | Evidence and ownership for all 42 feature records |
+| [Security findings](../AnalyseFuture/SECURITY_AUDIT.txt) | Confirmed cleanup weakness, remediation and unresolved risks |
+| [Current validation report](../AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt) | Executed outcomes, expected failures and unrun checks |
+| [Canonical future vision (TXT)](../AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | Feasibility, priorities, resources and conditional future horizons |
+| [Next developer instructions](../AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt) | Continuity, commands, evidence and next priorities |
 | [Development](DEVELOPMENT.md) | Tested setup, service commands and verification |
 | [Foundation decision](adr/0001-practice-foundation.md) | Initial scope, dependencies and safety boundaries |
 | [Accounts and isolated submissions](adr/0002-authenticated-isolated-submissions.md) | Upstream evaluation, identity boundary and gVisor integration |

@@ -1,0 +1,1286 @@
+{
+  "scope": "Every tracked services/api file; full static source/tests/config read and full lockfile parse.",
+  "reviewed_commit": "a3c94606ad352b5236484d86f4be15f2f350a80d",
+  "method": "Read-only static inspection and structural parsing. No repository application/archive code, tests, builds, installers or network calls executed. Only /tmp/solver-api-review.json written.",
+  "file_count": 18,
+  "files": [
+    {
+      "path": "services/api/.dockerignore",
+      "purpose": "Exclude local environments, caches, tests, private local state and env files from API image build context.",
+      "feature": "container",
+      "dependencies": [
+        "Docker build context"
+      ],
+      "active": true,
+      "status": "active configuration",
+      "risks": [],
+      "bytes": 75,
+      "sha256": "3a1475aa140c2eafd930146bbcff5788241387f856614efbbf0029e23e79d25d",
+      "inspection": "full source/config read; lockfile parsed structurally"
+    },
+    {
+      "path": "services/api/.python-version",
+      "purpose": "Select the API project Python 3.12 interpreter family.",
+      "feature": "toolchain",
+      "dependencies": [
+        "uv",
+        "Python 3.12"
+      ],
+      "active": true,
+      "status": "active configuration",
+      "risks": [
+        "DEP-API-01"
+      ],
+      "bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "inspection": "full source/config read; lockfile parsed structurally"
+    },
+    {
+      "path": "services/api/Dockerfile",
+      "purpose": "Build nonroot FastAPI/Uvicorn runtime with frozen production dependencies and optional build-time managed CA.",
+      "feature": "container",
+      "dependencies": [
+        "python:3.12-slim",
+        "uv 0.13.6",
+        "pyproject.toml",
+        "uv.lock",
+        "solver_api"
+      ],
+      "active": true,
+      "status": "active container build",
+      "risks": [
+        "DEP-API-01"
+      ],
+      "bytes": 903,
+      "sha256": "b81066ab0a61ee5f4f2df5a4e73aee3d8e0fb7220ce0669b8b1351318553add8",
+      "inspection": "full source/config read; lockfile parsed structurally"
+    },
+    {
+      "path": "services/api/pyproject.toml",
+      "purpose": "Declare five pinned runtime packages, pytest/Ruff dev packages and test/lint settings.",
+      "feature": "dependency management",
+      "dependencies": [
+        "Python >=3.12,<3.13",
+        "FastAPI",
+        "Uvicorn",
+        "PyJWT",
+        "cryptography",
+        "HTTPX",
+        "pytest",
+        "Ruff"
+      ],
+      "active": true,
+      "status": "active dependency declaration",
+      "risks": [],
+      "bytes": 546,
+      "sha256": "404f76273464a83b0460976fb853f7a6ac0ff87fe8ca0b6e0dd2a68a6065b39e",
+      "inspection": "full source/config read; lockfile parsed structurally"
+    },
+    {
+      "path": "services/api/uv.lock",
+      "purpose": "Lock Python package resolution and SHA-256-verified distribution artifacts.",
+      "feature": "dependency management",
+      "dependencies": [
+        "PyPI",
+        "files.pythonhosted.org",
+        "uv"
+      ],
+      "active": true,
+      "status": "active frozen lockfile",
+      "risks": [],
+      "bytes": 48700,
+      "sha256": "656a0f13125f8040e31713ebc4d7ee5b68e516e88772aba630b24bd764ba94f3",
+      "inspection": "full source/config read; lockfile parsed structurally"
+    },
+    {
+      "path": "services/api/solver_api/__init__.py",
+      "purpose": "Package marker stating that learner programs are never executed by this service.",
+      "feature": "service boundary",
+      "dependencies": [],
+      "active": true,
+      "status": "active package marker",
+      "risks": [],
+      "bytes": 78,
+      "sha256": "dd4d1de440d9556598d4bbb70c51a79d91decc0e6c7097caccfce66fba0e0522",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/auth.py",
+      "purpose": "Verify bounded Bearer JWTs against fixed configured Ed25519 JWKS with issuer, audience, subject, use, expiry and refresh controls.",
+      "feature": "identity",
+      "dependencies": [
+        "FastAPI Request",
+        "HTTPX",
+        "PyJWT",
+        "cryptography via Ed25519",
+        "solver_api.errors",
+        "configured Better Auth JWKS"
+      ],
+      "active": true,
+      "status": "implemented",
+      "risks": [
+        "SEC-API-01",
+        "SEC-API-05",
+        "API-GAP-01"
+      ],
+      "bytes": 6911,
+      "sha256": "292f29cdca760af08dde3bec594fcbb4f04c8b775f185e2f3c70d37ad999c6e1",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "asyncio",
+        "dataclasses",
+        "fastapi",
+        "httpx",
+        "json",
+        "jwt",
+        "os",
+        "re",
+        "solver_api.errors",
+        "time",
+        "urllib.parse"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/body_limit.py",
+      "purpose": "ASGI middleware bounding declared/streamed HTTP request bytes to 128 KiB and receive duration to ten seconds.",
+      "feature": "request resource limits",
+      "dependencies": [
+        "asyncio",
+        "Starlette ASGI/responses"
+      ],
+      "active": true,
+      "status": "implemented",
+      "risks": [
+        "SEC-API-03"
+      ],
+      "bytes": 2753,
+      "sha256": "58aa67101f282aa2b8d9019cb26498717fd1dccfcfc9c59601be196cc695bd9b",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "asyncio",
+        "starlette.responses",
+        "starlette.types",
+        "uuid"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/catalog.py",
+      "purpose": "Define three original public exercises including statements, two samples, Python/C++ starter templates and three authored hints.",
+      "feature": "public catalog",
+      "dependencies": [
+        "solver_api.models"
+      ],
+      "active": true,
+      "status": "implemented; original seed content",
+      "risks": [],
+      "bytes": 8345,
+      "sha256": "4c86099a799ef53901aae508206b0b7ad3f60fbf4e388f989344334e6e0caebd",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "solver_api.models"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/errors.py",
+      "purpose": "Represent deliberately public status/code/message/header errors without exposing internal details.",
+      "feature": "safe errors",
+      "dependencies": [
+        "Python Exception"
+      ],
+      "active": true,
+      "status": "implemented",
+      "risks": [],
+      "bytes": 427,
+      "sha256": "97adb204a96154ca0dc56e09d5c3a6efc19fca718c57a66baa888ac08da77ae3",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/hints.py",
+      "purpose": "Strict versioned authenticated hint contracts, public-only model boundary, truthful provenance, authored backend and timeout/error handling.",
+      "feature": "offline authored hints",
+      "dependencies": [
+        "asyncio",
+        "Pydantic",
+        "solver_api.models",
+        "solver_api.errors",
+        "solver_api.catalog"
+      ],
+      "active": true,
+      "status": "authored backend implemented; external model providers intentionally absent",
+      "risks": [
+        "SEC-API-03"
+      ],
+      "bytes": 4629,
+      "sha256": "17b91a41f7747da27e71d762bbd9fdbfc3c2229ffce87f918d6443467c7b1845",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "asyncio",
+        "os",
+        "pydantic",
+        "solver_api.catalog",
+        "solver_api.errors",
+        "solver_api.models",
+        "typing"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/main.py",
+      "purpose": "Compose FastAPI routes, request IDs/errors, public catalog, authenticated hints/history and worker-only control endpoints.",
+      "feature": "API routing",
+      "dependencies": [
+        "FastAPI",
+        "Starlette",
+        "solver_api.auth",
+        "solver_api.body_limit",
+        "solver_api.catalog",
+        "solver_api.errors",
+        "solver_api.hints",
+        "solver_api.models",
+        "solver_api.submissions"
+      ],
+      "active": true,
+      "status": "implemented",
+      "risks": [
+        "SEC-API-03",
+        "SEC-API-04",
+        "API-GAP-01"
+      ],
+      "bytes": 8204,
+      "sha256": "708645fa6303559d2d7c359185350c0f45b3b880ac092b6514fc00a7b8424981",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "fastapi",
+        "fastapi.exceptions",
+        "fastapi.responses",
+        "os",
+        "secrets",
+        "solver_api.auth",
+        "solver_api.body_limit",
+        "solver_api.catalog",
+        "solver_api.errors",
+        "solver_api.hints",
+        "solver_api.models",
+        "solver_api.submissions",
+        "starlette.exceptions",
+        "typing",
+        "uuid"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/models.py",
+      "purpose": "Immutable public catalog/summary/sample/starter/provenance/error response models.",
+      "feature": "public contracts",
+      "dependencies": [
+        "Pydantic"
+      ],
+      "active": true,
+      "status": "implemented",
+      "risks": [],
+      "bytes": 1133,
+      "sha256": "a469803c734dc4628bdd7f21759bfbf1d95d9c1bd822881462bb046fb74d0e2a",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "pydantic",
+        "typing"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/solver_api/submissions.py",
+      "purpose": "Persist owned SQLite submissions and source, enforce idempotency/quotas, advertise worker capabilities and issue/complete atomic expiring leases.",
+      "feature": "owned durable judge queue",
+      "dependencies": [
+        "sqlite3",
+        "Pydantic",
+        "hashlib",
+        "secrets",
+        "solver_api.errors",
+        "SOLVER_DB_PATH",
+        "JUDGE_WORKER_TOKEN"
+      ],
+      "active": true,
+      "status": "implemented",
+      "risks": [
+        "SEC-API-02",
+        "SEC-API-04",
+        "API-PERF-01"
+      ],
+      "bytes": 16979,
+      "sha256": "cec1065962fd73fe8a70ba52efb37efa136ab27b74f8dbb9fe26954faac0d766",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "collections.abc",
+        "contextlib",
+        "datetime",
+        "functools",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pydantic",
+        "secrets",
+        "solver_api.errors",
+        "sqlite3",
+        "time",
+        "typing",
+        "uuid"
+      ],
+      "test_functions": []
+    },
+    {
+      "path": "services/api/tests/test_api.py",
+      "purpose": "Exercise real routes, catalog filtering/pagination, data provenance, sample oracles, safe errors, authentication requirement and OpenAPI presence.",
+      "feature": "API regression tests",
+      "dependencies": [
+        "pytest",
+        "FastAPI TestClient",
+        "solver_api.main"
+      ],
+      "active": true,
+      "status": "existing test suite; inspected only in this review",
+      "risks": [],
+      "bytes": 7235,
+      "sha256": "83341f7f3a726e6996f1365d82886dd09a1d1a105904a4b5a54e03c189b2d2d5",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "fastapi.testclient",
+        "pytest",
+        "re",
+        "solver_api.main"
+      ],
+      "test_functions": [
+        "test_health_reports_service_and_correlation_id",
+        "test_catalog_returns_summaries_without_detail_or_private_data",
+        "test_filters_are_applied_to_real_catalog",
+        "test_pagination_counts_before_slicing",
+        "test_invalid_queries_have_stable_non_reflecting_errors",
+        "test_problem_detail_contains_readable_public_exercise",
+        "test_missing_problem_returns_useful_error",
+        "test_correlation_ids_are_generated_per_request",
+        "test_source_code_submission_requires_authentication",
+        "test_unexpected_errors_do_not_disclose_internal_details",
+        "test_original_samples_match_their_statements",
+        "test_openapi_documents_the_contract"
+      ]
+    },
+    {
+      "path": "services/api/tests/test_auth.py",
+      "purpose": "Exercise real Ed25519 JWTs and fixed JWKS logic: claims, header attacks, rotation, cache cooldown/failures and concurrency.",
+      "feature": "identity regression tests",
+      "dependencies": [
+        "pytest",
+        "PyJWT",
+        "cryptography",
+        "HTTPX",
+        "Starlette Request",
+        "solver_api.auth",
+        "solver_api.errors"
+      ],
+      "active": true,
+      "status": "existing test suite; inspected only in this review",
+      "risks": [
+        "TEST-GAP-01"
+      ],
+      "bytes": 8436,
+      "sha256": "22121e7410bc3ed0ad5eaee6a6b9257b37edb859cd454fb9f12ecafbbd4c9aaa",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "asyncio",
+        "cryptography.hazmat.primitives",
+        "cryptography.hazmat.primitives.asymmetric.ed25519",
+        "httpx",
+        "jwt",
+        "pytest",
+        "solver_api",
+        "solver_api.errors",
+        "starlette.requests",
+        "time"
+      ],
+      "test_functions": [
+        "test_valid_signature_resolves_immutable_id_and_reuses_fixed_jwks",
+        "test_identity_does_not_come_from_unverified_headers",
+        "test_duplicate_authorization_header_is_rejected",
+        "test_invalid_claims_are_rejected",
+        "test_required_claims_cannot_be_missing",
+        "test_forged_signature_cannot_impersonate_account",
+        "test_algorithm_is_fixed_before_any_key_fetch",
+        "test_token_headers_cannot_change_key_source_or_verification",
+        "test_unknown_key_ids_are_throttled_and_refresh_for_rotation",
+        "test_stale_keys_refresh_before_accepting_valid_signature",
+        "test_unreachable_jwks_fails_closed_with_retry_cooldown",
+        "test_invalid_or_unsupported_jwks_is_not_used",
+        "test_concurrent_authentication_shares_one_key_fetch"
+      ]
+    },
+    {
+      "path": "services/api/tests/test_hints.py",
+      "purpose": "Exercise authored hints, provenance, invalid/injected input, authentication, public-only context, size limits, provider failures and timeout.",
+      "feature": "offline hint regression tests",
+      "dependencies": [
+        "pytest",
+        "FastAPI TestClient",
+        "PyJWT",
+        "cryptography",
+        "solver_api.auth",
+        "solver_api.hints",
+        "solver_api.main"
+      ],
+      "active": true,
+      "status": "existing test suite; inspected only in this review",
+      "risks": [],
+      "bytes": 7930,
+      "sha256": "75e322bcd3f21623000e2688b2479ceb436627dc5b25b5cdd033aea6b12ea757",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "asyncio",
+        "cryptography.hazmat.primitives",
+        "cryptography.hazmat.primitives.asymmetric.ed25519",
+        "fastapi.testclient",
+        "jwt",
+        "pytest",
+        "solver_api",
+        "solver_api.main",
+        "time"
+      ],
+      "test_functions": [
+        "test_anonymous_and_forged_account_identity_are_rejected",
+        "test_authored_hints_are_available_and_never_labeled_ai",
+        "test_unknown_problem_does_not_return_any_hint",
+        "test_invalid_input_and_injection_are_rejected_before_backend",
+        "test_large_body_is_rejected_without_execution",
+        "test_unconfigured_provider_fails_closed_without_fake_inference",
+        "test_provider_failure_and_malformed_response_are_redacted",
+        "test_provider_timeout_is_bounded_and_does_not_expose_diagnostics",
+        "test_mock_label_and_public_only_context",
+        "test_openapi_exposes_versioned_hint_contract"
+      ]
+    },
+    {
+      "path": "services/api/tests/test_submissions.py",
+      "purpose": "Exercise persistence, ownership, source/body limits, idempotency, quotas, atomic leasing/completion, expiry and worker authentication.",
+      "feature": "queue and worker regression tests",
+      "dependencies": [
+        "pytest",
+        "FastAPI TestClient",
+        "PyJWT",
+        "cryptography",
+        "sqlite3",
+        "ThreadPoolExecutor",
+        "solver_api.auth",
+        "solver_api.main",
+        "solver_api.submissions"
+      ],
+      "active": true,
+      "status": "existing test suite; inspected only in this review",
+      "risks": [],
+      "bytes": 16037,
+      "sha256": "0775870c17838be18ea99355fbe41fd609fea0fadd9769ec3c53445342bdad07",
+      "inspection": "full source/config read; lockfile parsed structurally",
+      "declared_imports": [
+        "concurrent.futures",
+        "cryptography.hazmat.primitives",
+        "cryptography.hazmat.primitives.asymmetric.ed25519",
+        "fastapi.testclient",
+        "jwt",
+        "os",
+        "pytest",
+        "solver_api",
+        "solver_api.main",
+        "solver_api.submissions",
+        "sqlite3",
+        "time",
+        "uuid"
+      ],
+      "test_functions": [
+        "test_capabilities_are_fail_closed_until_current_worker",
+        "test_expired_heartbeat_and_unsupported_language_reject_new_work",
+        "test_history_and_source_require_verified_identity",
+        "test_creation_persistence_history_and_ownership",
+        "test_idempotency_retries_do_not_duplicate_or_require_online_worker",
+        "test_idempotency_scope_and_one_active_per_user",
+        "test_idempotency_key_is_required_and_bounded",
+        "test_source_and_payload_validation",
+        "test_missing_problem_is_not_queued",
+        "test_request_body_limit_is_enforced_for_declared_and_streamed_bodies",
+        "test_worker_control_requires_dedicated_secret",
+        "test_unreviewed_runtime_cannot_advertise_readiness",
+        "test_malformed_worker_headers_fail_closed_without_internal_error",
+        "test_only_one_worker_gets_each_lease_and_completion_is_one_shot",
+        "test_worker_verdicts_are_stored_with_safe_summaries",
+        "test_expired_lease_and_abandoned_queue_terminate_without_reexecution",
+        "test_rate_limit_persists_across_completed_jobs",
+        "test_global_queue_bound_and_pagination",
+        "test_concurrent_idempotent_creates_are_atomic",
+        "test_concurrent_workers_do_not_duplicate_a_job"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "id": "catalog",
+      "name": "Original public problem catalog",
+      "status": "implemented",
+      "active": true,
+      "entrypoints": [
+        "GET /api/v1/problems",
+        "GET /api/v1/problems/{slug}"
+      ],
+      "source_files": [
+        "services/api/solver_api/catalog.py",
+        "services/api/solver_api/models.py",
+        "services/api/solver_api/main.py"
+      ],
+      "behavior": "Three original tasks; case-folded search, difficulty/tag filters, bounded pagination, samples/starters/hints and provenance; no private grading data.",
+      "tests": [
+        "services/api/tests/test_api.py"
+      ],
+      "limits": "In-memory fixed seed catalog, not authoring/import/search infrastructure."
+    },
+    {
+      "id": "identity",
+      "name": "Fixed-JWKS account token verification",
+      "status": "implemented",
+      "active": true,
+      "entrypoints": [
+        "require_user dependency"
+      ],
+      "source_files": [
+        "services/api/solver_api/auth.py"
+      ],
+      "behavior": "Exactly one bounded Bearer header, fixed EdDSA/Ed25519 key source, no jku/x5u/crit redirection, bounded keys/body, cached rotation, strict issuer/audience/use/lifetime/subject.",
+      "tests": [
+        "services/api/tests/test_auth.py"
+      ],
+      "limits": "No API token revocation callback; valid issued tokens can survive web logout until their maximum five-minute expiry."
+    },
+    {
+      "id": "submissions",
+      "name": "Owned durable submissions and history",
+      "status": "implemented",
+      "active": true,
+      "entrypoints": [
+        "POST /api/v1/submissions",
+        "GET /api/v1/submissions",
+        "GET /api/v1/submissions/{job_id}"
+      ],
+      "source_files": [
+        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/main.py"
+      ],
+      "behavior": "SQLite WAL state, UUID idempotency scoped per user, payload conflict checks, 32 KiB UTF-8 source limit, one active attempt/account, ten attempts/minute/account, 100 active global queue bound, owned history/source access and generic verdict summaries.",
+      "tests": [
+        "services/api/tests/test_submissions.py"
+      ],
+      "limits": "Source never executes in API. Local persistence lacks production retention/encryption/backups/deletion. Expiration is lazy on queue/history operations."
+    },
+    {
+      "id": "worker-control",
+      "name": "Trusted judge worker protocol",
+      "status": "implemented",
+      "active": true,
+      "entrypoints": [
+        "POST /internal/judge/heartbeat",
+        "POST /internal/judge/lease",
+        "POST /internal/judge/jobs/{job_id}/complete",
+        "GET /api/v1/capabilities"
+      ],
+      "source_files": [
+        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/main.py"
+      ],
+      "behavior": "Dedicated bearer trust, runtime/language allowlist, current heartbeat requirement, transactionally exclusive leases, per-job random hashed lease tokens, expiry and one-shot bounded completion; public summaries ignore worker-controlled summary text.",
+      "tests": [
+        "services/api/tests/test_submissions.py"
+      ],
+      "limits": "API trusts authenticated controller preflight assertion; actual isolation is owned by services/judge, not attested by API itself."
+    },
+    {
+      "id": "hints",
+      "name": "Versioned offline authored hint contract",
+      "status": "implemented_authored_only",
+      "active": true,
+      "entrypoints": [
+        "POST /api/v1/hints"
+      ],
+      "source_files": [
+        "services/api/solver_api/hints.py",
+        "services/api/solver_api/main.py"
+      ],
+      "behavior": "Authenticated fixed-catalog requests with integer levels 1-3, extra fields forbidden, public-only future provider context, bounded response/provenance validation, three-second request timeout, safe failures.",
+      "tests": [
+        "services/api/tests/test_hints.py"
+      ],
+      "limits": "No live model, generated tutoring/solver loop or provider API key. Browser currently uses catalog-authored hints directly."
+    },
+    {
+      "id": "request-safety",
+      "name": "Bounded bodies and non-reflecting API errors",
+      "status": "implemented",
+      "active": true,
+      "entrypoints": [
+        "all HTTP routes"
+      ],
+      "source_files": [
+        "services/api/solver_api/body_limit.py",
+        "services/api/solver_api/errors.py",
+        "services/api/solver_api/main.py"
+      ],
+      "behavior": "128 KiB body cap, ten-second receive timeout, generated request IDs, nosniff and stable public 4xx/5xx payloads without reflecting private/internal text.",
+      "tests": [
+        "services/api/tests/test_api.py",
+        "services/api/tests/test_submissions.py",
+        "services/api/tests/test_hints.py"
+      ],
+      "limits": "No substitute for aggregate ingress limits or redacted operational observability."
+    },
+    {
+      "id": "runtime",
+      "name": "Locked Python API runtime and nonroot container",
+      "status": "implemented",
+      "active": true,
+      "entrypoints": [
+        "uv sync --project services/api --frozen",
+        "Docker API image"
+      ],
+      "source_files": [
+        "services/api/pyproject.toml",
+        "services/api/uv.lock",
+        "services/api/Dockerfile",
+        "services/api/.dockerignore",
+        "services/api/.python-version"
+      ],
+      "behavior": "Five exact runtime package pins, two exact dev tools, SHA-256 artifact lock, optional managed CA mounted at build time, nonroot runtime and ignored private state.",
+      "tests": [],
+      "limits": "This review did not run installation/build/audit or assert current dependency advisory status."
+    }
+  ],
+  "security_findings": [
+    {
+      "id": "SEC-API-01",
+      "classification": "production_configuration_limitation",
+      "severity": "medium",
+      "title": "Configured JWKS URL permits HTTP on non-loopback hosts",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/auth.py",
+          "start_line": 163,
+          "end_line": 175,
+          "observation": "Server configuration selects JWKS URL; URL validation permits either http or https for any hostname. Token headers cannot select this destination."
+        }
+      ],
+      "impact": "A deployment using cleartext JWKS over an untrusted network would let an on-path party substitute the verification key and forge account tokens. This is conditional on deployment configuration/network trust, not an observed local bypass. Internal Compose routing intentionally uses HTTP.",
+      "recommendation": "Document and enforce production trust requirements: use HTTPS for external JWKS or an explicitly trusted internal route, preserving supported local/Compose behavior.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "SEC-API-02",
+      "classification": "production_privacy_and_capacity_limitation",
+      "severity": "medium",
+      "title": "Submission source/history has no retention or deletion lifecycle",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/submissions.py",
+          "start_line": 141,
+          "end_line": 169,
+          "observation": "Schema durably stores user ID and full source code."
+        },
+        {
+          "path": "services/api/solver_api/submissions.py",
+          "start_line": 288,
+          "end_line": 315,
+          "observation": "Rate and queue limits bound new/active work, but completed records are retained without a cumulative storage cap."
+        },
+        {
+          "path": "services/api/solver_api/submissions.py",
+          "start_line": 332,
+          "end_line": 360,
+          "observation": "Owned history is readable but no deletion/retention operation is present."
+        }
+      ],
+      "impact": "Over sustained use, private code and identifiers persist indefinitely and database storage grows without a code-level bound. File mode 0600 and ownership filtering do not supply production encryption, deletion policy or backups.",
+      "recommendation": "Before public operation define consent, retention/deletion, source-size/cumulative storage budgets, tested backup/restore and operational access controls.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "SEC-API-03",
+      "classification": "production_abuse_control_limitation",
+      "severity": "low",
+      "title": "General API concurrency/request quotas and future model quotas are absent",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/body_limit.py",
+          "start_line": 9,
+          "end_line": 45,
+          "observation": "Each request has a 128 KiB size bound and ten-second receive bound."
+        },
+        {
+          "path": "services/api/solver_api/main.py",
+          "start_line": 104,
+          "end_line": 165,
+          "observation": "Public catalog/health/capabilities and authenticated hints have no application-wide request limiter."
+        },
+        {
+          "path": "services/api/solver_api/submissions.py",
+          "start_line": 278,
+          "end_line": 310,
+          "observation": "Submission-specific active-work/rate/global queue limits do exist."
+        }
+      ],
+      "impact": "Individual request bounds do not bound aggregate simultaneous connections or cheap request floods. Current hints are authored and do not incur model cost; real provider quotas remain a future prerequisite.",
+      "recommendation": "Use bounded ingress/concurrency and appropriate account/network quotas in a production deployment; add cost/token budgets only when implementing a real provider.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "SEC-API-04",
+      "classification": "production_worker_trust_limitation",
+      "severity": "low",
+      "title": "API trusts one shared configured worker bearer token without independent strength validation",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/main.py",
+          "start_line": 208,
+          "end_line": 230,
+          "observation": "Worker control requires a nonempty shared token compared in constant time; API itself does not enforce minimum token entropy or per-worker identity."
+        },
+        {
+          "path": "services/api/solver_api/submissions.py",
+          "start_line": 362,
+          "end_line": 390,
+          "observation": "Any authenticated worker may register/select worker IDs under the shared trust domain."
+        }
+      ],
+      "impact": "Weak manually configured tokens or a compromised trusted worker can expose the shared controller trust domain. Native launcher generation/validation is stronger, and leased job tokens still protect one-shot completion. No missing-auth bypass was found.",
+      "recommendation": "Keep worker control network-private, require high-entropy configuration, and consider rotation/per-worker authentication for production.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "SEC-API-05",
+      "classification": "availability_hardening_limitation",
+      "severity": "low",
+      "title": "JWKS stream has per-operation timeouts rather than a total fetch deadline",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/auth.py",
+          "start_line": 59,
+          "end_line": 76,
+          "observation": "HTTPX has connect/read/write/pool timeouts and a 64 KiB document cap, but no outer total-duration deadline around streaming."
+        },
+        {
+          "path": "services/api/solver_api/auth.py",
+          "start_line": 116,
+          "end_line": 130,
+          "observation": "Refresh holds a per-URL lock while awaiting the fetch."
+        }
+      ],
+      "impact": "A slow configured issuer or network can keep a refresh in progress substantially longer than five seconds by delivering chunks before each read timeout. This affects availability, not signature acceptance, and requires the configured destination/route to stall.",
+      "recommendation": "Consider an outer asyncio timeout covering the full JWKS fetch and a regression test using a slow chunked issuer.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "DEP-API-01",
+      "classification": "reproducibility_limitation",
+      "severity": "low",
+      "title": "API interpreter and base image pins are broader than the root native version",
+      "evidence": [
+        {
+          "path": "services/api/.python-version",
+          "start_line": 1,
+          "end_line": 1,
+          "observation": "API project requests Python 3.12 rather than an exact patch."
+        },
+        {
+          "path": "services/api/Dockerfile",
+          "start_line": 2,
+          "end_line": 9,
+          "observation": "Container uses mutable python:3.12-slim and pip-installed uv 0.13.6; frozen application dependencies follow."
+        }
+      ],
+      "impact": "Native patch selection and future container rebuild contents can differ even when uv.lock is unchanged. This is not evidence of a vulnerable installed package.",
+      "recommendation": "When strict reproducibility is required, align documented patch pins and choose a maintained digest-pinned image with an update policy.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "API-GAP-01",
+      "classification": "developer_experience_feature_gap",
+      "severity": "low",
+      "title": "Protected endpoints do not declare a FastAPI bearer security scheme",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/auth.py",
+          "start_line": 137,
+          "end_line": 150,
+          "observation": "Bearer header is parsed manually from Request."
+        },
+        {
+          "path": "services/api/solver_api/main.py",
+          "start_line": 151,
+          "end_line": 172,
+          "observation": "Protected route dependencies reference require_user rather than a FastAPI Security bearer declaration."
+        }
+      ],
+      "impact": "Generated OpenAPI does not describe authentication in a way Swagger Authorize understands; actual requests still enforce signatures. Existing schema tests only assert paths/models, not auth documentation.",
+      "recommendation": "If interactive authenticated docs are desired, declare the bearer security contract without weakening existing strict parsing and duplicate-header checks.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "API-PERF-01",
+      "classification": "performance_opportunity",
+      "severity": "low",
+      "title": "History summaries fetch and construct full source details before dropping source",
+      "evidence": [
+        {
+          "path": "services/api/solver_api/submissions.py",
+          "start_line": 342,
+          "end_line": 356,
+          "observation": "List SELECT * materializes source_code for each row, builds SubmissionDetail, then converts to SubmissionSummary."
+        }
+      ],
+      "impact": "A 100-item summary page can read/process approximately 3.2 MiB of source unnecessarily. Ownership is preserved and source is excluded from the response.",
+      "recommendation": "For a measured large-history workload, select summary fields directly and keep the owned detail route separate.",
+      "confirmed_defect": false
+    },
+    {
+      "id": "TEST-GAP-01",
+      "classification": "coverage_gap",
+      "severity": "low",
+      "title": "JWT tests stub the JWKS transport and do not exercise stream/document boundaries",
+      "evidence": [
+        {
+          "path": "services/api/tests/test_auth.py",
+          "start_line": 54,
+          "end_line": 63,
+          "observation": "Issuer fixture replaces _fetch_jwks with an in-process function."
+        },
+        {
+          "path": "services/api/tests/test_auth.py",
+          "start_line": 229,
+          "end_line": 259,
+          "observation": "Transport failure/document tests replace the fetch function rather than exercising HTTPX content length/chunking/redirect behavior."
+        }
+      ],
+      "impact": "Tests cover signatures, parsing, caching and fail-closed decisions but do not prove the concrete HTTP transport enforces declared/streamed size and redirect constraints. Static inspection finds those controls implemented.",
+      "recommendation": "When changing JWKS transport, add focused HTTPX mock-transport tests for oversized streams, redirects and total timeout.",
+      "confirmed_defect": false
+    }
+  ],
+  "confirmed_defects": [],
+  "summary": "No critical authentication/ownership/worker-secret bypass or host execution in the API identified by static review. Listed issues are explicit local-prototype limitations, configuration risks and focused future improvements, not reproduced vulnerabilities or a security certification.",
+  "dependency_lock": {
+    "format_version": 1,
+    "revision": 5,
+    "requires_python": "==3.12.*",
+    "package_count": 29,
+    "packages": [
+      {
+        "name": "annotated-doc",
+        "version": "0.0.6",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "annotated-types",
+        "version": "0.8.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "anyio",
+        "version": "4.16.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "idna",
+          "typing-extensions"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "certifi",
+        "version": "2026.10.23",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "cffi",
+        "version": "2.1.1",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "pycparser"
+        ],
+        "artifacts": 13,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "click",
+        "version": "8.5.1",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.6",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "cryptography",
+        "version": "50.0.2",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "cffi"
+        ],
+        "artifacts": 40,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "fastapi",
+        "version": "0.162.6",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "annotated-doc",
+          "anyio",
+          "opentelemetry-api",
+          "pydantic",
+          "starlette",
+          "typing-extensions",
+          "typing-inspection"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "h11",
+        "version": "0.16.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "httpcore",
+        "version": "1.0.9",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "certifi",
+          "h11"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "httpx",
+        "version": "0.28.1",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "anyio",
+          "certifi",
+          "httpcore",
+          "idna"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "idna",
+        "version": "3.20",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.1",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "opentelemetry-api",
+        "version": "1.45.2",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "typing-extensions"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "packaging",
+        "version": "26.3",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pycparser",
+        "version": "3.12",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pydantic",
+        "version": "2.14.3",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "annotated-types",
+          "pydantic-core",
+          "typing-extensions",
+          "typing-inspection"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pydantic-core",
+        "version": "2.50.4",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "typing-extensions"
+        ],
+        "artifacts": 20,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pygments",
+        "version": "2.21.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pyjwt",
+        "version": "2.15.1",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "pytest",
+        "version": "9.2.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "colorama",
+          "iniconfig",
+          "packaging",
+          "pluggy",
+          "pygments"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "ruff",
+        "version": "0.17.5",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 18,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "solver-ai-api",
+        "version": "0.1.0",
+        "source": {
+          "virtual": "."
+        },
+        "dependencies": [
+          "cryptography",
+          "fastapi",
+          "httpx",
+          "pyjwt",
+          "uvicorn"
+        ],
+        "artifacts": 0,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "starlette",
+        "version": "1.10.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "anyio",
+          "typing-extensions"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "typing-extensions",
+        "version": "4.16.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "typing-inspection",
+        "version": "0.4.5",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "typing-extensions"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      },
+      {
+        "name": "uvicorn",
+        "version": "0.54.0",
+        "source": {
+          "registry": "https://pypi.org/simple"
+        },
+        "dependencies": [
+          "click",
+          "h11"
+        ],
+        "artifacts": 2,
+        "all_artifacts_sha256_pinned": true
+      }
+    ]
+  },
+  "boundaries": [
+    "Only auth.py performs outbound HTTP, to the configured fixed JWKS URL; token-supplied destinations are rejected.",
+    "API stores source as text and passes it only to authenticated worker leases; no eval/exec/subprocess/Docker API is imported by API source.",
+    "Submission visibility is always selected by both account ID and job ID; worker ID/lease secrets are not public detail fields.",
+    "Private grading cases stay in services/judge; catalog/hint context contain original public statements and samples only.",
+    "SQLite path and JWKS URL are trusted runtime configuration, not request fields.",
+    "No model-provider dependency, model weights, GPU training code or paid inference is enabled in API."
+  ],
+  "duplicate_and_consolidation_candidates": [
+    {
+      "area": "test JWT fixtures",
+      "files": [
+        "services/api/tests/test_auth.py",
+        "services/api/tests/test_hints.py",
+        "services/api/tests/test_submissions.py"
+      ],
+      "recommendation": "Optionally share a small signing-key/JWKS fixture in conftest.py when tests next change; preserve real signatures and each test isolation boundary.",
+      "priority": "low"
+    },
+    {
+      "area": "catalog lookup",
+      "files": [
+        "services/api/solver_api/main.py",
+        "services/api/solver_api/hints.py"
+      ],
+      "recommendation": "An indexed catalog lookup helper could replace repeated linear scans if catalog scales; three seed problems do not justify a rewrite.",
+      "priority": "low"
+    },
+    {
+      "area": "duplicate idempotency checks",
+      "files": [
+        "services/api/solver_api/submissions.py"
+      ],
+      "recommendation": "Keep the transactional create() recheck even though existing() duplicates it: it protects concurrent requests and the offline-worker retry path. Consolidate only error construction if useful.",
+      "priority": "retain intentional duplication"
+    },
+    {
+      "area": "source/response contracts",
+      "files": [
+        "services/api/solver_api/models.py",
+        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/hints.py"
+      ],
+      "recommendation": "Keep feature-specific model boundaries for now. Generate shared API client contracts when the frontend integration grows rather than merging unrelated modules.",
+      "priority": "low"
+    },
+    {
+      "area": "unused API files",
+      "files": [],
+      "recommendation": "No API file deletion/move justified: source modules are imported, tests provide meaningful security/behavior coverage and lock/config files support the workflow.",
+      "priority": "retain"
+    }
+  ],
+  "coverage_notes": {
+    "test_execution": "Not run by this read-only subtask. Parent-provided passing counts are separate evidence and are intentionally not recounted as this review execution.",
+    "test_files_inspected": 4,
+    "all_tracked_api_files_accounted_for": true,
+    "live_advisory_lookup": "Not performed; exact pins and lock hashes are not proof of vulnerability absence."
+  }
+}

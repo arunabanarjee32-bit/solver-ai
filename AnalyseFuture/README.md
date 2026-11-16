@@ -7,6 +7,22 @@ or an assertion that the material is malicious**.
 
 ## Contents and original locations
 
+The complete current recovery records are `REPOSITORY_AUDIT.txt`,
+`COMPLETE_FILE_INVENTORY.txt`, `FEATURE_INVENTORY.txt`, `DUPLICATE_ANALYSIS.txt`,
+`SECURITY_AUDIT.txt`, `ORIGINAL_TO_NEW_PATH_MAPPING.txt`, `CONSOLIDATION_REPORT.txt`,
+`ARCHIVED_FILES_MANIFEST.txt`, `PROJECT_VISION_AND_FUTURE_ROADMAP.txt`,
+`TECHNICAL_DEBT.txt`, `TEST_AND_VALIDATION_REPORT.txt`, `MIGRATION_SUMMARY.txt`,
+`NEXT_DEVELOPER_INSTRUCTIONS.txt` and `WORK_PROGRESS.txt`.
+`DEPENDENCY_MAP.txt` describes actual cross-service calls; `repository-inventory/`
+contains machine-readable baseline/current ledgers and independent assessments.
+
+`historical-implementations/` preserves 23 changed file versions from the SAI-011
+and permanent-memory branches. Their source commits and byte hashes are in
+`repository-inventory/historical-branches.json`. Five SAI-011 runtime/test inputs
+were selectively recovered into the active frontend; these snapshots retain the
+original branch versions. Archived `AGENTS.md` is renamed `AGENTS.md.upstream`
+so obsolete instructions remain a record. No snapshot is installed or imported.
+
 | Original root file | Preserved original | Extracted contents |
 | --- | --- | --- |
 | `CodeGenerator-master.zip` | `archives/CodeGenerator-master.zip` | `extracted/CodeGenerator-master/` (73 files) |
@@ -41,7 +57,9 @@ The existing research assessment is in
 [`docs/AUDIT_AND_AI_PLAN_2026-11-15.md`](../docs/AUDIT_AND_AI_PLAN_2026-11-15.md).
 The repository map and review findings are in
 [`docs/REPOSITORY_STRUCTURE.md`](../docs/REPOSITORY_STRUCTURE.md).
-The expanded product proposal is [`PROJECT_IDEA.txt`](../PROJECT_IDEA.txt).
+The canonical future proposal is
+[`PROJECT_VISION_AND_FUTURE_ROADMAP.txt`](PROJECT_VISION_AND_FUTURE_ROADMAP.txt);
+the earlier [`PROJECT_IDEA.txt`](../PROJECT_IDEA.txt) remains available.
 
 Future displaced or uncertain files belong here with their source path and a
 reason recorded in the inventory. Do not delete material merely because it

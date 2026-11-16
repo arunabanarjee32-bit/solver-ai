@@ -1,6 +1,6 @@
 # Contributing to Solver AI
 
-Thanks for helping explore an AI-native DSA and competitive-programming platform. The repository is initially documentation-first; please check [current status](docs/PROJECT_STATUS.md) and [start here](docs/START_HERE.md) before submitting code.
+Thanks for helping develop an AI-native DSA and competitive-programming platform. The repository contains a working local web/API/account/submission foundation with an optional isolated judge. Its broader AI, contest and production ambitions remain proposed; check [current status](docs/PROJECT_STATUS.md) and [start here](docs/START_HERE.md) before submitting code.
 
 ## Before you begin
 
@@ -10,6 +10,8 @@ Pick one small task from [contributor tasks](docs/CONTRIBUTOR_TASKS.md); open an
 
 ## Contribution workflow
 
+The steps below are the default contributor workflow. Explicit owner instructions can authorize a different process; the current recovery task requests checkpoint commits and pushes directly to `main`, without branches or PRs. Keep changes reviewable and verification claims accurate in either workflow.
+
 1. Discuss scoped work in an issue; include acceptance criteria.
 2. Create your feature branch from main (e.g. `feat/first-scaffold`).
 3. Make focused changes with tests, relevant documentation and license notices.
@@ -17,7 +19,7 @@ Pick one small task from [contributor tasks](docs/CONTRIBUTOR_TASKS.md); open an
 5. Ask for review; address security/rights concerns before merging.
 6. Update `docs/PROJECT_STATUS.md` only to reflect verified implementation.
 
-Use the setup and verification commands in [Development](docs/DEVELOPMENT.md). The current foundation has API tests, browser tests and a web build/type check. A passing foundation check does not validate a judge, AI service or production deployment.
+Use the setup and verification commands in [Development](docs/DEVELOPMENT.md). The foundation has API, real-auth, judge and browser suites, lint, type checking and a web build. Actual gVisor and full-judge browser checks require their explicitly enabled commands; normal suites intentionally skip those paths. A passing check validates its executed scope, not an unrun AI service or production deployment.
 
 ## Code quality and review
 

@@ -1,0 +1,509 @@
+{
+  "files": [
+    {
+      "path": ".dockerignore",
+      "purpose": "Exclude Git, runtime state, dependency/build caches and all AnalyseFuture evidence from web image context.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "purpose": "Contributor checklist retained for optional PR workflows; owner explicitly uses direct main for this task.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "purpose": "Read-only-permission hosted dependency, source, test, browser and archive-preservation validation.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": ".gitignore",
+      "purpose": "Keep private runtime state, credentials, dependencies and generated outputs out of Git.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": ".node-version",
+      "purpose": "Pin native/CI Node toolchain to 24.22.1.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": ".python-version",
+      "purpose": "Pin native Python toolchain to 3.12.14.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": ".npmrc",
+      "purpose": "Use writable task npm cache and disable funding chatter; no credentials configured.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "package.json",
+      "purpose": "Root npm workspace and explicit API/web/auth/judge/build/browser command entrypoints.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "package-lock.json",
+      "purpose": "Frozen npm registry/workspace dependency graph with integrity hashes; reviewed structurally in history audit.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "playwright.config.ts",
+      "purpose": "Start isolated temporary-state API/web/optional judge for browser tests with bounded service lifecycle.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "compose.yaml",
+      "purpose": "Run separate nonroot/read-only web and API containers with persistent local-state volumes and loopback ports.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "compose.cloud.yaml",
+      "purpose": "Optional BuildKit system-CA secret for verified TLS during managed-cloud image builds.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "scripts/dev.py",
+      "purpose": "Start API/web/optional trusted judge; generate/select worker token and stop owned child process groups.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "scripts/local_config.py",
+      "purpose": "Generate and preserve private local worker credential using atomic file publication and restrictive permissions.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "scripts/judge-worker.py",
+      "purpose": "Launch trusted worker with local credential without logging it.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "scripts/check-standalone.mjs",
+      "purpose": "Reject private runtime state or preserved research in Next standalone artifacts.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "scripts/verify_preserved_archives.py",
+      "purpose": "Verify ZIP/member and branch-snapshot bytes/hashes and optional staged Git blobs without importing evidence.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "scripts/repository_inventory.py",
+      "purpose": "Generate/check complete tracked-file ledger from source assessments and static imports, without source execution.",
+      "feature": "repository operations and reproducibility",
+      "dependencies": [],
+      "active": true,
+      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/DEPENDENCY_MAP.txt",
+      "purpose": "SOLVER AI \u2014 RUNTIME AND DEPENDENCY MAP",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt",
+      "purpose": "ARCHIVED FILES MANIFEST",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
+      "purpose": "SOLVER AI \u2014 CURRENT VALIDATION RECORD",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/DUPLICATE_ANALYSIS.txt",
+      "purpose": "SOLVER AI \u2014 DUPLICATE AND CONSOLIDATION ANALYSIS",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/WORK_PROGRESS.txt",
+      "purpose": "WORK PROGRESS - 17 November 2026, Asia/Kolkata",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/TECHNICAL_DEBT.txt",
+      "purpose": "SOLVER AI \u2014 TECHNICAL DEBT AND RELEASE GATES",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "purpose": "SOLVER AI \u2014 NEXT DEVELOPER CONTINUATION GUIDE",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/FEATURE_INVENTORY.txt",
+      "purpose": "SOLVER AI \u2014 FEATURE INVENTORY",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/MIGRATION_SUMMARY.txt",
+      "purpose": "SOLVER AI \u2014 MIGRATION SUMMARY",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/REPOSITORY_AUDIT.txt",
+      "purpose": "SOLVER AI \u2014 COMPLETE REPOSITORY REVIEW",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/CONSOLIDATION_REPORT.txt",
+      "purpose": "SOLVER AI \u2014 CONSOLIDATION DECISIONS AND IMPLEMENTATION",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "purpose": "ORIGINAL TO NEW PATH MAPPING",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/SECURITY_AUDIT.txt",
+      "purpose": "SOLVER AI \u2014 SECURITY AND HISTORY REVIEW",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "purpose": "SOLVER AI",
+      "feature": "recovery evidence and developer continuity",
+      "dependencies": [],
+      "status": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/baseline.json",
+      "purpose": "Structured baseline evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/historical-branches.json",
+      "purpose": "Structured historical-branches evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/features.json",
+      "purpose": "Structured features evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/moves.json",
+      "purpose": "Structured moves evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/recovered-web.json",
+      "purpose": "Structured recovered-web evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/history.json",
+      "purpose": "Structured history evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/web.json",
+      "purpose": "Structured web evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/archive.json",
+      "purpose": "Structured archive evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/judge.json",
+      "purpose": "Structured judge evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/api.json",
+      "purpose": "Structured api evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "purpose": "Structured support evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "purpose": "Structured docs evidence backing the complete recovery reports; provenance retained.",
+      "feature": "auditable repository inventory",
+      "dependencies": [
+        "Git object/index metadata and source-review records"
+      ],
+      "status": "Machine-readable evidence; source/version limitations recorded in contents.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/COMPLETE_FILE_INVENTORY.txt",
+      "purpose": "Complete generated per-file responsibility, dependency, status, risk and hash ledger.",
+      "feature": "complete tracked-file accountability",
+      "dependencies": [
+        "scripts/repository_inventory.py",
+        "repository-inventory/reviews"
+      ],
+      "status": "Generated from the current tracked index and static source review records.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/current-files.json",
+      "purpose": "Machine-readable complete current tracked-file ledger; self hashes omitted to avoid recursion.",
+      "feature": "complete tracked-file accountability",
+      "dependencies": [
+        "scripts/repository_inventory.py",
+        "repository-inventory/reviews"
+      ],
+      "status": "Generated from the current tracked index and static source review records.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css",
+      "purpose": "Inactive original SAI-011 apps/web/app/globals.css version; retained before feature recovery/import repair.",
+      "feature": "historical authenticated authored-hint UI evidence",
+      "dependencies": [
+        "Source commit b591db142d7b65c306769a59251ed4129f42118a"
+      ],
+      "status": "Full branch source/test review; preserved unchanged and excluded from execution.",
+      "risks": [
+        "Historical import paths and tests are not the active implementation."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx",
+      "purpose": "Inactive original SAI-011 apps/web/components/account-hint.tsx version; retained before feature recovery/import repair.",
+      "feature": "historical authenticated authored-hint UI evidence",
+      "dependencies": [
+        "Source commit b591db142d7b65c306769a59251ed4129f42118a"
+      ],
+      "status": "Full branch source/test review; preserved unchanged and excluded from execution.",
+      "risks": [
+        "Historical import paths and tests are not the active implementation."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx",
+      "purpose": "Inactive original SAI-011 apps/web/components/workspace.tsx version; retained before feature recovery/import repair.",
+      "feature": "historical authenticated authored-hint UI evidence",
+      "dependencies": [
+        "Source commit b591db142d7b65c306769a59251ed4129f42118a"
+      ],
+      "status": "Full branch source/test review; preserved unchanged and excluded from execution.",
+      "risks": [
+        "Historical import paths and tests are not the active implementation."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts",
+      "purpose": "Inactive original SAI-011 apps/web/lib/hints.ts version; retained before feature recovery/import repair.",
+      "feature": "historical authenticated authored-hint UI evidence",
+      "dependencies": [
+        "Source commit b591db142d7b65c306769a59251ed4129f42118a"
+      ],
+      "status": "Full branch source/test review; preserved unchanged and excluded from execution.",
+      "risks": [
+        "Historical import paths and tests are not the active implementation."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts",
+      "purpose": "Inactive original SAI-011 tests/e2e/hints.spec.ts version; retained before feature recovery/import repair.",
+      "feature": "historical authenticated authored-hint UI evidence",
+      "dependencies": [
+        "Source commit b591db142d7b65c306769a59251ed4129f42118a"
+      ],
+      "status": "Full branch source/test review; preserved unchanged and excluded from execution.",
+      "risks": [
+        "Historical import paths and tests are not the active implementation."
+      ]
+    }
+  ],
+  "scope": "Coordinator full support/config inspection"
+}

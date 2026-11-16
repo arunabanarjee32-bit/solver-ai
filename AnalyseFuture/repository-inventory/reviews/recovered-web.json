@@ -1,0 +1,65 @@
+{
+  "files": [
+    {
+      "path": "apps/web/features/hints/api.ts",
+      "purpose": "Authenticated authored-hint API adapter: strict bounded Zod request/response, matched slug/level and provenance, short-lived Better Auth JWT, timeout/cancel/retry-safe errors.",
+      "feature": "authenticated authored hint frontend",
+      "active": true,
+      "status": "Recovered compatible SAI-011 implementation; current source typecheck/build passed per coordinator; full browser recovery rerun pending after fixture correction.",
+      "risks": [
+        "Model/mock labels describe validated response provenance; current backend remains authored, with no paid model integration.",
+        "Browser credentials remain short-lived and are not stored or forwarded to providers."
+      ],
+      "dependencies": [
+        "@/features/accounts/client",
+        "zod"
+      ],
+      "inspection": "Recovered source and browser tests fully reviewed; no archive code execution.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "bytes": 5528,
+      "sha256": "88ba628625ca4697be74a078ca266eec9ce1ed3a537ef727ace75b660815a43e"
+    },
+    {
+      "path": "apps/web/features/hints/account-hint.tsx",
+      "purpose": "Optional account-owned hint UI alongside public ladder: signin affordance, loading/error/retry/cancel, contextual abort and explicit authored/mock/model provenance rendering.",
+      "feature": "authenticated authored hint frontend",
+      "active": true,
+      "status": "Recovered compatible SAI-011 interface; current source typecheck/build passed per coordinator; full browser rerun pending after fixture correction.",
+      "risks": [
+        "Only public problem slug and level are sent; no editor draft upload.",
+        "Cancellation and account/level changes clear obsolete requests/results; direct regression coverage retained."
+      ],
+      "dependencies": [
+        "@/features/accounts/client",
+        "@/features/hints/api",
+        "next/link",
+        "react"
+      ],
+      "inspection": "Recovered source and browser tests fully reviewed; no archive code execution.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "bytes": 3839,
+      "sha256": "3ee177d48db208e2046fbca45775f430856878162ffbbe73d811278477f48757"
+    },
+    {
+      "path": "tests/e2e/hints.spec.ts",
+      "purpose": "Seven browser regressions for guest hints, JWT-backed authored results, provenance, safe failure/recovery, timeout, explicit cancellation and level-change abort; one read-only hint account per worker with fresh per-test signin sessions.",
+      "feature": "authenticated authored hint browser validation",
+      "active": true,
+      "status": "Fixture corrected after diagnosed signup-throttle interference; web and direct browser-fixture typechecks passed; full browser rerun pending.",
+      "risks": [
+        "App throttles remain unchanged; hint cases share only an account identity within a worker, never browser contexts/cookies.",
+        "Account-creation and distinct-user submission ownership remain exercised independently by submissions.spec.ts.",
+        "Mock/model route responses are synthetic test fixtures, not evidence of implemented inference."
+      ],
+      "dependencies": [
+        "../../apps/web/features/hints/api",
+        "@playwright/test"
+      ],
+      "inspection": "Recovered source and browser tests fully reviewed; no archive code execution.",
+      "source_commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "bytes": 10289,
+      "sha256": "154350763d28a9d3285b57b5bfc0046da64d3c8d7e1d7922ed13e7d69d5540d4"
+    }
+  ],
+  "scope": "Three recovered tracked source/test additions and meaningful per-file assessments."
+}

@@ -1,0 +1,172 @@
+SOLVER AI — DUPLICATE AND CONSOLIDATION ANALYSIS
+Recorded 17 November 2026 (Asia/Kolkata)
+
+Scope and meaning
+This analysis compares active source responsibilities, reachable branch trees,
+whole-file SHA-256 identities and selected structured-data projections. It does
+not establish account compromise, content rights, benchmark correctness or a
+complete security audit. No material was removed by this analysis. Preserve all
+original archives and historical variants unless the owner separately directs
+otherwise. Similar names, commit counts and matching strings alone do not prove
+that two implementations are interchangeable.
+
+1. INTEGRATED HISTORY IS NOT A SECOND MISSING FEATURE
+
+The original practice/accounts/judge source tree in cfedbbc and its main-line
+integration 3b09b86 has no diff across apps/, services/, scripts/, tests/, package
+manifests, browser configuration, Compose and CI. These commits are history of one
+foundation, not two active products to merge again.
+
+The SAI-010 branch tip 2d1552ed31d2424ee3af8a8dbaf3ec4cea27af29 and main-line
+9952f8b5fa74f6900d57d1b48e3a26f3e962a358 have no diff across services/api,
+apps/web, package.json and package-lock.json. Its authored hint API therefore
+already exists on main despite the older branch having commits not reachable
+through ancestry after squash integration. Do not cherry-pick the entire branch
+or count its 29 hint tests as a second feature.
+
+The SAI-011 tip b591db142d7b65c306769a59251ed4129f42118a has genuinely distinct
+frontend work relative to 9952f8b: account-hint.tsx, the hint API client,
+workspace/CSS integration and tests/e2e/hints.spec.ts. Those five source/test
+contributions are being recovered, with imports mapped into
+apps/web/features/hints and apps/web/features/practice. Its extra proposal docs
+are historical context, not additional shipped APIs. Current recovery validation
+is pending in this document; branch-authored tests are not current-task passes.
+
+The permanent-memory branch adds distinct continuity/specification/handbook
+material, not a replacement runtime. Preserve source snapshots and disagreements
+under AnalyseFuture/historical-implementations, and keep one discoverable current
+vision/status entrypoint. Do not replay stale copies over newer implementation.
+
+2. PURPOSEFUL DUPLICATION AT TRUST AND RUNTIME BOUNDARIES
+
+- Web Better Auth token issuance and API JWT verification are separate duties.
+  apps/web/features/accounts/server.ts owns accounts/keys;
+  services/api/solver_api/auth.py verifies fixed-source public keys.
+  Combining them would collapse the authorization boundary, not simplify safely.
+- Web schema validators and API Pydantic contracts independently validate remote
+  data. A future generated contract may reduce drift, but runtime checks must
+  remain on both sides. Do not trust TypeScript types as API authorization.
+- API catalog public samples and judge cases.PUBLIC_SAMPLES describe the same
+  public problem at two deployment boundaries. Keep private grading logic in
+  services/judge; add cross-service contract consistency checks when changing
+  content instead of importing the API/application into the sandbox.
+- Runner, worker and API safe-summary vocabularies reselect controlled text.
+  Worker/API discard arbitrary lower-trust diagnostics. Preserve this independent
+  sanitation; wording similarity is not a reason to expose raw worker output.
+- runner.py (trusted host control) and harness.py (in-container supervision) have
+  distinct jobs. Expected answers and credentials remain outside the sandbox.
+- bounded.py is already one source of truth, imported on the host and explicitly
+  copied into the judge image. Its two runtime locations are not two Git sources.
+- SubmissionStore.existing() performs offline-worker idempotent retries;
+  create() repeats the check inside BEGIN IMMEDIATE to prevent concurrent writes.
+  Retain the transactional recheck. An error-message helper could be shared.
+- Each API test suite generates real temporary JWT keys/JWKS. Fixtures can later
+  share plumbing, but authentication/ownership assertions and fresh-state
+  isolation must remain independent.
+- Local account database/key state and API submission state are intentionally
+  separate. Do not merge them merely because both currently use SQLite.
+
+3. ACTIVE MODULE CONSOLIDATION WITHOUT REBUILDING THE PRODUCT
+
+The web reorganization groups account, practice, submissions and recovered hints
+under apps/web/features/{accounts,practice,submissions,hints}. Next app/ routes
+remain framework entrypoints; shell/icons remain shared components; auth-migrate
+and editor build helpers retain their supported execution directories. Recovery
+uses reviewed code and repairs references rather than keeping simultaneous
+components/lib and features copies as competing active implementations.
+
+The API modules already divide identity, catalog, hints, queue and safe transport
+responsibilities meaningfully. Repeated three-item catalog scans could eventually
+share an index/lookup helper; there is no present scale evidence for a service
+rewrite. The summary-history query can select summary fields directly rather
+than building full source details first. These are future focused improvements,
+not justification to delete existing tests or replace the backend.
+
+One project intentionally uses TypeScript for the web and Python for API/judge
+control. The learner's Python/C++17 runtime contract is a separate concern. No
+single-language migration is needed to group features or integrate a reviewed
+Python model adapter.
+
+4. BYTE-IDENTICAL ARCHIVE FILES
+
+Independent whole-file SHA-256 grouping across all 122 extracted members found
+exactly two groups with more than one path:
+
+A. Seven empty CodeGenerator package markers, SHA-256
+   e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:
+   src/{constants,datasets,evaluations,models,promptings,results,utils}/__init__.py
+   Decision: retain. Their directory/package identities differ; zero-byte content
+   equality is expected and not a broken duplicate feature.
+B. phi-code ranker/log_config.py and solver/log_config.py, SHA-256
+   6eb7e8fd4da7739f188e0b9c846b50a2602c8015b611504d1e3bfdaca9418006.
+   Decision: retain unchanged as original research snapshots. A future adopted
+   logging utility could be shared after review, but no archive code is active.
+
+The ZIPs and extracted members intentionally contain the same original bytes in
+two representations: original evidence and inspectable files. The manifest maps
+all paths/hashes and upstream Git controls renamed with .upstream. This is
+purposeful preservation, not unexplained live application duplication.
+
+5. STRUCTURED BENCHMARK OVERLAP — KEEP EVERY VARIANT
+
+Method: parse JSONL as data only; form a projection from exactly the field names
+below; serialize with sorted keys, compact separators and ensure_ascii=False;
+SHA-256 the UTF-8 projection; compare sets of resulting hashes. These results
+measure equality of selected fields, not whole records or files. No candidate
+code was executed, and no benchmark statement/solution semantics were validated.
+
+Within AnalyseFuture/extracted/CodeGenerator-master/data/:
+
+- MBPPEval/MBPP.jsonl and MBPPEval/MBPP_ET.jsonl each contain 974 distinct projected
+  records; all 974 match on {task_id, text, code}. Test metadata and added
+  entry_point fields can differ. They are not identical files; preserve both.
+- HumanEval/HumanEval.jsonl, HumanEval/HumanEvalET.jsonl and
+  HumanEval/HumanEvalIncreasedSampleIO.jsonl each contain 164 distinct projections
+  on {task_id, prompt, entry_point, canonical_solution}. Pairwise overlaps are:
+    HumanEval versus HumanEvalET: 158.
+    HumanEval versus IncreasedSampleIO: 161.
+    HumanEvalET versus IncreasedSampleIO: 161.
+  Test/sample variants and remaining projected differences are meaningful. Keep
+  all three; do not count them as disjoint evaluation task sets.
+- xCodeEval/problem_descriptions.jsonl contains 7,635 records and prog_syn_val.jsonl
+  106. Projecting both onto their common fields (description, difficulty,
+  input_from, input_spec, memory_limit, notes, output_spec, output_to,
+  sample_inputs, sample_outputs, src_uid, tags, time_limit) yields 45 equal hashes.
+  created_at exists only in the first input and is excluded explicitly. This
+  does not establish that the remaining validation tasks are independent.
+
+A comparison of canonical full JSON records across the nine CodeGenerator JSONL
+inputs found no shared full-record hashes. That does not contradict the projected
+core-task overlap, nor does it prove semantic independence or uncontaminated
+training/evaluation splits. Data rights remain unreviewed; no deduplication or
+training ingestion was performed.
+
+6. CONCEPTUAL RESEARCH DUPLICATES ARE PURPOSEFUL VARIANTS
+
+- CodeSIM and promptings/variations share stages and helper loops but intentionally
+  ablate planning, simulation or debugging. Preserve the distinctions.
+- CodeGenerator utils/parse.py and MapCoder.py contain related fenced-code parsers
+  with different think-block/language handling. Do not swap blindly.
+- CodeGenerator conversion scripts repeat JSONL plumbing as standalone tools.
+  Future approved use could share a reviewed serializer; importing converters may
+  trigger unwanted side effects and is not an application integration strategy.
+- phi-code atcoder.py and codeforces.py share candidate/subprocess scoring control
+  while differing in statement parsing. Their execution model is unsuitable for
+  the active product; preserve both as research, not alternate judge services.
+- CodeGenerator planning/simulation and phi-code diverse-candidate ranking are
+  complementary research ideas. Neither is a second complete product backend or
+  a drop-in replacement for the existing owned queue/gVisor judge.
+- Standalone Gradio/curses/CLI research interfaces and the Next.js product address
+  different contexts. Preserve old interfaces rather than activating a second UI.
+
+7. RIGHTS, PRESERVATION AND UNKNOWN INPUTS
+
+Five phi-code dataset files are supplied Git LFS pointers, not recovered dataset
+objects. Pointer identity is not proof that the referenced contents are safe,
+licensed or present. Original code notices are preserved, while model, platform,
+problem and dataset rights need separate decisions. SHA-256 preservation and
+static review do not authorize training or establish upstream performance claims.
+
+No archive original, historical implementation or ambiguous file was removed
+because of duplication. Future consolidation should specify the exact active
+behavior preserved, the tests protecting it and the retained archival path.

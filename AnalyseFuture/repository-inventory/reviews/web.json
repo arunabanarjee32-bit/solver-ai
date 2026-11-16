@@ -1,0 +1,885 @@
+{
+  "review_scope": {
+    "tracked_files": 33,
+    "paths": [
+      "apps/web/AGENTS.md",
+      "apps/web/Dockerfile",
+      "apps/web/app/account/page.tsx",
+      "apps/web/app/api/auth/[...all]/route.ts",
+      "apps/web/app/globals.css",
+      "apps/web/app/layout.tsx",
+      "apps/web/app/not-found.tsx",
+      "apps/web/app/page.tsx",
+      "apps/web/app/problems/[slug]/page.tsx",
+      "apps/web/app/submissions/page.tsx",
+      "apps/web/components/account-form.tsx",
+      "apps/web/components/catalog.tsx",
+      "apps/web/components/code-pane.tsx",
+      "apps/web/components/icons.tsx",
+      "apps/web/components/shell.tsx",
+      "apps/web/components/submission-history.tsx",
+      "apps/web/components/submission-panel.tsx",
+      "apps/web/components/workspace.tsx",
+      "apps/web/lib/api.ts",
+      "apps/web/lib/auth-client.ts",
+      "apps/web/lib/auth.ts",
+      "apps/web/lib/submissions.ts",
+      "apps/web/next-env.d.ts",
+      "apps/web/next.config.ts",
+      "apps/web/package.json",
+      "apps/web/scripts/auth-migrate.mjs",
+      "apps/web/scripts/copy-monaco.mjs",
+      "apps/web/tests/auth.test.mjs",
+      "apps/web/tsconfig.json",
+      "playwright.config.ts",
+      "tests/e2e/practice.spec.ts",
+      "tests/e2e/resilience.spec.ts",
+      "tests/e2e/submissions.spec.ts"
+    ],
+    "all_full_text_read": true,
+    "generated_ignored_assets": "Source bundler and output metadata patterns inspected, existing generated/dependency files not treated as tracked source",
+    "framework_guide": "node_modules/next/dist/docs/01-app/01-getting-started/02-project-structure.md, lines 225-325",
+    "mutations": "Only this /tmp JSON report; no repository edits, installs or execution"
+  },
+  "files": [
+    {
+      "path": "apps/web/AGENTS.md",
+      "purpose": "Installed Next.js-version development instructions",
+      "feature": "developer-tooling",
+      "dependencies": [],
+      "active": false,
+      "status": "documentation",
+      "risks": [
+        "Read installed framework guides before code edits"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/Dockerfile",
+      "purpose": "Multi-stage Node image: install/build standalone then nonroot persistent-auth runtime",
+      "feature": "deployment",
+      "dependencies": [],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Nonroot runtime and external CA secret used; base image version pinned but tag not digest-pinned"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/account/page.tsx",
+      "purpose": "Account route resolving optional next query into account form",
+      "feature": "accounts",
+      "dependencies": [
+        "@/components/account-form"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/api/auth/[...all]/route.ts",
+      "purpose": "Node-runtime Better Auth HTTP entrypoint with lazy official migrations",
+      "feature": "accounts",
+      "dependencies": [
+        "@/lib/auth",
+        "better-auth/next-js"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/globals.css",
+      "purpose": "Shared visual tokens, layout, catalog/editor/account/history and responsive accessibility rules",
+      "feature": "shared-ui",
+      "dependencies": [],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Large stylesheet with historical responsive overrides; no remote URLs/imports"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/layout.tsx",
+      "purpose": "Root HTML/metadata/global stylesheet and shared application shell",
+      "feature": "shared-ui",
+      "dependencies": [
+        "./globals.css",
+        "@/components/shell",
+        "next"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/not-found.tsx",
+      "purpose": "Framework missing-route UI and return link",
+      "feature": "shared-ui",
+      "dependencies": [
+        "next/link"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/page.tsx",
+      "purpose": "Catalog home route entrypoint",
+      "feature": "practice",
+      "dependencies": [
+        "@/components/catalog"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/problems/[slug]/page.tsx",
+      "purpose": "Async dynamic problem route passes slug into workspace",
+      "feature": "practice",
+      "dependencies": [
+        "@/components/workspace"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/app/submissions/page.tsx",
+      "purpose": "Submission-history route entrypoint",
+      "feature": "submissions",
+      "dependencies": [
+        "@/components/submission-history"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/account-form.tsx",
+      "purpose": "Signup/signin/signout form and same-origin redirect validation",
+      "feature": "accounts",
+      "dependencies": [
+        "@/lib/auth-client",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Local email ownership is not verified; explicitly disclosed"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/catalog.tsx",
+      "purpose": "Public catalog retrieval and combined client search/topic/difficulty filtering",
+      "feature": "practice",
+      "dependencies": [
+        "./icons",
+        "@/lib/api",
+        "next/link",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Fetches first 100 catalog entries; larger catalogs need server pagination"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/code-pane.tsx",
+      "purpose": "Local Monaco load/retry and textarea fallback; per-problem/language draft persistence",
+      "feature": "practice",
+      "dependencies": [
+        "@monaco-editor/react",
+        "monaco-editor",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Browser drafts are best effort, unencrypted local storage shared by browser profile"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/icons.tsx",
+      "purpose": "Typed original SVG icon component shared by feature interfaces",
+      "feature": "shared-ui",
+      "dependencies": [
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/shell.tsx",
+      "purpose": "Navigation, session summary, signout and shared page framing",
+      "feature": "shared-ui",
+      "dependencies": [
+        "./icons",
+        "@/lib/auth-client",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/submission-history.tsx",
+      "purpose": "Owned, paginated history and source/result detail with abortable requests",
+      "feature": "submissions",
+      "dependencies": [
+        "./submission-panel",
+        "@/lib/auth-client",
+        "@/lib/submissions",
+        "next/link",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/submission-panel.tsx",
+      "purpose": "Capability checks, explicit run/submit, idempotency, bounded polling and reusable result rendering",
+      "feature": "submissions",
+      "dependencies": [
+        "./icons",
+        "@/lib/auth-client",
+        "@/lib/submissions",
+        "next/link",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Result view shares module with run controller; split within same feature if helpful"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/components/workspace.tsx",
+      "purpose": "Public statement/examples/hint ladder/editor composition and submission controls",
+      "feature": "practice",
+      "dependencies": [
+        "./code-pane",
+        "./icons",
+        "./submission-panel",
+        "@/lib/api",
+        "next/dynamic",
+        "next/link",
+        "react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "SAI-010 authenticated hint API not called from main; compatible SAI-011 implementation exists on remote branch"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/lib/api.ts",
+      "purpose": "Bounded Zod catalog/detail contracts, 10s request timeout and cancellation-safe errors",
+      "feature": "practice",
+      "dependencies": [
+        "zod"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/lib/auth-client.ts",
+      "purpose": "Better Auth React/JWT client singleton",
+      "feature": "accounts",
+      "dependencies": [
+        "better-auth/client/plugins",
+        "better-auth/react"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/lib/auth.ts",
+      "purpose": "Single session authority, SQLite/JWKS, persisted secret, origin policy and lazy migrations",
+      "feature": "accounts",
+      "dependencies": [
+        "better-auth",
+        "better-auth/db/migration",
+        "better-auth/plugins",
+        "node:crypto",
+        "node:fs",
+        "node:path",
+        "node:sqlite"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "No delivered verification/recovery email",
+        "JWT issued for 5m survives session logout until expiry",
+        "Shared local per-path throttling buckets; production ingress policy remains future work"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/lib/submissions.ts",
+      "purpose": "Typed capabilities and authenticated submission API with schemas and bounded requests",
+      "feature": "submissions",
+      "dependencies": [
+        "./auth-client",
+        "zod"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/next-env.d.ts",
+      "purpose": "Framework-generated type references for Next routing",
+      "feature": "developer-tooling",
+      "dependencies": [
+        "./.next/types/root-params.d.ts",
+        "./.next/types/routes.d.ts"
+      ],
+      "active": false,
+      "status": "generated-tracked",
+      "risks": [
+        "next dev rewrites build imports to .next/dev/types; restore only generated changes after tests"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/next.config.ts",
+      "purpose": "Standalone packaging, private/archive tracing exclusion and server-only API rewrite",
+      "feature": "deployment",
+      "dependencies": [
+        "next",
+        "node:path"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "API_BASE_URL is trusted deployment configuration; no user-controlled destination"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/package.json",
+      "purpose": "Web workspace dependencies and dev/build/typecheck scripts",
+      "feature": "dependency-management",
+      "dependencies": [],
+      "active": true,
+      "status": "active",
+      "risks": [
+        "Exact direct versions pinned; root lockfile authoritative"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/scripts/auth-migrate.mjs",
+      "purpose": "Idempotent official Better Auth schema migration preserving web cwd",
+      "feature": "accounts",
+      "dependencies": [
+        "../lib/auth.ts",
+        "better-auth/db/migration",
+        "node:url"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/scripts/copy-monaco.mjs",
+      "purpose": "Local editor/worker bundle and notices with enforced patched sanitizer substitution",
+      "feature": "practice",
+      "dependencies": [
+        "esbuild",
+        "monaco-editor",
+        "node:fs/promises",
+        "node:module",
+        "node:path",
+        "node:url"
+      ],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/tests/auth.test.mjs",
+      "purpose": "7 real-library auth tests with isolated temporary state and repeated migrations",
+      "feature": "accounts",
+      "dependencies": [
+        "../lib/auth.ts",
+        "better-auth/db/migration",
+        "node:assert/strict",
+        "node:crypto",
+        "node:fs",
+        "node:os",
+        "node:path",
+        "node:test"
+      ],
+      "active": false,
+      "status": "test",
+      "risks": [
+        "Tests exercise origin/password/session/JWT/throttling, not production email recovery or TLS ingress"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "purpose": "Strict app TypeScript compilation and @/ root alias",
+      "feature": "developer-tooling",
+      "dependencies": [],
+      "active": true,
+      "status": "active",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "playwright.config.ts",
+      "purpose": "Browser suite web/API/optional judge orchestration with temporary DBs and system browser override",
+      "feature": "end-to-end",
+      "dependencies": [
+        "@playwright/test",
+        "node:fs",
+        "node:os",
+        "node:path"
+      ],
+      "active": false,
+      "status": "test",
+      "risks": [
+        "Default suite skips full judge case unless SOLVER_E2E_JUDGE=1"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "tests/e2e/practice.spec.ts",
+      "purpose": "7 browser tests: catalog filters, local Monaco, isolated drafts, errors, fallback/retry and responsive layout",
+      "feature": "practice",
+      "dependencies": [
+        "@playwright/test"
+      ],
+      "active": false,
+      "status": "test",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "tests/e2e/resilience.spec.ts",
+      "purpose": "6 API-client/browser resilience tests for malformed bodies, timeout and cancellation",
+      "feature": "practice",
+      "dependencies": [
+        "../../apps/web/lib/api",
+        "@playwright/test"
+      ],
+      "active": false,
+      "status": "test",
+      "risks": [],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    },
+    {
+      "path": "tests/e2e/submissions.spec.ts",
+      "purpose": "5 browser tests for accounts, safe redirect, guest privacy, unavailable judge and real private submission flow",
+      "feature": "submissions",
+      "dependencies": [
+        "@playwright/test"
+      ],
+      "active": false,
+      "status": "test",
+      "risks": [
+        "One test explicitly gated on full judge; test credentials are generated/fixtures, not live secrets"
+      ],
+      "inspection": "Full text read; static evidence only, no execution by reviewer"
+    }
+  ],
+  "features": [
+    {
+      "name": "Original problem catalog and filtering",
+      "files": [
+        "apps/web/components/catalog.tsx",
+        "apps/web/lib/api.ts",
+        "apps/web/app/page.tsx"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts",
+        "tests/e2e/resilience.spec.ts"
+      ],
+      "status": "implemented; previous task validated, current-task rerun pending",
+      "gaps": "Three fixed original problems; client filter fetch cap 100, no authoring/progress"
+    },
+    {
+      "name": "Problem workspace and authored public hints",
+      "files": [
+        "apps/web/components/workspace.tsx",
+        "apps/web/app/problems/[slug]/page.tsx"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts"
+      ],
+      "status": "implemented",
+      "gaps": "Main does not connect authenticated hint endpoint; recoverable SAI-011 branch does"
+    },
+    {
+      "name": "Local Monaco editor and drafts",
+      "files": [
+        "apps/web/components/code-pane.tsx",
+        "apps/web/scripts/copy-monaco.mjs"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts",
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "status": "implemented",
+      "gaps": "Best-effort browser storage; no cloud draft sync"
+    },
+    {
+      "name": "Accounts, session and API JWT",
+      "files": [
+        "apps/web/components/account-form.tsx",
+        "apps/web/lib/auth.ts",
+        "apps/web/lib/auth-client.ts",
+        "apps/web/app/api/auth/[...all]/route.ts",
+        "apps/web/scripts/auth-migrate.mjs"
+      ],
+      "tests": [
+        "apps/web/tests/auth.test.mjs",
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "status": "implemented local workflow",
+      "gaps": "No delivered verification/recovery email, trusted production ingress or full immediate token revocation"
+    },
+    {
+      "name": "Isolated run and submit frontend",
+      "files": [
+        "apps/web/components/submission-panel.tsx",
+        "apps/web/lib/submissions.ts"
+      ],
+      "tests": [
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "status": "implemented; requires gVisor worker",
+      "gaps": "Only Python/C++17, finite tests, no production certification"
+    },
+    {
+      "name": "Private saved submission history",
+      "files": [
+        "apps/web/components/submission-history.tsx",
+        "apps/web/lib/submissions.ts",
+        "apps/web/app/submissions/page.tsx"
+      ],
+      "tests": [
+        "tests/e2e/submissions.spec.ts"
+      ],
+      "status": "implemented",
+      "gaps": "SQLite local persistence and no account data lifecycle administration"
+    },
+    {
+      "name": "Accessible responsive shared layout",
+      "files": [
+        "apps/web/components/shell.tsx",
+        "apps/web/components/icons.tsx",
+        "apps/web/app/globals.css",
+        "apps/web/app/layout.tsx",
+        "apps/web/app/not-found.tsx"
+      ],
+      "tests": [
+        "tests/e2e/practice.spec.ts"
+      ],
+      "status": "implemented basic keyboard/labels/reduced motion/mobile layout",
+      "gaps": "No dedicated accessibility audit or localization"
+    },
+    {
+      "name": "Static/standalone web packaging",
+      "files": [
+        "apps/web/Dockerfile",
+        "apps/web/next.config.ts",
+        "apps/web/package.json"
+      ],
+      "tests": [
+        "scripts/check-standalone.mjs"
+      ],
+      "status": "implemented",
+      "gaps": "Hosted operations and production security independently unverified"
+    },
+    {
+      "name": "Authenticated authored hint frontend (SAI-011)",
+      "files": [
+        "origin/feat/sai-011-frontend-hint-api:apps/web/components/account-hint.tsx",
+        "origin/feat/sai-011-frontend-hint-api:apps/web/lib/hints.ts",
+        "origin/feat/sai-011-frontend-hint-api:tests/e2e/hints.spec.ts"
+      ],
+      "tests": [
+        "branch tests/e2e/hints.spec.ts: 5 tests"
+      ],
+      "status": "recoverable complete implementation on accessible unmerged branch b591db142d7b65c306769a59251ed4129f42118a",
+      "gaps": "Cancellation control implemented but test title overstates direct cancellation coverage; no genuine inference provider"
+    }
+  ],
+  "security_findings": [
+    {
+      "id": "WEB-01",
+      "category": "known-production-gap",
+      "evidence": "apps/web/lib/auth.ts:92-96",
+      "finding": "Email/password enabled without delivery verification/recovery integration; suitable documented local workflow, not production identity completeness"
+    },
+    {
+      "id": "WEB-02",
+      "category": "known-design-limit",
+      "evidence": "apps/web/lib/auth.ts:124-128",
+      "finding": "API JWT lifetime is 5 minutes; frontend logout revokes session but does not immediately revoke already issued offline-verifiable API tokens"
+    },
+    {
+      "id": "WEB-03",
+      "category": "known-operations-gap",
+      "evidence": "apps/web/lib/auth.ts:112-119",
+      "finding": "Forwarded IP headers disabled in local environment; shared throttle buckets protect against spoofing but trusted production ingress policy remains unresolved"
+    },
+    {
+      "id": "WEB-04",
+      "category": "privacy-disclosure",
+      "evidence": "apps/web/components/code-pane.tsx:111-137",
+      "finding": "Drafts reside in browser localStorage per problem/language. No automatic source upload; persistence is local best effort and not per-account encrypted storage"
+    },
+    {
+      "id": "WEB-05",
+      "category": "positive-control",
+      "evidence": "apps/web/scripts/copy-monaco.mjs:7-22,44-48,77-82",
+      "finding": "Pinned patched DOMPurify is substituted into locally bundled Monaco; no remote editor CDN or vendored stale sanitizer path accepted"
+    },
+    {
+      "id": "WEB-06",
+      "category": "positive-control",
+      "evidence": "apps/web/components/account-form.tsx:8-26; apps/web/lib/api.ts:65-130; apps/web/lib/submissions.ts:86-171",
+      "finding": "Same-origin redirects and schema-validated bounded request behavior protect UI boundaries; safe messages avoid raw private diagnostics"
+    },
+    {
+      "id": "WEB-07",
+      "category": "inspection-limit",
+      "finding": "No confirmed malicious web source or live credential discovered by targeted static review; no claim of compromise attribution or full vulnerability audit"
+    }
+  ],
+  "import_map": {
+    "apps/web/AGENTS.md": [],
+    "apps/web/Dockerfile": [],
+    "apps/web/app/account/page.tsx": [
+      "@/components/account-form"
+    ],
+    "apps/web/app/api/auth/[...all]/route.ts": [
+      "@/lib/auth",
+      "better-auth/next-js"
+    ],
+    "apps/web/app/globals.css": [],
+    "apps/web/app/layout.tsx": [
+      "./globals.css",
+      "@/components/shell",
+      "next"
+    ],
+    "apps/web/app/not-found.tsx": [
+      "next/link"
+    ],
+    "apps/web/app/page.tsx": [
+      "@/components/catalog"
+    ],
+    "apps/web/app/problems/[slug]/page.tsx": [
+      "@/components/workspace"
+    ],
+    "apps/web/app/submissions/page.tsx": [
+      "@/components/submission-history"
+    ],
+    "apps/web/components/account-form.tsx": [
+      "@/lib/auth-client",
+      "next/link",
+      "next/navigation",
+      "react"
+    ],
+    "apps/web/components/catalog.tsx": [
+      "./icons",
+      "@/lib/api",
+      "next/link",
+      "react"
+    ],
+    "apps/web/components/code-pane.tsx": [
+      "@monaco-editor/react",
+      "monaco-editor",
+      "react"
+    ],
+    "apps/web/components/icons.tsx": [
+      "react"
+    ],
+    "apps/web/components/shell.tsx": [
+      "./icons",
+      "@/lib/auth-client",
+      "next/link",
+      "next/navigation",
+      "react"
+    ],
+    "apps/web/components/submission-history.tsx": [
+      "./submission-panel",
+      "@/lib/auth-client",
+      "@/lib/submissions",
+      "next/link",
+      "react"
+    ],
+    "apps/web/components/submission-panel.tsx": [
+      "./icons",
+      "@/lib/auth-client",
+      "@/lib/submissions",
+      "next/link",
+      "react"
+    ],
+    "apps/web/components/workspace.tsx": [
+      "./code-pane",
+      "./icons",
+      "./submission-panel",
+      "@/lib/api",
+      "next/dynamic",
+      "next/link",
+      "react"
+    ],
+    "apps/web/lib/api.ts": [
+      "zod"
+    ],
+    "apps/web/lib/auth-client.ts": [
+      "better-auth/client/plugins",
+      "better-auth/react"
+    ],
+    "apps/web/lib/auth.ts": [
+      "better-auth",
+      "better-auth/db/migration",
+      "better-auth/plugins",
+      "node:crypto",
+      "node:fs",
+      "node:path",
+      "node:sqlite"
+    ],
+    "apps/web/lib/submissions.ts": [
+      "./auth-client",
+      "zod"
+    ],
+    "apps/web/next-env.d.ts": [
+      "./.next/types/root-params.d.ts",
+      "./.next/types/routes.d.ts"
+    ],
+    "apps/web/next.config.ts": [
+      "next",
+      "node:path"
+    ],
+    "apps/web/package.json": [],
+    "apps/web/scripts/auth-migrate.mjs": [
+      "../lib/auth.ts",
+      "better-auth/db/migration",
+      "node:url"
+    ],
+    "apps/web/scripts/copy-monaco.mjs": [
+      "esbuild",
+      "monaco-editor",
+      "node:fs/promises",
+      "node:module",
+      "node:path",
+      "node:url"
+    ],
+    "apps/web/tests/auth.test.mjs": [
+      "../lib/auth.ts",
+      "better-auth/db/migration",
+      "node:assert/strict",
+      "node:crypto",
+      "node:fs",
+      "node:os",
+      "node:path",
+      "node:test"
+    ],
+    "apps/web/tsconfig.json": [],
+    "playwright.config.ts": [
+      "@playwright/test",
+      "node:fs",
+      "node:os",
+      "node:path"
+    ],
+    "tests/e2e/practice.spec.ts": [
+      "@playwright/test"
+    ],
+    "tests/e2e/resilience.spec.ts": [
+      "../../apps/web/lib/api",
+      "@playwright/test"
+    ],
+    "tests/e2e/submissions.spec.ts": [
+      "@playwright/test"
+    ]
+  },
+  "proposed_moves": {
+    "apps/web/components/account-form.tsx": "apps/web/features/accounts/account-form.tsx",
+    "apps/web/lib/auth-client.ts": "apps/web/features/accounts/client.ts",
+    "apps/web/lib/auth.ts": "apps/web/features/accounts/server.ts",
+    "apps/web/components/catalog.tsx": "apps/web/features/practice/catalog.tsx",
+    "apps/web/components/workspace.tsx": "apps/web/features/practice/workspace.tsx",
+    "apps/web/components/code-pane.tsx": "apps/web/features/practice/code-pane.tsx",
+    "apps/web/lib/api.ts": "apps/web/features/practice/api.ts",
+    "apps/web/components/submission-history.tsx": "apps/web/features/submissions/submission-history.tsx",
+    "apps/web/components/submission-panel.tsx": "apps/web/features/submissions/submission-panel.tsx",
+    "apps/web/lib/submissions.ts": "apps/web/features/submissions/api.ts"
+  },
+  "reference_repairs": [
+    "App page imports for catalog/workspace/account/history",
+    "Auth route @/lib/auth import",
+    "auth-migrate.mjs relative auth import",
+    "auth.test.mjs relative auth import",
+    "shell.tsx auth-client import",
+    "all feature-to-feature and icons imports",
+    "tests/e2e/resilience.spec.ts direct api import",
+    "Recovered hints.spec.ts direct hints client import",
+    "Documentation original/source path references where describing current tree"
+  ],
+  "duplicates_and_consolidation": [
+    {
+      "responsibility": "Feature ownership",
+      "decision": "Group existing modules by accounts, practice, submissions and recovered hints; keep Next app routes, shared shell/icons, scripts/tests stable",
+      "reason": "No conflicting active implementations found; framework conventions preserved"
+    },
+    {
+      "responsibility": "Submission result view",
+      "decision": "Optionally extract SubmissionResult into submissions/submission-result.tsx",
+      "reason": "History currently imports result rendering from module also holding run controller; one shared view already exists, extraction reduces coupling without duplicating code"
+    },
+    {
+      "responsibility": "HTTP lifecycle",
+      "decision": "Practice, submissions and recovered hints share timeout/cancel patterns but keep endpoint-specific schemas, auth and safe error behavior",
+      "reason": "A generic network-layer rewrite is unnecessary for recovery; can assess common lifecycle helper later with regression evidence"
+    },
+    {
+      "responsibility": "Public hints vs authenticated hints",
+      "decision": "Preserve public ladder; recover optional account-hint API feature alongside it",
+      "reason": "Different access paths are intentional; they use same backend catalog content and should not be mistaken for competing model implementations"
+    },
+    {
+      "responsibility": "SAI-011 recovery",
+      "decision": "Select branch source/test changes and attribute SHA; do not replace whole tree or older docs/status",
+      "reason": "Branch lacks newer AnalyseFuture preservation and contains historical unmerged-work instructions"
+    }
+  ]
+}
