@@ -13,16 +13,22 @@ reported repository disruption. See [repository structure](REPOSITORY_STRUCTURE.
 and the detailed [project idea](../PROJECT_IDEA.txt).
 
 Docker context and standalone tracing exclude the preservation folder, and the
-packaging guard rejects its inclusion. Current-revision validation is being
-recorded separately from the historical results below.
+packaging guard rejects its inclusion. Current local validation of source and
+configuration commit `596d9c2` is recorded separately from historical results;
+subsequent commits in this task update documentation only.
 
 Current local checks after the preservation/configuration changes: API **137
 passed**, Better Auth **7 passed**, judge suite **106 passed** including all **15
 gVisor integration tests**, Ruff passed, TypeScript passed, optimized Next.js
 build and private-state/reference-folder packaging guard passed. Archive/index
 verification passed for both ZIPs and all 122 members. The API emitted one
-upstream Starlette/HTTPX deprecation warning. The current full-judge browser run
-is pending; no new hosted CI or public deployment result is claimed here.
+upstream Starlette/HTTPX deprecation warning. The full-judge Playwright browser
+suite **passed all 18 tests, with no skips**, including actual isolated runs,
+submissions and private history (50.2 seconds). A deliberate reference-folder
+injection was rejected by the packaging guard, then removed and the clean
+artifact passed again. All 109 baseline tracked files remain at their recorded
+paths (including both archive moves); no file was discarded. No new hosted CI
+or public deployment result is claimed here.
 
 ## SAI-010: authenticated, provider-neutral offline hint contract
 
@@ -37,7 +43,7 @@ The merged SAI-010 implementation provides an authenticated `POST /api/v1/hints`
 - `services/api`: public catalog, fixed-JWKS EdDSA authentication, durable owned SQLite submission/source history, bounded requests, idempotent writes, quotas, atomic worker leases, safe completion summaries and expiry handling. It never executes learner programs.
 - `services/judge`: a separate trusted host control worker, gVisor-only sandbox runner, bounded original Python/C++17 supervisor, original generated grading cases, real sample/run verdicts, strict result protocol, readiness probes, cancellation and diagnostics.
 - Native start/build/test commands, Docker web/API images with separate persistent volumes, an isolated sandbox Dockerfile, frozen lockfiles and CI configuration.
-- Upstream reuse decisions in [0001](adr/0001-practice-foundation.md), [0002](adr/0002-authenticated-isolated-submissions.md), and [the runtime review](../services/judge/UPSTREAM_REVIEW.md). Better Auth/gVisor are narrow dependency/runtime adoptions; unrelated upstream repositories were not copied wholesale.
+- Upstream reuse decisions in [0001](adr/0001-practice-foundation.md), [0002](adr/0002-authenticated-isolated-submissions.md), and [the runtime review](../services/judge/UPSTREAM_REVIEW.md). Better Auth/gVisor are narrow dependency/runtime adoptions; upstream research snapshots are preserved only in `AnalyseFuture` and are not adopted into the application.
 
 ## Historical local validation before SAI-010
 
