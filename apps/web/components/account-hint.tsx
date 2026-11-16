@@ -31,10 +31,14 @@ export function AccountHint({
 
   useEffect(() => {
     active.current?.abort();
+    active.current = null;
     setResult(null);
     setError("");
     setLoading(false);
-    return () => active.current?.abort();
+    return () => {
+      active.current?.abort();
+      active.current = null;
+    };
   }, [slug, level, session?.user.id]);
 
   async function loadHint() {
