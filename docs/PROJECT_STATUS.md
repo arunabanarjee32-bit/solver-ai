@@ -1,12 +1,18 @@
 # Project status — source of truth
 
-Last reviewed: 2026-11-15 (Asia/Calcutta). Earlier gVisor and native integration evidence remains historical local validation; the SAI-010 PR additionally has a verified hosted CI run. Neither establishes a public production release.
+Last reviewed: 2026-11-16 (Asia/Kolkata). Earlier gVisor and native integration evidence remains historical local validation; the SAI-010 PR additionally has a verified hosted CI run. Neither establishes a public production release.
 
 ## SAI-010: authenticated, provider-neutral offline hint contract
 
-Branch `feat/sai-010-authored-hint-contract` introduces an authenticated `POST /api/v1/hints` API with fixed public catalog context, validated hint levels, explicitly authored (not AI-generated) output, a future-provider interface, bounded response, timeout and fail-safe provider errors. The existing problem page retains its unauthenticated author-written hint ladder. **No real model inference, debugging, generated solver, paid resource or production AI quota exists yet.** This work changes neither submission ownership nor the isolated judge; the new endpoint is not yet used by the browser UI. See [research and architecture audit](AUDIT_AND_AI_PLAN_2026-11-15.md).
+Merged `main` already includes an authenticated `POST /api/v1/hints` API with fixed public catalog context, validated hint levels, explicitly authored (not AI-generated) output, a future-provider interface, bounded response, timeout and fail-safe provider errors. The existing problem page retains its unauthenticated author-written hint ladder. **No real model inference, debugging, generated solver, paid resource or production AI quota exists yet.** This work changes neither submission ownership nor the isolated judge; the new endpoint is not yet used by the browser UI. See [research and architecture audit](AUDIT_AND_AI_PLAN_2026-11-15.md).
 
 **Hosted validation, 2026-11-15:** [GitHub Actions run 43737836616](https://github.com/arunabanarjee32-bit/solver-ai/actions/runs/43737836616) passed for commit `9df915a422c2a45d93d967b66a6cd30a228e6914`: API **137 passed** (29 hint API tests), auth passed, judge unit suite **91 passed / 15 intentionally skipped**, Ruff passed, TypeScript passed, optimized Next.js build and private-state packaging check passed, and Playwright browser suite **17 passed / 1 intentionally skipped**. The real gVisor integration suite and judge-enabled browser test were not run in hosted CI. The API suite emitted one upstream Starlette/HTTPX deprecation warning.
+
+## SAI-011: authenticated hint frontend integration (review branch)
+
+On `feat/sai-011-frontend-hint-api` (not merged), the Next.js problem page retains its public author-written hint ladder while exposing a separate authenticated hint API request. New Zod request/response validation enforces a versioned contract, source provenance (`authored`, `mock`, or genuine `model`), matched problem slug/level, bounded request time, cancellation and safe errors. Requests use the existing Better Auth short-lived API JWT path; no editor draft is sent. The actual configured service still returns authored text, never model output. See [implementation progress](IMPLEMENTATION_PROGRESS.md) and [research audit](REPOSITORY_AUDIT.md).
+
+GitHub Actions on early SAI-011 commits passed API/auth/judge-unit/lint/typecheck/build but initially failed two browser test assertions because the generic `role=alert` selector matched Next.js's route announcer as well as the intended hint alert. This was a **test selector problem**, not a false provider label. Commit `7b42e67641d99f3ac2687bb96766982a4d0d29a2` narrows the selectors. **Latest CI result must be checked before review/merge**; never treat earlier successes as proof of the final branch head. Normal CI does not exercise gVisor integration.
 
 ## Present now
 
