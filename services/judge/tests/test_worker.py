@@ -2,6 +2,7 @@ import json
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from unittest.mock import patch
 from uuid import uuid4
 
 import pytest
@@ -53,11 +54,13 @@ class FakeRunner:
         self.preflight_ran = False
         self.jobs = []
         self.cancel_ran = False
+        self.ready = not failure
 
     def preflight(self):
         self.preflight_ran = True
         if self.failure:
             raise RuntimeError("runtime unavailable")
+        self.ready = True
 
     def judge(self, job):
         self.jobs.append(job)
@@ -68,6 +71,7 @@ class FakeRunner:
 
     def cancel(self):
         self.cancel_ran = True
+        self.ready = False
 
 
 @pytest.mark.parametrize("verdict", list(SUMMARIES))
@@ -116,8 +120,8 @@ def test_completions_retry_same_lease_without_reexecution(job):
     client.completion_failures = 2
     runner = FakeRunner()
     stop = threading.Event()
-    stop.set()  # Do not wait during retry backoff in the unit test.
-    assert Worker(client, runner, stop=stop).run_once()
+    with patch.object(stop, "wait", return_value=False):
+        assert Worker(client, runner, stop=stop).run_once()
     completions = [body for path, body in client.requests if path.endswith("/complete")]
     assert len(completions) == 3
     assert completions[0] == completions[1] == completions[2]
@@ -248,6 +252,77 @@ def test_stop_cancels_active_runner_and_waits_for_cleanup(job):
     thread.join(timeout=3)
     assert not thread.is_alive()
     assert runner.cancel_ran
+    assert client.requests[-1][1]["verdict"] == "SYSTEM_ERROR"
+
+
+@pytest.mark.parametrize("unready", [False, True])
+def test_stopped_or_unready_worker_does_not_claim_a_job(job, unready):
+    runner = FakeRunner()
+    client = FakeClient(job)
+    worker = Worker(client, runner)
+    if unready:
+        runner.ready = False
+    else:
+        worker.stop.set()
+    assert worker.run_once() is False
+    assert worker.stop.is_set()
+    assert client.requests == []
+    assert runner.jobs == []
+
+
+def test_unready_runner_stops_heartbeat_without_advertising(monkeypatch):
+    monkeypatch.setattr("solver_judge.worker.HEARTBEAT_SECONDS", 0)
+    runner = FakeRunner()
+    runner.ready = False
+    client = FakeClient(None)
+    worker = Worker(client, runner)
+    worker._heartbeat_loop()
+    assert worker.stop.is_set()
+    assert client.requests == []
+
+
+def test_cleanup_failure_completes_inflight_job_then_stops(job, caplog):
+    class CleanupFailureRunner(FakeRunner):
+        def judge(self, job):
+            self.jobs.append(job)
+            self.ready = False
+            return {"verdict": "SYSTEM_ERROR", "summary": "private source"}
+
+        def cancel(self):
+            super().cancel()
+            raise RuntimeError("private daemon detail")
+
+    runner = CleanupFailureRunner()
+    client = FakeClient(job)
+    worker = Worker(client, runner)
+    worker.run()
+    assert worker.stop.is_set()
+    assert runner.cancel_ran
+    assert runner.jobs == [job]
+    assert [path for path, _ in client.requests] == [
+        "/internal/judge/heartbeat",
+        "/internal/judge/lease",
+        f"/internal/judge/jobs/{job['id']}/complete",
+    ]
+    assert client.requests[-1][1]["verdict"] == "SYSTEM_ERROR"
+    assert client.requests[-1][1]["summary"] == SUMMARIES["SYSTEM_ERROR"]
+    assert "private" not in caplog.text
+
+
+def test_readiness_revoked_during_lease_does_not_execute_job(job):
+    runner = FakeRunner()
+
+    class RevokingClient(FakeClient):
+        def post(self, path, body):
+            if path.endswith("/lease"):
+                runner.ready = False
+            return super().post(path, body)
+
+    client = RevokingClient(job)
+    worker = Worker(client, runner)
+    assert worker.run_once()
+    assert worker.stop.is_set()
+    assert runner.jobs == []
     assert client.requests[-1][1]["verdict"] == "SYSTEM_ERROR"
 
 

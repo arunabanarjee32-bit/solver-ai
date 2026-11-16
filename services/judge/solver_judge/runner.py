@@ -77,10 +77,15 @@ class SandboxRunner:
 
     def cancel(self) -> None:
         self._cancelled = True
+        self.ready = False
         with self._active_lock:
             names = list(self._active)
+        failed = False
         for name in names:
-            self._remove(name)
+            if not self._remove(name):
+                failed = True
+        if failed:
+            raise RuntimeError("Sandbox cleanup failed; readiness was revoked")
 
     def _docker(self, args: list[str], *, timeout: float = 15) -> bytes:
         completed = limited_process(
@@ -90,12 +95,32 @@ class SandboxRunner:
             raise RuntimeError("The required local Docker/gVisor operation failed")
         return completed.stdout
 
-    def _remove(self, name: str) -> None:
+    def _remove(self, name: str) -> bool:
+        """Forget a container only after removal or a successful absence query."""
         try:
             self._docker(["rm", "--force", name], timeout=10)
-        except (RuntimeError, OSError):
-            # A missing container is already clean. No source, output or daemon details logged.
-            pass
+        except (RuntimeError, OSError, subprocess.SubprocessError):
+            # A failed rm can mean an absent container or an unavailable daemon.
+            # Only a successful bounded query can establish absence. A name filter
+            # can also match a longer name, which conservatively leaves cleanup pending.
+            try:
+                remaining = self._docker(
+                    [
+                        "container", "ls", "--all", "--filter", f"name={name}",
+                        "--format", "{{.Names}}",
+                    ],
+                    timeout=5,
+                )
+            except (RuntimeError, OSError, subprocess.SubprocessError):
+                remaining = None
+            if remaining is None or remaining.strip():
+                self.ready = False
+                with self._active_lock:
+                    self._active.add(name)
+                return False
+        with self._active_lock:
+            self._active.discard(name)
+        return True
 
     def _container(self, payload: dict, *, timeout: float = 85) -> dict:
         if self.image_id is None:
@@ -161,12 +186,14 @@ class SandboxRunner:
         except (ValueError, UnicodeError, OSError) as exc:
             raise RuntimeError("Sandbox response could not be validated") from exc
         finally:
-            self._remove(name)
-            with self._active_lock:
-                self._active.discard(name)
+            if not self._remove(name):
+                raise RuntimeError("Sandbox cleanup failed; readiness was revoked") from None
 
     def preflight(self) -> None:
         self.ready = False
+        with self._active_lock:
+            if self._active:
+                raise RuntimeError("Unresolved sandbox cleanup prevents readiness")
         runtimes = json.loads(self._docker(["info", "--format", "{{json .Runtimes}} "]))
         if "runsc" not in runtimes:
             raise RuntimeError(

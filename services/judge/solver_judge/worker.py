@@ -37,6 +37,8 @@ class APIError(RuntimeError):
 
 
 class Runner(Protocol):
+    ready: bool
+
     def preflight(self) -> Any: ...
 
     def judge(self, job: dict[str, Any]) -> dict[str, str]: ...
@@ -161,6 +163,9 @@ class Worker:
         self.worker_id = worker_id or uuid4().hex
 
     def heartbeat(self) -> None:
+        if self.stop.is_set() or not self.runner.ready:
+            self.stop.set()
+            raise APIError("Sandbox readiness is unavailable")
         result = self.client.post(
             "/internal/judge/heartbeat",
             {
@@ -177,6 +182,8 @@ class Worker:
             try:
                 self.heartbeat()
             except APIError:
+                if self.stop.is_set():
+                    return
                 LOG.warning(
                     "Judge heartbeat failed; readiness will expire unless restored"
                 )
@@ -207,21 +214,32 @@ class Worker:
             LOG.error("Sandbox cancellation failed; inspect the local worker runtime")
 
     def run_once(self) -> bool:
+        if self.stop.is_set() or not self.runner.ready:
+            self.stop.set()
+            return False
         leased = self.client.post(
             "/internal/judge/lease", {"worker_id": self.worker_id}
         )
+        if not self.runner.ready:
+            self.stop.set()
         if leased.get("job") is None:
             return False
         job = validate_job(leased["job"])
         try:
-            result = self.runner.judge(job)
-            verdict = result.get("verdict", "SYSTEM_ERROR")
-            if verdict not in SUMMARIES:
+            if self.stop.is_set():
                 verdict = "SYSTEM_ERROR"
+            else:
+                result = self.runner.judge(job)
+                verdict = result.get("verdict", "SYSTEM_ERROR")
+                if verdict not in SUMMARIES:
+                    verdict = "SYSTEM_ERROR"
         except Exception:  # noqa: BLE001 -- fail closed without leaking runner exception details
             # Never log exception details: a runner failure could contain source or private output.
             LOG.error("Isolated judge failed; reporting SYSTEM_ERROR")
             verdict = "SYSTEM_ERROR"
+        if not self.runner.ready:
+            LOG.error("Sandbox readiness was revoked; stopping worker")
+            self.stop.set()
         completion = {
             "worker_id": self.worker_id,
             "lease_token": job["lease_token"],
@@ -260,7 +278,7 @@ class Worker:
                 raise RuntimeError("Sandbox preflight failed") from exc
             if self.stop.is_set():
                 return
-            if not self._initial_heartbeat():
+            if not self._initial_heartbeat() or self.stop.is_set():
                 return
             heartbeat = threading.Thread(
                 target=self._heartbeat_loop, name="judge-heartbeat", daemon=True
