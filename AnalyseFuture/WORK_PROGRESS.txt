@@ -6,7 +6,7 @@ Default/delivery branch: main; direct pushes authorized by owner.
 
 Completed: fetched all advertised branches/tags (63 reachable commits; 4 remote branches; no tags). Clean baseline. Inventoried all 238 baseline tracked paths. Verified full-history Git bundle outside checkout at /workspace/recovery-snapshots/solver-ai-a00894d-before-full-review.bundle; SHA256 059aebbfa537a904b70bba8b6d0c13a275aa4d37e33d9e97a10d377b2909f125.
 
-Current: deep source/history/security reviews; API/judge/web/docs/archive ownership reviews running independently.
+Current: deep reviews finished for all baseline source/document groups and archive members. Recovering reviewed SAI-011 authored hint UI and feature-grouping 10 frontend modules. API/judge runtime boundaries retained. Judge cleanup failure fix in progress; full validation pending.
 Discovery: unmerged SAI-011 authenticated hint UI exists on origin/feat/sai-011-frontend-hint-api, and five project-memory docs exist on another branch. SAI-010 implementation already matches main.
 
 Pending: finish per-file assessments; record consolidation design; recover compatible hint UI/tests; group frontend features; preserve branch-only documents; implement justified repairs; run checks; publish complete requested reports and verify main.

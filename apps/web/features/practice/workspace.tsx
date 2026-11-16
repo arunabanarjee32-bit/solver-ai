@@ -2,9 +2,10 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { getJSON, type Problem } from "@/lib/api";
-import { Icon } from "./icons";
-import { SubmissionPanel } from "./submission-panel";
+import { getJSON, type Problem } from "@/features/practice/api";
+import { Icon } from "@/components/icons";
+import { SubmissionPanel } from "@/features/submissions/submission-panel";
+import { AccountHint } from "@/features/hints/account-hint";
 const CodePane = dynamic(() => import("./code-pane").then((m) => m.CodePane), {
   ssr: false,
   loading: () => (
@@ -155,6 +156,10 @@ export function Workspace({ slug }: { slug: string }) {
                     </button>
                   )}
                 </div>
+                <AccountHint
+                  slug={slug}
+                  level={Math.min(hints + 1, 3) as 1 | 2 | 3}
+                />
                 <p className="provenance">
                   Original problem · {problem.provenance.author}
                   <br />

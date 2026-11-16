@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/features/accounts/client";
 import { Icon } from "./icons";
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

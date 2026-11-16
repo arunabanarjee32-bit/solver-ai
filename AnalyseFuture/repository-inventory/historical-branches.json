@@ -1,0 +1,211 @@
+{
+  "files": [
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "apps/web/app/globals.css",
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css",
+      "bytes": 34363,
+      "sha256": "235b599faf3fe033be93b701caa33402aa1af4dc04d22653b0f7f1a919f403ba",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "apps/web/components/account-hint.tsx",
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx",
+      "bytes": 3821,
+      "sha256": "5b947efd1c94c9c2cc38a1da8c4dd1683102446c1a33615f6d5aa93697d78073",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "apps/web/components/workspace.tsx",
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx",
+      "bytes": 7455,
+      "sha256": "c3a0c12123b9d0c39d93205989f0bfeb7fd834ef54ff53660e0cfb5b2fd34965",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "apps/web/lib/hints.ts",
+      "path": "AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts",
+      "bytes": 5515,
+      "sha256": "f7f827f9443916cf794136758184dcc82c745c7088b631a883b4ba182304b01f",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/AI_ARCHITECTURE_PLAN.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md",
+      "bytes": 5284,
+      "sha256": "3ee4afb78198c398447dcd833e93c4a47156c71248e86495dbab7db1b229f2c0",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/CODEX_PLAYBOOK.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md",
+      "bytes": 2980,
+      "sha256": "eae8246d1a5970800b69366620ba49bc9e6e7c253c8e115bfa95f60dcca0b3b6",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/IMPLEMENTATION_BACKLOG.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md",
+      "bytes": 8111,
+      "sha256": "b6e0aebd7d6714ea9607cb12a2c1ec328b2f86f672dc7ad9f2f87979774ea3d2",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/IMPLEMENTATION_PROGRESS.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md",
+      "bytes": 4739,
+      "sha256": "70faced06998f157f86ab7adfaa05b4f7e39297eb7699a3bcd709eb90e8c61c6",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/INDEX.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md",
+      "bytes": 3140,
+      "sha256": "19ce79df4677f5536cd8fcac64f0dd98d7f06f83fd36e4e9ecc83e3d24baab41",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/PRIMARY_RESEARCH_REPOS.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md",
+      "bytes": 5649,
+      "sha256": "ad800839c32e860bcf2d4dcfbffa97d410fda99c63dfaf77a0f0f88348a64baa",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/PROJECT_STATUS.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md",
+      "bytes": 9455,
+      "sha256": "dcd5005f4cc4c84ff6f857b543565a5658050ebf6facd7b665040a3e054c7f6b",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "bytes": 9524,
+      "sha256": "3f0440e68468531d8eb11bc99773b3fb50cd2e056ebb28eb71a04cb0a698741d",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "docs/REPOSITORY_AUDIT.md",
+      "path": "AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md",
+      "bytes": 9998,
+      "sha256": "4f5189ce4f6c5db2635dc0bbdd4547fb7b51315cc46244f1e7bd4883a5816f17",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/feat/sai-011-frontend-hint-api",
+      "commit": "b591db142d7b65c306769a59251ed4129f42118a",
+      "original_path": "tests/e2e/hints.spec.ts",
+      "path": "AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts",
+      "bytes": 6824,
+      "sha256": "3213edda43b7c7234fa6def8384b4b3da9f7a884028fb28a1f714c02207bcf64",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "AGENTS.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream",
+      "bytes": 3440,
+      "sha256": "8000e8a94a6e627c341193a62837e89f0cb4caeca97ebac2faac617744557010",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "README.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/README.md",
+      "bytes": 7413,
+      "sha256": "a325c60f0f8af5548b468925a093ca66c179f2c57bdcff20f3c8839b86720879",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/CHAT_CONTINUITY_LOG.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md",
+      "bytes": 8482,
+      "sha256": "3620b489c426dab8e11f76d5b79d16ffe4a33c9e892f2c86c2320b893a092919",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/INDEX.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md",
+      "bytes": 3225,
+      "sha256": "593212097137d9212f4e124e872b136c40940330ae1cddb3851c32e7213ecf4a",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/MASTER_DEVELOPMENT_SPEC.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md",
+      "bytes": 10235,
+      "sha256": "a1741e4e8ba26a6bebcb1ed93497d8dafab18fadb5470421b672f08122a9bd1c",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/PROJECT_MEMORY.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md",
+      "bytes": 26314,
+      "sha256": "2c2a78940655a73a19673072cb7db583a9744c0ff36a79a1e53b60a61cae2789",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/RESUME_PROMPT.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md",
+      "bytes": 2584,
+      "sha256": "82b9d2fe6d9b6ec4d59bdcca0b8a36b1a9cc062abee7b1be2da744c4a37a6efb",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf",
+      "bytes": 57912,
+      "sha256": "4125eaa23fbe5c271453a36fb7ffb7f9e55f7dda83fa4028476f4f3f40baf43b",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    },
+    {
+      "ref": "origin/docs/solver-ai-permanent-project-memory",
+      "commit": "48192a87652f523818f1dea29caa54fe46e163a7",
+      "original_path": "docs/START_HERE.md",
+      "path": "AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md",
+      "bytes": 3198,
+      "sha256": "fad5bf0421ed7237cefb872d5d08d123b3806297bb71ae247892447a7cbd22ba",
+      "reason": "Preserved accessible branch version before selective consolidation; not an active dependency."
+    }
+  ]
+}

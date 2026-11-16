@@ -2,7 +2,7 @@
 // than maintaining a parallel copy of its session/account/JWKS tables.
 import { fileURLToPath } from "node:url";
 import { getMigrations } from "better-auth/db/migration";
-import { getAuthOptions } from "../lib/auth.ts";
+import { getAuthOptions } from "../features/accounts/server.ts";
 
 process.chdir(fileURLToPath(new URL("../", import.meta.url)));
 const options = getAuthOptions();

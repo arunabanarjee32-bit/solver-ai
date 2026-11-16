@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { authClient } from "./auth-client";
+import { authClient } from "@/features/accounts/client";
 
 const languageSchema = z.enum(["python", "cpp"]);
 const verdictSchema = z.enum([

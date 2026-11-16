@@ -1,4 +1,4 @@
-import { Workspace } from "@/components/workspace";
+import { Workspace } from "@/features/practice/workspace";
 export default async function ProblemRoute({
   params,
 }: {

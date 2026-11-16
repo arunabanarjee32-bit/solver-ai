@@ -3,7 +3,7 @@ import {
   getJSON,
   PRACTICE_REQUEST_TIMEOUT_MS,
   type ProblemPage,
-} from "../../apps/web/lib/api";
+} from "../../apps/web/features/practice/api";
 
 const invalidResponse =
   "The practice service returned an invalid response. Please try again.";

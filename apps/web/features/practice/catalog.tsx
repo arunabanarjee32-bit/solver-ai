@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { getJSON, type ProblemPage } from "@/lib/api";
-import { Icon } from "./icons";
+import { getJSON, type ProblemPage } from "@/features/practice/api";
+import { Icon } from "@/components/icons";
 
 export function Catalog() {
   const [data, setData] = useState<ProblemPage | null>(null);

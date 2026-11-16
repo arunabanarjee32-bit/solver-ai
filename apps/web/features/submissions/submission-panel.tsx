@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/features/accounts/client";
 import {
   createSubmission,
   getCapabilities,
@@ -11,8 +11,8 @@ import {
   type Language,
   type Submission,
   type SubmissionMode,
-} from "@/lib/submissions";
-import { Icon } from "./icons";
+} from "@/features/submissions/api";
+import { Icon } from "@/components/icons";
 
 function pause(milliseconds: number, signal: AbortSignal) {
   return new Promise<void>((resolve, reject) => {

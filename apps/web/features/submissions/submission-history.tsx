@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/features/accounts/client";
 import {
   getSubmission,
   listSubmissions,
   type Submission,
   type SubmissionPage,
-} from "@/lib/submissions";
+} from "@/features/submissions/api";
 import { SubmissionResult } from "./submission-panel";
 
 export function SubmissionHistory() {

@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { after, before, test } from "node:test";
 import { getMigrations } from "better-auth/db/migration";
-import { getAuth, getAuthOptions } from "../lib/auth.ts";
+import { getAuth, getAuthOptions } from "../features/accounts/server.ts";
 
 const directory = mkdtempSync(join(tmpdir(), "solver-auth-test-"));
 const origin = "http://127.0.0.1:3000";

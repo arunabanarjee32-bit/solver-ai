@@ -1,4 +1,4 @@
-import { SubmissionHistory } from "@/components/submission-history";
+import { SubmissionHistory } from "@/features/submissions/submission-history";
 
 export default function SubmissionsPage() {
   return <SubmissionHistory />;
