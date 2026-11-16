@@ -1,4 +1,5 @@
 .git
+AnalyseFuture
 **/node_modules
 **/.next
 **/.venv

@@ -10,7 +10,7 @@ function visit(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const path = join(directory, entry.name);
     if (
-      [".local", ".git", "auth-secret", "judge-worker-token"].includes(entry.name) ||
+      [".local", ".git", "auth-secret", "judge-worker-token", "AnalyseFuture"].includes(entry.name) ||
       entry.name === ".env" ||
       (entry.name.startsWith(".env.") && entry.name !== ".env.example")
     ) {

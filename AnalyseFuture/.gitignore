@@ -1,0 +1,4 @@
+# These are inventoried archive members, including source directories named
+# models/ that would otherwise match the application's broad ignore rules.
+!extracted/
+!extracted/**

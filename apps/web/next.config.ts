@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       "../../.local/**/*",
       "../../services/**/.local/**/*",
       "../../.git/**/*",
+      "../../AnalyseFuture/**/*",
       ".env",
       ".env.*",
       "../../.env",
