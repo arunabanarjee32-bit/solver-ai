@@ -46,6 +46,10 @@ It aims to support:
 
 **The full product above remains a roadmap.** The local implementation supports browsing, editing, accounts, finite isolated grading and authored hints. It does not provide AI-generated results or a production judge certification.
 
+## Permanent project memory for new ChatGPT / Codex sessions
+
+**Start with [PROJECT_MEMORY.md](docs/PROJECT_MEMORY.md)**: a comprehensive, GitHub-readable record of the current architecture, all 20 study repositories, the two primary solver references, charts, roadmap, exact branches/CI and next steps. For a Word-compatible file containing the full continuity pack, open [SOLVER_AI_COMPLETE_HANDBOOK.rtf](docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf). The [chat decision log](docs/CHAT_CONTINUITY_LOG.md), [master development specification](docs/MASTER_DEVELOPMENT_SPEC.md), and [copy/paste resume prompt](docs/RESUME_PROMPT.md) help an agent continue without older conversations. Chat excerpts are historical summaries, **not a complete verbatim export**; code and current GitHub state are authoritative.
+
 ## New contributor? Start here
 
 1. Read [Start Here](docs/START_HERE.md) (orientation, how to contribute today).

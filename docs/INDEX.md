@@ -4,6 +4,11 @@ New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION
 
 | Document | Purpose |
 | --- | --- |
+| [Permanent project memory](PROJECT_MEMORY.md) | **Start here in every new chat/Codex session**: architecture, code status, 20 upstream repos, diagrams, CI, backlog and links |
+| [Word-compatible complete handbook](SOLVER_AI_COMPLETE_HANDBOOK.rtf) | Entire continuity pack in one RTF document, readable in Microsoft Word |
+| [Conversation continuity / decisions](CHAT_CONTINUITY_LOG.md) | Accessible project chat history, important requests, actual actions, update template |
+| [Master development specification](MASTER_DEVELOPMENT_SPEC.md) | Complete structured preservation of the user's ten-task development prompt |
+| [Copy/paste resume prompt](RESUME_PROMPT.md) | Ready-to-use instruction for a brand-new ChatGPT or Codex session |
 | [Start here](START_HERE.md) | First-day orientation and workflow |
 | [Development](DEVELOPMENT.md) | Tested setup, service commands and verification |
 | [Foundation decision](adr/0001-practice-foundation.md) | Initial scope, dependencies and safety boundaries |

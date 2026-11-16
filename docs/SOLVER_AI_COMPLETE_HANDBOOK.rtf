@@ -1,0 +1,461 @@
+{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0 Calibri;}{\f1 Consolas;}}{\colortbl;\red23\green45\blue77;\red79\green91\blue112;}\viewkind4\uc1\pard\f0\fs22\sa120 
+\page\pard\f0\cf1\b\fs36 PART I \u8212? PROJECT MEMORY & ARCHITECTURE\b0\cf0\fs22\par 
+\pard\f0\cf1\b\fs32 SOLVER AI \u8212? PERMANENT PROJECT MEMORY\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Continuity handbook | 16 November 2026 | GitHub-first source of truth\par 
+\pard\sa100\par 
+\pard\li300\cf2\i Every new ChatGPT, Codex or human developer should read this document before writing code. It consolidates the project purpose, real implementation, research, charts, links, tests, constraints, decisions and next steps. It is a continuity record based on accessible conversation excerpts and GitHub evidence\u8212?not a verbatim export of every historical chat. Never treat it as a replacement for inspecting the current source, branch, open PRs and CI.\i0\cf0\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 - Main repository: https://github.com/arunabanarjee32-bit/solver-ai\par 
+\pard\f0\fs21\li0 - Mission: Build a fully owned, original, commercially viable AI-native DSA/competitive-programming/ICPC practice system that competes on user value with LeetCode, Codeforces, AtCoder, HackerRank and AI coding assistants.\par 
+\pard\f0\fs21\li0 - Existing foundation: One Next.js/Monaco + Better Auth + FastAPI + SQLite-owned-submission-queue + gVisor judge monorepo. Do not restart it.\par 
+\pard\f0\fs21\li0 - Status at this snapshot: main = 9952f8b5fa74f6900d57d1b48e3a26f3e962a358. SAI-010 signed offline hint backend is already on main. SAI-011 authenticated hint frontend and research docs are in successfully tested PR #5 (https://github.com/arunabanarjee32-bit/solver-ai/pull/5), head b591db142d7b65c306769a59251ed4129f42118a; unmerged as checked 16 Nov.\par 
+\pard\f0\fs21\li0 - Exactly two primary solver research references: https://github.com/kagnlp/CodeGenerator (CodeSIM/MapCoder, MIT) and https://github.com/Nan-Do/phi-code (Apache-2.0). Study design patterns only, not unsafe executors.\par 
+\pard\f0\fs21\li0 - Immediate next step: Review PR #5 and merge only after maintainer approval; then start threat-model/budget ADR for a real model provider, not paid inference or GPU training.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 A. How to resume in a new chat\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Paste RESUME_PROMPT.md (RESUME_PROMPT.md) into a new session, or ask the agent to read docs/PROJECT_MEMORY.md and docs/MASTER_DEVELOPMENT_SPEC.md. Every session must:\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 1. Check the exact current main SHA, PRs, branches, workflows, dirty files and permissions. This snapshot can be stale.\par 
+\pard\f0\fs21\li0 2. Read README.md, AGENTS.md, docs/INDEX.md, docs/PROJECT_STATUS.md and the actual code/tests before making a plan.\par 
+\pard\f0\fs21\li0 3. Reuse tested functionality; select one narrow task, dependencies, test plan, security policy and rollback; no unnecessary infrastructure, models or rewrite.\par 
+\pard\f0\fs21\li0 4. Implement on a focused branch, run actual tests, record pass/fail/skip, open PR, do not merge unreviewed work.\par 
+\pard\f0\fs21\li0 5. Update this handbook, CHAT_CONTINUITY_LOG (CHAT_CONTINUITY_LOG.md), PROJECT_STATUS.md and a one-task handoff with commit/CI links. Exclude secrets, private judge cases, private submitted code and personal data from this public repo.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 B. Project goals, product specification and honesty\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Primary learner journey: Pick an authorized original problem \u8594? read statement, samples and constraints \u8594? edit C++17/Python in Monaco \u8594? run sample cases \u8594? submit to isolated judge \u8594? see authentic AC/WA/CE/RE/TLE/MLE/OLE verdict \u8594? review owned history \u8594? read authored or authenticated hints \u8594? eventually obtain true AI tutoring, debugging and validated candidate-solving assistance.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Differentiation: Accessible progression from beginner to ICPC, grounded explanations, visible AI provenance, careful counterexample debugging, reproducible solver verification, personalization and affordable access. Competitors are workflow benchmarks, not code/content sources.\par 
+\pard\sa100\par 
+\pard\f0\fs19\li240 Feature  |  Actual status as of snapshot  |  Boundary\par 
+\pard\f0\fs19\li240 Three original seed problems and catalog filtering  |  On main  |  Limited seed library; do not claim thousands of tasks\par 
+\pard\f0\fs19\li240 Next.js responsive workspace, Python/C++17 Monaco, local drafts  |  On main  |  Draft source stays in browser until user chooses Run/Submit\par 
+\pard\f0\fs19\li240 Better Auth local accounts and short-lived signed JWT for FastAPI  |  On main  |  Production recovery/verification policies unresolved\par 
+\pard\f0\fs19\li240 Owner-scoped SQLite submission queue/history and polling  |  On main  |  Real local persistence; future scale migration only if warranted\par 
+\pard\f0\fs19\li240 gVisor-only isolated judge worker and original generated cases  |  On main  |  Locally validated, not publicly security-certified\par 
+\pard\f0\fs19\li240 Public author-written hint ladder  |  On main  |  Not generated by a model\par 
+\pard\f0\fs19\li240 Signed POST /api/v1/hints  |  On main (SAI-010)  |  Currently authored only, no model inference\par 
+\pard\f0\fs19\li240 Signed-in hint UI / Zod contract / browser tests  |  In PR #5 (SAI-011)  |  Implemented and CI-tested; not merged\par 
+\pard\f0\fs19\li240 Genuine AI tutor, debugger, verified solver  |  Not implemented  |  No fabricated model capabilities\par 
+\pard\f0\fs19\li240 Learning paths, contests/teams, ratings, leaderboard  |  Planned  |  Contest integrity required\par 
+\pard\f0\fs19\li240 Paid provider APIs, open-weight fine-tuning, GPU/vLLM, public production deployment  |  Not implemented / not approved  |  Need budget, rights, benchmark, release/security gate\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 C. Real repository architecture and request flows\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Top-level: apps/web (Next.js 16/TypeScript/React), services/api (FastAPI/Pydantic), services/judge (trusted worker and gVisor-only runner), tests/e2e (Playwright), scripts, compose.yaml, .github/workflows/ci.yml, docs, pinned package-lock.json and services/api/uv.lock.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 Chart 1 \u8212? authenticated learning and execution\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f1\fs18\cf2 [START CODE / MERMAID CHART SOURCE]\par 
+\pard\f1\fs18 flowchart TD\par 
+\pard\f1\fs18   B["Browser: Next.js + Monaco drafts"]\par 
+\pard\f1\fs18   A["Better Auth: sessions / EdDSA API JWT"]\par 
+\pard\f1\fs18   F["FastAPI: validated v1 public & signed endpoints"]\par 
+\pard\f1\fs18   C["Public original catalog + authored hints"]\par 
+\pard\f1\fs18   S["Owned SQLite submissions + queue/leases"]\par 
+\pard\f1\fs18   W["Worker-authenticated trusted judge controller"]\par 
+\pard\f1\fs18   G["gVisor sandbox: isolated Python / C++17"]\par 
+\pard\f1\fs18   O["Sanitized verdict and owner-only history"]\par 
+\pard\f1\fs18   B --> A\par 
+\pard\f1\fs18   A -->|"Short-lived JWT, fixed JWKS"| F\par 
+\pard\f1\fs18   B -->|"Public catalog/read"| F\par 
+\pard\f1\fs18   F --> C\par 
+\pard\f1\fs18   B -->|"Explicit Run/Submit"| F\par 
+\pard\f1\fs18   F --> S\par 
+\pard\f1\fs18   S -->|"Separate worker credential"| W\par 
+\pard\f1\fs18   W --> G\par 
+\pard\f1\fs18   G --> W\par 
+\pard\f1\fs18   W --> S\par 
+\pard\f1\fs18   S --> F\par 
+\pard\f1\fs18   F --> O\par 
+\pard\f1\fs18   O --> B\par 
+\pard\f1\fs18\cf2 [END CODE / CHART SOURCE]\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Trust boundaries: Browser sessions belong to Better Auth, not to the FastAPI service; FastAPI verifies EdDSA signature, fixed issuer, solver-api audience and subject. Submission records are scoped to verified user. Only the trusted judge worker leases and completes jobs using its separate credential; generated grading case expectations never go to web/API model context. The worker refuses ordinary-host/ordinary-Docker execution if gVisor preflight fails. No unrestricted exec, eval or host subprocess for generated/user code.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 Actual code map and important contracts\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs19\li240 Source path  |  Purpose  |  Action\par 
+\pard\f0\fs19\li240 apps/web/components/workspace.tsx  |  Problem, samples, guest authored hints, editor layout  |  Keep public hint ladder; PR #5 adds account request\par 
+\pard\f0\fs19\li240 apps/web/components/code-pane.tsx  |  Monaco/simple editor, per-problem/lang local draft  |  Never auto-upload draft\par 
+\pard\f0\fs19\li240 apps/web/components/submission-panel.tsx  |  Run/Submit, queue state, polling  |  Preserve cancel and session correctness\par 
+\pard\f0\fs19\li240 apps/web/lib/api.ts  |  Zod-verified public catalog request  |  Strict response schema opt-in\par 
+\pard\f0\fs19\li240 apps/web/lib/submissions.ts  |  Short-lived Better Auth JWT and typed API requests  |  Reuse existing auth pattern\par 
+\pard\f0\fs19\li240 apps/web/lib/auth.ts and auth-client.ts  |  Session authority, keys, JWT  |  Avoid second identity service\par 
+\pard\f0\fs19\li240 apps/web/next.config.ts  |  Same-origin proxy to API  |  Keep credential separation\par 
+\pard\f0\fs19\li240 services/api/solver_api/main.py  |  Catalog, hint, owned queue, internal worker routes  |  Keep versioned boundaries\par 
+\pard\f0\fs19\li240 services/api/solver_api/auth.py  |  Fixed JWKS EdDSA validation  |  Fail closed\par 
+\pard\f0\fs19\li240 services/api/solver_api/hints.py  |  Signed levels 1\u8211?3 and future backend Protocol  |  Already on main\par 
+\pard\f0\fs19\li240 services/api/solver_api/submissions.py  |  Owned durable queue, quota, idempotency, leases  |  Preserve cross-user security\par 
+\pard\f0\fs19\li240 services/judge/solver_judge/runner.py  |  gVisor-only isolated execution  |  No host fallback\par 
+\pard\f0\fs19\li240 services/judge/solver_judge/worker.py  |  Trusted worker API and lifecycle  |  Separate secret\par 
+\pard\f0\fs19\li240 services/judge/solver_judge/cases.py and harness.py  |  Original grading cases and bounded run  |  Keep private answers trusted\par 
+\pard\f0\fs19\li240 services/api/tests/test_hints.py  |  Auth/provenance/invalid/timeout/backend tests  |  Existing coverage, do not recreate\par 
+\pard\f0\fs19\li240 tests/e2e/  |  Auth, editor, reliability and submission browser tests  |  Extend focused regressions\par 
+\pard\f0\fs19\li240 apps/web/lib/hints.ts and components/account-hint.tsx  |  PR #5 only, strict account hints UI  |  Merge with maintainer review\par 
+\pard\f0\fs19\li240 tests/e2e/hints.spec.ts  |  PR #5 only, guest/auth/authored/mock/model/error tests  |  CI passed at head SHA\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Existing endpoints: GET /api/v1/problems; GET /api/v1/problems/\{slug\}; POST /api/v1/hints; GET /api/v1/capabilities; POST /api/v1/submissions; GET /api/v1/submissions; GET /api/v1/submissions/\{job_id\}; separate /internal/judge/ worker endpoints. Do not mistake proposed progress/debugger/solver APIs for implemented routes.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Hint contract: send JSON \{"problem_slug":"signal-sum","level":1\}; signed backend serves levels 1,2,3 and response contains schema_version:"1", slug, level, hint, source, provider, ai_generated. Invariant: authored source \u8658? provider null and ai_generated false; mock must say mock, genuine model must say model and ai_generated true. Present backend only produces authored hints.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 D. Verified GitHub work and tests\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 - SAI-010: Backend signed author hints already merged into current main. Earlier successful GitHub Actions run 43737836616 (https://github.com/arunabanarjee32-bit/solver-ai/actions/runs/43737836616) tested it. Earlier project status documents local hostile-program / judge evidence; not a public deployment.\par 
+\pard\f0\fs21\li0 - SAI-011: PR #5 (https://github.com/arunabanarjee32-bit/solver-ai/pull/5), feat/sai-011-frontend-hint-api at b591db142d7b65c306769a59251ed4129f42118a. Scope: typed apps/web/lib/hints.ts, account hint component, workspace/CSS, browser tests, 20-reference research and documentation. No paid model or new runner.\par 
+\pard\f0\fs21\li0 - Verified CI of exact final feature head: workflow 43837980897 (https://github.com/arunabanarjee32-bit/solver-ai/actions/runs/43837980897) passed, with frozen installs, 137 API tests passed, Better Auth passed, 91 judge unit passed / 15 intentionally skipped, Ruff passed, TypeScript passed, optimized build and private-state packaging check passed, 22 browser passed / 1 intentionally skipped. One upstream API-test deprecation warning. Real gVisor integration was not rerun by standard hosted CI.\par 
+\pard\f0\fs21\li0 - Regression fixed during PR: Two initial browser tests failed because a Playwright generic role=alert locator also matched Next.js route announcer. Commit 7b42e676 scoped the selectors and subsequent CI passed. Distinguish initial fail* from final pass*. No local clone was possible in that session because GitHub DNS resolution failed; hosted CI is the actual test environment.\par 
+\pard\f0\fs21\li0 - GitHub policy: Last verified state was PR #5 open and unmerged. A PR is not a new feature on main until reviewed and merged. Never force-push or auto-merge unreviewed changes.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 E. Exactly TWO primary AI research repositories\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 1. CodeSIM / MapCoder \u8212? planning, simulation and bounded repair\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 https://github.com/kagnlp/CodeGenerator \u8226? default master \u8226? observed HEAD 9cf09ee6c788bfda3b7e1524e88be3447098eb24 \u8226? MIT license verified.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Relevant source: src/promptings/CodeSIM.py (planning, simulations, debug retries), src/models/ModelFactory.py (provider dispatch), src/evaluations/func_evaluate.py and src/evaluations/api_comm.py (unsafe evaluation models). Independently implement structured AlgorithmPlan, constraints, public-sample simulation, bounded repair and evidence logs. Do not copy its unrestricted exec evaluation or raw hidden test logs. Its 5-plan/5-debug research defaults are not* approved production budgets.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 2. phi-code \u8212? diverse candidates and test-evidence-first ranking\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 https://github.com/Nan-Do/phi-code \u8226? default main \u8226? observed HEAD b3ca73d7dcc37aed6809eb7789281465a7a04d22 \u8226? Apache-2.0 license verified.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Relevant source: solver/terminal.py (multiple candidates and samples-first ranking), solver/main.py (model/ranker wiring), ranker/train.py (optional ranking research), solver/leetcode.py (uses exec, unsafe for a service). Independently implement bounded candidate records, real isolated execution, reproducible ranking and deterministic tie-breaks. Do not copy host subprocesses, platform content scrapers, unsafe exec, heavyweight ranker or unverified performance claims. Semantic similarity is not correctness evidence.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Synergy: CodeSIM suggests how to plan and revise*; phi-code suggests how to generate, compare and rank*. The existing gVisor sandbox remains the only authority for executable evidence; finite successful tests are not proof of universal correctness. Do not install either repo now.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 F. All 20 public study repositories and links\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 These are research candidates, not installation instructions. SHAs below reflect upstream default heads observed 2026-11-16, not deployment pinning; licensing, maintenance, security and dataset rights require independent recheck before adoption. Fuller candidate-source analyses are in audit 2026-11-15 (AUDIT_AND_AI_PLAN_2026-11-15.md) and PR #5's refreshed audit (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/REPOSITORY_AUDIT.md).\par 
+\pard\sa100\par 
+\pard\f0\fs19\li240 #  |  Exact GitHub URL  |  Branch / SHA (12)  |  Commercial/security/integration disposition\par 
+\pard\f0\fs19\li240 1  |  https://github.com/Nan-Do/phi-code  |  main b3ca73d7dcc3  |  Apache-2.0; primary research, unsafe host execution not reused\par 
+\pard\f0\fs19\li240 2  |  https://github.com/kagnlp/CodeGenerator  |  master 9cf09ee6c788  |  MIT; primary research, bounded plans only\par 
+\pard\f0\fs19\li240 3  |  https://github.com/0xmetaschool/dsa-gpt-tutor  |  main e000b82487d7  |  MIT indication; DSA tutor UX reference\par 
+\pard\f0\fs19\li240 4  |  https://github.com/QingdaoU/OnlineJudge  |  master df873278ab1b  |  MIT indication; Django admin/contest research\par 
+\pard\f0\fs19\li240 5  |  https://github.com/MonashAPS/MOJ  |  main 2d5ca19bc298  |  AGPL-3.0-or-later; future ICPC contest research only\par 
+\pard\f0\fs19\li240 6  |  https://github.com/DMOJ/online-judge  |  master 6aaddea6aaea  |  AGPL-3.0; contest/judge website reference\par 
+\pard\f0\fs19\li240 7  |  https://github.com/DMOJ/judge-server  |  master 1245dc4158db  |  AGPL-3.0; advanced/interactivity grader reference\par 
+\pard\f0\fs19\li240 8  |  https://github.com/engineer-man/piston  |  master de2b365ac759  |  MIT wrapper plus isolate/runtime license/security caveats; defer\par 
+\pard\f0\fs19\li240 9  |  https://github.com/microsoft/monaco-editor  |  main 85549d055d7a  |  MIT; pinned dependency already integrated\par 
+\pard\f0\fs19\li240 10  |  https://github.com/shadcn-ui/ui  |  main e62c9435fff7  |  MIT; selective UI components only\par 
+\pard\f0\fs19\li240 11  |  https://github.com/better-auth/better-auth  |  main 8382ce613f04  |  MIT; pinned auth dependency already integrated\par 
+\pard\f0\fs19\li240 12  |  https://github.com/fastapi/fastapi  |  master 25584a5bc84c  |  MIT; retained API framework\par 
+\pard\f0\fs19\li240 13  |  https://github.com/huggingface/transformers  |  main 696c46bacf29  |  Apache-2.0; defer open-model training\par 
+\pard\f0\fs19\li240 14  |  https://github.com/huggingface/peft  |  main 3e8f605975c5  |  Apache-2.0; LoRA later if justified\par 
+\pard\f0\fs19\li240 15  |  https://github.com/huggingface/trl  |  main add89358503a  |  Apache-2.0; SFT/RL later if justified\par 
+\pard\f0\fs19\li240 16  |  https://github.com/unslothai/unsloth  |  main 43898738c0d9  |  Apache core/optional term caveats; defer GPU\par 
+\pard\f0\fs19\li240 17  |  https://github.com/vllm-project/vllm  |  main c4182020b39a  |  Apache-2.0; external inference only with measured economics\par 
+\pard\f0\fs19\li240 18  |  https://github.com/meilisearch/meilisearch  |  main 1b782653f25  |  community/enterprise license caveats; overkill for 3 problems\par 
+\pard\f0\fs19\li240 19  |  https://github.com/open-telemetry/opentelemetry-js  |  main 5a78e6aef1  |  Apache-2.0; future redacted telemetry\par 
+\pard\f0\fs19\li240 20  |  https://github.com/google-deepmind/code_contests  |  main fa7a4f8139aa  |  archived; code license \u8800? platform/problem dataset rights\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Models, datasets and benchmarks: Qwen2.5-Coder-7B-Instruct (https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct), Qwen3-4B-Thinking-2507 (https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507), Qwen3-Coder-Next (https://huggingface.co/Qwen/Qwen3-Coder-Next), TACO (https://huggingface.co/datasets/BAAI/TACO), LiveCodeBench (https://livecodebench.github.io/), USACO Guide (https://usaco.guide/). None is automatically approved for training, redistribution or live use. Competitor workflow references: https://leetcode.com/, https://codeforces.com/, https://atcoder.jp/, https://www.hackerrank.com/.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 G. AI architecture design and milestone charts\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 Chart 2 \u8212? proposed trusted AI solving pipeline (NOT BUILT)\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f1\fs18\cf2 [START CODE / MERMAID CHART SOURCE]\par 
+\pard\f1\fs18 flowchart LR\par 
+\pard\f1\fs18   P["Authorized public problem spec"]\par 
+\pard\f1\fs18   V["Bounded provider-neutral tutor"]\par 
+\pard\f1\fs18   Plan["Constraint extraction + 1 plan"]\par 
+\pard\f1\fs18   Candidates["1-2 diverse solution candidates"]\par 
+\pard\f1\fs18   Judge["Existing authorized gVisor judge"]\par 
+\pard\f1\fs18   Score["Compile + sample/approved checks"]\par 
+\pard\f1\fs18   Rank["Rank evidence, optional <=1 repair"]\par 
+\pard\f1\fs18   Report["Learning explanation + budget + uncertainty"]\par 
+\pard\f1\fs18   P --> V\par 
+\pard\f1\fs18   P --> Plan\par 
+\pard\f1\fs18   Plan --> Candidates\par 
+\pard\f1\fs18   Candidates --> Judge\par 
+\pard\f1\fs18   Judge --> Score\par 
+\pard\f1\fs18   Score --> Rank\par 
+\pard\f1\fs18   Rank --> Report\par 
+\pard\f1\fs18   V -.->|"Non-spoiler hints only"| Report\par 
+\pard\f1\fs18\cf2 [END CODE / CHART SOURCE]\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 P1 tutor: provider-neutral interface already scaffolded in solver_api/hints.py; next new task* write docs/adr/0003-tutor-provider.md defining provider allowlist and outbound HTTPS, no user-selected URL/SSRF, per-user/global request/tokens/spend caps, maximum output/time/concurrency, safe errors, data retention/consent, contest disabling, credential redaction, trusted provenance and kill switch; test deterministic fake adapter first. No paid API without approval.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 P2 debugger: read only explicitly authorized user code and public/approved execution evidence; do not expose private expected answers. Explain CE/RE/WA and minimal correction; sandbox any reproduction and redact logs.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 P2 verified solver: parse constraints and algorithm family \u8594? plan \u8594? sample multiple bounded candidates \u8594? simulate hypothesis \u8594? isolate compile/run \u8594? rank by independent allowed evidence \u8594? at most one budgeted repair \u8594? report provider, tokens, latency, observed tests, complexity argument and uncertainty. Passing finite tests \u8800? universal proof.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 P3: personal DSA paths from owned history and later ICPC team contests, registration, scoring penalties, freeze, rating and AI-integrity controls. P4: production migration/search/telemetry/model serving and licensed fine-tuning only if measured outcomes justify cost.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 Chart 3 \u8212? task dependencies and ownership/security gates\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f1\fs18\cf2 [START CODE / MERMAID CHART SOURCE]\par 
+\pard\f1\fs18 flowchart TD\par 
+\pard\f1\fs18   S0["SAI-010 authored API on main"]\par 
+\pard\f1\fs18   S1["SAI-011 frontend API integration PR #5"]\par 
+\pard\f1\fs18   ADR["Provider threat/budget ADR and approval"]\par 
+\pard\f1\fs18   T["P1 real AI tutor"]\par 
+\pard\f1\fs18   D["P2 authorized debugger"]\par 
+\pard\f1\fs18   S["P2 bounded verified solver"]\par 
+\pard\f1\fs18   E["P2 held-out evaluation"]\par 
+\pard\f1\fs18   C["P3 learning & contests"]\par 
+\pard\f1\fs18   M["P4 scale and optional ML"]\par 
+\pard\f1\fs18   S0 --> S1\par 
+\pard\f1\fs18   S1 --> ADR\par 
+\pard\f1\fs18   ADR --> T\par 
+\pard\f1\fs18   T --> D\par 
+\pard\f1\fs18   T --> S\par 
+\pard\f1\fs18   S --> E\par 
+\pard\f1\fs18   E --> C\par 
+\pard\f1\fs18   C --> M\par 
+\pard\f1\fs18\cf2 [END CODE / CHART SOURCE]\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 P0\u8211?P4 backlog (task IDs, tests, cost, rollback)\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs19\li240 ID  |  Goal / source to reuse  |  Acceptance & test requirement  |  Security, budget and rollback\par 
+\pard\f0\fs19\li240 SAI-P0-01  |  Decide original-code LICENSE + contributor IP: OPEN_DECISIONS.md, CONTRIBUTING.md  |  Maintainer approves documented rights/notice policy  |  No silent licensing; doc-only revert under approval\par 
+\pard\f0\fs19\li240 SAI-P0-02  |  Harden public judge using solver_judge/\{runner,worker\}.py and sandbox tests  |  Maintained gVisor, independent review, real hostile-program isolation, host-wide resource limits  |  Critical multi-user RCE; disable public judge, never host fallback\par 
+\pard\f0\fs19\li240 SAI-P0-03  |  Auth recovery/privacy/retention/backups using auth.ts and auth.py  |  owner-scoped tests, restore, policy review, logout-token window  |  Privacy; disable new feature / restore safely\par 
+\pard\f0\fs19\li240 SAI-P0-04  |  Maintain queue ownership and idempotency in submissions.py  |  auth/lease/replay/cross-account tests  |  No cost; revert narrow bugfix if unsafe\par 
+\pard\f0\fs19\li240 SAI-010  |  Signed authored hints solver_api/hints.py  |  API provenance/invalid/auth tests already exist  |  On main, no model, no rebuild\par 
+\pard\f0\fs19\li240 SAI-011  |  Frontend signed hint client/UI in PR #5  |  22 browser + backend/test/build CI green; review before merge  |  No paid provider, rollback UI only\par 
+\pard\f0\fs19\li240 SAI-P1-03  |  Real provider behind HintBackend with ADR first  |  fixed egress, quotas, fake-provider/cancel/redact/security tests  |  cost-controlled, default offline; switch to authored\par 
+\pard\f0\fs19\li240 SAI-P2-01  |  Authorized debugging with user code consent and judge evidence  |  CE/RE/WA, ownership/redaction/sandbox regressions  |  explicit privacy, token/runtime quota; feature off\par 
+\pard\f0\fs19\li240 SAI-P2-02  |  Original planner/candidates/ranker; reuse existing judge  |  max candidates/repair, sandbox, no hidden leak; deterministic fixtures  |  capped tokens/judge, feature flag\par 
+\pard\f0\fs19\li240 SAI-P2-03  |  Held-out evaluation harness  |  licensed data, pass@1/k, fixed seed and cost report  |  no false benchmark; withdraw/rollback\par 
+\pard\f0\fs19\li240 SAI-P3-01  |  Authorized personal progress  |  no cross-user reads; topic/mastery tests  |  sensitive learner data; hide UI\par 
+\pard\f0\fs19\li240 SAI-P3-02  |  Virtual ICPC contests, teams and scoring  |  scoreboard freeze/penalty/integrity tests  |  disable contest if unsafe\par 
+\pard\f0\fs19\li240 SAI-P4-01  |  DB/queue/telemetry migration if load justifies  |  migrations, rollback/restore, redacted metrics  |  higher ops cost; safe restore\par 
+\pard\f0\fs19\li240 SAI-P4-02  |  Open-weight training/serving if benchmark and rights justify  |  reproducible baseline vs tuned quality/cost, privacy  |  high GPU cost; no run without approval\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 A fully specified backlog exists in PR #5 implementation backlog (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/IMPLEMENTATION_BACKLOG.md). If PR #5 is merged, read its copy on main instead of leaving stale branch links.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 H. Owner decisions, release risks and spending rules\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Unresolved decisions (see OPEN_DECISIONS.md (OPEN_DECISIONS.md)): D-01 outbound code license; D-02 contributor inbound IP; D-03 launch audience; D-04 languages/C++20; D-05 audited production identity; D-06 judge deployment; D-07 permitted problem sources; D-08 AI provider/budget; D-09 dataset/model/GPU plans; D-10 hosting budget; D-11 name/trademark; D-12 contest AI restrictions; D-13 privacy/consent/retention/training. Do not invent approvals.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Critical risks: Public repo without LICENSE is not unrestricted open source; AGPL network/distribution terms; copyrighted problem/dataset reuse; stale gVisor runtime and absent host-wide cgroup accounting on the original local runner; email recovery/verification, private data lifecycle and token logout window; prompt injection, SSRF, hidden-case leakage and excess AI spend in future providers. Successful CI is not a production security certification.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Cost optimization: Keep current provider authored (zero model inference); use deterministic fake provider tests; separate coding-agent credits from model tokens; limit candidate count and retries; add GPU/training only after license-approved held-out baseline; defer full contest framework, Redis, Meilisearch, vLLM and extra services until usage evidence. Keep audits and handoff docs updated to stop repeated Codex work.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 I. Reproducible commands and observed limits\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f1\fs18\cf2 [START CODE / MERMAID CHART SOURCE]\par 
+\pard\f1\fs18 npm ci\par 
+\pard\f1\fs18 uv sync --project services/api --frozen\par 
+\pard\f1\fs18 npm run dev\par 
+\pard\f1\fs18 # Stop dev before browser suite\par 
+\pard\f1\fs18 npm run test:api\par 
+\pard\f1\fs18 npm run test:auth\par 
+\pard\f1\fs18 npm run test:judge\par 
+\pard\f1\fs18 uv run --project services/api --frozen ruff check services/api services/judge scripts\par 
+\pard\f1\fs18 npm run typecheck\par 
+\pard\f1\fs18 npm run build\par 
+\pard\f1\fs18 npx playwright install chromium\par 
+\pard\f1\fs18 npm run test:e2e\par 
+\pard\f1\fs18\cf2 [END CODE / CHART SOURCE]\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Isolated real judge verification requires supported gVisor setup and npm run test:judge:integration; judge-enabled browser regression is npm run test:e2e:judge. Do not count skipped cases as passed. Actual setup caveats are in DEVELOPMENT.md (DEVELOPMENT.md) and JUDGE_SECURITY.md (JUDGE_SECURITY.md). No credentials/datasets/worker tokens belong in Git.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 J. Permanent reference links\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Main docs: README (../README.md) \u183? AGENTS (../AGENTS.md) \u183? INDEX (INDEX.md) \u183? START_HERE (START_HERE.md) \u183? PROJECT_STATUS (PROJECT_STATUS.md) \u183? PROJECT_VISION (PROJECT_VISION.md) \u183? PRODUCT_REQUIREMENTS (PRODUCT_REQUIREMENTS.md) \u183? ARCHITECTURE (ARCHITECTURE.md) \u183? ROADMAP (ROADMAP.md) \u183? AI_SOLVER (AI_SOLVER.md) \u183? CODEX_PLAYBOOK (CODEX_PLAYBOOK.md) \u183? JUDGE_SECURITY (JUDGE_SECURITY.md) \u183? MODEL_DATA_EVALUATION (MODEL_DATA_EVALUATION.md) \u183? OPEN_SOURCE_STRATEGY (OPEN_SOURCE_STRATEGY.md) \u183? OPEN_DECISIONS (OPEN_DECISIONS.md) \u183? DATA_AND_LICENSES (DATA_AND_LICENSES.md) \u183? AUDIT_AND_AI_PLAN_2026-11-15 (AUDIT_AND_AI_PLAN_2026-11-15.md) \u183? PUBLIC_REPOSITORIES_AND_RESOURCES (PUBLIC_REPOSITORIES_AND_RESOURCES.txt) \u183? ADR 0001 (adr/0001-practice-foundation.md) \u183? ADR 0002 (adr/0002-authenticated-isolated-submissions.md).\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 PR #5 research docs (not yet on main): REPOSITORY_AUDIT (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/REPOSITORY_AUDIT.md) \u183? PRIMARY_RESEARCH_REPOS (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/PRIMARY_RESEARCH_REPOS.md) \u183? AI_ARCHITECTURE_PLAN (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/AI_ARCHITECTURE_PLAN.md) \u183? IMPLEMENTATION_BACKLOG (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/IMPLEMENTATION_BACKLOG.md) \u183? IMPLEMENTATION_PROGRESS (https://github.com/arunabanarjee32-bit/solver-ai/blob/feat/sai-011-frontend-hint-api/docs/IMPLEMENTATION_PROGRESS.md).\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 This continuity pack: CHAT_CONTINUITY_LOG (CHAT_CONTINUITY_LOG.md) \u183? MASTER_DEVELOPMENT_SPEC (MASTER_DEVELOPMENT_SPEC.md) \u183? RESUME_PROMPT (RESUME_PROMPT.md).\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Update procedure: At the end of each real future session, append one dated entry to the continuity log with user goal, changed paths, exact branch/commit/PR/CI, executed tests and skips, risks and one* next task. Recheck current source before changing status labels. If a previous chat transcript is unavailable, state that\u8212?never fabricate quotes or invent facts.\par 
+\pard\sa100\par 
+\page\pard\f0\cf1\b\fs36 PART II \u8212? CONVERSATION HISTORY AND DECISION LOG\b0\cf0\fs22\par 
+\pard\f0\cf1\b\fs32 Solver AI \u8212? Conversation continuity and decision history\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Last snapshot: 2026-11-16 (Asia/Kolkata)\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 This is a faithful continuity record of accessible project conversation excerpts, requests, decisions and verified actions, not* a full verbatim export of all previous ChatGPT messages. Chats outside the accessible context cannot be recovered by the assistant. Private reasoning, unprovided messages, passwords, tokens, confidential code and hidden grader details are deliberately excluded. The main repo is public, so do not commit private transcripts without reviewing them.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Project conversation timeline\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 2026-11-13 \u8212? establish own software project\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 The project conversations titled Build Solver AI, Review Project Feasibility, and Start Project Development record the owner's intentions:\par 
+\pard\f0\fs21\li0 - Create independently owned software rather than merely install an external product.\par 
+\pard\f0\fs21\li0 - Use Codex/AI developers to build the existing repository: https://github.com/arunabanarjee32-bit/solver-ai.\par 
+\pard\f0\fs21\li0 - Research whether a modular monorepo using selected upstream dependencies and patterns is better than merging whole repositories.\par 
+\pard\f0\fs21\li0 - Study leading competitive-programming/DSA platforms, choose useful product capabilities and avoid wasting coding credits on features already available as secure maintained libraries.\par 
+\pard\f0\fs21\li0 - Analyze feasibility and architecture before expansive implementation.\par 
+\pard\f0\fs21\li0 - Make all research, referenced repository URLs, decisions and next steps discoverable in GitHub so contributors do not require previous chat access.\par 
+\pard\f0\fs21\li0 - Verify and handle open PRs safely, preserve a text file of study repositories and avoid merging unreviewed changes.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 These are summaries of the older project context; unavailable exact message bodies are not invented.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 2026-11-15 \u8212? baseline research and hint API\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 An earlier source audit, docs/AUDIT_AND_AI_PLAN_2026-11-15.md, documented the working web/API/auth/judge foundation, all 20 research references and exactly two principal AI solver research repos (CodeSIM / phi-code). The authenticated offline hint contract SAI-010 was implemented and later merged into main. It returns author-written hints and does not invoke a model. Hosted CI for the SAI-010 work: https://github.com/arunabanarjee32-bit/solver-ai/actions/runs/43737836616.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 2026-11-16 \u8212? user's comprehensive development brief\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 The user supplied "MASTER DEVELOPMENT PROMPT \u8212? SOLVER AI", directing the assistant to act as architect/full-stack/AI/security engineer, keep existing code, deeply audit the main branch, inspect all relevant docs and source, compare 20 study repos, select exactly two AI research references, design the entire incremental platform, prioritize P0\u8211?P4, implement the smallest useful missing feature, actually verify tests and preserve findings on GitHub. See MASTER_DEVELOPMENT_SPEC.md (MASTER_DEVELOPMENT_SPEC.md) for a structured preservation of the ten tasks, exact source/acceptance requirements and non-negotiable constraints.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Key user requirement: "This is an existing software project, not a new project. Do not start from zero."\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Key user requirement: Verify that services/api/solver_api/hints.py, services/api/tests/test_hints.py and POST /api/v1/hints are already on main and add the frontend integration instead of rebuilding the endpoint.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Key user requirement: No unsafe model-generated code execution, no hidden-case disclosure, no false benchmark or fake-AI claims, no unapproved GPU/model spend, no merger of 20 research repositories.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 2026-11-16 \u8212? engineering work actually performed\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 1. Connected to GitHub with authorized read/write permission. Inspected main at 9952f8b5fa74f6900d57d1b48e3a26f3e962a358; no open PRs at initial inspection.\par 
+\pard\f0\fs21\li0 2. Confirmed original Next.js/Monaco, Better Auth JWT, FastAPI catalog/submissions, gVisor judge and existing authored hint backend.\par 
+\pard\f0\fs21\li0 3. Revisited all 20 upstream default branch HEADs. Continued to select exactly two AI architecture research references: CodeSIM/MapCoder (https://github.com/kagnlp/CodeGenerator) and phi-code (https://github.com/Nan-Do/phi-code). Rejected their unsafe host execution approaches.\par 
+\pard\f0\fs21\li0 4. Created branch feat/sai-011-frontend-hint-api; implemented apps/web/lib/hints.ts with a strict Zod contract and bounded authenticated client; apps/web/components/account-hint.tsx with signed-in request, provenance labeling, cancellation, loading/retry/error; narrow workspace/CSS integration and tests/e2e/hints.spec.ts. Guest authored hints remain.\par 
+\pard\f0\fs21\li0 5. Initial GitHub Actions caught two browser test failures from a broad role=alert selector also matching Next.js route announcer. Commit 7b42e676 corrected the test selector; later CI passed.\par 
+\pard\f0\fs21\li0 6. Documented current source audit, two-repo research choices, AI architecture, P0\u8211?P4 backlog and Codex resume steps in five added docs plus updates to status/index/playbook and study inventory on the same feature branch.\par 
+\pard\f0\fs21\li0 7. Created PR #5 (https://github.com/arunabanarjee32-bit/solver-ai/pull/5) and marked ready for review, not merged. Head b591db142d7b65c306769a59251ed4129f42118a. Latest branch-head GitHub Actions run 43837980897 (https://github.com/arunabanarjee32-bit/solver-ai/actions/runs/43837980897) passed: 137 API passed, 91 judge unit passed (15 skipped), 22 browser passed (1 skipped), plus Better Auth, Ruff, typecheck, build and packaging checks.\par 
+\pard\f0\fs21\li0 8. Production model inference, debugger, solver, contest engine and GPU training remain not implemented. Real gVisor integration was not rerun in the SAI-011 hosted workflow.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 2026-11-16 \u8212? user's request for permanent context preservation\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 The user requested (excerpt from this conversation):\par 
+\pard\sa100\par 
+\pard\li300\cf2\i "Can you push all the detail, all the document, all the chart, all the link as a doc file in our GitHub repo? Reason is that when long chat, ChatGPT giving problem, and ChatGPT can't load our chat."\i0\cf0\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Response: A separate documentation feature branch was created from verified main so it can be reviewed independently of PR #5. The continuity package includes this file, PROJECT_MEMORY.md (PROJECT_MEMORY.md), MASTER_DEVELOPMENT_SPEC.md (MASTER_DEVELOPMENT_SPEC.md), RESUME_PROMPT.md (RESUME_PROMPT.md), diagrams, complete 20-repo links, verified CI and source/PR references. This preserves accessible information without claiming to have exported inaccessible chats.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Decisions retained across chats\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs19\li240 Domain  |  Stable decision / constraint  |  Still open?\par 
+\pard\f0\fs19\li240 Repository  |  Original modular Solver AI monorepo; do not restart  |  Settled\par 
+\pard\f0\fs19\li240 Frontend/API  |  Preserve Next.js/Monaco and FastAPI  |  Settled for current foundation\par 
+\pard\f0\fs19\li240 Identity/queue  |  Reuse Better Auth/JWT and owner-scoped submission state  |  Local implementation, production review remains\par 
+\pard\f0\fs19\li240 Execution  |  Existing gVisor boundary, fail-closed  |  Public deployment review required\par 
+\pard\f0\fs19\li240 Hints  |  Author-written text is not model-generated  |  Settled\par 
+\pard\f0\fs19\li240 Primary AI research  |  Exactly CodeSIM + phi-code; patterns only  |  Re-evaluate only on new evidence\par 
+\pard\f0\fs19\li240 Model integration  |  Provider-neutral, offline first, bounded cost  |  Provider and budget unapproved\par 
+\pard\f0\fs19\li240 Training  |  Benchmark approved licensed data before optional LoRA/GPU  |  Unapproved\par 
+\pard\f0\fs19\li240 Contest integrity  |  No prohibited AI assistance in restricted events  |  Policy details unapproved\par 
+\pard\f0\fs19\li240 Licensing/privacy  |  Original-code license, inbound IP and data retention require owner  |  Blocked decisions\par 
+\pard\f0\fs19\li240 Git  |  Focused branch, real tests, PR and approval before main merge  |  Standard workflow\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 How to append future entries (do not overwrite prior facts)\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs24 YYYY-MM-DD \u8212? Milestone title\b0\cf0\fs22\sa100\par 
+\pard\f0\fs21\li0 - User goal / short request:\par 
+\pard\f0\fs21\li0 - Main branch and pre-edit SHA:\par 
+\pard\f0\fs21\li0 - Open PRs / branch conflicts:\par 
+\pard\f0\fs21\li0 - Verified source findings:\par 
+\pard\f0\fs21\li0 - Important architecture/security decisions:\par 
+\pard\f0\fs21\li0 - Files changed:\par 
+\pard\f0\fs21\li0 - GitHub branch/commits/PR links:\par 
+\pard\f0\fs21\li0 - Executed tests (exact command and pass/fail/skip):\par 
+\pard\f0\fs21\li0 - Not run / environment limitations:\par 
+\pard\f0\fs21\li0 - Licensing/data/model costs and rollback:\par 
+\pard\f0\fs21\li0 - One next task for a new session:\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Missing chats: Future agents cannot conjure the full private ChatGPT history from GitHub; this file explicitly distinguishes direct accessible quotes, faithful historical summaries and verified GitHub source. To preserve older chat text verbatim, the owner must export it separately and review it for suitability before publication in the public repository.\par 
+\pard\sa100\par 
+\page\pard\f0\cf1\b\fs36 PART III \u8212? MASTER DEVELOPMENT SPECIFICATION\b0\cf0\fs22\par 
+\pard\f0\cf1\b\fs32 SOLVER AI \u8212? MASTER DEVELOPMENT SPECIFICATION\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Preserved user-development instructions from the 2026-11-16 project conversation.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 This is a structured restatement of the long user-submitted "MASTER DEVELOPMENT PROMPT \u8212? SOLVER AI", not a guaranteed word-for-word reproduction. It captures the project's complete task definitions and non-negotiable rules so future coding sessions can resume without the original conversation. The source of truth for implementation remains the live repository.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Repository: https://github.com/arunabanarjee32-bit/solver-ai\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Mission and roles\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Build an original, independently owned, commercial-quality AI-native system for competitive programming, DSA learning, practice and ICPC preparation. Product/workflow benchmarks include LeetCode, Codeforces, AtCoder, HackerRank and AI coding assistants. Do not copy proprietary competitor code, statements, editorials or hidden tests.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 The AI coding agent should act as principal software architect, senior engineer, ML/AI researcher, competitive-programming specialist, security engineer, reviewer and Codex developer. Audit before coding. Work autonomously within available limits. Deep research is useful when it produces decisions and tested code; do not spend time, credits or paid resources for appearances. If execution is constrained, write findings, implement and test the smallest safe change, commit to authorized feature branch and give a precise resume path. Never fabricate inspections, CI results or deployments.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 1 \u8212? Complete existing-repository audit\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Inspect latest main HEAD/commit, repository status and PRs. Read README.md, AGENTS.md, docs/INDEX.md, PROJECT_VISION.md, PRODUCT_REQUIREMENTS.md, ARCHITECTURE.md, ROADMAP.md, PROJECT_STATUS.md, CODEX_PLAYBOOK.md, OPEN_SOURCE_STRATEGY.md, OPEN_DECISIONS.md, AI_SOLVER.md, JUDGE_SECURITY.md, MODEL_DATA_EVALUATION.md, AUDIT_AND_AI_PLAN_2026-11-15.md, PUBLIC_REPOSITORIES_AND_RESOURCES.txt and relevant ADRs.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Inspect apps/web/ including components and libs; services/api/solver_api/, services/judge/solver_judge/, API/judge tests, tests/e2e/, scripts, CI, Compose and dependency lockfiles. Identify implemented/partial/documented-only/broken, redundant modules, identity and ownership boundaries, judge submission routing, API contracts, reuse opportunities and risks. Maintain a source-path/evidence-based architecture inventory.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Known verified finding: On main, the signed POST /api/v1/hints backend and services/api/solver_api/hints.py and services/api/tests/test_hints.py already exist. Do not recreate or describe them as unmerged. The frontend gap was addressed in PR #5; check whether merged before editing.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 2 \u8212? Analyze all twenty public study repositories\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Treat docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt as the master inventory. Evaluate upstream URLs, default branches, relevant commit SHAs, primary architecture, maintenance/release condition, license/commercial obligations, security, compatibility with current code, safe dependencies vs concepts to reimplement, complexity and practical value. Verify important facts from upstream original README, source, manifests, tests, LICENSE and docs. Distinguish evidence from assumptions. Never automatically clone or import all 20.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 3 \u8212? Select exactly two AI problem-solving research references\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Previous selection: CodeSIM / MapCoder at https://github.com/kagnlp/CodeGenerator (planning, simulation and bounded refinement) plus phi-code at https://github.com/Nan-Do/phi-code (diverse candidates and tests-first ranking). Verify they remain best; change only if strongly justified. Record source modules, algorithms, synergy, integration plan, non-reusable code, security/license restrictions, complexity and measurable acceptance. Piston, DMOJ, MOJ and QingdaoU remain judge/contest references, not primary AI solvers. No unsupported benchmark claims.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 4 \u8212? Design the full incremental architecture\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 - Frontend: professional accessible responsive Next.js; Monaco Python/C++, problem detail/samples, public authored hints, signed-in AI (when real), debugging, history, progress and eventual contests.\par 
+\pard\f0\fs21\li0 - Backend: preserve FastAPI and Better Auth/JWT ownership, queue and judge APIs; use narrow typed/versioned contracts, bounded inference orchestration; postpone DB/queue migration until measured.\par 
+\pard\f0\fs21\li0 - Tutor: explain algorithms from beginner to advanced, progressive non-spoiler hints, explain code/complexity, review solutions, analyze likely logic errors, track authorized learning progress, and label output authored / mock / model honestly.\par 
+\pard\f0\fs21\li0 - Debugger: reproduce only in authorized isolated execution, explain CE/RE/WA, show minimal fixes, use real evidence, redact hidden tests and privileged data.\par 
+\pard\f0\fs21\li0 - Verified solver: parse constraints, classify algorithm families, plan approaches, generate multiple bounded candidates, simulate/reason, compile and test in gVisor, rank by evidence, cap retries, explain proof ideas/complexity and uncertainty, track cost/latency/accuracy. Do not exec/eval/host subprocess arbitrary code; finite passed tests are not universal correctness proof.\par 
+\pard\f0\fs21\li0 - ICPC/contests: later registrations, teams, scoring/penalties, freeze, rating/analytics, administration, contest-integrity AI restrictions; not before essential learning/solver gates.\par 
+\pard\f0\fs21\li0 - Models: provider-neutral offline mode, deterministic tests first; compare API and open-weight models separately; train/serve with Transformers/TRL/PEFT/Unsloth/vLLM only when legal data, benchmarks, economics, GPUs and approval justify it.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 5 \u8212? Prioritize a real backlog\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 P0 = security/correctness/ownership/reliability; P1 = essential working tutor/integration; P2 = evidence-first solver/debugging; P3 = contest/personalized learning; P4 = production scale/advanced ML.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Every task needs unique ID, goal/user behavior, existing reused code, exact paths, implementation outline, dependencies, acceptance/test cases, security/privacy implications, relative complexity, infrastructure/model expense and rollback. Distinguish MVP from later production features; do not create speculative services just to appear advanced.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 6 \u8212? Implement the smallest missing high-value change\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Original first milestone: Integrate the already implemented signed hint endpoint in the frontend while reusing Better Auth JWT, strict Zod request/response, preserving guest authored ladder, optional separate account request, accurate source provenance, robust unauthenticated/timeout/cancellation/error/retry/responsive/accessible states and API/browser regression tests. No paid model, no user-source upload in hint request, no changed judge/auth boundary. This was implemented/tested on PR #5 (https://github.com/arunabanarjee32-bit/solver-ai/pull/5); do not duplicate after merge.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 After that, independently propose a threat-modeled provider adapter with fixed egress and token/user/spend budgets; do not implement a paid provider without maintainer approval.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 7 \u8212? Verify for real\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Run the actual supported commands: npm ci; uv sync --project services/api --frozen; npm run test:api; npm run test:auth; npm run test:judge; uv run --project services/api --frozen ruff check services/api services/judge scripts; npm run typecheck; npm run build; npm run test:e2e. For judge changes run real gVisor integration tests in supported isolated environment. Record exact pass/fail/skip/environment, regressions and fixes. Never weaken isolation or invent CI results.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 8 \u8212? Preserve all research and context\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Create or update docs/REPOSITORY_AUDIT.md, PRIMARY_RESEARCH_REPOS.md, AI_ARCHITECTURE_PLAN.md, IMPLEMENTATION_BACKLOG.md, IMPLEMENTATION_PROGRESS.md and synchronize PROJECT_STATUS.md, INDEX.md and PUBLIC_REPOSITORIES_AND_RESOURCES.txt. Write decisions, code paths, diagrams, verified tests, links and next action. GitHub alone should be sufficient for new contributors and agents.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Additional continuity requirement from follow-up: Keep docs/PROJECT_MEMORY.md, docs/CHAT_CONTINUITY_LOG.md and docs/RESUME_PROMPT.md current so long ChatGPT history is not a prerequisite. This is a summary/archive of accessible project messages, not a claim of complete verbatim private-chat export.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 9 \u8212? Safe Git/contribution workflow\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Check branch state and PRs before editing, avoid overwriting others, prefer focused feature branch/PR, no force push or unjustified deletion, no automatic unreviewed merge to main. Commit real verified changes when authorized. If unable to write, provide the full patch. Owner retains authority over original-code license and contributor-IP policy.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Task 10 \u8212? Required final engineering report\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Report current implemented/partial/missing/blocked status, actual source tree and flows, twenty study candidates, exactly two primary references, architecture/integration choices, full backlog/acceptance, files changed/user behavior, real tests and skips, security/license issues, cost optimization, GitHub branch/commits/PR and one next action. Do not report future work as shipped.\par 
+\pard\sa100\par 
+\pard\f0\cf1\b\fs27 Non-negotiables\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 1. Do not restart existing code or replace tested components without evidence.\par 
+\pard\f0\fs21\li0 2. Do not import all 20 repos or copy restricted problem content.\par 
+\pard\f0\fs21\li0 3. Select exactly two primary solver research repositories.\par 
+\pard\f0\fs21\li0 4. Do not misrepresent authored/mock hints as actual AI inference.\par 
+\pard\f0\fs21\li0 5. Do not violate user-data ownership, worker credential separation or sandbox isolation.\par 
+\pard\f0\fs21\li0 6. Do not run generated/untrusted programs in web/API/host; never expose private judge cases.\par 
+\pard\f0\fs21\li0 7. No paid models/GPU/infrastructure or unbounded model loops without explicit approval.\par 
+\pard\f0\fs21\li0 8. No inflated completion, unsupported accuracy comparisons, invented security tests or fabricated verification.\par 
+\pard\f0\fs21\li0 9. Prefer small reversible tested patches, complete docs and safe PR reviews.\par 
+\pard\f0\fs21\li0 10. In every new session, re-verify current* GitHub state because prior chat reports become stale.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Source: The user's long development instruction in the current project conversation, 2026-11-16, reformatted for an enduring developer-facing document.\par 
+\pard\sa100\par 
+\page\pard\f0\cf1\b\fs36 PART IV \u8212? NEW CHAT / CODEX RESUME PROMPT\b0\cf0\fs22\par 
+\pard\f0\cf1\b\fs32 Solver AI \u8212? prompt to paste at the start of any new ChatGPT/Codex session\b0\cf0\fs22\sa100\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Continue the EXISTING Solver AI codebase; do not create a new project.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Repository: https://github.com/arunabanarjee32-bit/solver-ai\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Before planning or coding:\par 
+\pard\f0\fs21\li0 1. Read docs/PROJECT_MEMORY.md (primary permanent context), docs/MASTER_DEVELOPMENT_SPEC.md (full task requirements), docs/CHAT_CONTINUITY_LOG.md (project history), AGENTS.md, README.md, docs/PROJECT_STATUS.md and docs/INDEX.md.\par 
+\pard\f0\fs21\li0 2. Check latest main SHA, open PRs, latest CI and source code. On 2026-11-16 the authored signed hint API was already merged into main and the frontend integration was in green but unmerged PR #5 (https://github.com/arunabanarjee32-bit/solver-ai/pull/5). Its state may have changed, so verify before editing.\par 
+\pard\f0\fs21\li0 3. Treat source code and real CI as final authority, not old chat/roadmap statements. Do not reimplement existing APIs, auth, submission queue or judge.\par 
+\pard\f0\fs21\li0 4. Preserve Next.js/Monaco + Better Auth EdDSA JWT + FastAPI + owned SQLite queue + gVisor fail-closed judge. Use exactly two primary AI solving research references, CodeSIM/MapCoder and phi-code, for patterns only*. No host exec, eval, private grading cases or copied competitor content.\par 
+\pard\f0\fs21\li0 5. Choose one smallest incomplete high-value milestone. After the frontend hint PR is reviewed/merged with maintainer approval, the proposed next task is a threat-modeled, budget-controlled real provider adapter ADR first, with deterministic fake-provider tests. Do not spend on model API, GPUs or new infrastructure without explicit approval.\par 
+\pard\f0\fs21\li0 6. Make focused changes on an authorized feature branch; run actual tests, record pass/fail/skip and what could not be run, submit PR and never auto-merge unreviewed code.\par 
+\pard\f0\fs21\li0 7. At the end, update docs/PROJECT_MEMORY.md, append to docs/CHAT_CONTINUITY_LOG.md and update docs/PROJECT_STATUS.md with exact branch, SHA, CI URL, files, risks and single next action. Keep these documents free of tokens, hidden tests, private user code and sensitive chat content; the repository is public.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 Deliverable: real verified progress, not a placeholder. Show current status, prior work reused, 20-repository research references when relevant, exactly two primary solver research references, code touched, tests and skipped checks, licensing/security/cost, PR and next task.\par 
+\pard\sa100\par 
+\pard\f0\fs21\li0 For the canonical design decision, docs inventory and command list, follow the links in docs/PROJECT_MEMORY.md. Never assume a historical PR or provider remains in the same state without checking GitHub.\par 
+\pard\sa100\par 
+}

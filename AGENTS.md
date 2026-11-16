@@ -2,6 +2,8 @@
 
 **Source of truth:** README.md, docs/INDEX.md, docs/PROJECT_STATUS.md. Read them and the relevant specification before making changes.
 
+**Permanent continuity for coding agents:** First read [docs/PROJECT_MEMORY.md](docs/PROJECT_MEMORY.md), [docs/MASTER_DEVELOPMENT_SPEC.md](docs/MASTER_DEVELOPMENT_SPEC.md), [docs/CHAT_CONTINUITY_LOG.md](docs/CHAT_CONTINUITY_LOG.md), and [docs/RESUME_PROMPT.md](docs/RESUME_PROMPT.md) so you do not rely on a long previous chat. These are dated context snapshots, not permission to skip a fresh source/PR/CI audit. Append an actual tested-session handoff to the log when work changes. Never upload credentials, private user code, private test cases or confidential chat content to this public repo.
+
 ## Mission
 
 Build Solver AI: an independently controlled, AI-native DSA/competitive programming/ICPC practice platform with a secure online judge, robust tutoring and eventually measured AI solution generation/fine-tuning. Compete through product quality, not copied proprietary content.

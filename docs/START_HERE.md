@@ -2,6 +2,10 @@
 
 Welcome. You do not need access to any previous private chats to contribute. This repository now has a runnable practice foundation. The larger judge, AI and contest platform remains a proposal.
 
+## New ChatGPT/Codex session? Read this first
+
+Start with [Permanent Project Memory](PROJECT_MEMORY.md) for the authoritative continuity snapshot and [Resume Prompt](RESUME_PROMPT.md) for the short startup script. Use [Conversation Continuity](CHAT_CONTINUITY_LOG.md) and [Master Development Specification](MASTER_DEVELOPMENT_SPEC.md) to recover prior decisions without the old chat. Re-verify current `main`, PRs and CI; the project memory records a dated snapshot, not live status. For a consolidated Microsoft Word-compatible file use [Complete Handbook (RTF)](SOLVER_AI_COMPLETE_HANDBOOK.rtf).
+
 ## Understand the purpose in 10 minutes
 
 - Mission: [PROJECT_VISION](PROJECT_VISION.md).
