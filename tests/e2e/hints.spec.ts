@@ -143,7 +143,7 @@ test("invalid provenance, upstream failures and recovery never expose private di
     }),
   );
   await page.getByRole("button", { name: "Request level 1 hint" }).click();
-  await expect(page.getByRole("alert")).toContainText("invalid response");
+  await expect(page.locator(".account-hint .form-error[role='alert']")).toContainText("invalid response");
   await expect(page.getByText("leak-me")).toHaveCount(0);
   await page.unroute("**/api/v1/hints");
   await page.route("**/api/v1/hints", (route) =>
@@ -155,7 +155,7 @@ test("invalid provenance, upstream failures and recovery never expose private di
     }),
   );
   await page.getByRole("button", { name: "Retry account hint" }).click();
-  await expect(page.getByRole("alert")).toContainText("unavailable");
+  await expect(page.locator(".account-hint .form-error[role='alert']")).toContainText("unavailable");
   await expect(page.getByText("internal-secret")).toHaveCount(0);
   await page.unroute("**/api/v1/hints");
   await page.getByRole("button", { name: "Retry account hint" }).click();
@@ -179,7 +179,7 @@ test("stalled request has a visible timeout, remains retryable and can be cancel
   await sent;
   await expect(page.getByRole("button", { name: "Cancel request" })).toBeVisible();
   await page.clock.fastForward(HINT_REQUEST_TIMEOUT_MS + 1);
-  await expect(page.getByRole("alert")).toContainText("too long");
+  await expect(page.locator(".account-hint .form-error[role='alert']")).toContainText("too long");
   await page.unroute("**/api/v1/hints");
   await page.getByRole("button", { name: "Retry account hint" }).click();
   await expect(page.locator(".account-hint-output")).toContainText(
