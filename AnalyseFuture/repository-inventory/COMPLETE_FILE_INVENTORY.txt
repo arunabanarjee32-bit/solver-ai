@@ -1887,7 +1887,7 @@ AnalyseFuture/repository-inventory/reviews/support.json
   Assessment: Machine-readable evidence; source/version limitations recorded in contents.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 21f81525e56fea35a99c54676de7f4cdc230ad7da1a677e364722d0779b5097a; bytes: 102823
+  SHA256: b2cd4dd09f7330bf8a53bda4f5e67c1d4794eb641de2c17c0a6e2021a93bb909; bytes: 103047
 
 AnalyseFuture/repository-inventory/reviews/web.json
   Owner: recovery records and inventory
@@ -1927,14 +1927,14 @@ PROJECT_HANDOFF.md
   Assessment: Generated documentation; task and feature states remain distinct from observed runtime evidence.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: f6a6fa9d6815e36639e0dd2fb6d94a7e1cf249c599dedfb033520ed8faa6305c; bytes: 498882
+  SHA256: d32e61351b5dce9eed92de41b4cb9f0fdde6d33f9c8b58580757719c5a5cd994; bytes: 499012
 
 PROJECT_STRUCTURE.md
   Owner: root project guidance, dependencies and deployment configuration
-  Purpose: Complete functional collection/ownership guide, framework exceptions, preserved evidence and no-tests scope.
+  Purpose: Current functional ownership and location guide for the complete monorepo, preservation collections and post-relocation validation.
   Active: True; feature: functional organization and explicit ownership
-  Dependencies:
-  Assessment: Static organization only; no runtime execution after relocation.
+  Dependencies: docs/status/PROJECT_STATUS.md, PROJECT_HANDOFF.md, AnalyseFuture/repository-inventory/current-files.json
+  Assessment: Current layout reference; named-revision validation and remaining limits are recorded in the status and validation ledgers.
   Risks/gaps: Runtime verification deferred at the owner request.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
   SHA256: bece68ea4f0a2090ee8864f2c6dcc73c576715c960a817ee7e79f19937746ca4; bytes: 13636

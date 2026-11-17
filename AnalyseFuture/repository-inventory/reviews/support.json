@@ -505,10 +505,14 @@
     },
     {
       "path": "PROJECT_STRUCTURE.md",
-      "purpose": "Complete functional collection/ownership guide, framework exceptions, preserved evidence and no-tests scope.",
+      "purpose": "Current functional ownership and location guide for the complete monorepo, preservation collections and post-relocation validation.",
       "feature": "functional organization and explicit ownership",
-      "dependencies": [],
-      "status": "Static organization only; no runtime execution after relocation.",
+      "dependencies": [
+        "docs/status/PROJECT_STATUS.md",
+        "PROJECT_HANDOFF.md",
+        "AnalyseFuture/repository-inventory/current-files.json"
+      ],
+      "status": "Current layout reference; named-revision validation and remaining limits are recorded in the status and validation ledgers.",
       "risks": [
         "Runtime verification deferred at the owner request."
       ]
