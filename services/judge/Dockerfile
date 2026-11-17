@@ -7,7 +7,7 @@ RUN --mount=type=secret,id=proxy_ca \
     rm -rf /var/lib/apt/lists/*
 RUN groupadd --gid 10001 runner && useradd --uid 10001 --gid runner --no-create-home runner && \
     mkdir /work && chown runner:runner /work
-COPY --chmod=0444 solver_judge/harness.py solver_judge/bounded.py /opt/solver_judge/
+COPY --chmod=0444 solver_judge/sandbox/harness.py solver_judge/bounded.py /opt/solver_judge/
 RUN chmod 0555 /opt/solver_judge
 USER 10001:10001
 WORKDIR /work

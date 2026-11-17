@@ -1,0 +1,441 @@
+CURRENT LAYOUT NOTE
+Implementation ownership and all paths reflect the functional organization in
+PROJECT_STRUCTURE.md. "Active" means retained implemented source, not a claim
+that it was executed after these moves. No tests or builds were run for the
+latest reorganization; historical results are retained below and in validation/.
+
+SOLVER AI — FEATURE INVENTORY
+Recorded 17 November 2026 (Asia/Kolkata)
+
+42 unique feature records: 22 active, 0 partial, 11 feasible_proposal, 9 research_only.
+
+STATUS AND EVIDENCE RULES
+active = existing implementation, with runtime evidence owned by the final validation ledger.
+partial = recovered or incomplete implementation awaiting stated validation.
+feasible_proposal = plausible planned product increment; no implementation claim.
+research_only = inactive reference/experiment requiring separate approval and evaluation.
+Feature counts describe this taxonomy, not completed milestones, shipped products or benchmarks.
+Source review and finite tests do not establish production readiness or a complete security audit.
+No third-party archive code, model download, candidate solution or training was executed by these source reviews.
+SAI-010 is already integrated and is counted once; SAI-011 recovery passed final current-revision validation.
+Web paths below use the feature-grouping map; root owns import/runtime-path repair and final validation.
+
+F001 | ACTIVE | Monorepo toolchain and native startup
+Service: repository orchestration
+Behavior: One product with independent web/API/trusted worker processes, pinned tools and generated private local worker credential.
+Files: package.json; .node-version; .python-version; scripts/development/dev.py; scripts/development/local_config.py; scripts/development/judge-worker.py
+Dependencies: Node 24; Python 3.12; uv; npm workspaces
+Tests/checks: npm run dev; npm run dev:judge
+Gaps: Live processes restart in each task; environment-specific runtime assumptions must be checked.
+Final location: Root package scripts and scripts/; preserve component deployment boundaries.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F002 | ACTIVE | Continuous checks and regression orchestration
+Service: repository CI
+Behavior: Run meaningful source/unit/browser/build checks and retain failure artifacts.
+Files: .github/workflows/ci.yml; playwright.config.ts; package.json
+Dependencies: GitHub Actions; pytest; Ruff; TypeScript; Playwright
+Tests/checks: API/auth/judge suites; typecheck; build; browser suites
+Gaps: Hosted default CI skips real sandbox/full-judge integrations; pin Actions immutably and keep separate integration evidence.
+Final location: Existing .github/workflows and root verification configuration.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F003 | ACTIVE | Catalog search, filters and pagination
+Service: web + API
+Behavior: Search/filter original exercises through validated API-backed UI.
+Files: apps/web/features/practice/catalog.tsx; apps/web/features/practice/api.ts; apps/web/app/page.tsx; services/api/solver_api/main.py
+Dependencies: Next.js; FastAPI; validated catalog contract
+Tests/checks: services/api/tests/catalog/test_api.py; tests/e2e/practice/practice.spec.ts; tests/e2e/practice/resilience.spec.ts
+Gaps: Only three seed problems; current client fetch cap is 100; no large catalog search/indexing.
+Final location: apps/web/features/practice and services/api/solver_api catalog routes.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F004 | ACTIVE | Original statements, samples, starters and provenance
+Service: API content + web workspace
+Behavior: Three original problems expose readable constraints, examples, starter code and author/source information without hidden cases.
+Files: services/api/solver_api/features/catalog/content.py; services/api/solver_api/features/catalog/models.py; apps/web/features/practice/workspace.tsx; apps/web/app/problems/[slug]/page.tsx
+Dependencies: Pydantic; original problem content; Python/C++17 starter templates
+Tests/checks: services/api/tests/catalog/test_api.py; tests/e2e/practice/practice.spec.ts
+Gaps: No permissioned authoring/versioning/import workflow yet.
+Final location: services/api/solver_api/features/catalog/content.py and feature-owned practice workspace.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F005 | ACTIVE | Responsive shared UI and basic accessibility
+Service: web
+Behavior: Shared navigation/layout, labels, focus/reduced-motion/mobile behavior and useful missing-page states.
+Files: apps/web/components/shell.tsx; apps/web/components/icons.tsx; apps/web/app/layout.tsx; apps/web/app/not-found.tsx; apps/web/app/globals.css
+Dependencies: Next.js; React; CSS
+Tests/checks: tests/e2e/practice/practice.spec.ts
+Gaps: No dedicated accessibility conformance audit or localization testing.
+Final location: Shared shell/icons remain components; routes/layout stay under app/.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F006 | ACTIVE | Local Monaco editor and private browser drafts
+Service: web practice
+Behavior: Bundle editor locally; preserve per-problem/language guest drafts, fallback/retry and storage-failure behavior without automatic source upload.
+Files: apps/web/features/practice/code-pane.tsx; apps/web/scripts/copy-monaco.mjs
+Dependencies: Monaco; React Monaco wrapper; pinned patched DOMPurify; localStorage
+Tests/checks: tests/e2e/practice/practice.spec.ts; tests/e2e/submissions/submissions.spec.ts
+Gaps: Storage is local best effort, not encrypted per-account cloud sync or a backup.
+Final location: apps/web/features/practice/code-pane.tsx; editor build helper stays scripts/.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F007 | ACTIVE | Public author-written hint ladder
+Service: web practice + API content
+Behavior: Reveal three author-written hints with honest offline provenance.
+Files: apps/web/features/practice/workspace.tsx; services/api/solver_api/features/catalog/content.py
+Dependencies: original catalog hints
+Tests/checks: tests/e2e/practice/practice.spec.ts
+Gaps: Not model inference; separate authenticated request UI is F011.
+Final location: apps/web/features/practice workspace; original text remains in API catalog.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F008 | ACTIVE | Local accounts, sessions and signing keys
+Service: web accounts
+Behavior: Signup/signin/signout, migrations, hashed passwords, cookie sessions, origin/redirect controls and private persistent local signing material.
+Files: apps/web/features/accounts/account-form.tsx; apps/web/features/accounts/server.ts; apps/web/features/accounts/client.ts; apps/web/app/api/auth/[...all]/route.ts; apps/web/scripts/auth-migrate.mjs
+Dependencies: Better Auth; Node SQLite; private local key/database; Ed25519 JWT plugin
+Tests/checks: apps/web/tests/auth.test.mjs; tests/e2e/submissions/submissions.spec.ts
+Gaps: No delivered email verification/recovery, trusted production ingress policy or full data lifecycle operations.
+Final location: apps/web/features/accounts; framework auth route and migration helper retain entrypoint locations.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F009 | ACTIVE | Fixed-JWKS API identity verification
+Service: API identity
+Behavior: Validate exactly one bounded Bearer token with fixed EdDSA/issuer/audience/use/lifetime and cached bounded fixed-source JWKS.
+Files: services/api/solver_api/features/identity/verification.py; apps/web/features/accounts/server.ts
+Dependencies: PyJWT; cryptography; HTTPX; Better Auth JWKS
+Tests/checks: services/api/tests/identity/test_auth.py; apps/web/tests/auth.test.mjs
+Gaps: Offline API JWT can remain valid for up to five minutes after web logout; production transport trust and total fetch deadline need attention.
+Final location: Web account token authority remains separate from services/api/solver_api/features/identity/verification.py verification.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F010 | ACTIVE | Versioned authenticated authored hint API
+Service: API hints
+Behavior: Strict levels 1-3, public-only context, honest authored/mock/model provenance, bounded output, timeout and safe provider failures.
+Files: services/api/solver_api/features/hints/service.py; services/api/solver_api/main.py; services/api/tests/hints/test_hints.py
+Dependencies: FastAPI; Pydantic; JWT dependency; authored backend
+Tests/checks: services/api/tests/hints/test_hints.py
+Gaps: Only authored backend is configured; no real provider request, source debugging or model quotas. SAI-010 is already squash-integrated and counted once.
+Final location: services/api/solver_api/features/hints/service.py and API routes; retain current public context boundary.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F011 | ACTIVE | Recovered authenticated hint request frontend SAI-011
+Service: web hints
+Behavior: Recover unique unmerged SAI-011 request/cancel/retry/signin UI and client into a dedicated hints feature.
+Files: apps/web/features/hints/account-hint.tsx; apps/web/features/hints/api.ts; apps/web/features/practice/workspace.tsx; tests/e2e/hints/hints.spec.ts
+Dependencies: F008; F009; F010; AbortController; validated provenance schema
+Tests/checks: tests/e2e/hints/hints.spec.ts
+Gaps: Typecheck/build/auth and all25 browser tests passed, including7 hint cases and explicit cancellation/level-change assertions. Content remains authored, not model inference.
+Final location: apps/web/features/hints; workspace mounts this feature; browser regression remains tests/e2e/.
+Validation: PASSED: recovered from b591db142d7b65c306769a59251ed4129f42118a and verified by the current25-test browser suite.
+
+F012 | ACTIVE | Bounded API requests and safe correlated errors
+Service: API shared middleware
+Behavior: Bound each body to 128 KiB/ten-second receive time; generate request IDs and redact validation/internal failures.
+Files: services/api/solver_api/http/body_limit.py; services/api/solver_api/http/errors.py; services/api/solver_api/main.py
+Dependencies: Starlette ASGI; FastAPI; asyncio
+Tests/checks: services/api/tests/catalog/test_api.py; services/api/tests/submissions/test_submissions.py; services/api/tests/hints/test_hints.py
+Gaps: Per-request bounds do not cap aggregate ingress concurrency or provide operational observability.
+Final location: services/api/solver_api middleware/error modules; retain cross-feature shared boundary.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F013 | ACTIVE | Idempotent owned submission queue and quotas
+Service: API submissions
+Behavior: Deliberate run/submit, UTF-8 source bounds, per-account idempotency and in-flight/rate/global active queue controls.
+Files: services/api/solver_api/features/submissions/store.py; services/api/solver_api/main.py; apps/web/features/submissions/submission-panel.tsx; apps/web/features/submissions/api.ts
+Dependencies: SQLite WAL; Pydantic; authenticated account ID; UUID idempotency
+Tests/checks: services/api/tests/submissions/test_submissions.py; tests/e2e/submissions/submissions.spec.ts
+Gaps: Local SQLite queue; no production scheduling fairness, cumulative retention/storage budget or distributed queue deployment.
+Final location: services/api/solver_api/features/submissions/store.py and apps/web/features/submissions/.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F014 | ACTIVE | Private attempt source and verdict history
+Service: API storage + web submissions
+Behavior: Persist source and actual finite verdicts; list summaries and detail only for the owning account.
+Files: services/api/solver_api/features/submissions/store.py; apps/web/features/submissions/submission-history.tsx; apps/web/features/submissions/api.ts; apps/web/app/submissions/page.tsx
+Dependencies: SQLite; verified ownership; bounded validated responses
+Tests/checks: services/api/tests/submissions/test_submissions.py; tests/e2e/submissions/submissions.spec.ts
+Gaps: No retention/deletion/backup/encryption operations; summary query unnecessarily materializes source before dropping it.
+Final location: Feature-owned web submissions files and owned API store; keep browser routes thin.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F015 | ACTIVE | Worker readiness, heartbeat and exclusive expiring leases
+Service: API authority + judge controller
+Behavior: Advertise verified runtime/languages, admit jobs only with fresh workers, lease once and accept one bounded authenticated completion.
+Files: services/api/solver_api/features/submissions/store.py; services/api/solver_api/main.py; services/judge/solver_judge/control/worker.py
+Dependencies: dedicated worker bearer; per-job hashed random lease tokens; SQLite transactions
+Tests/checks: services/api/tests/submissions/test_submissions.py; services/judge/tests/control/test_worker.py
+Gaps: Shared controller trust domain requires private transport, rotation and production identity operations.
+Final location: API owns queue/lease authority; separate worker consumes leases in services/judge/.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F016 | ACTIVE | gVisor-isolated Python and C++17 execution
+Service: judge sandbox
+Behavior: Run learner programs only inside required isolated per-job containers; host controller retains credentials and expected answers.
+Files: services/judge/Dockerfile; services/judge/solver_judge/control/runner.py; services/judge/solver_judge/sandbox/harness.py
+Dependencies: rootless Docker; runsc; Linux rlimits; g++; Python isolated mode
+Tests/checks: services/judge/tests/sandbox/test_sandbox.py; services/judge/tests/control/test_runner.py
+Gaps: Local bounded prototype, runtime maintenance and aggregate host accounting required; no ordinary-container/host fallback or security certification.
+Final location: Retain trusted host runner and in-container harness as separate files/trust zones.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F017 | ACTIVE | Original finite grading cases and trusted oracles
+Service: judge grading
+Behavior: Two public cases for run mode and eight finite checks per submission for each original problem; compare outside sandbox.
+Files: services/judge/solver_judge/grading/cases.py; services/judge/solver_judge/control/runner.py
+Dependencies: original public samples; worker-generated bounded cases; independent expected-answer computation
+Tests/checks: services/judge/tests/grading/test_cases.py; services/judge/tests/sandbox/test_sandbox.py
+Gaps: No arbitrary correctness proof, authoring/versioning system or interactive/custom validator ecosystem.
+Final location: services/judge/solver_judge/grading/cases.py until broader content warrants per-problem modules.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F018 | ACTIVE | Bounded process transport, cancellation and cleanup
+Service: judge controller + sandbox
+Behavior: Use one bounded transport helper in host control and image supervisor; cancel/shutdown work and clean resources.
+Files: services/judge/solver_judge/bounded.py; services/judge/solver_judge/control/runner.py; services/judge/solver_judge/control/worker.py
+Dependencies: selectors; bounded stdin/stdout/stderr; deadlines; process groups; Docker cleanup
+Tests/checks: services/judge/tests/sandbox/test_bounded.py; services/judge/tests/control/test_runner.py; services/judge/tests/control/test_worker.py
+Gaps: JUDGE-001 fixed with12 new regressions;118 judge tests passed including15 live isolation cases. API availability can remain stale for its existing60-second heartbeat expiry; controller execution fails closed immediately.
+Final location: Keep bounded.py shared by explicit import/COPY; maintain container cleanup in host runner.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F019 | ACTIVE | Finite runtime preflight and readiness diagnostics
+Service: judge operations
+Behavior: Fail closed before worker heartbeat and print controlled readiness/check fields.
+Files: services/judge/solver_judge/control/diagnostics.py; services/judge/solver_judge/control/runner.py; services/judge/solver_judge/sandbox/harness.py
+Dependencies: required runtime inspection; finite compiler/isolation/resource probes
+Tests/checks: services/judge/tests/control/test_runner.py; services/judge/tests/sandbox/test_sandbox.py; services/judge/tests/control/test_worker.py
+Gaps: Point-in-time probes do not replace continuous host health, patching or independent review.
+Final location: services/judge/solver_judge/control/diagnostics.py and runner preflight.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F020 | ACTIVE | Production-mode build, Compose and private-state packaging guard
+Service: web/API packaging
+Behavior: Build distributable web/API components excluding credentials/local state and inactive AnalyseFuture content; preserve local account/submission volumes.
+Files: apps/web/Dockerfile; services/api/Dockerfile; apps/web/next.config.ts; compose.yaml; compose.cloud.yaml; scripts/verification/check-standalone.mjs; .dockerignore
+Dependencies: Next standalone; nonroot containers; private volumes; optional managed TLS CA secret
+Tests/checks: npm run build; scripts/verification/check-standalone.mjs; Compose smoke workflow in docs/onboarding/DEVELOPMENT.md
+Gaps: Build mode is not deployment; API/web base tags and Actions refs need maintained immutable reproducibility policy.
+Final location: Keep Dockerfiles by deployment component and root Compose orchestration.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F021 | ACTIVE | Archive and history preservation with integrity inventories
+Service: repository evidence
+Behavior: Keep original archives and all 122 member contents, map renamed Git controls and preserve historical variants outside runtime.
+Files: AnalyseFuture/manifest.json; AnalyseFuture/archives/; AnalyseFuture/extracted/; scripts/verification/verify_preserved_archives.py; AnalyseFuture/repository-inventory/
+Dependencies: SHA-256 inventories; original ZIPs; Git blobs/history
+Tests/checks: python3 scripts/verification/verify_preserved_archives.py; python3 scripts/verification/verify_preserved_archives.py --git-index
+Gaps: Five supplied datasets are only LFS pointers; hashes prove byte preservation, not safety, rights or recovery of unavailable history.
+Final location: AnalyseFuture for inactive evidence, scripts/ for verification; exclude research snapshots from application artifacts.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F022 | ACTIVE | Project intent, decisions, historical memory and delivery evidence
+Service: documentation governance
+Behavior: Preserve competing historical proposals while maintaining discoverable current status, decisions, future vision and progress.
+Files: README.md; docs/product/PROJECT_IDEA.txt; docs/status/PROJECT_STATUS.md; docs/INDEX.md; docs/adr/; AnalyseFuture/historical-implementations/
+Dependencies: reviewed source/history; owner decisions; honest validation ledger
+Tests/checks: link/path review; root validation record
+Gaps: Dated proposals must not override current implementation; account compromise attribution and inaccessible deleted work remain unproven.
+Final location: Root/docs entrypoints for current work; displaced branch snapshots remain AnalyseFuture/historical-implementations/.
+Validation: Existing tests are listed; final current-revision results belong to the root validation ledger.
+
+F023 | FEASIBLE_PROPOSAL | Bounded live model-backed tutor provider
+Service: future API hints
+Behavior: Add one reviewed provider behind the existing public hint context, with explicit model provenance and outages/quotas.
+Files: services/api/solver_api/features/hints/service.py; docs/product/AI_SOLVER.md
+Dependencies: F009; F010; approved model endpoint; per-account token/cost/time quotas; consent and rights policy
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No provider implemented; cannot enable by setting an arbitrary backend name; provider selection, credentials and spending require owner decision.
+Final location: Proposed extension inside services/api/solver_api hints/provider modules; no empty service created.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F024 | FEASIBLE_PROPOSAL | Consent-driven debugging and bounded repair
+Service: future API orchestration + judge
+Behavior: Use deliberately supplied source/evidence to form bounded diagnosis/repair hypotheses and test them through isolated execution.
+Files: docs/product/AI_SOLVER.md; docs/security/JUDGE_SECURITY.md
+Dependencies: F013; F016; F023; approved user source/public evidence; privacy controls
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No debugger workflow exists; do not leak private grading data or claim model diagnosis is observed fact.
+Final location: Proposed API feature modules and web feature UI; existing judge remains execution authority.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F025 | FEASIBLE_PROPOSAL | Budgeted candidate solver and evidence-based selection
+Service: future solver orchestration
+Behavior: Plan, generate a limited candidate set, run permitted tests, optionally repair and rank by authorized execution evidence.
+Files: docs/product/AI_SOLVER.md; docs/research/MODEL_DATA_EVALUATION.md
+Dependencies: F016; F017; F023; candidate/test/token/time budget; authorized tasks
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No active generated solver; similarity/confidence/finite acceptance do not prove correctness; no unlimited retries.
+Final location: Proposed API solver modules; separate service only when measured resource/isolation need justifies it.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F026 | FEASIBLE_PROPOSAL | Rights-approved held-out AI evaluation and research reports
+Service: future offline evaluation
+Behavior: Compare baselines and candidate/repair/ranking strategies using pass@1/pass@k, latency, cost and failures.
+Files: docs/research/MODEL_DATA_EVALUATION.md; docs/governance/DATA_AND_LICENSES.md
+Dependencies: approved datasets; disjoint splits; fixed model/prompt/seed/budget; isolated judge
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No new benchmark results reproduced; archive output anecdotes are not project performance evidence.
+Final location: Proposed offline evaluation tooling outside runtime; activate only with approved data and bounded compute.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F027 | FEASIBLE_PROPOSAL | Original content authoring, versioning and validators
+Service: future API content + judge content
+Behavior: Manage licensed/original statements, sample correctness, validators, test versions and content provenance.
+Files: docs/product/PRODUCT_REQUIREMENTS.md; docs/governance/DATA_AND_LICENSES.md
+Dependencies: F004; F017; author permissions; versioned problem/test contracts
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No authoring/import pipeline or permissioned content administration yet.
+Final location: Proposed API content modules and isolated judge validators; keep private tests out of public web/model context.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F028 | FEASIBLE_PROPOSAL | Learning paths, reflection and progress retention
+Service: future learning features
+Behavior: Offer progressive topic practice, mistake reflection and transfer/retention measures.
+Files: docs/product/PRODUCT_REQUIREMENTS.md; docs/product/PROJECT_VISION.md
+Dependencies: F008; F014; consented learning data; original problem taxonomy
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No personalized progress system; acceptance counts/time alone do not prove learning.
+Final location: Proposed web learning feature and owned API progress storage; define privacy lifecycle first.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F029 | FEASIBLE_PROPOSAL | Virtual contests, ICPC teams and scoring
+Service: future event features
+Behavior: Support timed original/permissioned events, team workflows and post-contest review.
+Files: docs/product/PRODUCT_REQUIREMENTS.md; docs/product/ROADMAP.md
+Dependencies: F008; F013; F016; server-enforced assistance policy; scoreboard/time/freeze tests
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Contests/teams/scoreboards are not implemented; rules and abuse/integrity controls remain prerequisites.
+Final location: Proposed event/contest modules after practice and operational gates; no speculative folders added.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F030 | FEASIBLE_PROPOSAL | Additional audited learner runtime languages
+Service: future judge runtimes
+Behavior: Add Java, JavaScript, Rust, Go or C++20 individually behind reviewed runtime contracts.
+Files: docs/product/PRODUCT_REQUIREMENTS.md; docs/security/JUDGE_SECURITY.md
+Dependencies: F016; compiler/runtime lifecycle; protocol limits/diagnostics; hostile fixtures
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Current supported execution languages are Python/C++17 only. A UI dropdown is insufficient.
+Final location: Proposed judge runtime adapters with matching API/web capability contracts and isolated tests.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F031 | FEASIBLE_PROPOSAL | Production identity, recovery and data administration
+Service: future account operations
+Behavior: Make accounts and private learning data operable with verified recovery, access review and safe lifecycle controls.
+Files: docs/architecture/adr/0002-authenticated-isolated-submissions.md; docs/governance/OPEN_DECISIONS.md
+Dependencies: F008; F009; trusted ingress; email delivery; retention/deletion/backup policy
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No production identity/recovery operation, immediate API-token revocation or full deletion/restore capability.
+Final location: Extend accounts/API operations without collapsing token authority and resource authorization boundaries.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F032 | FEASIBLE_PROPOSAL | Maintained public judge operations and host-wide budgets
+Service: future judge infrastructure
+Behavior: Operate a maintained dedicated execution host with audited updates, monitoring, cleanup reconciliation and bounded capacity.
+Files: services/judge/UPSTREAM_REVIEW.md; docs/security/JUDGE_SECURITY.md
+Dependencies: F016; F018; maintained runtime; aggregate CPU/memory/PID/disk limits; independent review; incident drills
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Local prototype is not certified; old recorded runtime and missing aggregate accounting block public-readiness claims.
+Final location: Dedicated infrastructure around services/judge; retain credential-separated application containers.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F033 | RESEARCH_ONLY | Model/ranker fine-tuning on licensed data
+Service: future external ML workflow
+Behavior: Investigate measured task-specific fine-tuning only after a bounded baseline and clean evaluation exist.
+Files: docs/research/MODEL_DATA_EVALUATION.md; AnalyseFuture/extracted/phi-code-main/ranker/
+Dependencies: F026; separate data/model rights; approved external compute/spend; baseline comparison
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No training run, GPU provisioning or improvement claimed; five archive datasets are absent LFS objects.
+Final location: Inactive research under AnalyseFuture; a future isolated offline ML workspace only after owner approval.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F034 | FEASIBLE_PROPOSAL | Coach, educator and institutional workspaces
+Service: future product features
+Behavior: Support permissioned content assignment, learning evidence and policy-bound assessments.
+Files: docs/product/PRODUCT_REQUIREMENTS.md; docs/product/PROJECT_VISION.md
+Dependencies: F008; F027; F028; role permissions; consented reports and assessment policy
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No coach dashboard or institution deployment exists; pilot user need and privacy controls required.
+Final location: Proposed role-scoped web/API features; retain one product identity.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F035 | RESEARCH_ONLY | Self-hosted model inference and independent providers
+Service: future model operations
+Behavior: Compare hosted APIs and owned inference without making one provider permanent infrastructure.
+Files: docs/product/AI_SOLVER.md; docs/governance/OPEN_DECISIONS.md
+Dependencies: F023; approved model license; hardware/economics/security review
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No weights or inference daemon installed; self-hosting is not automatically cheaper and requires ongoing operations.
+Final location: Inactive architecture research; separate inference service only after evidence and owner decision.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F036 | RESEARCH_ONLY | CodeSIM/MapCoder planning and ablation strategies
+Service: archived CodeGenerator
+Behavior: Study direct/analogical/self-planning/CodeSIM/MapCoder methods and purposeful stage ablations.
+Files: AnalyseFuture/extracted/CodeGenerator-master/src/promptings/; AnalyseFuture/extracted/CodeGenerator-master/README.md
+Dependencies: archived provider interfaces; research prompts; benchmark adapters
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Archive strategies not executed or adopted; require held-out authorized evaluation and strict budgets.
+Final location: Preserve under AnalyseFuture/extracted/CodeGenerator-master; future conceptual reuse belongs to F025.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F037 | RESEARCH_ONLY | Archived provider adapters and token accounting
+Service: archived CodeGenerator
+Behavior: Preserve generation provider abstractions and accounting/resume approaches as references.
+Files: AnalyseFuture/extracted/CodeGenerator-master/src/models/; AnalyseFuture/extracted/CodeGenerator-master/src/results/
+Dependencies: OpenAI/Azure/OpenRouter/Anthropic/Gemini/Groq external SDKs; archived accounting
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Unpinned/incomplete dependencies, no product quotas, privacy/deadline gaps and Gemini undefined model_name defect; no compatible drop-in integration.
+Final location: Archive remains inactive; reviewed original provider-neutral integration would extend F023.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F038 | RESEARCH_ONLY | Archived benchmark loaders, variants and result analysis
+Service: archived CodeGenerator + phi outputs
+Behavior: Preserve dataset normalization, sample/test variants, results/resume and published contest-output evidence.
+Files: AnalyseFuture/extracted/CodeGenerator-master/src/datasets/; AnalyseFuture/extracted/CodeGenerator-master/src/results/; AnalyseFuture/extracted/CodeGenerator-master/data/; AnalyseFuture/extracted/phi-code-main/contests_results/
+Dependencies: benchmark formats; JSON/JSONL; unverified upstream result files
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Source-code licenses do not settle dataset/contest/model rights; projection overlaps do not justify deleting variants or prove evaluation independence.
+Final location: AnalyseFuture only; future authorized evaluation uses F026 and ownership-safe history remains F014.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F039 | RESEARCH_ONLY | Archived host/external execution helpers
+Service: archived execution research
+Behavior: Keep original evaluator mechanics inspectable as supplied evidence.
+Files: AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/; AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py; AnalyseFuture/extracted/phi-code-main/solver/leetcode.py; AnalyseFuture/extracted/phi-code-main/solver/atcoder.py; AnalyseFuture/extracted/phi-code-main/solver/codeforces.py
+Dependencies: exec/multiprocessing/subprocess; external execution endpoint; developer-specific shell/Docker mounts
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Critical if transplanted into app: host execution of untrusted code, shell construction, missing current sandbox/credential boundary. Never activate as fallback.
+Final location: Inactive archival snapshots; safe execution must go through F016/F015 only.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F040 | RESEARCH_ONLY | phi-code multi-candidate sample/rank pipeline
+Service: archived phi-code solver
+Behavior: Study diverse Python attempts and ranking by passed examples followed by embedding similarity.
+Files: AnalyseFuture/extracted/phi-code-main/solver/terminal.py; AnalyseFuture/extracted/phi-code-main/solver/atcoder.py; AnalyseFuture/extracted/phi-code-main/solver/codeforces.py; AnalyseFuture/extracted/phi-code-main/solver/leetcode.py; AnalyseFuture/extracted/phi-code-main/solver/utils.py
+Dependencies: LLM endpoint; sentence-transformers ranker; site-specific parsers
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Host code execution unsuitable; ranking semantics, safe execution, rights, deadlines and cost budgets unresolved; upstream contest claims not reproduced.
+Final location: Preserve archive; candidate selection ideas may inform F025 after original safe integration.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F041 | RESEARCH_ONLY | phi-code ranker data preparation and training
+Service: archived phi-code ranker
+Behavior: Preserve token-length filtering, dataset sampling and triplet/contrastive ranker training references.
+Files: AnalyseFuture/extracted/phi-code-main/ranker/; AnalyseFuture/extracted/phi-code-main/datasets/
+Dependencies: sentence-transformers; Transformers; datasets; five missing LFS data objects
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: Unpinned remote-code-enabled model loads, incomplete dependencies, missing datasets, nondeterministic splits and unreviewed data rights; no training executed.
+Final location: Inactive AnalyseFuture research; possible future F033 offline workflow only.
+Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F042 | RESEARCH_ONLY | phi-code standalone CLI, curses and Gradio interfaces
+Service: archived phi-code UI
+Behavior: Preserve alternative standalone research interaction modes as examples, not additional active products.
+Files: AnalyseFuture/extracted/phi-code-main/solver/main.py; AnalyseFuture/extracted/phi-code-main/solver/web_ui.py; AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py; AnalyseFuture/extracted/phi-code-main/solver/terminal.py
+Dependencies: Gradio; curses; Python; archived solver pipeline
+Tests/checks: None for a current implementation; acceptance checks must be authored when work is approved.
+Gaps: No application account/ownership policy; static None-statement and return-arity defects; no current runtime validation.
+Final location: Keep inactive archive UI; existing Next.js product remains canonical.
+Validation: No current implementation validation is claimed for this proposal/research reference.

@@ -1,0 +1,76 @@
+LATEST PHASE: FUNCTIONAL REORGANIZATION — NO TEST EXECUTION
+At the owner's explicit request, no tests, builds, linters, application imports
+or service startup were run after the functional relocations described in
+PROJECT_STRUCTURE.md. All numeric results below belong to the earlier recovery
+phase and do not validate the current moved layout. Only static dependency,
+link, command-target and preservation analysis was performed in this phase.
+Runtime verification remains deferred until requested.
+
+HISTORICAL RECOVERY-PHASE RECORD (retained)
+
+SOLVER AI — FINAL LOCAL VALIDATION RECORD
+Date:17 November2026 (Asia/Kolkata)
+Starting revision:a00894df45e5b451d3261ed374b36e8d2c208ad6
+Runtime source changes:2ea6954 (recovered/grouped web) and1336354 (judge fix).
+Browser fixture correction:c954510. Later revisions finalize reports/inventory.
+
+PASSED
+- npm ci:67 packages installed using unchanged frozen package-lock.
+- UV_CACHE_DIR=/tmp/solver-ai-uv-cache uv sync --project services/api --frozen:
+  existing27 runtime/dev packages checked; no lock or dependency declarations changed.
+- npm audit --json:zero known npm advisories reported.
+- npm run test:api:137 passed in2.59s; one upstream Starlette/HTTPX deprecation warning.
+- npm run test:auth:7 passed; real Better Auth passwords/sessions/JWT/JWKS/throttles.
+- npm run test:judge:integration:118 passed in67.72s, including15 live gVisor cases
+  and12 new cleanup/readiness regressions; no skipped cases.
+- uv run --project services/api --frozen ruff check services/api services/judge scripts.
+- npm run typecheck and optimized npm run build, including standalone artifact guard.
+- Hints fixture direct TypeScript check, in addition to browser runner compilation.
+- PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e:judge --
+  --workers=2:25 passed in59.5s, zero skips. Seven hint cases cover real JWT/API,
+  authored/mock/model provenance, invalid payload/errors, timeout, explicit cancel
+  and level-change cancellation. Other cases exercise editor/drafts, accounts,
+  retry/outages and real sample AC/submission AC/submission WA/private history.
+- Explicit npm run auth:migrate ran twice against the same disposable DB/key;
+  both returned Authentication schema is ready (idempotence after path migration).
+- docker compose config --quiet passed.
+- docker compose -p solver-recovery-validation -f compose.yaml -f compose.cloud.yaml
+  build passed for web and API with managed TLS verification retained.
+- Isolated local production Compose up --wait --no-build passed health checks.
+  Functional requests passed catalog,signup,JWT issuance/JWKS verification, authored
+  hint provenance and empty owned history. Only this task's containers/network were
+  stopped; existing user state and new project volumes were not erased.
+- Archive/index verifier passed2 ZIPs,122 members and23 historical branch snapshots.
+- Complete tracked inventory generator/write/check and scoped diff whitespace pass.
+  Final293 indexed paths include all required reports; inventory outputs omit self
+  hashes to avoid recursion. Data are derived from staged Git blobs, not concurrent
+  development-generated changes. Baseline238 paths are mapped/preserved.
+
+RESOLVED INITIAL FAILURE (not erased or counted as a pass)
+The first full browser run had24 passes and1 failure. Its real judge job verdicts
+completed, but the final second-user signup returned429 after repeated hint-account
+registrations consumed the shared signup allowance. The trace confirmed the HTTP
+status. Hint tests now create one normal account per worker and establish a fresh
+per-test session. No app limit, assertion, identity trust or timeout was weakened;
+no sleep/retry workaround was added. The complete25-test rerun then passed.
+Private failure trace remains outside the checkout at
+/workspace/recovery-snapshots/browser-initial-failure/ and is not published.
+
+EXPECTED/INTENTIONAL LIMITS
+Upstream research was parsed/reviewed, not executed; static parsing produced two
+recorded Python escape SyntaxWarnings. Source parsing is not runtime verification.
+Prior268-test recovery evidence remains historical, separate from these287 passed
+current API/auth/judge/browser cases. Standard hosted CI still intentionally omits
+real sandbox/full-judge tests unless supplied the supported runtime.
+
+NOT RUN / UNAVAILABLE
+GitHub repository settings/protection API and account-security logs unavailable;
+new hosted Actions result not observed; Python ecosystem advisory intelligence and
+comprehensive package/image/malware audit not run; binary images structurally checked
+but not visually/steganographically audited; archived benchmarks/models/training
+not run; five Git LFS dataset objects absent; no public deployment or production
+security certification. These are not claimed as passing checks.
+
+Logs retained in /tmp/solver-validation on this instance; secrets/tokens are not
+copied into public reports. Final remote-main SHA and clean working tree are
+verified at delivery and reported in the assistant's final response.

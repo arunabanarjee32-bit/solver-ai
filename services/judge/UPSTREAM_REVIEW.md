@@ -19,6 +19,16 @@ Review source: Piston `license`, `docker-compose.yaml`, `api/Dockerfile`, `api/s
 
 ## Development boundary
 
+Current source organization groups host-side control in
+`solver_judge/control/` (`runner.py`, `worker.py`, `diagnostics.py`), trusted
+oracles in `solver_judge/grading/cases.py`, and the in-container supervisor in
+`solver_judge/sandbox/harness.py`. The shared bounded I/O helper remains
+`solver_judge/bounded.py`. The sandbox Dockerfile deliberately copies the harness
+and helper into the same flat `/opt/solver_judge/` directory; grouping source
+files does not merge the host and sandbox execution boundaries. The current
+diagnostic entrypoint from `services/judge/` is
+`python3 -m solver_judge.control.diagnostics`.
+
 The trusted host worker alone controls the explicitly selected local Docker daemon and possesses `JUDGE_WORKER_TOKEN`. The API/web services and sandbox do not receive a Docker socket. A learner sandbox receives source and selected inputs only; expected answers remain in the trusted worker. A unique, ephemeral gVisor container runs compilation and execution with no network, no host mounts, a read-only root, nonroot UID/GID 10001, all capabilities dropped and `no-new-privileges`.
 
 Each worker resolves the reviewed local sandbox image to its immutable image ID at preflight. No job pulls an image, changes runtime, adds mounts or supplies compiler arguments. Python uses isolated mode, and C++17 uses fixed compiler options. Child environments are an explicit minimal whitelist; all configured Docker proxy variable names are cleared. The source limit is 32 KiB; case count, stdin, pipes and protocol responses are bounded. Container input closes before learner execution. A single JSON document, matching expected result count and allowed status/exit/output types, is required; malformed or forged supervisor output cannot grant acceptance.

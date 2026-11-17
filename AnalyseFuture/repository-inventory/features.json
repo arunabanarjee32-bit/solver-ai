@@ -5,8 +5,8 @@
   "method": "Cross-service full-source/static review reports plus inspectable Git history and structural archive checks. Feature identity is semantic; no product roadmap is counted as implementation. Root owns runtime validation. This is not an independent security certification.",
   "feature_count": 42,
   "status_counts": {
-    "active": 21,
-    "partial": 1,
+    "active": 22,
+    "partial": 0,
     "feasible_proposal": 11,
     "research_only": 9
   },
@@ -21,9 +21,9 @@
         "package.json",
         ".node-version",
         ".python-version",
-        "scripts/dev.py",
-        "scripts/local_config.py",
-        "scripts/judge-worker.py"
+        "scripts/development/dev.py",
+        "scripts/development/local_config.py",
+        "scripts/development/judge-worker.py"
       ],
       "dependencies": [
         "Node 24",
@@ -91,9 +91,9 @@
         "validated catalog contract"
       ],
       "tests": [
-        "services/api/tests/test_api.py",
-        "tests/e2e/practice.spec.ts",
-        "tests/e2e/resilience.spec.ts"
+        "services/api/tests/catalog/test_api.py",
+        "tests/e2e/practice/practice.spec.ts",
+        "tests/e2e/practice/resilience.spec.ts"
       ],
       "behavior": "Search/filter original exercises through validated API-backed UI.",
       "gaps": [
@@ -109,8 +109,8 @@
       "active": true,
       "service": "API content + web workspace",
       "files": [
-        "services/api/solver_api/catalog.py",
-        "services/api/solver_api/models.py",
+        "services/api/solver_api/features/catalog/content.py",
+        "services/api/solver_api/features/catalog/models.py",
         "apps/web/features/practice/workspace.tsx",
         "apps/web/app/problems/[slug]/page.tsx"
       ],
@@ -120,8 +120,8 @@
         "Python/C++17 starter templates"
       ],
       "tests": [
-        "services/api/tests/test_api.py",
-        "tests/e2e/practice.spec.ts"
+        "services/api/tests/catalog/test_api.py",
+        "tests/e2e/practice/practice.spec.ts"
       ],
       "behavior": "Three original problems expose readable constraints, examples, starter code and author/source information without hidden cases.",
       "gaps": [
@@ -149,7 +149,7 @@
         "CSS"
       ],
       "tests": [
-        "tests/e2e/practice.spec.ts"
+        "tests/e2e/practice/practice.spec.ts"
       ],
       "behavior": "Shared navigation/layout, labels, focus/reduced-motion/mobile behavior and useful missing-page states.",
       "gaps": [
@@ -175,8 +175,8 @@
         "localStorage"
       ],
       "tests": [
-        "tests/e2e/practice.spec.ts",
-        "tests/e2e/submissions.spec.ts"
+        "tests/e2e/practice/practice.spec.ts",
+        "tests/e2e/submissions/submissions.spec.ts"
       ],
       "behavior": "Bundle editor locally; preserve per-problem/language guest drafts, fallback/retry and storage-failure behavior without automatic source upload.",
       "gaps": [
@@ -193,13 +193,13 @@
       "service": "web practice + API content",
       "files": [
         "apps/web/features/practice/workspace.tsx",
-        "services/api/solver_api/catalog.py"
+        "services/api/solver_api/features/catalog/content.py"
       ],
       "dependencies": [
         "original catalog hints"
       ],
       "tests": [
-        "tests/e2e/practice.spec.ts"
+        "tests/e2e/practice/practice.spec.ts"
       ],
       "behavior": "Reveal three author-written hints with honest offline provenance.",
       "gaps": [
@@ -229,7 +229,7 @@
       ],
       "tests": [
         "apps/web/tests/auth.test.mjs",
-        "tests/e2e/submissions.spec.ts"
+        "tests/e2e/submissions/submissions.spec.ts"
       ],
       "behavior": "Signup/signin/signout, migrations, hashed passwords, cookie sessions, origin/redirect controls and private persistent local signing material.",
       "gaps": [
@@ -245,7 +245,7 @@
       "active": true,
       "service": "API identity",
       "files": [
-        "services/api/solver_api/auth.py",
+        "services/api/solver_api/features/identity/verification.py",
         "apps/web/features/accounts/server.ts"
       ],
       "dependencies": [
@@ -255,7 +255,7 @@
         "Better Auth JWKS"
       ],
       "tests": [
-        "services/api/tests/test_auth.py",
+        "services/api/tests/identity/test_auth.py",
         "apps/web/tests/auth.test.mjs"
       ],
       "behavior": "Validate exactly one bounded Bearer token with fixed EdDSA/issuer/audience/use/lifetime and cached bounded fixed-source JWKS.",
@@ -272,9 +272,9 @@
       "active": true,
       "service": "API hints",
       "files": [
-        "services/api/solver_api/hints.py",
+        "services/api/solver_api/features/hints/service.py",
         "services/api/solver_api/main.py",
-        "services/api/tests/test_hints.py"
+        "services/api/tests/hints/test_hints.py"
       ],
       "dependencies": [
         "FastAPI",
@@ -283,7 +283,7 @@
         "authored backend"
       ],
       "tests": [
-        "services/api/tests/test_hints.py"
+        "services/api/tests/hints/test_hints.py"
       ],
       "behavior": "Strict levels 1-3, public-only context, honest authored/mock/model provenance, bounded output, timeout and safe provider failures.",
       "gaps": [
@@ -295,14 +295,14 @@
     {
       "id": "F011",
       "name": "Recovered authenticated hint request frontend SAI-011",
-      "status": "partial",
+      "status": "active",
       "active": true,
       "service": "web hints",
       "files": [
         "apps/web/features/hints/account-hint.tsx",
         "apps/web/features/hints/api.ts",
         "apps/web/features/practice/workspace.tsx",
-        "tests/e2e/hints.spec.ts"
+        "tests/e2e/hints/hints.spec.ts"
       ],
       "dependencies": [
         "F008",
@@ -312,14 +312,14 @@
         "validated provenance schema"
       ],
       "tests": [
-        "tests/e2e/hints.spec.ts"
+        "tests/e2e/hints/hints.spec.ts"
       ],
       "behavior": "Recover unique unmerged SAI-011 request/cancel/retry/signin UI and client into a dedicated hints feature.",
       "gaps": [
-        "Current-revision recovery/typecheck/build/browser validation pending when this inventory was assembled; cancellation behavior needs direct coverage. Still authored content, not model inference."
+        "Author-written content only; no real inference or model provider."
       ],
       "final_location": "apps/web/features/hints; workspace mounts this feature; browser regression remains tests/e2e/.",
-      "validation": "PENDING: recovered from b591db142d7b65c306769a59251ed4129f42118a; do not report historical branch tests as current-task passes."
+      "validation": "PASSED: final25-test browser suite, typecheck, build and auth tests; includes7 hint cases and direct cancellation/level-change coverage."
     },
     {
       "id": "F012",
@@ -328,8 +328,8 @@
       "active": true,
       "service": "API shared middleware",
       "files": [
-        "services/api/solver_api/body_limit.py",
-        "services/api/solver_api/errors.py",
+        "services/api/solver_api/http/body_limit.py",
+        "services/api/solver_api/http/errors.py",
         "services/api/solver_api/main.py"
       ],
       "dependencies": [
@@ -338,9 +338,9 @@
         "asyncio"
       ],
       "tests": [
-        "services/api/tests/test_api.py",
-        "services/api/tests/test_submissions.py",
-        "services/api/tests/test_hints.py"
+        "services/api/tests/catalog/test_api.py",
+        "services/api/tests/submissions/test_submissions.py",
+        "services/api/tests/hints/test_hints.py"
       ],
       "behavior": "Bound each body to 128 KiB/ten-second receive time; generate request IDs and redact validation/internal failures.",
       "gaps": [
@@ -356,7 +356,7 @@
       "active": true,
       "service": "API submissions",
       "files": [
-        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/features/submissions/store.py",
         "services/api/solver_api/main.py",
         "apps/web/features/submissions/submission-panel.tsx",
         "apps/web/features/submissions/api.ts"
@@ -368,8 +368,8 @@
         "UUID idempotency"
       ],
       "tests": [
-        "services/api/tests/test_submissions.py",
-        "tests/e2e/submissions.spec.ts"
+        "services/api/tests/submissions/test_submissions.py",
+        "tests/e2e/submissions/submissions.spec.ts"
       ],
       "behavior": "Deliberate run/submit, UTF-8 source bounds, per-account idempotency and in-flight/rate/global active queue controls.",
       "gaps": [
@@ -385,7 +385,7 @@
       "active": true,
       "service": "API storage + web submissions",
       "files": [
-        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/features/submissions/store.py",
         "apps/web/features/submissions/submission-history.tsx",
         "apps/web/features/submissions/api.ts",
         "apps/web/app/submissions/page.tsx"
@@ -396,8 +396,8 @@
         "bounded validated responses"
       ],
       "tests": [
-        "services/api/tests/test_submissions.py",
-        "tests/e2e/submissions.spec.ts"
+        "services/api/tests/submissions/test_submissions.py",
+        "tests/e2e/submissions/submissions.spec.ts"
       ],
       "behavior": "Persist source and actual finite verdicts; list summaries and detail only for the owning account.",
       "gaps": [
@@ -413,9 +413,9 @@
       "active": true,
       "service": "API authority + judge controller",
       "files": [
-        "services/api/solver_api/submissions.py",
+        "services/api/solver_api/features/submissions/store.py",
         "services/api/solver_api/main.py",
-        "services/judge/solver_judge/worker.py"
+        "services/judge/solver_judge/control/worker.py"
       ],
       "dependencies": [
         "dedicated worker bearer",
@@ -423,8 +423,8 @@
         "SQLite transactions"
       ],
       "tests": [
-        "services/api/tests/test_submissions.py",
-        "services/judge/tests/test_worker.py"
+        "services/api/tests/submissions/test_submissions.py",
+        "services/judge/tests/control/test_worker.py"
       ],
       "behavior": "Advertise verified runtime/languages, admit jobs only with fresh workers, lease once and accept one bounded authenticated completion.",
       "gaps": [
@@ -441,8 +441,8 @@
       "service": "judge sandbox",
       "files": [
         "services/judge/Dockerfile",
-        "services/judge/solver_judge/runner.py",
-        "services/judge/solver_judge/harness.py"
+        "services/judge/solver_judge/control/runner.py",
+        "services/judge/solver_judge/sandbox/harness.py"
       ],
       "dependencies": [
         "rootless Docker",
@@ -452,8 +452,8 @@
         "Python isolated mode"
       ],
       "tests": [
-        "services/judge/tests/test_sandbox.py",
-        "services/judge/tests/test_runner.py"
+        "services/judge/tests/sandbox/test_sandbox.py",
+        "services/judge/tests/control/test_runner.py"
       ],
       "behavior": "Run learner programs only inside required isolated per-job containers; host controller retains credentials and expected answers.",
       "gaps": [
@@ -469,8 +469,8 @@
       "active": true,
       "service": "judge grading",
       "files": [
-        "services/judge/solver_judge/cases.py",
-        "services/judge/solver_judge/runner.py"
+        "services/judge/solver_judge/grading/cases.py",
+        "services/judge/solver_judge/control/runner.py"
       ],
       "dependencies": [
         "original public samples",
@@ -478,8 +478,8 @@
         "independent expected-answer computation"
       ],
       "tests": [
-        "services/judge/tests/test_cases.py",
-        "services/judge/tests/test_sandbox.py"
+        "services/judge/tests/grading/test_cases.py",
+        "services/judge/tests/sandbox/test_sandbox.py"
       ],
       "behavior": "Two public cases for run mode and eight finite checks per submission for each original problem; compare outside sandbox.",
       "gaps": [
@@ -496,8 +496,8 @@
       "service": "judge controller + sandbox",
       "files": [
         "services/judge/solver_judge/bounded.py",
-        "services/judge/solver_judge/runner.py",
-        "services/judge/solver_judge/worker.py"
+        "services/judge/solver_judge/control/runner.py",
+        "services/judge/solver_judge/control/worker.py"
       ],
       "dependencies": [
         "selectors",
@@ -507,16 +507,16 @@
         "Docker cleanup"
       ],
       "tests": [
-        "services/judge/tests/test_bounded.py",
-        "services/judge/tests/test_runner.py",
-        "services/judge/tests/test_worker.py"
+        "services/judge/tests/sandbox/test_bounded.py",
+        "services/judge/tests/control/test_runner.py",
+        "services/judge/tests/control/test_worker.py"
       ],
       "behavior": "Use one bounded transport helper in host control and image supervisor; cancel/shutdown work and clean resources.",
       "gaps": [
-        "JUDGE-001 silent-removal/untracked-container weakness found by source review; root fix underway, targeted and integration verification pending."
+        "JUDGE-001 fixed and regression-tested. API capability display retains its existing60-second stale-heartbeat window; host-wide budgets and process-crash reconciliation remain operational work."
       ],
       "final_location": "Keep bounded.py shared by explicit import/COPY; maintain container cleanup in host runner.",
-      "validation": "Existing tests are listed; final current-revision results belong to the root validation ledger."
+      "validation": "PASSED:118 judge tests including12 new cleanup/readiness regressions and15 real gVisor tests; full browser isolated run/submission flow also passed."
     },
     {
       "id": "F019",
@@ -525,18 +525,18 @@
       "active": true,
       "service": "judge operations",
       "files": [
-        "services/judge/solver_judge/diagnostics.py",
-        "services/judge/solver_judge/runner.py",
-        "services/judge/solver_judge/harness.py"
+        "services/judge/solver_judge/control/diagnostics.py",
+        "services/judge/solver_judge/control/runner.py",
+        "services/judge/solver_judge/sandbox/harness.py"
       ],
       "dependencies": [
         "required runtime inspection",
         "finite compiler/isolation/resource probes"
       ],
       "tests": [
-        "services/judge/tests/test_runner.py",
-        "services/judge/tests/test_sandbox.py",
-        "services/judge/tests/test_worker.py"
+        "services/judge/tests/control/test_runner.py",
+        "services/judge/tests/sandbox/test_sandbox.py",
+        "services/judge/tests/control/test_worker.py"
       ],
       "behavior": "Fail closed before worker heartbeat and print controlled readiness/check fields.",
       "gaps": [
@@ -557,7 +557,7 @@
         "apps/web/next.config.ts",
         "compose.yaml",
         "compose.cloud.yaml",
-        "scripts/check-standalone.mjs",
+        "scripts/verification/check-standalone.mjs",
         ".dockerignore"
       ],
       "dependencies": [
@@ -568,7 +568,7 @@
       ],
       "tests": [
         "npm run build",
-        "scripts/check-standalone.mjs",
+        "scripts/verification/check-standalone.mjs",
         "Compose smoke workflow in docs/DEVELOPMENT.md"
       ],
       "behavior": "Build distributable web/API components excluding credentials/local state and inactive AnalyseFuture content; preserve local account/submission volumes.",
@@ -588,7 +588,7 @@
         "AnalyseFuture/manifest.json",
         "AnalyseFuture/archives/",
         "AnalyseFuture/extracted/",
-        "scripts/verify_preserved_archives.py",
+        "scripts/verification/verify_preserved_archives.py",
         "AnalyseFuture/repository-inventory/"
       ],
       "dependencies": [
@@ -615,8 +615,8 @@
       "service": "documentation governance",
       "files": [
         "README.md",
-        "PROJECT_IDEA.txt",
-        "docs/PROJECT_STATUS.md",
+        "docs/product/PROJECT_IDEA.txt",
+        "docs/status/PROJECT_STATUS.md",
         "docs/INDEX.md",
         "docs/adr/",
         "AnalyseFuture/historical-implementations/"
@@ -644,8 +644,8 @@
       "active": false,
       "service": "future API hints",
       "files": [
-        "services/api/solver_api/hints.py",
-        "docs/AI_SOLVER.md"
+        "services/api/solver_api/features/hints/service.py",
+        "docs/product/AI_SOLVER.md"
       ],
       "dependencies": [
         "F009",
@@ -669,8 +669,8 @@
       "active": false,
       "service": "future API orchestration + judge",
       "files": [
-        "docs/AI_SOLVER.md",
-        "docs/JUDGE_SECURITY.md"
+        "docs/product/AI_SOLVER.md",
+        "docs/security/JUDGE_SECURITY.md"
       ],
       "dependencies": [
         "F013",
@@ -694,8 +694,8 @@
       "active": false,
       "service": "future solver orchestration",
       "files": [
-        "docs/AI_SOLVER.md",
-        "docs/MODEL_DATA_EVALUATION.md"
+        "docs/product/AI_SOLVER.md",
+        "docs/research/MODEL_DATA_EVALUATION.md"
       ],
       "dependencies": [
         "F016",
@@ -719,8 +719,8 @@
       "active": false,
       "service": "future offline evaluation",
       "files": [
-        "docs/MODEL_DATA_EVALUATION.md",
-        "docs/DATA_AND_LICENSES.md"
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/governance/DATA_AND_LICENSES.md"
       ],
       "dependencies": [
         "approved datasets",
@@ -743,8 +743,8 @@
       "active": false,
       "service": "future API content + judge content",
       "files": [
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/DATA_AND_LICENSES.md"
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/governance/DATA_AND_LICENSES.md"
       ],
       "dependencies": [
         "F004",
@@ -767,8 +767,8 @@
       "active": false,
       "service": "future learning features",
       "files": [
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/PROJECT_VISION.md"
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/product/PROJECT_VISION.md"
       ],
       "dependencies": [
         "F008",
@@ -791,8 +791,8 @@
       "active": false,
       "service": "future event features",
       "files": [
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/ROADMAP.md"
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/product/ROADMAP.md"
       ],
       "dependencies": [
         "F008",
@@ -816,8 +816,8 @@
       "active": false,
       "service": "future judge runtimes",
       "files": [
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/JUDGE_SECURITY.md"
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/security/JUDGE_SECURITY.md"
       ],
       "dependencies": [
         "F016",
@@ -840,8 +840,8 @@
       "active": false,
       "service": "future account operations",
       "files": [
-        "docs/adr/0002-authenticated-isolated-submissions.md",
-        "docs/OPEN_DECISIONS.md"
+        "docs/architecture/adr/0002-authenticated-isolated-submissions.md",
+        "docs/governance/OPEN_DECISIONS.md"
       ],
       "dependencies": [
         "F008",
@@ -866,7 +866,7 @@
       "service": "future judge infrastructure",
       "files": [
         "services/judge/UPSTREAM_REVIEW.md",
-        "docs/JUDGE_SECURITY.md"
+        "docs/security/JUDGE_SECURITY.md"
       ],
       "dependencies": [
         "F016",
@@ -891,7 +891,7 @@
       "active": false,
       "service": "future external ML workflow",
       "files": [
-        "docs/MODEL_DATA_EVALUATION.md",
+        "docs/research/MODEL_DATA_EVALUATION.md",
         "AnalyseFuture/extracted/phi-code-main/ranker/"
       ],
       "dependencies": [
@@ -915,8 +915,8 @@
       "active": false,
       "service": "future product features",
       "files": [
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/PROJECT_VISION.md"
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/product/PROJECT_VISION.md"
       ],
       "dependencies": [
         "F008",
@@ -940,8 +940,8 @@
       "active": false,
       "service": "future model operations",
       "files": [
-        "docs/AI_SOLVER.md",
-        "docs/OPEN_DECISIONS.md"
+        "docs/product/AI_SOLVER.md",
+        "docs/governance/OPEN_DECISIONS.md"
       ],
       "dependencies": [
         "F023",
@@ -1273,5 +1273,6 @@
     "projection_serialization": "UTF-8 json.dumps with sort_keys=True,separators=(comma,colon),ensure_ascii=False, then SHA-256; selected fields only, not whole-file or full-record identity.",
     "full_record_canonical_overlap_across_nine_CodeGenerator_JSONL_inputs": 0,
     "action": "preserve all variants; do not infer disjoint task splits"
-  }
+  },
+  "layout_note": "All current paths functionally grouped. No tests/builds were run after relocation; prior validation is historical."
 }

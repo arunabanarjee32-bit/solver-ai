@@ -2,7 +2,7 @@
   "baseline_commit": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
   "scope": "All current Git-index paths; generated inventory outputs included.",
   "self_hash_policy": "Size/hash omitted for both inventory outputs to avoid recursion.",
-  "tracked_files": 293,
+  "tracked_files": 305,
   "files": [
     {
       "path": ".dockerignore",
@@ -29,8 +29,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "bytes": 751,
-      "sha256": "3544d6fc4833eb8380faff6d7ba7a2a2c7608d754150b7d4b395a290e8d7f36e"
+      "bytes": 758,
+      "sha256": "4466e1fd46aa34ea999a1aafcdb5e7f3c1b5c9d5f41c02580286caac4244d4eb"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -43,8 +43,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": ".github/workflows/ci.yml",
-      "bytes": 1191,
-      "sha256": "81a325843f4f2802a31423f3832893d5b5f4715f05f6b74ba12109e3a9396c9a"
+      "bytes": 1217,
+      "sha256": "ee9638d488a07c6dfe5b1f5ffd84c1230bd0f94d2750c7e5537d207488bb0ab2"
     },
     {
       "path": ".gitignore",
@@ -121,8 +121,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "AGENTS.md",
-      "bytes": 2841,
-      "sha256": "c5a8acad764d34f4d8a3c1d93d588be6a0f17b21cc2d35ae54173ed8eb12457c"
+      "bytes": 2871,
+      "sha256": "a9a2ad3ef89d5cd041045e396594b5b82d26de21feb804cd8e045c8d61dbf957"
     },
     {
       "path": "AnalyseFuture/.gitattributes",
@@ -153,167 +153,6 @@
       "sha256": "9308484ce44b2e3f09e9388681973a997a4f14dff98d119295be3e11f5b1f768"
     },
     {
-      "path": "AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "ARCHIVED FILES MANIFEST",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt",
-      "bytes": 38367,
-      "sha256": "c053660070ada8664146ca07947020692bfdca3e62675ea722b6ff36668d6a54"
-    },
-    {
-      "path": "AnalyseFuture/COMPLETE_FILE_INVENTORY.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "Complete generated per-file responsibility, dependency, status, risk and hash ledger.",
-      "feature": "complete tracked-file accountability",
-      "active": true,
-      "dependencies": [
-        "scripts/repository_inventory.py",
-        "repository-inventory/reviews"
-      ],
-      "assessment": "Generated from the current tracked index and static source review records.",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/COMPLETE_FILE_INVENTORY.txt",
-      "bytes": null,
-      "sha256": null
-    },
-    {
-      "path": "AnalyseFuture/CONSOLIDATION_REPORT.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 CONSOLIDATION DECISIONS AND IMPLEMENTATION",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/CONSOLIDATION_REPORT.txt",
-      "bytes": 3623,
-      "sha256": "633fb81cf46380bef408558017f2fdf093a0066828862774a63b6a60f07b6fba"
-    },
-    {
-      "path": "AnalyseFuture/DEPENDENCY_MAP.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 RUNTIME AND DEPENDENCY MAP",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/DEPENDENCY_MAP.txt",
-      "bytes": 3172,
-      "sha256": "528628e35923ec947054e8a66a80ea745d0b8937b2182ad67a364cbf352ebc53"
-    },
-    {
-      "path": "AnalyseFuture/DUPLICATE_ANALYSIS.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 DUPLICATE AND CONSOLIDATION ANALYSIS",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/DUPLICATE_ANALYSIS.txt",
-      "bytes": 10647,
-      "sha256": "14ce24f2eedaf586481f4f4ec323220fc9787fae7734ab39eaa620caacd35a73"
-    },
-    {
-      "path": "AnalyseFuture/FEATURE_INVENTORY.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 FEATURE INVENTORY",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/FEATURE_INVENTORY.txt",
-      "bytes": 36521,
-      "sha256": "65c2ab7bd616f185259e9a227546601b17554760d0fcbf0f930bf76155f399f6"
-    },
-    {
-      "path": "AnalyseFuture/MIGRATION_SUMMARY.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 MIGRATION SUMMARY",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/MIGRATION_SUMMARY.txt",
-      "bytes": 2414,
-      "sha256": "2e102f4581e8ad58c41f8088e52f26e8111c78e0e288c3b4fde8fd70b572809c"
-    },
-    {
-      "path": "AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 NEXT DEVELOPER CONTINUATION GUIDE",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt",
-      "bytes": 3562,
-      "sha256": "87da254165f70bffa5e6e99f617dc4a3bce73255d03008152d952c2688a21b25"
-    },
-    {
-      "path": "AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "ORIGINAL TO NEW PATH MAPPING",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
-      "bytes": 33534,
-      "sha256": "38280082d0a5928c57da92dd7231476b58cfebe62a254bb21522da3da9c84b52"
-    },
-    {
-      "path": "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
-      "bytes": 33846,
-      "sha256": "b0ed6167a555d659e86590fc071ee100f2221c7114f9e33f38e80f5e2d694f35"
-    },
-    {
       "path": "AnalyseFuture/README.md",
       "owner": "recovery records and inventory",
       "purpose": "Preservation rationale, inventory map and inactive-reference boundaries",
@@ -324,88 +163,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/archive.json",
       "original_path": "AnalyseFuture/README.md",
-      "bytes": 4077,
-      "sha256": "83e2741db337b44acdfdfb51f8fedcbb95f0108d7e23e34e4df2711c6a1a7b1f"
-    },
-    {
-      "path": "AnalyseFuture/REPOSITORY_AUDIT.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 COMPLETE REPOSITORY REVIEW",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/REPOSITORY_AUDIT.txt",
-      "bytes": 3721,
-      "sha256": "0bcf1f1e7ba44e2c3ac6484999750eafd2ff8ea71077c44778aba8de2c0c22bb"
-    },
-    {
-      "path": "AnalyseFuture/SECURITY_AUDIT.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 SECURITY AND HISTORY REVIEW",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/SECURITY_AUDIT.txt",
-      "bytes": 12740,
-      "sha256": "d27ac92405645907b8076aa762f20eb8a601915af0b6a82f4b144c164581a1f6"
-    },
-    {
-      "path": "AnalyseFuture/TECHNICAL_DEBT.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 TECHNICAL DEBT AND RELEASE GATES",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/TECHNICAL_DEBT.txt",
-      "bytes": 15321,
-      "sha256": "a6fb5f3c9d1c31043d9f8ac6af701a40e687f191dd1f51a38b9e0c1b81282843"
-    },
-    {
-      "path": "AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "SOLVER AI \u2014 CURRENT VALIDATION RECORD",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
-      "bytes": 1341,
-      "sha256": "0ba804a3721bc2bd7ab40fa803057d44a4f5fc8f53b5cbc42ae91784c96d9348"
-    },
-    {
-      "path": "AnalyseFuture/WORK_PROGRESS.txt",
-      "owner": "recovery records and inventory",
-      "purpose": "WORK PROGRESS - 17 November 2026, Asia/Kolkata",
-      "feature": "recovery evidence and developer continuity",
-      "active": true,
-      "dependencies": [],
-      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
-      "risks": [
-        "Not a security certification or promise of future delivery."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "AnalyseFuture/WORK_PROGRESS.txt",
-      "bytes": 1576,
-      "sha256": "224d1e181be2eab51be7502c740770f1fe34888f4f7c7daf3eadf9eb1a99a1b2"
+      "bytes": 5046,
+      "sha256": "5cc10b6fa13caa28c9c3a7911b065446998028d56d1489dff2a2b338bed59563"
     },
     {
       "path": "AnalyseFuture/archives/CodeGenerator-master.zip",
@@ -442,6 +201,70 @@
       "original_path": "AnalyseFuture/archives/phi-code-main.zip",
       "bytes": 1380896,
       "sha256": "89aab1ad1cd2b9be99713563a0929df92e91ddaeb04e656b28ce4d558fb17582"
+    },
+    {
+      "path": "AnalyseFuture/audits/REPOSITORY_AUDIT.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 COMPLETE REPOSITORY REVIEW",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/REPOSITORY_AUDIT.txt",
+      "bytes": 4131,
+      "sha256": "338338a404c138303f776166ec2f1625f2ab04f8fe9e9dcbe9c1161dd8328a2b"
+    },
+    {
+      "path": "AnalyseFuture/audits/SECURITY_AUDIT.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 SECURITY AND HISTORY REVIEW",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/SECURITY_AUDIT.txt",
+      "bytes": 13422,
+      "sha256": "54ca90774a6079c46c359801eae821a489204f475702ec61779867e8625a23d7"
+    },
+    {
+      "path": "AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 NEXT DEVELOPER CONTINUATION GUIDE",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "bytes": 3955,
+      "sha256": "6b6c0af9233403090a4efeed35e036c125bd8e4b3abbf1747cd2b0e475d2e648"
+    },
+    {
+      "path": "AnalyseFuture/continuation/WORK_PROGRESS.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "WORK PROGRESS - 17 November 2026, Asia/Kolkata",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/WORK_PROGRESS.txt",
+      "bytes": 3261,
+      "sha256": "70c4c9904d664cabdeaf798098f1fe5f071d6944016806d2f7706234e05f4004"
     },
     {
       "path": "AnalyseFuture/extracted/CodeGenerator-master/.env.example",
@@ -3302,6 +3125,167 @@
       "sha256": "092b5d22805ff4f15ee0767c7bccd0a5955f3312f7369de3c7bdd15b1fb7fe1b"
     },
     {
+      "path": "AnalyseFuture/migration-records/CONSOLIDATION_REPORT.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 CONSOLIDATION DECISIONS AND IMPLEMENTATION",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/CONSOLIDATION_REPORT.txt",
+      "bytes": 4277,
+      "sha256": "f9d1d9f02abaa94afed49c4933d9314361624a08f897937f36aa550458ce2c8b"
+    },
+    {
+      "path": "AnalyseFuture/migration-records/MIGRATION_SUMMARY.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 MIGRATION SUMMARY",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/MIGRATION_SUMMARY.txt",
+      "bytes": 2974,
+      "sha256": "2dbe03baf27ba85f38eee6bfa36d9b6130442f3a6b435b60f867c6cf943f06d0"
+    },
+    {
+      "path": "AnalyseFuture/migration-records/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "ORIGINAL TO NEW PATH MAPPING",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "bytes": 65897,
+      "sha256": "754763a5bbcc3fae7bf3547fe9b4c96c49b437d93a1afe2bd498b7651ce71974"
+    },
+    {
+      "path": "AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "bytes": 34037,
+      "sha256": "b11e575ab577ba7a84d813faa3c499fa1c598c61da5ad42cee6ed38f7e5c19ad"
+    },
+    {
+      "path": "AnalyseFuture/planning/TECHNICAL_DEBT.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 TECHNICAL DEBT AND RELEASE GATES",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/TECHNICAL_DEBT.txt",
+      "bytes": 15557,
+      "sha256": "98292b224687fc0f8464af2d6df3e0bc1fb612eae21aeeab7aba8a19c08fe417"
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/ARCHIVED_FILES_MANIFEST.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "ARCHIVED FILES MANIFEST",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt",
+      "bytes": 33776,
+      "sha256": "97c78fe8e212be97c59dab6877614d2318053b31e78f77f3bd1af21c60931955"
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "Complete generated per-file responsibility, dependency, status, risk and hash ledger.",
+      "feature": "complete tracked-file accountability",
+      "active": true,
+      "dependencies": [
+        "scripts/repository_inventory.py",
+        "repository-inventory/reviews"
+      ],
+      "assessment": "Generated from the current tracked index and static source review records.",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/COMPLETE_FILE_INVENTORY.txt",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/DEPENDENCY_MAP.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 RUNTIME AND DEPENDENCY MAP",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/DEPENDENCY_MAP.txt",
+      "bytes": 3172,
+      "sha256": "528628e35923ec947054e8a66a80ea745d0b8937b2182ad67a364cbf352ebc53"
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/DUPLICATE_ANALYSIS.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 DUPLICATE AND CONSOLIDATION ANALYSIS",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/DUPLICATE_ANALYSIS.txt",
+      "bytes": 10673,
+      "sha256": "3435498ee3cb3063799a50795232ad407a9bcd79f75ae60061e53e5da863fa62"
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 FEATURE INVENTORY",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/FEATURE_INVENTORY.txt",
+      "bytes": 37882,
+      "sha256": "c7dd6930ea264062d305aca83bdfc0672158ac0586162953496b150b72c8b3cf"
+    },
+    {
       "path": "AnalyseFuture/repository-inventory/baseline.json",
       "owner": "recovery records and inventory",
       "purpose": "Structured baseline evidence backing the complete recovery reports; provenance retained.",
@@ -3347,8 +3331,40 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/features.json",
-      "bytes": 49125,
-      "sha256": "8f63214c566026c977a4bc4021a508ea7bbb18bd321a8ba059054ee39a61d929"
+      "bytes": 50090,
+      "sha256": "275c010184a5995c9c4312d67f2cdecfe2b26f847d23ef0d0344453f053a8416"
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/functional-baseline.json",
+      "owner": "recovery records and inventory",
+      "purpose": "Immutable293-path published baseline before complete functional reorganization.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/repository-inventory/functional-baseline.json",
+      "bytes": 55000,
+      "sha256": "fb61f6b83a89942963f604a933b4e00f446fa6f79cb847c72974ab22f1cd8eef"
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/functional-moves.json",
+      "owner": "recovery records and inventory",
+      "purpose": "Exact68 current functional moves and preserved runtime-boundary decisions.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/repository-inventory/functional-moves.json",
+      "bytes": 6944,
+      "sha256": "f518397492fc29282251fc312d2a2ae5b43514b08be1fd35de33b4a571bdc1b5"
     },
     {
       "path": "AnalyseFuture/repository-inventory/historical-branches.json",
@@ -3491,8 +3507,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "bytes": 22279,
-      "sha256": "6e6bbcd60934ce091e8957d1a047300468934c54b7100388d93803ace92516be"
+      "bytes": 27750,
+      "sha256": "0e0a600e4f8d1ba691ce75f63a12c71f36f2b96d39a3f2f9c78f203cde13d134"
     },
     {
       "path": "AnalyseFuture/repository-inventory/reviews/web.json",
@@ -3509,6 +3525,22 @@
       "original_path": "AnalyseFuture/repository-inventory/reviews/web.json",
       "bytes": 30181,
       "sha256": "0be87a49c2caa9da8a713c5f2855c833df54fc94c5573dd63e3570fc03ad88a4"
+    },
+    {
+      "path": "AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt",
+      "owner": "recovery records and inventory",
+      "purpose": "SOLVER AI \u2014 CURRENT VALIDATION RECORD",
+      "feature": "recovery evidence and developer continuity",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current recovery report; validation results and pending work explicitly separated.",
+      "risks": [
+        "Not a security certification or promise of future delivery."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
+      "bytes": 5049,
+      "sha256": "9a53a9cba2b0098ff13bfbb042bb8a0d36376d1ac7894fa1d953664a3b3a435b"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -3528,29 +3560,24 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "CONTRIBUTING.md",
-      "bytes": 3379,
-      "sha256": "59c982c62a10613b69b8c7b8d09202dd634f5e1da13041d3d84834893b395aea"
+      "bytes": 3498,
+      "sha256": "05ff20bdc32bde2df23be8986beedefec187dd27aa5dd25498cc8f19ee7c0ff1"
     },
     {
-      "path": "PROJECT_IDEA.txt",
+      "path": "PROJECT_STRUCTURE.md",
       "owner": "root project guidance, dependencies and deployment configuration",
-      "purpose": "Earlier detailed plain-text product proposal.",
-      "feature": "root project guidance, dependencies and deployment configuration",
+      "purpose": "Complete functional collection/ownership guide, framework exceptions, preserved evidence and no-tests scope.",
+      "feature": "functional organization and explicit ownership",
       "active": true,
-      "dependencies": [
-        "docs/PROJECT_STATUS.md",
-        "docs/PROJECT_VISION.md",
-        "docs/AI_SOLVER.md"
-      ],
-      "assessment": "Proposal; existing foundation and conditional ambitions clearly separated.",
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
       "risks": [
-        "Must not be treated as implemented feature list or date commitment.",
-        "Canonical new AnalyseFuture vision should explain relationship without deleting this version."
+        "Runtime verification deferred at the owner request."
       ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "PROJECT_IDEA.txt",
-      "bytes": 25049,
-      "sha256": "de24a3d98f3f69d7edb33d3701a67649813c98e9334888957c68af8b64e2476f"
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "PROJECT_STRUCTURE.md",
+      "bytes": 12712,
+      "sha256": "c489be37893001044785bdaceb80cb321fbbad2ca911ca3fb336e986ccf4c79d"
     },
     {
       "path": "README.md",
@@ -3571,8 +3598,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "README.md",
-      "bytes": 7427,
-      "sha256": "1dbeda2637c4dcbc3d9a2cb78b2000e4b65cb2a64b48b5c08e3bfc2917dc6955"
+      "bytes": 7975,
+      "sha256": "c52ba283c02c5be0fb25c5baf62cc165c7467df2e2031fd4bae7e8095fcbe77e"
     },
     {
       "path": "SECURITY.md",
@@ -3591,8 +3618,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "SECURITY.md",
-      "bytes": 1581,
-      "sha256": "21e364421f7d4523eae43e8066a0869e9e90ca679ee04e49845a4fa6d956ff48"
+      "bytes": 1597,
+      "sha256": "8197f41d6bab03b8ee1f01855caf1012ee30b01e5b28cb1154551e455bac58f2"
     },
     {
       "path": "apps/web/AGENTS.md",
@@ -3623,8 +3650,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/web.json",
       "original_path": "apps/web/Dockerfile",
-      "bytes": 1076,
-      "sha256": "622c8c73333e9ebd71a7cdb0035af6f7ecdf5fb482c87620e669d7d5a97f1250"
+      "bytes": 1102,
+      "sha256": "452977f66b7dee9e51276df04dad60b3c46c1af616260d455c82549e6f4b96f2"
     },
     {
       "path": "apps/web/app/account/page.tsx",
@@ -4201,7 +4228,264 @@
       "sha256": "aaf7a96f9cde97cace9c3222c42097fcdb63cc5fed9963d74b8302abc3e9ded0"
     },
     {
-      "path": "docs/AI_SOLVER.md",
+      "path": "docs/INDEX.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Navigation and truth convention for project documents.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/START_HERE.md",
+        "docs/PROJECT_STATUS.md",
+        "README.md"
+      ],
+      "assessment": "Current links with canonical future file to be added by parent task.",
+      "risks": [
+        "Readers may conflate linked proposals and executed implementation without status labels."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/INDEX.md",
+      "bytes": 4987,
+      "sha256": "42a71e504e1def2f4fd6da380841971b1a05ec7b1fbe3cd3668aed3f0350a22f"
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURE.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Current local boundaries and proposed larger architecture.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/adr/0001-practice-foundation.md",
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/REPOSITORY_STRUCTURE.md"
+      ],
+      "assessment": "Mixed current implementation and expressly future candidates/layout.",
+      "risks": [
+        "Diagram includes unimplemented PostgreSQL/AI service/ML.",
+        "Piston remains candidate language while ADR 0002 defers stock integration.",
+        "Do not create empty service packages merely to match proposed tree."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/ARCHITECTURE.md",
+      "bytes": 5448,
+      "sha256": "408263860acfc43016c6f0698f9443f7140155d68a84d1f16758e725ec4a571d"
+    },
+    {
+      "path": "docs/architecture/REPOSITORY_STRUCTURE.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Current tree, preservation rationale, hashes, boundaries and recovery limitations.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "AnalyseFuture/manifest.json",
+        "scripts/verify_preserved_archives.py",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "assessment": "Current reorganization record; not proof of compromise attribution.",
+      "risks": [
+        "Five supplied LFS pointers are not underlying datasets.",
+        "Static scan and hash preservation do not certify archived code or resolve account security."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/REPOSITORY_STRUCTURE.md",
+      "bytes": 9289,
+      "sha256": "6deabf22a049d3e27014180327a97166d14b8afe4ddad529f7b81d68d5e8086f"
+    },
+    {
+      "path": "docs/architecture/adr/0001-practice-foundation.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Historical first-increment decision and exact initial dependency choices.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "package-lock.json",
+        "services/api/uv.lock",
+        "docs/adr/0002-authenticated-isolated-submissions.md"
+      ],
+      "assessment": "Implemented first increment; later ADR supersedes disabled submission/auth scope.",
+      "risks": [
+        "Initial no-auth/no-execution wording must be read as dated scope.",
+        "Dependency audit claims are initial observations, not current guarantees."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/adr/0001-practice-foundation.md",
+      "bytes": 4741,
+      "sha256": "aa6fdee96c457b4bbe9900acf789f52d5082b96db34f79ab95cb074ee0dc02d3"
+    },
+    {
+      "path": "docs/architecture/adr/0002-authenticated-isolated-submissions.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Local identity/ownership/gVisor decisions, alternatives and limits.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "services/judge/UPSTREAM_REVIEW.md",
+        "docs/JUDGE_SECURITY.md"
+      ],
+      "assessment": "Implemented for local validation; production approval remains open.",
+      "risks": [
+        "Runtime age, absent aggregate cgroup accounting and identity recovery limits remain.",
+        "Existing account JWTs can remain valid briefly after logout.",
+        "Stock Piston/nsjail were deferred, not safe fallback runners."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/adr/0002-authenticated-isolated-submissions.md",
+      "bytes": 6693,
+      "sha256": "f3a87e35fbfb1ce6c515a4d2e13656531418ba0d30e17c796b3f83e8b64dc3ee"
+    },
+    {
+      "path": "docs/engineering/CODEX_PLAYBOOK.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Agent scope, verification ladder and implementation discipline.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "AGENTS.md",
+        "docs/PROJECT_STATUS.md",
+        "docs/OPEN_SOURCE_STRATEGY.md"
+      ],
+      "assessment": "Principles current; suggested initial scaffold is already implemented.",
+      "risks": [
+        "Repeating the initial scaffold would waste existing work.",
+        "Default PR workflow is superseded by explicit current user instructions."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/CODEX_PLAYBOOK.md",
+      "bytes": 3161,
+      "sha256": "32294a456658044fc2660b6ec9aae06f093cd5a56892cdf3baab68ca237d6db9"
+    },
+    {
+      "path": "docs/engineering/CONTRIBUTOR_TASKS.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Suggested issue backlog, initial sequencing and acceptance template.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/OPEN_DECISIONS.md",
+        "docs/ROADMAP.md"
+      ],
+      "assessment": "Partly stale progress summary: newer CI, submission and hint-contract work exists.",
+      "risks": [
+        "May cause rebuilding completed scaffold or treating authored API as unimplemented.",
+        "Suggested tasks are not actual GitHub issues or completion records."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/CONTRIBUTOR_TASKS.md",
+      "bytes": 4293,
+      "sha256": "5b876aec34cabab269208502c960eae34554fd8ca327e8027824788bc967438d"
+    },
+    {
+      "path": "docs/governance/DATA_AND_LICENSES.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Original-code, content, dataset, model and privacy rights boundaries.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/OPEN_DECISIONS.md",
+        "docs/OPEN_SOURCE_STRATEGY.md"
+      ],
+      "assessment": "Current unresolved original-code license/inbound policy; other approvals per artifact.",
+      "risks": [
+        "Public availability is not permission for training, redistribution or commercialization.",
+        "Private submissions cannot silently become training data."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/DATA_AND_LICENSES.md",
+      "bytes": 2561,
+      "sha256": "f4e2b47ee7ee47dff9fd95ae0e6b3279ff227b4b142cc45d30da1f70002fe39f"
+    },
+    {
+      "path": "docs/governance/OPEN_DECISIONS.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Maintainer-owned licensing, audience, runtime, provider and policy decisions.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/adr/0001-practice-foundation.md",
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "assessment": "Mixed open business/legal choices and partly resolved local technical choices.",
+      "risks": [
+        "D-06 presents Piston/alternate choice before local gVisor adoption.",
+        "Local adoption does not settle production deployment or licensing policy."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/OPEN_DECISIONS.md",
+      "bytes": 2419,
+      "sha256": "74ca389cfd3f9baf06115e11ebdfd7aa7a75767734429317fefe3f3bc863c621"
+    },
+    {
+      "path": "docs/governance/OPEN_SOURCE_STRATEGY.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Build/reuse policy and dependency/service/reference candidate matrix.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/adr/0001-practice-foundation.md",
+        "docs/adr/0002-authenticated-isolated-submissions.md",
+        "docs/DATA_AND_LICENSES.md"
+      ],
+      "assessment": "Existing Monaco/Better Auth/gVisor adoption with many deferred candidates.",
+      "risks": [
+        "Some candidate language predates implemented auth; verify recorded adoption.",
+        "GPL/AGPL, enterprise, data and model terms differ.",
+        "Stars/activity do not establish fit or security."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/OPEN_SOURCE_STRATEGY.md",
+      "bytes": 5692,
+      "sha256": "c3d5dafec12cab62bfea3256319693241fc07a974553da5fcb673fbb138931eb"
+    },
+    {
+      "path": "docs/onboarding/DEVELOPMENT.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Pinned native setup, startup, tests, local secrets and Compose workflows.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "package.json",
+        "services/api/pyproject.toml",
+        "playwright.config.ts",
+        "compose.yaml",
+        "compose.cloud.yaml"
+      ],
+      "assessment": "Current documented local workflow; hardware/network/runtime conditions must be verified per instance.",
+      "risks": [
+        "Installed runtime/browser assumptions are environment-specific.",
+        "Default suites intentionally skip actual sandbox/full-judge coverage.",
+        "Local data deletion and Compose volume removal can destroy accounts/history."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/DEVELOPMENT.md",
+      "bytes": 10895,
+      "sha256": "c4a1432d31b6ca76187621c90735441414cd003683decb3ffa31d19dcd7dea58"
+    },
+    {
+      "path": "docs/onboarding/START_HERE.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "First-day reading, local workflow and contribution expectations.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "README.md",
+        "docs/DEVELOPMENT.md",
+        "docs/PROJECT_STATUS.md",
+        "docs/CONTRIBUTOR_TASKS.md"
+      ],
+      "assessment": "Mostly usable; opening larger-judge-proposal wording predates local integration.",
+      "risks": [
+        "Suggested first build and backlog can duplicate implemented work.",
+        "Local startup does not establish public operational readiness."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/START_HERE.md",
+      "bytes": 3411,
+      "sha256": "7aaebe414c91365877270f2cf46575391c082aecea131bc13d8f98be8f8be2a1"
+    },
+    {
+      "path": "docs/product/AI_SOLVER.md",
       "owner": "specifications, decisions and development guidance",
       "purpose": "Design proposal for tutor/debugger/candidate solver contracts.",
       "feature": "specifications, decisions and development guidance",
@@ -4223,29 +4507,91 @@
       "sha256": "50eaddd2316920b37778b79ba2e95dffcbc9d6b00ec665f612c08c5d914c46bc"
     },
     {
-      "path": "docs/ARCHITECTURE.md",
+      "path": "docs/product/PRODUCT_REQUIREMENTS.md",
       "owner": "specifications, decisions and development guidance",
-      "purpose": "Current local boundaries and proposed larger architecture.",
+      "purpose": "Proposed P0/P1/P2 features, modes and acceptance conditions.",
       "feature": "specifications, decisions and development guidance",
       "active": true,
       "dependencies": [
-        "docs/adr/0001-practice-foundation.md",
-        "docs/adr/0002-authenticated-isolated-submissions.md",
-        "docs/REPOSITORY_STRUCTURE.md"
+        "docs/PROJECT_STATUS.md",
+        "docs/ARCHITECTURE.md",
+        "docs/AI_SOLVER.md"
       ],
-      "assessment": "Mixed current implementation and expressly future candidates/layout.",
+      "assessment": "Priorities are explicitly not implementation status.",
       "risks": [
-        "Diagram includes unimplemented PostgreSQL/AI service/ML.",
-        "Piston remains candidate language while ADR 0002 defers stock integration.",
-        "Do not create empty service packages merely to match proposed tree."
+        "No full production P0 release should be inferred from partial local implementation.",
+        "Generic MLE/result descriptions must respect actual resource evidence."
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/ARCHITECTURE.md",
-      "bytes": 5424,
-      "sha256": "b1b1976af16b09af5bd9aae771c099a9d0970f7da23e3cb73ed8e4251f27198b"
+      "original_path": "docs/PRODUCT_REQUIREMENTS.md",
+      "bytes": 4041,
+      "sha256": "84f90c8e8149a79eaebdb9c0ce1e6665d8bf3499fb8f63d659373f2e72151ca5"
     },
     {
-      "path": "docs/AUDIT_AND_AI_PLAN_2026-11-15.md",
+      "path": "docs/product/PROJECT_IDEA.txt",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Earlier detailed plain-text product proposal.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/PROJECT_VISION.md",
+        "docs/AI_SOLVER.md"
+      ],
+      "assessment": "Proposal; existing foundation and conditional ambitions clearly separated.",
+      "risks": [
+        "Must not be treated as implemented feature list or date commitment.",
+        "Canonical new AnalyseFuture vision should explain relationship without deleting this version."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "PROJECT_IDEA.txt",
+      "bytes": 25357,
+      "sha256": "5dc8da24b569d98d52f3565ef27e1035ef1a15f5dec0636f85d8804ff76f9fd7"
+    },
+    {
+      "path": "docs/product/PROJECT_VISION.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Original mission, users, product pillars and non-goals.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/ROADMAP.md",
+        "docs/PROJECT_STATUS.md"
+      ],
+      "assessment": "Proposed charter with November 13 date; later status provides implementation facts.",
+      "risks": [
+        "Opening proposal disclaimer predates actual local software.",
+        "Competitive ambition is not measured superiority."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/PROJECT_VISION.md",
+      "bytes": 3756,
+      "sha256": "c330d8cad27c9304a9bb3acdd262d56ccf779f4f94ee3db294ef3baf26ac4cda"
+    },
+    {
+      "path": "docs/product/ROADMAP.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Dependency-ordered phases and acceptance gates.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
+        "docs/PROJECT_STATUS.md",
+        "docs/PRODUCT_REQUIREMENTS.md",
+        "docs/MODEL_DATA_EVALUATION.md"
+      ],
+      "assessment": "No committed dates; phases partially implemented per status ledger.",
+      "risks": [
+        "Phase zero/one text predates completed foundation; must not trigger reset.",
+        "Default issue/PR wording differs from current direct-main authorization."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/ROADMAP.md",
+      "bytes": 3037,
+      "sha256": "ba455d1c654a03d844b19dc098162fa17c515559dafb7d7f3e5252665e26d289"
+    },
+    {
+      "path": "docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md",
       "owner": "specifications, decisions and development guidance",
       "purpose": "Dated source audit and provider-neutral AI delivery plan with upstream triage.",
       "feature": "specifications, decisions and development guidance",
@@ -4263,32 +4609,11 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/AUDIT_AND_AI_PLAN_2026-11-15.md",
-      "bytes": 26863,
-      "sha256": "96133b06c892dd500b72745b02f999c7563f825c99798d276709f3997439b410"
+      "bytes": 26982,
+      "sha256": "ee3a7cdd413946f6d48ccb16185cd0f5ba60cb11ae3f89eee18f1ac8c685c557"
     },
     {
-      "path": "docs/CODEX_PLAYBOOK.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Agent scope, verification ladder and implementation discipline.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "AGENTS.md",
-        "docs/PROJECT_STATUS.md",
-        "docs/OPEN_SOURCE_STRATEGY.md"
-      ],
-      "assessment": "Principles current; suggested initial scaffold is already implemented.",
-      "risks": [
-        "Repeating the initial scaffold would waste existing work.",
-        "Default PR workflow is superseded by explicit current user instructions."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/CODEX_PLAYBOOK.md",
-      "bytes": 3186,
-      "sha256": "3b5951e724a89d896d0f1e3415983e42290b4bada5b1cac9f6e77d979324da44"
-    },
-    {
-      "path": "docs/COMPETITIVE_LANDSCAPE.md",
+      "path": "docs/research/COMPETITIVE_LANDSCAPE.md",
       "owner": "specifications, decisions and development guidance",
       "purpose": "Qualitative user jobs, positioning and differentiation hypotheses.",
       "feature": "specifications, decisions and development guidance",
@@ -4308,114 +4633,7 @@
       "sha256": "efe4629179e85104f9c2ea633895461be1ece451a2d68fed7afadc1a2202db13"
     },
     {
-      "path": "docs/CONTRIBUTOR_TASKS.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Suggested issue backlog, initial sequencing and acceptance template.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/PROJECT_STATUS.md",
-        "docs/OPEN_DECISIONS.md",
-        "docs/ROADMAP.md"
-      ],
-      "assessment": "Partly stale progress summary: newer CI, submission and hint-contract work exists.",
-      "risks": [
-        "May cause rebuilding completed scaffold or treating authored API as unimplemented.",
-        "Suggested tasks are not actual GitHub issues or completion records."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/CONTRIBUTOR_TASKS.md",
-      "bytes": 4291,
-      "sha256": "815cd0cdcf97ad223c280ee856fab5017b316641957930b02d6927359a843929"
-    },
-    {
-      "path": "docs/DATA_AND_LICENSES.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Original-code, content, dataset, model and privacy rights boundaries.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/OPEN_DECISIONS.md",
-        "docs/OPEN_SOURCE_STRATEGY.md"
-      ],
-      "assessment": "Current unresolved original-code license/inbound policy; other approvals per artifact.",
-      "risks": [
-        "Public availability is not permission for training, redistribution or commercialization.",
-        "Private submissions cannot silently become training data."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/DATA_AND_LICENSES.md",
-      "bytes": 2561,
-      "sha256": "f4e2b47ee7ee47dff9fd95ae0e6b3279ff227b4b142cc45d30da1f70002fe39f"
-    },
-    {
-      "path": "docs/DEVELOPMENT.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Pinned native setup, startup, tests, local secrets and Compose workflows.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "package.json",
-        "services/api/pyproject.toml",
-        "playwright.config.ts",
-        "compose.yaml",
-        "compose.cloud.yaml"
-      ],
-      "assessment": "Current documented local workflow; hardware/network/runtime conditions must be verified per instance.",
-      "risks": [
-        "Installed runtime/browser assumptions are environment-specific.",
-        "Default suites intentionally skip actual sandbox/full-judge coverage.",
-        "Local data deletion and Compose volume removal can destroy accounts/history."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/DEVELOPMENT.md",
-      "bytes": 10823,
-      "sha256": "818b87276607d61668132aca4345b1e5acb32d69e3b3f2e171937b5fd729609a"
-    },
-    {
-      "path": "docs/INDEX.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Navigation and truth convention for project documents.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/START_HERE.md",
-        "docs/PROJECT_STATUS.md",
-        "README.md"
-      ],
-      "assessment": "Current links with canonical future file to be added by parent task.",
-      "risks": [
-        "Readers may conflate linked proposals and executed implementation without status labels."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/INDEX.md",
-      "bytes": 3694,
-      "sha256": "d9f2b841ef77ab074710565327416a44c891491119717296ce8663a50e90f591"
-    },
-    {
-      "path": "docs/JUDGE_SECURITY.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Threat model, required controls, judge vocabulary and public-release gate.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/adr/0002-authenticated-isolated-submissions.md",
-        "services/judge/UPSTREAM_REVIEW.md",
-        "docs/PROJECT_STATUS.md"
-      ],
-      "assessment": "Design requirements; implementation and enforcement evidence live elsewhere.",
-      "risks": [
-        "No security certification.",
-        "Generic verdict list includes MLE while current resource accounting remains limited.",
-        "Piston candidates do not supersede adopted local gVisor boundary."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/JUDGE_SECURITY.md",
-      "bytes": 2846,
-      "sha256": "527a91bcfd13c0531e9d7e6cff4611cbe4700ff02ff7bb8a281d6f8824448c5e"
-    },
-    {
-      "path": "docs/MODEL_DATA_EVALUATION.md",
+      "path": "docs/research/MODEL_DATA_EVALUATION.md",
       "owner": "specifications, decisions and development guidance",
       "purpose": "Future permitted data pipeline, model baselines, tuning and evaluation.",
       "feature": "specifications, decisions and development guidance",
@@ -4437,71 +4655,49 @@
       "sha256": "25a2a5ead3aa5bb5b7119e216b50013fd8eb7cf4a0e2d63d21b5af470972a5f8"
     },
     {
-      "path": "docs/OPEN_DECISIONS.md",
+      "path": "docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
       "owner": "specifications, decisions and development guidance",
-      "purpose": "Maintainer-owned licensing, audience, runtime, provider and policy decisions.",
+      "purpose": "Complete 20-repository and model/dataset study inventory.",
       "feature": "specifications, decisions and development guidance",
       "active": true,
       "dependencies": [
-        "docs/adr/0001-practice-foundation.md",
+        "docs/OPEN_SOURCE_STRATEGY.md",
+        "docs/AUDIT_AND_AI_PLAN_2026-11-15.md"
+      ],
+      "assessment": "Candidates and adoption distinctions explicit, dated 2026-11-15.",
+      "risks": [
+        "External licenses, versions and links may change.",
+        "No blanket rights to underlying problems/models/datasets."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
+      "original_path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
+      "bytes": 8823,
+      "sha256": "d8b3fd06e41012d120ad2cb1d2fedf93b86b66d1c30c0e0c98fc397ec6bc2cdf"
+    },
+    {
+      "path": "docs/security/JUDGE_SECURITY.md",
+      "owner": "specifications, decisions and development guidance",
+      "purpose": "Threat model, required controls, judge vocabulary and public-release gate.",
+      "feature": "specifications, decisions and development guidance",
+      "active": true,
+      "dependencies": [
         "docs/adr/0002-authenticated-isolated-submissions.md",
+        "services/judge/UPSTREAM_REVIEW.md",
         "docs/PROJECT_STATUS.md"
       ],
-      "assessment": "Mixed open business/legal choices and partly resolved local technical choices.",
+      "assessment": "Design requirements; implementation and enforcement evidence live elsewhere.",
       "risks": [
-        "D-06 presents Piston/alternate choice before local gVisor adoption.",
-        "Local adoption does not settle production deployment or licensing policy."
+        "No security certification.",
+        "Generic verdict list includes MLE while current resource accounting remains limited.",
+        "Piston candidates do not supersede adopted local gVisor boundary."
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/OPEN_DECISIONS.md",
-      "bytes": 2419,
-      "sha256": "74ca389cfd3f9baf06115e11ebdfd7aa7a75767734429317fefe3f3bc863c621"
+      "original_path": "docs/JUDGE_SECURITY.md",
+      "bytes": 2846,
+      "sha256": "527a91bcfd13c0531e9d7e6cff4611cbe4700ff02ff7bb8a281d6f8824448c5e"
     },
     {
-      "path": "docs/OPEN_SOURCE_STRATEGY.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Build/reuse policy and dependency/service/reference candidate matrix.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/adr/0001-practice-foundation.md",
-        "docs/adr/0002-authenticated-isolated-submissions.md",
-        "docs/DATA_AND_LICENSES.md"
-      ],
-      "assessment": "Existing Monaco/Better Auth/gVisor adoption with many deferred candidates.",
-      "risks": [
-        "Some candidate language predates implemented auth; verify recorded adoption.",
-        "GPL/AGPL, enterprise, data and model terms differ.",
-        "Stars/activity do not establish fit or security."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/OPEN_SOURCE_STRATEGY.md",
-      "bytes": 5660,
-      "sha256": "594ca78a81262571e6cd18ce837e3f1a53aa9a7ca0a750fd0a5c99eff592f7c4"
-    },
-    {
-      "path": "docs/PRODUCT_REQUIREMENTS.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Proposed P0/P1/P2 features, modes and acceptance conditions.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/PROJECT_STATUS.md",
-        "docs/ARCHITECTURE.md",
-        "docs/AI_SOLVER.md"
-      ],
-      "assessment": "Priorities are explicitly not implementation status.",
-      "risks": [
-        "No full production P0 release should be inferred from partial local implementation.",
-        "Generic MLE/result descriptions must respect actual resource evidence."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/PRODUCT_REQUIREMENTS.md",
-      "bytes": 4041,
-      "sha256": "84f90c8e8149a79eaebdb9c0ce1e6665d8bf3499fb8f63d659373f2e72151ca5"
-    },
-    {
-      "path": "docs/PROJECT_STATUS.md",
+      "path": "docs/status/PROJECT_STATUS.md",
       "owner": "specifications, decisions and development guidance",
       "purpose": "Executed implementation, test evidence, limitations and current facts.",
       "feature": "specifications, decisions and development guidance",
@@ -4518,156 +4714,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/PROJECT_STATUS.md",
-      "bytes": 9733,
-      "sha256": "dac3d05e629be78a5774d40ca9d4b45183660b57766c2f9a899787aaa6bf3031"
-    },
-    {
-      "path": "docs/PROJECT_VISION.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Original mission, users, product pillars and non-goals.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/ROADMAP.md",
-        "docs/PROJECT_STATUS.md"
-      ],
-      "assessment": "Proposed charter with November 13 date; later status provides implementation facts.",
-      "risks": [
-        "Opening proposal disclaimer predates actual local software.",
-        "Competitive ambition is not measured superiority."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/PROJECT_VISION.md",
-      "bytes": 3756,
-      "sha256": "c330d8cad27c9304a9bb3acdd262d56ccf779f4f94ee3db294ef3baf26ac4cda"
-    },
-    {
-      "path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Complete 20-repository and model/dataset study inventory.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/OPEN_SOURCE_STRATEGY.md",
-        "docs/AUDIT_AND_AI_PLAN_2026-11-15.md"
-      ],
-      "assessment": "Candidates and adoption distinctions explicit, dated 2026-11-15.",
-      "risks": [
-        "External licenses, versions and links may change.",
-        "No blanket rights to underlying problems/models/datasets."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt",
-      "bytes": 8762,
-      "sha256": "8fdf5f1bfdf7b591b2122e4ef438f28b6f9994619ed4327e779c02174f082f17"
-    },
-    {
-      "path": "docs/REPOSITORY_STRUCTURE.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Current tree, preservation rationale, hashes, boundaries and recovery limitations.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "AnalyseFuture/manifest.json",
-        "scripts/verify_preserved_archives.py",
-        "docs/PROJECT_STATUS.md"
-      ],
-      "assessment": "Current reorganization record; not proof of compromise attribution.",
-      "risks": [
-        "Five supplied LFS pointers are not underlying datasets.",
-        "Static scan and hash preservation do not certify archived code or resolve account security."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/REPOSITORY_STRUCTURE.md",
-      "bytes": 9180,
-      "sha256": "c0a86ec26f553d8e0237fde37f1b797477a5dd3b198b02c79ae3e3ddf8af4e79"
-    },
-    {
-      "path": "docs/ROADMAP.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Dependency-ordered phases and acceptance gates.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/PROJECT_STATUS.md",
-        "docs/PRODUCT_REQUIREMENTS.md",
-        "docs/MODEL_DATA_EVALUATION.md"
-      ],
-      "assessment": "No committed dates; phases partially implemented per status ledger.",
-      "risks": [
-        "Phase zero/one text predates completed foundation; must not trigger reset.",
-        "Default issue/PR wording differs from current direct-main authorization."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/ROADMAP.md",
-      "bytes": 3037,
-      "sha256": "ba455d1c654a03d844b19dc098162fa17c515559dafb7d7f3e5252665e26d289"
-    },
-    {
-      "path": "docs/START_HERE.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "First-day reading, local workflow and contribution expectations.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "README.md",
-        "docs/DEVELOPMENT.md",
-        "docs/PROJECT_STATUS.md",
-        "docs/CONTRIBUTOR_TASKS.md"
-      ],
-      "assessment": "Mostly usable; opening larger-judge-proposal wording predates local integration.",
-      "risks": [
-        "Suggested first build and backlog can duplicate implemented work.",
-        "Local startup does not establish public operational readiness."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/START_HERE.md",
-      "bytes": 3320,
-      "sha256": "662644254cca00f463054a016f2a5ce4b667d842031aea22cb802fd82dacd84d"
-    },
-    {
-      "path": "docs/adr/0001-practice-foundation.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Historical first-increment decision and exact initial dependency choices.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "package-lock.json",
-        "services/api/uv.lock",
-        "docs/adr/0002-authenticated-isolated-submissions.md"
-      ],
-      "assessment": "Implemented first increment; later ADR supersedes disabled submission/auth scope.",
-      "risks": [
-        "Initial no-auth/no-execution wording must be read as dated scope.",
-        "Dependency audit claims are initial observations, not current guarantees."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/adr/0001-practice-foundation.md",
-      "bytes": 4715,
-      "sha256": "bc3f5b443504de3739703541eb204f974c7103c7e6376b7374da0896468726ce"
-    },
-    {
-      "path": "docs/adr/0002-authenticated-isolated-submissions.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Local identity/ownership/gVisor decisions, alternatives and limits.",
-      "feature": "specifications, decisions and development guidance",
-      "active": true,
-      "dependencies": [
-        "docs/PROJECT_STATUS.md",
-        "services/judge/UPSTREAM_REVIEW.md",
-        "docs/JUDGE_SECURITY.md"
-      ],
-      "assessment": "Implemented for local validation; production approval remains open.",
-      "risks": [
-        "Runtime age, absent aggregate cgroup accounting and identity recovery limits remain.",
-        "Existing account JWTs can remain valid briefly after logout.",
-        "Stock Piston/nsjail were deferred, not safe fallback runners."
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
-      "original_path": "docs/adr/0002-authenticated-isolated-submissions.md",
-      "bytes": 6667,
-      "sha256": "13a12f9da52ca98c05819acc42c86f3bd6f1f8fec1f6da5f3927a35f1c4dd8e4"
+      "bytes": 10658,
+      "sha256": "e4690a6692c8e6bd1a5468c12bf6d40a425111adc36c55da0e28d025108b4fbc"
     },
     {
       "path": "package-lock.json",
@@ -4694,8 +4742,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "package.json",
-      "bytes": 1552,
-      "sha256": "07abc82870993e06a41f25325408223cd273f0d764064c170778eb35e9176b47"
+      "bytes": 1601,
+      "sha256": "a18bfb8f4d567159284b6ddbaf0b9f28ab5f14d2983df17d2e81d849938aacf0"
     },
     {
       "path": "playwright.config.ts",
@@ -4719,25 +4767,7 @@
       "sha256": "a526d9e0e756c594ce8126e24fdc142699509bf593252839d438252361eee69c"
     },
     {
-      "path": "scripts/check-standalone.mjs",
-      "owner": "development and verification tools",
-      "purpose": "Reject private runtime state or preserved research in Next standalone artifacts.",
-      "feature": "repository operations and reproducibility",
-      "active": true,
-      "dependencies": [
-        "node:fs",
-        "node:path",
-        "node:url"
-      ],
-      "assessment": "Coordinator full source/config review; execution results recorded separately.",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "original_path": "scripts/check-standalone.mjs",
-      "bytes": 1090,
-      "sha256": "0141742821ce6d84e7a8aa82d22f5b6ce6e016ef6ceb3f5a5b52fdd9092163fd"
-    },
-    {
-      "path": "scripts/dev.py",
+      "path": "scripts/development/dev.py",
       "owner": "development and verification tools",
       "purpose": "Start API/web/optional trusted judge; generate/select worker token and stop owned child process groups.",
       "feature": "repository operations and reproducibility",
@@ -4756,11 +4786,11 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/dev.py",
-      "bytes": 2956,
-      "sha256": "202b0bf6abdfdde8bbd769c4113b477dbe78275d15146bb7e87ad90038d927f9"
+      "bytes": 2964,
+      "sha256": "5d45db2af8d9d0f617eb405aa6d37abee153b3652631bc1538b079c3918e1144"
     },
     {
-      "path": "scripts/judge-worker.py",
+      "path": "scripts/development/judge-worker.py",
       "owner": "development and verification tools",
       "purpose": "Launch trusted worker with local credential without logging it.",
       "feature": "repository operations and reproducibility",
@@ -4774,11 +4804,11 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/judge-worker.py",
-      "bytes": 325,
-      "sha256": "3c865ea22f368a05d3a57f9e5a64c85ab89791ef044c594bfc6dd01916363162"
+      "bytes": 333,
+      "sha256": "e5b9995e70c3e1cbaa28cfb29634bba3fe67183d0110e9a9210164be4d0061db"
     },
     {
-      "path": "scripts/local_config.py",
+      "path": "scripts/development/local_config.py",
       "owner": "development and verification tools",
       "purpose": "Generate and preserve private local worker credential using atomic file publication and restrictive permissions.",
       "feature": "repository operations and reproducibility",
@@ -4794,10 +4824,28 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/local_config.py",
       "bytes": 1228,
-      "sha256": "64563e0df785ccde15e4d8473e5a5abe253a8af3b5022f1f5abe10c0dc81b758"
+      "sha256": "8cb6b4cbe27e34048fa5bf3c9786968df33a5ad59744acab978b6b434dabad6f"
     },
     {
-      "path": "scripts/repository_inventory.py",
+      "path": "scripts/verification/check-standalone.mjs",
+      "owner": "development and verification tools",
+      "purpose": "Reject private runtime state or preserved research in Next standalone artifacts.",
+      "feature": "repository operations and reproducibility",
+      "active": true,
+      "dependencies": [
+        "node:fs",
+        "node:path",
+        "node:url"
+      ],
+      "assessment": "Coordinator full source/config review; execution results recorded separately.",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "scripts/check-standalone.mjs",
+      "bytes": 1093,
+      "sha256": "b62cc6e5c434b92e90e730a28cb129fe6f54a233ed1809a8af74ca21273bc16a"
+    },
+    {
+      "path": "scripts/verification/repository_inventory.py",
       "owner": "development and verification tools",
       "purpose": "Generate/check complete tracked-file ledger from source assessments and static imports, without source execution.",
       "feature": "repository operations and reproducibility",
@@ -4815,11 +4863,11 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/repository_inventory.py",
-      "bytes": 7041,
-      "sha256": "e101af508ff4b1a2fb0c217c4b197de3bbadb4bc82d59e2ae3d94baddc409c0e"
+      "bytes": 7656,
+      "sha256": "449406121e47a5f36dc5fb821077a5d9ecd328dd5b203f75f042be67eb65639f"
     },
     {
-      "path": "scripts/verify_preserved_archives.py",
+      "path": "scripts/verification/verify_preserved_archives.py",
       "owner": "development and verification tools",
       "purpose": "Verify ZIP/member and branch-snapshot bytes/hashes and optional staged Git blobs without importing evidence.",
       "feature": "repository operations and reproducibility",
@@ -4837,7 +4885,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/verify_preserved_archives.py",
       "bytes": 2449,
-      "sha256": "b333f9cc06f55f654fc0be98801f94eecd3a841078c4ecfa933c763d9be05fd7"
+      "sha256": "4b345002c5af0d08b4d0405a889b06f2d3a5147342530fb9915fbd1061d9b313"
     },
     {
       "path": "services/api/.dockerignore",
@@ -4934,7 +4982,128 @@
       "sha256": "dd4d1de440d9556598d4bbb70c51a79d91decc0e6c7097caccfce66fba0e0522"
     },
     {
-      "path": "services/api/solver_api/auth.py",
+      "path": "services/api/solver_api/features/__init__.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Empty Python package marker for the features functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/api/solver_api/features/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "services/api/solver_api/features/catalog/__init__.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Empty Python package marker for the catalog functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/api/solver_api/features/catalog/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "services/api/solver_api/features/catalog/content.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Define three original public exercises including statements, two samples, Python/C++ starter templates and three authored hints.",
+      "feature": "public catalog",
+      "active": true,
+      "dependencies": [
+        "solver_api.features.catalog.models"
+      ],
+      "assessment": "implemented; original seed content",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
+      "original_path": "services/api/solver_api/catalog.py",
+      "bytes": 8362,
+      "sha256": "c118dd33ed421941eadb141221e4a5a7763c929b2c9100a80c9b68bea5773d2f"
+    },
+    {
+      "path": "services/api/solver_api/features/catalog/models.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Immutable public catalog/summary/sample/starter/provenance/error response models.",
+      "feature": "public contracts",
+      "active": true,
+      "dependencies": [
+        "pydantic",
+        "typing"
+      ],
+      "assessment": "implemented",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
+      "original_path": "services/api/solver_api/models.py",
+      "bytes": 1133,
+      "sha256": "a469803c734dc4628bdd7f21759bfbf1d95d9c1bd822881462bb046fb74d0e2a"
+    },
+    {
+      "path": "services/api/solver_api/features/hints/__init__.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Empty Python package marker for the hints functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/api/solver_api/features/hints/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "services/api/solver_api/features/hints/service.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Strict versioned authenticated hint contracts, public-only model boundary, truthful provenance, authored backend and timeout/error handling.",
+      "feature": "offline authored hints",
+      "active": true,
+      "dependencies": [
+        "asyncio",
+        "os",
+        "pydantic",
+        "solver_api.features.catalog.content",
+        "solver_api.features.catalog.models",
+        "solver_api.http.errors",
+        "typing"
+      ],
+      "assessment": "authored backend implemented; external model providers intentionally absent",
+      "risks": [
+        "SEC-API-03"
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
+      "original_path": "services/api/solver_api/hints.py",
+      "bytes": 4668,
+      "sha256": "4c4fb776927f620820c00a1b4e5c5cd81dcdeb4f08d62869a848950f5ef66021"
+    },
+    {
+      "path": "services/api/solver_api/features/identity/__init__.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Empty Python package marker for the identity functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/api/solver_api/features/identity/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "services/api/solver_api/features/identity/verification.py",
       "owner": "authenticated API and durable queue",
       "purpose": "Verify bounded Bearer JWTs against fixed configured Ed25519 JWKS with issuer, audience, subject, use, expiry and refresh controls.",
       "feature": "identity",
@@ -4948,7 +5117,7 @@
         "jwt",
         "os",
         "re",
-        "solver_api.errors",
+        "solver_api.http.errors",
         "time",
         "urllib.parse"
       ],
@@ -4960,11 +5129,77 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
       "original_path": "services/api/solver_api/auth.py",
-      "bytes": 6911,
-      "sha256": "292f29cdca760af08dde3bec594fcbb4f04c8b775f185e2f3c70d37ad999c6e1"
+      "bytes": 6916,
+      "sha256": "b34faf8af88008b95058abc0a308f3cbfe9096ed7e1b557a0e2e69fb45ffe8e4"
     },
     {
-      "path": "services/api/solver_api/body_limit.py",
+      "path": "services/api/solver_api/features/submissions/__init__.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Empty Python package marker for the submissions functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/api/solver_api/features/submissions/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "services/api/solver_api/features/submissions/store.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Persist owned SQLite submissions and source, enforce idempotency/quotas, advertise worker capabilities and issue/complete atomic expiring leases.",
+      "feature": "owned durable judge queue",
+      "active": true,
+      "dependencies": [
+        "collections.abc",
+        "contextlib",
+        "datetime",
+        "functools",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pydantic",
+        "secrets",
+        "solver_api.http.errors",
+        "sqlite3",
+        "time",
+        "typing",
+        "uuid"
+      ],
+      "assessment": "implemented",
+      "risks": [
+        "SEC-API-02",
+        "SEC-API-04",
+        "API-PERF-01"
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
+      "original_path": "services/api/solver_api/submissions.py",
+      "bytes": 16984,
+      "sha256": "596bf2b75721707f259e30143d59edde20a0078d51f9620dc880b7bfc1578fae"
+    },
+    {
+      "path": "services/api/solver_api/http/__init__.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Empty Python package marker for the http functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/api/solver_api/http/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "services/api/solver_api/http/body_limit.py",
       "owner": "authenticated API and durable queue",
       "purpose": "ASGI middleware bounding declared/streamed HTTP request bytes to 128 KiB and receive duration to ten seconds.",
       "feature": "request resource limits",
@@ -4985,23 +5220,7 @@
       "sha256": "58aa67101f282aa2b8d9019cb26498717fd1dccfcfc9c59601be196cc695bd9b"
     },
     {
-      "path": "services/api/solver_api/catalog.py",
-      "owner": "authenticated API and durable queue",
-      "purpose": "Define three original public exercises including statements, two samples, Python/C++ starter templates and three authored hints.",
-      "feature": "public catalog",
-      "active": true,
-      "dependencies": [
-        "solver_api.models"
-      ],
-      "assessment": "implemented; original seed content",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
-      "original_path": "services/api/solver_api/catalog.py",
-      "bytes": 8345,
-      "sha256": "4c86099a799ef53901aae508206b0b7ad3f60fbf4e388f989344334e6e0caebd"
-    },
-    {
-      "path": "services/api/solver_api/errors.py",
+      "path": "services/api/solver_api/http/errors.py",
       "owner": "authenticated API and durable queue",
       "purpose": "Represent deliberately public status/code/message/header errors without exposing internal details.",
       "feature": "safe errors",
@@ -5017,30 +5236,6 @@
       "sha256": "97adb204a96154ca0dc56e09d5c3a6efc19fca718c57a66baa888ac08da77ae3"
     },
     {
-      "path": "services/api/solver_api/hints.py",
-      "owner": "authenticated API and durable queue",
-      "purpose": "Strict versioned authenticated hint contracts, public-only model boundary, truthful provenance, authored backend and timeout/error handling.",
-      "feature": "offline authored hints",
-      "active": true,
-      "dependencies": [
-        "asyncio",
-        "os",
-        "pydantic",
-        "solver_api.catalog",
-        "solver_api.errors",
-        "solver_api.models",
-        "typing"
-      ],
-      "assessment": "authored backend implemented; external model providers intentionally absent",
-      "risks": [
-        "SEC-API-03"
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
-      "original_path": "services/api/solver_api/hints.py",
-      "bytes": 4629,
-      "sha256": "17b91a41f7747da27e71d762bbd9fdbfc3c2229ffce87f918d6443467c7b1845"
-    },
-    {
       "path": "services/api/solver_api/main.py",
       "owner": "authenticated API and durable queue",
       "purpose": "Compose FastAPI routes, request IDs/errors, public catalog, authenticated hints/history and worker-only control endpoints.",
@@ -5052,13 +5247,13 @@
         "fastapi.responses",
         "os",
         "secrets",
-        "solver_api.auth",
-        "solver_api.body_limit",
-        "solver_api.catalog",
-        "solver_api.errors",
-        "solver_api.hints",
-        "solver_api.models",
-        "solver_api.submissions",
+        "solver_api.features.catalog.content",
+        "solver_api.features.catalog.models",
+        "solver_api.features.hints.service",
+        "solver_api.features.identity.verification",
+        "solver_api.features.submissions.store",
+        "solver_api.http.body_limit",
+        "solver_api.http.errors",
         "starlette.exceptions",
         "typing",
         "uuid"
@@ -5071,62 +5266,11 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
       "original_path": "services/api/solver_api/main.py",
-      "bytes": 8204,
-      "sha256": "708645fa6303559d2d7c359185350c0f45b3b880ac092b6514fc00a7b8424981"
+      "bytes": 8331,
+      "sha256": "5d8db4b9154db90bf1fb93a56bc3581ecf037870a68e48236fd94404325a1eba"
     },
     {
-      "path": "services/api/solver_api/models.py",
-      "owner": "authenticated API and durable queue",
-      "purpose": "Immutable public catalog/summary/sample/starter/provenance/error response models.",
-      "feature": "public contracts",
-      "active": true,
-      "dependencies": [
-        "pydantic",
-        "typing"
-      ],
-      "assessment": "implemented",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
-      "original_path": "services/api/solver_api/models.py",
-      "bytes": 1133,
-      "sha256": "a469803c734dc4628bdd7f21759bfbf1d95d9c1bd822881462bb046fb74d0e2a"
-    },
-    {
-      "path": "services/api/solver_api/submissions.py",
-      "owner": "authenticated API and durable queue",
-      "purpose": "Persist owned SQLite submissions and source, enforce idempotency/quotas, advertise worker capabilities and issue/complete atomic expiring leases.",
-      "feature": "owned durable judge queue",
-      "active": true,
-      "dependencies": [
-        "collections.abc",
-        "contextlib",
-        "datetime",
-        "functools",
-        "hashlib",
-        "json",
-        "os",
-        "pathlib",
-        "pydantic",
-        "secrets",
-        "solver_api.errors",
-        "sqlite3",
-        "time",
-        "typing",
-        "uuid"
-      ],
-      "assessment": "implemented",
-      "risks": [
-        "SEC-API-02",
-        "SEC-API-04",
-        "API-PERF-01"
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
-      "original_path": "services/api/solver_api/submissions.py",
-      "bytes": 16979,
-      "sha256": "cec1065962fd73fe8a70ba52efb37efa136ab27b74f8dbb9fe26954faac0d766"
-    },
-    {
-      "path": "services/api/tests/test_api.py",
+      "path": "services/api/tests/catalog/test_api.py",
       "owner": "authenticated API and durable queue",
       "purpose": "Exercise real routes, catalog filtering/pagination, data provenance, sample oracles, safe errors, authentication requirement and OpenAPI presence.",
       "feature": "API regression tests",
@@ -5145,34 +5289,7 @@
       "sha256": "83341f7f3a726e6996f1365d82886dd09a1d1a105904a4b5a54e03c189b2d2d5"
     },
     {
-      "path": "services/api/tests/test_auth.py",
-      "owner": "authenticated API and durable queue",
-      "purpose": "Exercise real Ed25519 JWTs and fixed JWKS logic: claims, header attacks, rotation, cache cooldown/failures and concurrency.",
-      "feature": "identity regression tests",
-      "active": true,
-      "dependencies": [
-        "asyncio",
-        "cryptography.hazmat.primitives",
-        "cryptography.hazmat.primitives.asymmetric.ed25519",
-        "httpx",
-        "jwt",
-        "pytest",
-        "solver_api",
-        "solver_api.errors",
-        "starlette.requests",
-        "time"
-      ],
-      "assessment": "existing test suite; inspected only in this review",
-      "risks": [
-        "TEST-GAP-01"
-      ],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
-      "original_path": "services/api/tests/test_auth.py",
-      "bytes": 8436,
-      "sha256": "22121e7410bc3ed0ad5eaee6a6b9257b37edb859cd454fb9f12ecafbbd4c9aaa"
-    },
-    {
-      "path": "services/api/tests/test_hints.py",
+      "path": "services/api/tests/hints/test_hints.py",
       "owner": "authenticated API and durable queue",
       "purpose": "Exercise authored hints, provenance, invalid/injected input, authentication, public-only context, size limits, provider failures and timeout.",
       "feature": "offline hint regression tests",
@@ -5184,7 +5301,8 @@
         "fastapi.testclient",
         "jwt",
         "pytest",
-        "solver_api",
+        "solver_api.features.hints",
+        "solver_api.features.identity",
         "solver_api.main",
         "time"
       ],
@@ -5192,11 +5310,38 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
       "original_path": "services/api/tests/test_hints.py",
-      "bytes": 7930,
-      "sha256": "75e322bcd3f21623000e2688b2479ceb436627dc5b25b5cdd033aea6b12ea757"
+      "bytes": 8012,
+      "sha256": "cce59ecb078ada64d122f070f768a5f88881a74d08887d6982bd9dfef017249c"
     },
     {
-      "path": "services/api/tests/test_submissions.py",
+      "path": "services/api/tests/identity/test_auth.py",
+      "owner": "authenticated API and durable queue",
+      "purpose": "Exercise real Ed25519 JWTs and fixed JWKS logic: claims, header attacks, rotation, cache cooldown/failures and concurrency.",
+      "feature": "identity regression tests",
+      "active": true,
+      "dependencies": [
+        "asyncio",
+        "cryptography.hazmat.primitives",
+        "cryptography.hazmat.primitives.asymmetric.ed25519",
+        "httpx",
+        "jwt",
+        "pytest",
+        "solver_api.features.identity",
+        "solver_api.http.errors",
+        "starlette.requests",
+        "time"
+      ],
+      "assessment": "existing test suite; inspected only in this review",
+      "risks": [
+        "TEST-GAP-01"
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
+      "original_path": "services/api/tests/test_auth.py",
+      "bytes": 8475,
+      "sha256": "f72d64d343950882c0aec2a2d5a6b31de13defa2756ddabdd12f4abe2a5c4fc5"
+    },
+    {
+      "path": "services/api/tests/submissions/test_submissions.py",
       "owner": "authenticated API and durable queue",
       "purpose": "Exercise persistence, ownership, source/body limits, idempotency, quotas, atomic leasing/completion, expiry and worker authentication.",
       "feature": "queue and worker regression tests",
@@ -5209,9 +5354,9 @@
         "jwt",
         "os",
         "pytest",
-        "solver_api",
+        "solver_api.features.identity",
+        "solver_api.features.submissions.store",
         "solver_api.main",
-        "solver_api.submissions",
         "sqlite3",
         "time",
         "uuid"
@@ -5220,8 +5365,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/api.json",
       "original_path": "services/api/tests/test_submissions.py",
-      "bytes": 16037,
-      "sha256": "0775870c17838be18ea99355fbe41fd609fea0fadd9769ec3c53445342bdad07"
+      "bytes": 16086,
+      "sha256": "8831074171d6b6c2bb469e2c784b46f6874a8bfeb51ce677854685aa86dc9d45"
     },
     {
       "path": "services/api/uv.lock",
@@ -5276,8 +5421,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
       "original_path": "services/judge/Dockerfile",
-      "bytes": 768,
-      "sha256": "e0a9574cf8349c055e03949968f117075d9efcfb71c6df0dbb1edd24876ddfbf"
+      "bytes": 776,
+      "sha256": "d9720d6dd023dc380ba949fb41971dc63fe4f2205934746d716548fdeef24b75"
     },
     {
       "path": "services/judge/UPSTREAM_REVIEW.md",
@@ -5295,8 +5440,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
       "original_path": "services/judge/UPSTREAM_REVIEW.md",
-      "bytes": 8914,
-      "sha256": "04969e4acdaa16860afc906bf3683019e6705a374a2a7c8aa2f645436df97c91"
+      "bytes": 9532,
+      "sha256": "9c2d73ff25e4de6ff4d7819e22e7fe6ce02720fe300992750b7426ad7199fabd"
     },
     {
       "path": "services/judge/pytest.ini",
@@ -5312,8 +5457,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
       "original_path": "services/judge/pytest.ini",
-      "bytes": 42,
-      "sha256": "b160d82f7811555051f8966d8e02750a985227c1d022208c784e606946f2eada"
+      "bytes": 90,
+      "sha256": "d70c5c8c1fca58915da94d70a9bd4d9f8bff01dd1c5696050202945a209cb902"
     },
     {
       "path": "services/judge/solver_judge/__init__.py",
@@ -5354,7 +5499,114 @@
       "sha256": "b28b51bdf1d4142924029aa99a880240a6417173db7ae82c214293a5ba855450"
     },
     {
-      "path": "services/judge/solver_judge/cases.py",
+      "path": "services/judge/solver_judge/control/__init__.py",
+      "owner": "isolated judge control and sandbox",
+      "purpose": "Empty Python package marker for the control functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/judge/solver_judge/control/__init__.py",
+      "bytes": 81,
+      "sha256": "986b83207fd66b3c0b65db456332c96adbe22124a39e77802a79a824b7f66448"
+    },
+    {
+      "path": "services/judge/solver_judge/control/diagnostics.py",
+      "owner": "isolated judge control and sandbox",
+      "purpose": "Run finite sandbox preflight and print controlled readiness/check fields",
+      "feature": "judge readiness",
+      "active": true,
+      "dependencies": [
+        "json",
+        "os",
+        "solver_judge.control.runner"
+      ],
+      "assessment": "active; inspected statically; not executed by this review",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
+      "original_path": "services/judge/solver_judge/diagnostics.py",
+      "bytes": 998,
+      "sha256": "a5fd491d432052281b31b3730f50e30da4be1ec5f6c1f8ae4b019f12dcfdf105"
+    },
+    {
+      "path": "services/judge/solver_judge/control/runner.py",
+      "owner": "isolated judge control and sandbox",
+      "purpose": "Resolve immutable image identity, require rootless runsc, create per-job isolated containers, validate protocol and grade outputs externally",
+      "feature": "gVisor control and grading",
+      "active": true,
+      "dependencies": [
+        "base64",
+        "json",
+        "os",
+        "solver_judge.bounded",
+        "solver_judge.grading.cases",
+        "subprocess",
+        "threading",
+        "uuid"
+      ],
+      "assessment": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Cleanup failures are silently suppressed and active container name discarded, so an orphan can be untracked.",
+        "Host-wide memory/CPU/disk accounting and independent sandbox security review remain production prerequisites."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
+      "original_path": "services/judge/solver_judge/runner.py",
+      "bytes": 11069,
+      "sha256": "22a710eb759aa0982ec18b47dccd9a2d24a2912854a98885a5c1402c54316d31"
+    },
+    {
+      "path": "services/judge/solver_judge/control/worker.py",
+      "owner": "isolated judge control and sandbox",
+      "purpose": "Validate leased jobs and trusted API origin, maintain readiness heartbeat, run one lease at a time, sanitize completion and handle shutdown",
+      "feature": "leased judge worker",
+      "active": true,
+      "dependencies": [
+        "__future__",
+        "ipaddress",
+        "json",
+        "logging",
+        "os",
+        "signal",
+        "solver_judge.control.runner",
+        "threading",
+        "typing",
+        "urllib.error",
+        "urllib.parse",
+        "urllib.request",
+        "uuid"
+      ],
+      "assessment": "active; inspected statically; not executed by this review",
+      "risks": [
+        "Worker bearer token authorizes trusted internal control; requires secure provisioning/rotation and logs must remain redacted.",
+        "Fixed summaries deliberately do not expose runner output; duplicate vocabulary serves a sanitization boundary."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
+      "original_path": "services/judge/solver_judge/worker.py",
+      "bytes": 12331,
+      "sha256": "287eba6256374aa9d11de4c216dd0644b045155529337a54b7b0dc49d64c54f7"
+    },
+    {
+      "path": "services/judge/solver_judge/grading/__init__.py",
+      "owner": "isolated judge control and sandbox",
+      "purpose": "Empty Python package marker for the grading functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/judge/solver_judge/grading/__init__.py",
+      "bytes": 60,
+      "sha256": "8f5d7927097b266e8893d6ff744d815723f4880bc2162e98239d98f8c04def64"
+    },
+    {
+      "path": "services/judge/solver_judge/grading/cases.py",
       "owner": "isolated judge control and sandbox",
       "purpose": "Provide three original problem oracles, two public examples and six bounded generated submission cases per problem",
       "feature": "grading cases",
@@ -5376,25 +5628,23 @@
       "sha256": "ca32f0bb3da09632a358f9efce0ed16051dc5a6165a9432ca980b0f45991a7bc"
     },
     {
-      "path": "services/judge/solver_judge/diagnostics.py",
+      "path": "services/judge/solver_judge/sandbox/__init__.py",
       "owner": "isolated judge control and sandbox",
-      "purpose": "Run finite sandbox preflight and print controlled readiness/check fields",
-      "feature": "judge readiness",
+      "purpose": "Empty Python package marker for the sandbox functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
       "active": true,
-      "dependencies": [
-        "json",
-        "os",
-        "solver_judge.runner"
+      "dependencies": [],
+      "assessment": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
       ],
-      "assessment": "active; inspected statically; not executed by this review",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
-      "original_path": "services/judge/solver_judge/diagnostics.py",
-      "bytes": 990,
-      "sha256": "77f6e03f5376e7a8b7e46823cbcea01f938658df825d678819f42181b70fab9d"
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "services/judge/solver_judge/sandbox/__init__.py",
+      "bytes": 79,
+      "sha256": "806ab495b4480d9458004f85d6df6e62e0cff48ba6ae5a7fbc795b51b58964e9"
     },
     {
-      "path": "services/judge/solver_judge/harness.py",
+      "path": "services/judge/solver_judge/sandbox/harness.py",
       "owner": "isolated judge control and sandbox",
       "purpose": "Trusted image entrypoint that validates source/input bounds, compiles Python/C++17, applies rlimits and emits one bounded response",
       "feature": "isolated execution",
@@ -5422,64 +5672,69 @@
       "sha256": "0df38a40629085c168e4b8dfc3d32307124056f20c386c29ef686a252c23450a"
     },
     {
-      "path": "services/judge/solver_judge/runner.py",
+      "path": "services/judge/tests/control/test_runner.py",
       "owner": "isolated judge control and sandbox",
-      "purpose": "Resolve immutable image identity, require rootless runsc, create per-job isolated containers, validate protocol and grade outputs externally",
-      "feature": "gVisor control and grading",
+      "purpose": "Mock sandbox exchange to test no expected-answer transmission, protocol failure, count/output/exit validation and no runc fallback",
+      "feature": "control protocol validation",
       "active": true,
       "dependencies": [
         "base64",
         "json",
-        "os",
+        "pytest",
         "solver_judge.bounded",
-        "solver_judge.cases",
-        "subprocess",
-        "threading",
-        "uuid"
+        "solver_judge.control.runner",
+        "unittest.mock"
       ],
       "assessment": "active; inspected statically; not executed by this review",
-      "risks": [
-        "Cleanup failures are silently suppressed and active container name discarded, so an orphan can be untracked.",
-        "Host-wide memory/CPU/disk accounting and independent sandbox security review remain production prerequisites."
-      ],
+      "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
-      "original_path": "services/judge/solver_judge/runner.py",
-      "bytes": 11061,
-      "sha256": "2afd5a37c33c4a6e1d1c64cec0b72f62568e909c2bfcb6e92a78c7273aed8fa9"
+      "original_path": "services/judge/tests/test_runner.py",
+      "bytes": 7851,
+      "sha256": "5fa567357ee33bd29477aba44c13f1bc77baf45d0028c54cd30be7815e10ec9f"
     },
     {
-      "path": "services/judge/solver_judge/worker.py",
+      "path": "services/judge/tests/control/test_worker.py",
       "owner": "isolated judge control and sandbox",
-      "purpose": "Validate leased jobs and trusted API origin, maintain readiness heartbeat, run one lease at a time, sanitize completion and handle shutdown",
-      "feature": "leased judge worker",
+      "purpose": "Use fakes/local HTTP to check lease validation, retry, startup readiness, shutdown, response limits and no bearer redirects",
+      "feature": "worker transport validation",
       "active": true,
       "dependencies": [
-        "__future__",
-        "ipaddress",
+        "http.server",
         "json",
-        "logging",
-        "os",
-        "signal",
-        "solver_judge.runner",
+        "pytest",
+        "solver_judge.control.worker",
         "threading",
-        "typing",
-        "urllib.error",
-        "urllib.parse",
-        "urllib.request",
+        "time",
+        "unittest.mock",
         "uuid"
       ],
       "assessment": "active; inspected statically; not executed by this review",
-      "risks": [
-        "Worker bearer token authorizes trusted internal control; requires secure provisioning/rotation and logs must remain redacted.",
-        "Fixed summaries deliberately do not expose runner output; duplicate vocabulary serves a sanitization boundary."
-      ],
+      "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
-      "original_path": "services/judge/solver_judge/worker.py",
-      "bytes": 12299,
-      "sha256": "8c5353d2264e79abe707a2d5d889c7034280781d0541d0537da74089b098c248"
+      "original_path": "services/judge/tests/test_worker.py",
+      "bytes": 13721,
+      "sha256": "5ea9b49221b0683e6f1a66df988df19f9dbb5ef1ee84398268f4d21951dc1fd7"
     },
     {
-      "path": "services/judge/tests/test_bounded.py",
+      "path": "services/judge/tests/grading/test_cases.py",
+      "owner": "isolated judge control and sandbox",
+      "purpose": "Check oracle correctness, public/generated bounds, deterministic test seed and failure cases",
+      "feature": "grading validation",
+      "active": true,
+      "dependencies": [
+        "pytest",
+        "random",
+        "solver_judge.grading.cases"
+      ],
+      "assessment": "active; inspected statically; not executed by this review",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
+      "original_path": "services/judge/tests/test_cases.py",
+      "bytes": 3353,
+      "sha256": "ddec86f511652ef2922eb4d1c032a63769dbfc0144cdae5fa1645464b2b7e38f"
+    },
+    {
+      "path": "services/judge/tests/sandbox/test_bounded.py",
       "owner": "isolated judge control and sandbox",
       "purpose": "Exercise fixed trusted probes for output cap, deadline and nonblocking large input",
       "feature": "bounded process validation",
@@ -5496,46 +5751,7 @@
       "sha256": "6989bf3d8be839bce096e53f7fcc8654567309b541091b2bd7ee1834b8dae3da"
     },
     {
-      "path": "services/judge/tests/test_cases.py",
-      "owner": "isolated judge control and sandbox",
-      "purpose": "Check oracle correctness, public/generated bounds, deterministic test seed and failure cases",
-      "feature": "grading validation",
-      "active": true,
-      "dependencies": [
-        "pytest",
-        "random",
-        "solver_judge.cases"
-      ],
-      "assessment": "active; inspected statically; not executed by this review",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
-      "original_path": "services/judge/tests/test_cases.py",
-      "bytes": 3345,
-      "sha256": "d2d8ccb1025869aa8d0d5aa24d712a7938be75bb99f25c26bc9e88f956857c80"
-    },
-    {
-      "path": "services/judge/tests/test_runner.py",
-      "owner": "isolated judge control and sandbox",
-      "purpose": "Mock sandbox exchange to test no expected-answer transmission, protocol failure, count/output/exit validation and no runc fallback",
-      "feature": "control protocol validation",
-      "active": true,
-      "dependencies": [
-        "base64",
-        "json",
-        "pytest",
-        "solver_judge.bounded",
-        "solver_judge.runner",
-        "unittest.mock"
-      ],
-      "assessment": "active; inspected statically; not executed by this review",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
-      "original_path": "services/judge/tests/test_runner.py",
-      "bytes": 7827,
-      "sha256": "72675a45b87103687dd053c3071205f6f0d06cecbb4f00bd52b25f65264f6266"
-    },
-    {
-      "path": "services/judge/tests/test_sandbox.py",
+      "path": "services/judge/tests/sandbox/test_sandbox.py",
       "owner": "isolated judge control and sandbox",
       "purpose": "Opt-in real gVisor integration fixtures: three Python AC, C++64-bit AC, WA/CE/RE/TLE/OLE, isolation, forged output, supervisor kill and tmpfs quota",
       "feature": "sandbox validation",
@@ -5543,7 +5759,7 @@
       "dependencies": [
         "os",
         "pytest",
-        "solver_judge.runner"
+        "solver_judge.control.runner"
       ],
       "assessment": "active but intentionally skipped unless opt-in integration flag is set; 15 parametrized cases; not run by this review",
       "risks": [
@@ -5551,40 +5767,17 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
       "original_path": "services/judge/tests/test_sandbox.py",
-      "bytes": 3953,
-      "sha256": "4f4ba23cf45506e4a76087f4e8b35520feee21018678e0bb18fd15d6e89e098c"
+      "bytes": 3961,
+      "sha256": "4a8cdd90323bacab9b7072dbb53b9af64ac1d6ecd98679a11ae6107bbbfb3974"
     },
     {
-      "path": "services/judge/tests/test_worker.py",
-      "owner": "isolated judge control and sandbox",
-      "purpose": "Use fakes/local HTTP to check lease validation, retry, startup readiness, shutdown, response limits and no bearer redirects",
-      "feature": "worker transport validation",
-      "active": true,
-      "dependencies": [
-        "http.server",
-        "json",
-        "pytest",
-        "solver_judge.worker",
-        "threading",
-        "time",
-        "unittest.mock",
-        "uuid"
-      ],
-      "assessment": "active; inspected statically; not executed by this review",
-      "risks": [],
-      "review_record": "AnalyseFuture/repository-inventory/reviews/judge.json",
-      "original_path": "services/judge/tests/test_worker.py",
-      "bytes": 13673,
-      "sha256": "db08df338a804d6a22248b82431625f5a907fb94d8b7bef0eb817dbaab8fbd97"
-    },
-    {
-      "path": "tests/e2e/hints.spec.ts",
+      "path": "tests/e2e/hints/hints.spec.ts",
       "owner": "cross-service browser validation",
       "purpose": "Seven browser regressions for guest hints, JWT-backed authored results, provenance, safe failure/recovery, timeout, explicit cancellation and level-change abort; one read-only hint account per worker with fresh per-test signin sessions.",
       "feature": "authenticated authored hint browser validation",
       "active": true,
       "dependencies": [
-        "../../apps/web/features/hints/api",
+        "../../../apps/web/features/hints/api",
         "@playwright/test"
       ],
       "assessment": "Fixture corrected after diagnosed signup-throttle interference; web and direct browser-fixture typechecks passed; full browser rerun pending.",
@@ -5595,11 +5788,11 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/recovered-web.json",
       "original_path": "tests/e2e/hints.spec.ts",
-      "bytes": 10289,
-      "sha256": "154350763d28a9d3285b57b5bfc0046da64d3c8d7e1d7922ed13e7d69d5540d4"
+      "bytes": 10292,
+      "sha256": "141895132005e91a3be3081d12290f8ceaad12ad1f6b1547027bedfee6f962f3"
     },
     {
-      "path": "tests/e2e/practice.spec.ts",
+      "path": "tests/e2e/practice/practice.spec.ts",
       "owner": "cross-service browser validation",
       "purpose": "7 browser tests: catalog filters, local Monaco, isolated drafts, errors, fallback/retry and responsive layout",
       "feature": "practice",
@@ -5615,24 +5808,24 @@
       "sha256": "d5041bc2adb60626ff2b09f7a26442570eb62a057597925ba6ea4bff31bab35a"
     },
     {
-      "path": "tests/e2e/resilience.spec.ts",
+      "path": "tests/e2e/practice/resilience.spec.ts",
       "owner": "cross-service browser validation",
       "purpose": "6 API-client/browser resilience tests for malformed bodies, timeout and cancellation",
       "feature": "practice",
       "active": true,
       "dependencies": [
-        "../../apps/web/features/practice/api",
+        "../../../apps/web/features/practice/api",
         "@playwright/test"
       ],
       "assessment": "test",
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/web.json",
       "original_path": "tests/e2e/resilience.spec.ts",
-      "bytes": 5043,
-      "sha256": "b65984a4788c55ba68d4a831309cebcadf5bd5794a6f3e5e8c901d77b783eefd"
+      "bytes": 5046,
+      "sha256": "446e0ad29f010864deef342bc51f418c3d91c27df1fa1bdd4b80c917d05e459b"
     },
     {
-      "path": "tests/e2e/submissions.spec.ts",
+      "path": "tests/e2e/submissions/submissions.spec.ts",
       "owner": "cross-service browser validation",
       "purpose": "5 browser tests for accounts, safe redirect, guest privacy, unavailable judge and real private submission flow",
       "feature": "submissions",

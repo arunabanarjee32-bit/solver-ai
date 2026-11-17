@@ -1,0 +1,48 @@
+CURRENT FUNCTIONAL MIGRATION
+68 relocations from published c954510 are recorded in the complete functional
+map and baseline. Root commands retain their user-facing names; their target
+paths now live under scripts/development or scripts/verification. FastAPI main:app
+is unchanged. Judge CLI is solver_judge.control.worker/diagnostics. API SQLite
+root and web identity data locations are preserved. No test/build was run for
+this phase. See PROJECT_STRUCTURE.md and functional-moves.json before using
+older source paths in the retained recovery history below.
+
+SOLVER AI — MIGRATION SUMMARY
+Source baseline: a00894df45e5b451d3261ed374b36e8d2c208ad6
+
+Before: working web/API/judge scaffold, flat web components/lib folders, two
+preserved upstream archives, and unmerged hint UI/project-memory branches.
+After: feature-owned frontend, recovered authenticated authored hints, safe
+cleanup/readiness repair, complete evidence/reporting and retained research files.
+
+Runtime compatibility
+- npm/uv working directories and workspace boundaries remain unchanged.
+- Next route URLs and FastAPI request/response schemas remain unchanged.
+- Web/API SQLite databases, signing keys and worker-token paths remain unchanged.
+- Root native commands, gVisor requirement and separate trusted worker remain.
+- The auth migration/test script imports were updated; migrations remain official
+  Better Auth migrations and are exercised against disposable state.
+- Consumers importing removed internal web module paths must use the mapping;
+  these internal files are not a published package API. Repository imports were
+  repaired, including direct esbuild browser-test imports.
+
+Preservation and rollback
+All 238 baseline paths are accounted for by unchanged paths or the 10-path move
+map. Byte content changed only for purposeful integration/configuration/docs/
+regression repairs, with earlier versions retained in normal Git history.
+The prior archive manifest still describes the unchanged original uploads.
+Twenty-three additional branch versions have their own manifest and verifier.
+
+The full-history pre-review bundle lives outside the checkout:
+/workspace/recovery-snapshots/solver-ai-a00894d-before-full-review.bundle
+SHA256: 059aebbfa537a904b70bba8b6d0c13a275aa4d37e33d9e97a10d377b2909f125
+It was verified with git bundle verify and contains all fetched refs. It is not
+published as an extra Git repository or public binary. Published main ancestry
+also retains the starting commit; do not reset or force-push to roll back.
+Use a deliberate revert of a selected migration commit after reviewing dependent
+changes, and run the same checks. Restore private local data only from its own
+backup; it was never placed in Git or the recovery archive.
+
+Direct-main delivery is explicitly authorized. No feature branch or PR was
+created. Incremental normal pushes preserve ancestry; final remote SHA and clean
+working tree are verified by the coordinator and reported in the final response.

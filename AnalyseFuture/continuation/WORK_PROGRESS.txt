@@ -1,0 +1,50 @@
+CURRENT PHASE — FUNCTIONAL ORGANIZATION COMPLETED
+Repository: arunabanarjee32-bit/solver-ai. Owner confirmed this project.
+Published phase baseline:c954510f5735efaacdb341b4dede06a567d92ebf (293 paths).
+All baseline files retained; 68 files moved to their responsibility collections.
+API domains, host/sandbox judge boundaries, browser test ownership, development/
+verification tools, eight documentation groups and recovery-report collections
+are mapped in PROJECT_STRUCTURE.md and repository-inventory/functional-moves.json.
+Framework entrypoints, runtime data/key locations and immutable upstream payloads
+remain intentional. No features or files were discarded; no history rewrite.
+No tests/builds/lint/runtime imports/startup executed in this phase. Static imports,
+local links, configured targets and preserved bytes were reviewed. The current
+layout remains unexecuted until the owner requests verification. Final commit and
+remote-main match are reported at delivery. Earlier recovery records follow.
+
+PREVIOUS RECOVERY PHASE (retained)
+
+WORK PROGRESS — COMPLETE FOR ACCESSIBLE RECOVERY SCOPE
+Date:17 November2026 (Asia/Kolkata)
+Starting main:a00894df45e5b451d3261ed374b36e8d2c208ad6
+
+Completed:238 baseline tracked paths inventoried, all63 fetched commits/253
+historical paths reviewed; complete source/config/test/docs assessments retained.
+Ten modules feature-grouped; five SAI-011 source/test inputs integrated;23 original
+branch versions preserved; both ZIPs/122 members unchanged.42 feature records
+classified (22 active,11 proposed,9 research-only). Confirmed cleanup tracking
+and readiness defect repaired with12 regressions. All14 required recovery reports,
+dependency map, detailed canonical roadmap and continuation guide are present.
+
+Validation: frozen installs; API137/auth7/judge118/browser25 all passed; Ruff,
+TypeScript, build/packaging, migration idempotence, Compose images/production smoke,
+npm audit,293-path inventory and preservation verification passed. Initial
+browser24/1 signup-throttle fixture failure was diagnosed and resolved without
+weakening application security; see validation report. No remaining unexplained
+required local failure. Final code/docs checkpoints use normal direct-main pushes.
+
+Current: final consistency, preservation and remote-main confirmation.
+No unprocessed relevant tracked directory remains within the declared scope.
+Inspection limits: binary semantics, absent LFS objects, unavailable account/API
+settings, broader advisory/security audits and future functionality are explicitly
+unverified. This is not attribution or proof of account recovery.
+
+Next prioritized actions: owner access/security-log review; maintained production
+sandbox/host-wide budgets; identity ingress/recovery and data lifecycle/restore;
+content rights and original problems; bounded provider pilot/evaluation only after
+privacy/cost controls; reviewed immutable Action/image pins. None is disguised as
+an already completed product feature. Use NEXT_DEVELOPER_INSTRUCTIONS.txt.
+
+Recovery snapshot: verified full-history bundle outside checkout under
+/workspace/recovery-snapshots/ (hash/path in MIGRATION_SUMMARY). No history rewrite,
+force-push, branch/tag deletion, protection bypass or public deployment occurred.

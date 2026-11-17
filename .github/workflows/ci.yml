@@ -12,8 +12,8 @@ jobs:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/verify_preserved_archives.py --git-index
-      - run: python3 scripts/repository_inventory.py --check
+      - run: python3 scripts/verification/verify_preserved_archives.py --git-index
+      - run: python3 scripts/verification/repository_inventory.py --check
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version

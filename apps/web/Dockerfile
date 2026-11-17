@@ -8,7 +8,7 @@ RUN --mount=type=secret,id=proxy_ca \
     if [ -f /run/secrets/proxy_ca ]; then export NODE_EXTRA_CA_CERTS=/run/secrets/proxy_ca; fi; \
     npm ci
 COPY apps/web ./apps/web
-COPY scripts/check-standalone.mjs ./scripts/check-standalone.mjs
+COPY scripts/verification/check-standalone.mjs ./scripts/verification/check-standalone.mjs
 ARG API_BASE_URL=http://api:8000
 ENV API_BASE_URL=$API_BASE_URL
 RUN npm run build

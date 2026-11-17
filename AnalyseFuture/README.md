@@ -7,14 +7,21 @@ or an assertion that the material is malicious**.
 
 ## Contents and original locations
 
-The complete current recovery records are `REPOSITORY_AUDIT.txt`,
-`COMPLETE_FILE_INVENTORY.txt`, `FEATURE_INVENTORY.txt`, `DUPLICATE_ANALYSIS.txt`,
-`SECURITY_AUDIT.txt`, `ORIGINAL_TO_NEW_PATH_MAPPING.txt`, `CONSOLIDATION_REPORT.txt`,
-`ARCHIVED_FILES_MANIFEST.txt`, `PROJECT_VISION_AND_FUTURE_ROADMAP.txt`,
-`TECHNICAL_DEBT.txt`, `TEST_AND_VALIDATION_REPORT.txt`, `MIGRATION_SUMMARY.txt`,
-`NEXT_DEVELOPER_INSTRUCTIONS.txt` and `WORK_PROGRESS.txt`.
-`DEPENDENCY_MAP.txt` describes actual cross-service calls; `repository-inventory/`
-contains machine-readable baseline/current ledgers and independent assessments.
+Current recovery records are grouped by responsibility:
+
+| Collection | Recovery records |
+| --- | --- |
+| `audits/` | [Repository audit](audits/REPOSITORY_AUDIT.txt), [security audit](audits/SECURITY_AUDIT.txt) |
+| `repository-inventory/` | [Complete file inventory](repository-inventory/COMPLETE_FILE_INVENTORY.txt), [feature inventory](repository-inventory/FEATURE_INVENTORY.txt), [duplicate analysis](repository-inventory/DUPLICATE_ANALYSIS.txt), [archived-files manifest](repository-inventory/ARCHIVED_FILES_MANIFEST.txt), [dependency map](repository-inventory/DEPENDENCY_MAP.txt) |
+| `migration-records/` | [Original-to-new path mapping](migration-records/ORIGINAL_TO_NEW_PATH_MAPPING.txt), [consolidation report](migration-records/CONSOLIDATION_REPORT.txt), [migration summary](migration-records/MIGRATION_SUMMARY.txt) |
+| `planning/` | [Project vision and future roadmap](planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt), [technical debt](planning/TECHNICAL_DEBT.txt) |
+| `validation/` | [Test and validation report](validation/TEST_AND_VALIDATION_REPORT.txt) |
+| `continuation/` | [Work progress](continuation/WORK_PROGRESS.txt), [next-developer instructions](continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
+
+The dependency map describes actual cross-service calls. `repository-inventory/`
+also contains machine-readable baseline/current ledgers and independent
+assessments. Moving these records changes their locations, not their evidence or
+the status of any earlier test result.
 
 `historical-implementations/` preserves 23 changed file versions from the SAI-011
 and permanent-memory branches. Their source commits and byte hashes are in
@@ -54,12 +61,13 @@ inside the ZIPs. These are filename changes, not content edits.
   extracting a ZIP cannot restore data it does not contain.
 
 The existing research assessment is in
-[`docs/AUDIT_AND_AI_PLAN_2026-11-15.md`](../docs/AUDIT_AND_AI_PLAN_2026-11-15.md).
+[`docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md`](../docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md).
 The repository map and review findings are in
-[`docs/REPOSITORY_STRUCTURE.md`](../docs/REPOSITORY_STRUCTURE.md).
+[`docs/architecture/REPOSITORY_STRUCTURE.md`](../docs/architecture/REPOSITORY_STRUCTURE.md).
 The canonical future proposal is
-[`PROJECT_VISION_AND_FUTURE_ROADMAP.txt`](PROJECT_VISION_AND_FUTURE_ROADMAP.txt);
-the earlier [`PROJECT_IDEA.txt`](../PROJECT_IDEA.txt) remains available.
+[`planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt`](planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt);
+the earlier [`docs/product/PROJECT_IDEA.txt`](../docs/product/PROJECT_IDEA.txt)
+remains available.
 
 Future displaced or uncertain files belong here with their source path and a
 reason recorded in the inventory. Do not delete material merely because it

@@ -503,6 +503,126 @@
       "risks": [
         "Historical import paths and tests are not the active implementation."
       ]
+    },
+    {
+      "path": "PROJECT_STRUCTURE.md",
+      "purpose": "Complete functional collection/ownership guide, framework exceptions, preserved evidence and no-tests scope.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/functional-moves.json",
+      "purpose": "Exact68 current functional moves and preserved runtime-boundary decisions.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "AnalyseFuture/repository-inventory/functional-baseline.json",
+      "purpose": "Immutable293-path published baseline before complete functional reorganization.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/api/solver_api/features/__init__.py",
+      "purpose": "Empty Python package marker for the features functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/api/solver_api/features/submissions/__init__.py",
+      "purpose": "Empty Python package marker for the submissions functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/api/solver_api/features/hints/__init__.py",
+      "purpose": "Empty Python package marker for the hints functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/api/solver_api/features/identity/__init__.py",
+      "purpose": "Empty Python package marker for the identity functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/api/solver_api/features/catalog/__init__.py",
+      "purpose": "Empty Python package marker for the catalog functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/api/solver_api/http/__init__.py",
+      "purpose": "Empty Python package marker for the http functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/control/__init__.py",
+      "purpose": "Empty Python package marker for the control functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/grading/__init__.py",
+      "purpose": "Empty Python package marker for the grading functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
+    },
+    {
+      "path": "services/judge/solver_judge/sandbox/__init__.py",
+      "purpose": "Empty Python package marker for the sandbox functional domain; no initialization side effects.",
+      "feature": "functional organization and explicit ownership",
+      "dependencies": [],
+      "status": "Static organization only; no runtime execution after relocation.",
+      "risks": [
+        "Runtime verification deferred at the owner request."
+      ]
     }
   ],
   "scope": "Coordinator full support/config inspection"

@@ -1,0 +1,222 @@
+CURRENT LAYOUT / REVIEW SCOPE
+This source/history review predates the final 68 functional relocations. Current
+paths are reconciled through repository-inventory/functional-moves.json; frozen
+review records retain original source provenance. No tests, builds or runtime
+security checks were run after those moves, at the owner's request. The audit
+is retained evidence, not a certification of the relocated application.
+
+SOLVER AI — SECURITY AND HISTORY REVIEW
+Review date: 17 November 2026 (Asia/Kolkata)
+Repository: https://github.com/arunabanarjee32-bit/solver-ai
+Starting main: a00894df45e5b451d3261ed374b36e8d2c208ad6
+
+1. SCOPE, METHOD AND EVIDENCE LIMITS
+
+The fetched baseline comprises 63 reachable commits, 253 distinct historical
+file paths, main and three remote branches, and no tags. Starting main contains
+238 tracked paths and 33 commits. This report combines the history/configuration
+review with the API, web, judge and archive reviewers' findings. All meaningful
+active source, tests and security-sensitive configuration are assigned to those
+reviews; the complete per-file ledger is COMPLETE_FILE_INVENTORY.txt.
+
+The immutable fetched branch tips were:
+- main: a00894df45e5b451d3261ed374b36e8d2c208ad6
+- docs/solver-ai-permanent-project-memory:
+  48192a87652f523818f1dea29caa54fe46e163a7
+- feat/sai-010-authored-hint-contract:
+  2d1552ed31d2424ee3af8a8dbaf3ec4cea27af29
+- feat/sai-011-frontend-hint-api:
+  b591db142d7b65c306769a59251ed4129f42118a
+
+History inspection covered commit graph/change metadata and all 291 unique
+reachable file blobs. Pattern scanning examined 282 text blobs. Nine binary
+blobs (ZIPs and images) received metadata/hash treatment, not a claim of semantic
+image, steganography or malware analysis. Current extracted source and dataset
+structures were assigned separately to archive review. Five dataset members are
+Git LFS pointers; the absent large objects cannot be inspected through the ZIP.
+
+Secret checks looked for private-key delimiters, common GitHub/provider/AWS token
+formats and credential-bearing URLs. Reports contain categories and locations,
+never matched values. The one historical URL-userinfo hit is an intentional
+invalid-origin fixture in services/judge/tests/control/test_worker.py:259, associated
+with test_untrusted_api_origins_are_rejected. It is not evidence of a live secret.
+No pattern-confirmed live credential exposure was found. This cannot prove the
+absence of custom secrets, encoded material, personal information or unknown
+vulnerabilities.
+
+No archive scripts, model downloads, training commands or unsafe execution
+helpers were run by the review. Authored/recorded historical CI statements are
+separate from validation of the final recovered revision; see
+TEST_AND_VALIDATION_REPORT.txt for actual current commands and outcomes.
+
+2. HISTORY AND COMPROMISE ATTRIBUTION
+
+The owner reports disruption. Accessible Git content does not authenticate who
+used an account or prove malicious intent. No inspected commit supplied evidence
+sufficient to attribute a compromise, and unfamiliar files were not labeled
+malicious merely because they were unfamiliar.
+
+The foundation was introduced in cfedbbc and merged through 3b09b86. The SAI-010
+API feature branch was squash-integrated through 9952f8b: its services/api tree
+and Better Auth test match starting main byte for byte. Replaying those commits
+would duplicate already integrated work. The d4e1fc6 upload added two ZIPs, not
+executable application changes. The 596d9c2 preservation commit moved both ZIPs
+with R100 identity into AnalyseFuture/archives. The apparent historical deletion
+entries are those moves; neither archive was discarded. No executable-mode
+introductions or permission changes were found across the fetched baseline.
+There are no Git tree submodule entries.
+
+A genuine disconnected feature was found on the SAI-011 branch: authenticated
+hint UI/client, workspace hookup, styles and five browser tests. This is a
+recoverable feature gap, not evidence of malicious removal. The implementation
+uses the existing JWT/API boundary and introduces no provider dependency or
+external model call. Recovery must preserve its bounded validation, provenance,
+cancellation and safe errors. Its final recovery/test status is recorded by the
+coordinator in the consolidation and validation reports.
+
+The permanent-memory branch contains five valuable dated documentation files,
+including an RTF handbook. Their snapshot instructions include an older branch/PR
+workflow and unmerged-feature status; current explicit owner instructions take
+precedence. Preserve the records without promoting stale instructions to current
+authority. Static RTF inspection found no object, objdata, field or pict controls;
+this is not an Office-format security certification.
+
+3. CONFIRMED ISSUE REQUIRING REMEDIATION
+
+JUDGE-001 — Failed Docker cleanup can lose controller tracking.
+Classification: confirmed operational recoverability weakness; medium impact.
+Evidence at baseline: services/judge/solver_judge/control/runner.py:93-98 and 163-166.
+_remove suppressed RuntimeError/OSError, while the context manager discarded the
+container name regardless of removal outcome. A daemon/removal failure could
+therefore leave an orphan sandbox indistinguishable from an absent container.
+There is no evidence of exploitation or host escape from this finding.
+
+Remediation: RESOLVED in source commit1336354, with12 new cleanup/readiness
+regressions. The final judge suite passed118 cases including15 live gVisor tests;
+the full browser suite passed25 cases including real submissions and ownership.
+Failed cleanup retains names, confirms absence through bounded queries, revokes
+runner readiness and stops worker heartbeat renewal/new claims. Current-lease
+completion still reports a safe verdict. API capability display retains its existing
+60-second expiry window; no unready runner is allowed to execute new work.
+Process-crash reconciliation and production monitoring remain separate gates.
+
+4. CONFIRMED LIMITATIONS, NOT OBSERVED LOCAL BYPASSES
+
+API identity transport:
+services/api/solver_api/features/identity/verification.py:163-175 accepts configured HTTP or HTTPS JWKS
+URLs. Callers cannot select this URL through token headers. Internal Compose
+uses HTTP intentionally. External production JWKS traffic requires HTTPS or an
+explicitly trusted internal route; an untrusted cleartext path would allow key
+substitution. This is a deployment trust requirement, not a demonstrated local
+signature bypass. HTTPX timeouts and a 64 KiB cap exist, but the full streamed fetch
+has no outer total deadline; slow configured issuers can impair availability.
+
+Data lifecycle and capacity:
+services/api/solver_api/features/submissions/store.py stores owned source/history durably.
+Ownership and 0600 file permissions do not provide a retention/deletion policy,
+encryption-at-rest operation, cumulative storage cap or tested backup/restore.
+Submission-specific rate, active-work and queue limits exist. Aggregate API
+concurrency/ingress quotas and future model cost budgets remain production work.
+
+Worker trust:
+API control requires a nonempty shared token compared in constant time and uses
+separate leased completion tokens. The API does not itself enforce minimum shared
+token entropy or per-worker identities. Native launcher generation is stronger.
+Production controller networking, rotation and worker trust need an explicit
+operation policy; no missing-auth bypass was identified.
+
+Web identity and privacy:
+Local email/password accounts lack delivered verification/recovery email.
+Already issued offline-verifiable API JWTs last up to five minutes after session
+logout. Local forwarding headers are disabled to resist spoofing, leaving shared
+throttle buckets; production needs trusted ingress configuration. Browser drafts
+are localStorage state, best effort and not account-encrypted backups. They are
+not uploaded continuously by the existing editor workflow.
+
+Judge infrastructure:
+The rootless prototype uses per-process limits and bounded temporary storage,
+not aggregate cgroup resource accounting or complete host-wide budgets. The
+recorded gVisor runtime is older than the upstream release previously reviewed.
+Independent runtime/security review and maintained production operations remain
+release gates. MLE is accepted in protocol vocabulary, but ambiguous allocation
+failure is conservatively RE; do not claim precise measured MLE was demonstrated.
+No finite test suite can certify the absence of sandbox escape.
+
+5. BUILD, WORKFLOW AND DEPENDENCY FINDINGS
+
+The root npm workspace names only apps/web. API dependencies come from its own
+frozen uv project. AnalyseFuture is not a Python dependency project or npm
+workspace. The root Docker context excludes it, Next standalone tracing excludes
+it, and the packaging guard rejects accidental inclusion. The archive checker
+compares bytes and hashes; it does not import or execute archived Python.
+
+CI .github/workflows/ci.yml has contents:read, push/pull_request triggers and no
+pull_request_target. Its baseline history is the foundation addition plus the
+596d9c2 archive-verification step. No secret-writing or archive-install step was
+found. Standard hosted CI intentionally skips 15 real sandbox tests and one full
+judge browser flow; only explicit enabled runs exercise those paths.
+
+The npm lock contains 121 records with 118 registry.npmjs.org artifact URLs and a
+workspace link. All HTTPS npm artifacts declare integrity. esbuild 0.28.2 is the
+only package marked hasInstallScript. Root/web scripts have no install lifecycle
+hook; prepare:editor is an explicit command rather than the npm prepare hook.
+The uv lock has 29 records: 28 PyPI registry packages and the virtual project;
+all declared source/wheel artifacts carry SHA256 hashes. No alternate registry
+or Git/tarball dependency source was found. Current npm audit reported zero known advisories for the locked npm graph. No
+Python advisory intelligence scan was performed. These observations do not substitute
+for current vulnerability intelligence or an independent review of all upstream
+package maintainers.
+
+Hardening opportunities remain: Actions use mutable major tags rather than
+vetted immutable commit SHAs. Web/API Docker bases use mutable tags; the judge
+base includes a digest. Exact base-image pinning, scheduled updates and reviewed
+Action pins should be adopted with authoritative digests/SHAs, not invented
+values. API Python project pin 3.12 is broader than root native 3.12.14.
+
+6. ARCHIVE NETWORK AND EXECUTION BOUNDARIES
+
+Both upstream snapshots are Python research frameworks, not complete production
+modules. They contain provider SDK calls, model downloads, host subprocess or
+exec execution paths, an external execution client and optional ranker training.
+Source licenses and notices are preserved; dataset/problem/model rights are
+separate and unreviewed. Do not install their incomplete/unpinned requirements or
+reuse their host executors as part of the live application. CodeGenerator also
+contains a pyyml requirement spelling requiring investigation before any separate
+research environment is attempted.
+
+Upstream Git ignore/attribute files are renamed with an .upstream suffix so broad
+ignore patterns and LFS filters remain inactive. Every preserved member has a
+recorded path and digest; original ZIPs remain unchanged. Moving code does not
+make it safe by itself. Actual workspace/import/build/CI exclusions and the
+fail-closed gVisor execution boundary are the relevant containment controls.
+
+7. ACCESS REVIEW, DIRECT DELIVERY AND OWNER ACTIONS
+
+The owner explicitly authorizes direct main commits and pushes. Normal
+fast-forward delivery is permitted after validation; no force-push, published
+history rewrite, branch-protection bypass or branch/tag deletion is authorized.
+No inspected finding established that publishing the reviewed changes would
+expose a live credential. The separate Git bundle/snapshot remains outside the
+checkout and is not part of the public report payload.
+
+GitHub repository-permission/branch-protection API inspection was unavailable in
+this session. Successful scoped Git reads/writes do not establish account-admin
+access or prove account security. A normal push may still be rejected by server
+policy; the coordinator must report its actual result and remote commit match.
+
+Owner-side account recovery remains separate from code organization. Review the
+GitHub security/access log, active sessions, collaborators, team privileges,
+installed apps, deploy keys, personal tokens, branch rules and workflow changes.
+Revoke unauthorized access and rotate credentials whose exposure is established.
+Review Actions runs and deployment provenance around the reported incident.
+Do not paste secret values into these reports, chat or a public archive.
+
+8. WHAT THIS REPORT DOES NOT ESTABLISH
+
+It does not recover deleted server-side branches or objects unavailable from the
+fetched refs, inspect private forks or account logs, certify every package/image,
+restore missing LFS datasets, prove upstream research results, establish safe
+public judge operation, or attribute an attacker. Commit author names and dates
+are metadata, not authenticated proof of actor intent. Security checks cannot
+prove a negative. Outstanding production gaps and completed local regression
+checks must remain distinct in the final delivery.

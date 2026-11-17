@@ -1,0 +1,67 @@
+FINAL STRUCTURE PHASE
+The latest owner instruction pauses all tests/builds and authorizes independent
+functional sorting of every file.68 relocations implement that instruction;
+PROJECT_STRUCTURE.md gives every collection a home, and the complete ledger
+accounts for all current paths. Earlier source/history investigation and actual
+pre-relocation test results are retained below as dated recovery evidence.
+
+SOLVER AI — COMPLETE REPOSITORY REVIEW
+Date: 17 November 2026 (Asia/Kolkata)
+Repository: https://github.com/arunabanarjee32-bit/solver-ai
+Starting/default/delivery branch: main
+Starting commit: a00894df45e5b451d3261ed374b36e8d2c208ad6
+
+Scope and discovery
+The starting tree contains 238 tracked paths. Fetching all advertised branches
+and tags exposed 63 reachable commits and 253 distinct historical paths, across
+main and three feature/documentation branches; no tags or submodules were found.
+The complete current path ledger is COMPLETE_FILE_INVENTORY.txt, with structured
+baseline/current inventories and independent file reviews in repository-inventory/.
+Ignored dependency caches, generated builds, browser state and private databases
+are local runtime outputs, not extra project implementations; they were retained.
+
+Review method
+API, judge, frontend/browser, documentation, archive and history reviews inspected
+their full assigned source/configuration. Source was analyzed before installation
+or execution. Locks were parsed; historical text was scanned for configured token,
+private-key and credential-URL patterns without publishing values. JSONL/JSON and
+PNG structures were checked, with limitations recorded. Static review is not proof
+of correctness, ownership of content, security certification or actor identity.
+
+Recovery and architecture decisions
+SAI-010 backend code was already squash-integrated; its branch API tree matches
+starting main. SAI-011 had a genuinely disconnected authored-hint frontend with
+client, component, workspace integration, styles and five browser tests. Those
+five source/test versions were recovered from b591db142d7b65c306769a59251ed4129f42118a.
+Existing public hints, account state, code drafts and submission flows remain.
+Ten existing web modules now belong to accounts, practice and submissions feature
+folders; the recovered client/panel form the hints feature. Framework route paths,
+service boundaries, database locations and public API schemas are unchanged.
+
+The permanent-memory branch contains useful dated context, not a replacement for
+current implementation status. All 23 branch-modified file versions from that
+branch and SAI-011 are preserved with source commits and hashes. Older status,
+workflow and conversation claims remain historical evidence, not current commands.
+
+Both uploaded research ZIPs and their 122 members remain intact and inactive.
+Their host execution, provider calls, model loading, unpinned dependencies and
+static defects are incompatible with blind production integration. They supply
+research ideas, not an already working production AI feature. Five dataset entries
+are LFS pointers; their missing objects cannot be recovered by unzipping.
+
+Confirmed repair
+The judge could suppress failed container removal and discard tracking. The new
+controller retains unresolved names, confirms absence through a bounded query,
+revokes readiness and supports cancellation retries. The worker stops heartbeats
+and new leases after readiness loss. It still completes an in-flight lease with a
+safe verdict. Twelve regression cases exercise cleanup/readiness behavior. API
+capability display can remain stale for its existing 60-second heartbeat window;
+no further execution is permitted by an unready controller.
+
+No evidence-supported claim of malicious authorship was established. The owner
+must separately inspect account access/security logs. No reset, force-push,
+protection bypass, branch deletion or tag deletion was performed.
+
+See SECURITY_AUDIT, FEATURE_INVENTORY, DUPLICATE_ANALYSIS, CONSOLIDATION_REPORT,
+TEST_AND_VALIDATION_REPORT and NEXT_DEVELOPER_INSTRUCTIONS for precise evidence,
+commands, limits and continuation steps.

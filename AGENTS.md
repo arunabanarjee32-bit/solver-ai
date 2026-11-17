@@ -1,6 +1,6 @@
 # Instructions for Codex and all coding agents
 
-**Source of truth:** README.md, docs/INDEX.md, docs/PROJECT_STATUS.md. Read them and the relevant specification before making changes.
+**Source of truth:** README.md, docs/INDEX.md, docs/status/PROJECT_STATUS.md. Read them and the relevant specification before making changes.
 
 ## Mission
 
@@ -40,4 +40,4 @@ Summary; files; decisions/reuse; tests actually run with results; open risks; de
 
 ## Next implementation work
 
-Follow docs/CODEX_PLAYBOOK.md and docs/DEVELOPMENT.md. Preserve the tested identity, ownership, queue and sandbox boundaries. Maintain actual sandbox/hostile-program tests when changing execution; never fall back to host or ordinary-container execution. Production identity/runtime/operations hardening and provider-neutral AI tutoring remain future work. Do not present authored hints as AI inference or finite grading as proof of universal correctness.
+Follow docs/engineering/CODEX_PLAYBOOK.md and docs/onboarding/DEVELOPMENT.md. Preserve the tested identity, ownership, queue and sandbox boundaries. Maintain actual sandbox/hostile-program tests when changing execution; never fall back to host or ordinary-container execution. Production identity/runtime/operations hardening and provider-neutral AI tutoring remain future work. Do not present authored hints as AI inference or finite grading as proof of universal correctness.

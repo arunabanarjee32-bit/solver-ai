@@ -1,0 +1,539 @@
+ORIGINAL TO CURRENT PATH MAPPING
+Latest functional phase baseline:c954510f5735efaacdb341b4dede06a567d92ebf
+68 functional relocations; no baseline file removed. Source/configuration bodies changed only where paths or package roots required repair.
+Runtime checks explicitly deferred by owner.
+
+ALL293 PUBLISHED PHASE-BASELINE PATHS
+.dockerignore -> .dockerignore | deliberately retained
+.github/PULL_REQUEST_TEMPLATE.md -> .github/PULL_REQUEST_TEMPLATE.md | deliberately retained
+.github/workflows/ci.yml -> .github/workflows/ci.yml | deliberately retained
+.gitignore -> .gitignore | deliberately retained
+.node-version -> .node-version | deliberately retained
+.npmrc -> .npmrc | deliberately retained
+.python-version -> .python-version | deliberately retained
+AGENTS.md -> AGENTS.md | deliberately retained
+AnalyseFuture/.gitattributes -> AnalyseFuture/.gitattributes | deliberately retained
+AnalyseFuture/.gitignore -> AnalyseFuture/.gitignore | deliberately retained
+AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt -> AnalyseFuture/repository-inventory/ARCHIVED_FILES_MANIFEST.txt | functionally relocated
+AnalyseFuture/COMPLETE_FILE_INVENTORY.txt -> AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt | functionally relocated
+AnalyseFuture/CONSOLIDATION_REPORT.txt -> AnalyseFuture/migration-records/CONSOLIDATION_REPORT.txt | functionally relocated
+AnalyseFuture/DEPENDENCY_MAP.txt -> AnalyseFuture/repository-inventory/DEPENDENCY_MAP.txt | functionally relocated
+AnalyseFuture/DUPLICATE_ANALYSIS.txt -> AnalyseFuture/repository-inventory/DUPLICATE_ANALYSIS.txt | functionally relocated
+AnalyseFuture/FEATURE_INVENTORY.txt -> AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt | functionally relocated
+AnalyseFuture/MIGRATION_SUMMARY.txt -> AnalyseFuture/migration-records/MIGRATION_SUMMARY.txt | functionally relocated
+AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt -> AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt | functionally relocated
+AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt -> AnalyseFuture/migration-records/ORIGINAL_TO_NEW_PATH_MAPPING.txt | functionally relocated
+AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt -> AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt | functionally relocated
+AnalyseFuture/README.md -> AnalyseFuture/README.md | deliberately retained
+AnalyseFuture/REPOSITORY_AUDIT.txt -> AnalyseFuture/audits/REPOSITORY_AUDIT.txt | functionally relocated
+AnalyseFuture/SECURITY_AUDIT.txt -> AnalyseFuture/audits/SECURITY_AUDIT.txt | functionally relocated
+AnalyseFuture/TECHNICAL_DEBT.txt -> AnalyseFuture/planning/TECHNICAL_DEBT.txt | functionally relocated
+AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt -> AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt | functionally relocated
+AnalyseFuture/WORK_PROGRESS.txt -> AnalyseFuture/continuation/WORK_PROGRESS.txt | functionally relocated
+AnalyseFuture/archives/CodeGenerator-master.zip -> AnalyseFuture/archives/CodeGenerator-master.zip | deliberately retained
+AnalyseFuture/archives/phi-code-main.zip -> AnalyseFuture/archives/phi-code-main.zip | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/.env.example -> AnalyseFuture/extracted/CodeGenerator-master/.env.example | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream -> AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/LICENSE -> AnalyseFuture/extracted/CodeGenerator-master/LICENSE | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/README.md -> AnalyseFuture/extracted/CodeGenerator-master/README.md | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png -> AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/requirements.txt -> AnalyseFuture/extracted/CodeGenerator-master/requirements.txt | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/main.py -> AnalyseFuture/extracted/CodeGenerator-master/src/main.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py -> AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py | deliberately retained
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream -> AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream | deliberately retained
+AnalyseFuture/extracted/phi-code-main/.gitignore.upstream -> AnalyseFuture/extracted/phi-code-main/.gitignore.upstream | deliberately retained
+AnalyseFuture/extracted/phi-code-main/LICENSE -> AnalyseFuture/extracted/phi-code-main/LICENSE | deliberately retained
+AnalyseFuture/extracted/phi-code-main/README.md -> AnalyseFuture/extracted/phi-code-main/README.md | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/curses_ui.png -> AnalyseFuture/extracted/phi-code-main/curses_ui.png | deliberately retained
+AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl | deliberately retained
+AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py -> AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py -> AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/ranker/log_config.py -> AnalyseFuture/extracted/phi-code-main/ranker/log_config.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py -> AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/ranker/train.py -> AnalyseFuture/extracted/phi-code-main/ranker/train.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/atcoder.py -> AnalyseFuture/extracted/phi-code-main/solver/atcoder.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/codeforces.py -> AnalyseFuture/extracted/phi-code-main/solver/codeforces.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py -> AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt -> AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/leetcode.py -> AnalyseFuture/extracted/phi-code-main/solver/leetcode.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt -> AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/log_config.py -> AnalyseFuture/extracted/phi-code-main/solver/log_config.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/main.py -> AnalyseFuture/extracted/phi-code-main/solver/main.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/requirements.txt -> AnalyseFuture/extracted/phi-code-main/solver/requirements.txt | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/terminal.py -> AnalyseFuture/extracted/phi-code-main/solver/terminal.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/utils.py -> AnalyseFuture/extracted/phi-code-main/solver/utils.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/solver/web_ui.py -> AnalyseFuture/extracted/phi-code-main/solver/web_ui.py | deliberately retained
+AnalyseFuture/extracted/phi-code-main/terminal_mode.png -> AnalyseFuture/extracted/phi-code-main/terminal_mode.png | deliberately retained
+AnalyseFuture/extracted/phi-code-main/webui.png -> AnalyseFuture/extracted/phi-code-main/webui.png | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream -> AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/README.md -> AnalyseFuture/historical-implementations/project-memory/README.md | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md -> AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md -> AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md -> AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md -> AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md -> AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf -> AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf | deliberately retained
+AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md -> AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css -> AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx -> AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx -> AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts -> AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md -> AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md -> AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md -> AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md -> AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md -> AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md -> AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md -> AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt -> AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md -> AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md | deliberately retained
+AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts -> AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts | deliberately retained
+AnalyseFuture/manifest.json -> AnalyseFuture/manifest.json | deliberately retained
+AnalyseFuture/repository-inventory/baseline.json -> AnalyseFuture/repository-inventory/baseline.json | deliberately retained
+AnalyseFuture/repository-inventory/current-files.json -> AnalyseFuture/repository-inventory/current-files.json | deliberately retained
+AnalyseFuture/repository-inventory/features.json -> AnalyseFuture/repository-inventory/features.json | deliberately retained
+AnalyseFuture/repository-inventory/historical-branches.json -> AnalyseFuture/repository-inventory/historical-branches.json | deliberately retained
+AnalyseFuture/repository-inventory/moves.json -> AnalyseFuture/repository-inventory/moves.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/api.json -> AnalyseFuture/repository-inventory/reviews/api.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/archive.json -> AnalyseFuture/repository-inventory/reviews/archive.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/docs.json -> AnalyseFuture/repository-inventory/reviews/docs.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/history.json -> AnalyseFuture/repository-inventory/reviews/history.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/judge.json -> AnalyseFuture/repository-inventory/reviews/judge.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/recovered-web.json -> AnalyseFuture/repository-inventory/reviews/recovered-web.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/support.json -> AnalyseFuture/repository-inventory/reviews/support.json | deliberately retained
+AnalyseFuture/repository-inventory/reviews/web.json -> AnalyseFuture/repository-inventory/reviews/web.json | deliberately retained
+CONTRIBUTING.md -> CONTRIBUTING.md | deliberately retained
+PROJECT_IDEA.txt -> docs/product/PROJECT_IDEA.txt | functionally relocated
+README.md -> README.md | deliberately retained
+SECURITY.md -> SECURITY.md | deliberately retained
+apps/web/AGENTS.md -> apps/web/AGENTS.md | deliberately retained
+apps/web/Dockerfile -> apps/web/Dockerfile | deliberately retained
+apps/web/app/account/page.tsx -> apps/web/app/account/page.tsx | deliberately retained
+apps/web/app/api/auth/[...all]/route.ts -> apps/web/app/api/auth/[...all]/route.ts | deliberately retained
+apps/web/app/globals.css -> apps/web/app/globals.css | deliberately retained
+apps/web/app/layout.tsx -> apps/web/app/layout.tsx | deliberately retained
+apps/web/app/not-found.tsx -> apps/web/app/not-found.tsx | deliberately retained
+apps/web/app/page.tsx -> apps/web/app/page.tsx | deliberately retained
+apps/web/app/problems/[slug]/page.tsx -> apps/web/app/problems/[slug]/page.tsx | deliberately retained
+apps/web/app/submissions/page.tsx -> apps/web/app/submissions/page.tsx | deliberately retained
+apps/web/components/icons.tsx -> apps/web/components/icons.tsx | deliberately retained
+apps/web/components/shell.tsx -> apps/web/components/shell.tsx | deliberately retained
+apps/web/features/accounts/account-form.tsx -> apps/web/features/accounts/account-form.tsx | deliberately retained
+apps/web/features/accounts/client.ts -> apps/web/features/accounts/client.ts | deliberately retained
+apps/web/features/accounts/server.ts -> apps/web/features/accounts/server.ts | deliberately retained
+apps/web/features/hints/account-hint.tsx -> apps/web/features/hints/account-hint.tsx | deliberately retained
+apps/web/features/hints/api.ts -> apps/web/features/hints/api.ts | deliberately retained
+apps/web/features/practice/api.ts -> apps/web/features/practice/api.ts | deliberately retained
+apps/web/features/practice/catalog.tsx -> apps/web/features/practice/catalog.tsx | deliberately retained
+apps/web/features/practice/code-pane.tsx -> apps/web/features/practice/code-pane.tsx | deliberately retained
+apps/web/features/practice/workspace.tsx -> apps/web/features/practice/workspace.tsx | deliberately retained
+apps/web/features/submissions/api.ts -> apps/web/features/submissions/api.ts | deliberately retained
+apps/web/features/submissions/submission-history.tsx -> apps/web/features/submissions/submission-history.tsx | deliberately retained
+apps/web/features/submissions/submission-panel.tsx -> apps/web/features/submissions/submission-panel.tsx | deliberately retained
+apps/web/next-env.d.ts -> apps/web/next-env.d.ts | deliberately retained
+apps/web/next.config.ts -> apps/web/next.config.ts | deliberately retained
+apps/web/package.json -> apps/web/package.json | deliberately retained
+apps/web/scripts/auth-migrate.mjs -> apps/web/scripts/auth-migrate.mjs | deliberately retained
+apps/web/scripts/copy-monaco.mjs -> apps/web/scripts/copy-monaco.mjs | deliberately retained
+apps/web/tests/auth.test.mjs -> apps/web/tests/auth.test.mjs | deliberately retained
+apps/web/tsconfig.json -> apps/web/tsconfig.json | deliberately retained
+compose.cloud.yaml -> compose.cloud.yaml | deliberately retained
+compose.yaml -> compose.yaml | deliberately retained
+docs/AI_SOLVER.md -> docs/product/AI_SOLVER.md | functionally relocated
+docs/ARCHITECTURE.md -> docs/architecture/ARCHITECTURE.md | functionally relocated
+docs/AUDIT_AND_AI_PLAN_2026-11-15.md -> docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md | functionally relocated
+docs/CODEX_PLAYBOOK.md -> docs/engineering/CODEX_PLAYBOOK.md | functionally relocated
+docs/COMPETITIVE_LANDSCAPE.md -> docs/research/COMPETITIVE_LANDSCAPE.md | functionally relocated
+docs/CONTRIBUTOR_TASKS.md -> docs/engineering/CONTRIBUTOR_TASKS.md | functionally relocated
+docs/DATA_AND_LICENSES.md -> docs/governance/DATA_AND_LICENSES.md | functionally relocated
+docs/DEVELOPMENT.md -> docs/onboarding/DEVELOPMENT.md | functionally relocated
+docs/INDEX.md -> docs/INDEX.md | deliberately retained
+docs/JUDGE_SECURITY.md -> docs/security/JUDGE_SECURITY.md | functionally relocated
+docs/MODEL_DATA_EVALUATION.md -> docs/research/MODEL_DATA_EVALUATION.md | functionally relocated
+docs/OPEN_DECISIONS.md -> docs/governance/OPEN_DECISIONS.md | functionally relocated
+docs/OPEN_SOURCE_STRATEGY.md -> docs/governance/OPEN_SOURCE_STRATEGY.md | functionally relocated
+docs/PRODUCT_REQUIREMENTS.md -> docs/product/PRODUCT_REQUIREMENTS.md | functionally relocated
+docs/PROJECT_STATUS.md -> docs/status/PROJECT_STATUS.md | functionally relocated
+docs/PROJECT_VISION.md -> docs/product/PROJECT_VISION.md | functionally relocated
+docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt -> docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt | functionally relocated
+docs/REPOSITORY_STRUCTURE.md -> docs/architecture/REPOSITORY_STRUCTURE.md | functionally relocated
+docs/ROADMAP.md -> docs/product/ROADMAP.md | functionally relocated
+docs/START_HERE.md -> docs/onboarding/START_HERE.md | functionally relocated
+docs/adr/0001-practice-foundation.md -> docs/architecture/adr/0001-practice-foundation.md | functionally relocated
+docs/adr/0002-authenticated-isolated-submissions.md -> docs/architecture/adr/0002-authenticated-isolated-submissions.md | functionally relocated
+package-lock.json -> package-lock.json | deliberately retained
+package.json -> package.json | deliberately retained
+playwright.config.ts -> playwright.config.ts | deliberately retained
+scripts/check-standalone.mjs -> scripts/verification/check-standalone.mjs | functionally relocated
+scripts/dev.py -> scripts/development/dev.py | functionally relocated
+scripts/judge-worker.py -> scripts/development/judge-worker.py | functionally relocated
+scripts/local_config.py -> scripts/development/local_config.py | functionally relocated
+scripts/repository_inventory.py -> scripts/verification/repository_inventory.py | functionally relocated
+scripts/verify_preserved_archives.py -> scripts/verification/verify_preserved_archives.py | functionally relocated
+services/api/.dockerignore -> services/api/.dockerignore | deliberately retained
+services/api/.python-version -> services/api/.python-version | deliberately retained
+services/api/Dockerfile -> services/api/Dockerfile | deliberately retained
+services/api/pyproject.toml -> services/api/pyproject.toml | deliberately retained
+services/api/solver_api/__init__.py -> services/api/solver_api/__init__.py | deliberately retained
+services/api/solver_api/auth.py -> services/api/solver_api/features/identity/verification.py | functionally relocated
+services/api/solver_api/body_limit.py -> services/api/solver_api/http/body_limit.py | functionally relocated
+services/api/solver_api/catalog.py -> services/api/solver_api/features/catalog/content.py | functionally relocated
+services/api/solver_api/errors.py -> services/api/solver_api/http/errors.py | functionally relocated
+services/api/solver_api/hints.py -> services/api/solver_api/features/hints/service.py | functionally relocated
+services/api/solver_api/main.py -> services/api/solver_api/main.py | deliberately retained
+services/api/solver_api/models.py -> services/api/solver_api/features/catalog/models.py | functionally relocated
+services/api/solver_api/submissions.py -> services/api/solver_api/features/submissions/store.py | functionally relocated
+services/api/tests/test_api.py -> services/api/tests/catalog/test_api.py | functionally relocated
+services/api/tests/test_auth.py -> services/api/tests/identity/test_auth.py | functionally relocated
+services/api/tests/test_hints.py -> services/api/tests/hints/test_hints.py | functionally relocated
+services/api/tests/test_submissions.py -> services/api/tests/submissions/test_submissions.py | functionally relocated
+services/api/uv.lock -> services/api/uv.lock | deliberately retained
+services/judge/.dockerignore -> services/judge/.dockerignore | deliberately retained
+services/judge/Dockerfile -> services/judge/Dockerfile | deliberately retained
+services/judge/UPSTREAM_REVIEW.md -> services/judge/UPSTREAM_REVIEW.md | deliberately retained
+services/judge/pytest.ini -> services/judge/pytest.ini | deliberately retained
+services/judge/solver_judge/__init__.py -> services/judge/solver_judge/__init__.py | deliberately retained
+services/judge/solver_judge/bounded.py -> services/judge/solver_judge/bounded.py | deliberately retained
+services/judge/solver_judge/cases.py -> services/judge/solver_judge/grading/cases.py | functionally relocated
+services/judge/solver_judge/diagnostics.py -> services/judge/solver_judge/control/diagnostics.py | functionally relocated
+services/judge/solver_judge/harness.py -> services/judge/solver_judge/sandbox/harness.py | functionally relocated
+services/judge/solver_judge/runner.py -> services/judge/solver_judge/control/runner.py | functionally relocated
+services/judge/solver_judge/worker.py -> services/judge/solver_judge/control/worker.py | functionally relocated
+services/judge/tests/test_bounded.py -> services/judge/tests/sandbox/test_bounded.py | functionally relocated
+services/judge/tests/test_cases.py -> services/judge/tests/grading/test_cases.py | functionally relocated
+services/judge/tests/test_runner.py -> services/judge/tests/control/test_runner.py | functionally relocated
+services/judge/tests/test_sandbox.py -> services/judge/tests/sandbox/test_sandbox.py | functionally relocated
+services/judge/tests/test_worker.py -> services/judge/tests/control/test_worker.py | functionally relocated
+tests/e2e/hints.spec.ts -> tests/e2e/hints/hints.spec.ts | functionally relocated
+tests/e2e/practice.spec.ts -> tests/e2e/practice/practice.spec.ts | functionally relocated
+tests/e2e/resilience.spec.ts -> tests/e2e/practice/resilience.spec.ts | functionally relocated
+tests/e2e/submissions.spec.ts -> tests/e2e/submissions/submissions.spec.ts | functionally relocated
+
+EARLIER238-PATH RECOVERY BASELINE:a00894df45e5b451d3261ed374b36e8d2c208ad6
+.dockerignore -> .dockerignore
+.github/PULL_REQUEST_TEMPLATE.md -> .github/PULL_REQUEST_TEMPLATE.md
+.github/workflows/ci.yml -> .github/workflows/ci.yml
+.gitignore -> .gitignore
+.node-version -> .node-version
+.npmrc -> .npmrc
+.python-version -> .python-version
+AGENTS.md -> AGENTS.md
+AnalyseFuture/.gitattributes -> AnalyseFuture/.gitattributes
+AnalyseFuture/.gitignore -> AnalyseFuture/.gitignore
+AnalyseFuture/README.md -> AnalyseFuture/README.md
+AnalyseFuture/archives/CodeGenerator-master.zip -> AnalyseFuture/archives/CodeGenerator-master.zip
+AnalyseFuture/archives/phi-code-main.zip -> AnalyseFuture/archives/phi-code-main.zip
+AnalyseFuture/extracted/CodeGenerator-master/.env.example -> AnalyseFuture/extracted/CodeGenerator-master/.env.example
+AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream -> AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream
+AnalyseFuture/extracted/CodeGenerator-master/LICENSE -> AnalyseFuture/extracted/CodeGenerator-master/LICENSE
+AnalyseFuture/extracted/CodeGenerator-master/README.md -> AnalyseFuture/extracted/CodeGenerator-master/README.md
+AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl
+AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json -> AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json
+AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png -> AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png
+AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png
+AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png
+AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png -> AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png
+AnalyseFuture/extracted/CodeGenerator-master/requirements.txt -> AnalyseFuture/extracted/CodeGenerator-master/requirements.txt
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py
+AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py -> AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py
+AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py -> AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml
+AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py -> AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py
+AnalyseFuture/extracted/CodeGenerator-master/src/main.py -> AnalyseFuture/extracted/CodeGenerator-master/src/main.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py
+AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py
+AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py -> AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py
+AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py -> AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py
+AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py
+AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py -> AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py
+AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream -> AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream
+AnalyseFuture/extracted/phi-code-main/.gitignore.upstream -> AnalyseFuture/extracted/phi-code-main/.gitignore.upstream
+AnalyseFuture/extracted/phi-code-main/LICENSE -> AnalyseFuture/extracted/phi-code-main/LICENSE
+AnalyseFuture/extracted/phi-code-main/README.md -> AnalyseFuture/extracted/phi-code-main/README.md
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl
+AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl -> AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl
+AnalyseFuture/extracted/phi-code-main/curses_ui.png -> AnalyseFuture/extracted/phi-code-main/curses_ui.png
+AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl
+AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl
+AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl
+AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl
+AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl -> AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl
+AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py -> AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py
+AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py -> AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py
+AnalyseFuture/extracted/phi-code-main/ranker/log_config.py -> AnalyseFuture/extracted/phi-code-main/ranker/log_config.py
+AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py -> AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py
+AnalyseFuture/extracted/phi-code-main/ranker/train.py -> AnalyseFuture/extracted/phi-code-main/ranker/train.py
+AnalyseFuture/extracted/phi-code-main/solver/atcoder.py -> AnalyseFuture/extracted/phi-code-main/solver/atcoder.py
+AnalyseFuture/extracted/phi-code-main/solver/codeforces.py -> AnalyseFuture/extracted/phi-code-main/solver/codeforces.py
+AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py -> AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py
+AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt -> AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt
+AnalyseFuture/extracted/phi-code-main/solver/leetcode.py -> AnalyseFuture/extracted/phi-code-main/solver/leetcode.py
+AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt -> AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt
+AnalyseFuture/extracted/phi-code-main/solver/log_config.py -> AnalyseFuture/extracted/phi-code-main/solver/log_config.py
+AnalyseFuture/extracted/phi-code-main/solver/main.py -> AnalyseFuture/extracted/phi-code-main/solver/main.py
+AnalyseFuture/extracted/phi-code-main/solver/requirements.txt -> AnalyseFuture/extracted/phi-code-main/solver/requirements.txt
+AnalyseFuture/extracted/phi-code-main/solver/terminal.py -> AnalyseFuture/extracted/phi-code-main/solver/terminal.py
+AnalyseFuture/extracted/phi-code-main/solver/utils.py -> AnalyseFuture/extracted/phi-code-main/solver/utils.py
+AnalyseFuture/extracted/phi-code-main/solver/web_ui.py -> AnalyseFuture/extracted/phi-code-main/solver/web_ui.py
+AnalyseFuture/extracted/phi-code-main/terminal_mode.png -> AnalyseFuture/extracted/phi-code-main/terminal_mode.png
+AnalyseFuture/extracted/phi-code-main/webui.png -> AnalyseFuture/extracted/phi-code-main/webui.png
+AnalyseFuture/manifest.json -> AnalyseFuture/manifest.json
+CONTRIBUTING.md -> CONTRIBUTING.md
+PROJECT_IDEA.txt -> docs/product/PROJECT_IDEA.txt
+README.md -> README.md
+SECURITY.md -> SECURITY.md
+apps/web/AGENTS.md -> apps/web/AGENTS.md
+apps/web/Dockerfile -> apps/web/Dockerfile
+apps/web/app/account/page.tsx -> apps/web/app/account/page.tsx
+apps/web/app/api/auth/[...all]/route.ts -> apps/web/app/api/auth/[...all]/route.ts
+apps/web/app/globals.css -> apps/web/app/globals.css
+apps/web/app/layout.tsx -> apps/web/app/layout.tsx
+apps/web/app/not-found.tsx -> apps/web/app/not-found.tsx
+apps/web/app/page.tsx -> apps/web/app/page.tsx
+apps/web/app/problems/[slug]/page.tsx -> apps/web/app/problems/[slug]/page.tsx
+apps/web/app/submissions/page.tsx -> apps/web/app/submissions/page.tsx
+apps/web/components/account-form.tsx -> apps/web/features/accounts/account-form.tsx
+apps/web/components/catalog.tsx -> apps/web/features/practice/catalog.tsx
+apps/web/components/code-pane.tsx -> apps/web/features/practice/code-pane.tsx
+apps/web/components/icons.tsx -> apps/web/components/icons.tsx
+apps/web/components/shell.tsx -> apps/web/components/shell.tsx
+apps/web/components/submission-history.tsx -> apps/web/features/submissions/submission-history.tsx
+apps/web/components/submission-panel.tsx -> apps/web/features/submissions/submission-panel.tsx
+apps/web/components/workspace.tsx -> apps/web/features/practice/workspace.tsx
+apps/web/lib/api.ts -> apps/web/features/practice/api.ts
+apps/web/lib/auth-client.ts -> apps/web/features/accounts/client.ts
+apps/web/lib/auth.ts -> apps/web/features/accounts/server.ts
+apps/web/lib/submissions.ts -> apps/web/features/submissions/api.ts
+apps/web/next-env.d.ts -> apps/web/next-env.d.ts
+apps/web/next.config.ts -> apps/web/next.config.ts
+apps/web/package.json -> apps/web/package.json
+apps/web/scripts/auth-migrate.mjs -> apps/web/scripts/auth-migrate.mjs
+apps/web/scripts/copy-monaco.mjs -> apps/web/scripts/copy-monaco.mjs
+apps/web/tests/auth.test.mjs -> apps/web/tests/auth.test.mjs
+apps/web/tsconfig.json -> apps/web/tsconfig.json
+compose.cloud.yaml -> compose.cloud.yaml
+compose.yaml -> compose.yaml
+docs/AI_SOLVER.md -> docs/product/AI_SOLVER.md
+docs/ARCHITECTURE.md -> docs/architecture/ARCHITECTURE.md
+docs/AUDIT_AND_AI_PLAN_2026-11-15.md -> docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md
+docs/CODEX_PLAYBOOK.md -> docs/engineering/CODEX_PLAYBOOK.md
+docs/COMPETITIVE_LANDSCAPE.md -> docs/research/COMPETITIVE_LANDSCAPE.md
+docs/CONTRIBUTOR_TASKS.md -> docs/engineering/CONTRIBUTOR_TASKS.md
+docs/DATA_AND_LICENSES.md -> docs/governance/DATA_AND_LICENSES.md
+docs/DEVELOPMENT.md -> docs/onboarding/DEVELOPMENT.md
+docs/INDEX.md -> docs/INDEX.md
+docs/JUDGE_SECURITY.md -> docs/security/JUDGE_SECURITY.md
+docs/MODEL_DATA_EVALUATION.md -> docs/research/MODEL_DATA_EVALUATION.md
+docs/OPEN_DECISIONS.md -> docs/governance/OPEN_DECISIONS.md
+docs/OPEN_SOURCE_STRATEGY.md -> docs/governance/OPEN_SOURCE_STRATEGY.md
+docs/PRODUCT_REQUIREMENTS.md -> docs/product/PRODUCT_REQUIREMENTS.md
+docs/PROJECT_STATUS.md -> docs/status/PROJECT_STATUS.md
+docs/PROJECT_VISION.md -> docs/product/PROJECT_VISION.md
+docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt -> docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt
+docs/REPOSITORY_STRUCTURE.md -> docs/architecture/REPOSITORY_STRUCTURE.md
+docs/ROADMAP.md -> docs/product/ROADMAP.md
+docs/START_HERE.md -> docs/onboarding/START_HERE.md
+docs/adr/0001-practice-foundation.md -> docs/architecture/adr/0001-practice-foundation.md
+docs/adr/0002-authenticated-isolated-submissions.md -> docs/architecture/adr/0002-authenticated-isolated-submissions.md
+package-lock.json -> package-lock.json
+package.json -> package.json
+playwright.config.ts -> playwright.config.ts
+scripts/check-standalone.mjs -> scripts/verification/check-standalone.mjs
+scripts/dev.py -> scripts/development/dev.py
+scripts/judge-worker.py -> scripts/development/judge-worker.py
+scripts/local_config.py -> scripts/development/local_config.py
+scripts/verify_preserved_archives.py -> scripts/verification/verify_preserved_archives.py
+services/api/.dockerignore -> services/api/.dockerignore
+services/api/.python-version -> services/api/.python-version
+services/api/Dockerfile -> services/api/Dockerfile
+services/api/pyproject.toml -> services/api/pyproject.toml
+services/api/solver_api/__init__.py -> services/api/solver_api/__init__.py
+services/api/solver_api/auth.py -> services/api/solver_api/features/identity/verification.py
+services/api/solver_api/body_limit.py -> services/api/solver_api/http/body_limit.py
+services/api/solver_api/catalog.py -> services/api/solver_api/features/catalog/content.py
+services/api/solver_api/errors.py -> services/api/solver_api/http/errors.py
+services/api/solver_api/hints.py -> services/api/solver_api/features/hints/service.py
+services/api/solver_api/main.py -> services/api/solver_api/main.py
+services/api/solver_api/models.py -> services/api/solver_api/features/catalog/models.py
+services/api/solver_api/submissions.py -> services/api/solver_api/features/submissions/store.py
+services/api/tests/test_api.py -> services/api/tests/catalog/test_api.py
+services/api/tests/test_auth.py -> services/api/tests/identity/test_auth.py
+services/api/tests/test_hints.py -> services/api/tests/hints/test_hints.py
+services/api/tests/test_submissions.py -> services/api/tests/submissions/test_submissions.py
+services/api/uv.lock -> services/api/uv.lock
+services/judge/.dockerignore -> services/judge/.dockerignore
+services/judge/Dockerfile -> services/judge/Dockerfile
+services/judge/UPSTREAM_REVIEW.md -> services/judge/UPSTREAM_REVIEW.md
+services/judge/pytest.ini -> services/judge/pytest.ini
+services/judge/solver_judge/__init__.py -> services/judge/solver_judge/__init__.py
+services/judge/solver_judge/bounded.py -> services/judge/solver_judge/bounded.py
+services/judge/solver_judge/cases.py -> services/judge/solver_judge/grading/cases.py
+services/judge/solver_judge/diagnostics.py -> services/judge/solver_judge/control/diagnostics.py
+services/judge/solver_judge/harness.py -> services/judge/solver_judge/sandbox/harness.py
+services/judge/solver_judge/runner.py -> services/judge/solver_judge/control/runner.py
+services/judge/solver_judge/worker.py -> services/judge/solver_judge/control/worker.py
+services/judge/tests/test_bounded.py -> services/judge/tests/sandbox/test_bounded.py
+services/judge/tests/test_cases.py -> services/judge/tests/grading/test_cases.py
+services/judge/tests/test_runner.py -> services/judge/tests/control/test_runner.py
+services/judge/tests/test_sandbox.py -> services/judge/tests/sandbox/test_sandbox.py
+services/judge/tests/test_worker.py -> services/judge/tests/control/test_worker.py
+tests/e2e/practice.spec.ts -> tests/e2e/practice/practice.spec.ts
+tests/e2e/resilience.spec.ts -> tests/e2e/practice/resilience.spec.ts
+tests/e2e/submissions.spec.ts -> tests/e2e/submissions/submissions.spec.ts

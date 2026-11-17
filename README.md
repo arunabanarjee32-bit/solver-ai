@@ -2,12 +2,12 @@
 
 **An open-development project aiming to build an AI-native platform for DSA, competitive programming and ICPC preparation.**
 
-> **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. An authenticated, author-written **offline hint API** is available as a foundation for future AI; model inference, contests and production deployment remain planned. See [Project status](docs/PROJECT_STATUS.md) for executed validation and limitations.
+> **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. An authenticated, author-written **offline hint API** is available as a foundation for future AI; model inference, contests and production deployment remain planned. See [Project status](docs/status/PROJECT_STATUS.md) for executed validation and limitations.
 
-Read the [current project vision and future roadmap](AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt)
+Read the [current project vision and future roadmap](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt)
 for the product, feasibility, AI workflow and conditional one-year, two-year and
-three-to-five-year horizons. The earlier [project idea](PROJECT_IDEA.txt) is
-retained. The [repository map](docs/REPOSITORY_STRUCTURE.md) explains the active
+three-to-five-year horizons. The earlier [project idea](docs/product/PROJECT_IDEA.txt) is
+retained. The [repository map](docs/architecture/REPOSITORY_STRUCTURE.md) explains the active
 application. [AnalyseFuture](AnalyseFuture/README.md) contains the complete
 file/feature inventories, security and recovery reports, both original uploads,
 all 122 extracted members and 23 historical branch snapshots.
@@ -15,6 +15,12 @@ all 122 extracted members and 23 historical branch snapshots.
 The recovered account-hint interface calls the existing authenticated hint API,
 labels its author-written content, and supports cancellation, timeout and retry.
 The web code is grouped under `apps/web/features/{accounts,practice,hints,submissions}`.
+
+
+The complete functional layout is documented in [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).
+The latest reorganization groups source, test sources, tools, documents and
+recovery records by responsibility. Tests and builds are paused for this layout
+change at the owner's request; earlier results remain historical evidence.
 
 ## Run locally
 
@@ -39,9 +45,9 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Browser tests start their own services; stop `npm run dev` before running them. On Linux, Playwright may need `npx playwright install --with-deps chromium`. See [Development](docs/DEVELOPMENT.md) for independent services, production builds, Docker Compose and troubleshooting.
+Browser tests start their own services; stop `npm run dev` before running them. On Linux, Playwright may need `npx playwright install --with-deps chromium`. See [Development](docs/onboarding/DEVELOPMENT.md) for independent services, production builds, Docker Compose and troubleshooting.
 
-For actual run/submit, this cloud image provides rootless Docker with gVisor. Build the sandbox with `npm run judge:build:cloud`, then start `npm run dev:judge` and create a local account. Other machines use `npm run judge:build` after installing a supported gVisor runtime. Missing isolation fails closed; learner code is never executed by the API/web process. [Full workflow and tests](docs/DEVELOPMENT.md#real-isolated-judging).
+For actual run/submit, this cloud image provides rootless Docker with gVisor. Build the sandbox with `npm run judge:build:cloud`, then start `npm run dev:judge` and create a local account. Other machines use `npm run judge:build` after installing a supported gVisor runtime. Missing isolation fails closed; learner code is never executed by the API/web process. [Full workflow and tests](docs/onboarding/DEVELOPMENT.md#real-isolated-judging).
 
 ## The idea
 
@@ -60,14 +66,14 @@ It aims to support:
 
 ## New contributor? Start here
 
-1. Read [Start Here](docs/START_HERE.md) (orientation, how to contribute today).
-2. Read [Vision](docs/PROJECT_VISION.md) and [Requirements](docs/PRODUCT_REQUIREMENTS.md).
-3. Review the [Architecture](docs/ARCHITECTURE.md) and [Roadmap](docs/ROADMAP.md).
-4. Find a scoped starter task in [Contributor Tasks](docs/CONTRIBUTOR_TASKS.md).
-5. Check [Project Status](docs/PROJECT_STATUS.md) before assuming a feature exists.
+1. Read [Start Here](docs/onboarding/START_HERE.md) (orientation, how to contribute today).
+2. Read [Vision](docs/product/PROJECT_VISION.md) and [Requirements](docs/product/PRODUCT_REQUIREMENTS.md).
+3. Review the [Architecture](docs/architecture/ARCHITECTURE.md) and [Roadmap](docs/product/ROADMAP.md).
+4. Find a scoped starter task in [Contributor Tasks](docs/engineering/CONTRIBUTOR_TASKS.md).
+5. Check [Project Status](docs/status/PROJECT_STATUS.md) before assuming a feature exists.
 6. Follow [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and [AGENTS.md](AGENTS.md) for agent-assisted work.
 
-**All project documents:** [Documentation index](docs/INDEX.md). **Previously suggested public repositories:** [complete TXT reference list](docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt). **Audited AI implementation plan:** [2026-11-15 architecture and research report](docs/AUDIT_AND_AI_PLAN_2026-11-15.md).
+**All project documents:** [Documentation index](docs/INDEX.md). **Previously suggested public repositories:** [complete TXT reference list](docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt). **Audited AI implementation plan:** [2026-11-15 architecture and research report](docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md).
 
 ## Target architecture
 
@@ -87,13 +93,13 @@ Verdicts + history              |
 Offline: dataset provenance -> evaluations -> LoRA/QLoRA on external GPU
 ~~~
 
-We prefer **one modular monorepo** and verified third-party dependencies/services. Study [Open-source Strategy](docs/OPEN_SOURCE_STRATEGY.md) before choosing or importing upstream code.
+We prefer **one modular monorepo** and verified third-party dependencies/services. Study [Open-source Strategy](docs/governance/OPEN_SOURCE_STRATEGY.md) before choosing or importing upstream code.
 
 ## First milestone
 
 An authorized seed problem can be opened in the browser, solved in a Monaco editor, submitted to a secure isolated judge, and graded with a real verdict. A later milestone adds an optional AI hint and debugging workflow. Each increment requires reproducible tests.
 
-The proposed layout and API contracts are in [Architecture](docs/ARCHITECTURE.md). The current [foundation decision](docs/adr/0001-practice-foundation.md) records what is implemented and deferred.
+The proposed layout and API contracts are in [Architecture](docs/architecture/ARCHITECTURE.md). The current [foundation decision](docs/architecture/adr/0001-practice-foundation.md) records what is implemented and deferred.
 
 ## Expectations and guardrails
 
@@ -103,12 +109,12 @@ The proposed layout and API contracts are in [Architecture](docs/ARCHITECTURE.md
 - Contest-integrity controls must follow each event's AI-assistance policy.
 - Keep proprietary secrets, training weights and large datasets out of Git.
 - Third-party software remains subject to its own license obligations.
-- The repository does not currently declare an outbound license for original code; see [Open Decisions](docs/OPEN_DECISIONS.md) and seek maintainer approval before reuse.
+- The repository does not currently declare an outbound license for original code; see [Open Decisions](docs/governance/OPEN_DECISIONS.md) and seek maintainer approval before reuse.
 
 ## How to help
 
 Documentation reviews, reproducible architectural prototypes, security research, original problems, tests and well-scoped implementation PRs are welcome proposals. Before investing effort in a major feature, open an issue describing scope and acceptance criteria.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow and [docs/CONTRIBUTOR_TASKS.md](docs/CONTRIBUTOR_TASKS.md) for suggested starter work.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow and [docs/engineering/CONTRIBUTOR_TASKS.md](docs/engineering/CONTRIBUTOR_TASKS.md) for suggested starter work.
 
 This project is not affiliated with LeetCode, Codeforces, AtCoder, ICPC or any referenced open-source project.

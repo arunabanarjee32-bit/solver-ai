@@ -17,6 +17,6 @@ Describe any new dependencies, problem content, data handling, code execution or
 ## Documentation and project status
 
 - [ ] README / docs updated as relevant
-- [ ] docs/PROJECT_STATUS.md reflects actual verified state
+- [ ] docs/status/PROJECT_STATUS.md reflects actual verified state
 - [ ] Tests and deployment notes included when behavior changes
 - [ ] License/attribution requirements considered

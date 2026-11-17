@@ -10,13 +10,17 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException
 
-from solver_api.auth import require_user
-from solver_api.body_limit import BodyLimitMiddleware
-from solver_api.catalog import PROBLEMS
-from solver_api.errors import APIError
-from solver_api.hints import HintRequest, HintResponse, request_hint
-from solver_api.models import Difficulty, ErrorResponse, Problem, ProblemPage, ProblemSummary
-from solver_api.submissions import (
+from solver_api.features.catalog.content import PROBLEMS
+from solver_api.features.catalog.models import (
+    Difficulty,
+    ErrorResponse,
+    Problem,
+    ProblemPage,
+    ProblemSummary,
+)
+from solver_api.features.hints.service import HintRequest, HintResponse, request_hint
+from solver_api.features.identity.verification import require_user
+from solver_api.features.submissions.store import (
     Capabilities,
     SubmissionDetail,
     SubmissionPage,
@@ -27,6 +31,8 @@ from solver_api.submissions import (
     get_store,
     idempotency_uuid,
 )
+from solver_api.http.body_limit import BodyLimitMiddleware
+from solver_api.http.errors import APIError
 
 app = FastAPI(
     title="Solver AI practice API",

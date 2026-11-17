@@ -1,38 +1,57 @@
 # Solver AI documentation index
 
-New here? Read [START_HERE](START_HERE.md), then [PROJECT_VISION](PROJECT_VISION.md).
+New here? Read [START_HERE](onboarding/START_HERE.md), then [PROJECT_VISION](product/PROJECT_VISION.md).
+
+## Functional groups
+
+| Directory | Responsibility |
+| --- | --- |
+| `onboarding/` | Starting the project and contributing without prior chat context |
+| `architecture/` | System boundaries, repository layout and architecture decisions |
+| `product/` | Vision, requirements, roadmap, solver design and the retained plain-text idea |
+| `research/` | Dated audits, study references, positioning and model evaluation proposals |
+| `governance/` | Owner decisions, rights, licensing and build-versus-reuse policy |
+| `engineering/` | Agent development practice and contributor backlog |
+| `security/` | Judge threat model and release controls |
+| `status/` | Named-revision implementation evidence and limitations |
+
+The functional reorganization was performed without tests or builds at the
+owner's request. Earlier results remain historical evidence; see the
+[current status note](status/PROJECT_STATUS.md#functional-organization-update-2026-11-17).
+
+## Documents and preserved analysis
 
 | Document | Purpose |
 | --- | --- |
-| [Start here](START_HERE.md) | First-day orientation and workflow |
-| [Detailed project idea (TXT)](../PROJECT_IDEA.txt) | Product vision, AI-era features, staged horizons, responsibilities and limits |
-| [Repository structure and review](REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |
+| [Start here](onboarding/START_HERE.md) | First-day orientation and workflow |
+| [Detailed project idea (TXT)](product/PROJECT_IDEA.txt) | Product vision, AI-era features, staged horizons, responsibilities and limits |
+| [Repository structure and review](architecture/REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |
 | [Preserved future-analysis material](../AnalyseFuture/README.md) | Original uploads, complete extraction and reuse boundaries |
-| [Current recovery audit](../AnalyseFuture/REPOSITORY_AUDIT.txt) | Complete review scope, discovered branch work and repairs |
-| [Complete feature inventory](../AnalyseFuture/FEATURE_INVENTORY.txt) | Evidence and ownership for all 42 feature records |
-| [Security findings](../AnalyseFuture/SECURITY_AUDIT.txt) | Confirmed cleanup weakness, remediation and unresolved risks |
-| [Current validation report](../AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt) | Executed outcomes, expected failures and unrun checks |
-| [Canonical future vision (TXT)](../AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | Feasibility, priorities, resources and conditional future horizons |
-| [Next developer instructions](../AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt) | Continuity, commands, evidence and next priorities |
-| [Development](DEVELOPMENT.md) | Tested setup, service commands and verification |
-| [Foundation decision](adr/0001-practice-foundation.md) | Initial scope, dependencies and safety boundaries |
-| [Accounts and isolated submissions](adr/0002-authenticated-isolated-submissions.md) | Upstream evaluation, identity boundary and gVisor integration |
-| [Project vision](PROJECT_VISION.md) | Mission, users, differentiation and boundaries |
-| [Product requirements](PRODUCT_REQUIREMENTS.md) | Feature inventory, user journeys and acceptance criteria |
-| [Architecture](ARCHITECTURE.md) | Service/data boundaries and proposed monorepo layout |
-| [Roadmap](ROADMAP.md) | Phased implementation and quality gates |
-| [Project status](PROJECT_STATUS.md) | Honest implemented-versus-planned ledger |
-| [Open-source strategy](OPEN_SOURCE_STRATEGY.md) | Public repository candidates, licenses and integration logic |
-| [Public repositories and resources (TXT)](PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | All 20 previously suggested GitHub repositories plus models, datasets and benchmarks |
-| [Audit and AI plan (2026-11-15)](AUDIT_AND_AI_PLAN_2026-11-15.md) | Source-based architecture review, 20 references, two AI research selections and implementation roadmap |
-| [AI solver](AI_SOLVER.md) | Planning, testing, hints and agent workflow |
-| [Judge security](JUDGE_SECURITY.md) | Threat model and untrusted code execution |
-| [Model/data/evaluation](MODEL_DATA_EVALUATION.md) | Training plan, dataset rights and benchmarking |
-| [Content and licenses](DATA_AND_LICENSES.md) | Commercial-use boundaries and content sourcing |
-| [Competitive landscape](COMPETITIVE_LANDSCAPE.md) | Markets and product differentiation |
-| [Starter issues](CONTRIBUTOR_TASKS.md) | First testable contributions |
-| [Open decisions](OPEN_DECISIONS.md) | What requires maintainer sign-off |
-| [Codex playbook](CODEX_PLAYBOOK.md) | Agent instructions and credit efficiency |
+| [Current recovery audit](../AnalyseFuture/audits/REPOSITORY_AUDIT.txt) | Complete review scope, discovered branch work and repairs |
+| [Complete feature inventory](../AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt) | Evidence and ownership for all 42 feature records |
+| [Security findings](../AnalyseFuture/audits/SECURITY_AUDIT.txt) | Confirmed cleanup weakness, remediation and unresolved risks |
+| [Current validation report](../AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt) | Executed outcomes, expected failures and unrun checks |
+| [Canonical future vision (TXT)](../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | Feasibility, priorities, resources and conditional future horizons |
+| [Next developer instructions](../AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt) | Continuity, commands, evidence and next priorities |
+| [Development](onboarding/DEVELOPMENT.md) | Tested setup, service commands and verification |
+| [Foundation decision](architecture/adr/0001-practice-foundation.md) | Initial scope, dependencies and safety boundaries |
+| [Accounts and isolated submissions](architecture/adr/0002-authenticated-isolated-submissions.md) | Upstream evaluation, identity boundary and gVisor integration |
+| [Project vision](product/PROJECT_VISION.md) | Mission, users, differentiation and boundaries |
+| [Product requirements](product/PRODUCT_REQUIREMENTS.md) | Feature inventory, user journeys and acceptance criteria |
+| [Architecture](architecture/ARCHITECTURE.md) | Service/data boundaries and proposed monorepo layout |
+| [Roadmap](product/ROADMAP.md) | Phased implementation and quality gates |
+| [Project status](status/PROJECT_STATUS.md) | Honest implemented-versus-planned ledger |
+| [Open-source strategy](governance/OPEN_SOURCE_STRATEGY.md) | Public repository candidates, licenses and integration logic |
+| [Public repositories and resources (TXT)](research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | All 20 previously suggested GitHub repositories plus models, datasets and benchmarks |
+| [Audit and AI plan (2026-11-15)](research/AUDIT_AND_AI_PLAN_2026-11-15.md) | Source-based architecture review, 20 references, two AI research selections and implementation roadmap |
+| [AI solver](product/AI_SOLVER.md) | Planning, testing, hints and agent workflow |
+| [Judge security](security/JUDGE_SECURITY.md) | Threat model and untrusted code execution |
+| [Model/data/evaluation](research/MODEL_DATA_EVALUATION.md) | Training plan, dataset rights and benchmarking |
+| [Content and licenses](governance/DATA_AND_LICENSES.md) | Commercial-use boundaries and content sourcing |
+| [Competitive landscape](research/COMPETITIVE_LANDSCAPE.md) | Markets and product differentiation |
+| [Starter issues](engineering/CONTRIBUTOR_TASKS.md) | First testable contributions |
+| [Open decisions](governance/OPEN_DECISIONS.md) | What requires maintainer sign-off |
+| [Codex playbook](engineering/CODEX_PLAYBOOK.md) | Agent instructions and credit efficiency |
 
 Also read [CONTRIBUTING](../CONTRIBUTING.md), [AGENTS](../AGENTS.md), and [SECURITY](../SECURITY.md).
 

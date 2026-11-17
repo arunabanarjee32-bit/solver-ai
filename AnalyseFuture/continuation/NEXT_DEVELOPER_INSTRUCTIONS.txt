@@ -1,0 +1,69 @@
+LATEST OWNER DIRECTION
+The repository has now been organized by function. Start at PROJECT_STRUCTURE.md.
+Do not run tests/builds for the current reorganization: the owner explicitly
+paused them. The earlier command catalogue below is future guidance, not an
+instruction to disregard that pause. Use the current source path mapping.
+
+SOLVER AI — NEXT DEVELOPER CONTINUATION GUIDE
+
+Read order
+1. WORK_PROGRESS.txt and TEST_AND_VALIDATION_REPORT.txt for this recovery state.
+2. ../AGENTS.md, ../README.md, ../docs/PROJECT_STATUS.md and ../docs/DEVELOPMENT.md.
+3. FEATURE_INVENTORY.txt, COMPLETE_FILE_INVENTORY.txt and DEPENDENCY_MAP.txt.
+4. SECURITY_AUDIT.txt, TECHNICAL_DEBT.txt and ORIGINAL_TO_NEW_PATH_MAPPING.txt.
+5. PROJECT_VISION_AND_FUTURE_ROADMAP.txt for conditional future work.
+
+Use the existing isolated checkout; do not create a worktree without a request.
+The owner authorizes main commits/pushes, no PR, and checkpoints at least every
+five minutes during active editing. Verify actual origin/main and preserve any
+concurrent changes first. Use ordinary fast-forward pushes only. A local commit
+alone is not protection from workspace loss. Never force-push or bypass rules.
+
+Working directories and commands (repository root)
+Node 24.22.1, Python 3.12.14, uv 0.13.6 are the native baseline.
+export UV_CACHE_DIR=/tmp/solver-ai-uv-cache
+npm ci
+uv sync --project services/api --frozen
+npm run judge:build:cloud   # only if the sandbox image is absent or changed
+npm run dev:judge
+Readiness requires real sandbox preflight. The API health endpoint is /health,
+the catalog is /api/v1/problems, and capabilities must report judge availability.
+Account hints are currently authored. No provider key or paid infrastructure is
+required. Keep private .local files intact and do not print their contents.
+
+Verification
+Stop only the services you started before browser suites.
+npm run test:api
+npm run test:auth
+npm run test:judge:integration
+uv run --project services/api --frozen ruff check services/api services/judge scripts
+npm run typecheck
+npm run build
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e:judge -- --workers=2
+python3 scripts/verification/verify_preserved_archives.py --git-index
+
+After intended changes are staged, refresh the tracked ledger:
+python3 scripts/verification/repository_inventory.py --write
+git add AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt AnalyseFuture/repository-inventory/current-files.json
+python3 scripts/verification/repository_inventory.py --check
+The two inventory outputs deliberately omit their own hashes to avoid recursion.
+The immutable baseline and source review records must not be rewritten to conceal
+changes. New files need a meaningful owner/review record where appropriate.
+Next dev can regenerate next-env.d.ts; inspect before/after and restore only your
+own generated differences after stopping services, preserving user edits.
+
+Priority continuation
+- Account owner: finish access/security-log review; code organization is not
+  proof that the reported compromise is resolved.
+- Maintainer/operations: maintained isolation runtime, host-wide budgets, trusted
+  ingress, account recovery and restore/retention drills before public service.
+- Product/AI: connect a bounded reviewed model provider only after rights,
+  privacy, account quotas, costs and evaluation gates exist. Preserve authored
+  provenance and offline fallback; never relabel authored text as inference.
+- Content/research: review rights and datasets, build a disjoint benchmark, then
+  evaluate candidate/repair/ranking concepts without adopting unsafe executors.
+- Infrastructure: review immutable Action/base-image pins and recovery operations.
+
+Do not install/import archived frameworks, download missing LFS datasets/models,
+run archive host executors or train models merely to complete setup. Inspect their
+assessment records if undertaking a separately authorized research task.
