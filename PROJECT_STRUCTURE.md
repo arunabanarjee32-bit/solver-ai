@@ -21,6 +21,7 @@ separate GitHub publication blocker are recorded in
 solver-ai/
 ├── README.md                       Product and development entry point
 ├── PROJECT_STRUCTURE.md            This ownership/location guide
+├── PROJECT_HANDOFF.md              Complete feature, file/folder and task handoff
 ├── AGENTS.md                       Instructions applying to the whole project
 ├── CONTRIBUTING.md                 Contributor workflow and safeguards
 ├── SECURITY.md                     Reporting and security boundaries
@@ -121,6 +122,8 @@ solver-ai/
 
 The [complete per-file ledger](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt)
 accounts for deeply nested paths. The
+[root project handoff](PROJECT_HANDOFF.md) combines the complete file/folder map,
+feature status and detailed implementation tasks for other tools. The
 [functional move map](AnalyseFuture/repository-inventory/functional-moves.json)
 records every relocation from the published baseline. Framework/dependency
 files which remain in place have intentional owners, as described below.

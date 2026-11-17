@@ -4,6 +4,11 @@
 
 > **Current status:** Local practice development includes a Next.js library, FastAPI catalog, Monaco drafts, Better Auth accounts, owned submission history and optional gVisor-isolated Python/C++17 judging. An authenticated, author-written **offline hint API** is available as a foundation for future AI; model inference, contests and production deployment remain planned. See [Project status](docs/status/PROJECT_STATUS.md) for executed validation and limitations.
 
+**Continue this project:** [Complete project guide and task handoff](PROJECT_HANDOFF.md)
+explains the goal, implemented and planned features, every tracked file and folder,
+and all 127 detailed task specifications. Other tools can use it to choose a ready
+task, implement a focused PR and request review.
+
 Read the [current project vision and future roadmap](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt)
 for the product, feasibility, AI workflow and conditional one-year, two-year and
 three-to-five-year horizons. The earlier [project idea](docs/product/PROJECT_IDEA.txt) is

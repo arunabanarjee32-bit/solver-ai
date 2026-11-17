@@ -438,8 +438,7 @@
       "purpose": "Machine-readable complete current tracked-file ledger; self hashes omitted to avoid recursion.",
       "feature": "complete tracked-file accountability",
       "dependencies": [
-        "scripts/repository_inventory.py",
-        "repository-inventory/reviews"
+        "scripts/verification/repository_inventory.py"
       ],
       "status": "Generated from the current tracked index and static source review records.",
       "risks": []
@@ -2003,6 +2002,56 @@
       "risks": [
         "Metadata completeness is not test truth, approval, or merge authority."
       ]
+    },
+    {
+      "path": "PROJECT_HANDOFF.md",
+      "purpose": "Root homepage handoff: project goal, implemented/planned features, every tracked file/folder and full ordered task specifications.",
+      "feature": "project continuity and implementation handoff",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json",
+        "AnalyseFuture/repository-inventory/features.json",
+        "docs/engineering/handoff-directories.json"
+      ],
+      "active": true,
+      "status": "Generated documentation; task and feature states remain distinct from observed runtime evidence.",
+      "risks": []
+    },
+    {
+      "path": "scripts/verification/project_handoff.py",
+      "purpose": "Render or verify the complete root Markdown handoff from staged file annotations, canonical features, directory ownership and detailed tasks.",
+      "feature": "project continuity and implementation handoff",
+      "dependencies": [
+        "scripts/verification/repository_inventory.py",
+        "docs/engineering/backlog/issues.json",
+        "AnalyseFuture/repository-inventory/features.json",
+        "docs/engineering/handoff-directories.json"
+      ],
+      "active": true,
+      "status": "Documentation generator only; no network, application execution, training or remote mutation.",
+      "risks": []
+    },
+    {
+      "path": "docs/engineering/handoff-directories.json",
+      "purpose": "Concrete functional responsibilities for every tracked ancestor folder, including inactive archive and historical collections.",
+      "feature": "project continuity and implementation handoff",
+      "dependencies": [
+        "scripts/verification/project_handoff.py"
+      ],
+      "active": true,
+      "status": "Documentation source maintained when tracked directories change.",
+      "risks": []
+    },
+    {
+      "path": "AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "purpose": "Detailed Solver AI product vision, feasible milestones, conditional research horizons, resource needs and limitations.",
+      "feature": "project continuity and implementation handoff",
+      "dependencies": [
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Product proposal; longer-term AI, contest, production and training capabilities are not implemented by this document.",
+      "risks": []
     }
   ],
   "scope": "Coordinator full support/config inspection"

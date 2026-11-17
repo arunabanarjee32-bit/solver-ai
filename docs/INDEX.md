@@ -23,6 +23,7 @@ see [current results](status/PROJECT_STATUS.md#post-relocation-validation-and-co
 
 | Document | Purpose |
 | --- | --- |
+| [Complete project handoff](../PROJECT_HANDOFF.md) | Root guide: goal, implemented features, every file/folder and all detailed remaining tasks for other tools |
 | [Start here](onboarding/START_HERE.md) | First-day orientation and workflow |
 | [Ordered implementation backlog](engineering/backlog/README.md) | 127 scoped tasks, dependency order and actual GitHub publication status |
 | [Implementation/review workflow](engineering/AI_CONTRIBUTION_WORKFLOW.md) | Other tools implement; designated reviewer inspects before authorized merge |

@@ -2,7 +2,7 @@
   "baseline_commit": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
   "scope": "All current Git-index paths; generated inventory outputs included.",
   "self_hash_policy": "Size/hash omitted for both inventory outputs to avoid recursion.",
-  "tracked_files": 443,
+  "tracked_files": 446,
   "files": [
     {
       "path": ".dockerignore",
@@ -3324,8 +3324,7 @@
       "feature": "complete tracked-file accountability",
       "active": true,
       "dependencies": [
-        "scripts/repository_inventory.py",
-        "repository-inventory/reviews"
+        "scripts/verification/repository_inventory.py"
       ],
       "assessment": "Generated from the current tracked index and static source review records.",
       "risks": [],
@@ -3523,8 +3522,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "bytes": 100442,
-      "sha256": "dd82fb6cad1baaceac4da7b256db74c15ca55a8b17aac3042a06e0da3c856045"
+      "bytes": 102823,
+      "sha256": "21f81525e56fea35a99c54676de7f4cdc230ad7da1a677e364722d0779b5097a"
     },
     {
       "path": "AnalyseFuture/repository-inventory/reviews/web.json",
@@ -3580,6 +3579,24 @@
       "sha256": "05ff20bdc32bde2df23be8986beedefec187dd27aa5dd25498cc8f19ee7c0ff1"
     },
     {
+      "path": "PROJECT_HANDOFF.md",
+      "owner": "root project guidance, dependencies and deployment configuration",
+      "purpose": "Root homepage handoff: project goal, implemented/planned features, every tracked file/folder and full ordered task specifications.",
+      "feature": "project continuity and implementation handoff",
+      "active": true,
+      "dependencies": [
+        "docs/engineering/backlog/issues.json",
+        "AnalyseFuture/repository-inventory/features.json",
+        "docs/engineering/handoff-directories.json"
+      ],
+      "assessment": "Generated documentation; task and feature states remain distinct from observed runtime evidence.",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "PROJECT_HANDOFF.md",
+      "bytes": 498882,
+      "sha256": "f6a6fa9d6815e36639e0dd2fb6d94a7e1cf249c599dedfb033520ed8faa6305c"
+    },
+    {
       "path": "PROJECT_STRUCTURE.md",
       "owner": "root project guidance, dependencies and deployment configuration",
       "purpose": "Complete functional collection/ownership guide, framework exceptions, preserved evidence and no-tests scope.",
@@ -3592,8 +3609,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "PROJECT_STRUCTURE.md",
-      "bytes": 13395,
-      "sha256": "ef6d814ba13b45dbf6fac24a1bce2db572de3e5e3a5397f6d11cb966f44d0343"
+      "bytes": 13636,
+      "sha256": "bece68ea4f0a2090ee8864f2c6dcc73c576715c960a817ee7e79f19937746ca4"
     },
     {
       "path": "README.md",
@@ -3614,8 +3631,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "README.md",
-      "bytes": 8470,
-      "sha256": "7266eaedd28e376a49530c4ac2cef15ce3a2c50b7e033753d434596d6dbba831"
+      "bytes": 8776,
+      "sha256": "e65898141424d93d4138db3d82c9ec0354ba92f27f29874f53094a041255d729"
     },
     {
       "path": "SECURITY.md",
@@ -4260,8 +4277,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/INDEX.md",
-      "bytes": 5452,
-      "sha256": "130bf3c2b928e3825144fae6235946a71ccaecd9938b57a48108598fd576cfb7"
+      "bytes": 5615,
+      "sha256": "0be7338ed937818d46576f52b2d076cad10877b597937fc11e8f3d74a85073ab"
     },
     {
       "path": "docs/architecture/ARCHITECTURE.md",
@@ -6504,6 +6521,22 @@
       "sha256": "ab4b4e91f6282928ce5d8cb8f19ea8fffcce9b6b8ac6be755958719935468f84"
     },
     {
+      "path": "docs/engineering/handoff-directories.json",
+      "owner": "engineering workflow and contribution guidance",
+      "purpose": "Concrete functional responsibilities for every tracked ancestor folder, including inactive archive and historical collections.",
+      "feature": "project continuity and implementation handoff",
+      "active": true,
+      "dependencies": [
+        "scripts/verification/project_handoff.py"
+      ],
+      "assessment": "Documentation source maintained when tracked directories change.",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "docs/engineering/handoff-directories.json",
+      "bytes": 16776,
+      "sha256": "fb431f39de47cb34cb16e4208eaec9b94ebf5b737ba5c86cdfaad84b13e2ff11"
+    },
+    {
       "path": "docs/governance/DATA_AND_LICENSES.md",
       "owner": "specifications, decisions and development guidance",
       "purpose": "Original-code, content, dataset, model and privacy rights boundaries.",
@@ -6842,8 +6875,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/PROJECT_STATUS.md",
-      "bytes": 13478,
-      "sha256": "d1fa0aa3d67dd491c23a01d0ae4a2e126f30ac0d578f0cf51b38d36938f19aa7"
+      "bytes": 14448,
+      "sha256": "304c579d8fb1afcc2f136f688e66a31f48017fb364e8fd9f1fb34bddda9e93d2"
     },
     {
       "path": "package-lock.json",
@@ -7038,6 +7071,27 @@
       "original_path": "scripts/check-standalone.mjs",
       "bytes": 1093,
       "sha256": "b62cc6e5c434b92e90e730a28cb129fe6f54a233ed1809a8af74ca21273bc16a"
+    },
+    {
+      "path": "scripts/verification/project_handoff.py",
+      "owner": "development and verification tools",
+      "purpose": "Render or verify the complete root Markdown handoff from staged file annotations, canonical features, directory ownership and detailed tasks.",
+      "feature": "project continuity and implementation handoff",
+      "active": true,
+      "dependencies": [
+        "argparse",
+        "collections",
+        "json",
+        "pathlib",
+        "repository_inventory",
+        "urllib.parse"
+      ],
+      "assessment": "Documentation generator only; no network, application execution, training or remote mutation.",
+      "risks": [],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "scripts/verification/project_handoff.py",
+      "bytes": 21824,
+      "sha256": "16a957d17e17a39447f0bcc9294871fb634dcf2495390802c5bfe3761e448597"
     },
     {
       "path": "scripts/verification/repository_inventory.py",

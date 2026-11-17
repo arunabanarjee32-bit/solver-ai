@@ -1,6 +1,6 @@
 COMPLETE FILE INVENTORY
 Baseline: a00894df45e5b451d3261ed374b36e8d2c208ad6
-Current indexed paths: 443
+Current indexed paths: 446
 All current Git-index paths; generated inventory outputs included.
 Size/hash omitted for both inventory outputs to avoid recursion.
 Review records describe baseline static findings; final validation and fixes are in
@@ -1763,7 +1763,7 @@ AnalyseFuture/repository-inventory/current-files.json
   Owner: recovery records and inventory
   Purpose: Machine-readable complete current tracked-file ledger; self hashes omitted to avoid recursion.
   Active: True; feature: complete tracked-file accountability
-  Dependencies: scripts/repository_inventory.py, repository-inventory/reviews
+  Dependencies: scripts/verification/repository_inventory.py
   Assessment: Generated from the current tracked index and static source review records.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
@@ -1887,7 +1887,7 @@ AnalyseFuture/repository-inventory/reviews/support.json
   Assessment: Machine-readable evidence; source/version limitations recorded in contents.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: dd82fb6cad1baaceac4da7b256db74c15ca55a8b17aac3042a06e0da3c856045; bytes: 100442
+  SHA256: 21f81525e56fea35a99c54676de7f4cdc230ad7da1a677e364722d0779b5097a; bytes: 102823
 
 AnalyseFuture/repository-inventory/reviews/web.json
   Owner: recovery records and inventory
@@ -1919,6 +1919,16 @@ CONTRIBUTING.md
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
   SHA256: 05ff20bdc32bde2df23be8986beedefec187dd27aa5dd25498cc8f19ee7c0ff1; bytes: 3498
 
+PROJECT_HANDOFF.md
+  Owner: root project guidance, dependencies and deployment configuration
+  Purpose: Root homepage handoff: project goal, implemented/planned features, every tracked file/folder and full ordered task specifications.
+  Active: True; feature: project continuity and implementation handoff
+  Dependencies: docs/engineering/backlog/issues.json, AnalyseFuture/repository-inventory/features.json, docs/engineering/handoff-directories.json
+  Assessment: Generated documentation; task and feature states remain distinct from observed runtime evidence.
+  Risks/gaps:
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: f6a6fa9d6815e36639e0dd2fb6d94a7e1cf249c599dedfb033520ed8faa6305c; bytes: 498882
+
 PROJECT_STRUCTURE.md
   Owner: root project guidance, dependencies and deployment configuration
   Purpose: Complete functional collection/ownership guide, framework exceptions, preserved evidence and no-tests scope.
@@ -1927,7 +1937,7 @@ PROJECT_STRUCTURE.md
   Assessment: Static organization only; no runtime execution after relocation.
   Risks/gaps: Runtime verification deferred at the owner request.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: ef6d814ba13b45dbf6fac24a1bce2db572de3e5e3a5397f6d11cb966f44d0343; bytes: 13395
+  SHA256: bece68ea4f0a2090ee8864f2c6dcc73c576715c960a817ee7e79f19937746ca4; bytes: 13636
 
 README.md
   Owner: root project guidance, dependencies and deployment configuration
@@ -1937,7 +1947,7 @@ README.md
   Assessment: Current local workflow; future target architecture explicitly broader.
   Risks/gaps: One-line setup cannot cover all platform-specific judge/browser conditions.; Roadmap and architecture diagram include unimplemented components.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 7266eaedd28e376a49530c4ac2cef15ce3a2c50b7e033753d434596d6dbba831; bytes: 8470
+  SHA256: e65898141424d93d4138db3d82c9ec0354ba92f27f29874f53094a041255d729; bytes: 8776
 
 SECURITY.md
   Owner: root project guidance, dependencies and deployment configuration
@@ -2287,7 +2297,7 @@ docs/INDEX.md
   Assessment: Current links with canonical future file to be added by parent task.
   Risks/gaps: Readers may conflate linked proposals and executed implementation without status labels.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 130bf3c2b928e3825144fae6235946a71ccaecd9938b57a48108598fd576cfb7; bytes: 5452
+  SHA256: 0be7338ed937818d46576f52b2d076cad10877b597937fc11e8f3d74a85073ab; bytes: 5615
 
 docs/architecture/ARCHITECTURE.md
   Owner: specifications, decisions and development guidance
@@ -3669,6 +3679,16 @@ docs/engineering/backlog/publication.json
   Review: AnalyseFuture/repository-inventory/reviews/support.json
   SHA256: ab4b4e91f6282928ce5d8cb8f19ea8fffcce9b6b8ac6be755958719935468f84; bytes: 1249
 
+docs/engineering/handoff-directories.json
+  Owner: engineering workflow and contribution guidance
+  Purpose: Concrete functional responsibilities for every tracked ancestor folder, including inactive archive and historical collections.
+  Active: True; feature: project continuity and implementation handoff
+  Dependencies: scripts/verification/project_handoff.py
+  Assessment: Documentation source maintained when tracked directories change.
+  Risks/gaps:
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: fb431f39de47cb34cb16e4208eaec9b94ebf5b737ba5c86cdfaad84b13e2ff11; bytes: 16776
+
 docs/governance/DATA_AND_LICENSES.md
   Owner: specifications, decisions and development guidance
   Purpose: Original-code, content, dataset, model and privacy rights boundaries.
@@ -3827,7 +3847,7 @@ docs/status/PROJECT_STATUS.md
   Assessment: Current local 2026-11-17 preservation validation separated from historical/hosted evidence.
   Risks/gaps: Recorded checks apply to named revision, not all later changes.; Local passes and earlier hosted run do not prove production readiness or account recovery.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: d1fa0aa3d67dd491c23a01d0ae4a2e126f30ac0d578f0cf51b38d36938f19aa7; bytes: 13478
+  SHA256: 304c579d8fb1afcc2f136f688e66a31f48017fb364e8fd9f1fb34bddda9e93d2; bytes: 14448
 
 package-lock.json
   Owner: root project guidance, dependencies and deployment configuration
@@ -3928,6 +3948,16 @@ scripts/verification/check-standalone.mjs
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
   SHA256: b62cc6e5c434b92e90e730a28cb129fe6f54a233ed1809a8af74ca21273bc16a; bytes: 1093
+
+scripts/verification/project_handoff.py
+  Owner: development and verification tools
+  Purpose: Render or verify the complete root Markdown handoff from staged file annotations, canonical features, directory ownership and detailed tasks.
+  Active: True; feature: project continuity and implementation handoff
+  Dependencies: argparse, collections, json, pathlib, repository_inventory, urllib.parse
+  Assessment: Documentation generator only; no network, application execution, training or remote mutation.
+  Risks/gaps:
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 16a957d17e17a39447f0bcc9294871fb634dcf2495390802c5bfe3761e448597; bytes: 21824
 
 scripts/verification/repository_inventory.py
   Owner: development and verification tools

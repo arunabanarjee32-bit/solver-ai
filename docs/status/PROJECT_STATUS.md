@@ -2,6 +2,22 @@
 
 Last reviewed: 2026-11-17 (Asia/Kolkata). Earlier gVisor and native integration evidence remains historical local validation; the merged SAI-010 work additionally has a recorded hosted CI run. Neither establishes a public production release.
 
+## Root project handoff (2026-11-17)
+
+[PROJECT_HANDOFF.md](../../PROJECT_HANDOFF.md), linked near the top of the README,
+now combines the project goal, current/planned feature register, every tracked
+file and ancestor folder, and all 127 complete task specifications. It retains
+the distinction between one locally completed task and 126 pending tasks.
+Each task includes ownership paths, prerequisites, scope, acceptance, validation,
+exclusions and review risks for other implementation tools.
+
+The handoff is generated from existing reviewed sources and a concrete directory
+responsibility map. This increment changes documentation and documentation
+generation only; static generation, link/coverage checks, lint and preservation
+verification apply. The full runtime result below remains evidence for its named
+source revision. Other tools submit focused PRs for active-session review; no
+continuous assistant monitor, automatic merge or new GitHub issue is claimed.
+
 ## SAI-B001: executable PR evidence contract (2026-11-17)
 
 The first ready backlog task is implemented locally: a stdlib-only evidence
