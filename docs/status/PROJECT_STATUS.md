@@ -5,7 +5,7 @@ Last reviewed: 2026-11-17 (Asia/Kolkata). Earlier gVisor and native integration 
 ## DSA solver, model research and actual training delivery plan (2026-11-17)
 
 The owner requests future model research before selection. The
-[model research catalogue](../research/FINETUNING_MODEL_RESEARCH.md) compares 20
+[model research catalogue](../research/FINETUNING_MODEL_RESEARCH.md) compares 22
 non-ranked families/baseline categories using dated official documentation;
 direct Hugging Face cards/configs remain network-blocked, so exact checkpoint
 revisions and unresolved license/hardware details are explicitly unverified.
@@ -13,11 +13,13 @@ No model is selected, downloaded, trained or benchmarked.
 
 The [readiness checklist](../product/DSA_SOLVER_READINESS.md) defines supported
 DSA coverage, actual training work, measured evaluation and model delivery.
-B128–B141 append 14 concrete task cards beyond B080's admission gate: selection,
+B128–B143 append 16 concrete task cards beyond B080's admission gate: selection,
 data materialization, a separate training stack, loss masking, approved smoke
 and real SFT, immutable artifacts, independent final evaluation, deployed-precision
-qualification, serving, pilot/rollback and optional research/improvement.
-There are now **141 cards: one completed locally and 140 pending**. Feature F033
+qualification, serving, pilot/rollback and optional research/improvement. Two
+cards explicitly cover new authorized problem input and the solver workspace
+beyond the seeds, with honest unsupported and unverified outcomes.
+There are now **143 cards: one completed locally and 142 pending**. Feature F033
 has a concrete proposed delivery plan; it is not an implemented training workflow.
 
 The handoff, task index, receipt preparation counts and complete tracked-file
@@ -25,7 +27,7 @@ inventory are regenerated. This increment changes documentation/planning and its
 generator only; runtime evidence below retains its named source revision. No
 external model calls, ML installation, compute purchase or GPU job is performed.
 The goal is broad measured competence, not a guarantee for every DSA problem.
-Current planning checks passed: all 50 tooling cases, generator lint, all 141
+Current planning checks passed: all 50 tooling cases, generator lint, all 143
 task-card consistency/validation checks, tracked coverage/local links and archive
 preservation. The full application runtime suite was not rerun for this update.
 

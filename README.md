@@ -6,7 +6,7 @@
 
 **Continue this project:** [Complete project guide and task handoff](PROJECT_HANDOFF.md)
 explains the goal, implemented and planned features, every tracked file and folder,
-and all 141 detailed task specifications. Other tools can use it to choose a ready
+and all 143 detailed task specifications. Other tools can use it to choose a ready
 task, implement a focused PR and request review.
 
 **DSA solver and fine-tuning:** the [readiness plan](docs/product/DSA_SOLVER_READINESS.md)
@@ -36,7 +36,7 @@ The validation report separates current checks from retained historical evidence
 ## Run locally
 
 The [ordered implementation backlog](docs/engineering/backlog/README.md) contains
-141 scoped tasks with prerequisites, current feature paths, acceptance criteria
+143 scoped tasks with prerequisites, current feature paths, acceptance criteria
 and validation commands. Other implementation tools follow the
 [review-and-merge workflow](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md).
 The publication receipt distinguishes prepared local cards from confirmed open

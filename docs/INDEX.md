@@ -27,7 +27,7 @@ see [current results](status/PROJECT_STATUS.md#post-relocation-validation-and-co
 | [DSA solver readiness](product/DSA_SOLVER_READINESS.md) | Full supported-coverage, actual training, evaluation, artifact and release checklist |
 | [Fine-tuning model research](research/FINETUNING_MODEL_RESEARCH.md) | Broad candidate comparison for a future decision; no selected checkpoint |
 | [Start here](onboarding/START_HERE.md) | First-day orientation and workflow |
-| [Ordered implementation backlog](engineering/backlog/README.md) | 141 scoped tasks, dependency order and actual GitHub publication status |
+| [Ordered implementation backlog](engineering/backlog/README.md) | 143 scoped tasks, dependency order and actual GitHub publication status |
 | [Implementation/review workflow](engineering/AI_CONTRIBUTION_WORKFLOW.md) | Other tools implement; designated reviewer inspects before authorized merge |
 | [Detailed project idea (TXT)](product/PROJECT_IDEA.txt) | Product vision, AI-era features, staged horizons, responsibilities and limits |
 | [Repository structure and review](architecture/REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |

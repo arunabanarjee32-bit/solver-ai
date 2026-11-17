@@ -88,6 +88,8 @@ releases with different terms and operating requirements.
 | 18 | `bigcode/starcoder2-3b`, `bigcode/starcoder2-7b`, `bigcode/starcoder2-15b` | Official README lists code-focused sizes, grouped-query attention, 16,384-token context and 4,096-token sliding-window attention, with a LoRA/4-bit fine-tuning example. The GitHub Apache license covers code; the model-weight license still requires its own card review. [S1] | Useful smaller code-base-model comparison class. It is not automatically an instruction-following tutor. Training data format, attribution/license requirements and instruction adaptation must be evaluated explicitly. |
 | 19 | IBM Granite Code base/instruction 3B, 8B, 20B and 34B | Official Granite Code documentation identifies both families and states Apache 2.0 for the models. It lists context-specific checkpoint IDs such as `ibm-granite/granite-3b-code-base-2k` and `ibm-granite/granite-8b-code-instruct-4k`. Direct artifact revisions remain unverified. [I1] | Transparent smaller code-model baselines, with context limits that may affect long statements or repair logs. Compare exact context-tagged releases rather than only the family name. |
 | 20 | Closed/API-only models, for example provider-hosted GPT, Claude or Gemini offerings | Provider API access is a separate category from open weights. This research did not verify any particular current API model, pricing, fine-tuning eligibility or export rights. | Potential external reference baselines after explicit privacy/spend approval. They are not local QLoRA candidates unless the provider independently releases suitable weights under appropriate terms. |
+| 21 | `openai/gpt-oss-20b`, `openai/gpt-oss-120b` | OpenAI's official README identifies 21B total/3.6B active and 117B total/5.1B active respectively, describes both as fine-tunable and Apache 2.0, and requires the Harmony response format. The repository license was also read. Exact checkpoint/config revisions and maximum context remain unverified here. [O1, O2] | Relevant open-weight reasoning/coding alternatives, including the 20b family named in archived phi-code results. Their low/medium/high reasoning effort changes the resource comparison. The publisher's MXFP4 inference-memory claims of 16 GB and a single 80 GB GPU are not QLoRA training-fit guarantees; verify kernel, quantization and adapter support. |
+| 22 | Full `deepseek-ai/DeepSeek-R1` and `deepseek-ai/DeepSeek-R1-Zero` | The official README lists both full MoE models at 671B total/37B active with 128K context, and states MIT for the release. These are separate from the smaller distilled models in rows 7–8. Exact artifact/config revisions remain unverified. [D1] | Potential larger research/reference models when infrastructure and approved budget justify them. They are not small 37B-storage checkpoints and should not be assumed to fit the single-GPU adaptation category. R1 and R1-Zero also have distinct post-training histories; results must identify the exact release. |
 
 No row is an endorsement or an activation decision. The shortlist for an eventual
 experiment should be chosen only after the owner supplies the intended task,
@@ -109,6 +111,14 @@ The Qwen documentation distinguishes original hybrid mode from newer
 thinking-only/non-thinking-only releases, and warns about serving stacks removing
 reasoning fields during multi-step tool use. That is a compatibility question for
 the exact pipeline; no hidden reasoning should be exposed or treated as a proof.
+
+OpenAI's `gpt-oss` models are open-weight releases and should not be confused with
+the closed/API-only category in row 20. Their official README explicitly says
+the Harmony format is required. A generic chat template or flattened text-only
+training record is therefore not an assumed compatible adaptation input. The
+reference chat application's default context setting is not evidence of the
+checkpoint's maximum supported context. Archived phi-code logs that name a
+gpt-oss model are historical upstream material, not an evaluated Solver AI model.
 
 ## Hardware questions to answer before choosing
 
@@ -219,6 +229,8 @@ not independently reproduced performance measurements.
 - **M2:** [Mistral official fine-tune README](https://raw.githubusercontent.com/mistralai/mistral-finetune/main/README.md): archived-maintenance notice, training examples and NeMo vocabulary/loss-memory warning.
 - **S1:** [StarCoder2 official README](https://raw.githubusercontent.com/bigcode-project/starcoder2/main/README.md): size/context/attention information and LoRA/4-bit example. Its [GitHub license](https://raw.githubusercontent.com/bigcode-project/starcoder2/main/LICENSE) is a source-code license, not proof of weight terms.
 - **I1:** [IBM Granite Code official README](https://raw.githubusercontent.com/ibm-granite/granite-code-models/main/README.md): model variants, exact context-tagged IDs, training discussion and Apache model-license statement.
+- **O1:** [OpenAI gpt-oss official README](https://raw.githubusercontent.com/openai/gpt-oss/main/README.md): total/active parameter counts, Harmony requirement, reasoning-effort choices, fine-tunability and qualified MXFP4 inference-memory claims. No inference or fine-tuning example was executed.
+- **O2:** [OpenAI gpt-oss repository license](https://raw.githubusercontent.com/openai/gpt-oss/main/LICENSE): Apache 2.0 text, considered together with the README's explicit model-release licensing statement. A guessed `docs/model-card.md` URL returned 404; it is not treated as a retrieved model card.
 
 Direct model-card/config requests to `huggingface.co` were blocked. These links
 remain required follow-up evidence, rather than claimed successful retrievals:

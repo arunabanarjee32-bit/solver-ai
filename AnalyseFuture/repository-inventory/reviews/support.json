@@ -2074,7 +2074,7 @@
     },
     {
       "path": "docs/research/FINETUNING_MODEL_RESEARCH.md",
-      "purpose": "Dated non-ranked research catalogue of 20 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist.",
+      "purpose": "Dated non-ranked research catalogue of 22 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist.",
       "feature": "future solver training and measured DSA readiness",
       "dependencies": [
         "docs/product/DSA_SOLVER_READINESS.md",
@@ -2266,6 +2266,32 @@
       "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
       "risks": [
         "Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B142.md",
+      "purpose": "Planned SAI-B142: Accept bounded account-owned specifications for new authorized DSA problems; ownership area New-problem solver input.",
+      "feature": "future new-problem solver coverage",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated future task specification only; new-problem input and solver workspace are not implemented.",
+      "risks": [
+        "Arbitrary problem text is untrusted data. It can contain prompt injection, private material, contradictory constraints or false sample answers; account boundaries, bounded parsing and honest evidence labels must survive."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B143.md",
+      "purpose": "Planned SAI-B143: Deliver the new-problem solver workspace with explicit evidence and failure states; ownership area New-problem solving user journey.",
+      "feature": "future new-problem solver coverage",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated future task specification only; new-problem input and solver workspace are not implemented.",
+      "risks": [
+        "Users may mistake generated code or sample-pass evidence for a proven solution. Strong version/ownership binding and explicit provenance/evaluation states are required across retries and concurrent sessions."
       ]
     }
   ],

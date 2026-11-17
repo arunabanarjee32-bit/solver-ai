@@ -559,6 +559,7 @@ Plan, generate a limited candidate set, run permitted tests, optionally repair a
 **Remaining gaps / conditions:**
 
 - No active generated solver; similarity/confidence/finite acceptance do not prove correctness; no unlimited retries.
+- B142-B143 plan account-owned new-problem ingestion and a solver workspace beyond the three seeds; neither is implemented, and sample passes are not independent acceptance.
 
 ### F026: Rights-approved held-out AI evaluation and research reports
 
@@ -838,7 +839,7 @@ Preserve alternative standalone research interaction modes as examples, not addi
 
 **Status:** Partial. **Owner:** repository engineering/GitHub workflow.
 
-Validate and render 141 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.
+Validate and render 143 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.
 
 **Files / evidence:** [scripts/github/publish_issues.py](scripts/github/publish_issues.py); [scripts/github/build_backlog.py](scripts/github/build_backlog.py); [tests/tooling/github/test_publish_issues.py](tests/tooling/github/test_publish_issues.py); [docs/engineering/AI_CONTRIBUTION_WORKFLOW.md](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md); [docs/engineering/backlog/issues.json](docs/engineering/backlog/issues.json); [docs/engineering/backlog/publication.json](docs/engineering/backlog/publication.json).
 
@@ -868,11 +869,11 @@ Validate one bounded structured evidence block against catalogue ID/order, curre
 
 ## Complete folder map
 
-**114 folders including the root**, derived from all **462 tracked files**. Counts include nested descendants. Folders are functional owners; preserved upstream internal structure remains evidence.
+**114 folders including the root**, derived from all **464 tracked files**. Counts include nested descendants. Folders are functional owners; preserved upstream internal structure remains evidence.
 
 | Folder | Responsibility | Tracked files below it |
 | --- | --- | --- |
-| [./](.) | One modular Solver AI repository joining the working practice application, independently bounded services, development tooling, planned tasks and preserved research evidence. | 462 |
+| [./](.) | One modular Solver AI repository joining the working practice application, independently bounded services, development tooling, planned tasks and preserved research evidence. | 464 |
 | [.github/](.github) | Repository-hosted contributor templates and read-only GitHub Actions configuration. | 3 |
 | [.github/workflows/](.github/workflows) | Hosted application checks and trusted-base pull-request evidence validation workflows. | 2 |
 | [AnalyseFuture/](AnalyseFuture) | Organized recovery evidence, inventories, migration records and inactive upstream or historical material kept outside application execution. | 181 |
@@ -940,12 +941,12 @@ Validate one bounded structured evidence block against catalogue ID/order, curre
 | [apps/web/features/submissions/](apps/web/features/submissions) | Explicit run and submit actions, bounded API requests, capability checks and private saved-result history. | 3 |
 | [apps/web/scripts/](apps/web/scripts) | Web-owned official auth migration and locally bundled Monaco asset preparation commands. | 2 |
 | [apps/web/tests/](apps/web/tests) | Real Better Auth integration checks using isolated temporary databases and keys. | 1 |
-| [docs/](docs) | Active product and engineering documentation indexed by functional responsibility. | 172 |
+| [docs/](docs) | Active product and engineering documentation indexed by functional responsibility. | 174 |
 | [docs/architecture/](docs/architecture) | Current and proposed service boundaries, repository organization and recorded architecture decisions. | 4 |
 | [docs/architecture/adr/](docs/architecture/adr) | Dated decisions documenting the practice foundation and authenticated isolated judging boundaries. | 2 |
-| [docs/engineering/](docs/engineering) | Contributor workflow, scoped implementation tasks and coding-agent practices. | 149 |
-| [docs/engineering/backlog/](docs/engineering/backlog) | Canonical ordered task catalogue, generated issue cards and actual publication receipts. | 144 |
-| [docs/engineering/backlog/issues/](docs/engineering/backlog/issues) | One generated Markdown card per stable backlog task with prerequisites, ownership paths and acceptance criteria. | 141 |
+| [docs/engineering/](docs/engineering) | Contributor workflow, scoped implementation tasks and coding-agent practices. | 151 |
+| [docs/engineering/backlog/](docs/engineering/backlog) | Canonical ordered task catalogue, generated issue cards and actual publication receipts. | 146 |
+| [docs/engineering/backlog/issues/](docs/engineering/backlog/issues) | One generated Markdown card per stable backlog task with prerequisites, ownership paths and acceptance criteria. | 143 |
 | [docs/governance/](docs/governance) | Maintainer decisions, original-code and content rights, and build-versus-reuse policies. | 3 |
 | [docs/onboarding/](docs/onboarding) | Contributor orientation and reproducible installation, startup, validation and deployment instructions. | 2 |
 | [docs/product/](docs/product) | Product vision, requirements, roadmap and the retained detailed idea and solver proposals. | 6 |
@@ -991,7 +992,7 @@ Ignored local folders such as `.local/`, `.venv/`, `node_modules/`, `.next/`, ge
 
 ## Complete file map
 
-Every one of the **462 tracked paths** appears once below, grouped by its immediate owning folder. Each entry explains its reviewed role. The linked full inventory records direct imports/dependencies and provenance. Product task ownership is defined by the target paths in the complete task specifications.
+Every one of the **464 tracked paths** appears once below, grouped by its immediate owning folder. Each entry explains its reviewed role. The linked full inventory records direct imports/dependencies and provenance. Product task ownership is defined by the target paths in the complete task specifications.
 
 The [full inventory](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt) also records baseline assessments, risks, review provenance, sizes and hashes. Preserved material is marked inactive below, even when its upstream code describes an implemented research experiment. Documentation and configuration support a feature; their existence alone does not implement the planned behavior.
 
@@ -1840,7 +1841,7 @@ Canonical ordered task catalogue, generated issue cards and actual publication r
 </details>
 
 <details>
-<summary>docs/engineering/backlog/issues/ — 141 files</summary>
+<summary>docs/engineering/backlog/issues/ — 143 files</summary>
 
 One generated Markdown card per stable backlog task with prerequisites, ownership paths and acceptance criteria.
 
@@ -1987,6 +1988,8 @@ One generated Markdown card per stable backlog task with prerequisites, ownershi
 | [SAI-B139.md](docs/engineering/backlog/issues/SAI-B139.md) | Planned SAI-B139: Promote a trained model through a limited pilot and rehearsed rollback; ownership area trained-model-release. |
 | [SAI-B140.md](docs/engineering/backlog/issues/SAI-B140.md) | Planned SAI-B140: Run a separately approved execution-reward preference or RL experiment; ownership area optional-model-research. |
 | [SAI-B141.md](docs/engineering/backlog/issues/SAI-B141.md) | Planned SAI-B141: Operate a consented failure-analysis and retraining improvement cycle; ownership area model-lifecycle. |
+| [SAI-B142.md](docs/engineering/backlog/issues/SAI-B142.md) | Planned SAI-B142: Accept bounded account-owned specifications for new authorized DSA problems; ownership area New-problem solver input. |
+| [SAI-B143.md](docs/engineering/backlog/issues/SAI-B143.md) | Planned SAI-B143: Deliver the new-problem solver workspace with explicit evidence and failure states; ownership area New-problem solving user journey. |
 
 </details>
 
@@ -2040,7 +2043,7 @@ Dated audits, upstream study references, competitive positioning and model-evalu
 | --- | --- |
 | [AUDIT_AND_AI_PLAN_2026-11-15.md](docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md) | Dated source audit and provider-neutral AI delivery plan with upstream triage. |
 | [COMPETITIVE_LANDSCAPE.md](docs/research/COMPETITIVE_LANDSCAPE.md) | Qualitative user jobs, positioning and differentiation hypotheses. |
-| [FINETUNING_MODEL_RESEARCH.md](docs/research/FINETUNING_MODEL_RESEARCH.md) | Dated non-ranked research catalogue of 20 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist. |
+| [FINETUNING_MODEL_RESEARCH.md](docs/research/FINETUNING_MODEL_RESEARCH.md) | Dated non-ranked research catalogue of 22 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist. |
 | [MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md) | Future permitted data pipeline, model baselines, tuning and evaluation. |
 | [PUBLIC_REPOSITORIES_AND_RESOURCES.txt](docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | Complete 20-repository and model/dataset study inventory. |
 
@@ -2399,7 +2402,7 @@ Fake-client issue-publication and pull-request evidence safety checks without re
 
 ## Ordered task index
 
-**141 detailed tasks: 140 pending, 1 completed locally.** Preserve stable IDs and use the execution order below. Completion requires observed acceptance/validation evidence; a task card or generated file is not completion.
+**143 detailed tasks: 142 pending, 1 completed locally.** Preserve stable IDs and use the execution order below. Completion requires observed acceptance/validation evidence; a task card or generated file is not completion.
 
 Actual GitHub publication receipt: **blocked_network**; **0** confirmed remote issue links. Until access is restored, assign and reference these local cards.
 
@@ -2546,6 +2549,8 @@ Actual GitHub publication receipt: **blocked_network**; **0** confirmed remote i
 | 139 | [SAI-B139](#sai-b139): Promote a trained model through a limited pilot and rehearsed rollback | Pending | P1 | trained-model-release / ML-4 evaluation and delivery | [SAI-B001](#sai-b001), [SAI-B003](#sai-b003), [SAI-B057](#sai-b057), [SAI-B059](#sai-b059), [SAI-B110](#sai-b110), [SAI-B124](#sai-b124), [SAI-B126](#sai-b126), [SAI-B128](#sai-b128), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B137](#sai-b137), [SAI-B138](#sai-b138) |
 | 140 | [SAI-B140](#sai-b140): Run a separately approved execution-reward preference or RL experiment | Pending | P2 | optional-model-research / ML-5 conditional improvement research | [SAI-B001](#sai-b001), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B080](#sai-b080), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136) |
 | 141 | [SAI-B141](#sai-b141): Operate a consented failure-analysis and retraining improvement cycle | Pending | P2 | model-lifecycle / ML-5 conditional improvement research | [SAI-B001](#sai-b001), [SAI-B003](#sai-b003), [SAI-B063](#sai-b063), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B139](#sai-b139) |
+| 142 | [SAI-B142](#sai-b142): Accept bounded account-owned specifications for new authorized DSA problems | Pending | P1 | New-problem solver input / AI-6 new-problem coverage | [SAI-B001](#sai-b001), [SAI-B026](#sai-b026), [SAI-B049](#sai-b049), [SAI-B064](#sai-b064), [SAI-B068](#sai-b068), [SAI-B128](#sai-b128), [SAI-B018](#sai-b018), [SAI-B022](#sai-b022) |
+| 143 | [SAI-B143](#sai-b143): Deliver the new-problem solver workspace with explicit evidence and failure states | Pending | P1 | New-problem solving user journey / AI-6 new-problem coverage | [SAI-B001](#sai-b001), [SAI-B069](#sai-b069), [SAI-B070](#sai-b070), [SAI-B071](#sai-b071), [SAI-B072](#sai-b072), [SAI-B073](#sai-b073), [SAI-B128](#sai-b128), [SAI-B142](#sai-b142), [SAI-B048](#sai-b048), [SAI-B059](#sai-b059), [SAI-B129](#sai-b129) |
 
 ## Complete task specifications
 
@@ -2554,8 +2559,6 @@ All scope, acceptance, validation, exclusions and review risks from the canonica
 <a id="sai-b001"></a>
 <details>
 <summary>1. SAI-B001: Enforce an evidence contract for contributor pull requests [completed_locally]</summary>
-
-**Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** foundation.
 
 **Suggested role:** repository maintainer and reviewer.
 
@@ -2608,8 +2611,6 @@ Untrusted PR text must remain data, and evidence completeness must not be presen
 <details>
 <summary>2. SAI-B127: Enforce owner-approved reviewed-merge rules for the main branch [pending]</summary>
 
-**Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** repository governance.
-
 **Suggested role:** Repository owner and designated security reviewer.
 
 **Prerequisites:** [SAI-B001](#sai-b001).
@@ -2657,8 +2658,6 @@ Incorrect rules can block maintainers or leave unreviewed writes possible. Owner
 <a id="sai-b002"></a>
 <details>
 <summary>3. SAI-B002: Record owner-approved original-code licensing and inbound contribution rights [pending]</summary>
-
-**Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** governance.
 
 **Suggested role:** project owner with legal/IP reviewer.
 
@@ -2708,8 +2707,6 @@ An assistant cannot invent licensing consent or assign rights it does not own.
 <details>
 <summary>4. SAI-B003: Approve a small pilot charter and data lifecycle contract [pending]</summary>
 
-**Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** product.
-
 **Suggested role:** project owner and privacy/product reviewer.
 
 **Prerequisites:** [SAI-B002](#sai-b002), [SAI-B001](#sai-b001).
@@ -2758,8 +2755,6 @@ Policy choices affect irreversible deletion and public trust; engineering must f
 <details>
 <summary>5. SAI-B004: Pin CI actions to immutable reviewed commits [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** supply-chain.
-
 **Suggested role:** release engineer.
 
 **Prerequisites:** [SAI-B001](#sai-b001).
@@ -2805,8 +2800,6 @@ Incorrect action provenance can install a malicious implementation; digest updat
 <a id="sai-b005"></a>
 <details>
 <summary>6. SAI-B005: Pin web and API container bases and align intended Python patch versions [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** supply-chain.
 
 **Suggested role:** release engineer.
 
@@ -2858,8 +2851,6 @@ Image updates may change OS libraries or runtime behavior; preserve rollback dig
 <details>
 <summary>7. SAI-B006: Reject plaintext external identity and worker transport configuration [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** deployment-security.
-
 **Suggested role:** backend security engineer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B001](#sai-b001).
@@ -2909,8 +2900,6 @@ A broad private-network exception would recreate the gap; explicit development e
 <details>
 <summary>8. SAI-B007: Add a total JWKS fetch deadline with real transport fixtures [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
-
 **Suggested role:** backend identity engineer.
 
 **Prerequisites:** [SAI-B006](#sai-b006), [SAI-B001](#sai-b001).
@@ -2955,8 +2944,6 @@ Cancellation and cache-state changes can accidentally deny all users or accept s
 <a id="sai-b008"></a>
 <details>
 <summary>9. SAI-B008: Describe protected endpoints with an accurate OpenAPI bearer scheme [pending]</summary>
-
-**Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** api-contract.
 
 **Suggested role:** API engineer.
 
@@ -3004,8 +2991,6 @@ Convenience helpers can mask duplicate headers or bypass the existing verifier; 
 <a id="sai-b009"></a>
 <details>
 <summary>10. SAI-B009: Validate production worker credential strength before enabling internal routes [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** worker-auth.
 
 **Suggested role:** backend security engineer.
 
@@ -3056,8 +3041,6 @@ Overly broad validation could break deliberate no-judge development; disabled mo
 <details>
 <summary>11. SAI-B010: Support bounded worker bearer rotation without an outage [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** worker-auth.
-
 **Suggested role:** backend engineer and deployment operator.
 
 **Prerequisites:** [SAI-B009](#sai-b009), [SAI-B001](#sai-b001).
@@ -3106,8 +3089,6 @@ A permissive grace window can preserve a compromised key; require operator-contr
 <details>
 <summary>12. SAI-B011: Introduce an explicit trusted-ingress identity throttle policy [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
-
 **Suggested role:** identity/platform engineer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B006](#sai-b006), [SAI-B001](#sai-b001).
@@ -3154,8 +3135,6 @@ Trusting client-controlled IP headers weakens existing defenses; proxy provenanc
 <a id="sai-b012"></a>
 <details>
 <summary>13. SAI-B012: Create a consistent private backup and restore procedure for both stores [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** storage-operations.
 
 **Suggested role:** storage/platform engineer.
 
@@ -3207,8 +3186,6 @@ Backups contain credentials and source; accidental publication or destructive re
 <details>
 <summary>14. SAI-B013: Introduce versioned transactional migrations for the submission database [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** storage.
-
 **Suggested role:** backend storage engineer.
 
 **Prerequisites:** [SAI-B012](#sai-b012), [SAI-B001](#sai-b001).
@@ -3255,8 +3232,6 @@ Schema mistakes can corrupt private history; require backup and real old-schema 
 <a id="sai-b014"></a>
 <details>
 <summary>15. SAI-B014: Add a testable email-verification delivery flow for pilot accounts [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
 
 **Suggested role:** identity engineer.
 
@@ -3307,8 +3282,6 @@ Mail links and logs can leak account tokens; use fixture delivery and library-su
 <details>
 <summary>16. SAI-B015: Implement password recovery with bounded single-use reset links [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
-
 **Suggested role:** identity engineer.
 
 **Prerequisites:** [SAI-B014](#sai-b014), [SAI-B001](#sai-b001).
@@ -3356,8 +3329,6 @@ Enumeration and reset-link leakage can turn recovery into account takeover; use 
 <a id="sai-b016"></a>
 <details>
 <summary>17. SAI-B016: Expose owned session listing and revoke-other-sessions controls [pending]</summary>
-
-**Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** identity.
 
 **Suggested role:** identity/frontend engineer.
 
@@ -3408,8 +3379,6 @@ Session metadata is sensitive, and stale browser state must not cross identities
 <details>
 <summary>18. SAI-B017: Record privacy-safe account security events [pending]</summary>
 
-**Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** identity-observability.
-
 **Suggested role:** identity engineer and privacy reviewer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B016](#sai-b016), [SAI-B001](#sai-b001).
@@ -3456,8 +3425,6 @@ Additional audit data creates privacy and storage obligations; collect the small
 <a id="sai-b018"></a>
 <details>
 <summary>19. SAI-B018: Implement deliberate account deletion across auth and owned submission state [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** privacy.
 
 **Suggested role:** backend/identity engineer and privacy reviewer.
 
@@ -3509,8 +3476,6 @@ Deletion is destructive and spans two stores; fixtures and failure recovery must
 <details>
 <summary>20. SAI-B019: Bound general API admission and concurrent slow requests [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** ingress-security.
-
 **Suggested role:** API/platform engineer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B006](#sai-b006), [SAI-B001](#sai-b001).
@@ -3558,8 +3523,6 @@ An in-process cap is not a global multi-replica budget; document deployment scop
 <a id="sai-b020"></a>
 <details>
 <summary>21. SAI-B020: Add structured redacted request and failure logs [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** operations.
 
 **Suggested role:** platform engineer.
 
@@ -3609,8 +3572,6 @@ Logs are another data export channel; redaction must be tested before deployment
 <details>
 <summary>22. SAI-B021: Expose private bounded operational readiness and queue metrics [pending]</summary>
 
-**Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** operations.
-
 **Suggested role:** platform/backend engineer.
 
 **Prerequisites:** [SAI-B020](#sai-b020), [SAI-B001](#sai-b001).
@@ -3657,8 +3618,6 @@ Operator endpoints can expose sensitive topology and state; require a separate c
 <a id="sai-b022"></a>
 <details>
 <summary>23. SAI-B022: Apply retention to terminal submission source with a dry-run purge [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** privacy-storage.
 
 **Suggested role:** backend engineer and privacy reviewer.
 
@@ -3708,8 +3667,6 @@ Retention is deliberate destruction; ensure policy, exclusions and backup behavi
 <details>
 <summary>24. SAI-B023: Enforce cumulative owned-source storage budgets at submission admission [pending]</summary>
 
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** storage-abuse.
-
 **Suggested role:** backend storage engineer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B013](#sai-b013), [SAI-B022](#sai-b022), [SAI-B001](#sai-b001).
@@ -3756,8 +3713,6 @@ Accounting races can bypass budgets or reject valid replay; enforce charging in 
 <details>
 <summary>25. SAI-B024: Avoid loading private source for submission summary pages [pending]</summary>
 
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** storage-performance.
-
 **Suggested role:** backend engineer.
 
 **Prerequisites:** [SAI-B013](#sai-b013), [SAI-B001](#sai-b001).
@@ -3802,8 +3757,6 @@ Summary optimization must not bypass expiry/ownership checks or change determini
 <a id="sai-b025"></a>
 <details>
 <summary>26. SAI-B025: Export an authenticated user-owned submission history bundle [pending]</summary>
-
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** privacy-product.
 
 **Suggested role:** backend/frontend engineer.
 
@@ -3854,8 +3807,6 @@ Exports are private source artifacts; owner authorization, response limits and c
 <details>
 <summary>27. SAI-B026: Extend problem provenance with explicit permitted-use metadata [pending]</summary>
 
-**Priority:** P1 · **Phase:** 2-useful-practice · **Area:** content.
-
 **Suggested role:** content engineer and rights reviewer.
 
 **Prerequisites:** [SAI-B002](#sai-b002), [SAI-B003](#sai-b003), [SAI-B001](#sai-b001).
@@ -3904,8 +3855,6 @@ Rights metadata is a recorded authorization, not automatic legal clearance; owne
 <a id="sai-b027"></a>
 <details>
 <summary>28. SAI-B027: Version problem and grader identity on every new submission [pending]</summary>
-
-**Priority:** P1 · **Phase:** 2-useful-practice · **Area:** content-contract.
 
 **Suggested role:** backend/content engineer.
 
@@ -3956,8 +3905,6 @@ Revision mismatches can silently invalidate verdicts; worker/API identity must b
 <details>
 <summary>29. SAI-B028: Detect public-sample drift between catalog and judge deployments [pending]</summary>
 
-**Priority:** P1 · **Phase:** 2-useful-practice · **Area:** content-quality.
-
 **Suggested role:** content/backend engineer.
 
 **Prerequisites:** [SAI-B027](#sai-b027), [SAI-B001](#sai-b001).
@@ -4005,8 +3952,6 @@ A shared manifest must not accidentally package private tests into web/API artif
 <a id="sai-b029"></a>
 <details>
 <summary>30. SAI-B029: Validate trusted problem authoring inputs before catalog publication [pending]</summary>
-
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** content-tooling.
 
 **Suggested role:** content tooling engineer.
 
@@ -4056,8 +4001,6 @@ An authoring validator must validate data rather than become an unrestricted cod
 <a id="sai-b030"></a>
 <details>
 <summary>31. SAI-B030: Add one original prefix-sum range-query teaching exercise [pending]</summary>
-
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** content.
 
 **Suggested role:** problem author and judge reviewer.
 
@@ -4109,8 +4052,6 @@ Poor constraints/oracles can invalidate teaching and verdicts; require independe
 <details>
 <summary>32. SAI-B031: Use bounded server-side pagination for the expanding problem catalog [pending]</summary>
 
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** catalog.
-
 **Suggested role:** frontend/API engineer.
 
 **Prerequisites:** [SAI-B029](#sai-b029), [SAI-B001](#sai-b001).
@@ -4160,8 +4101,6 @@ Stale network responses and partial-page filtering can create misleading results
 <details>
 <summary>33. SAI-B032: Make catalog filters and page position shareable through the URL [pending]</summary>
 
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** catalog-ux.
-
 **Suggested role:** frontend engineer.
 
 **Prerequisites:** [SAI-B031](#sai-b031), [SAI-B001](#sai-b001).
@@ -4208,8 +4147,6 @@ URL state must be bounded and must not introduce navigation loops or expose priv
 <details>
 <summary>34. SAI-B033: Add explicit local draft export and bounded import [pending]</summary>
 
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** editor.
-
 **Suggested role:** frontend editor engineer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B001](#sai-b001).
@@ -4255,8 +4192,6 @@ Import is a destructive edit and export may contain private source; require expl
 <a id="sai-b034"></a>
 <details>
 <summary>35. SAI-B034: Offer explicit draft ownership and clear-on-shared-device controls [pending]</summary>
-
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** editor-privacy.
 
 **Suggested role:** frontend engineer and privacy reviewer.
 
@@ -4306,8 +4241,6 @@ Local identity migration can lose code or cross account boundaries; migration mu
 <details>
 <summary>36. SAI-B035: Detect cross-tab draft conflicts before overwriting newer code [pending]</summary>
 
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** editor-reliability.
-
 **Suggested role:** frontend editor engineer.
 
 **Prerequisites:** [SAI-B034](#sai-b034), [SAI-B001](#sai-b001).
@@ -4352,8 +4285,6 @@ Migration must not mistake existing source text for malformed metadata or discar
 <a id="sai-b036"></a>
 <details>
 <summary>37. SAI-B036: Add persistent editor display and accessibility preferences [pending]</summary>
-
-**Priority:** P3 · **Phase:** 2-useful-practice · **Area:** editor-ux.
 
 **Suggested role:** frontend editor engineer.
 
@@ -4401,8 +4332,6 @@ Preference initialization can race draft hydration; source must remain unchanged
 <a id="sai-b037"></a>
 <details>
 <summary>38. SAI-B037: Complete keyboard navigation for the practice and submission workflow [pending]</summary>
-
-**Priority:** P1 · **Phase:** 2-useful-practice · **Area:** accessibility.
 
 **Suggested role:** accessibility/frontend engineer.
 
@@ -4452,8 +4381,6 @@ Automation cannot establish all editor assistive-technology behavior; include an
 <a id="sai-b038"></a>
 <details>
 <summary>39. SAI-B038: Improve screen-reader announcements and focus for asynchronous results [pending]</summary>
-
-**Priority:** P1 · **Phase:** 2-useful-practice · **Area:** accessibility.
 
 **Suggested role:** accessibility/frontend engineer.
 
@@ -4505,8 +4432,6 @@ Over-announcement and forced focus can make a technically labeled UI unusable; t
 <details>
 <summary>40. SAI-B039: Repair contrast, reduced-motion and zoom reflow gaps [pending]</summary>
 
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** accessibility.
-
 **Suggested role:** accessibility/UI engineer.
 
 **Prerequisites:** [SAI-B037](#sai-b037), [SAI-B001](#sai-b001).
@@ -4555,8 +4480,6 @@ Visual fixes can hide controls or alter editor sizing; preserve responsive behav
 <a id="sai-b040"></a>
 <details>
 <summary>41. SAI-B040: Add a focused automated accessibility regression gate [pending]</summary>
-
-**Priority:** P2 · **Phase:** 2-useful-practice · **Area:** accessibility-quality.
 
 **Suggested role:** accessibility/test engineer.
 
@@ -4609,8 +4532,6 @@ Scanner version changes and noisy exceptions can erode trust; pin the tool and r
 <details>
 <summary>42. SAI-B121: Persist owned sandbox records and reconcile crash-orphaned containers [pending]</summary>
 
-**Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** judge-recovery.
-
 **Suggested role:** Judge maintainer and recovery reviewer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B001](#sai-b001).
@@ -4659,8 +4580,6 @@ Automatic orphan cleanup is destructive unless ownership is established independ
 <a id="sai-b122"></a>
 <details>
 <summary>43. SAI-B122: Bind controller credentials to registered worker identities [pending]</summary>
-
-**Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** worker-auth.
 
 **Suggested role:** Backend security engineer and judge maintainer.
 
@@ -4712,8 +4631,6 @@ An identity migration can lock out valid workers or accidentally widen completio
 <details>
 <summary>44. SAI-B123: Enforce an atomic active-lease allowance per worker principal [pending]</summary>
 
-**Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** judge-admission.
-
 **Suggested role:** Backend queue engineer.
 
 **Prerequisites:** [SAI-B122](#sai-b122), [SAI-B013](#sai-b013), [SAI-B001](#sai-b001).
@@ -4762,8 +4679,6 @@ A nontransactional count-and-lease check can race; a stranded lease must expire 
 <a id="sai-b125"></a>
 <details>
 <summary>45. SAI-B125: Gate production readiness on an approved supported runtime identity [pending]</summary>
-
-**Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** runtime-maintenance.
 
 **Suggested role:** Judge operator, security reviewer and project owner.
 
@@ -4815,8 +4730,6 @@ A self-asserted or stale inventory can create false confidence; policy approval 
 <details>
 <summary>46. SAI-B124: Require a verified aggregate resource envelope for a production judge host [pending]</summary>
 
-**Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** judge-isolation.
-
 **Suggested role:** Judge infrastructure engineer and security reviewer.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B121](#sai-b121), [SAI-B123](#sai-b123), [SAI-B125](#sai-b125), [SAI-B001](#sai-b001).
@@ -4866,8 +4779,6 @@ Resource flags can be ignored by unsupported runtimes; readiness must depend on 
 <a id="sai-b126"></a>
 <details>
 <summary>47. SAI-B126: Withdraw worker readiness and reconcile its current lease on retirement [pending]</summary>
-
-**Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** judge-lifecycle.
 
 **Suggested role:** Backend queue engineer and judge maintainer.
 
@@ -4919,8 +4830,6 @@ Retiring a shared identity or releasing an uncertain lease incorrectly can inval
 <details>
 <summary>48. SAI-B105: Add a bounded metrics exporter consuming the existing private operational surface [pending]</summary>
 
-**Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-observability.
-
 **Suggested role:** Backend engineer and operator.
 
 **Prerequisites:** [SAI-B021](#sai-b021), [SAI-B020](#sai-b020), [SAI-B001](#sai-b001).
@@ -4967,8 +4876,6 @@ Metrics labels and endpoints can leak private activity or overload storage.
 <a id="sai-b106"></a>
 <details>
 <summary>49. SAI-B106: Propagate redacted correlation identifiers across accepted jobs [pending]</summary>
-
-**Priority:** P2 · **Phase:** operated-pilot · **Area:** operations-observability.
 
 **Suggested role:** Backend engineer.
 
@@ -5017,8 +4924,6 @@ Improper correlation data can become an injection or cross-user tracking vector.
 <details>
 <summary>50. SAI-B107: Define measurable service objectives and test operator alert rules [pending]</summary>
 
-**Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-observability.
-
 **Suggested role:** Site reliability engineer and service owner.
 
 **Prerequisites:** [SAI-B105](#sai-b105), [SAI-B106](#sai-b106), [SAI-B003](#sai-b003), [SAI-B001](#sai-b001).
@@ -5064,8 +4969,6 @@ Noisy alerts can hide actual incidents; broad thresholds can miss failures.
 <a id="sai-b108"></a>
 <details>
 <summary>51. SAI-B108: Rehearse a timed full-stack disaster restore using the approved backup helper [pending]</summary>
-
-**Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-recovery.
 
 **Suggested role:** Site reliability engineer with privacy reviewer.
 
@@ -5115,8 +5018,6 @@ A partial restoration can lose accounts, invalidate sessions or mismatch ownersh
 <details>
 <summary>52. SAI-B109: Measure bounded capacity and overload behavior using original fixtures [pending]</summary>
 
-**Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-capacity.
-
 **Suggested role:** Performance engineer and operator.
 
 **Prerequisites:** [SAI-B105](#sai-b105), [SAI-B107](#sai-b107), [SAI-B124](#sai-b124), [SAI-B001](#sai-b001).
@@ -5162,8 +5063,6 @@ A careless load test can exhaust the shared development machine.
 <a id="sai-b110"></a>
 <details>
 <summary>53. SAI-B110: Implement a revisioned deployment smoke and rollback rehearsal [pending]</summary>
-
-**Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-release.
 
 **Suggested role:** Release engineer and service owner.
 
@@ -5213,8 +5112,6 @@ Rollback across incompatible state versions can corrupt user data.
 <details>
 <summary>54. SAI-B111: Create a canary qualification gate for judge runtime upgrades [pending]</summary>
 
-**Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-release.
-
 **Suggested role:** Judge maintainer and security reviewer.
 
 **Prerequisites:** [SAI-B110](#sai-b110), [SAI-B125](#sai-b125), [SAI-B001](#sai-b001).
@@ -5261,8 +5158,6 @@ A toolchain update can weaken isolation or alter resource semantics.
 <a id="sai-b112"></a>
 <details>
 <summary>55. SAI-B112: Run a bounded incident exercise for worker outage and recovery [pending]</summary>
-
-**Priority:** P2 · **Phase:** operated-pilot · **Area:** operations-recovery.
 
 **Suggested role:** Site reliability engineer and service owner.
 
@@ -5311,8 +5206,6 @@ An exercise that touches live state can create the incident it is meant to test.
 <details>
 <summary>56. SAI-B041: Record the single-provider hint pilot activation decision [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI activation governance.
-
 **Suggested role:** Project owner with privacy and AI engineering reviewers.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B002](#sai-b002), [SAI-B003](#sai-b003), [SAI-B026](#sai-b026).
@@ -5357,8 +5250,6 @@ A written provider name must not be mistaken for permission to send user data or
 <a id="sai-b042"></a>
 <details>
 <summary>57. SAI-B042: Bound and fingerprint the existing public-only hint context [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Safe model context.
 
 **Suggested role:** Backend engineer.
 
@@ -5405,8 +5296,6 @@ Silent truncation could remove a constraint and produce misleading hints.
 <details>
 <summary>58. SAI-B043: Validate trusted provider destinations and secret configuration [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Provider configuration.
-
 **Suggested role:** Backend security engineer.
 
 **Prerequisites:** [SAI-B041](#sai-b041), [SAI-B006](#sai-b006), [SAI-B001](#sai-b001).
@@ -5451,8 +5340,6 @@ Provider configuration can become an SSRF or credential-forwarding boundary if e
 <a id="sai-b044"></a>
 <details>
 <summary>59. SAI-B044: Define an internal generation result and usage contract [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Provider-neutral contracts.
 
 **Suggested role:** Backend and AI interface engineer.
 
@@ -5499,8 +5386,6 @@ Treating absent provider usage as zero would undercount spend.
 <details>
 <summary>60. SAI-B045: Version bounded hint prompts and spoiler policies [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Tutoring prompts.
-
 **Suggested role:** AI engineer and teaching reviewer.
 
 **Prerequisites:** [SAI-B042](#sai-b042), [SAI-B044](#sai-b044), [SAI-B001](#sai-b001).
@@ -5545,8 +5430,6 @@ A model may still overshare; prompt instructions require output review and produ
 <a id="sai-b046"></a>
 <details>
 <summary>61. SAI-B046: Reject malformed model hints before constructing learner responses [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Model output contracts.
 
 **Suggested role:** Backend engineer.
 
@@ -5593,8 +5476,6 @@ String cleanup must not silently convert a refusal or truncated answer into a no
 <details>
 <summary>62. SAI-B047: Add deterministic provider transport fixtures without external inference [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Provider adapter verification.
-
 **Suggested role:** AI integration engineer.
 
 **Prerequisites:** [SAI-B043](#sai-b043), [SAI-B044](#sai-b044), [SAI-B046](#sai-b046), [SAI-B001](#sai-b001).
@@ -5638,8 +5519,6 @@ A fixture may drift from the selected provider schema; record the reviewed API v
 <a id="sai-b048"></a>
 <details>
 <summary>63. SAI-B048: Implement one opt-in bounded asynchronous hint provider adapter [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Real provider transport.
 
 **Suggested role:** AI backend engineer.
 
@@ -5685,8 +5564,6 @@ Transport completion does not establish content quality, privacy compliance or p
 <a id="sai-b049"></a>
 <details>
 <summary>64. SAI-B049: Enforce account-level entitlement before model-backed hints [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI admission policy.
 
 **Suggested role:** Backend authorization engineer.
 
@@ -5734,8 +5611,6 @@ Authentication alone is insufficient authority to consume external resources.
 <details>
 <summary>65. SAI-B050: Reserve and reconcile durable per-account hint budgets atomically [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI token and request quotas.
-
 **Suggested role:** Backend persistence engineer.
 
 **Prerequisites:** [SAI-B044](#sai-b044), [SAI-B049](#sai-b049), [SAI-B013](#sai-b013), [SAI-B001](#sai-b001).
@@ -5782,8 +5657,6 @@ Ledger races and ambiguous completion can bypass caps or unfairly consume allowa
 <details>
 <summary>66. SAI-B051: Add process-wide provider concurrency and monetary admission ceilings [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Global AI spend control.
-
 **Suggested role:** Backend platform engineer.
 
 **Prerequisites:** [SAI-B050](#sai-b050), [SAI-B001](#sai-b001).
@@ -5828,8 +5701,6 @@ A process-local semaphore is not a distributed project-wide spending guarantee.
 <a id="sai-b052"></a>
 <details>
 <summary>67. SAI-B052: Deduplicate model hint retries with account-scoped idempotency [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI request reliability.
 
 **Suggested role:** Backend engineer.
 
@@ -5877,8 +5748,6 @@ An underspecified cache key can leak responses or replay stale prompt policy.
 <details>
 <summary>68. SAI-B053: Record redacted generation usage and failure telemetry [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI observability.
-
 **Suggested role:** Backend observability engineer.
 
 **Prerequisites:** [SAI-B044](#sai-b044), [SAI-B050](#sai-b050), [SAI-B020](#sai-b020), [SAI-B001](#sai-b001).
@@ -5924,8 +5793,6 @@ Verbose error logging can defeat an otherwise safe context boundary.
 <a id="sai-b054"></a>
 <details>
 <summary>69. SAI-B054: Propagate total generation deadlines and explicit cancellation states [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI cancellation and deadlines.
 
 **Suggested role:** Full-stack AI integration engineer.
 
@@ -5974,8 +5841,6 @@ Local cancellation and remote resource consumption can diverge.
 <details>
 <summary>70. SAI-B055: Bound provider retries and add outage admission state [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI failure policy.
-
 **Suggested role:** Backend reliability engineer.
 
 **Prerequisites:** [SAI-B048](#sai-b048), [SAI-B051](#sai-b051), [SAI-B054](#sai-b054), [SAI-B001](#sai-b001).
@@ -6020,8 +5885,6 @@ Retries can multiply both latency and charges even after the browser gives up.
 <a id="sai-b056"></a>
 <details>
 <summary>71. SAI-B056: Require clear external-AI disclosure before opt-in hint requests [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI privacy UX.
 
 **Suggested role:** Product privacy and frontend engineer.
 
@@ -6070,8 +5933,6 @@ A blanket consent checkbox cannot authorize unspecified future source sharing.
 <details>
 <summary>72. SAI-B057: Provide a tested operator kill switch for model hint admission [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI operations.
-
 **Suggested role:** Backend operations engineer.
 
 **Prerequisites:** [SAI-B048](#sai-b048), [SAI-B049](#sai-b049), [SAI-B055](#sai-b055), [SAI-B056](#sai-b056), [SAI-B001](#sai-b001).
@@ -6117,8 +5978,6 @@ A UI-only toggle cannot stop API callers or already admitted upstream work.
 <a id="sai-b058"></a>
 <details>
 <summary>73. SAI-B058: Add shared golden fixtures for hint API and browser schema parity [pending]</summary>
-
-**Priority:** P2 · **Phase:** AI-1 controlled model hints · **Area:** Cross-runtime AI contracts.
 
 **Suggested role:** Full-stack contract engineer.
 
@@ -6166,8 +6025,6 @@ Generated types alone do not validate hostile network payloads.
 <details>
 <summary>74. SAI-B059: Define and execute a small consented model-hint pilot acceptance gate [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Hint quality pilot.
-
 **Suggested role:** Teaching evaluator with project owner.
 
 **Prerequisites:** [SAI-B045](#sai-b045), [SAI-B050](#sai-b050), [SAI-B051](#sai-b051), [SAI-B056](#sai-b056), [SAI-B057](#sai-b057), [SAI-B058](#sai-b058), [SAI-B124](#sai-b124), [SAI-B126](#sai-b126), [SAI-B001](#sai-b001).
@@ -6213,8 +6070,6 @@ A provider working on three seed problems is not evidence of broad tutoring qual
 <a id="sai-b113"></a>
 <details>
 <summary>75. SAI-B113: Provide learner-controlled progress summaries with assistance provenance [pending]</summary>
-
-**Priority:** P2 · **Phase:** learning-coaching · **Area:** learning-analytics.
 
 **Suggested role:** Backend engineer with learning researcher.
 
@@ -6262,8 +6117,6 @@ Misleading or leaking progress metrics can harm learner trust.
 <details>
 <summary>76. SAI-B114: Add editable practice plans and deterministic review reminders [pending]</summary>
 
-**Priority:** P2 · **Phase:** learning-coaching · **Area:** learning-plans.
-
 **Suggested role:** Full-stack engineer and learning designer.
 
 **Prerequisites:** [SAI-B113](#sai-b113), [SAI-B001](#sai-b001).
@@ -6310,8 +6163,6 @@ Incorrect scheduling or intrusive reminders can undermine user control.
 <details>
 <summary>77. SAI-B115: Implement opt-in coach cohorts with explicit sharing permissions [pending]</summary>
 
-**Priority:** P2 · **Phase:** learning-coaching · **Area:** coaching.
-
 **Suggested role:** Backend engineer and privacy reviewer.
 
 **Prerequisites:** [SAI-B113](#sai-b113), [SAI-B001](#sai-b001).
@@ -6357,8 +6208,6 @@ Broad sharing scopes could expose unrelated private attempts.
 <a id="sai-b116"></a>
 <details>
 <summary>78. SAI-B116: Add permissioned assignments and human rubric feedback [pending]</summary>
-
-**Priority:** P2 · **Phase:** learning-coaching · **Area:** coaching.
 
 **Suggested role:** Full-stack engineer and educator reviewer.
 
@@ -6407,8 +6256,6 @@ Feedback permissions and immutable problem references must remain consistent.
 <details>
 <summary>79. SAI-B060: Design a bounded tutoring interaction contract beyond hint levels [pending]</summary>
 
-**Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Tutor interaction design.
-
 **Suggested role:** Product and AI interface designer.
 
 **Prerequisites:** [SAI-B059](#sai-b059), [SAI-B001](#sai-b001).
@@ -6453,8 +6300,6 @@ An open-ended conversation broadens privacy and cost exposure beyond the success
 <a id="sai-b061"></a>
 <details>
 <summary>80. SAI-B061: Implement account-owned expiring tutor conversation state [pending]</summary>
-
-**Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Tutor context lifecycle.
 
 **Suggested role:** Backend privacy engineer.
 
@@ -6502,8 +6347,6 @@ Conversation history can become an uncontrolled source of retained personal data
 <details>
 <summary>81. SAI-B062: Add a consented concept-check interaction with bounded feedback [pending]</summary>
 
-**Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Evidence-oriented tutoring.
-
 **Suggested role:** Teaching product engineer.
 
 **Prerequisites:** [SAI-B060](#sai-b060), [SAI-B061](#sai-b061), [SAI-B001](#sai-b001).
@@ -6549,8 +6392,6 @@ A model-generated rubric may be wrong; reviewed questions and appeal/skip behavi
 <a id="sai-b063"></a>
 <details>
 <summary>82. SAI-B063: Collect minimal account-owned hint quality feedback [pending]</summary>
-
-**Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** AI feedback and correction.
 
 **Suggested role:** Full-stack product engineer.
 
@@ -6598,8 +6439,6 @@ Self-selected ratings are product feedback, not a controlled educational study.
 <details>
 <summary>83. SAI-B064: Define explicit source-sharing consent and owned debugger input [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-2 consented tutor and debugger · **Area:** Debugger privacy boundary.
-
 **Suggested role:** Privacy and backend authorization engineer.
 
 **Prerequisites:** [SAI-B042](#sai-b042), [SAI-B049](#sai-b049), [SAI-B056](#sai-b056), [SAI-B060](#sai-b060), [SAI-B001](#sai-b001).
@@ -6645,8 +6484,6 @@ Source can contain personal information or secrets; the product must disclose th
 <a id="sai-b065"></a>
 <details>
 <summary>84. SAI-B065: Build a public-only execution evidence projection for debugging [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-2 consented tutor and debugger · **Area:** Safe debugger evidence.
 
 **Suggested role:** Judge/API security engineer.
 
@@ -6694,8 +6531,6 @@ An error message can contain hostile program-written text and must remain untrus
 <details>
 <summary>85. SAI-B066: Return debugger hypotheses separately from observed failures [pending]</summary>
 
-**Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Evidence-backed debugging.
-
 **Suggested role:** AI debugging engineer.
 
 **Prerequisites:** [SAI-B048](#sai-b048), [SAI-B050](#sai-b050), [SAI-B064](#sai-b064), [SAI-B065](#sai-b065), [SAI-B001](#sai-b001).
@@ -6741,8 +6576,6 @@ Well-written model explanations can sound more certain than the supplied evidenc
 <a id="sai-b067"></a>
 <details>
 <summary>86. SAI-B067: Show a source-hash-bound debugger patch preview with explicit apply [pending]</summary>
-
-**Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Debugger editor UX.
 
 **Suggested role:** Frontend editor engineer.
 
@@ -6790,8 +6623,6 @@ Applying a correct-looking diff can still introduce a bug; retain original sourc
 <details>
 <summary>87. SAI-B068: Version authorized solver problem specifications and evaluation modes [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Solver input contracts.
-
 **Suggested role:** Backend contract engineer.
 
 **Prerequisites:** [SAI-B042](#sai-b042), [SAI-B049](#sai-b049), [SAI-B064](#sai-b064), [SAI-B027](#sai-b027), [SAI-B001](#sai-b001).
@@ -6838,8 +6669,6 @@ Version labels without immutable content and rights metadata are not reproducibl
 <details>
 <summary>88. SAI-B069: Generate a bounded algorithm-plan record before candidate code [pending]</summary>
 
-**Priority:** P2 · **Phase:** AI-3 bounded candidate solver · **Area:** Candidate planning.
-
 **Suggested role:** AI solver engineer.
 
 **Prerequisites:** [SAI-B045](#sai-b045), [SAI-B048](#sai-b048), [SAI-B050](#sai-b050), [SAI-B068](#sai-b068), [SAI-B001](#sai-b001).
@@ -6884,8 +6713,6 @@ A convincing plan may be wrong and must not bypass isolated tests.
 <a id="sai-b070"></a>
 <details>
 <summary>89. SAI-B070: Normalize bounded source candidates without archive parser assumptions [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Candidate generation.
 
 **Suggested role:** AI/backend engineer.
 
@@ -6933,8 +6760,6 @@ Aggressive source cleanup can silently alter the program the learner thinks was 
 <details>
 <summary>90. SAI-B071: Route authorized AI candidates through the existing isolated judge boundary [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Solver-to-judge integration.
-
 **Suggested role:** Judge and backend integration engineer.
 
 **Prerequisites:** [SAI-B050](#sai-b050), [SAI-B051](#sai-b051), [SAI-B065](#sai-b065), [SAI-B068](#sai-b068), [SAI-B070](#sai-b070), [SAI-B121](#sai-b121), [SAI-B123](#sai-b123), [SAI-B125](#sai-b125), [SAI-B001](#sai-b001).
@@ -6980,8 +6805,6 @@ Generated code is equally untrusted as learner code and may target the result pr
 <a id="sai-b072"></a>
 <details>
 <summary>91. SAI-B072: Implement a finite repair state machine with one shared run budget [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Bounded solver repair.
 
 **Suggested role:** Backend workflow engineer.
 
@@ -7029,8 +6852,6 @@ Per-step limits are insufficient when aggregate attempts can still grow.
 <details>
 <summary>92. SAI-B073: Rank candidates by explicit execution evidence with deterministic ties [pending]</summary>
 
-**Priority:** P2 · **Phase:** AI-3 bounded candidate solver · **Area:** Candidate ranking.
-
 **Suggested role:** AI evaluation engineer.
 
 **Prerequisites:** [SAI-B070](#sai-b070), [SAI-B071](#sai-b071), [SAI-B072](#sai-b072), [SAI-B001](#sai-b001).
@@ -7075,8 +6896,6 @@ Optimizing public tests can overfit them; show exactly which finite checks infor
 <a id="sai-b074"></a>
 <details>
 <summary>93. SAI-B074: Create a reproducible offline solver evaluation run manifest [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Solver evaluation.
 
 **Suggested role:** Research evaluation engineer.
 
@@ -7124,8 +6943,6 @@ Unequal inference budgets or contaminated tasks can make a comparison misleading
 <details>
 <summary>94. SAI-B075: Admit only reviewed differential and metamorphic test specifications [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Authorized test generation.
-
 **Suggested role:** Problem author and judge evaluation engineer.
 
 **Prerequisites:** [SAI-B068](#sai-b068), [SAI-B071](#sai-b071), [SAI-B074](#sai-b074), [SAI-B001](#sai-b001).
@@ -7171,8 +6988,6 @@ A faulty oracle can confidently reject correct programs or accept incorrect ones
 <a id="sai-b076"></a>
 <details>
 <summary>95. SAI-B076: Reduce consented public counterexamples under a finite execution budget [pending]</summary>
-
-**Priority:** P2 · **Phase:** AI-4 evaluation and research gates · **Area:** Counterexample debugging.
 
 **Suggested role:** Judge tooling engineer.
 
@@ -7220,8 +7035,6 @@ Naive reduction can leave the input domain or change the failure being explained
 <details>
 <summary>96. SAI-B081: Implement contest lifecycle and authoritative event timing [pending]</summary>
 
-**Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
-
 **Suggested role:** Backend engineer with contest product owner.
 
 **Prerequisites:** [SAI-B003](#sai-b003), [SAI-B027](#sai-b027), [SAI-B001](#sai-b001).
@@ -7268,8 +7081,6 @@ Ambiguous deadlines can accept late work or invalidate legitimate attempts.
 <details>
 <summary>97. SAI-B082: Add permissioned contest registration and eligibility checks [pending]</summary>
 
-**Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
-
 **Suggested role:** Backend engineer.
 
 **Prerequisites:** [SAI-B081](#sai-b081), [SAI-B001](#sai-b001).
@@ -7314,8 +7125,6 @@ Registration leakage or weak checks could expose private events.
 <a id="sai-b083"></a>
 <details>
 <summary>98. SAI-B083: Freeze versioned problem sets for each contest [pending]</summary>
-
-**Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
 **Suggested role:** Backend engineer and problem curator.
 
@@ -7363,8 +7172,6 @@ Incorrect version linkage changes fairness and reproducibility.
 <details>
 <summary>99. SAI-B084: Implement deterministic ICPC scoring as a tested pure calculation [pending]</summary>
 
-**Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
-
 **Suggested role:** Backend engineer with experienced contest reviewer.
 
 **Prerequisites:** [SAI-B081](#sai-b081), [SAI-B083](#sai-b083), [SAI-B001](#sai-b001).
@@ -7409,8 +7216,6 @@ A small scoring rule mistake can change winners.
 <details>
 <summary>100. SAI-B085: Add participant and organizer scoreboard projections with freeze rules [pending]</summary>
 
-**Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
-
 **Suggested role:** Backend engineer.
 
 **Prerequisites:** [SAI-B084](#sai-b084), [SAI-B001](#sai-b001).
@@ -7454,8 +7259,6 @@ Aggregate fields can accidentally leak frozen results.
 <a id="sai-b086"></a>
 <details>
 <summary>101. SAI-B086: Connect contest submissions to event eligibility and immutable attempt context [pending]</summary>
-
-**Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
 **Suggested role:** Backend engineer.
 
@@ -7503,8 +7306,6 @@ Race conditions between registration, deadline and enqueue could create unfair a
 <details>
 <summary>102. SAI-B087: Implement isolated virtual-contest sessions with personal start times [pending]</summary>
 
-**Priority:** P2 · **Phase:** contest-experience · **Area:** contests.
-
 **Suggested role:** Full-stack engineer.
 
 **Prerequisites:** [SAI-B081](#sai-b081), [SAI-B083](#sai-b083), [SAI-B084](#sai-b084), [SAI-B086](#sai-b086), [SAI-B001](#sai-b001).
@@ -7551,8 +7352,6 @@ Shared identifiers could mix personal and official attempts.
 <details>
 <summary>103. SAI-B088: Add locked ICPC team rosters and event membership rules [pending]</summary>
 
-**Priority:** P2 · **Phase:** contest-experience · **Area:** teams.
-
 **Suggested role:** Backend engineer.
 
 **Prerequisites:** [SAI-B082](#sai-b082), [SAI-B001](#sai-b001).
@@ -7596,8 +7395,6 @@ Membership races or invitation leakage could grant unintended team access.
 <a id="sai-b089"></a>
 <details>
 <summary>104. SAI-B089: Scope contest attempts and source visibility to authorized team members [pending]</summary>
-
-**Priority:** P2 · **Phase:** contest-experience · **Area:** teams.
 
 **Suggested role:** Backend engineer with privacy reviewer.
 
@@ -7644,8 +7441,6 @@ Expanding ownership from a user to a team can leak private code.
 <a id="sai-b090"></a>
 <details>
 <summary>105. SAI-B090: Enforce contest assistance policy across hint and submission routes [pending]</summary>
-
-**Priority:** P1 · **Phase:** contest-experience · **Area:** contest-integrity.
 
 **Suggested role:** Backend engineer and contest policy owner.
 
@@ -7694,8 +7489,6 @@ Inconsistent checks across endpoints could bypass event policy.
 <details>
 <summary>106. SAI-B091: Build an organizer workflow for contest draft, preview and publication [pending]</summary>
 
-**Priority:** P2 · **Phase:** contest-experience · **Area:** contest-admin.
-
 **Suggested role:** Full-stack engineer.
 
 **Prerequisites:** [SAI-B081](#sai-b081), [SAI-B082](#sai-b082), [SAI-B083](#sai-b083), [SAI-B085](#sai-b085), [SAI-B001](#sai-b001).
@@ -7741,8 +7534,6 @@ Administrative forms can expose mutation permissions or conceal critical rules.
 <a id="sai-b092"></a>
 <details>
 <summary>107. SAI-B092: Implement audited contest rejudging with immutable verdict revisions [pending]</summary>
-
-**Priority:** P1 · **Phase:** contest-corrections · **Area:** contest-admin.
 
 **Suggested role:** Backend engineer and judge maintainer.
 
@@ -7790,8 +7581,6 @@ A faulty correction can retroactively invalidate many results.
 <details>
 <summary>108. SAI-B093: Add contest clarification and appeal records with controlled disclosure [pending]</summary>
 
-**Priority:** P2 · **Phase:** contest-corrections · **Area:** contest-admin.
-
 **Suggested role:** Full-stack engineer and contest moderator.
 
 **Prerequisites:** [SAI-B091](#sai-b091), [SAI-B092](#sai-b092), [SAI-B001](#sai-b001).
@@ -7837,8 +7626,6 @@ Support discussions can leak hidden cases or identifiable submissions.
 <a id="sai-b094"></a>
 <details>
 <summary>109. SAI-B094: Deliver bounded scoreboard polling with consistent event revisions [pending]</summary>
-
-**Priority:** P2 · **Phase:** contest-experience · **Area:** leaderboards.
 
 **Suggested role:** Frontend engineer.
 
@@ -7887,8 +7674,6 @@ Out-of-order updates and aggressive polling can harm fairness or availability.
 <details>
 <summary>110. SAI-B095: Create a reproducible contest rehearsal and official standings export [pending]</summary>
 
-**Priority:** P1 · **Phase:** contest-corrections · **Area:** contest-release.
-
 **Suggested role:** QA engineer and contest operator.
 
 **Prerequisites:** [SAI-B090](#sai-b090), [SAI-B091](#sai-b091), [SAI-B092](#sai-b092), [SAI-B094](#sai-b094), [SAI-B001](#sai-b001).
@@ -7934,8 +7719,6 @@ An incomplete rehearsal can hide event-wide correctness failures.
 <a id="sai-b096"></a>
 <details>
 <summary>111. SAI-B096: Version output-comparison policies without changing existing verdicts [pending]</summary>
-
-**Priority:** P1 · **Phase:** judge-extensibility · **Area:** judge-validators.
 
 **Suggested role:** Judge engineer.
 
@@ -7983,8 +7766,6 @@ A permissive comparator can accept incorrect programs.
 <details>
 <summary>112. SAI-B097: Add isolated versioned custom-checker support for authorized problems [pending]</summary>
 
-**Priority:** P2 · **Phase:** judge-extensibility · **Area:** judge-validators.
-
 **Suggested role:** Judge engineer with security reviewer.
 
 **Prerequisites:** [SAI-B096](#sai-b096), [SAI-B124](#sai-b124), [SAI-B125](#sai-b125), [SAI-B001](#sai-b001).
@@ -8031,8 +7812,6 @@ Checker privileges and diagnostic leakage expand the execution trust boundary.
 <details>
 <summary>113. SAI-B098: Implement bounded floating-point answer validation [pending]</summary>
 
-**Priority:** P2 · **Phase:** judge-extensibility · **Area:** judge-validators.
-
 **Suggested role:** Judge engineer and numerical-problem author.
 
 **Prerequisites:** [SAI-B096](#sai-b096), [SAI-B001](#sai-b001).
@@ -8076,8 +7855,6 @@ Floating-point edge cases can produce false acceptance or rejection.
 <a id="sai-b099"></a>
 <details>
 <summary>114. SAI-B099: Introduce explicit subtask scoring for separately configured events [pending]</summary>
-
-**Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-validators.
 
 **Suggested role:** Judge engineer and contest product owner.
 
@@ -8124,8 +7901,6 @@ Mixing score models can silently change rankings.
 <a id="sai-b100"></a>
 <details>
 <summary>115. SAI-B100: Add an audited C++20 runtime alongside existing C++17 [pending]</summary>
-
-**Priority:** P2 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
 **Suggested role:** Judge engineer.
 
@@ -8174,8 +7949,6 @@ Compiler-mode drift can make editor and judge capabilities disagree.
 <details>
 <summary>116. SAI-B101: Add isolated Java support with explicit JVM resource semantics [pending]</summary>
 
-**Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
-
 **Suggested role:** Judge engineer with runtime reviewer.
 
 **Prerequisites:** [SAI-B096](#sai-b096), [SAI-B125](#sai-b125), [SAI-B124](#sai-b124), [SAI-B001](#sai-b001).
@@ -8222,8 +7995,6 @@ JVM memory reservations can conflict with existing per-process limits.
 <a id="sai-b102"></a>
 <details>
 <summary>117. SAI-B102: Add isolated JavaScript support with denied network and bounded runtime [pending]</summary>
-
-**Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
 **Suggested role:** Judge engineer.
 
@@ -8272,8 +8043,6 @@ Reusing the application runtime would collapse the isolation boundary.
 <details>
 <summary>118. SAI-B103: Add isolated Go compilation with offline standard-library execution [pending]</summary>
 
-**Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
-
 **Suggested role:** Judge engineer.
 
 **Prerequisites:** [SAI-B096](#sai-b096), [SAI-B125](#sai-b125), [SAI-B124](#sai-b124), [SAI-B001](#sai-b001).
@@ -8320,8 +8089,6 @@ Compiler caches, network resolution and concurrent goroutines need bounded polic
 <a id="sai-b104"></a>
 <details>
 <summary>119. SAI-B104: Add isolated Rust compilation with a fixed edition and no dependency fetch [pending]</summary>
-
-**Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
 **Suggested role:** Judge engineer.
 
@@ -8370,8 +8137,6 @@ Long compilation or shared cache mutation can exhaust capacity or contaminate jo
 <details>
 <summary>120. SAI-B117: Enforce institutional sponsorship and learner data-use boundaries [pending]</summary>
 
-**Priority:** P1 · **Phase:** institutional-pilot · **Area:** institutional-privacy.
-
 **Suggested role:** Backend engineer with policy/privacy owner.
 
 **Prerequisites:** [SAI-B115](#sai-b115), [SAI-B116](#sai-b116), [SAI-B003](#sai-b003), [SAI-B018](#sai-b018), [SAI-B001](#sai-b001).
@@ -8419,8 +8184,6 @@ Institutional roles can unintentionally override personal privacy.
 <details>
 <summary>121. SAI-B118: Export institution-authorized assignment records with redaction tests [pending]</summary>
 
-**Priority:** P2 · **Phase:** institutional-pilot · **Area:** institutional-privacy.
-
 **Suggested role:** Backend engineer and privacy reviewer.
 
 **Prerequisites:** [SAI-B116](#sai-b116), [SAI-B117](#sai-b117), [SAI-B001](#sai-b001).
@@ -8465,8 +8228,6 @@ Portable exports can turn a narrow permission mistake into a durable data leak.
 <a id="sai-b119"></a>
 <details>
 <summary>122. SAI-B119: Produce a redacted pilot cost ledger and resource-envelope report [pending]</summary>
-
-**Priority:** P2 · **Phase:** institutional-pilot · **Area:** business-operations.
 
 **Suggested role:** Operations engineer and project owner.
 
@@ -8513,8 +8274,6 @@ False precision can hide unpriced support, capacity or provider costs.
 <a id="sai-b120"></a>
 <details>
 <summary>123. SAI-B120: Extend existing pilot grants with expiring institutional scopes [pending]</summary>
-
-**Priority:** P2 · **Phase:** institutional-pilot · **Area:** business-release.
 
 **Suggested role:** Backend engineer and project owner.
 
@@ -8565,8 +8324,6 @@ A commercial access flag must not become a bypass for safety or privacy policy.
 <details>
 <summary>124. SAI-B077: Separate evaluation splits and report archive contamination candidates [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Evaluation integrity.
-
 **Suggested role:** Data evaluation engineer.
 
 **Prerequisites:** [SAI-B068](#sai-b068), [SAI-B074](#sai-b074), [SAI-B026](#sai-b026), [SAI-B001](#sai-b001).
@@ -8612,8 +8369,6 @@ Approximate deduplication needs human review and cannot establish unseen model p
 <a id="sai-b078"></a>
 <details>
 <summary>125. SAI-B078: Register dataset and model permissions separately from source licenses [pending]</summary>
-
-**Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Research provenance.
 
 **Suggested role:** Data stewardship and project owner.
 
@@ -8661,8 +8416,6 @@ Permission metadata can be incomplete or expire; record review date and responsi
 <details>
 <summary>126. SAI-B079: Produce a resource-and-integrity feasibility decision for one self-hosted model [pending]</summary>
 
-**Priority:** P2 · **Phase:** AI-4 evaluation and research gates · **Area:** Model serving research gate.
-
 **Suggested role:** ML infrastructure researcher.
 
 **Prerequisites:** [SAI-B074](#sai-b074), [SAI-B078](#sai-b078), [SAI-B001](#sai-b001).
@@ -8709,8 +8462,6 @@ Published memory or benchmark claims may not hold under this project's concurren
 <details>
 <summary>127. SAI-B080: Add an explicit admission gate for reproducible fine-tuning experiments [pending]</summary>
 
-**Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Fine-tuning research controls.
-
 **Suggested role:** ML evaluation lead with project owner.
 
 **Prerequisites:** [SAI-B074](#sai-b074), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B079](#sai-b079), [SAI-B001](#sai-b001).
@@ -8756,8 +8507,6 @@ Training can memorize evaluation tasks or consume substantial resources without 
 <a id="sai-b128"></a>
 <details>
 <summary>128. SAI-B128: Implement a declared DSA coverage matrix and preregistered model release measurements [pending]</summary>
-
-**Priority:** P1 · **Phase:** ML-1 measured scope and baseline · **Area:** solver-readiness.
 
 **Suggested role:** ML evaluation lead and product owner.
 
@@ -8807,8 +8556,6 @@ Coverage can be gamed by easy tasks or thresholds chosen after results; preserve
 <a id="sai-b129"></a>
 <details>
 <summary>129. SAI-B129: Run an approved untuned checkpoint comparison and record a future selection [pending]</summary>
-
-**Priority:** P1 · **Phase:** ML-1 measured scope and baseline · **Area:** model-baseline.
 
 **Suggested role:** ML evaluation engineer with project owner.
 
@@ -8860,8 +8607,6 @@ Model training exposure is often unknown and published hardware figures may not 
 <details>
 <summary>130. SAI-B130: Materialize a permitted validated training corpus with immutable split lineage [pending]</summary>
 
-**Priority:** P1 · **Phase:** ML-2 approved data and training tooling · **Area:** training-data.
-
 **Suggested role:** Data engineer and rights/evaluation reviewer.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B128](#sai-b128).
@@ -8911,8 +8656,6 @@ Bad solutions, silent rights assumptions and leakage can invalidate both trainin
 <details>
 <summary>131. SAI-B131: Create a separate locked training environment and reviewed artifact loader [pending]</summary>
 
-**Priority:** P1 · **Phase:** ML-2 approved data and training tooling · **Area:** training-infrastructure.
-
 **Suggested role:** ML infrastructure engineer.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B079](#sai-b079), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129).
@@ -8961,8 +8704,6 @@ Artifact deserialization and accelerator dependencies expand the supply chain; i
 <details>
 <summary>132. SAI-B132: Implement tokenizer-aware SFT examples and answer-only loss masking [pending]</summary>
 
-**Priority:** P1 · **Phase:** ML-2 approved data and training tooling · **Area:** training-preprocessing.
-
 **Suggested role:** ML data/training engineer.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131).
@@ -9009,8 +8750,6 @@ Loss-mask/template errors can create a seemingly successful training curve while
 <a id="sai-b133"></a>
 <details>
 <summary>133. SAI-B133: Run an approved external LoRA smoke experiment with stop and resume evidence [pending]</summary>
-
-**Priority:** P1 · **Phase:** ML-3 actual approved training · **Area:** training-smoke.
 
 **Suggested role:** ML training engineer and authorized compute operator.
 
@@ -9060,8 +8799,6 @@ Even smoke runs incur compute and artifact risk; enforce hard limits in the runn
 <details>
 <summary>134. SAI-B134: Execute the approved bounded SFT adapter training campaign [pending]</summary>
 
-**Priority:** P1 · **Phase:** ML-3 actual approved training · **Area:** actual-fine-tuning.
-
 **Suggested role:** ML training lead and compute operator.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133).
@@ -9108,8 +8845,6 @@ Training can overfit, leak evaluation data or exhaust resources; frozen manifest
 <a id="sai-b135"></a>
 <details>
 <summary>135. SAI-B135: Publish immutable private model artifacts and complete adapter lineage [pending]</summary>
-
-**Priority:** P1 · **Phase:** ML-3 actual approved training · **Area:** model-artifacts.
 
 **Suggested role:** ML platform engineer and data/model steward.
 
@@ -9160,8 +8895,6 @@ Ambiguous lineage or unrestricted artifact publication can violate licenses and 
 <details>
 <summary>136. SAI-B136: Evaluate tuned candidates against matched baselines and enforce category gates [pending]</summary>
 
-**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** model-promotion-evaluation.
-
 **Suggested role:** Independent ML evaluation reviewer.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B128](#sai-b128), [SAI-B129](#sai-b129), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135).
@@ -9211,8 +8944,6 @@ Contamination, faulty oracles and unequal budgets can manufacture gains; evaluat
 <details>
 <summary>137. SAI-B137: Qualify inference export and quantization at the deployed precision [pending]</summary>
 
-**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** inference-qualification.
-
 **Suggested role:** ML inference engineer.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B079](#sai-b079), [SAI-B128](#sai-b128), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136).
@@ -9233,12 +8964,14 @@ The trained adapter and the intended serving artifact may differ through merging
 - Implement a reproducible export recipe for one approved serving engine/precision with exact base/adapter/tokenizer/config identities and safe serialization.
 - Compare the exported artifact with the qualified training/reference representation using bounded tokenization/generation parity fixtures and the preregistered regression subset.
 - Measure supported context, throughput/latency, actual peak memory and constrained concurrency on approved hardware; document unsupported operations and fallback to the retained qualified artifact.
+- Choose export engine, precision, quantization and other serving settings using validation-only data. Freeze the actual served bytes, tokenizer/template and limits before final qualification; if B136 exposed its final set, register a fresh independent sealed set through B077/B128 rather than select quantization on those results.
 
 **Acceptance criteria**
 
 - Export artifacts carry reconstructible lineage and cannot load with an incompatible tokenizer or unapproved remote-code path.
 - Actual inference-precision evaluation meets B128 thresholds or produces an explicit narrower/rejected decision; no assumption of lossless quantization substitutes for measurement.
 - A repeat export from the recorded recipe yields the stated deterministic identities or documented tool nondeterminism, and resources stay inside the approved envelope.
+- The final release claim binds the exact frozen served artifact to an untouched final qualification set. An exposed B136 test cannot be reused for export/precision selection or presented as fresh evidence; changed serving bytes require new sealed qualification.
 
 **Validation required**
 
@@ -9260,8 +8993,6 @@ Merging/quantization can silently degrade quality or exceed memory; qualify the 
 <a id="sai-b138"></a>
 <details>
 <summary>138. SAI-B138: Integrate the qualified trained artifact with bounded provider-neutral serving [pending]</summary>
-
-**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** trained-model-serving.
 
 **Suggested role:** ML serving engineer and backend security reviewer.
 
@@ -9311,8 +9042,6 @@ Model-serving isolation and endpoint configuration can bypass established policy
 <a id="sai-b139"></a>
 <details>
 <summary>139. SAI-B139: Promote a trained model through a limited pilot and rehearsed rollback [pending]</summary>
-
-**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** trained-model-release.
 
 **Suggested role:** Release owner, ML evaluation lead and deployment operator.
 
@@ -9364,8 +9093,6 @@ Promotion changes real-user behavior and recurring spend; require accountable op
 <details>
 <summary>140. SAI-B140: Run a separately approved execution-reward preference or RL experiment [pending]</summary>
 
-**Priority:** P2 · **Phase:** ML-5 conditional improvement research · **Area:** optional-model-research.
-
 **Suggested role:** ML researcher, independent grader reviewer and compute owner.
 
 **Prerequisites:** [SAI-B001](#sai-b001), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B080](#sai-b080), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136).
@@ -9393,6 +9120,7 @@ SFT may leave systematic failures, but preference tuning or GRPO/RL can reward t
 - Synthetic exploit candidates that print forged success, exploit grader assumptions or consume unbounded resources do not earn a valid success reward.
 - The actual approved experiment records optimizer updates and full resource/termination evidence; missing approval/valid reward prevents any job, and no improvement is a valid outcome.
 - Independent evaluation reports quality, regressions and total cost versus SFT and inference-only alternatives; the candidate is not promoted automatically.
+- Method and checkpoint selection use validation data; final RL comparison uses a newly reserved sealed set if earlier SFT/export evaluation exposed the prior set, with the unchanged baseline evaluated under the same protocol.
 
 **Validation required**
 
@@ -9414,8 +9142,6 @@ Reward hacking, data leakage and resource amplification can produce misleading g
 <a id="sai-b141"></a>
 <details>
 <summary>141. SAI-B141: Operate a consented failure-analysis and retraining improvement cycle [pending]</summary>
-
-**Priority:** P2 · **Phase:** ML-5 conditional improvement research · **Area:** model-lifecycle.
 
 **Suggested role:** ML lifecycle owner and privacy/evaluation reviewers.
 
@@ -9459,6 +9185,104 @@ After release, failures and user feedback need a controlled correction path. Aut
 **Risk and review**
 
 Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes.
+
+</details>
+
+<a id="sai-b142"></a>
+<details>
+<summary>142. SAI-B142: Accept bounded account-owned specifications for new authorized DSA problems [pending]</summary>
+
+**Suggested role:** API engineer with content/privacy and solver reviewer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B026](#sai-b026), [SAI-B049](#sai-b049), [SAI-B064](#sai-b064), [SAI-B068](#sai-b068), [SAI-B128](#sai-b128), [SAI-B018](#sai-b018), [SAI-B022](#sai-b022).
+
+**Problem / missing behavior**
+
+Existing solver specifications project the seed catalog, while the main goal includes previously unseen user-supplied DSA statements. An explicit bounded input contract is needed without treating arbitrary text as trusted instructions or an independently verified grader.
+
+**Target paths / responsibility**
+
+- `services/api/solver_api/features/solver/`
+- `services/api/tests/solver/`
+- `docs/product/DSA_SOLVER_READINESS.md`
+
+**Implementation scope**
+
+- Extend the B068 public ProblemSpec contract with an account-owned bounded ingestion path for a complete pasted statement, constraints, input/output, public examples, language and user rights/assistance attestation. Use immutable source fingerprints and retain original/normalized provenance; do not create another canonical catalog/grader revision authority.
+- Validate size, encoding, sample shape and supported formats; return missing-information, contradictory-input or unsupported-format states before generation. A user-supplied sample or attestation is not proof of source rights or a trustworthy hidden evaluator.
+- Reuse identity, entitlement, source-sharing consent and retention/deletion controls. Do not fetch arbitrary URLs, execute uploaded validators/scripts, accept archive code or send private inputs to an unapproved provider. Distinguish public sample checking from independent verified evaluation.
+- Register owned ProblemSpec source/version storage in the existing B018/B022 export, retention and deletion hooks, including derived provider/run references; do not create a separate data-lifecycle policy.
+
+**Acceptance criteria**
+
+- A valid new authorized statement outside the three seeds produces an owned immutable specification; another account cannot read or modify it. Corrections create attributable new versions.
+- Oversized, incomplete, maliciously embedded instructions and unsupported interactive/custom-checker formats cannot bypass policy, quotas or schema validation. The API does not claim an unreviewed problem is independently graded.
+- Only explicitly approved public/consented context reaches the existing generation contract; credentials, private grader data and unrelated account history remain excluded. Deletion/retention removes the owned input under the established policy.
+
+**Validation required**
+
+- Use synthetic non-catalog statements and fixture identities to check ownership, limits, deterministic fingerprints, explicit unsupported/missing-information outcomes and injection boundaries.
+- Inspect data-flow to provider/evaluator serializers and verify no arbitrary network fetch, executable import or alternate host executor is introduced.
+
+**Out of scope**
+
+- Bulk scraping external problem banks or resolving their rights automatically
+- Interactive/custom checker execution and unsupported languages
+- Inventing hidden tests, a reference oracle or a correctness proof from user samples
+
+**Risk and review**
+
+Arbitrary problem text is untrusted data. It can contain prompt injection, private material, contradictory constraints or false sample answers; account boundaries, bounded parsing and honest evidence labels must survive.
+
+</details>
+
+<a id="sai-b143"></a>
+<details>
+<summary>143. SAI-B143: Deliver the new-problem solver workspace with explicit evidence and failure states [pending]</summary>
+
+**Suggested role:** Web/API engineer with solver evaluation reviewer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B069](#sai-b069), [SAI-B070](#sai-b070), [SAI-B071](#sai-b071), [SAI-B072](#sai-b072), [SAI-B073](#sai-b073), [SAI-B128](#sai-b128), [SAI-B142](#sai-b142), [SAI-B048](#sai-b048), [SAI-B059](#sai-b059), [SAI-B129](#sai-b129).
+
+**Problem / missing behavior**
+
+A trained endpoint and seed-problem solver do not provide a complete user journey for a previously unseen pasted problem. Users need structured input, supported-format limits, bounded generation and truthful test evidence.
+
+**Target paths / responsibility**
+
+- `apps/web/features/solver/`
+- `apps/web/app/solve/`
+- `tests/e2e/solver/`
+- `services/api/solver_api/features/solver/`
+- `docs/product/DSA_SOLVER_READINESS.md`
+
+**Implementation scope**
+
+- Build an account-owned workspace for B142 structured problem input and missing-information correction, with visible supported language/format policy, consent and immutable problem identity. Preserve existing catalog practice routes.
+- Invoke the existing budgeted plan/candidate/execution/repair/ranking workflow through a qualified provider interface. Accept a reviewed untuned baseline supported by B129/B128 evidence; using a trained artifact additionally requires B138 qualification. Display source, explanation, claimed complexity, model/artifact identity, actual validation, consumed budgets and termination reason.
+- Separate passed supplied samples, generated-test evidence and independent authorized evaluator acceptance. Display not-solved, no-independent-grader, unsupported, timeout, cancellation and provider failure states; do not turn model confidence or generated tests into an Accepted verdict.
+
+**Acceptance criteria**
+
+- A synthetic unseen standard-input problem can be entered, validated and solved or explicitly fail through the complete bounded workflow, with outputs bound to the exact owned problem and generation revisions.
+- An intentionally incorrect candidate that passes supplied samples is never labeled independently accepted without the required authorized evaluator. Incomplete/unsupported input receives actionable feedback before model work.
+- Cross-user access, cancellation/retry, stale responses, resource exhaustion and unavailable provider fixtures preserve ownership and budgets. Actual qualified-model pilot results are recorded separately from fixture checks and do not imply every unseen problem is solvable.
+- The workspace is usable with a rights-approved, owner-admitted qualified untuned baseline if tuning is rejected. An arbitrary unqualified endpoint is not accepted, and choosing the trained route requires the B138 artifact/serving gate.
+
+**Validation required**
+
+- Run focused browser/API contract fixtures for new statement entry, correction, source output, evidence labels and every terminal state, using deterministic fake model transports.
+- After separate owner authorization, run a small new-problem pilot with the qualified untuned baseline or B138-trained artifact and B128 measurements; record actual failures, latency/cost and coverage without training on the sealed release evaluation.
+
+**Out of scope**
+
+- Automatic submission to external contest sites
+- Unbounded retries, universal any-DSA correctness labels or private test disclosure
+- New training runs, autonomous URL scraping or model selection
+
+**Risk and review**
+
+Users may mistake generated code or sample-pass evidence for a proven solution. Strong version/ownership binding and explicit provenance/evaluation states are required across retries and concurrent sessions.
 
 </details>
 

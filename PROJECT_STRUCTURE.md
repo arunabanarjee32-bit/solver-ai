@@ -98,7 +98,7 @@ solver-ai/
 │   ├── research/                  Algorithm/model/reference/comparison research
 │   ├── governance/                Content rights, reuse and maintainer decisions
 │   ├── engineering/               Contributor tasks and coding playbook
-│   │   └── backlog/               Canonical issue catalogue, 141 cards and receipts
+│   │   └── backlog/               Canonical issue catalogue, 143 cards and receipts
 │   ├── security/                  Judge threat model and release requirements
 │   └── status/                    Current implementation and evidence ledger
 │
@@ -200,6 +200,6 @@ there solely because it is unfamiliar, and do not copy live credentials into it.
 The next developer should begin with [docs/INDEX.md](docs/INDEX.md),
 [current status](docs/status/PROJECT_STATUS.md), and the
 [continuation guide](AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt).
-Runtime checks were resumed and completed at the owner's request. The issue cards track 140 pending tasks and one locally completed evidence-gate
+Runtime checks were resumed and completed at the owner's request. The issue cards track 142 pending tasks and one locally completed evidence-gate
 task; other proposed features are not claimed implemented. Actual remote issue links exist only when confirmed in
 the publication receipt.

@@ -39,6 +39,9 @@ dependencies and acceptance. Existing B041–B080 cover provider controls, tutor
 debugging, bounded solving, evaluation, data rights and training admission.
 The appended training-delivery tasks extend that plan through actual approved
 training, model artifacts, release qualification and subsequent improvement.
+B142–B143 additionally cover account-owned new-problem input and the solver
+workspace beyond the three seed exercises, with explicit missing-information,
+unsupported, unsolved and no-independent-grader outcomes.
 
 ### 1. Define the supported problem contract and coverage matrix
 
@@ -166,6 +169,10 @@ training, model artifacts, release qualification and subsequent improvement.
 - Link the adapter to its exact base/tokenizer/template; verify hashes and
   dependencies. Evaluate the actual deployment precision/quantization, not only
   the pre-export research checkpoint.
+- Choose export/precision settings on validation data and freeze the served bytes
+  before final qualification. If research evaluation already exposed the previous
+  final test, reserve a fresh independent sealed set for the exported artifact;
+  never select quantization by repeatedly inspecting the final release test.
 - Serve the qualified artifact behind the provider-neutral interface with
   authentication, context/output limits, cancellation, admission budgets,
   redacted telemetry, a kill switch and a tested previous-version rollback.

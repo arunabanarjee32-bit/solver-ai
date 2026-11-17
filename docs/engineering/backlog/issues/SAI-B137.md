@@ -30,12 +30,14 @@ The trained adapter and the intended serving artifact may differ through merging
 - Implement a reproducible export recipe for one approved serving engine/precision with exact base/adapter/tokenizer/config identities and safe serialization.
 - Compare the exported artifact with the qualified training/reference representation using bounded tokenization/generation parity fixtures and the preregistered regression subset.
 - Measure supported context, throughput/latency, actual peak memory and constrained concurrency on approved hardware; document unsupported operations and fallback to the retained qualified artifact.
+- Choose export engine, precision, quantization and other serving settings using validation-only data. Freeze the actual served bytes, tokenizer/template and limits before final qualification; if B136 exposed its final set, register a fresh independent sealed set through B077/B128 rather than select quantization on those results.
 
 ## Acceptance criteria
 
 - Export artifacts carry reconstructible lineage and cannot load with an incompatible tokenizer or unapproved remote-code path.
 - Actual inference-precision evaluation meets B128 thresholds or produces an explicit narrower/rejected decision; no assumption of lossless quantization substitutes for measurement.
 - A repeat export from the recorded recipe yields the stated deterministic identities or documented tool nondeterminism, and resources stay inside the approved envelope.
+- The final release claim binds the exact frozen served artifact to an untouched final qualification set. An exposed B136 test cannot be reused for export/precision selection or presented as fresh evidence; changed serving bytes require new sealed qualification.
 
 ## Validation
 

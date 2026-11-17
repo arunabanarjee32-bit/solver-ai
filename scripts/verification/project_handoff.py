@@ -379,7 +379,6 @@ def render() -> str:
         lines.extend([
             f'<a id="{identifier.lower()}"></a>', "<details>",
             f"<summary>{task['order']}. {identifier}: {task['title']} [{state}]</summary>", "",
-            f"**Priority:** {task['priority']} · **Phase:** {task['phase']} · **Area:** {task['area']}.", "",
             f"**Suggested role:** {task['owner_role']}.", "",
             "**Prerequisites:** " + (", ".join(task_link(t) for t in task["depends_on"]) or "None") + ".", "",
             "**Problem / missing behavior**", "", task["problem"], "",

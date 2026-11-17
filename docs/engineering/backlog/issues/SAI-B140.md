@@ -45,6 +45,7 @@ SFT may leave systematic failures, but preference tuning or GRPO/RL can reward t
 - Synthetic exploit candidates that print forged success, exploit grader assumptions or consume unbounded resources do not earn a valid success reward.
 - The actual approved experiment records optimizer updates and full resource/termination evidence; missing approval/valid reward prevents any job, and no improvement is a valid outcome.
 - Independent evaluation reports quality, regressions and total cost versus SFT and inference-only alternatives; the candidate is not promoted automatically.
+- Method and checkpoint selection use validation data; final RL comparison uses a newly reserved sealed set if earlier SFT/export evaluation exposed the prior set, with the unchanged baseline evaluated under the same protocol.
 
 ## Validation
 

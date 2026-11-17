@@ -2,7 +2,7 @@
   "baseline_commit": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
   "scope": "All current Git-index paths; generated inventory outputs included.",
   "self_hash_policy": "Size/hash omitted for both inventory outputs to avoid recursion.",
-  "tracked_files": 462,
+  "tracked_files": 464,
   "files": [
     {
       "path": ".dockerignore",
@@ -3346,8 +3346,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/features.json",
-      "bytes": 53750,
-      "sha256": "d85a82a5c4f94f7968906e3372810a643b168ea2879129999be4551994372b10"
+      "bytes": 53933,
+      "sha256": "b2ac3a83231c1fac6ba5b26b231b5914a57bfc343b1f37a8804d1ffeecc2f8d6"
     },
     {
       "path": "AnalyseFuture/repository-inventory/functional-baseline.json",
@@ -3522,8 +3522,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "bytes": 114569,
-      "sha256": "acdbc48b43c41637ee61360f14dcba4a9d23d265ef8a45d09cf1fed0bcd08699"
+      "bytes": 116099,
+      "sha256": "6f1d6681d9938809fa63c32d32a3ae7177cc3803f3c3bfd11a1ee546e25b4fe9"
     },
     {
       "path": "AnalyseFuture/repository-inventory/reviews/web.json",
@@ -3593,8 +3593,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "PROJECT_HANDOFF.md",
-      "bytes": 492739,
-      "sha256": "f3e9e8a446a46247195cbd3b887470a551c00bb8811f1f7d5d7d324102681da4"
+      "bytes": 490273,
+      "sha256": "5bd0caf0106231f5ea70e20c72f5d79eae57eaf6958d907d659c0a327fae1333"
     },
     {
       "path": "PROJECT_STRUCTURE.md",
@@ -3614,7 +3614,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "PROJECT_STRUCTURE.md",
       "bytes": 13638,
-      "sha256": "e814b90f8f7b77e69862a11ef7422d5d6054769b90c7f7e3099b341e8f9a84b5"
+      "sha256": "637d7eac8085fab1f8aee12d622c5e3baadec3f77e65a8e0ffea6a0100fa3646"
     },
     {
       "path": "README.md",
@@ -3636,7 +3636,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "README.md",
       "bytes": 9193,
-      "sha256": "e83d9af7ca26e5556c52a5b9098f4cc293d53e9127f53355b4cf1be890773569"
+      "sha256": "a100c2139ee79c7601c7a95adf52b898279bacff14f2a8f6ea4c2dd9f79a44ef"
     },
     {
       "path": "SECURITY.md",
@@ -4282,7 +4282,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/INDEX.md",
       "bytes": 5909,
-      "sha256": "ae11d41c7f77769e1c2f14c155d17322714782c86b2ea83bf10af6502295fb19"
+      "sha256": "20e04d6afa77bf1e2cd4af9849b61a1cb8266aa1644db23efd7c43a8db984062"
     },
     {
       "path": "docs/architecture/ARCHITECTURE.md",
@@ -4384,7 +4384,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/AI_CONTRIBUTION_WORKFLOW.md",
       "bytes": 4958,
-      "sha256": "c70422cac411f94a2bf7b26f04255737b05c535259c9a21b419663ae5ecb3d39"
+      "sha256": "f19a1c69de3a1a9d7eeca30d3d49b3a42556056c46c5eeab3c8262e06423a67f"
     },
     {
       "path": "docs/engineering/CODEX_PLAYBOOK.md",
@@ -4457,8 +4457,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/README.md",
-      "bytes": 27605,
-      "sha256": "7ddba077e4d3b63ad25a0a654223f90f867c2f6e54c6e1c58b7f963dd37d2b36"
+      "bytes": 28132,
+      "sha256": "ad1eb8d75daf931c792e03bed0bdc5a7240c370518b803cbc8275a056b338587"
     },
     {
       "path": "docs/engineering/backlog/issues.json",
@@ -4473,8 +4473,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues.json",
-      "bytes": 295214,
-      "sha256": "f064bc770ebc1aa9b335d0fbd0c820ab67059abc2ced9ee338b8bfafc8aa0b4d"
+      "bytes": 304026,
+      "sha256": "91c996bc0ca766c283c0bb1981d2ce2d0d9305c8c678dd0ced83410c1e68705c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B001.md",
@@ -6685,8 +6685,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B137.md",
-      "bytes": 3095,
-      "sha256": "c845fbd1bcbde53b4e966e2dcc49204bc64604d03180d519753d68b8ff7ac35b"
+      "bytes": 3690,
+      "sha256": "74b118287e7c151e528d157c6fb246f3ea4393b97b84e35599d621c7b385acd0"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B138.md",
@@ -6739,8 +6739,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B140.md",
-      "bytes": 3852,
-      "sha256": "bbc3ae9db9e6e318edc2389600618d27df3ca3a66235cd8b5e29103a1110b69b"
+      "bytes": 4079,
+      "sha256": "25b9c1697ae5ea69b729f2de4435c3c0f86b7cfc5adac9e17653255eaf5d31c8"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B141.md",
@@ -6761,6 +6761,42 @@
       "sha256": "b07993b3ff8d7c66014e6b6f61ab8de8eb2448b3ce572b6604c8d6882437ed54"
     },
     {
+      "path": "docs/engineering/backlog/issues/SAI-B142.md",
+      "owner": "implementation task catalogue and publication records",
+      "purpose": "Planned SAI-B142: Accept bounded account-owned specifications for new authorized DSA problems; ownership area New-problem solver input.",
+      "feature": "future new-problem solver coverage",
+      "active": true,
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "assessment": "Generated future task specification only; new-problem input and solver workspace are not implemented.",
+      "risks": [
+        "Arbitrary problem text is untrusted data. It can contain prompt injection, private material, contradictory constraints or false sample answers; account boundaries, bounded parsing and honest evidence labels must survive."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "docs/engineering/backlog/issues/SAI-B142.md",
+      "bytes": 4380,
+      "sha256": "820ca1440e83a4f48e23c61a9e4bb1a369d3f5e6879ca6c114084fc069fdfbe4"
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B143.md",
+      "owner": "implementation task catalogue and publication records",
+      "purpose": "Planned SAI-B143: Deliver the new-problem solver workspace with explicit evidence and failure states; ownership area New-problem solving user journey.",
+      "feature": "future new-problem solver coverage",
+      "active": true,
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "assessment": "Generated future task specification only; new-problem input and solver workspace are not implemented.",
+      "risks": [
+        "Users may mistake generated code or sample-pass evidence for a proven solution. Strong version/ownership binding and explicit provenance/evaluation states are required across retries and concurrent sessions."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "docs/engineering/backlog/issues/SAI-B143.md",
+      "bytes": 4668,
+      "sha256": "4209fe64b28ccdc119cab240f0098fdd39695f8aac77c076e6c23e93a80aee10"
+    },
+    {
       "path": "docs/engineering/backlog/publication.json",
       "owner": "implementation task catalogue and publication records",
       "purpose": "Actual confirmed remote issue links and publication/access status.",
@@ -6774,7 +6810,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/publication.json",
       "bytes": 1249,
-      "sha256": "f25cc01c234eec690ededa212286456c7fafcb1a5138e26dc25c471bae460d97"
+      "sha256": "08b74b1f1cf14b60b2e522b8f6dbd6bbd2e074f3ea9ab7cc022ecb9d6f2f5f7b"
     },
     {
       "path": "docs/engineering/handoff-directories.json",
@@ -6940,8 +6976,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/product/DSA_SOLVER_READINESS.md",
-      "bytes": 13080,
-      "sha256": "aec3b8f821d3b3af726a0c7a31f50fe9bbc50d144eb72fb9318aa232f7135978"
+      "bytes": 13615,
+      "sha256": "ba3343ad1972e9b990385c8ffd973ea202f7314612697cfce2cd400949d3afbc"
     },
     {
       "path": "docs/product/PRODUCT_REQUIREMENTS.md",
@@ -7072,7 +7108,7 @@
     {
       "path": "docs/research/FINETUNING_MODEL_RESEARCH.md",
       "owner": "specifications, decisions and development guidance",
-      "purpose": "Dated non-ranked research catalogue of 20 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist.",
+      "purpose": "Dated non-ranked research catalogue of 22 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist.",
       "feature": "future solver training and measured DSA readiness",
       "active": true,
       "dependencies": [
@@ -7085,8 +7121,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/research/FINETUNING_MODEL_RESEARCH.md",
-      "bytes": 26616,
-      "sha256": "0592dfecf1a28625e60631827fd0adc53a0e0f616ad77caa7872342ab3628842"
+      "bytes": 29124,
+      "sha256": "7eb1bdfc46daf2b504f5937eafbb7813b4994552d03b679ff18afb65dbcabc72"
     },
     {
       "path": "docs/research/MODEL_DATA_EVALUATION.md",
@@ -7170,8 +7206,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/PROJECT_STATUS.md",
-      "bytes": 16236,
-      "sha256": "d9e2a5a7bc88c61f5bbd31d790a33b5e6b6972b92dbc36102e74f3459861695f"
+      "bytes": 16384,
+      "sha256": "03ae77f17785eacd1eef3fa9d3d0f14484f0fedbb8b3c8882ec0496ee0c7dbc2"
     },
     {
       "path": "package-lock.json",
@@ -7385,8 +7421,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/verification/project_handoff.py",
-      "bytes": 23323,
-      "sha256": "b05c890bedd0eb97ab5b6ff194cd6c311f1fe0eadef2d206938659706dd1aedc"
+      "bytes": 23211,
+      "sha256": "a43612cfc009c0e75ec4e6e0262cbb9971a5718b78afc0af2f491a85e469f1d6"
     },
     {
       "path": "scripts/verification/repository_inventory.py",

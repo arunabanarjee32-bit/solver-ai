@@ -3,7 +3,7 @@
   "repository": "arunabanarjee32-bit/solver-ai",
   "prepared_date": "2026-11-17",
   "source_baseline": "adcfb0ba74a3ab022977b1ede3abe5db95e8ceec",
-  "scope": "141 bounded tasks: one locally completed PR evidence gate and 140 pending. Existing practice/account/history/authored hints and gVisor are retained. Appended B128-B141 define DSA coverage, future empirical model selection, actual approved training, artifacts, evaluation, serving, pilot and optional improvement research; no model is selected or trained by these cards.",
+  "scope": "143 bounded tasks: one locally completed PR evidence gate and 142 pending. Existing practice/account/history/authored hints and gVisor are retained. Appended B128-B143 define DSA coverage, future empirical model selection, actual approved training, artifacts, evaluation, serving, pilot and optional improvement research; no model is selected or trained by these cards. B142-B143 extend the bounded solver to new account-owned authorized problem statements and a truthful evidence workspace.",
   "review_workflow": "Other AI tools implement one ready issue per branch/PR; designated maintainer/assistant reviews actual code and observed checks before an authorized merge. No self-merge/automatic merger or unattended monitoring is enabled.",
   "issues": [
     {
@@ -5540,12 +5540,14 @@
       "scope": [
         "Implement a reproducible export recipe for one approved serving engine/precision with exact base/adapter/tokenizer/config identities and safe serialization.",
         "Compare the exported artifact with the qualified training/reference representation using bounded tokenization/generation parity fixtures and the preregistered regression subset.",
-        "Measure supported context, throughput/latency, actual peak memory and constrained concurrency on approved hardware; document unsupported operations and fallback to the retained qualified artifact."
+        "Measure supported context, throughput/latency, actual peak memory and constrained concurrency on approved hardware; document unsupported operations and fallback to the retained qualified artifact.",
+        "Choose export engine, precision, quantization and other serving settings using validation-only data. Freeze the actual served bytes, tokenizer/template and limits before final qualification; if B136 exposed its final set, register a fresh independent sealed set through B077/B128 rather than select quantization on those results."
       ],
       "acceptance": [
         "Export artifacts carry reconstructible lineage and cannot load with an incompatible tokenizer or unapproved remote-code path.",
         "Actual inference-precision evaluation meets B128 thresholds or produces an explicit narrower/rejected decision; no assumption of lossless quantization substitutes for measurement.",
-        "A repeat export from the recorded recipe yields the stated deterministic identities or documented tool nondeterminism, and resources stay inside the approved envelope."
+        "A repeat export from the recorded recipe yields the stated deterministic identities or documented tool nondeterminism, and resources stay inside the approved envelope.",
+        "The final release claim binds the exact frozen served artifact to an untouched final qualification set. An exposed B136 test cannot be reused for export/precision selection or presented as fresh evidence; changed serving bytes require new sealed qualification."
       ],
       "validation": [
         "Future approved execution: run the exact export/qualification recipe on the authorized inference host and replay token/template plus held-out regression checks.",
@@ -5701,7 +5703,8 @@
       "acceptance": [
         "Synthetic exploit candidates that print forged success, exploit grader assumptions or consume unbounded resources do not earn a valid success reward.",
         "The actual approved experiment records optimizer updates and full resource/termination evidence; missing approval/valid reward prevents any job, and no improvement is a valid outcome.",
-        "Independent evaluation reports quality, regressions and total cost versus SFT and inference-only alternatives; the candidate is not promoted automatically."
+        "Independent evaluation reports quality, regressions and total cost versus SFT and inference-only alternatives; the candidate is not promoted automatically.",
+        "Method and checkpoint selection use validation data; final RL comparison uses a newly reserved sealed set if earlier SFT/export evaluation exposed the prior set, with the unchanged baseline evaluated under the same protocol."
       ],
       "validation": [
         "Future authorized checks: deterministic reward/manifest fixtures with original finite sandbox cases and no live training.",
@@ -5764,6 +5767,103 @@
       ],
       "risk": "Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes.",
       "owner_role": "ML lifecycle owner and privacy/evaluation reviewers"
+    },
+    {
+      "id": "SAI-B142",
+      "order": 142,
+      "title": "Accept bounded account-owned specifications for new authorized DSA problems",
+      "area": "New-problem solver input",
+      "priority": "P1",
+      "phase": "AI-6 new-problem coverage",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B026",
+        "SAI-B049",
+        "SAI-B064",
+        "SAI-B068",
+        "SAI-B128",
+        "SAI-B018",
+        "SAI-B022"
+      ],
+      "owner_role": "API engineer with content/privacy and solver reviewer",
+      "problem": "Existing solver specifications project the seed catalog, while the main goal includes previously unseen user-supplied DSA statements. An explicit bounded input contract is needed without treating arbitrary text as trusted instructions or an independently verified grader.",
+      "target_paths": [
+        "services/api/solver_api/features/solver/",
+        "services/api/tests/solver/",
+        "docs/product/DSA_SOLVER_READINESS.md"
+      ],
+      "scope": [
+        "Extend the B068 public ProblemSpec contract with an account-owned bounded ingestion path for a complete pasted statement, constraints, input/output, public examples, language and user rights/assistance attestation. Use immutable source fingerprints and retain original/normalized provenance; do not create another canonical catalog/grader revision authority.",
+        "Validate size, encoding, sample shape and supported formats; return missing-information, contradictory-input or unsupported-format states before generation. A user-supplied sample or attestation is not proof of source rights or a trustworthy hidden evaluator.",
+        "Reuse identity, entitlement, source-sharing consent and retention/deletion controls. Do not fetch arbitrary URLs, execute uploaded validators/scripts, accept archive code or send private inputs to an unapproved provider. Distinguish public sample checking from independent verified evaluation.",
+        "Register owned ProblemSpec source/version storage in the existing B018/B022 export, retention and deletion hooks, including derived provider/run references; do not create a separate data-lifecycle policy."
+      ],
+      "acceptance": [
+        "A valid new authorized statement outside the three seeds produces an owned immutable specification; another account cannot read or modify it. Corrections create attributable new versions.",
+        "Oversized, incomplete, maliciously embedded instructions and unsupported interactive/custom-checker formats cannot bypass policy, quotas or schema validation. The API does not claim an unreviewed problem is independently graded.",
+        "Only explicitly approved public/consented context reaches the existing generation contract; credentials, private grader data and unrelated account history remain excluded. Deletion/retention removes the owned input under the established policy."
+      ],
+      "validation": [
+        "Use synthetic non-catalog statements and fixture identities to check ownership, limits, deterministic fingerprints, explicit unsupported/missing-information outcomes and injection boundaries.",
+        "Inspect data-flow to provider/evaluator serializers and verify no arbitrary network fetch, executable import or alternate host executor is introduced."
+      ],
+      "out_of_scope": [
+        "Bulk scraping external problem banks or resolving their rights automatically",
+        "Interactive/custom checker execution and unsupported languages",
+        "Inventing hidden tests, a reference oracle or a correctness proof from user samples"
+      ],
+      "risk": "Arbitrary problem text is untrusted data. It can contain prompt injection, private material, contradictory constraints or false sample answers; account boundaries, bounded parsing and honest evidence labels must survive."
+    },
+    {
+      "id": "SAI-B143",
+      "order": 143,
+      "title": "Deliver the new-problem solver workspace with explicit evidence and failure states",
+      "area": "New-problem solving user journey",
+      "priority": "P1",
+      "phase": "AI-6 new-problem coverage",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B069",
+        "SAI-B070",
+        "SAI-B071",
+        "SAI-B072",
+        "SAI-B073",
+        "SAI-B128",
+        "SAI-B142",
+        "SAI-B048",
+        "SAI-B059",
+        "SAI-B129"
+      ],
+      "owner_role": "Web/API engineer with solver evaluation reviewer",
+      "problem": "A trained endpoint and seed-problem solver do not provide a complete user journey for a previously unseen pasted problem. Users need structured input, supported-format limits, bounded generation and truthful test evidence.",
+      "target_paths": [
+        "apps/web/features/solver/",
+        "apps/web/app/solve/",
+        "tests/e2e/solver/",
+        "services/api/solver_api/features/solver/",
+        "docs/product/DSA_SOLVER_READINESS.md"
+      ],
+      "scope": [
+        "Build an account-owned workspace for B142 structured problem input and missing-information correction, with visible supported language/format policy, consent and immutable problem identity. Preserve existing catalog practice routes.",
+        "Invoke the existing budgeted plan/candidate/execution/repair/ranking workflow through a qualified provider interface. Accept a reviewed untuned baseline supported by B129/B128 evidence; using a trained artifact additionally requires B138 qualification. Display source, explanation, claimed complexity, model/artifact identity, actual validation, consumed budgets and termination reason.",
+        "Separate passed supplied samples, generated-test evidence and independent authorized evaluator acceptance. Display not-solved, no-independent-grader, unsupported, timeout, cancellation and provider failure states; do not turn model confidence or generated tests into an Accepted verdict."
+      ],
+      "acceptance": [
+        "A synthetic unseen standard-input problem can be entered, validated and solved or explicitly fail through the complete bounded workflow, with outputs bound to the exact owned problem and generation revisions.",
+        "An intentionally incorrect candidate that passes supplied samples is never labeled independently accepted without the required authorized evaluator. Incomplete/unsupported input receives actionable feedback before model work.",
+        "Cross-user access, cancellation/retry, stale responses, resource exhaustion and unavailable provider fixtures preserve ownership and budgets. Actual qualified-model pilot results are recorded separately from fixture checks and do not imply every unseen problem is solvable.",
+        "The workspace is usable with a rights-approved, owner-admitted qualified untuned baseline if tuning is rejected. An arbitrary unqualified endpoint is not accepted, and choosing the trained route requires the B138 artifact/serving gate."
+      ],
+      "validation": [
+        "Run focused browser/API contract fixtures for new statement entry, correction, source output, evidence labels and every terminal state, using deterministic fake model transports.",
+        "After separate owner authorization, run a small new-problem pilot with the qualified untuned baseline or B138-trained artifact and B128 measurements; record actual failures, latency/cost and coverage without training on the sealed release evaluation."
+      ],
+      "out_of_scope": [
+        "Automatic submission to external contest sites",
+        "Unbounded retries, universal any-DSA correctness labels or private test disclosure",
+        "New training runs, autonomous URL scraping or model selection"
+      ],
+      "risk": "Users may mistake generated code or sample-pass evidence for a proven solution. Strong version/ownership binding and explicit provenance/evaluation states are required across retries and concurrent sessions."
     }
   ]
 }

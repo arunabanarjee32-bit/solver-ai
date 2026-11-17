@@ -708,7 +708,8 @@
       "tests": [],
       "behavior": "Plan, generate a limited candidate set, run permitted tests, optionally repair and rank by authorized execution evidence.",
       "gaps": [
-        "No active generated solver; similarity/confidence/finite acceptance do not prove correctness; no unlimited retries."
+        "No active generated solver; similarity/confidence/finite acceptance do not prove correctness; no unlimited retries.",
+        "B142-B143 plan account-owned new-problem ingestion and a solver workspace beyond the three seeds; neither is implemented, and sample passes are not independent acceptance."
       ],
       "final_location": "Proposed API solver modules; separate service only when measured resource/isolation need justifies it.",
       "validation": "No current implementation validation is claimed for this proposal/research reference."
@@ -1155,12 +1156,12 @@
       "tests": [
         "tests/tooling/github/test_publish_issues.py"
       ],
-      "behavior": "Validate and render 141 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.",
+      "behavior": "Validate and render 143 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.",
       "gaps": [
         "Live GitHub issue creation blocked by network policy;0issuePOSTs attempted. Server-side branch-rule enforcement and unattended review are not enabled."
       ],
       "final_location": "scripts/github; tests/tooling/github; docs/engineering/backlog",
-      "validation": "13 fake-client publication safety cases passed as part of the 50-case tooling suite. All 141 local task cards validated: 140 pending and one completed locally. No remote issue is confirmed created; API access remains blocked in the last recorded receipt."
+      "validation": "13 fake-client publication safety cases passed as part of the 50-case tooling suite. All 143 local task cards validated: 142 pending and one completed locally. No remote issue is confirmed created; API access remains blocked in the last recorded receipt."
     },
     {
       "id": "F044",
