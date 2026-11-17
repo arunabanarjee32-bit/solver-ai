@@ -44,7 +44,7 @@
       "risk": "Untrusted PR text must remain data, and evidence completeness must not be presented as substantive review.",
       "owner_role": "repository maintainer and reviewer",
       "implementation_status": "completed_locally",
-      "completion_evidence": "Implemented scripts/github/check_pr_evidence.py and read-only trusted-base PR workflow;37 scoped evidence cases and the complete50-case tooling suite passed. Source/contract reviewed for inert data, stale heads and malformed events. Hosted workflow execution and branch-rule enforcement remain unverified and separate from metadata completeness.",
+      "completion_evidence": "Implemented scripts/github/check_pr_evidence.py and read-only trusted-base PR workflow;37 scoped evidence cases and the complete50-case tooling suite passed. Source/contract reviewed for inert data, stale heads and malformed events. Hosted workflow execution and branch-rule enforcement remain unverified and separate from metadata completeness. The complete npm run test:all aggregate passed at source 33ed42f0b42b43e228c547cfc106c5c874bc61d1 with337 cases and exit0.",
       "completed_date": "2026-11-17"
     },
     {

@@ -5,7 +5,7 @@ Order: 1 / Priority: P0 / Phase: 0-contribution-gates
 Area: foundation / Suggested role: repository maintainer and reviewer
 
 Implementation status: completed_locally
-Completed locally: Implemented scripts/github/check_pr_evidence.py and read-only trusted-base PR workflow;37 scoped evidence cases and the complete50-case tooling suite passed. Source/contract reviewed for inert data, stale heads and malformed events. Hosted workflow execution and branch-rule enforcement remain unverified and separate from metadata completeness.
+Completed locally: Implemented scripts/github/check_pr_evidence.py and read-only trusted-base PR workflow;37 scoped evidence cases and the complete50-case tooling suite passed. Source/contract reviewed for inert data, stale heads and malformed events. Hosted workflow execution and branch-rule enforcement remain unverified and separate from metadata completeness. The complete npm run test:all aggregate passed at source 33ed42f0b42b43e228c547cfc106c5c874bc61d1 with337 cases and exit0.
 
 
 ## Problem

@@ -15,6 +15,8 @@ and browser **25** cases. The new evidence checker passed **37** scoped cases;
 all **50** tooling cases and Ruff passed. Current executed total: **337** cases.
 Peer-review malformed-event and duplicate-opener defects were fixed with
 regressions. No application runtime code changed in this increment.
+The actual `npm run test:all` aggregate then passed with exit status **0** on
+source commit `33ed42f0b42b43e228c547cfc106c5c874bc61d1`, including all **337** cases.
 
 The backlog retains 127 cards: **B001 completed locally, 126 pending**. Completed
 work is skipped by the issue publisher. The hosted evidence workflow has not been

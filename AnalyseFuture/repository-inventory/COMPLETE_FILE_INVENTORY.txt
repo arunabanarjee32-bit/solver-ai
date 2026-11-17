@@ -187,7 +187,7 @@ AnalyseFuture/continuation/WORK_PROGRESS.txt
   Assessment: Current recovery report; validation results and pending work explicitly separated.
   Risks/gaps: Not a security certification or promise of future delivery.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 9e610d2a77f90e290fb5098e349cc4cf8d7ec3992524fb1167949b9842996e1a; bytes: 8867
+  SHA256: 993267367dbb38adacbd360dfab76088b84cba027176ecb8e6fb17e5962667e7; bytes: 9411
 
 AnalyseFuture/extracted/CodeGenerator-master/.env.example
   Owner: inactive upstream research
@@ -1907,7 +1907,7 @@ AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt
   Assessment: Current recovery report; validation results and pending work explicitly separated.
   Risks/gaps: Not a security certification or promise of future delivery.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 352e82ee482d9b4e3706dfc6505356a2197853fd1bb4d72b9e023b46212e83e8; bytes: 10655
+  SHA256: a61f96a707fb1c3d4eb7eb5a563faf67460ba23850c74103333a6e1a2e4337ea; bytes: 11199
 
 CONTRIBUTING.md
   Owner: root project guidance, dependencies and deployment configuration
@@ -2387,7 +2387,7 @@ docs/engineering/backlog/issues.json
   Assessment: Offline schema/dependency/target-path validation passed; tasks not implemented by this file.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 2d1bd54947866063f5254d06c66a292f37edadad1027c7d5fc0d48ac257f68d1; bytes: 253342
+  SHA256: b3d89e344ffb56a0441ec35dd603a79ec14c9f6b1cdbc668346bf3eede8c93f0; bytes: 253465
 
 docs/engineering/backlog/issues/SAI-B001.md
   Owner: implementation task catalogue and publication records
@@ -2397,7 +2397,7 @@ docs/engineering/backlog/issues/SAI-B001.md
   Assessment: Not a missing feature and not posted as a new open issue.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: c1c5cf92d15cad6a7c851298a92bc3df8d86470b1624b5fc06e42f2e18332353; bytes: 2935
+  SHA256: 50d051cd48d1e22e99b0f9d2bbcbd76134bbd958f80e2b1c894e058ebdd691a7; bytes: 3058
 
 docs/engineering/backlog/issues/SAI-B002.md
   Owner: implementation task catalogue and publication records
@@ -3667,7 +3667,7 @@ docs/engineering/backlog/publication.json
   Assessment: Blocked at API preflight;0POSTs and0created issues in this session.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 555da6f8196295f0ea65bdda3890e9f5bb1c90f2fd9f1742a2132b274e10b608; bytes: 1249
+  SHA256: ab4b4e91f6282928ce5d8cb8f19ea8fffcce9b6b8ac6be755958719935468f84; bytes: 1249
 
 docs/governance/DATA_AND_LICENSES.md
   Owner: specifications, decisions and development guidance
@@ -3827,7 +3827,7 @@ docs/status/PROJECT_STATUS.md
   Assessment: Current local 2026-11-17 preservation validation separated from historical/hosted evidence.
   Risks/gaps: Recorded checks apply to named revision, not all later changes.; Local passes and earlier hosted run do not prove production readiness or account recovery.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 44c6be2121f845ea24c441426b8f95ae8f925429e8fed3312d22422eea8395a9; bytes: 13313
+  SHA256: d1fa0aa3d67dd491c23a01d0ae4a2e126f30ac0d578f0cf51b38d36938f19aa7; bytes: 13478
 
 package-lock.json
   Owner: root project guidance, dependencies and deployment configuration
