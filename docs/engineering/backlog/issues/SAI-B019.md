@@ -4,15 +4,17 @@
 Order: 20 / Priority: P1 / Phase: 1-safe-pilot
 Area: ingress-security / Suggested role: API/platform engineer
 
+Implementation status: planned
+
 ## Problem
 
 The current 128 KiB body and per-operation deadline do not bound simultaneous callers or whole-process request admission. Submission quotas alone cannot prevent general ingress exhaustion.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B006 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B006 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

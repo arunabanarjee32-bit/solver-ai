@@ -4,16 +4,18 @@
 Order: 41 / Priority: P2 / Phase: 2-useful-practice
 Area: accessibility-quality / Suggested role: accessibility/test engineer
 
+Implementation status: planned
+
 ## Problem
 
 Accessibility repairs need a repeatable regression signal. Existing functional Playwright assertions do not provide a dedicated scan of representative guest, signed-in, loading, error and result states.
 
 ## Prerequisites
 
-- SAI-B037 (publish/complete prerequisite first)
-- SAI-B038 (publish/complete prerequisite first)
-- SAI-B039 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B037 (confirm prerequisite state in the catalogue)
+- SAI-B038 (confirm prerequisite state in the catalogue)
+- SAI-B039 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

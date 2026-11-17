@@ -4,14 +4,16 @@
 Order: 36 / Priority: P2 / Phase: 2-useful-practice
 Area: editor-reliability / Suggested role: frontend editor engineer
 
+Implementation status: planned
+
 ## Problem
 
 Two tabs editing the same local draft overwrite one storage key without revision metadata or a conflict warning. A stale tab can silently replace more recent code.
 
 ## Prerequisites
 
-- SAI-B034 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B034 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

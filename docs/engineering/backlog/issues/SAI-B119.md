@@ -4,18 +4,20 @@
 Order: 122 / Priority: P2 / Phase: institutional-pilot
 Area: business-operations / Suggested role: Operations engineer and project owner
 
+Implementation status: planned
+
 ## Problem
 
 A sustainable pilot needs measured usage and declared prices rather than assumptions that self-hosting or AI is free.
 
 ## Prerequisites
 
-- SAI-B105 (publish/complete prerequisite first)
-- SAI-B109 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B021 (publish/complete prerequisite first)
-- SAI-B053 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B105 (confirm prerequisite state in the catalogue)
+- SAI-B109 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B021 (confirm prerequisite state in the catalogue)
+- SAI-B053 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

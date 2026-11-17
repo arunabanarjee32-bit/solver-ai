@@ -4,17 +4,19 @@
 Order: 87 / Priority: P1 / Phase: AI-3 bounded candidate solver
 Area: Solver input contracts / Suggested role: Backend contract engineer
 
+Implementation status: planned
+
 ## Problem
 
 A candidate solver needs immutable problem/context identity and explicit allowed evaluation modes; a slug alone cannot describe changed constraints or permissions.
 
 ## Prerequisites
 
-- SAI-B042 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B064 (publish/complete prerequisite first)
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B042 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- SAI-B064 (confirm prerequisite state in the catalogue)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

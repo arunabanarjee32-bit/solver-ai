@@ -4,15 +4,17 @@
 Order: 18 / Priority: P2 / Phase: 1-safe-pilot
 Area: identity-observability / Suggested role: identity engineer and privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The project has no owner-facing security activity history for password recovery, session revocation or account administration. Operators and users need limited evidence without storing credentials or excessive personal data.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B016 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B016 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

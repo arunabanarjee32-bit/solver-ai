@@ -4,15 +4,17 @@
 Order: 121 / Priority: P2 / Phase: institutional-pilot
 Area: institutional-privacy / Suggested role: Backend engineer and privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 Institutions need a narrow portable assignment record without receiving unrelated private learner data.
 
 ## Prerequisites
 
-- SAI-B116 (publish/complete prerequisite first)
-- SAI-B117 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B116 (confirm prerequisite state in the catalogue)
+- SAI-B117 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

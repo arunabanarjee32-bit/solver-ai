@@ -4,16 +4,18 @@
 Order: 26 / Priority: P2 / Phase: 2-useful-practice
 Area: privacy-product / Suggested role: backend/frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Users can inspect individual owned attempts but cannot take a bounded portable export of their history. An export must honor retention and avoid becoming a cross-user or bulk-memory leak.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B022 (publish/complete prerequisite first)
-- SAI-B024 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B022 (confirm prerequisite state in the catalogue)
+- SAI-B024 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

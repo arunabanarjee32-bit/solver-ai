@@ -4,15 +4,17 @@
 Order: 23 / Priority: P1 / Phase: 1-safe-pilot
 Area: privacy-storage / Suggested role: backend engineer and privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 Terminal private source/history grows indefinitely. The store has no approved source retention lifecycle, even when account/request quotas are respected.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

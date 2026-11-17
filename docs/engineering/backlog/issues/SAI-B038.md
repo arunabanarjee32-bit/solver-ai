@@ -4,14 +4,16 @@
 Order: 39 / Priority: P1 / Phase: 2-useful-practice
 Area: accessibility / Suggested role: accessibility/frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 The app uses role=status/alert in places, but there is no reviewed announcement/focus contract across account errors, hint retry, polled verdicts and opened history details. Repeated polling can be noisy or updates can be missed.
 
 ## Prerequisites
 
-- SAI-B037 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B037 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

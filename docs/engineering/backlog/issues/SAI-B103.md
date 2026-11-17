@@ -4,16 +4,18 @@
 Order: 118 / Priority: P3 / Phase: judge-extensibility
 Area: judge-languages / Suggested role: Judge engineer
 
+Implementation status: planned
+
 ## Problem
 
 Go is feasible only with a reproducible offline compiler and bounded compilation/runtime behavior.
 
 ## Prerequisites
 
-- SAI-B096 (publish/complete prerequisite first)
-- SAI-B125 (publish/complete prerequisite first)
-- SAI-B124 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B096 (confirm prerequisite state in the catalogue)
+- SAI-B125 (confirm prerequisite state in the catalogue)
+- SAI-B124 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

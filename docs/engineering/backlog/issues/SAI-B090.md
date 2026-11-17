@@ -4,17 +4,19 @@
 Order: 105 / Priority: P1 / Phase: contest-experience
 Area: contest-integrity / Suggested role: Backend engineer and contest policy owner
 
+Implementation status: planned
+
 ## Problem
 
 Contest rules require server-enforced assistance restrictions; hiding the hint panel is insufficient.
 
 ## Prerequisites
 
-- SAI-B081 (publish/complete prerequisite first)
-- SAI-B086 (publish/complete prerequisite first)
-- SAI-B089 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B081 (confirm prerequisite state in the catalogue)
+- SAI-B086 (confirm prerequisite state in the catalogue)
+- SAI-B089 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

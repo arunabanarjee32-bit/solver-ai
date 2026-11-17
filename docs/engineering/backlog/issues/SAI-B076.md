@@ -4,17 +4,19 @@
 Order: 95 / Priority: P2 / Phase: AI-4 evaluation and research gates
 Area: Counterexample debugging / Suggested role: Judge tooling engineer
 
+Implementation status: planned
+
 ## Problem
 
 A large permitted failing input can be hard to explain; reduction is useful only if it preserves task validity and the observed failure without exposing private cases.
 
 ## Prerequisites
 
-- SAI-B064 (publish/complete prerequisite first)
-- SAI-B065 (publish/complete prerequisite first)
-- SAI-B071 (publish/complete prerequisite first)
-- SAI-B075 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B064 (confirm prerequisite state in the catalogue)
+- SAI-B065 (confirm prerequisite state in the catalogue)
+- SAI-B071 (confirm prerequisite state in the catalogue)
+- SAI-B075 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

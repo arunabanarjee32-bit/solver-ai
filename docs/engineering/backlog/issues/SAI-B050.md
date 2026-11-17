@@ -4,16 +4,18 @@
 Order: 65 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI token and request quotas / Suggested role: Backend persistence engineer
 
+Implementation status: planned
+
 ## Problem
 
 Submission quotas exist for execution jobs, but no durable reservation mechanism currently limits model tokens or model request count.
 
 ## Prerequisites
 
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

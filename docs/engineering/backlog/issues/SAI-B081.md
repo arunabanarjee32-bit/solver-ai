@@ -4,15 +4,17 @@
 Order: 96 / Priority: P1 / Phase: contest-foundation
 Area: contests / Suggested role: Backend engineer with contest product owner
 
+Implementation status: planned
+
 ## Problem
 
 Contests are proposed but no active event lifecycle or authoritative clock exists.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

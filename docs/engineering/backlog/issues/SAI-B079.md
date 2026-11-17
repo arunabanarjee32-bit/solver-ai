@@ -4,15 +4,17 @@
 Order: 126 / Priority: P2 / Phase: AI-4 evaluation and research gates
 Area: Model serving research gate / Suggested role: ML infrastructure researcher
 
+Implementation status: planned
+
 ## Problem
 
 Archived ranker/solver code permits remote model code and names consumer-hardware models, but current hardware, artifact integrity, licensing and serving economics are unverified.
 
 ## Prerequisites
 
-- SAI-B074 (publish/complete prerequisite first)
-- SAI-B078 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B074 (confirm prerequisite state in the catalogue)
+- SAI-B078 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,21 +4,23 @@
 Order: 74 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Hint quality pilot / Suggested role: Teaching evaluator with project owner
 
+Implementation status: planned
+
 ## Problem
 
 Passing adapter fixtures demonstrates integration behavior, not whether generated hints are correct, useful or appropriately limited in spoilers.
 
 ## Prerequisites
 
-- SAI-B045 (publish/complete prerequisite first)
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B051 (publish/complete prerequisite first)
-- SAI-B056 (publish/complete prerequisite first)
-- SAI-B057 (publish/complete prerequisite first)
-- SAI-B058 (publish/complete prerequisite first)
-- SAI-B124 (publish/complete prerequisite first)
-- SAI-B126 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B045 (confirm prerequisite state in the catalogue)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- SAI-B051 (confirm prerequisite state in the catalogue)
+- SAI-B056 (confirm prerequisite state in the catalogue)
+- SAI-B057 (confirm prerequisite state in the catalogue)
+- SAI-B058 (confirm prerequisite state in the catalogue)
+- SAI-B124 (confirm prerequisite state in the catalogue)
+- SAI-B126 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

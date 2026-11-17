@@ -4,15 +4,17 @@
 Order: 111 / Priority: P1 / Phase: judge-extensibility
 Area: judge-validators / Suggested role: Judge engineer
 
+Implementation status: planned
+
 ## Problem
 
 Existing grading needs an explicit comparison-policy boundary before supporting richer problem types.
 
 ## Prerequisites
 
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B028 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- SAI-B028 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

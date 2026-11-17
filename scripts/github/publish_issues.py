@@ -56,6 +56,11 @@ def validate_catalog(catalog: dict, *, minimum: int = 101) -> list[dict]:
         for path in issue["target_paths"]:
             if not (ROOT / path).resolve().is_relative_to(ROOT):
                 raise PublicationError(f"{identifier} has a target outside the repository.")
+        status = issue.get("implementation_status", "planned")
+        if status not in {"planned", "completed_locally"}:
+            raise PublicationError(f"{identifier} has an unsupported implementation status.")
+        if status == "completed_locally" and not issue.get("completion_evidence", "").strip():
+            raise PublicationError(f"{identifier} needs completion evidence before publication is skipped.")
         seen.add(identifier)
         titles.add(title.casefold())
     return issues
@@ -65,18 +70,26 @@ def issue_title(issue: dict) -> str:
     return f"[{issue['id']}] {issue['title']}"
 
 
-def render_body(issue: dict, published: dict) -> str:
+def render_body(issue: dict, published: dict, completed: dict | None = None) -> str:
+    completed = completed or {}
     dependencies = [
         f"- [{identifier}]({published[identifier]['url']})"
-        if identifier in published else f"- {identifier} (publish/complete prerequisite first)"
+        if identifier in published else
+        f"- [{identifier} (completed locally)]"
+        f"(https://github.com/arunabanarjee32-bit/solver-ai/blob/main/"
+        f"docs/engineering/backlog/issues/{identifier}.md)"
+        if identifier in completed else f"- {identifier} (confirm prerequisite state in the catalogue)"
         for identifier in issue.get("depends_on", [])
     ] or ["- No backlog prerequisites; observe the maintainer's release and spending gates."]
     lines = [
         f"<!-- solver-ai-backlog:{issue['id']} -->",
         f"Order: {issue['order']} / Priority: {issue['priority']} / Phase: {issue['phase']}",
         f"Area: {issue['area']} / Suggested role: {issue['owner_role']}", "",
+        "Implementation status: " + issue.get("implementation_status", "planned"), "",
         "## Problem", "", issue["problem"], "", "## Prerequisites", "", *dependencies,
     ]
+    if issue.get("implementation_status") == "completed_locally":
+        lines[5:5] = ["Completed locally: " + issue["completion_evidence"], ""]
     for heading, field in [
         ("Current code ownership", "target_paths"), ("Scope", "scope"),
         ("Acceptance criteria", "acceptance"), ("Validation", "validation"),
@@ -86,7 +99,10 @@ def render_body(issue: dict, published: dict) -> str:
         lines += [f"- {value}" for value in issue[field]]
     lines += [
         "", "## Risk and review", "", issue["risk"], "",
-        ("Implement this issue on a dedicated branch and submit a PR linked here. "
+        ("This task is recorded as completed locally. Do not reimplement it as missing work; "
+         "open a separately scoped follow-up when a defect or new requirement exists."
+         if issue.get("implementation_status") == "completed_locally" else
+         "Implement this issue on a dedicated branch and submit a PR linked here. "
         "Include the exact tests run and remaining limitations. Do not self-merge. "
         "A maintainer/assistant review must inspect the diff, dependencies, security "
         "and actual check results before a maintainer-authorized merge. "
@@ -172,9 +188,16 @@ def save_receipt(path: Path, receipt: dict) -> None:
 
 
 def publish(catalog: dict, github: GitHub, receipt_path: Path, digest: str) -> dict:
-    issues = validate_catalog(catalog)
+    all_issues = validate_catalog(catalog)
+    issues = [issue for issue in all_issues if issue.get("implementation_status") != "completed_locally"]
     repository = catalog["repository"]
-    receipt = {"repository": repository, "catalog_sha256": digest, "status": "in_progress", "issues": {}}
+    receipt = {
+        "repository": repository, "catalog_sha256": digest, "status": "in_progress", "issues": {},
+        "skipped_completed": {
+            issue["id"]: issue["completion_evidence"] for issue in all_issues
+            if issue.get("implementation_status") == "completed_locally"
+        },
+    }
     try:
         metadata = github.request(f"repos/{repository}")
         if metadata.get("full_name") != repository or not metadata.get("has_issues"):
@@ -203,7 +226,8 @@ def publish(catalog: dict, github: GitHub, receipt_path: Path, digest: str) -> d
             identifier = issue["id"]
             if identifier not in indexed:
                 created = github.request(f"repos/{repository}/issues", {
-                    "title": issue_title(issue), "body": render_body(issue, indexed),
+                    "title": issue_title(issue),
+                    "body": render_body(issue, indexed, receipt["skipped_completed"]),
                 })
                 indexed.update(remote_index([created], repository))
                 if identifier not in indexed:
@@ -233,7 +257,11 @@ def main() -> None:
     if args.publish:
         publish(catalog, GitHub(), args.receipt, hashlib.sha256(raw).hexdigest())
     else:
-        print(f"Offline plan valid: {len(issues)} ordered issues; no GitHub requests made.")
+        completed = sum(issue.get("implementation_status") == "completed_locally" for issue in issues)
+        print(
+            f"Offline plan valid: {len(issues)} ordered tasks "
+            f"({len(issues) - completed} pending, {completed} completed locally); no GitHub requests made."
+        )
 
 
 if __name__ == "__main__":

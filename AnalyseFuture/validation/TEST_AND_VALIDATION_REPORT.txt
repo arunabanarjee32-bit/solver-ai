@@ -1,3 +1,41 @@
+LATEST ENGINEERING INCREMENT — SAI-B001 COMPLETED LOCALLY
+17 November2026, Asia/Kolkata; starting commit1cbd8aa7c35e144df5b42aedac61627b6544f6a3.
+
+Executed the actual npm run test:all aggregate with system Chromium and frozen uv
+cache settings. API137/auth7/judge118/browser25 and then-existing11 tooling cases
+passed, as did lint, typecheck and optimized build. No application failure was
+found and no API/web/judge runtime code was changed in this increment.
+
+Implemented B001: stdlib PR evidence validator, single named fenced JSON template,
+read-only PR-event workflow using trusted base SHA and no persisted credentials,
+and explicit evidence/head/prerequisite/outcome documentation. It never executes
+or echoes PR commands, contacts GitHub, approves or merges. Honest failed/skipped/
+not-run results remain allowed with explanation; completeness cannot prove tests
+ran. The separate server-side reviewed-merge policy remains B127 owner work.
+
+Peer review found malformed nested events produced a traceback and a second
+unclosed evidence opener was not counted. Both fixed with regression cases;
+canonical path aliases are rejected too.37evidence tests passed. Publisher gained
+completed-local-task exclusion and correct prerequisite-card links, with13safety
+cases passed. Full tooling50passed and Ruff passed after these changes. Together
+with unchanged application suites, current executed coverage is337cases, no skips
+in enabled judge/browser suites. No need to repeat the unchanged runtime suites.
+
+Corrected the broken docs/INDEX status anchor, stale testing state and feature
+count, validation collection description, and the architecture ADR tree path.
+Backlog now tracks127cards: B001 completed locally,126pending. Completed work is
+preserved but not created as a new open GitHub issue. Actual remote issue creation
+remains0 due to the previously observed api.github.com network-policy denial;
+existing additive draft still requires owner review/save and publication. No new
+API mutation/retry was attempted without an applied network change.
+
+Hosted PR workflow execution, branch-protection enforcement and issue-write
+permissions remain unverified. No force-push, auto-merge, paid model calls or
+archive execution. Earlier records below are retained as history.
+
+
+EARLIER RECORDS (retained)
+
 LATEST POST-RELOCATION TEST AND HANDOFF RECORD — 17 November2026
 Owner instruction resumed full testing after the earlier no-tests reorganization.
 Baseline:adcfb0ba74a3ab022977b1ede3abe5db95e8ceec.

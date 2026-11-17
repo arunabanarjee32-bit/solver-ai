@@ -11,11 +11,11 @@
     },
     {
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "purpose": "Contributor checklist retained for optional PR workflows; owner explicitly uses direct main for this task.",
+      "purpose": "Contributor review template with one explicitly incomplete fenced evidence record to fill.",
       "feature": "repository operations and reproducibility",
       "dependencies": [],
       "active": true,
-      "status": "Coordinator full source/config review; execution results recorded separately.",
+      "status": "Blank template fails validation; honest check outcomes required.",
       "risks": []
     },
     {
@@ -629,7 +629,7 @@
       "purpose": "Explicit GitHub issue publication with validated order, remote-marker reconciliation, pacing and durable receipts.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "dependencies": [],
-      "status": "11fake-client safety cases passed; live API access is blocked.",
+      "status": "13fake-client cases passed, including completed-task exclusion and prerequisite links. API access still blocked.",
       "risks": [
         "Observe issue prerequisites, owner decisions and actual publication receipts."
       ]
@@ -696,10 +696,10 @@
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B001.md",
-      "purpose": "Planned SAI-B001: Enforce an evidence contract for contributor pull requests; current owning area foundation.",
+      "purpose": "Completed-local B001 task and evidence; preserved as prerequisite history.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "dependencies": [],
-      "status": "Future bounded task; not an implemented feature or confirmed open GitHub issue.",
+      "status": "Not a missing feature and not posted as a new open issue.",
       "risks": [
         "Observe issue prerequisites, owner decisions and actual publication receipts."
       ]
@@ -1962,6 +1962,46 @@
       "status": "Future bounded task; not an implemented feature or confirmed open GitHub issue.",
       "risks": [
         "Observe issue prerequisites, owner decisions and actual publication receipts."
+      ]
+    },
+    {
+      "path": "scripts/github/check_pr_evidence.py",
+      "purpose": "Offline bounded PR-event evidence validation without network, command execution or raw-body logging.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "dependencies": [],
+      "status": "37scoped cases passed; read-only workflow configured, hosted execution not observed.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ]
+    },
+    {
+      "path": ".github/workflows/pr-evidence.yml",
+      "purpose": "Metadata-only PR open/edit/head synchronization check using trusted base SHA and read-only checkout.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "dependencies": [],
+      "status": "Statically peer-reviewed; hosted job unobserved; not branch-rule enforcement.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ]
+    },
+    {
+      "path": "docs/engineering/PR_EVIDENCE.md",
+      "purpose": "Version1 field contract, size/path/head rules, trust boundaries and metadata limitations.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "dependencies": [],
+      "status": "Current contract for B001.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ]
+    },
+    {
+      "path": "tests/tooling/github/test_pr_evidence.py",
+      "purpose": "Offline evidence validation, malformed input, stale heads, dependency and injection regressions.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "dependencies": [],
+      "status": "37passed.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
       ]
     }
   ],

@@ -4,13 +4,15 @@
 Order: 38 / Priority: P1 / Phase: 2-useful-practice
 Area: accessibility / Suggested role: accessibility/frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Basic keyboard support exists, but there is no complete documented keyboard-only path through navigation, problem reading, editor entry/exit, language selection, hints and deliberate submission.
 
 ## Prerequisites
 
-- SAI-B001 (publish/complete prerequisite first)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

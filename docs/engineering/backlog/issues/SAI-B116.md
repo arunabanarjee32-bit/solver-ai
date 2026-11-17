@@ -4,15 +4,17 @@
 Order: 78 / Priority: P2 / Phase: learning-coaching
 Area: coaching / Suggested role: Full-stack engineer and educator reviewer
 
+Implementation status: planned
+
 ## Problem
 
 Coaching needs an assignment boundary and visible human feedback rather than ad hoc access to all submissions.
 
 ## Prerequisites
 
-- SAI-B113 (publish/complete prerequisite first)
-- SAI-B115 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B113 (confirm prerequisite state in the catalogue)
+- SAI-B115 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

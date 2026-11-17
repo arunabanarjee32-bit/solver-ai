@@ -4,17 +4,19 @@
 Order: 101 / Priority: P1 / Phase: contest-foundation
 Area: contests / Suggested role: Backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Existing owned attempts cannot yet prove which contest, problem version or event window they belong to.
 
 ## Prerequisites
 
-- SAI-B081 (publish/complete prerequisite first)
-- SAI-B082 (publish/complete prerequisite first)
-- SAI-B083 (publish/complete prerequisite first)
-- SAI-B084 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B081 (confirm prerequisite state in the catalogue)
+- SAI-B082 (confirm prerequisite state in the catalogue)
+- SAI-B083 (confirm prerequisite state in the catalogue)
+- SAI-B084 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

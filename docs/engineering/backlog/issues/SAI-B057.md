@@ -4,17 +4,19 @@
 Order: 72 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI operations / Suggested role: Backend operations engineer
 
+Implementation status: planned
+
 ## Problem
 
 A provider incident or budget concern must disable future external work without breaking the already completed local authored workflow.
 
 ## Prerequisites
 
-- SAI-B048 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B055 (publish/complete prerequisite first)
-- SAI-B056 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B048 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- SAI-B055 (confirm prerequisite state in the catalogue)
+- SAI-B056 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

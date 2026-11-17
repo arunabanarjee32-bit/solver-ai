@@ -4,17 +4,19 @@
 Order: 83 / Priority: P1 / Phase: AI-2 consented tutor and debugger
 Area: Debugger privacy boundary / Suggested role: Privacy and backend authorization engineer
 
+Implementation status: planned
+
 ## Problem
 
 The current public-only hint contract intentionally excludes source. A debugger needs a separate deliberate source-sharing boundary rather than reading drafts or stored submissions implicitly.
 
 ## Prerequisites
 
-- SAI-B042 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B056 (publish/complete prerequisite first)
-- SAI-B060 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B042 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- SAI-B056 (confirm prerequisite state in the catalogue)
+- SAI-B060 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

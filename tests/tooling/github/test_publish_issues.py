@@ -155,6 +155,27 @@ def test_wrong_repository_response_prevents_publication(catalog, tmp_path):
     assert client.posts == []
 
 
+def test_locally_completed_tasks_are_not_opened_as_new_issues(catalog, tmp_path):
+    catalog["issues"][-1]["implementation_status"] = "completed_locally"
+    catalog["issues"][-1]["completion_evidence"] = "Implementation and scoped regressions are committed."
+    client = FakeGitHub(catalog["issues"][:-1])
+    receipt = publisher.publish(catalog, client, tmp_path / "receipt.json", "fixture-digest")
+    assert client.posts == []
+    assert len(receipt["issues"]) == 100
+    assert "SAI-B101" in receipt["skipped_completed"]
+
+
+def test_completed_prerequisite_links_to_its_card_instead_of_reopening_it(catalog, tmp_path):
+    catalog["issues"][0]["implementation_status"] = "completed_locally"
+    catalog["issues"][0]["completion_evidence"] = "Reviewed implementation and regressions are committed."
+    client = FakeGitHub(catalog["issues"][1:-1])
+    receipt = publisher.publish(catalog, client, tmp_path / "receipt.json", "fixture-digest")
+    assert len(client.posts) == 1
+    assert "SAI-B001 (completed locally)" in client.posts[0]["body"]
+    assert "/backlog/issues/SAI-B001.md" in client.posts[0]["body"]
+    assert "SAI-B001" not in receipt["issues"]
+
+
 def test_real_client_paces_posts_without_retrying_mutations(monkeypatch):
     calls = []
     sleeps = []

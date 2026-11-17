@@ -4,18 +4,20 @@
 Order: 53 / Priority: P1 / Phase: operated-pilot
 Area: operations-release / Suggested role: Release engineer and service owner
 
+Implementation status: planned
+
 ## Problem
 
 Local builds alone do not prove a deployable revision can be promoted or rolled back safely.
 
 ## Prerequisites
 
-- SAI-B107 (publish/complete prerequisite first)
-- SAI-B108 (publish/complete prerequisite first)
-- SAI-B109 (publish/complete prerequisite first)
-- SAI-B005 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B107 (confirm prerequisite state in the catalogue)
+- SAI-B108 (confirm prerequisite state in the catalogue)
+- SAI-B109 (confirm prerequisite state in the catalogue)
+- SAI-B005 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

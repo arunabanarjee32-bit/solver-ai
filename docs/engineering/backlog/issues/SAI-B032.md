@@ -4,14 +4,16 @@
 Order: 33 / Priority: P2 / Phase: 2-useful-practice
 Area: catalog-ux / Suggested role: frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Search, difficulty and topic exist only in component state. Refresh, browser navigation and shared links lose the chosen practice view.
 
 ## Prerequisites
 
-- SAI-B031 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B031 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

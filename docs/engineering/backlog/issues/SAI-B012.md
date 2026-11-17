@@ -4,14 +4,16 @@
 Order: 13 / Priority: P1 / Phase: 1-safe-pilot
 Area: storage-operations / Suggested role: storage/platform engineer
 
+Implementation status: planned
+
 ## Problem
 
 Local SQLite databases and the web signing/session secret must be preserved together, but no tested coordinated backup/restore procedure exists. Copying live WAL files casually can produce an unusable or inconsistent recovery.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

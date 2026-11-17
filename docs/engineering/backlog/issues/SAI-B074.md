@@ -4,17 +4,19 @@
 Order: 93 / Priority: P1 / Phase: AI-4 evaluation and research gates
 Area: Solver evaluation / Suggested role: Research evaluation engineer
 
+Implementation status: planned
+
 ## Problem
 
 The repository has historical upstream claims but no current model evaluation harness that pins tasks, prompts, runtime and budgets for fair strategy comparisons.
 
 ## Prerequisites
 
-- SAI-B053 (publish/complete prerequisite first)
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B072 (publish/complete prerequisite first)
-- SAI-B073 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B053 (confirm prerequisite state in the catalogue)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- SAI-B072 (confirm prerequisite state in the catalogue)
+- SAI-B073 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

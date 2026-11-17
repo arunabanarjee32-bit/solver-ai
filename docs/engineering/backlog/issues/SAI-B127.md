@@ -4,13 +4,15 @@
 Order: 2 / Priority: P0 / Phase: 0-contribution-gates
 Area: repository governance / Suggested role: Repository owner and designated security reviewer
 
+Implementation status: planned
+
 ## Problem
 
 A written review-only workflow does not restrict credentials that can currently write main. The actual GitHub branch rules and reviewer identities must be verified before distributed contributors rely on enforced review.
 
 ## Prerequisites
 
-- SAI-B001 (publish/complete prerequisite first)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

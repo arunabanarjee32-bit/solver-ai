@@ -4,14 +4,16 @@
 Order: 10 / Priority: P1 / Phase: 1-safe-pilot
 Area: worker-auth / Suggested role: backend security engineer
 
+Implementation status: planned
+
 ## Problem
 
 The native runner generates a strong local worker token, but the API accepts configured worker bearer material without an independent strength check. A manually supplied weak production value can define the whole controller trust domain.
 
 ## Prerequisites
 
-- SAI-B006 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B006 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

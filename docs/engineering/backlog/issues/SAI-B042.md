@@ -4,14 +4,16 @@
 Order: 57 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Safe model context / Suggested role: Backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 PublicHintContext already excludes private tests and identity, but future inference needs explicit per-field and aggregate bounds and a stable content fingerprint.
 
 ## Prerequisites
 
-- SAI-B041 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B041 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

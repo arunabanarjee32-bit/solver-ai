@@ -4,14 +4,16 @@
 Order: 14 / Priority: P1 / Phase: 1-safe-pilot
 Area: storage / Suggested role: backend storage engineer
 
+Implementation status: planned
+
 ## Problem
 
 The submission store initializes tables with CREATE IF NOT EXISTS but has no recorded schema version or tested forward migration path. Retention, provenance and deletion changes need safe evolution of existing user data.
 
 ## Prerequisites
 
-- SAI-B012 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B012 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

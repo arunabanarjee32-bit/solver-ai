@@ -4,14 +4,16 @@
 Order: 7 / Priority: P1 / Phase: 1-safe-pilot
 Area: deployment-security / Suggested role: backend security engineer
 
+Implementation status: planned
+
 ## Problem
 
 AUTH_JWKS_URL currently permits HTTP for any hostname. Local loopback/Compose routes need support, but the same permissive configuration can be unsafe across an untrusted network.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

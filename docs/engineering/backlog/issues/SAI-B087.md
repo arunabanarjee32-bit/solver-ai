@@ -4,17 +4,19 @@
 Order: 102 / Priority: P2 / Phase: contest-experience
 Area: contests / Suggested role: Full-stack engineer
 
+Implementation status: planned
+
 ## Problem
 
 A learner cannot replay a contest under a personal timer without changing the shared event.
 
 ## Prerequisites
 
-- SAI-B081 (publish/complete prerequisite first)
-- SAI-B083 (publish/complete prerequisite first)
-- SAI-B084 (publish/complete prerequisite first)
-- SAI-B086 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B081 (confirm prerequisite state in the catalogue)
+- SAI-B083 (confirm prerequisite state in the catalogue)
+- SAI-B084 (confirm prerequisite state in the catalogue)
+- SAI-B086 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

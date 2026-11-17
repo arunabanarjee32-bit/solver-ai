@@ -4,16 +4,18 @@
 Order: 92 / Priority: P2 / Phase: AI-3 bounded candidate solver
 Area: Candidate ranking / Suggested role: AI evaluation engineer
 
+Implementation status: planned
+
 ## Problem
 
 phi-code ranks sample passes and embedding similarity, but similarity is not correctness and zero or incomparable test sets must not produce an acceptance claim.
 
 ## Prerequisites
 
-- SAI-B070 (publish/complete prerequisite first)
-- SAI-B071 (publish/complete prerequisite first)
-- SAI-B072 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B070 (confirm prerequisite state in the catalogue)
+- SAI-B071 (confirm prerequisite state in the catalogue)
+- SAI-B072 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

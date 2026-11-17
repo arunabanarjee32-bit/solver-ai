@@ -4,14 +4,16 @@
 Order: 29 / Priority: P1 / Phase: 2-useful-practice
 Area: content-quality / Suggested role: content/backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Public samples are represented across independent API/judge deployments. Current examples can drift so Run samples checks a different input/output from the problem page.
 
 ## Prerequisites
 
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

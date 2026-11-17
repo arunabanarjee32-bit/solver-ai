@@ -4,15 +4,17 @@
 Order: 28 / Priority: P1 / Phase: 2-useful-practice
 Area: content-contract / Suggested role: backend/content engineer
 
+Implementation status: planned
+
 ## Problem
 
 Submissions retain problem slug/title but not an immutable public specification and grading revision. Future content changes could make an old verdict appear to refer to a different problem/test contract.
 
 ## Prerequisites
 
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B026 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- SAI-B026 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

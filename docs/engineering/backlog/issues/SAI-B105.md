@@ -4,15 +4,17 @@
 Order: 48 / Priority: P1 / Phase: operated-pilot
 Area: operations-observability / Suggested role: Backend engineer and operator
 
+Implementation status: planned
+
 ## Problem
 
 Once B021 supplies canonical private queue/readiness measurements, operators need a stable low-cardinality exporter/report adapter without a second metrics authority.
 
 ## Prerequisites
 
-- SAI-B021 (publish/complete prerequisite first)
-- SAI-B020 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B021 (confirm prerequisite state in the catalogue)
+- SAI-B020 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

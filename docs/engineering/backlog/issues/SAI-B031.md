@@ -4,14 +4,16 @@
 Order: 32 / Priority: P2 / Phase: 2-useful-practice
 Area: catalog / Suggested role: frontend/API engineer
 
+Implementation status: planned
+
 ## Problem
 
 The UI currently fetches limit=100 once and filters that page locally. Once the catalog exceeds the first page, learners could miss matching problems while totals imply a larger searchable collection.
 
 ## Prerequisites
 
-- SAI-B029 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B029 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

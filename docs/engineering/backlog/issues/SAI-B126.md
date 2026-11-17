@@ -4,17 +4,19 @@
 Order: 47 / Priority: P1 / Phase: 1-safe-pilot
 Area: judge-lifecycle / Suggested role: Backend queue engineer and judge maintainer
 
+Implementation status: planned
+
 ## Problem
 
 Cleanup failure now stops further claims and heartbeat renewal, but the API can continue advertising the last worker heartbeat for 60 seconds. Process/transport failure also leaves lease retirement to expiry. There is no explicit generation-bound withdrawal protocol connecting shutdown, cleanup outcome and the authoritative lease state.
 
 ## Prerequisites
 
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B121 (publish/complete prerequisite first)
-- SAI-B122 (publish/complete prerequisite first)
-- SAI-B123 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- SAI-B121 (confirm prerequisite state in the catalogue)
+- SAI-B122 (confirm prerequisite state in the catalogue)
+- SAI-B123 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

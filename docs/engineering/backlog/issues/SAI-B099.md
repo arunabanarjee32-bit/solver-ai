@@ -4,18 +4,20 @@
 Order: 114 / Priority: P3 / Phase: judge-extensibility
 Area: judge-validators / Suggested role: Judge engineer and contest product owner
 
+Implementation status: planned
+
 ## Problem
 
 Future partial-score tasks need a contract that does not silently reinterpret ICPC AC/WA scoring.
 
 ## Prerequisites
 
-- SAI-B096 (publish/complete prerequisite first)
-- SAI-B097 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B084 (publish/complete prerequisite first)
+- SAI-B096 (confirm prerequisite state in the catalogue)
+- SAI-B097 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- SAI-B084 (confirm prerequisite state in the catalogue)
 
 ## Current code ownership
 

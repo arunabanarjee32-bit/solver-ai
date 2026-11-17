@@ -4,17 +4,19 @@
 Order: 120 / Priority: P1 / Phase: institutional-pilot
 Area: institutional-privacy / Suggested role: Backend engineer with policy/privacy owner
 
+Implementation status: planned
+
 ## Problem
 
 An institutional pilot needs explicit limits on what an organization controls versus the learner’s personal account.
 
 ## Prerequisites
 
-- SAI-B115 (publish/complete prerequisite first)
-- SAI-B116 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B018 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B115 (confirm prerequisite state in the catalogue)
+- SAI-B116 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B018 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

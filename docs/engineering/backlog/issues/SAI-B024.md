@@ -4,14 +4,16 @@
 Order: 25 / Priority: P2 / Phase: 2-useful-practice
 Area: storage-performance / Suggested role: backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 History listing uses SELECT * and constructs full details before discarding source. Large retained programs are unnecessarily read and materialized for summary-only pagination.
 
 ## Prerequisites
 
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -9,7 +9,7 @@ responsibility and dependencies, not by extension.
 
 The owner initially paused runtime checks during reorganization, then explicitly
 requested testing and fixes. Post-relocation checks now passed: 137 API, 7 auth,
-118 judge and 25 browser cases, plus 11 issue-publisher safety cases, type checks,
+118 judge and 25 browser cases, plus the current 50 repository-tooling safety cases, type checks,
 lint, optimized build and local production smoke. The only application-layout
 fix needed was import formatting in a moved judge test. Full evidence and the
 separate GitHub publication blocker are recorded in
@@ -115,7 +115,7 @@ solver-ai/
     │   └── current-files.json      Current indexed paths, ownership and hashes
     ├── migration-records/          Consolidation, origin mapping and archive record
     ├── planning/                   Detailed future vision and technical debt
-    ├── validation/                 Historical check results; no current test claim
+    ├── validation/                 Current runtime results and retained historical checks
     └── continuation/               Work progress and next-developer instructions
 ```
 
@@ -197,7 +197,6 @@ there solely because it is unfamiliar, and do not copy live credentials into it.
 The next developer should begin with [docs/INDEX.md](docs/INDEX.md),
 [current status](docs/status/PROJECT_STATUS.md), and the
 [continuation guide](AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt).
-Runtime checks were resumed and completed at the owner's request. The new issue
-cards describe future work; they do not indicate that their proposed features
-are already implemented. Actual remote issue links exist only when confirmed in
+Runtime checks were resumed and completed at the owner's request. The issue cards track126pending tasks and one locally completed evidence-gate
+task; other proposed features are not claimed implemented. Actual remote issue links exist only when confirmed in
 the publication receipt.

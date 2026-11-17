@@ -4,16 +4,18 @@
 Order: 30 / Priority: P2 / Phase: 2-useful-practice
 Area: content-tooling / Suggested role: content tooling engineer
 
+Implementation status: planned
+
 ## Problem
 
 Catalog exercises are hand-authored in Python source. Adding content lacks a focused author preflight for duplicate IDs/slugs, incomplete constraints, bad samples, missing provenance or revision mismatch.
 
 ## Prerequisites
 
-- SAI-B026 (publish/complete prerequisite first)
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B028 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B026 (confirm prerequisite state in the catalogue)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- SAI-B028 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,18 +4,20 @@
 Order: 125 / Priority: P1 / Phase: AI-4 evaluation and research gates
 Area: Research provenance / Suggested role: Data stewardship and project owner
 
+Implementation status: planned
+
 ## Problem
 
 MIT/Apache source notices do not authorize benchmark redistribution, training, commercial use or model-weight deployment; five archived datasets are only pointers.
 
 ## Prerequisites
 
-- SAI-B041 (publish/complete prerequisite first)
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B077 (publish/complete prerequisite first)
-- SAI-B002 (publish/complete prerequisite first)
-- SAI-B026 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B041 (confirm prerequisite state in the catalogue)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- SAI-B077 (confirm prerequisite state in the catalogue)
+- SAI-B002 (confirm prerequisite state in the catalogue)
+- SAI-B026 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

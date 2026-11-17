@@ -4,14 +4,16 @@
 Order: 40 / Priority: P2 / Phase: 2-useful-practice
 Area: accessibility / Suggested role: accessibility/UI engineer
 
+Implementation status: planned
+
 ## Problem
 
 Responsive styles exist, but the repository has no demonstrated review of text/control contrast, reduced-motion behavior and high-zoom reflow. Decorative motion and narrow result surfaces can block access.
 
 ## Prerequisites
 
-- SAI-B037 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B037 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,16 +4,18 @@
 Order: 19 / Priority: P1 / Phase: 1-safe-pilot
 Area: privacy / Suggested role: backend/identity engineer and privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 There is no end-to-end account deletion lifecycle. Removing only an auth row would strand private source/history, while deleting active work without coordination could break worker leases.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B016 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B016 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

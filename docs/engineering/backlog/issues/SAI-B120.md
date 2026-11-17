@@ -4,21 +4,23 @@
 Order: 123 / Priority: P2 / Phase: institutional-pilot
 Area: business-release / Suggested role: Backend engineer and project owner
 
+Implementation status: planned
+
 ## Problem
 
 A limited pilot needs enforceable access grants and a recorded go/no-go decision before any commercial expansion.
 
 ## Prerequisites
 
-- SAI-B110 (publish/complete prerequisite first)
-- SAI-B112 (publish/complete prerequisite first)
-- SAI-B117 (publish/complete prerequisite first)
-- SAI-B119 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B051 (publish/complete prerequisite first)
+- SAI-B110 (confirm prerequisite state in the catalogue)
+- SAI-B112 (confirm prerequisite state in the catalogue)
+- SAI-B117 (confirm prerequisite state in the catalogue)
+- SAI-B119 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- SAI-B051 (confirm prerequisite state in the catalogue)
 
 ## Current code ownership
 

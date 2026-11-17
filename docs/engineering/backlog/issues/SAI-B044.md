@@ -4,14 +4,16 @@
 Order: 59 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Provider-neutral contracts / Suggested role: Backend and AI interface engineer
 
+Implementation status: planned
+
 ## Problem
 
 HintBackend returns bounded HintContent today; real inference also needs trusted model identity, usage, finish reason and request metadata without exposing provider payloads.
 
 ## Prerequisites
 
-- SAI-B042 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B042 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

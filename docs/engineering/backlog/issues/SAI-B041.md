@@ -4,16 +4,18 @@
 Order: 56 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI activation governance / Suggested role: Project owner with privacy and AI engineering reviewers
 
+Implementation status: planned
+
 ## Problem
 
 Authored hints and their UI work, but no provider, data-processing terms, spend owner or activation authority has been selected for real inference.
 
 ## Prerequisites
 
-- SAI-B001 (publish/complete prerequisite first)
-- SAI-B002 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B026 (publish/complete prerequisite first)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
+- SAI-B002 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B026 (confirm prerequisite state in the catalogue)
 
 ## Current code ownership
 

@@ -4,14 +4,16 @@
 Order: 22 / Priority: P2 / Phase: 1-safe-pilot
 Area: operations / Suggested role: platform/backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Public health only reports process liveness and capabilities report recent worker readiness. Operators lack a private bounded view of queue age, expired leases and storage pressure without inspecting user records.
 
 ## Prerequisites
 
-- SAI-B020 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B020 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

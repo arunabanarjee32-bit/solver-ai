@@ -2,7 +2,7 @@
   "baseline_commit": "a00894df45e5b451d3261ed374b36e8d2c208ad6",
   "scope": "All current Git-index paths; generated inventory outputs included.",
   "self_hash_policy": "Size/hash omitted for both inventory outputs to avoid recursion.",
-  "tracked_files": 439,
+  "tracked_files": 443,
   "files": [
     {
       "path": ".dockerignore",
@@ -21,16 +21,16 @@
     {
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
       "owner": "hosted validation and contributor guidance",
-      "purpose": "Contributor checklist retained for optional PR workflows; owner explicitly uses direct main for this task.",
+      "purpose": "Contributor review template with one explicitly incomplete fenced evidence record to fill.",
       "feature": "repository operations and reproducibility",
       "active": true,
       "dependencies": [],
-      "assessment": "Coordinator full source/config review; execution results recorded separately.",
+      "assessment": "Blank template fails validation; honest check outcomes required.",
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "bytes": 1066,
-      "sha256": "d476699ea9120be177d76af5e7152359b43492b961e64e2a1d3c6fe3b253467a"
+      "bytes": 2572,
+      "sha256": "ea3d4ce5d227c23ecfe7662c8e562c90058037720bbe0a40047146e08142d996"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -45,6 +45,22 @@
       "original_path": ".github/workflows/ci.yml",
       "bytes": 1293,
       "sha256": "c2f51aec601f937a4f8c48521bf4ab592e3847b6d10a72dfb6efb140e367599b"
+    },
+    {
+      "path": ".github/workflows/pr-evidence.yml",
+      "owner": "hosted validation and contributor guidance",
+      "purpose": "Metadata-only PR open/edit/head synchronization check using trusted base SHA and read-only checkout.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Statically peer-reviewed; hosted job unobserved; not branch-rule enforcement.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": ".github/workflows/pr-evidence.yml",
+      "bytes": 509,
+      "sha256": "141458daacc40185a5ba4ea7d3c7384f2154092031b8af6d57af2350ee37e56c"
     },
     {
       "path": ".gitignore",
@@ -263,8 +279,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/WORK_PROGRESS.txt",
-      "bytes": 6557,
-      "sha256": "51bc82d277f4c74a9d26ff1e18747ebbf551ff7153133685f20c4a8b02f18ff1"
+      "bytes": 8867,
+      "sha256": "9e610d2a77f90e290fb5098e349cc4cf8d7ec3992524fb1167949b9842996e1a"
     },
     {
       "path": "AnalyseFuture/extracted/CodeGenerator-master/.env.example",
@@ -3282,8 +3298,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/FEATURE_INVENTORY.txt",
-      "bytes": 38999,
-      "sha256": "f0308479599e4ce46b1e659272cf73ee51ecad6785308259da1cfb7ca73497dd"
+      "bytes": 39787,
+      "sha256": "ccb1ebcd07542974eb57257b96cff7572f326afcb941c039f458e6d3f05d6216"
     },
     {
       "path": "AnalyseFuture/repository-inventory/baseline.json",
@@ -3331,8 +3347,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/features.json",
-      "bytes": 51604,
-      "sha256": "137cbc3b0a33c0be6f7b8c13fd9e52c71bfc300111dbc9ba05553687198d6121"
+      "bytes": 53002,
+      "sha256": "15f6f6fdeea760d8c2432c7cc35c15838aebf4fc67a70d6c4fc9b7adfcec3f76"
     },
     {
       "path": "AnalyseFuture/repository-inventory/functional-baseline.json",
@@ -3507,8 +3523,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/repository-inventory/reviews/support.json",
-      "bytes": 98674,
-      "sha256": "f39927e6cc51f3916ba895eb14659f983c3b37c405bf6c55693d4303f7bd0763"
+      "bytes": 100442,
+      "sha256": "dd82fb6cad1baaceac4da7b256db74c15ca55a8b17aac3042a06e0da3c856045"
     },
     {
       "path": "AnalyseFuture/repository-inventory/reviews/web.json",
@@ -3539,8 +3555,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
-      "bytes": 8345,
-      "sha256": "a3cd56871309d2cfac0cc05fa28ffe497f7d6d146b3d6d6c3c9d9c69c62c72d8"
+      "bytes": 10655,
+      "sha256": "352e82ee482d9b4e3706dfc6505356a2197853fd1bb4d72b9e023b46212e83e8"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -3576,8 +3592,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "PROJECT_STRUCTURE.md",
-      "bytes": 13353,
-      "sha256": "85b7f7058d2d08315e2dcbe1ef009d61541e09de84cd946938d7cb10c049bd33"
+      "bytes": 13395,
+      "sha256": "ef6d814ba13b45dbf6fac24a1bce2db572de3e5e3a5397f6d11cb966f44d0343"
     },
     {
       "path": "README.md",
@@ -4244,8 +4260,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/INDEX.md",
-      "bytes": 5285,
-      "sha256": "657076feff685d299a6b868078618e569f7ab4ac4079aaa0c0717b0639be97c0"
+      "bytes": 5452,
+      "sha256": "130bf3c2b928e3825144fae6235946a71ccaecd9938b57a48108598fd576cfb7"
     },
     {
       "path": "docs/architecture/ARCHITECTURE.md",
@@ -4288,7 +4304,7 @@
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/REPOSITORY_STRUCTURE.md",
       "bytes": 9289,
-      "sha256": "6deabf22a049d3e27014180327a97166d14b8afe4ddad529f7b81d68d5e8086f"
+      "sha256": "c4c41df312fe209573a434de597e126149e80d395b2551f6514f980ac7466b7f"
     },
     {
       "path": "docs/architecture/adr/0001-practice-foundation.md",
@@ -4335,7 +4351,7 @@
     },
     {
       "path": "docs/engineering/AI_CONTRIBUTION_WORKFLOW.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "engineering workflow and contribution guidance",
       "purpose": "Implementation assignment, exact-head review, validation evidence and authorized merge policy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4346,14 +4362,14 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/AI_CONTRIBUTION_WORKFLOW.md",
-      "bytes": 4560,
-      "sha256": "0a90e3f24009a3ea245cb29f69dc40b6156dae25274ca437f51d2d3cd12ae966"
+      "bytes": 4958,
+      "sha256": "913d83b6b43535ca077065cfaa14405d6b3c5f4cbdb298c4000b29cec3768cd5"
     },
     {
       "path": "docs/engineering/CODEX_PLAYBOOK.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "engineering workflow and contribution guidance",
       "purpose": "Agent scope, verification ladder and implementation discipline.",
-      "feature": "specifications, decisions and development guidance",
+      "feature": "engineering workflow and contribution guidance",
       "active": true,
       "dependencies": [
         "AGENTS.md",
@@ -4372,9 +4388,9 @@
     },
     {
       "path": "docs/engineering/CONTRIBUTOR_TASKS.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "engineering workflow and contribution guidance",
       "purpose": "Suggested issue backlog, initial sequencing and acceptance template.",
-      "feature": "specifications, decisions and development guidance",
+      "feature": "engineering workflow and contribution guidance",
       "active": true,
       "dependencies": [
         "docs/PROJECT_STATUS.md",
@@ -4392,8 +4408,24 @@
       "sha256": "5b876aec34cabab269208502c960eae34554fd8ca327e8027824788bc967438d"
     },
     {
+      "path": "docs/engineering/PR_EVIDENCE.md",
+      "owner": "engineering workflow and contribution guidance",
+      "purpose": "Version1 field contract, size/path/head rules, trust boundaries and metadata limitations.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "active": true,
+      "dependencies": [],
+      "assessment": "Current contract for B001.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "docs/engineering/PR_EVIDENCE.md",
+      "bytes": 3813,
+      "sha256": "38a769f0b3f2fa7beaefe08f7a737c543e257ef31f34d567486808965dcf300c"
+    },
+    {
       "path": "docs/engineering/backlog/README.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Generated execution-order index and publication instructions for contributor handoff.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4404,12 +4436,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/README.md",
-      "bytes": 22993,
-      "sha256": "d616295d1d149a55310458505561d96ac1d1965af8a21608aef0de0ff1eed58e"
+      "bytes": 24438,
+      "sha256": "c9a2c1214c15ea26cab245d0605c1cee716ac4e3b1c03530fe86809cffc0e07f"
     },
     {
       "path": "docs/engineering/backlog/issues.json",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Canonical127-task future implementation plan with topological order and feature ownership.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4420,28 +4452,28 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues.json",
-      "bytes": 252874,
-      "sha256": "f66310bc8cabd0412ba268f4bebf4da57d252f69df97e62207bee77e6b1cfaa1"
+      "bytes": 253342,
+      "sha256": "2d1bd54947866063f5254d06c66a292f37edadad1027c7d5fc0d48ac257f68d1"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B001.md",
-      "owner": "specifications, decisions and development guidance",
-      "purpose": "Planned SAI-B001: Enforce an evidence contract for contributor pull requests; current owning area foundation.",
+      "owner": "implementation task catalogue and publication records",
+      "purpose": "Completed-local B001 task and evidence; preserved as prerequisite history.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
       "dependencies": [],
-      "assessment": "Future bounded task; not an implemented feature or confirmed open GitHub issue.",
+      "assessment": "Not a missing feature and not posted as a new open issue.",
       "risks": [
         "Observe issue prerequisites, owner decisions and actual publication receipts."
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B001.md",
-      "bytes": 2763,
-      "sha256": "b291323c1e0c8877aa828681f79e18d71e6a5822e1fb125a46433282b6ae7202"
+      "bytes": 2935,
+      "sha256": "c1c5cf92d15cad6a7c851298a92bc3df8d86470b1624b5fc06e42f2e18332353"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B002.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B002: Record owner-approved original-code licensing and inbound contribution rights; current owning area governance.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4452,12 +4484,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B002.md",
-      "bytes": 2354,
-      "sha256": "d4dfda8f73955e0d825d27f6dc565f324bafaf5f6b0f9966bf8c518f5bdfc56c"
+      "bytes": 2474,
+      "sha256": "0f04e4d6bfb63594afc32b5324cef63db2f83dd5e6d8dd0574eba1d4b679802c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B003.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B003: Approve a small pilot charter and data lifecycle contract; current owning area product.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4468,12 +4500,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B003.md",
-      "bytes": 2562,
-      "sha256": "d962cb5c2473c74b8eae8da603b9f0414d4c7d3c09751ba83ba2e9eb96286217"
+      "bytes": 2690,
+      "sha256": "1296266c2085825f2895e25d1e9f3bd8e2c05ab7c63af2565fd211c4a6d4609e"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B004.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B004: Pin CI actions to immutable reviewed commits; current owning area supply-chain.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4484,12 +4516,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B004.md",
-      "bytes": 2067,
-      "sha256": "1bdbab0f5afa37dd2cc20a6d6b44bc2ec9315e2a83fa5a2d7bfdd7ef27b3429b"
+      "bytes": 2187,
+      "sha256": "cc1855e97815c324fbc2e1691861fddfa0b497cc5d54ffb91c5291449fe1969b"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B005.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B005: Pin web and API container bases and align intended Python patch versions; current owning area supply-chain.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4500,12 +4532,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B005.md",
-      "bytes": 2352,
-      "sha256": "29a0c300955c2fffa5818d7ef935d45023b97f2c8f1019531efae8f81043cf04"
+      "bytes": 2480,
+      "sha256": "8eb6d71b60b0048ecc39232560fd49dbf6f1ee7dd983bac5c676928b44451d1e"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B006.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B006: Reject plaintext external identity and worker transport configuration; current owning area deployment-security.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4516,12 +4548,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B006.md",
-      "bytes": 2420,
-      "sha256": "8b5a98eadc1165749bee7746dcd320ecb74e5e6d9682de59b4c2e24eb4b57cdb"
+      "bytes": 2548,
+      "sha256": "9d027c4fbe0ad85494b78636d935c0df1d5a94f85ff132bfa183eb2751adb366"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B007.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B007: Add a total JWKS fetch deadline with real transport fixtures; current owning area identity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4532,12 +4564,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B007.md",
-      "bytes": 2238,
-      "sha256": "eb3e3c3d0e13c552cdcb0f5d363d3bec31f29765a2676943c9aa21a047a06a99"
+      "bytes": 2366,
+      "sha256": "b420b29ddada86b033a9f5bed1df535d57e8571968bd2e0c73a62adacfd78c3d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B008.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B008: Describe protected endpoints with an accurate OpenAPI bearer scheme; current owning area api-contract.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4548,12 +4580,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B008.md",
-      "bytes": 2256,
-      "sha256": "0e580126c83e5a87ebd0863b4a28ffbc6e0e78ed153314bb7881b48e148a1a14"
+      "bytes": 2384,
+      "sha256": "4af3a4f030e296ba088ed2f0637f164b4db0083ef9a2882ed4b602b776261f2d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B009.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B009: Validate production worker credential strength before enabling internal routes; current owning area worker-auth.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4564,12 +4596,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B009.md",
-      "bytes": 2467,
-      "sha256": "ceec492fce805da65f1a20c15743166f8a10bd4bac6741f4c5c6e781496f170a"
+      "bytes": 2595,
+      "sha256": "08ab985174a7d05a8db3dbca289cf48dd80e7bd19667e89694f740626460858f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B010.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B010: Support bounded worker bearer rotation without an outage; current owning area worker-auth.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4580,12 +4612,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B010.md",
-      "bytes": 2382,
-      "sha256": "e9b302e48dad4fda2940e09a393de22d445e0ed6f928d60591ffa6d850dc7944"
+      "bytes": 2510,
+      "sha256": "bf330c1f5e6c3445f6e5d9cf39543019f1f8e493179d8feed7ed171594b4dd5f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B011.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B011: Introduce an explicit trusted-ingress identity throttle policy; current owning area identity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4596,12 +4628,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B011.md",
-      "bytes": 2224,
-      "sha256": "72754b59b722e690961223c990b9f86d5dd68887a44587c3e329879574805abc"
+      "bytes": 2360,
+      "sha256": "a4675c32b80161a4df779fbc8516638f16266c89fa8c074270f59cc43d85f766"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B012.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B012: Create a consistent private backup and restore procedure for both stores; current owning area storage-operations.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4612,12 +4644,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B012.md",
-      "bytes": 2580,
-      "sha256": "6b96e555ae99c49408afafe1d713d464462c159ae3bd1bed4b70251e8d6ac0c5"
+      "bytes": 2708,
+      "sha256": "2a48c3d82579812bfe156cdf09da2520393136f51cb4742acddd6f6525e225df"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B013.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B013: Introduce versioned transactional migrations for the submission database; current owning area storage.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4628,12 +4660,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B013.md",
-      "bytes": 2290,
-      "sha256": "9d1ce0979b269d1466dcb51c9d362469de3639dfbdfaf681bcd9a1a83ed2bb11"
+      "bytes": 2418,
+      "sha256": "5023c6ae0d1e2daed23865dcf17750132ae98ca49a8a037e7e715eb7e8eebe8f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B014.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B014: Add a testable email-verification delivery flow for pilot accounts; current owning area identity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4644,12 +4676,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B014.md",
-      "bytes": 2372,
-      "sha256": "0407af00ebe7528134857281e45d8ba704b7a861ace46ff85dce0ce154ca0069"
+      "bytes": 2508,
+      "sha256": "9f14db2d29994d4a3d64f43a133de4d16880660045b6b4e3ef4ac5e9a31a14c0"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B015.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B015: Implement password recovery with bounded single-use reset links; current owning area identity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4660,12 +4692,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B015.md",
-      "bytes": 2317,
-      "sha256": "927892b6a0932a6ac0830953ef9c4f4c1ef0641970e9b6575b9871bb0db570eb"
+      "bytes": 2445,
+      "sha256": "d14f17d407887c433e29119dc9084deef60fcabfb0719997639c22f853ab3206"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B016.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B016: Expose owned session listing and revoke-other-sessions controls; current owning area identity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4676,12 +4708,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B016.md",
-      "bytes": 2305,
-      "sha256": "61d86cfe0fc7193e887673b3d857e08ad8f96017a622615e6636e236643cd47b"
+      "bytes": 2433,
+      "sha256": "5b6f48b33b68103927a8f1b0d04086a892985f04794cae2f4f52fde159f302dc"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B017.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B017: Record privacy-safe account security events; current owning area identity-observability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4692,12 +4724,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B017.md",
-      "bytes": 2245,
-      "sha256": "26a8c96f4de1246f93cab430b9ffd3743416ff18211b5ff29c985432e94dab9e"
+      "bytes": 2381,
+      "sha256": "45f761ecf4835a45367457e409603274e9ab4d46adee7a8e3a0d0547f1f7d4bf"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B018.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B018: Implement deliberate account deletion across auth and owned submission state; current owning area privacy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4708,12 +4740,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B018.md",
-      "bytes": 2674,
-      "sha256": "c1e83e16e6510249471bc977b0ab6ef48b812a5da05eae94a9be242f960220fc"
+      "bytes": 2818,
+      "sha256": "d187469d2e0ba47e86279ef69af4478fbf6977e64c57d858ac602eac58275b08"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B019.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B019: Bound general API admission and concurrent slow requests; current owning area ingress-security.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4724,12 +4756,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B019.md",
-      "bytes": 2392,
-      "sha256": "daa970ebbbde8cc3931fb8f20d6a9e772d91eb22807abcb8112076bdfd89df6d"
+      "bytes": 2528,
+      "sha256": "62a087f6b2f55ae9aa57d52c8abaaf405e07005730f5fe91b29616dfffe5fc09"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B020.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B020: Add structured redacted request and failure logs; current owning area operations.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4740,12 +4772,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B020.md",
-      "bytes": 2454,
-      "sha256": "88c25204315a99fe206b940d9b9ebc7306e50f6377eb26de8ed8aa49c1f85f91"
+      "bytes": 2590,
+      "sha256": "fcd440219c3efbbd9bfbff89c4f15f0b8f1d62392ffdd8a810d2cef5a6093627"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B021.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B021: Expose private bounded operational readiness and queue metrics; current owning area operations.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4756,12 +4788,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B021.md",
-      "bytes": 2391,
-      "sha256": "c8b77a1e7aaca81dd79748ec87c41a71979ae68d6e43054b099f5d952638ce3c"
+      "bytes": 2519,
+      "sha256": "ed6c9c62e698793c5d30ed558a329fab2af082ecd53aeea2f67135111e401b33"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B022.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B022: Apply retention to terminal submission source with a dry-run purge; current owning area privacy-storage.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4772,12 +4804,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B022.md",
-      "bytes": 2430,
-      "sha256": "ae4560855dc2e2c358e54f9ed832c9bd9774e55445647829d908698321687065"
+      "bytes": 2566,
+      "sha256": "ba887c5f37b9298c395cb2fd2f382d3994de3fed79ba59ffa68ba1cf1acc5c5b"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B023.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B023: Enforce cumulative owned-source storage budgets at submission admission; current owning area storage-abuse.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4788,12 +4820,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B023.md",
-      "bytes": 2269,
-      "sha256": "4bc6190db3250592a3846c4ec65b7dfd416118393e5bc603e7d1b3630df695e3"
+      "bytes": 2413,
+      "sha256": "286ce308971b2f82890e518589c5204320db8a42a7fb7920e3073063b102ca69"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B024.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B024: Avoid loading private source for submission summary pages; current owning area storage-performance.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4804,12 +4836,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B024.md",
-      "bytes": 2051,
-      "sha256": "3af17ae5a49911339a5070dc48e37ac5134228e17dee8964272d3c2bb6c3e556"
+      "bytes": 2179,
+      "sha256": "246bbb0c052b3fe06485d67c92e42d8328974a000da146765a771ff5905cb1b3"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B025.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B025: Export an authenticated user-owned submission history bundle; current owning area privacy-product.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4820,12 +4852,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B025.md",
-      "bytes": 2571,
-      "sha256": "ec0bbd6e6cb971eb0cbce0f7989581a42a4e113b839bec8b617cb6aef8a3cd43"
+      "bytes": 2715,
+      "sha256": "f0a3b5dba0699c49da14712416320e72a64ff959e6920f9c6efb42e19f91e91f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B026.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B026: Extend problem provenance with explicit permitted-use metadata; current owning area content.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4836,12 +4868,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B026.md",
-      "bytes": 2510,
-      "sha256": "7108663c544cfbf46146df02dfc94cacf400fa229d2a2143cb5aa01ae9a86c53"
+      "bytes": 2646,
+      "sha256": "fd8fb57267581cf45268c025c7a11f034e5dc1acd345faedfccaa1f65784fe5d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B027.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B027: Version problem and grader identity on every new submission; current owning area content-contract.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4852,12 +4884,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B027.md",
-      "bytes": 2658,
-      "sha256": "aa7e401b5742295d3a00dbe6e90059743a7de3e526c0cfdbc69f5c4c3eb631b0"
+      "bytes": 2794,
+      "sha256": "65e782a7889a07f4ec527c7af34ac729c95808823607e181a6a28f7db94e8d28"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B028.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B028: Detect public-sample drift between catalog and judge deployments; current owning area content-quality.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4868,12 +4900,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B028.md",
-      "bytes": 2273,
-      "sha256": "23df35c152fe788c1e08d3fd24bbd0f0c4f7bc3c05c3e4a66a1fd0ce99282b17"
+      "bytes": 2401,
+      "sha256": "33ef764afb8830fc10da2c7fb65d0af2160d1166ed3d96a1c40817b97b3ce4f5"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B029.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B029: Validate trusted problem authoring inputs before catalog publication; current owning area content-tooling.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4884,12 +4916,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B029.md",
-      "bytes": 2587,
-      "sha256": "627566b0592a418ddaebde929f1587bb54e996ab88e49157baaf465b51d85db3"
+      "bytes": 2731,
+      "sha256": "910fabb6e04f347a5eed43a4b088d41f1be2b71e90e092b9b2979220fc072db9"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B030.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B030: Add one original prefix-sum range-query teaching exercise; current owning area content.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4900,12 +4932,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B030.md",
-      "bytes": 2636,
-      "sha256": "49f0797aed85e0768729994479aa9826218212992f48397b9eff23357eeaa935"
+      "bytes": 2764,
+      "sha256": "8a6c4e05b7eec59ca9118c7ba2665855fa03da36fe7dd7a719f57e156add9567"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B031.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B031: Use bounded server-side pagination for the expanding problem catalog; current owning area catalog.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4916,12 +4948,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B031.md",
-      "bytes": 2408,
-      "sha256": "420967e2aa0f07a942a3f2fd7ff0fcb47ee7640298ea6b9cb3248bbc6729fca2"
+      "bytes": 2536,
+      "sha256": "57fb2b3cef0a9a777ce8cf384560d02307fa55a94515c1f30126d9a2ae0bf5a5"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B032.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B032: Make catalog filters and page position shareable through the URL; current owning area catalog-ux.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4932,12 +4964,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B032.md",
-      "bytes": 2023,
-      "sha256": "1a34cc3ac1997c1e4d5b8696e003e11128b252a33a4a52d3fa9059553b149d56"
+      "bytes": 2151,
+      "sha256": "61c69feeee40441eb87d32982b5cb1ef17470eedde6326d0a713da1bbe37e492"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B033.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B033: Add explicit local draft export and bounded import; current owning area editor.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4948,12 +4980,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B033.md",
-      "bytes": 2119,
-      "sha256": "57b9423599f6d2920ac66c54ac76a99cbba7e633c45634a7d6aa5576b58b3101"
+      "bytes": 2247,
+      "sha256": "0673cbe8c3878db6ac76134a6d30c3a8c2d32fe63d1a3f1d9394544610223a40"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B034.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B034: Offer explicit draft ownership and clear-on-shared-device controls; current owning area editor-privacy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4964,12 +4996,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B034.md",
-      "bytes": 2443,
-      "sha256": "3f80caa2f2bb0e292af041bedfbbb18ef246d6d55dc7ff345aed245b5c7a1bf2"
+      "bytes": 2579,
+      "sha256": "fdace50d8b00470596272dc9e3dc437de80fcd37def61578303c685008766b59"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B035.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B035: Detect cross-tab draft conflicts before overwriting newer code; current owning area editor-reliability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4980,12 +5012,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B035.md",
-      "bytes": 2206,
-      "sha256": "3a7cc914fc21dad7e885665c5e261b8960cfda3c21a9e01d31bba26e19d8cdf0"
+      "bytes": 2334,
+      "sha256": "a5f62e2c60575e6d1c03ca422eee57d24c1515507006001fe8364e627a42d4b2"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B036.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B036: Add persistent editor display and accessibility preferences; current owning area editor-ux.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -4996,12 +5028,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B036.md",
-      "bytes": 2137,
-      "sha256": "6e17bd54e53f6d64287df20387de424ac3d18fea8888fa3e734a82561dbb514f"
+      "bytes": 2265,
+      "sha256": "3873e0f1a4d48cd649eca42d47ddc8fc682ce4c149625aa68270916023ce8e7d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B037.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B037: Complete keyboard navigation for the practice and submission workflow; current owning area accessibility.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5012,12 +5044,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B037.md",
-      "bytes": 2411,
-      "sha256": "a8c71de7baf8505a3854a5821e17e0443b2ffe87580564767b65e103b6b67b95"
+      "bytes": 2531,
+      "sha256": "867be74618f234d49b0b4f45105b2b5335a12adfcfaf56058053dd4bfc0a3f5d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B038.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B038: Improve screen-reader announcements and focus for asynchronous results; current owning area accessibility.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5028,12 +5060,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B038.md",
-      "bytes": 2562,
-      "sha256": "31db9d20369b8a0f09baa1326c6b97392a44339393f531cea6e04687f98d96ab"
+      "bytes": 2690,
+      "sha256": "612f1b23c668930f6a840d634677659ed7b50cd137d93231f900756f7624d852"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B039.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B039: Repair contrast, reduced-motion and zoom reflow gaps; current owning area accessibility.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5044,12 +5076,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B039.md",
-      "bytes": 2434,
-      "sha256": "28e424eda6b26171517e2f4755b37222adc54669eb9e08deb77ff91bcb9eb699"
+      "bytes": 2562,
+      "sha256": "f15c6e2a2f90c29bff7af9fe633fa2477709a1cd12997ae737683fd6a599c9d1"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B040.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B040: Add a focused automated accessibility regression gate; current owning area accessibility-quality.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5060,12 +5092,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B040.md",
-      "bytes": 2631,
-      "sha256": "f9e5d19746b0f6822541be538b32a1a26c81a92a3a33ab725c6f90e08419861d"
+      "bytes": 2775,
+      "sha256": "23b59226eb2e125a72dbb0fb3f716d203d4f7b364f39750f36ead9afed2a0771"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B041.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B041: Record the single-provider hint pilot activation decision; current owning area AI activation governance.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5076,12 +5108,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B041.md",
-      "bytes": 2079,
-      "sha256": "6fb04aa7cf10c4b9a8b5af4730be22fa4b25ce94ddba4f5993e251f0acccccb0"
+      "bytes": 2223,
+      "sha256": "ded439eda11b74da6e5c8663ebfb10885cda631852f2a40909e13371b162de2f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B042.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B042: Bound and fingerprint the existing public-only hint context; current owning area Safe model context.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5092,12 +5124,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B042.md",
-      "bytes": 1960,
-      "sha256": "81718f86bd39eb4b3f71041ed78057aa5d918c1c4e201b094199a6efbd413088"
+      "bytes": 2088,
+      "sha256": "7fd9e898a6e752ade52e07dbe120f4d2b0bd2b02adb84241791873a14f2c40ae"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B043.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B043: Validate trusted provider destinations and secret configuration; current owning area Provider configuration.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5108,12 +5140,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B043.md",
-      "bytes": 2060,
-      "sha256": "3689b8ef5c2c62aeefc6aba60ec08302f8032fc40ed9c60a611d5c1bbb8b1a9b"
+      "bytes": 2196,
+      "sha256": "d2f75d15d502498f61125f468a9c4adc4596773c433f5acd0fd22bb8f808348f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B044.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B044: Define an internal generation result and usage contract; current owning area Provider-neutral contracts.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5124,12 +5156,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B044.md",
-      "bytes": 1942,
-      "sha256": "7f10277e2dec7c3f05652a92f5afae6d82d729dc0f3ba6f19ff6b5e59f6a3210"
+      "bytes": 2070,
+      "sha256": "650c449e38058c0062b439aca16b3563a47a8d8066bc571e04d13466f2eca55c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B045.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B045: Version bounded hint prompts and spoiler policies; current owning area Tutoring prompts.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5140,12 +5172,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B045.md",
-      "bytes": 2041,
-      "sha256": "c84108b291e8850cae5616468d35785ff53a3fd7d1f795b45226a0166fcc9431"
+      "bytes": 2177,
+      "sha256": "d8a5a4464d7567fd69b9cbd1adbcca4627af98c51c1c14eeb10777b49222210e"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B046.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B046: Reject malformed model hints before constructing learner responses; current owning area Model output contracts.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5156,12 +5188,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B046.md",
-      "bytes": 2018,
-      "sha256": "15342119cd0f7457a5d48c450f53c8710942762ea1e4e3e0e3641cc72cff2843"
+      "bytes": 2154,
+      "sha256": "13901754bb40d78dc29c6081f70eeeee05433ecd1e2966bcfbdd8bee50f018e3"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B047.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B047: Add deterministic provider transport fixtures without external inference; current owning area Provider adapter verification.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5172,12 +5204,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B047.md",
-      "bytes": 2005,
-      "sha256": "36c0d9677831dabeba293928342534d3fc949f5b4dd0aae35394b88b8c3ccb3f"
+      "bytes": 2149,
+      "sha256": "e5b0135ea0b6f587a5c22edd7cf00d2f82f71c652dcbbb31da0f4a2291184792"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B048.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B048: Implement one opt-in bounded asynchronous hint provider adapter; current owning area Real provider transport.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5188,12 +5220,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B048.md",
-      "bytes": 2252,
-      "sha256": "10d41521f51f84fcaea341e8a697deb8f57aa2b6bcb815620baa66cbdf4df659"
+      "bytes": 2404,
+      "sha256": "e84d3a6b70029bd34e1b5a74be820740b352b114c83ca191c3c1c5bffdc97b66"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B049.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B049: Enforce account-level entitlement before model-backed hints; current owning area AI admission policy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5204,12 +5236,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B049.md",
-      "bytes": 2168,
-      "sha256": "e759fb960a631a33ecf9167196af7f54a75badf22abf16935031990d3a2de5a2"
+      "bytes": 2320,
+      "sha256": "61f4e777cbe3c130115992b984a69d5d66dab5c4c63a206d98406170e83d63b2"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B050.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B050: Reserve and reconcile durable per-account hint budgets atomically; current owning area AI token and request quotas.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5220,12 +5252,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B050.md",
-      "bytes": 2120,
-      "sha256": "81e8ed921191ae4ea4e45afab6cb2839b4d17d21bab4d689593ccf4fcb7ea7a3"
+      "bytes": 2264,
+      "sha256": "972cfe98f944be2e81ecc524345dbe3fead9395c6c131c97050a3c1951665eb5"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B051.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B051: Add process-wide provider concurrency and monetary admission ceilings; current owning area Global AI spend control.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5236,12 +5268,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B051.md",
-      "bytes": 1948,
-      "sha256": "57ac01a922a39f33a849980b5dd19d627acd803eb31fdf39c0596668a052ecc1"
+      "bytes": 2076,
+      "sha256": "c648ac8a7d52ab180e616379d092aea3ad9aee30ab139a4ef443584736f0355b"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B052.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B052: Deduplicate model hint retries with account-scoped idempotency; current owning area AI request reliability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5252,12 +5284,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B052.md",
-      "bytes": 1913,
-      "sha256": "cd6377b9a6db2b860874b2b0437937ff441e29e9a0db7ad9757aae2d7042794a"
+      "bytes": 2041,
+      "sha256": "3935d5cca6796c2bd2f8627de0a394fb261beb452d302e82af9d9b8342046283"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B053.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B053: Record redacted generation usage and failure telemetry; current owning area AI observability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5268,12 +5300,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B053.md",
-      "bytes": 2114,
-      "sha256": "cabe07e319d06948edddbe2c0ba4d853954d117fe48145202b6166acb95eacf0"
+      "bytes": 2258,
+      "sha256": "51c74e450ee9a768997d7f7629c41731c2c80a389aadf8328d2388b95222ea70"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B054.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B054: Propagate total generation deadlines and explicit cancellation states; current owning area AI cancellation and deadlines.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5284,12 +5316,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B054.md",
-      "bytes": 2187,
-      "sha256": "b56fed3c7f47b7a649674e17d17fef72225acf0611e89d071dfb90565331a1db"
+      "bytes": 2331,
+      "sha256": "e31cafaa843010d45482a6a70a16c3be2098c852c5c2bb9115fae33991d5b9af"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B055.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B055: Bound provider retries and add outage admission state; current owning area AI failure policy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5300,12 +5332,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B055.md",
-      "bytes": 2010,
-      "sha256": "f487fa7b2262869fa9ba1223d8899ae9d2cc60927b3d2a663b2e4a87a0649cf9"
+      "bytes": 2154,
+      "sha256": "5c85dc219754483a73e1f308dfc7cf008dab8d97467d13724f489bcb675ea947"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B056.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B056: Require clear external-AI disclosure before opt-in hint requests; current owning area AI privacy UX.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5316,12 +5348,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B056.md",
-      "bytes": 2199,
-      "sha256": "b98d10969fe561454d560e5426078dd746f7e690ef9c634fde1e43354853beb4"
+      "bytes": 2343,
+      "sha256": "4f305d2939585aef48fe95815ba42bd0aad8f30c427358f30d7b12e0656ffbd1"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B057.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B057: Provide a tested operator kill switch for model hint admission; current owning area AI operations.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5332,12 +5364,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B057.md",
-      "bytes": 2129,
-      "sha256": "8bb9ceee9316f7b3926eb06ec997daad0f4ed8885734aff6e01128954b2bbea7"
+      "bytes": 2281,
+      "sha256": "d32cfcba2630629884bf2f7d5e3845fbb96c497c711c68ddd1e597382737d537"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B058.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B058: Add shared golden fixtures for hint API and browser schema parity; current owning area Cross-runtime AI contracts.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5348,12 +5380,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B058.md",
-      "bytes": 2081,
-      "sha256": "951f78cf4f243f4e37abfb649f56f1f851a34430a7ad34d1089f636e73ace5bc"
+      "bytes": 2217,
+      "sha256": "88ebad502492260debbf4fd8c0af4b699e54d22d8ac76e42832df46064c2de24"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B059.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B059: Define and execute a small consented model-hint pilot acceptance gate; current owning area Hint quality pilot.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5364,12 +5396,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B059.md",
-      "bytes": 2430,
-      "sha256": "6011946644cf78dda07a61005981cd2173b10a09b6890c1318dc22beec21a8ce"
+      "bytes": 2614,
+      "sha256": "31f0e0c80c83c4b362ef4989b580358bcc903c69b6f7f8eaa4c949e2d38c1d2c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B060.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B060: Design a bounded tutoring interaction contract beyond hint levels; current owning area Tutor interaction design.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5380,12 +5412,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B060.md",
-      "bytes": 2001,
-      "sha256": "cc39e550653f6f0b007b2447e9decfe57c311b061cd256e4a51542b09692e652"
+      "bytes": 2129,
+      "sha256": "31278450e5104cc6858a826e670e42acf6b6b3d19e880497117ebae6bd28014b"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B061.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B061: Implement account-owned expiring tutor conversation state; current owning area Tutor context lifecycle.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5396,12 +5428,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B061.md",
-      "bytes": 2094,
-      "sha256": "1bc8b6cecbd72b8cb4f390f44bb5ba5c026bac2431abe1159dcbeb696bb847f0"
+      "bytes": 2246,
+      "sha256": "91fb36784a77882b87b31127adffa7b77acdfdeec877b55bcfdf564c33b58908"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B062.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B062: Add a consented concept-check interaction with bounded feedback; current owning area Evidence-oriented tutoring.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5412,12 +5444,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B062.md",
-      "bytes": 2113,
-      "sha256": "22c5cb6f5fcd67056a39b584c2762717de4ff6ddc5f32f090f50c891178103a9"
+      "bytes": 2249,
+      "sha256": "e45f4728e56fa16fd09d98f1d73ba998e50e021a267912533e10c405759a7278"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B063.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B063: Collect minimal account-owned hint quality feedback; current owning area AI feedback and correction.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5428,12 +5460,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B063.md",
-      "bytes": 1986,
-      "sha256": "3bb021b2e28ad3db600c7991c1e8bad3c081e2a35ddccbe16971311fb821eff8"
+      "bytes": 2122,
+      "sha256": "e4fbbb16496d89caaa361144fd2f3e46d6bc9f9e4e2f962b2863651a1fae3f22"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B064.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B064: Define explicit source-sharing consent and owned debugger input; current owning area Debugger privacy boundary.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5444,12 +5476,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B064.md",
-      "bytes": 2317,
-      "sha256": "8d3cf9b916b2d4d1777c4b514e3ac1b658a736dd8b7245c16dd965d121c459d6"
+      "bytes": 2469,
+      "sha256": "83098717f0896106cc9bf66e79a479d007248c869a063765c73ff679f1ca8741"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B065.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B065: Build a public-only execution evidence projection for debugging; current owning area Safe debugger evidence.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5460,12 +5492,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B065.md",
-      "bytes": 2106,
-      "sha256": "8ad9c1443577021a6594179305abc919253aeb54f3684356dccaaf2321d45f0d"
+      "bytes": 2242,
+      "sha256": "813775a559157491ed9be2ee63f02bfd5da2d82a05b30f40b92f8fa5f5ec5315"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B066.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B066: Return debugger hypotheses separately from observed failures; current owning area Evidence-backed debugging.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5476,12 +5508,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B066.md",
-      "bytes": 2168,
-      "sha256": "5d00c477957b200e023151a6eeeda17c125e205c2c9c3309494fcce7a17d944e"
+      "bytes": 2320,
+      "sha256": "0562cd66cb88db5dfa3c836a94e82c0002c929e0bd5d2d5a215be716fb53051f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B067.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B067: Show a source-hash-bound debugger patch preview with explicit apply; current owning area Debugger editor UX.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5492,12 +5524,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B067.md",
-      "bytes": 2016,
-      "sha256": "5464d2e58dc645e6b53d8eefd23738aee4e401137ddd56949509b9af50a9879c"
+      "bytes": 2152,
+      "sha256": "d0f12b0738fcfea2fcb4930528e2671043641762c04cf9e36ea7aa32fb30634c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B068.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B068: Version authorized solver problem specifications and evaluation modes; current owning area Solver input contracts.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5508,12 +5540,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B068.md",
-      "bytes": 2351,
-      "sha256": "00beaa65da0e1ab56619b94acbc4c950ac5879ffa5dbbf1ba70a69adc44cc95c"
+      "bytes": 2503,
+      "sha256": "625d6db6246d7759edba9429e6a10fee044411d317b665a9e5f7a91f6719dc83"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B069.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B069: Generate a bounded algorithm-plan record before candidate code; current owning area Candidate planning.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5524,12 +5556,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B069.md",
-      "bytes": 2163,
-      "sha256": "f3f718d707c7c1c9fe2e8dc4fb71bd90bb92f6734a15730ba6c9d6b863def33d"
+      "bytes": 2315,
+      "sha256": "09809055cdba537af8f84a05ea444abfd06002b3b0a19df916d370f3f471cfda"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B070.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B070: Normalize bounded source candidates without archive parser assumptions; current owning area Candidate generation.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5540,12 +5572,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B070.md",
-      "bytes": 2193,
-      "sha256": "cd88f7a990e8d6046a58558157fa80907a8b2ee718258686a0911c02dc0ecbaa"
+      "bytes": 2337,
+      "sha256": "13d89f9e434ba88214fe8c93628129531124919c8273a1924c0ef7a4762043a4"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B071.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B071: Route authorized AI candidates through the existing isolated judge boundary; current owning area Solver-to-judge integration.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5556,12 +5588,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B071.md",
-      "bytes": 2540,
-      "sha256": "08c8047444365fb20bf4caf1ca5101847fe9f98a0d3bcc75af2d6b476392785e"
+      "bytes": 2724,
+      "sha256": "72a7a674d197d51e579f3fdaaa017a9ccb62265b83c31228c8c5a38a77d8c7c3"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B072.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B072: Implement a finite repair state machine with one shared run budget; current owning area Bounded solver repair.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5572,12 +5604,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B072.md",
-      "bytes": 2167,
-      "sha256": "100a1ecb4dc47f1285f76199d5d32b9c66aafaf2a1d0ee48f61781bb78f9b415"
+      "bytes": 2319,
+      "sha256": "045c8fad4014c7591f62adc66dbfc2671414cb32989f970ca941fe07aaaffd95"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B073.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B073: Rank candidates by explicit execution evidence with deterministic ties; current owning area Candidate ranking.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5588,12 +5620,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B073.md",
-      "bytes": 2098,
-      "sha256": "27480896b3bd2c30f64a466f520b07784e9d8dc6cfe150eaa4fcf7b9ba732236"
+      "bytes": 2242,
+      "sha256": "c06ae8621dc976b8bde43dd58154ad93b9c52ed2d9ce210b1dbd30e87684e200"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B074.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B074: Create a reproducible offline solver evaluation run manifest; current owning area Solver evaluation.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5604,12 +5636,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B074.md",
-      "bytes": 2302,
-      "sha256": "a34555568e822b2555474f22735c48a5c2bedefc8f7578dc645c5e93bbf7f577"
+      "bytes": 2454,
+      "sha256": "4a4c0ce2fd20cc912d84f40a52a7cf13082e120000bc356480225dd7e0675cf9"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B075.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B075: Admit only reviewed differential and metamorphic test specifications; current owning area Authorized test generation.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5620,12 +5652,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B075.md",
-      "bytes": 2217,
-      "sha256": "8683ba3289b2156b1848b2f85f9fb20b4afb3c868b1c7c39a845e95d202952e2"
+      "bytes": 2361,
+      "sha256": "5ca1b89c2da04a14c20d5c4f123b233b815be5fb9896e863eb4fb4eb61ddcf51"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B076.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B076: Reduce consented public counterexamples under a finite execution budget; current owning area Counterexample debugging.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5636,12 +5668,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B076.md",
-      "bytes": 2204,
-      "sha256": "d3be0a7a1df83fa43caf5e994520b0c0023c30fde6c4395f09162b90458ae01f"
+      "bytes": 2356,
+      "sha256": "eef6b2a850d4a30234fa9b98f3babdb32e35a8b34948e39dc301285c53b06649"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B077.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B077: Separate evaluation splits and report archive contamination candidates; current owning area Evaluation integrity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5652,12 +5684,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B077.md",
-      "bytes": 2285,
-      "sha256": "e26499ac071a8d951836682c8872c6ad285c9039f73f058d75442c6034b1b621"
+      "bytes": 2429,
+      "sha256": "30d4b1eefd8bb897ffdade75eae0c281e7dbf0c3b55fc57e56b8d71220779b60"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B078.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B078: Register dataset and model permissions separately from source licenses; current owning area Research provenance.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5668,12 +5700,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B078.md",
-      "bytes": 2346,
-      "sha256": "f27526c0896bff06dbaf910daab5f00f1744566ee58df4ae2dd66a8c26b48671"
+      "bytes": 2506,
+      "sha256": "fadd234a7806cf9728205180ac80692101ca49857dd016071a3fa5c428e47e06"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B079.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B079: Produce a resource-and-integrity feasibility decision for one self-hosted model; current owning area Model serving research gate.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5684,12 +5716,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B079.md",
-      "bytes": 2335,
-      "sha256": "1bdd3738e871af8f0e205deb5fbd44e0a1c9d7050d443937fdcd93be8c60e16d"
+      "bytes": 2471,
+      "sha256": "8ee439c9651fb505d6ba3ed37e256a05600ff82d8a6655420153651f683f228c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B080.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B080: Add an explicit admission gate for reproducible fine-tuning experiments; current owning area Fine-tuning research controls.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5700,12 +5732,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B080.md",
-      "bytes": 2459,
-      "sha256": "abd693a8b601056d34eed329cd31d3aef4d7d656ac2ad696ffe8cacecf2e2ec2"
+      "bytes": 2611,
+      "sha256": "c6e264bc2d35ca2983f4d2bcd4554c589aa796f371d8b124627300506f08c98d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B081.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B081: Implement contest lifecycle and authoritative event timing; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5716,12 +5748,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B081.md",
-      "bytes": 1910,
-      "sha256": "5b0837579e2c45593620878b02cbe5d6028e42fbeea148d977c7e35d459c0270"
+      "bytes": 2046,
+      "sha256": "4ed57a39bc8b7a6c6d540d957a912c6bac7c3f7cdf951e6e8b477cb0db00b028"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B082.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B082: Add permissioned contest registration and eligibility checks; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5732,12 +5764,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B082.md",
-      "bytes": 1826,
-      "sha256": "4c449fb1d4af7349e2286aed88c708083faa7bcf3515ba7d5e249cebeafb3b8c"
+      "bytes": 1954,
+      "sha256": "223352a78586da1fcab7709faffe0c8090d391aad4fa6c7da91b8d191284479e"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B083.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B083: Freeze versioned problem sets for each contest; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5748,12 +5780,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B083.md",
-      "bytes": 1966,
-      "sha256": "33b04fb199b667766143dfbc00dab769e27e983517a4a15e5d8404e80ead3384"
+      "bytes": 2110,
+      "sha256": "7afc7263753e7400e35ef56fc550c03f01b546c87fe784a3296e81e68b9ecb59"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B084.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B084: Implement deterministic ICPC scoring as a tested pure calculation; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5764,12 +5796,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B084.md",
-      "bytes": 1799,
-      "sha256": "311d39ed4e5540956a33d626ed32458da6b3de69f6847758ac78dcc74af20b3e"
+      "bytes": 1935,
+      "sha256": "9ffab30821033f8f8373b9c2c9139350140ac2b4df8939ac9351fe861bf2471e"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B085.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B085: Add participant and organizer scoreboard projections with freeze rules; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5780,12 +5812,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B085.md",
-      "bytes": 1707,
-      "sha256": "c1d412d1f8233d5574f81ee70c619cb28af99453a0c6f9e621970cd9a5bbef68"
+      "bytes": 1835,
+      "sha256": "ea15b07de3914a4268f70852dccfde2a7de0967ea3a1fd8a9b1d8ae7177557a2"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B086.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B086: Connect contest submissions to event eligibility and immutable attempt context; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5796,12 +5828,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B086.md",
-      "bytes": 2215,
-      "sha256": "0002260566bfec902d8b3d4d67eb0a791e1e2a99b47685f7d2cb7023f68b0947"
+      "bytes": 2367,
+      "sha256": "9465824076f0f1a1417deb93235e5d82cbcb4bfbcbbbff5c7ba013b0cd215572"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B087.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B087: Implement isolated virtual-contest sessions with personal start times; current owning area contests.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5812,12 +5844,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B087.md",
-      "bytes": 1941,
-      "sha256": "00d5416c6c4dddc84a6af4e68bcf2e16cfcd6b6db67bc189b0e69f88ebe46268"
+      "bytes": 2093,
+      "sha256": "6731d29d402c3b34ba56553cd3199eb68d70853833851172db1594e645079295"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B088.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B088: Add locked ICPC team rosters and event membership rules; current owning area teams.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5828,12 +5860,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B088.md",
-      "bytes": 1711,
-      "sha256": "1fbf8eb469b9cffca28ce9c4bffbdbe3ccbf6b622a8937f32e9229d7c5f989fc"
+      "bytes": 1839,
+      "sha256": "23c42abca853df4589f5a0fc96406aa84bfc61fbf127c3e5ac10c23e00d5860c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B089.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B089: Scope contest attempts and source visibility to authorized team members; current owning area teams.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5844,12 +5876,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B089.md",
-      "bytes": 2008,
-      "sha256": "35072919c9971c4ae65ef58459891873d2263bda36fdbe7bfa6357c18c90a9ec"
+      "bytes": 2144,
+      "sha256": "e2516ac6a5ff74e01141ec2c2149f1abb260ac90b80a44ff5ca3c4f14bc1be02"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B090.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B090: Enforce contest assistance policy across hint and submission routes; current owning area contest-integrity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5860,12 +5892,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B090.md",
-      "bytes": 2155,
-      "sha256": "b59b58c85552806afffc23aca2b998c36c98b66799bf2c284588c716c79b3c07"
+      "bytes": 2307,
+      "sha256": "6b3f4f4fd4219b559c05ba0c7a14b86a6f4ba12f2e3c15cfef7f6542017c10a3"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B091.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B091: Build an organizer workflow for contest draft, preview and publication; current owning area contest-admin.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5876,12 +5908,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B091.md",
-      "bytes": 1879,
-      "sha256": "bf54286c7108d4d1b772afc4d30235846604b1ff3f45f0dca6cb8dc61bb980ae"
+      "bytes": 2031,
+      "sha256": "426a0f84d370e23c7cfbfc35824802b169bcb9198400bc948ef080190b8fc73c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B092.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B092: Implement audited contest rejudging with immutable verdict revisions; current owning area contest-admin.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5892,12 +5924,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B092.md",
-      "bytes": 2040,
-      "sha256": "422ac7789b737691e714be59db9067f3cab6d24ba29abe7f860a0439f17c7293"
+      "bytes": 2184,
+      "sha256": "84b12d1671db5b43b497bb6fa62f7b98587a6099e953fae70efe3b31a25e6f68"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B093.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B093: Add contest clarification and appeal records with controlled disclosure; current owning area contest-admin.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5908,12 +5940,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B093.md",
-      "bytes": 1950,
-      "sha256": "ed8abb37623a221c1e39f5affc508203fbcfaec40fd55c95cc0ecc4ce488ff5a"
+      "bytes": 2086,
+      "sha256": "0a3901ec5ae5b2cf9170ca7533d5eedac2d466aa93b594ec13239a0a7c4d802c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B094.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B094: Deliver bounded scoreboard polling with consistent event revisions; current owning area leaderboards.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5924,12 +5956,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B094.md",
-      "bytes": 1959,
-      "sha256": "96f1b7252904238fbc550043f54b318bdea814e6dcc715ca904b1aff920cf191"
+      "bytes": 2103,
+      "sha256": "60db96c512a2ef359f04313a90354707b9d46ab97e14ac2d45eff31c694b8c46"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B095.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B095: Create a reproducible contest rehearsal and official standings export; current owning area contest-release.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5940,12 +5972,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B095.md",
-      "bytes": 2081,
-      "sha256": "54b03c92b2896ba7a86df6ab93b0857a57cbe04a16918e4b89ce2845cd37513f"
+      "bytes": 2233,
+      "sha256": "c4fbee777c1ab67cf76d73d3ab80c54e9863068d1533fa069f9ac4b51199505e"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B096.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B096: Version output-comparison policies without changing existing verdicts; current owning area judge-validators.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5956,12 +5988,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B096.md",
-      "bytes": 1940,
-      "sha256": "59bd323706e26a681bbb2d637a673bb0c7f900327e0a1a44b14b61a546cc7333"
+      "bytes": 2076,
+      "sha256": "b734328c2431569d48e6b53cf7c6c8f7d7128d5fd751993ed3a811dc8bc0cfda"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B097.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B097: Add isolated versioned custom-checker support for authorized problems; current owning area judge-validators.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5972,12 +6004,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B097.md",
-      "bytes": 2182,
-      "sha256": "abad8121ffcb60d339ba5c97ef3b4825677072955cb44413f074822b4c6f8e55"
+      "bytes": 2326,
+      "sha256": "687fb239a31081eb86c1484001610b871fe76981fe221e8c840f4c98746de5f0"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B098.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B098: Implement bounded floating-point answer validation; current owning area judge-validators.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -5988,12 +6020,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B098.md",
-      "bytes": 1785,
-      "sha256": "c74965743f52e83dbcddc5a9b140f982836e40963a8305d7694985064246a86f"
+      "bytes": 1913,
+      "sha256": "df5340656cdfc5c6ae0cfb4426d000386f5d5f15a518f55b4d83dbb87ba6933f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B099.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B099: Introduce explicit subtask scoring for separately configured events; current owning area judge-validators.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6004,12 +6036,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B099.md",
-      "bytes": 2099,
-      "sha256": "f520d295d9084f0a6ff0e4f8e93b6e8e0220502e4974521f7aa2f0b5c7c44c0c"
+      "bytes": 2259,
+      "sha256": "71be14d8b9282a51d8cfe7bfbc671fcd24846ba36079bceca866d363275b9a2d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B100.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B100: Add an audited C++20 runtime alongside existing C++17; current owning area judge-languages.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6020,12 +6052,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B100.md",
-      "bytes": 1998,
-      "sha256": "58393bf7996a4be4e50e3ae156427586fd4e486a71eeabc61bedd8c8810893a8"
+      "bytes": 2142,
+      "sha256": "9e28ea6f9f76c8a839db30c23473504ca85f5437009ee108d2529864116f11b2"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B101.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B101: Add isolated Java support with explicit JVM resource semantics; current owning area judge-languages.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6036,12 +6068,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B101.md",
-      "bytes": 2166,
-      "sha256": "caebbda72f7d0c7ce881daab7052b15c3710049fb7449a69061b11de7c09f1cd"
+      "bytes": 2310,
+      "sha256": "f9646df09868bfde984127458ea443d39a64da0baaa9967a64a2a4b5dce2eb2c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B102.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B102: Add isolated JavaScript support with denied network and bounded runtime; current owning area judge-languages.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6052,12 +6084,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B102.md",
-      "bytes": 2118,
-      "sha256": "084583c2c3792e9e22875f345276cd2f55ed367353d8518e25fb7ee00a159c70"
+      "bytes": 2262,
+      "sha256": "7387583046fc43ae95349d0ff1b6d866227f64ab7eb5140175fa65af9f8fc18c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B103.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B103: Add isolated Go compilation with offline standard-library execution; current owning area judge-languages.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6068,12 +6100,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B103.md",
-      "bytes": 2043,
-      "sha256": "b1120f85fa86a1c83d7bc61b1c622800dd2ece8b37e2e00ad545c96d22c086aa"
+      "bytes": 2187,
+      "sha256": "4e218e127cb31a12f131e61da291759940cbdf9234d26d0980a552a52b064794"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B104.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B104: Add isolated Rust compilation with a fixed edition and no dependency fetch; current owning area judge-languages.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6084,12 +6116,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B104.md",
-      "bytes": 2078,
-      "sha256": "d703ad73b1c393f73f0e52af71d81980739adcbf9533cc0452c8f10ffdabc122"
+      "bytes": 2222,
+      "sha256": "6e635a63ab53350debad98fe0a9e4b59a4c0aae4fb09fc4ce1f936f9e07ee2e0"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B105.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B105: Add a bounded metrics exporter consuming the existing private operational surface; current owning area operations-observability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6100,12 +6132,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B105.md",
-      "bytes": 2272,
-      "sha256": "a5bafbc1b40aab9d336e212b912fe73a5c39f672526f9c1d8e58b043883e8080"
+      "bytes": 2408,
+      "sha256": "727271dd57b5af95a946d4c9b56deca503512aab7489bf95ceeb41ceacf9a9be"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B106.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B106: Propagate redacted correlation identifiers across accepted jobs; current owning area operations-observability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6116,12 +6148,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B106.md",
-      "bytes": 2248,
-      "sha256": "102a763c715d0f6d9bcc10e5ab0c648f7a8a01de38c680b25efc91608c3cc878"
+      "bytes": 2392,
+      "sha256": "4e04f54ba1f3e2e46cf28af2610ee9aa60cd1d712306cd3b1b8b0d055443c430"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B107.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B107: Define measurable service objectives and test operator alert rules; current owning area operations-observability.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6132,12 +6164,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B107.md",
-      "bytes": 1998,
-      "sha256": "f1b0fe3b979d80ca32a16533ed8b3cbf3d2052648059c332680106dd70190f90"
+      "bytes": 2142,
+      "sha256": "1e0a6e42fe269ee2b21f2cff2a3623aa64c7acca0e7e72e73b6096f23b11fc47"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B108.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B108: Rehearse a timed full-stack disaster restore using the approved backup helper; current owning area operations-recovery.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6148,12 +6180,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B108.md",
-      "bytes": 2381,
-      "sha256": "676303980b4299e8731e6add36b14856598f720a1c874f640b6d85879b0a9d4e"
+      "bytes": 2525,
+      "sha256": "0e93f280ccd0545718f7867784c8ccd1991b339fd747fd94c3687430c7f2c05f"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B109.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B109: Measure bounded capacity and overload behavior using original fixtures; current owning area operations-capacity.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6164,12 +6196,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B109.md",
-      "bytes": 2069,
-      "sha256": "a556e8489a1a342493edc99525b9b6c5312eab96721774e86f4445975d58f331"
+      "bytes": 2213,
+      "sha256": "41f5ed8480f9e4d8135d35670f65decd9f95af4a0a70d705df4ab0f624270be3"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B110.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B110: Implement a revisioned deployment smoke and rollback rehearsal; current owning area operations-release.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6180,12 +6212,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B110.md",
-      "bytes": 2135,
-      "sha256": "053fe04429bcfcbfd20cbb66a077ecaa0c553a569c589fef8f360dfe74a5a7d5"
+      "bytes": 2295,
+      "sha256": "0155641bba1e7c80b1b4ccf625a078211977a96aedc05eb6ef573041155624a9"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B111.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B111: Create a canary qualification gate for judge runtime upgrades; current owning area operations-release.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6196,12 +6228,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B111.md",
-      "bytes": 1995,
-      "sha256": "7b005dbdfc08c4980e4c58c16e4a7480c2043091322a62ac0203c1469fc575d4"
+      "bytes": 2131,
+      "sha256": "3f2fbf6f762a7c1a5bdd5cc7fe75b03ac9780b35b6d8c5321f168d188027cf3c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B112.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B112: Run a bounded incident exercise for worker outage and recovery; current owning area operations-recovery.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6212,12 +6244,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B112.md",
-      "bytes": 2268,
-      "sha256": "18b59ab64d0ae462559f0ce57a888977807b09d0f10c9e872be684af5786853c"
+      "bytes": 2428,
+      "sha256": "e7734663fc6bb745d958ea0ce8e2a23e005e9a3be04e3fa0f0d81b7e914c1199"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B113.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B113: Provide learner-controlled progress summaries with assistance provenance; current owning area learning-analytics.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6228,12 +6260,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B113.md",
-      "bytes": 1969,
-      "sha256": "45f78e425e6722edd832f39ecaad4952714fee40d78f5ca68d2911a77d0cb2b2"
+      "bytes": 2105,
+      "sha256": "da9364004512423396b1bffacd49ced15afd954ed01fa5547f6fc2944afbc7a4"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B114.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B114: Add editable practice plans and deterministic review reminders; current owning area learning-plans.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6244,12 +6276,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B114.md",
-      "bytes": 1797,
-      "sha256": "b7c8a8bd938d034461cceaa1ba67343783ef1588131cee3a20e5a25a410beb63"
+      "bytes": 1925,
+      "sha256": "2923636274409c6fce1b4ca6abaabe2b7bda4d0300c07742d1eef9b83d83cb3a"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B115.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B115: Implement opt-in coach cohorts with explicit sharing permissions; current owning area coaching.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6260,12 +6292,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B115.md",
-      "bytes": 1888,
-      "sha256": "b0e6b5475f36cac420da379c26fdb9af72e3ef4e4a00cf9d4f9fa64244a43659"
+      "bytes": 2016,
+      "sha256": "ff462f8badc941b6ff6950929dd17eb1c9a8cfc82ecf408841fe948aeb479895"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B116.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B116: Add permissioned assignments and human rubric feedback; current owning area coaching.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6276,12 +6308,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B116.md",
-      "bytes": 1930,
-      "sha256": "4751efa84b5d9cb4d3a6a858e75048563335515bf31bd84e382194635a1e49ff"
+      "bytes": 2066,
+      "sha256": "dc018a673fa8289c48898095382f3d65e051b467edd510ec17d42e90ea913d4d"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B117.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B117: Enforce institutional sponsorship and learner data-use boundaries; current owning area institutional-privacy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6292,12 +6324,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B117.md",
-      "bytes": 2212,
-      "sha256": "574e4ad1dd7d8d222bb930cd062358a0b6427f3eba840c572bac80cc1263e0e9"
+      "bytes": 2364,
+      "sha256": "e8fc8dc540c1a7667589302db3cbf484e91fc9b72fedee75b3c6de8f97291ad9"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B118.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B118: Export institution-authorized assignment records with redaction tests; current owning area institutional-privacy.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6308,12 +6340,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B118.md",
-      "bytes": 1934,
-      "sha256": "87b0f0b4b1865f0a5f6280ea9caa1911c3bb545d34f2251352f59f8f450fff2c"
+      "bytes": 2070,
+      "sha256": "e080adfad5bbd93446ccbcef38e5e82d31d460aa2ec5ee5406822206e58ed4c0"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B119.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B119: Produce a redacted pilot cost ledger and resource-envelope report; current owning area business-operations.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6324,12 +6356,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B119.md",
-      "bytes": 2235,
-      "sha256": "40151059c90068501bc91ae85099cd284c6a66ac70be92d230cc7959914d5c58"
+      "bytes": 2395,
+      "sha256": "bd33a21d06521a1bb700fdbd1b631061aeb1b6db0b59b7f786201d6684296c55"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B120.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B120: Extend existing pilot grants with expiring institutional scopes; current owning area business-release.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6340,12 +6372,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B120.md",
-      "bytes": 2690,
-      "sha256": "7b97966505282709a292cde639a4f9f8a1d3e388ea76cd31f94d8653bf01386d"
+      "bytes": 2874,
+      "sha256": "36de6df3dd56c801d62095056abae4a971420559d9303e4c3a698cf7416c30f8"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B121.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B121: Persist owned sandbox records and reconcile crash-orphaned containers; current owning area judge-recovery.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6356,12 +6388,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B121.md",
-      "bytes": 3195,
-      "sha256": "258f57f4dac4b5ffcd03bc78c3591071dd381153d89ab7fba7ca4547f45b4038"
+      "bytes": 3323,
+      "sha256": "a74cfd0ad18e4ea4743aa97925554720d63ea8a36c5fda74076dfb91860db1f4"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B122.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B122: Bind controller credentials to registered worker identities; current owning area worker-auth.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6372,12 +6404,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B122.md",
-      "bytes": 3221,
-      "sha256": "50e15628308adfdf1812adfeaeced64a922334ebd3fe43c56d4bb5600698fad4"
+      "bytes": 3365,
+      "sha256": "aa64e686e3cc89681dfa2d4bced6557fc425ca70d6c7f301b0a44e42184b9a87"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B123.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B123: Enforce an atomic active-lease allowance per worker principal; current owning area judge-admission.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6388,12 +6420,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B123.md",
-      "bytes": 2847,
-      "sha256": "d666094920b2c0d4c3b40168871211a14f3ea8b94e5815fa74e5066ad0aae1fa"
+      "bytes": 2983,
+      "sha256": "d69a57fb2373f03dcdcec25c8004e58dd1e898235c783849136de3a7ce40186a"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B124.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B124: Require a verified aggregate resource envelope for a production judge host; current owning area judge-isolation.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6404,12 +6436,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B124.md",
-      "bytes": 3566,
-      "sha256": "2f8d0dd26ec65959b5e0cdcf5dc498c4c1e8bc4cf94653484544258472741d6d"
+      "bytes": 3718,
+      "sha256": "3abdb28b71671ef42d7a215ee577c5ba1345622ed9c63c3cdcd2432e385638da"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B125.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B125: Gate production readiness on an approved supported runtime identity; current owning area runtime-maintenance.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6420,12 +6452,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B125.md",
-      "bytes": 3162,
-      "sha256": "31587af4f7230632c12eeffc663a999bbba6df141f4a47cedbbe436e379ef320"
+      "bytes": 3290,
+      "sha256": "eacee8ccfedb6eaee40ffbfbe2c9919d0068411431b3df85e7ced75bf9ff9d7c"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B126.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B126: Withdraw worker readiness and reconcile its current lease on retirement; current owning area judge-lifecycle.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6436,12 +6468,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B126.md",
-      "bytes": 3443,
-      "sha256": "a2b621b00b59fcf6da78038895d6bd4d5becb903ac70bb360cda89da5714d5b1"
+      "bytes": 3595,
+      "sha256": "fd75dcd99826aecef1fbefaaa2773dceb27e4752716bd93ed6ab49b6f4fc25dd"
     },
     {
       "path": "docs/engineering/backlog/issues/SAI-B127.md",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Planned SAI-B127: Enforce owner-approved reviewed-merge rules for the main branch; current owning area repository governance.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6452,12 +6484,12 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/issues/SAI-B127.md",
-      "bytes": 2683,
-      "sha256": "5686a528725e0e97b722d68d11eb72485b20e45f5afa803e56897c98d818a375"
+      "bytes": 2803,
+      "sha256": "18cdb119cd7dc2b7645b98667d1f3177ef4329dc03a9fe61f51ec43ec5843a4f"
     },
     {
       "path": "docs/engineering/backlog/publication.json",
-      "owner": "specifications, decisions and development guidance",
+      "owner": "implementation task catalogue and publication records",
       "purpose": "Actual confirmed remote issue links and publication/access status.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -6468,8 +6500,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "docs/engineering/backlog/publication.json",
-      "bytes": 1174,
-      "sha256": "b9de5068790ce71ba379949cec32e54405a245877555e0ad9df225e0e309aab1"
+      "bytes": 1249,
+      "sha256": "555da6f8196295f0ea65bdda3890e9f5bb1c90f2fd9f1742a2132b274e10b608"
     },
     {
       "path": "docs/governance/DATA_AND_LICENSES.md",
@@ -6810,8 +6842,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/docs.json",
       "original_path": "docs/PROJECT_STATUS.md",
-      "bytes": 12154,
-      "sha256": "66297e62cc4e79fc8eaa8b431326fc3ddd573b15e22371b90d687ae0b521b5b0"
+      "bytes": 13313,
+      "sha256": "44c6be2121f845ea24c441426b8f95ae8f925429e8fed3312d22422eea8395a9"
     },
     {
       "path": "package-lock.json",
@@ -6940,8 +6972,29 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/github/build_backlog.py",
-      "bytes": 4386,
-      "sha256": "ef3a522b1a59532cfcbd2378abf7db872d0fde1e29040bed573cfd2fc10fa868"
+      "bytes": 4970,
+      "sha256": "768c0563f35d66e51543c0f6a631a2a7cdb9efddb4b09209e310f232e2b662ed"
+    },
+    {
+      "path": "scripts/github/check_pr_evidence.py",
+      "owner": "GitHub backlog planning and explicit publication tooling",
+      "purpose": "Offline bounded PR-event evidence validation without network, command execution or raw-body logging.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "active": true,
+      "dependencies": [
+        "argparse",
+        "json",
+        "pathlib",
+        "re"
+      ],
+      "assessment": "37scoped cases passed; read-only workflow configured, hosted execution not observed.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "scripts/github/check_pr_evidence.py",
+      "bytes": 7639,
+      "sha256": "8f2cfd38b69a17153c4d915ecbf2785484e6ca5d0cec545376ab07c02b21ffa0"
     },
     {
       "path": "scripts/github/publish_issues.py",
@@ -6959,14 +7012,14 @@
         "tempfile",
         "time"
       ],
-      "assessment": "11fake-client safety cases passed; live API access is blocked.",
+      "assessment": "13fake-client cases passed, including completed-task exclusion and prerequisite links. API access still blocked.",
       "risks": [
         "Observe issue prerequisites, owner decisions and actual publication receipts."
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/github/publish_issues.py",
-      "bytes": 11581,
-      "sha256": "a2699551ae8188b6230a80bc400925479fe8816a099e67b1cd3e7e399e02c0e6"
+      "bytes": 13357,
+      "sha256": "8ea526ed4dc873b0dd104e6f8726732986e5d280ce36d03b5f430f68c69ff56a"
     },
     {
       "path": "scripts/verification/check-standalone.mjs",
@@ -7005,8 +7058,8 @@
       "risks": [],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "scripts/repository_inventory.py",
-      "bytes": 7754,
-      "sha256": "62f1c0341ccea438b68c7549ca2c41625d40b07bd0c85cc4247181b5119db313"
+      "bytes": 8005,
+      "sha256": "da7ff24142443c25b10d87a3c318fbaf589cc03aac59297d1e089f4dfd760d80"
     },
     {
       "path": "scripts/verification/verify_preserved_archives.py",
@@ -7985,8 +8038,31 @@
       "sha256": "8ea0197e186423ded0d9d24cefd8eb6d16d0514aaeed16204f723d61b5707d9e"
     },
     {
+      "path": "tests/tooling/github/test_pr_evidence.py",
+      "owner": "repository and GitHub tooling safety cases",
+      "purpose": "Offline evidence validation, malformed input, stale heads, dependency and injection regressions.",
+      "feature": "PR evidence and reviewed contribution workflow",
+      "active": true,
+      "dependencies": [
+        "copy",
+        "importlib.util",
+        "json",
+        "pathlib",
+        "pytest",
+        "sys"
+      ],
+      "assessment": "37passed.",
+      "risks": [
+        "Metadata completeness is not test truth, approval, or merge authority."
+      ],
+      "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
+      "original_path": "tests/tooling/github/test_pr_evidence.py",
+      "bytes": 6429,
+      "sha256": "f7040dda3b52747709cfa5c15a9755ec2965d1e4214d6c38c5eaccace6d80551"
+    },
+    {
       "path": "tests/tooling/github/test_publish_issues.py",
-      "owner": "cross-service browser validation",
+      "owner": "repository and GitHub tooling safety cases",
       "purpose": "Safety regressions for bulk issue posting; all external requests replaced by fake clients.",
       "feature": "ordered implementation and reviewed contribution workflow",
       "active": true,
@@ -8004,8 +8080,8 @@
       ],
       "review_record": "AnalyseFuture/repository-inventory/reviews/support.json",
       "original_path": "tests/tooling/github/test_publish_issues.py",
-      "bytes": 7336,
-      "sha256": "498ab2aee9034285a541214852c70ec5c9d7518974733ff7562d87a4003ef7e0"
+      "bytes": 8502,
+      "sha256": "079994880d3a4cc58a35e7c943ef3394a8f8c7af4149877b3749e12cd36aec45"
     }
   ]
 }

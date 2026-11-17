@@ -4,16 +4,18 @@
 Order: 94 / Priority: P1 / Phase: AI-4 evaluation and research gates
 Area: Authorized test generation / Suggested role: Problem author and judge evaluation engineer
 
+Implementation status: planned
+
 ## Problem
 
 More generated inputs do not establish correctness when the reference oracle or metamorphic relationship is wrong; model-produced expectations may share the candidate's error.
 
 ## Prerequisites
 
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B071 (publish/complete prerequisite first)
-- SAI-B074 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- SAI-B071 (confirm prerequisite state in the catalogue)
+- SAI-B074 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

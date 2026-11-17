@@ -4,15 +4,17 @@
 Order: 75 / Priority: P2 / Phase: learning-coaching
 Area: learning-analytics / Suggested role: Backend engineer with learning researcher
 
+Implementation status: planned
+
 ## Problem
 
 Owned attempt history does not yet offer a careful summary of independent versus assisted practice.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B022 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B022 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

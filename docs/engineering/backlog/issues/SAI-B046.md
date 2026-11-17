@@ -4,15 +4,17 @@
 Order: 61 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Model output contracts / Suggested role: Backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 HintContent already bounds and labels authored/mock/model output, but raw provider responses need a separate defensive normalization boundary.
 
 ## Prerequisites
 
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B045 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- SAI-B045 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,15 +4,17 @@
 Order: 35 / Priority: P2 / Phase: 2-useful-practice
 Area: editor-privacy / Suggested role: frontend engineer and privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The current draft key is scoped by browser/problem/language, not by signed-in account. The disclosure is honest, but shared-device users have no deliberate account-scoping or local-clear workflow.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B033 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B033 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

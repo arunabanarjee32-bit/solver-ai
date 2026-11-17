@@ -4,16 +4,18 @@
 Order: 68 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI observability / Suggested role: Backend observability engineer
 
+Implementation status: planned
+
 ## Problem
 
 Archive adapters log prompts/responses and simple CSV usage; production troubleshooting needs operational evidence without copying learner content or secrets.
 
 ## Prerequisites
 
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B020 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- SAI-B020 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

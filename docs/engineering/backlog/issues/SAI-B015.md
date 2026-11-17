@@ -4,14 +4,16 @@
 Order: 16 / Priority: P1 / Phase: 1-safe-pilot
 Area: identity / Suggested role: identity engineer
 
+Implementation status: planned
+
 ## Problem
 
 There is no delivered account recovery flow. Users who lose a password cannot safely recover a pilot account through the current interface.
 
 ## Prerequisites
 
-- SAI-B014 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B014 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,15 +4,17 @@
 Order: 44 / Priority: P0 / Phase: 1-safe-pilot
 Area: judge-admission / Suggested role: Backend queue engineer
 
+Implementation status: planned
+
 ## Problem
 
 The current worker implementation runs serially, but the API lease transaction has no check for an existing RUNNING lease belonging to the worker. Repeated or concurrent authenticated lease requests can reserve many jobs, so the client convention is not an enforceable execution allowance.
 
 ## Prerequisites
 
-- SAI-B122 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B122 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,16 +4,18 @@
 Order: 52 / Priority: P1 / Phase: operated-pilot
 Area: operations-capacity / Suggested role: Performance engineer and operator
 
+Implementation status: planned
+
 ## Problem
 
 Queue limits need an empirical operating envelope before opening a pilot.
 
 ## Prerequisites
 
-- SAI-B105 (publish/complete prerequisite first)
-- SAI-B107 (publish/complete prerequisite first)
-- SAI-B124 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B105 (confirm prerequisite state in the catalogue)
+- SAI-B107 (confirm prerequisite state in the catalogue)
+- SAI-B124 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

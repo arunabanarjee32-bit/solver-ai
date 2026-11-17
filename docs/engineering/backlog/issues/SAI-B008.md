@@ -4,14 +4,16 @@
 Order: 9 / Priority: P2 / Phase: 1-safe-pilot
 Area: api-contract / Suggested role: API engineer
 
+Implementation status: planned
+
 ## Problem
 
 Manual bearer parsing enforces authentication but does not expose a usable security scheme in interactive API docs. A docs-only scheme must not relax duplicate-header or strict signature checks.
 
 ## Prerequisites
 
-- SAI-B007 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B007 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

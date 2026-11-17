@@ -1,3 +1,8 @@
+CURRENT FEATURE REGISTER
+44 records:23 active,1 partial,11 proposed and9 research-only. The latest
+engineering increment implements the PR evidence contract locally; hosting
+enforcement and actual issue publication remain separate external prerequisites.
+
 LATEST VALIDATION AND CONTRIBUTION FEATURE
 The owner resumed testing after reorganization. API137/auth7/judge118/browser25
 and11 publisher safety cases passed. The source feature locations are retained.
@@ -453,3 +458,9 @@ Files: scripts/github/{publish_issues.py,build_backlog.py}; tests/tooling/github
 Behavior:127 dependency-ordered cards, explicit idempotent issue creation, confirmed-link receipts, one-task contributor PRs and designated review before merge.
 Validation:11 fake-client safety tests and offline catalogue/card checks passed.
 Gap: api.github.com CONNECT403 prevents actual issue publication;0POSTs attempted. No unattended monitoring or auto-merger is enabled.
+
+F044 | ACTIVE | Contributor PR evidence contract
+Owner: scripts/github/check_pr_evidence.py; .github/workflows/pr-evidence.yml; tests/tooling/github/test_pr_evidence.py; docs/engineering/PR_EVIDENCE.md
+Behavior: Known task/order and exact PR-head matching, dependency accounting, bounded JSON, inert commands, explicit outcomes and read-only trusted-base CI.
+Evidence:37scoped cases; full tooling50 and lint passed. Hosted job not observed.
+Limit: Does not prove checks ran, approve code, merge PRs or enforce server branch rules.

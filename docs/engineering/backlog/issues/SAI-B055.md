@@ -4,16 +4,18 @@
 Order: 70 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI failure policy / Suggested role: Backend reliability engineer
 
+Implementation status: planned
+
 ## Problem
 
 Archived clients retry up to twenty times or wait many minutes. A paid hint endpoint needs predictable bounded failures and must not amplify outages.
 
 ## Prerequisites
 
-- SAI-B048 (publish/complete prerequisite first)
-- SAI-B051 (publish/complete prerequisite first)
-- SAI-B054 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B048 (confirm prerequisite state in the catalogue)
+- SAI-B051 (confirm prerequisite state in the catalogue)
+- SAI-B054 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

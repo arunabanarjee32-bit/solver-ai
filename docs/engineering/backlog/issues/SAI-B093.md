@@ -4,15 +4,17 @@
 Order: 108 / Priority: P2 / Phase: contest-corrections
 Area: contest-admin / Suggested role: Full-stack engineer and contest moderator
 
+Implementation status: planned
+
 ## Problem
 
 Participants need a traceable correction channel that does not reveal another team’s private work.
 
 ## Prerequisites
 
-- SAI-B091 (publish/complete prerequisite first)
-- SAI-B092 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B091 (confirm prerequisite state in the catalogue)
+- SAI-B092 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

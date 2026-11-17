@@ -4,16 +4,18 @@
 Order: 109 / Priority: P2 / Phase: contest-experience
 Area: leaderboards / Suggested role: Frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 A leaderboard must refresh reliably without exposing frozen results or creating an unbounded request loop.
 
 ## Prerequisites
 
-- SAI-B085 (publish/complete prerequisite first)
-- SAI-B086 (publish/complete prerequisite first)
-- SAI-B088 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B085 (confirm prerequisite state in the catalogue)
+- SAI-B086 (confirm prerequisite state in the catalogue)
+- SAI-B088 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

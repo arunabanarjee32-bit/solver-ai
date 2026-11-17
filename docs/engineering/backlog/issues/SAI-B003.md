@@ -4,14 +4,16 @@
 Order: 4 / Priority: P0 / Phase: 0-contribution-gates
 Area: product / Suggested role: project owner and privacy/product reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The existing local app can support learning, but first audience, public-hosting responsibility, retention periods, deletion and provider-sharing consent remain unresolved. These decisions are prerequisites for handling real learner data.
 
 ## Prerequisites
 
-- SAI-B002 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B002 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

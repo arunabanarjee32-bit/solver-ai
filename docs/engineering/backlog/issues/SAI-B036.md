@@ -4,14 +4,16 @@
 Order: 37 / Priority: P3 / Phase: 2-useful-practice
 Area: editor-ux / Suggested role: frontend editor engineer
 
+Implementation status: planned
+
 ## Problem
 
 The editor exposes basic mode/reset controls but no deliberate learner control over font size, wrapping or preferred simple-editor mode. These choices affect readability and keyboard accessibility.
 
 ## Prerequisites
 
-- SAI-B033 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B033 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,16 +4,18 @@
 Order: 50 / Priority: P1 / Phase: operated-pilot
 Area: operations-observability / Suggested role: Site reliability engineer and service owner
 
+Implementation status: planned
+
 ## Problem
 
 A working local service does not define when operators should treat a deployment as degraded.
 
 ## Prerequisites
 
-- SAI-B105 (publish/complete prerequisite first)
-- SAI-B106 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B105 (confirm prerequisite state in the catalogue)
+- SAI-B106 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

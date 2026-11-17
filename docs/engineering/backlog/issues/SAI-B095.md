@@ -4,17 +4,19 @@
 Order: 110 / Priority: P1 / Phase: contest-corrections
 Area: contest-release / Suggested role: QA engineer and contest operator
 
+Implementation status: planned
+
 ## Problem
 
 A contest feature set needs an end-to-end operational gate rather than separate passing screens.
 
 ## Prerequisites
 
-- SAI-B090 (publish/complete prerequisite first)
-- SAI-B091 (publish/complete prerequisite first)
-- SAI-B092 (publish/complete prerequisite first)
-- SAI-B094 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B090 (confirm prerequisite state in the catalogue)
+- SAI-B091 (confirm prerequisite state in the catalogue)
+- SAI-B092 (confirm prerequisite state in the catalogue)
+- SAI-B094 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

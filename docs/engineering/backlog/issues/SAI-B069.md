@@ -4,17 +4,19 @@
 Order: 88 / Priority: P2 / Phase: AI-3 bounded candidate solver
 Area: Candidate planning / Suggested role: AI solver engineer
 
+Implementation status: planned
+
 ## Problem
 
 CodeSIM provides useful planning/simulation ideas, but its archived framework mixes provider calls and unsafe evaluation. Solver AI needs a small original typed plan stage.
 
 ## Prerequisites
 
-- SAI-B045 (publish/complete prerequisite first)
-- SAI-B048 (publish/complete prerequisite first)
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B045 (confirm prerequisite state in the catalogue)
+- SAI-B048 (confirm prerequisite state in the catalogue)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

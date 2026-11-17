@@ -4,15 +4,17 @@
 Order: 60 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Tutoring prompts / Suggested role: AI engineer and teaching reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The three authored levels have clear meaning; a model integration needs repeatable templates that preserve that progression instead of exposing full solutions by default.
 
 ## Prerequisites
 
-- SAI-B042 (publish/complete prerequisite first)
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B042 (confirm prerequisite state in the catalogue)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

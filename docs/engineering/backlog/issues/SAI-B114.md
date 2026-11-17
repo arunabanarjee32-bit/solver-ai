@@ -4,14 +4,16 @@
 Order: 76 / Priority: P2 / Phase: learning-coaching
 Area: learning-plans / Suggested role: Full-stack engineer and learning designer
 
+Implementation status: planned
+
 ## Problem
 
 Learners need a plan they can control without an opaque personalization model.
 
 ## Prerequisites
 
-- SAI-B113 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B113 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

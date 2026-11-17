@@ -4,17 +4,19 @@
 Order: 91 / Priority: P1 / Phase: AI-3 bounded candidate solver
 Area: Bounded solver repair / Suggested role: Backend workflow engineer
 
+Implementation status: planned
+
 ## Problem
 
 A plan/generate/test/repair loop can consume unlimited calls and execution jobs unless state transitions and aggregate stop conditions are explicit.
 
 ## Prerequisites
 
-- SAI-B054 (publish/complete prerequisite first)
-- SAI-B066 (publish/complete prerequisite first)
-- SAI-B069 (publish/complete prerequisite first)
-- SAI-B071 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B054 (confirm prerequisite state in the catalogue)
+- SAI-B066 (confirm prerequisite state in the catalogue)
+- SAI-B069 (confirm prerequisite state in the catalogue)
+- SAI-B071 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

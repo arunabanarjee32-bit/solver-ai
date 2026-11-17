@@ -4,14 +4,16 @@
 Order: 66 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Global AI spend control / Suggested role: Backend platform engineer
 
+Implementation status: planned
+
 ## Problem
 
 Per-account allowance cannot prevent many accounts from exhausting provider concurrency or a project-wide spending ceiling.
 
 ## Prerequisites
 
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

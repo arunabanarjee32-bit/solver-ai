@@ -4,14 +4,16 @@
 Order: 31 / Priority: P2 / Phase: 2-useful-practice
 Area: content / Suggested role: problem author and judge reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The three current seeds cover summation, contiguous growth and sliding windows. There is no original exercise teaching preprocessing with repeated range queries.
 
 ## Prerequisites
 
-- SAI-B029 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B029 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

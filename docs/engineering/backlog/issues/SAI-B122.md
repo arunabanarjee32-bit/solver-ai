@@ -4,16 +4,18 @@
 Order: 43 / Priority: P0 / Phase: 1-safe-pilot
 Area: worker-auth / Suggested role: Backend security engineer and judge maintainer
 
+Implementation status: planned
+
 ## Problem
 
 require_worker currently authenticates one shared bearer, while heartbeat, lease and completion accept a caller-supplied worker_id. Any holder belongs to the entire controller trust domain and can register or impersonate another worker; token-strength and rotation tasks do not establish separate principals.
 
 ## Prerequisites
 
-- SAI-B009 (publish/complete prerequisite first)
-- SAI-B010 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B009 (confirm prerequisite state in the catalogue)
+- SAI-B010 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

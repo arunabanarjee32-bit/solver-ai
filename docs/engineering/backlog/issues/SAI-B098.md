@@ -4,14 +4,16 @@
 Order: 113 / Priority: P2 / Phase: judge-extensibility
 Area: judge-validators / Suggested role: Judge engineer and numerical-problem author
 
+Implementation status: planned
+
 ## Problem
 
 Numerical problems require explicit tolerance semantics rather than ad hoc string conversion.
 
 ## Prerequisites
 
-- SAI-B096 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B096 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

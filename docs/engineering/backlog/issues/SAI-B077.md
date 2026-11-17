@@ -4,16 +4,18 @@
 Order: 124 / Priority: P1 / Phase: AI-4 evaluation and research gates
 Area: Evaluation integrity / Suggested role: Data evaluation engineer
 
+Implementation status: planned
+
 ## Problem
 
 Archived benchmark variants contain overlapping tasks, and public model training history is incomplete. Reusing them naively can contaminate training/evaluation comparisons.
 
 ## Prerequisites
 
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B074 (publish/complete prerequisite first)
-- SAI-B026 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- SAI-B074 (confirm prerequisite state in the catalogue)
+- SAI-B026 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

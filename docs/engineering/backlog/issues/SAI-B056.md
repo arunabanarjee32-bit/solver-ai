@@ -4,16 +4,18 @@
 Order: 71 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI privacy UX / Suggested role: Product privacy and frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 The completed UI accurately advertises authored hints. Introducing external generation changes where context is processed and requires an honest, explicit choice.
 
 ## Prerequisites
 
-- SAI-B041 (publish/complete prerequisite first)
-- SAI-B049 (publish/complete prerequisite first)
-- SAI-B053 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B041 (confirm prerequisite state in the catalogue)
+- SAI-B049 (confirm prerequisite state in the catalogue)
+- SAI-B053 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

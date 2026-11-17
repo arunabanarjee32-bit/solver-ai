@@ -4,15 +4,17 @@
 Order: 58 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Provider configuration / Suggested role: Backend security engineer
 
+Implementation status: planned
+
 ## Problem
 
 The authored-only selector intentionally fails closed. A future provider must not inherit archive adapters that accept arbitrary endpoints or ambiguous environment state.
 
 ## Prerequisites
 
-- SAI-B041 (publish/complete prerequisite first)
-- SAI-B006 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B041 (confirm prerequisite state in the catalogue)
+- SAI-B006 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

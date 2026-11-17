@@ -4,14 +4,16 @@
 Order: 17 / Priority: P2 / Phase: 1-safe-pilot
 Area: identity / Suggested role: identity/frontend engineer
 
+Implementation status: planned
+
 ## Problem
 
 The account page provides sign-out but no way to inspect or revoke other active sessions. Users cannot react deliberately to an unfamiliar session after an access concern.
 
 ## Prerequisites
 
-- SAI-B015 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B015 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

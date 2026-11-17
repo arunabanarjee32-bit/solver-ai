@@ -42,6 +42,12 @@ corrections, review the new head and relevant regression checks before an
 owner-authorized merge. Preserve published history and follow the owner's chosen
 merge policy; never force-push `main` or merge every PR automatically.
 
+The [executable evidence contract](PR_EVIDENCE.md) now checks a single fenced JSON
+record on PR creation, body edits and head changes. It runs trusted base code
+with read-only access and never executes submitted commands or echoes PR-body
+content. A complete record is not proof of execution, substantive approval or
+permission to merge. Keep failed/skipped/not-run outcomes honest.
+
 Bring a PR number or URL into an active assistant session for review. The assistant
 cannot continuously monitor GitHub, assign work or merge future PRs after the
 session ends. No unattended review bot or automatic merger is enabled here.
@@ -52,8 +58,8 @@ implementation tools under the latest review-and-merge instruction.
 
 ## Enforcement and current access
 
-Repository prose cannot enforce GitHub permissions. SAI-B001 defines an executable
-PR evidence gate; SAI-B127 requires owner-approved reviewed-merge rules and actual
+Repository prose cannot enforce GitHub permissions. SAI-B001's executable
+PR evidence gate is implemented locally; SAI-B127 requires owner-approved reviewed-merge rules and actual
 reviewer identities. Effective branch settings have not been verified through the
 currently blocked GitHub API. Do not claim those controls are already enforced.
 

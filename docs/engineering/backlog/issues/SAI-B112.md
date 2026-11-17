@@ -4,18 +4,20 @@
 Order: 55 / Priority: P2 / Phase: operated-pilot
 Area: operations-recovery / Suggested role: Site reliability engineer and service owner
 
+Implementation status: planned
+
 ## Problem
 
 Operators need evidence that readiness, job reconciliation and user messaging work during failures.
 
 ## Prerequisites
 
-- SAI-B107 (publish/complete prerequisite first)
-- SAI-B108 (publish/complete prerequisite first)
-- SAI-B110 (publish/complete prerequisite first)
-- SAI-B111 (publish/complete prerequisite first)
-- SAI-B126 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B107 (confirm prerequisite state in the catalogue)
+- SAI-B108 (confirm prerequisite state in the catalogue)
+- SAI-B110 (confirm prerequisite state in the catalogue)
+- SAI-B111 (confirm prerequisite state in the catalogue)
+- SAI-B126 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

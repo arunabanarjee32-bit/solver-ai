@@ -2,6 +2,25 @@
 
 Last reviewed: 2026-11-17 (Asia/Kolkata). Earlier gVisor and native integration evidence remains historical local validation; the merged SAI-010 work additionally has a recorded hosted CI run. Neither establishes a public production release.
 
+## SAI-B001: executable PR evidence contract (2026-11-17)
+
+The first ready backlog task is implemented locally: a stdlib-only evidence
+checker, a single fenced JSON record in the PR template, and a read-only PR
+workflow checking trusted base code. It validates the current PR head, catalogue
+ID/order, prerequisites, paths and explicit outcomes without executing submitted
+commands or echoing PR-body data. It does not approve tests or authorize merges.
+
+The actual full application gate passed: API **137**, auth **7**, judge **118**,
+and browser **25** cases. The new evidence checker passed **37** scoped cases;
+all **50** tooling cases and Ruff passed. Current executed total: **337** cases.
+Peer-review malformed-event and duplicate-opener defects were fixed with
+regressions. No application runtime code changed in this increment.
+
+The backlog retains 127 cards: **B001 completed locally, 126 pending**. Completed
+work is skipped by the issue publisher. The hosted evidence workflow has not been
+observed; branch protection/reviewer identity remains B127 work. Actual GitHub
+issue creation is still blocked by the network prerequisite described below.
+
 ## Post-relocation validation and contributor backlog (2026-11-17)
 
 The owner resumed testing after the functional moves. API **137**, auth **7**,

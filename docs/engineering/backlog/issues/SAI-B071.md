@@ -4,21 +4,23 @@
 Order: 90 / Priority: P1 / Phase: AI-3 bounded candidate solver
 Area: Solver-to-judge integration / Suggested role: Judge and backend integration engineer
 
+Implementation status: planned
+
 ## Problem
 
 Generated candidates currently have no active execution integration. Archive host evaluators cannot be imported safely, and model runs must not masquerade as learner submissions.
 
 ## Prerequisites
 
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B051 (publish/complete prerequisite first)
-- SAI-B065 (publish/complete prerequisite first)
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B070 (publish/complete prerequisite first)
-- SAI-B121 (publish/complete prerequisite first)
-- SAI-B123 (publish/complete prerequisite first)
-- SAI-B125 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- SAI-B051 (confirm prerequisite state in the catalogue)
+- SAI-B065 (confirm prerequisite state in the catalogue)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- SAI-B070 (confirm prerequisite state in the catalogue)
+- SAI-B121 (confirm prerequisite state in the catalogue)
+- SAI-B123 (confirm prerequisite state in the catalogue)
+- SAI-B125 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

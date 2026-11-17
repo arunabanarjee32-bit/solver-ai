@@ -4,14 +4,16 @@
 Order: 42 / Priority: P0 / Phase: 1-safe-pilot
 Area: judge-recovery / Suggested role: Judge maintainer and recovery reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The corrected runner retains failed cleanup names in _active and stops readiness, but that set disappears if the worker process crashes. A restart cannot distinguish its leftover sandboxes from unrelated containers, and the existing incident exercise does not implement recovery authority.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

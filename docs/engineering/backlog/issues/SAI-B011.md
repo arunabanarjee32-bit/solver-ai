@@ -4,15 +4,17 @@
 Order: 12 / Priority: P1 / Phase: 1-safe-pilot
 Area: identity / Suggested role: identity/platform engineer
 
+Implementation status: planned
+
 ## Problem
 
 Local auth deliberately uses shared per-path buckets because no trusted ingress is configured. This prevents spoofed forwarding bypasses but is not suitable as a complete public per-client abuse policy.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B006 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B006 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

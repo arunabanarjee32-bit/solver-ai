@@ -4,16 +4,18 @@
 Order: 24 / Priority: P1 / Phase: 1-safe-pilot
 Area: storage-abuse / Suggested role: backend storage engineer
 
+Implementation status: planned
+
 ## Problem
 
 Per-source size and request/concurrency quotas do not bound cumulative stored source. A valid account can accumulate completed submissions until the shared disk is exhausted.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B022 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- SAI-B022 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

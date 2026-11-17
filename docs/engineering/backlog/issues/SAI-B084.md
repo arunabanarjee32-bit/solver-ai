@@ -4,15 +4,17 @@
 Order: 99 / Priority: P1 / Phase: contest-foundation
 Area: contests / Suggested role: Backend engineer with experienced contest reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The repository has verdicts but no ICPC score or penalty semantics.
 
 ## Prerequisites
 
-- SAI-B081 (publish/complete prerequisite first)
-- SAI-B083 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B081 (confirm prerequisite state in the catalogue)
+- SAI-B083 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

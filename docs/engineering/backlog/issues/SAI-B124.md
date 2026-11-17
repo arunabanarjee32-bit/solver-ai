@@ -4,17 +4,19 @@
 Order: 46 / Priority: P0 / Phase: 1-safe-pilot
 Area: judge-isolation / Suggested role: Judge infrastructure engineer and security reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The present managed rootless runtime lacks aggregate cgroup memory/PID accounting. Per-process rlimits and per-container tmpfs caps are real finite controls, but adding workers can exceed host-wide CPU, memory, process or temporary-storage budgets. B109 measures capacity; it does not enforce these limits.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B121 (publish/complete prerequisite first)
-- SAI-B123 (publish/complete prerequisite first)
-- SAI-B125 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B121 (confirm prerequisite state in the catalogue)
+- SAI-B123 (confirm prerequisite state in the catalogue)
+- SAI-B125 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

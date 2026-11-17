@@ -4,14 +4,16 @@
 Order: 100 / Priority: P1 / Phase: contest-foundation
 Area: contests / Suggested role: Backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Contest standings need different visibility during a scoreboard freeze.
 
 ## Prerequisites
 
-- SAI-B084 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B084 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

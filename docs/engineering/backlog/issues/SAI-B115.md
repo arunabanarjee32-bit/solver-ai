@@ -4,14 +4,16 @@
 Order: 77 / Priority: P2 / Phase: learning-coaching
 Area: coaching / Suggested role: Backend engineer and privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 A coach must not gain access to a learner’s private practice simply because both have accounts.
 
 ## Prerequisites
 
-- SAI-B113 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B113 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

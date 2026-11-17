@@ -4,15 +4,17 @@
 Order: 27 / Priority: P1 / Phase: 2-useful-practice
 Area: content / Suggested role: content engineer and rights reviewer
 
+Implementation status: planned
+
 ## Problem
 
 Problem provenance currently records only author/source text. More content needs a machine-readable distinction between original authorship, permission, redistribution and training rights.
 
 ## Prerequisites
 
-- SAI-B002 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B002 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,16 +4,18 @@
 Order: 89 / Priority: P1 / Phase: AI-3 bounded candidate solver
 Area: Candidate generation / Suggested role: AI/backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Archived fenced-code parsers assume matching blocks and can index an empty result. Candidate source must have a deterministic language, byte cap and provenance before execution.
 
 ## Prerequisites
 
-- SAI-B046 (publish/complete prerequisite first)
-- SAI-B068 (publish/complete prerequisite first)
-- SAI-B069 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B046 (confirm prerequisite state in the catalogue)
+- SAI-B068 (confirm prerequisite state in the catalogue)
+- SAI-B069 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

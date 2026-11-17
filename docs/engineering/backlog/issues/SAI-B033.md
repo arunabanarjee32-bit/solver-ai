@@ -4,14 +4,16 @@
 Order: 34 / Priority: P2 / Phase: 2-useful-practice
 Area: editor / Suggested role: frontend editor engineer
 
+Implementation status: planned
+
 ## Problem
 
 Drafts are best-effort browser storage and learners are told to copy their code, but there is no deliberate portable download/import path when storage fails or a browser is replaced.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

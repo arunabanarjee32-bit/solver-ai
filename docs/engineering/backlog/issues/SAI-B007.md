@@ -4,14 +4,16 @@
 Order: 8 / Priority: P1 / Phase: 1-safe-pilot
 Area: identity / Suggested role: backend identity engineer
 
+Implementation status: planned
+
 ## Problem
 
 JWKS refresh uses HTTPX operation timeouts and a size cap but has no outer elapsed-time bound. A slow stream can hold authentication refresh longer than the nominal five-second timeout; most existing tests stub the fetch function.
 
 ## Prerequisites
 
-- SAI-B006 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B006 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

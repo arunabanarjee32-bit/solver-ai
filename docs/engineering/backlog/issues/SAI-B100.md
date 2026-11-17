@@ -4,16 +4,18 @@
 Order: 115 / Priority: P2 / Phase: judge-extensibility
 Area: judge-languages / Suggested role: Judge engineer
 
+Implementation status: planned
+
 ## Problem
 
 C++20 is a roadmap language, but the current supported contract is C++17.
 
 ## Prerequisites
 
-- SAI-B096 (publish/complete prerequisite first)
-- SAI-B125 (publish/complete prerequisite first)
-- SAI-B124 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B096 (confirm prerequisite state in the catalogue)
+- SAI-B125 (confirm prerequisite state in the catalogue)
+- SAI-B124 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

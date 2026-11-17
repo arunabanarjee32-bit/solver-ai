@@ -4,6 +4,10 @@
 Order: 1 / Priority: P0 / Phase: 0-contribution-gates
 Area: foundation / Suggested role: repository maintainer and reviewer
 
+Implementation status: completed_locally
+Completed locally: Implemented scripts/github/check_pr_evidence.py and read-only trusted-base PR workflow;37 scoped evidence cases and the complete50-case tooling suite passed. Source/contract reviewed for inert data, stale heads and malformed events. Hosted workflow execution and branch-rule enforcement remain unverified and separate from metadata completeness.
+
+
 ## Problem
 
 The requested multi-tool workflow needs PR submissions that the reviewing assistant can assess consistently. Instructions alone do not show whether a contributor mapped an issue, respected scope or actually ran a claimed check.
@@ -47,4 +51,4 @@ The requested multi-tool workflow needs PR submissions that the reviewing assist
 
 Untrusted PR text must remain data, and evidence completeness must not be presented as substantive review.
 
-Implement this issue on a dedicated branch and submit a PR linked here. Include the exact tests run and remaining limitations. Do not self-merge. A maintainer/assistant review must inspect the diff, dependencies, security and actual check results before a maintainer-authorized merge. Do not enable paid services, training or new production infrastructure without the owner's explicit approval.
+This task is recorded as completed locally. Do not reimplement it as missing work; open a separately scoped follow-up when a defect or new requirement exists.

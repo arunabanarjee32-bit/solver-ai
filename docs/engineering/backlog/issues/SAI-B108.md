@@ -4,16 +4,18 @@
 Order: 51 / Priority: P1 / Phase: operated-pilot
 Area: operations-recovery / Suggested role: Site reliability engineer with privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 B012 provides the backup/restore implementation; operations still need an isolated full-service recovery rehearsal with measured completeness and timing.
 
 ## Prerequisites
 
-- SAI-B012 (publish/complete prerequisite first)
-- SAI-B013 (publish/complete prerequisite first)
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B012 (confirm prerequisite state in the catalogue)
+- SAI-B013 (confirm prerequisite state in the catalogue)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

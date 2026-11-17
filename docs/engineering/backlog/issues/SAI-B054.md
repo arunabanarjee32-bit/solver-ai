@@ -4,16 +4,18 @@
 Order: 69 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI cancellation and deadlines / Suggested role: Full-stack AI integration engineer
 
+Implementation status: planned
+
 ## Problem
 
 Authored hints use a three-second server bound and the client already cancels requests, but real provider transport and quota settlement need a total lifecycle contract.
 
 ## Prerequisites
 
-- SAI-B048 (publish/complete prerequisite first)
-- SAI-B050 (publish/complete prerequisite first)
-- SAI-B053 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B048 (confirm prerequisite state in the catalogue)
+- SAI-B050 (confirm prerequisite state in the catalogue)
+- SAI-B053 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

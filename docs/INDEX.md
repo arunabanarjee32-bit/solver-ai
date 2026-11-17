@@ -15,9 +15,9 @@ New here? Read [START_HERE](onboarding/START_HERE.md), then [PROJECT_VISION](pro
 | `security/` | Judge threat model and release controls |
 | `status/` | Named-revision implementation evidence and limitations |
 
-The functional reorganization was performed without tests or builds at the
-owner's request. Earlier results remain historical evidence; see the
-[current status note](status/PROJECT_STATUS.md#functional-organization-update-2026-11-17).
+The owner paused checks during the initial reorganization, then requested full
+validation. The relocated application now passes the documented runtime suites;
+see [current results](status/PROJECT_STATUS.md#post-relocation-validation-and-contributor-backlog-2026-11-17).
 
 ## Documents and preserved analysis
 
@@ -30,7 +30,8 @@ owner's request. Earlier results remain historical evidence; see the
 | [Repository structure and review](architecture/REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |
 | [Preserved future-analysis material](../AnalyseFuture/README.md) | Original uploads, complete extraction and reuse boundaries |
 | [Current recovery audit](../AnalyseFuture/audits/REPOSITORY_AUDIT.txt) | Complete review scope, discovered branch work and repairs |
-| [Complete feature inventory](../AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt) | Evidence and ownership for all 42 feature records |
+| [Complete feature inventory](../AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt) | Evidence and ownership for the recorded feature catalogue |
+| [PR evidence contract](engineering/PR_EVIDENCE.md) | Offline metadata gate, schema, head matching and safe CI execution |
 | [Security findings](../AnalyseFuture/audits/SECURITY_AUDIT.txt) | Confirmed cleanup weakness, remediation and unresolved risks |
 | [Current validation report](../AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt) | Executed outcomes, expected failures and unrun checks |
 | [Canonical future vision (TXT)](../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | Feasibility, priorities, resources and conditional future horizons |

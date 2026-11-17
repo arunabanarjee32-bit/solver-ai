@@ -4,17 +4,19 @@
 Order: 64 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: AI admission policy / Suggested role: Backend authorization engineer
 
+Implementation status: planned
+
 ## Problem
 
 The hints route authenticates but discards its user ID because authored lookup does not need a model entitlement. Real inference must authorize an account before transport.
 
 ## Prerequisites
 
-- SAI-B041 (publish/complete prerequisite first)
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B014 (publish/complete prerequisite first)
-- SAI-B016 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B041 (confirm prerequisite state in the catalogue)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- SAI-B014 (confirm prerequisite state in the catalogue)
+- SAI-B016 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

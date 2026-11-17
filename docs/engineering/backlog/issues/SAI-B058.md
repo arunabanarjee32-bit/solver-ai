@@ -4,15 +4,17 @@
 Order: 73 / Priority: P2 / Phase: AI-1 controlled model hints
 Area: Cross-runtime AI contracts / Suggested role: Full-stack contract engineer
 
+Implementation status: planned
+
 ## Problem
 
 Pydantic and Zod intentionally validate the same bounded contract independently; future provider fields could drift between implementations.
 
 ## Prerequisites
 
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B046 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- SAI-B046 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,14 +4,16 @@
 Order: 6 / Priority: P1 / Phase: 1-safe-pilot
 Area: supply-chain / Suggested role: release engineer
 
+Implementation status: planned
+
 ## Problem
 
 The judge base is already digest-pinned, while web/API image tags remain mutable and the API Python pin is broader than the root patch pin. Rebuilding can silently select different toolchains.
 
 ## Prerequisites
 
-- SAI-B004 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B004 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

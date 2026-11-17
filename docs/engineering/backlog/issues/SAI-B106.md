@@ -4,16 +4,18 @@
 Order: 49 / Priority: P2 / Phase: operated-pilot
 Area: operations-observability / Suggested role: Backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 Request-level diagnostics are difficult to connect to leased jobs and worker completion safely.
 
 ## Prerequisites
 
-- SAI-B105 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
-- SAI-B020 (publish/complete prerequisite first)
-- SAI-B027 (publish/complete prerequisite first)
+- SAI-B105 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
+- SAI-B020 (confirm prerequisite state in the catalogue)
+- SAI-B027 (confirm prerequisite state in the catalogue)
 
 ## Current code ownership
 

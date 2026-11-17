@@ -4,17 +4,19 @@
 Order: 127 / Priority: P1 / Phase: AI-4 evaluation and research gates
 Area: Fine-tuning research controls / Suggested role: ML evaluation lead with project owner
 
+Implementation status: planned
+
 ## Problem
 
 The archived trainer can start expensive, nondeterministic work, while Solver AI has no proven baseline, approved complete dataset or production training workflow.
 
 ## Prerequisites
 
-- SAI-B074 (publish/complete prerequisite first)
-- SAI-B077 (publish/complete prerequisite first)
-- SAI-B078 (publish/complete prerequisite first)
-- SAI-B079 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B074 (confirm prerequisite state in the catalogue)
+- SAI-B077 (confirm prerequisite state in the catalogue)
+- SAI-B078 (confirm prerequisite state in the catalogue)
+- SAI-B079 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

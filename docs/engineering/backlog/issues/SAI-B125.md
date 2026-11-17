@@ -4,14 +4,16 @@
 Order: 45 / Priority: P0 / Phase: 1-safe-pilot
 Area: runtime-maintenance / Suggested role: Judge operator, security reviewer and project owner
 
+Implementation status: planned
+
 ## Problem
 
 Preflight establishes that runsc exists, rootless Docker is selected and finite probes pass. It does not enforce a maintained approved runtime identity or support window. The historical review explicitly records an outdated installed runtime; B111 qualifies candidates later but does not establish this prerequisite policy.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

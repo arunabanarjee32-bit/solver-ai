@@ -4,16 +4,18 @@
 Order: 107 / Priority: P1 / Phase: contest-corrections
 Area: contest-admin / Suggested role: Backend engineer and judge maintainer
 
+Implementation status: planned
+
 ## Problem
 
 Organizers need to correct grading errors without overwriting the evidence behind earlier standings.
 
 ## Prerequisites
 
-- SAI-B085 (publish/complete prerequisite first)
-- SAI-B086 (publish/complete prerequisite first)
-- SAI-B091 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B085 (confirm prerequisite state in the catalogue)
+- SAI-B086 (confirm prerequisite state in the catalogue)
+- SAI-B091 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,17 +4,19 @@
 Order: 106 / Priority: P2 / Phase: contest-experience
 Area: contest-admin / Suggested role: Full-stack engineer
 
+Implementation status: planned
+
 ## Problem
 
 Organizers have no supported interface to prepare a validated contest.
 
 ## Prerequisites
 
-- SAI-B081 (publish/complete prerequisite first)
-- SAI-B082 (publish/complete prerequisite first)
-- SAI-B083 (publish/complete prerequisite first)
-- SAI-B085 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B081 (confirm prerequisite state in the catalogue)
+- SAI-B082 (confirm prerequisite state in the catalogue)
+- SAI-B083 (confirm prerequisite state in the catalogue)
+- SAI-B085 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,15 +4,17 @@
 Order: 21 / Priority: P1 / Phase: 1-safe-pilot
 Area: operations / Suggested role: platform engineer
 
+Implementation status: planned
+
 ## Problem
 
 Request IDs and safe client errors exist, but there is no defined structured operational logging contract. Troubleshooting needs correlation and failure categories without exposing source, tokens or hidden cases.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B019 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B019 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

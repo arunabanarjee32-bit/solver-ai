@@ -4,13 +4,15 @@
 Order: 3 / Priority: P0 / Phase: 0-contribution-gates
 Area: governance / Suggested role: project owner with legal/IP reviewer
 
+Implementation status: planned
+
 ## Problem
 
 The original project has no selected outbound license or settled inbound IP policy. Inviting many AI-assisted contributors without an explicit rights decision leaves reuse and contribution expectations unclear.
 
 ## Prerequisites
 
-- SAI-B001 (publish/complete prerequisite first)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

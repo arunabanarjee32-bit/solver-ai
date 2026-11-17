@@ -9,6 +9,10 @@
   "confirmed_created_this_session": 0,
   "prepared_issue_count": 127,
   "required_action": "Review/save the additive api.github.com environment-settings draft, then publish the environment and rerun the publisher. Supply credentials securely in settings only if an authenticated API operation still reports an authorization failure.",
-  "prepared_catalog_sha256": "f66310bc8cabd0412ba268f4bebf4da57d252f69df97e62207bee77e6b1cfaa1",
-  "attempt_stage": "initial_repository_metadata_read"
+  "prepared_catalog_sha256": "2d1bd54947866063f5254d06c66a292f37edadad1027c7d5fc0d48ac257f68d1",
+  "attempt_stage": "initial_repository_metadata_read",
+  "pending_issue_count": 126,
+  "completed_locally": [
+    "SAI-B001"
+  ]
 }

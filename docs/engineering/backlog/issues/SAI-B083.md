@@ -4,16 +4,18 @@
 Order: 98 / Priority: P1 / Phase: contest-foundation
 Area: contests / Suggested role: Backend engineer and problem curator
 
+Implementation status: planned
+
 ## Problem
 
 A contest must not silently change when the practice catalog or grading cases are updated.
 
 ## Prerequisites
 
-- SAI-B081 (publish/complete prerequisite first)
-- SAI-B027 (publish/complete prerequisite first)
-- SAI-B029 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B081 (confirm prerequisite state in the catalogue)
+- SAI-B027 (confirm prerequisite state in the catalogue)
+- SAI-B029 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -35,7 +35,7 @@ solver-ai/
 ├── scripts/                     Local startup and repository verification tools
 ├── tests/e2e/                   Browser flows across web/API/optional judge
 ├── docs/                        Requirements, decisions, status and development
-│   └── adr/                     Recorded architecture decisions
+│   └── architecture/adr/        Recorded architecture decisions
 ├── .github/                     CI and contributor template
 ├── AnalyseFuture/
 │   ├── README.md                Preservation rationale and integration boundaries

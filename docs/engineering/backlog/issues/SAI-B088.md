@@ -4,14 +4,16 @@
 Order: 103 / Priority: P2 / Phase: contest-experience
 Area: teams / Suggested role: Backend engineer
 
+Implementation status: planned
+
 ## Problem
 
 ICPC-style participation needs explicit team identity rather than caller-supplied teammate IDs.
 
 ## Prerequisites
 
-- SAI-B082 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B082 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

@@ -4,15 +4,17 @@
 Order: 104 / Priority: P2 / Phase: contest-experience
 Area: teams / Suggested role: Backend engineer with privacy reviewer
 
+Implementation status: planned
+
 ## Problem
 
 Existing submissions are individual-owned; team sharing must be deliberate and event-bounded.
 
 ## Prerequisites
 
-- SAI-B086 (publish/complete prerequisite first)
-- SAI-B088 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B086 (confirm prerequisite state in the catalogue)
+- SAI-B088 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

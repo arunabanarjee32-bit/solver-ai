@@ -4,15 +4,17 @@
 Order: 54 / Priority: P1 / Phase: operated-pilot
 Area: operations-release / Suggested role: Judge maintainer and security reviewer
 
+Implementation status: planned
+
 ## Problem
 
 Maintaining isolation requires a repeatable way to evaluate a runtime/toolchain update before broad rollout.
 
 ## Prerequisites
 
-- SAI-B110 (publish/complete prerequisite first)
-- SAI-B125 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B110 (confirm prerequisite state in the catalogue)
+- SAI-B125 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

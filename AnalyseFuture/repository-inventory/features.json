@@ -3,9 +3,9 @@
   "review_date": "2026-11-17",
   "timezone": "Asia/Kolkata",
   "method": "Cross-service full-source/static review reports plus inspectable Git history and structural archive checks. Feature identity is semantic; no product roadmap is counted as implementation. Root owns runtime validation. This is not an independent security certification.",
-  "feature_count": 43,
+  "feature_count": 44,
   "status_counts": {
-    "active": 22,
+    "active": 23,
     "partial": 1,
     "feasible_proposal": 11,
     "research_only": 9
@@ -1155,7 +1155,35 @@
         "Live GitHub issue creation blocked by network policy;0issuePOSTs attempted. Server-side branch-rule enforcement and unattended review are not enabled."
       ],
       "final_location": "scripts/github; tests/tooling/github; docs/engineering/backlog",
-      "validation": "11 fake-client publication safety tests passed;127-card offline validation and consistency passed. Actual API publication is unverified/blocked, not counted as complete."
+      "validation": "13 fake-client publication safety cases passed.127task cards validated:126pending and1completed locally. No remote issue created because API egress remains blocked."
+    },
+    {
+      "id": "F044",
+      "name": "Contributor PR evidence metadata contract",
+      "status": "active",
+      "active": true,
+      "service": "repository review workflow",
+      "files": [
+        "scripts/github/check_pr_evidence.py",
+        ".github/workflows/pr-evidence.yml",
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        "tests/tooling/github/test_pr_evidence.py",
+        "docs/engineering/PR_EVIDENCE.md"
+      ],
+      "dependencies": [
+        "Trusted base commit and canonical backlog",
+        "Standard-library JSON parsing",
+        "Read-only pull_request event payload"
+      ],
+      "tests": [
+        "tests/tooling/github/test_pr_evidence.py"
+      ],
+      "behavior": "Validate one bounded structured evidence block against catalogue ID/order, current PR head, prerequisites, changed paths and explicit check outcomes; commands remain inert and diagnostics do not echo PR data.",
+      "gaps": [
+        "Hosted Actions run not observed. Metadata completeness does not establish that checks ran or authorize review/merge; GitHub branch rules remain B127 work."
+      ],
+      "final_location": "scripts/github; tests/tooling/github; .github/workflows; docs/engineering",
+      "validation": "37 scoped evidence cases passed; complete50-case tooling suite and Ruff passed. Peer-review malformed-event and second-opener counterexamples fixed with regressions."
     }
   ],
   "sources": [

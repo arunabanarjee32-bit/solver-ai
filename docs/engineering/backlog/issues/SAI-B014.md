@@ -4,15 +4,17 @@
 Order: 15 / Priority: P1 / Phase: 1-safe-pilot
 Area: identity / Suggested role: identity engineer
 
+Implementation status: planned
+
 ## Problem
 
 Local email/password accounts do not verify email ownership. A real-user pilot needs a deliberate verification policy before relying on an email address for identity or recovery.
 
 ## Prerequisites
 
-- SAI-B003 (publish/complete prerequisite first)
-- SAI-B011 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B003 (confirm prerequisite state in the catalogue)
+- SAI-B011 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 

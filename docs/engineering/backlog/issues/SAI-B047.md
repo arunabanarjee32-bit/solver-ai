@@ -4,16 +4,18 @@
 Order: 62 / Priority: P1 / Phase: AI-1 controlled model hints
 Area: Provider adapter verification / Suggested role: AI integration engineer
 
+Implementation status: planned
+
 ## Problem
 
 Real transport behavior cannot be validated by relabeling an authored hint or by requiring paid calls in routine checks.
 
 ## Prerequisites
 
-- SAI-B043 (publish/complete prerequisite first)
-- SAI-B044 (publish/complete prerequisite first)
-- SAI-B046 (publish/complete prerequisite first)
-- SAI-B001 (publish/complete prerequisite first)
+- SAI-B043 (confirm prerequisite state in the catalogue)
+- SAI-B044 (confirm prerequisite state in the catalogue)
+- SAI-B046 (confirm prerequisite state in the catalogue)
+- [SAI-B001 (completed locally)](https://github.com/arunabanarjee32-bit/solver-ai/blob/main/docs/engineering/backlog/issues/SAI-B001.md)
 
 ## Current code ownership
 
