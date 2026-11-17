@@ -3,10 +3,10 @@
   "review_date": "2026-11-17",
   "timezone": "Asia/Kolkata",
   "method": "Cross-service full-source/static review reports plus inspectable Git history and structural archive checks. Feature identity is semantic; no product roadmap is counted as implementation. Root owns runtime validation. This is not an independent security certification.",
-  "feature_count": 42,
+  "feature_count": 43,
   "status_counts": {
     "active": 22,
-    "partial": 0,
+    "partial": 1,
     "feasible_proposal": 11,
     "research_only": 9
   },
@@ -1127,6 +1127,35 @@
       ],
       "final_location": "Keep inactive archive UI; existing Next.js product remains canonical.",
       "validation": "No current implementation validation is claimed for this proposal/research reference."
+    },
+    {
+      "id": "F043",
+      "name": "Ordered multi-tool contribution backlog and safe issue publisher",
+      "status": "partial",
+      "active": true,
+      "service": "repository engineering/GitHub workflow",
+      "files": [
+        "scripts/github/publish_issues.py",
+        "scripts/github/build_backlog.py",
+        "tests/tooling/github/test_publish_issues.py",
+        "docs/engineering/AI_CONTRIBUTION_WORKFLOW.md",
+        "docs/engineering/backlog/issues.json",
+        "docs/engineering/backlog/publication.json"
+      ],
+      "dependencies": [
+        "Existing gh authentication",
+        "api.github.com egress",
+        "Repository issue-write permission"
+      ],
+      "tests": [
+        "tests/tooling/github/test_publish_issues.py"
+      ],
+      "behavior": "Validate and render127 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.",
+      "gaps": [
+        "Live GitHub issue creation blocked by network policy;0issuePOSTs attempted. Server-side branch-rule enforcement and unattended review are not enabled."
+      ],
+      "final_location": "scripts/github; tests/tooling/github; docs/engineering/backlog",
+      "validation": "11 fake-client publication safety tests passed;127-card offline validation and consistency passed. Actual API publication is unverified/blocked, not counted as complete."
     }
   ],
   "sources": [
@@ -1274,5 +1303,5 @@
     "full_record_canonical_overlap_across_nine_CodeGenerator_JSONL_inputs": 0,
     "action": "preserve all variants; do not infer disjoint task splits"
   },
-  "layout_note": "All current paths functionally grouped. No tests/builds were run after relocation; prior validation is historical."
+  "layout_note": "Relocated active application validated after moves; future backlog tasks remain planned. Live issue publication is separately blocked by API network policy."
 }

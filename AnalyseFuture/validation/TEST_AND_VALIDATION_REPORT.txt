@@ -1,3 +1,56 @@
+LATEST POST-RELOCATION TEST AND HANDOFF RECORD — 17 November2026
+Owner instruction resumed full testing after the earlier no-tests reorganization.
+Baseline:adcfb0ba74a3ab022977b1ede3abe5db95e8ceec.
+
+PASSED CURRENT CHECKS
+API137 passed (one existing upstream Starlette/HTTPX deprecation warning), actual
+auth7 passed, live judge118 passed including15 gVisor cases, browser25 passed
+including actual sample/submission verdicts and account ownership, and11 GitHub
+publisher safety cases passed with a fake client. Total:298 current test cases,
+no skipped required integration/browser checks. Web/direct browser TypeScript,
+Ruff, optimized build/private-state guard, frozen uv/npm installation, original
+archive/index verification, and local production web/API image build + functional
+Compose smoke passed. Sandbox image rebuild passed. Application archive frameworks,
+paid model calls/training and absent LFS objects were not executed or invented.
+
+FIX AND FEATURE LOCATION
+The only relocated-source failure was Ruff import grouping in
+services/judge/tests/grading/test_cases.py; repaired and affected17 grading cases
+rerun successfully. API/catalog/identity/hints/submission, judge control/grading/
+sandbox and browser feature owners remain coherent, so no arbitrary new moves
+were made. New publication tooling belongs in scripts/github and its safety cases
+in tests/tooling/github. Canonical future tasks and cards belong in
+ docs/engineering/backlog (127 bounded tasks, not implemented product features).
+
+ISSUE PUBLICATION — EXTERNAL BLOCKER
+Offline127-task validation, acyclic execution order, current target paths and
+127 rendered cards passed. The explicit publisher attempt stopped at the initial
+GitHub metadata GET: environment CONNECT403 denies api.github.com.0issue POSTs
+were attempted and0issues were created in this session. Git HTTPS works; GH_TOKEN
+is present but API permissions cannot be assessed until the network route works.
+An additive api.github.com allowlist draft was saved successfully; the tool marks
+it requires publication. Review/save that environment-settings change and publish
+the environment, then run the explicit publisher. No secrets should be pasted in
+chat. Only request new secure authentication if the allowed API operation later
+shows an actual authorization problem. No browser fallback is available because
+the active tools lack the shared desktop JavaScript/browser interaction tool.
+
+Remote markers/real issue numbers are reconciled before POST, existing issues are
+preserved, writes are paced and uncertain POSTs are not retried blindly.11fake-client
+cases cover offline/no-network mode, idempotent restart, duplicate markers,
+conflicting titles, invalid prerequisites/targets, wrong repo, durable partial
+progress, ambiguous write failure and pacing. These are not a live-API success.
+
+CONTRIBUTOR HANDOFF
+Other tools implement one ready issue in a focused branch/PR; designated reviewer
+inspects exact code/checks before an authorized merge. No unattended monitoring,
+auto-merge or enforced GitHub branch protection is claimed. B001/B127 define
+remaining executable evidence/rule enforcement. This maintenance retains explicit
+direct-main checkpoint permission. Earlier scope records below remain historical.
+
+
+PRIOR PHASE RECORDS (retained)
+
 LATEST PHASE: FUNCTIONAL REORGANIZATION — NO TEST EXECUTION
 At the owner's explicit request, no tests, builds, linters, application imports
 or service startup were run after the functional relocations described in

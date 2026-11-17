@@ -1,3 +1,10 @@
+LATEST VALIDATION AND CONTRIBUTION FEATURE
+The owner resumed testing after reorganization. API137/auth7/judge118/browser25
+and11 publisher safety cases passed. The source feature locations are retained.
+There are now43 feature records:22 active,1 partial,11 proposals and9 research-only.
+F043 is the partially activated issue-publication workflow; live API access is
+blocked. Earlier phase statements below are retained historical context.
+
 CURRENT LAYOUT NOTE
 Implementation ownership and all paths reflect the functional organization in
 PROJECT_STRUCTURE.md. "Active" means retained implemented source, not a claim
@@ -439,3 +446,10 @@ Tests/checks: None for a current implementation; acceptance checks must be autho
 Gaps: No application account/ownership policy; static None-statement and return-arity defects; no current runtime validation.
 Final location: Keep inactive archive UI; existing Next.js product remains canonical.
 Validation: No current implementation validation is claimed for this proposal/research reference.
+
+F043 | PARTIAL | Ordered contribution backlog and safe issue publication
+Service: repository engineering/GitHub workflow
+Files: scripts/github/{publish_issues.py,build_backlog.py}; tests/tooling/github/test_publish_issues.py; docs/engineering/backlog/; docs/engineering/AI_CONTRIBUTION_WORKFLOW.md
+Behavior:127 dependency-ordered cards, explicit idempotent issue creation, confirmed-link receipts, one-task contributor PRs and designated review before merge.
+Validation:11 fake-client safety tests and offline catalogue/card checks passed.
+Gap: api.github.com CONNECT403 prevents actual issue publication;0POSTs attempted. No unattended monitoring or auto-merger is enabled.

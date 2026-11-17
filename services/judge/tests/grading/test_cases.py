@@ -3,7 +3,12 @@
 import random
 
 import pytest
-from solver_judge.grading.cases import cases_for, distinct_stations, signal_sum, steady_climb
+from solver_judge.grading.cases import (
+    cases_for,
+    distinct_stations,
+    signal_sum,
+    steady_climb,
+)
 
 
 @pytest.mark.parametrize("slug", ["signal-sum", "steady-climb", "distinct-stations"])

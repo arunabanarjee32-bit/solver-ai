@@ -84,6 +84,7 @@ From the root with dependencies installed:
 ```sh
 npm run test:api
 npm run test:auth
+npm run test:tooling
 npm run test:judge
 uv run --project services/api --frozen ruff check services/api services/judge scripts
 npm run typecheck
@@ -98,6 +99,11 @@ The normal judge suite explicitly skips real sandbox tests; the normal browser s
 npm run test:judge:integration
 npm run test:e2e:judge
 ```
+
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:all` runs the
+enabled judge/browser suites plus API, auth, tooling, typecheck and build on this
+supported managed image. Stop existing development services first. The issue
+publisher's safety cases use a fake GitHub client and never create remote issues.
 
 Tests start their own API/web/optional worker and require free ports3000/8000. Browser tests use separate temporary account/submission databases, preserving developer data. Local shutdown tests exercise active-container cleanup. The suites distinguish disabled/unrun integration tests from passes.
 

@@ -2,7 +2,30 @@
 
 Last reviewed: 2026-11-17 (Asia/Kolkata). Earlier gVisor and native integration evidence remains historical local validation; the merged SAI-010 work additionally has a recorded hosted CI run. Neither establishes a public production release.
 
-## Functional organization update (2026-11-17)
+## Post-relocation validation and contributor backlog (2026-11-17)
+
+The owner resumed testing after the functional moves. API **137**, auth **7**,
+judge **118** (including all **15** live gVisor cases), browser **25**, and
+publication safety **11** cases passed. Ruff, TypeScript, optimized build and
+private-state guard, frozen installation and local production Compose build/smoke
+passed. The only layout-related failure was import formatting in a relocated
+judge test; it was fixed. The archived research applications remain inactive.
+
+A [127-task ordered backlog](../engineering/backlog/README.md) now gives other
+implementation tools concrete ownership paths, dependencies, scope and acceptance
+criteria. [Review instructions](../engineering/AI_CONTRIBUTION_WORKFLOW.md) require
+review before authorized merges. These are plans, not implemented AI/contest
+features or an unattended assistant service.
+
+**Actual GitHub publication is blocked:** the environment denies `api.github.com`
+before API requests reach GitHub. The publisher stopped before any issue POST;
+**zero remote issues were created**. The additive network draft is saved but
+requires review/save and environment publication. Existing API credentials are
+present; issue-write permissions cannot be tested until networking permits it.
+See the [actual receipt](../engineering/backlog/publication.json) and
+[current validation record](../../AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt).
+
+## Historical functional organization update — testing paused (2026-11-17)
 
 The owner explicitly requested functional file grouping without running tests or
 builds. Active documentation is now grouped under `docs/onboarding`,

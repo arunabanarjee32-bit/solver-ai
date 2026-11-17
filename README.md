@@ -19,10 +19,17 @@ The web code is grouped under `apps/web/features/{accounts,practice,hints,submis
 
 The complete functional layout is documented in [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).
 The latest reorganization groups source, test sources, tools, documents and
-recovery records by responsibility. Tests and builds are paused for this layout
-change at the owner's request; earlier results remain historical evidence.
+recovery records by responsibility. Post-relocation tests, builds and local production smoke checks now pass.
+The validation report separates current checks from retained historical evidence.
 
 ## Run locally
+
+The [ordered implementation backlog](docs/engineering/backlog/README.md) contains
+127 scoped tasks with prerequisites, current feature paths, acceptance criteria
+and validation commands. Other implementation tools follow the
+[review-and-merge workflow](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md).
+The publication receipt distinguishes prepared local cards from confirmed open
+GitHub issues; API access is currently blocked by environment network policy.
 
 Requirements: Node.js24 (see `.node-version`), Python3.12 and [uv](https://docs.astral.sh/uv/). No external API keys, database server or paid service is needed. Local account/submission data uses ignored SQLite files.
 

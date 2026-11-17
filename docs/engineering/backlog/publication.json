@@ -1,0 +1,14 @@
+{
+  "repository": "arunabanarjee32-bit/solver-ai",
+  "catalog_sha256": "78b044e2637917ff63c0aea63149f0c40aafe9b6bc0aaa61042e2eda79d2a3f4",
+  "status": "blocked_network",
+  "issues": {},
+  "reason": "GitHub API access failed. Check api.github.com network access and the existing gh account's repository issue permission. No secret values belong in this report or chat. An interrupted POST is not retried.",
+  "access_diagnosis": "Observed environment CONNECT403: api.github.com is absent from enforced allowlist; Git HTTPS fetch/push work. Existing GH_TOKEN is present, but API permissions cannot be verified until network access is allowed.",
+  "issue_posts_attempted_this_session": 0,
+  "confirmed_created_this_session": 0,
+  "prepared_issue_count": 127,
+  "required_action": "Review/save the additive api.github.com environment-settings draft, then publish the environment and rerun the publisher. Supply credentials securely in settings only if an authenticated API operation still reports an authorization failure.",
+  "prepared_catalog_sha256": "f66310bc8cabd0412ba268f4bebf4da57d252f69df97e62207bee77e6b1cfaa1",
+  "attempt_stage": "initial_repository_metadata_read"
+}

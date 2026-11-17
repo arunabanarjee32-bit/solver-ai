@@ -27,6 +27,7 @@ def ownership(path: str) -> str:
         ("services/judge/", "isolated judge control and sandbox"),
         ("tests/", "cross-service browser validation"),
         ("docs/", "specifications, decisions and development guidance"),
+        ("scripts/github/", "GitHub backlog planning and explicit publication tooling"),
         ("scripts/", "development and verification tools"),
         (".github/", "hosted validation and contributor guidance"),
     ):
@@ -127,7 +128,7 @@ def build() -> tuple[dict, str]:
         "TEST_AND_VALIDATION_REPORT.txt and SECURITY_AUDIT.txt. Archived code was not run.",
         "Ignored dependency/build caches and private runtime state remain outside Git and intact.",
         "Binary assets received metadata/format review, not semantic visual/malware certification.",
-        "Current functional relocation was reviewed statically; tests/builds were paused by owner.", "",
+        "Current runtime results and publication limits are recorded in validation/; this ledger is static.", "",
     ]
     for row in rows:
         lines.extend([

@@ -7,10 +7,13 @@ authored hints, submission history and an optional isolated judge. AI inference
 and the longer-term solver remain proposed work. Files are grouped by their
 responsibility and dependencies, not by extension.
 
-**This reorganization runs no tests, builds, linters or application startup, at
-the owner's request.** Earlier test results are historical evidence. The current
-work uses static file, import, link and preservation analysis only; runtime
-verification of the relocated layout remains a future step.
+The owner initially paused runtime checks during reorganization, then explicitly
+requested testing and fixes. Post-relocation checks now passed: 137 API, 7 auth,
+118 judge and 25 browser cases, plus 11 issue-publisher safety cases, type checks,
+lint, optimized build and local production smoke. The only application-layout
+fix needed was import formatting in a moved judge test. Full evidence and the
+separate GitHub publication blocker are recorded in
+[the validation report](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt).
 
 ## The complete map
 
@@ -79,9 +82,11 @@ solver-ai/
 │   ├── hints/                      Account hint/provenance/cancellation flows
 │   ├── practice/                   Catalog, editor, drafts and outage/retry flows
 │   └── submissions/                Accounts, run/submit and cross-user history
+├── tests/tooling/github/           Fake-client issue-publication safety cases
 │
 ├── scripts/
 │   ├── development/                Web/API/worker launch and local token selection
+│   ├── github/                     Offline backlog cards and explicit issue publication
 │   └── verification/               Packaging guard and static inventory/preservation
 │
 ├── docs/
@@ -92,6 +97,7 @@ solver-ai/
 │   ├── research/                  Algorithm/model/reference/comparison research
 │   ├── governance/                Content rights, reuse and maintainer decisions
 │   ├── engineering/               Contributor tasks and coding playbook
+│   │   └── backlog/               Canonical issue catalogue, 127 cards and receipts
 │   ├── security/                  Judge threat model and release requirements
 │   └── status/                    Current implementation and evidence ledger
 │
@@ -191,5 +197,7 @@ there solely because it is unfamiliar, and do not copy live credentials into it.
 The next developer should begin with [docs/INDEX.md](docs/INDEX.md),
 [current status](docs/status/PROJECT_STATUS.md), and the
 [continuation guide](AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt).
-Tests and builds can be resumed when the owner requests them; this document does
-not claim that the relocated runtime has been executed.
+Runtime checks were resumed and completed at the owner's request. The new issue
+cards describe future work; they do not indicate that their proposed features
+are already implemented. Actual remote issue links exist only when confirmed in
+the publication receipt.

@@ -24,6 +24,8 @@ owner's request. Earlier results remain historical evidence; see the
 | Document | Purpose |
 | --- | --- |
 | [Start here](onboarding/START_HERE.md) | First-day orientation and workflow |
+| [Ordered implementation backlog](engineering/backlog/README.md) | 127 scoped tasks, dependency order and actual GitHub publication status |
+| [Implementation/review workflow](engineering/AI_CONTRIBUTION_WORKFLOW.md) | Other tools implement; designated reviewer inspects before authorized merge |
 | [Detailed project idea (TXT)](product/PROJECT_IDEA.txt) | Product vision, AI-era features, staged horizons, responsibilities and limits |
 | [Repository structure and review](architecture/REPOSITORY_STRUCTURE.md) | Active component map, preservation inventory and review findings |
 | [Preserved future-analysis material](../AnalyseFuture/README.md) | Original uploads, complete extraction and reuse boundaries |

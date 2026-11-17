@@ -40,4 +40,11 @@ Summary; files; decisions/reuse; tests actually run with results; open risks; de
 
 ## Next implementation work
 
+The ordered contribution plan is `docs/engineering/backlog/README.md`.
+Other implementation tools follow `docs/engineering/AI_CONTRIBUTION_WORKFLOW.md`:
+one ready issue per branch/PR, observed validation, and designated
+maintainer/assistant review before an authorized merge. Do not self-merge.
+The owner explicitly authorizes this maintenance session's direct-main
+checkpoint commits. No unattended assistant monitoring or auto-merge is enabled.
+
 Follow docs/engineering/CODEX_PLAYBOOK.md and docs/onboarding/DEVELOPMENT.md. Preserve the tested identity, ownership, queue and sandbox boundaries. Maintain actual sandbox/hostile-program tests when changing execution; never fall back to host or ordinary-container execution. Production identity/runtime/operations hardening and provider-neutral AI tutoring remain future work. Do not present authored hints as AI inference or finite grading as proof of universal correctness.
