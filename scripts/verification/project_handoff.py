@@ -26,6 +26,7 @@ implementation changes; the maintenance commands are at the end.
 ## Navigation
 
 - [Main goal and current user journey](#main-goal-and-current-user-journey)
+- [DSA solver and fine-tuning delivery](#dsa-solver-and-fine-tuning-delivery)
 - [Current evidence and remaining limits](#current-evidence-and-remaining-limits)
 - [How another tool should continue](#how-another-tool-should-continue)
 - [Every feature: implemented, partial and proposed](#feature-register)
@@ -64,6 +65,33 @@ Keeping TypeScript for browser/Next.js code and Python for API/judge control is
 intentional. Learner languages are a separate product capability. A rewrite into
 one language is unnecessary for this handoff and is not an assigned task; shared
 HTTP contracts and feature ownership connect the existing services.
+
+## DSA solver and fine-tuning delivery
+
+The main ambition is broad competence on previously unseen DSA problems. A ready
+system must attempt supported formats within a budget, generate/explain code,
+test it through the isolated judge and report observed results or a clear failure.
+No completed task list, model checkpoint or finite evaluation guarantees solving
+every possible problem. Track coverage by topic, difficulty, language and format.
+
+Read the [complete readiness checklist](docs/product/DSA_SOLVER_READINESS.md) and
+[fine-tuning model research catalogue](docs/research/FINETUNING_MODEL_RESEARCH.md).
+**No checkpoint or model family is selected.** The catalogue compares a broad
+set of open-weight families and API-baseline alternatives for future research;
+it does not claim to enumerate every model or declare a universal best model.
+
+The solver delivery work includes supported-problem contracts; reviewed
+evaluators; permitted disjoint training/evaluation data; empirical model
+comparison; reproducible SFT/LoRA/QLoRA tooling; approved external smoke and real
+training runs; artifact/base/tokenizer lineage; matched-budget held-out and
+regression evaluation; qualified inference, pilot and rollback; and controlled
+failure-driven improvement. Optional preference/RL work follows reliable rewards
+and separate approval. No weights, GPU job, provider or training is activated here.
+
+**B080 is only the training admission gate.** Appended training-delivery tasks
+cover actual future implementation and execution beyond it. They remain planned.
+Use each card's prerequisites; unrelated contest/business tasks do not become
+mandatory ML dependencies merely because they appear earlier in the index.
 
 ## Current evidence and remaining limits
 
@@ -266,7 +294,10 @@ def render() -> str:
             feature["behavior"], "",
             "**Files / evidence:** " + "; ".join(link(path) for path in feature["files"]) + ".", "",
             "**Dependencies:** " + "; ".join(feature["dependencies"]) + ".", "",
-            "**Recorded checks / references:** " + "; ".join(code(t) for t in feature["tests"]) + ".", "",
+            "**Recorded checks / references:** " + (
+                "; ".join(code(t) for t in feature["tests"])
+                or "None executed for this proposed capability"
+            ) + ".", "",
             "**Remaining gaps / conditions:**", "", *bullets(feature["gaps"]), "",
         ])
     lines.extend([
@@ -289,8 +320,8 @@ def render() -> str:
         "## Complete file map", "",
         (f"Every one of the **{len(files)} tracked paths** appears once below, grouped "
          "by its immediate owning folder. Each entry explains its reviewed role. "
-         "Source imports/direct dependencies are static links, not proof a research "
-         "dependency is installed or approved. Product task ownership is defined "
+         "The linked full inventory records direct imports/dependencies and provenance. "
+         "Product task ownership is defined "
          "by the target paths in the complete task specifications."), "",
         ("The [full inventory](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt) "
         "also records baseline assessments, risks, review provenance, sizes and hashes. "
@@ -303,17 +334,15 @@ def render() -> str:
         lines.extend([
             "<details>", f"<summary>{directory}/ — {len(rows)} files</summary>", "",
             descriptions[directory], "",
-            "| File | Purpose / feature | Direct imports or recorded dependencies |",
-            "| --- | --- | --- |",
+            "| File | Purpose / feature |",
+            "| --- | --- |",
         ])
         for row in rows:
             purpose = row["purpose"]
-            feature = str(row["feature"])
             state = "**Inactive preserved material.** " if not row["active"] else ""
-            dependencies = "; ".join(code(str(item)) for item in row["dependencies"]) or "—"
             lines.append(
                 f"| {link(row['path'], PurePosixPath(row['path']).name)} | {state}{cell(purpose)} "
-                f"Feature/owner: {cell(feature)}. | {dependencies} |"
+                "|"
             )
         lines.extend(["", "</details>", ""])
     lines.extend([
@@ -350,7 +379,6 @@ def render() -> str:
         lines.extend([
             f'<a id="{identifier.lower()}"></a>', "<details>",
             f"<summary>{task['order']}. {identifier}: {task['title']} [{state}]</summary>", "",
-            f"**Canonical card:** {link('docs/engineering/backlog/issues/' + identifier + '.md', identifier)}.", "",
             f"**Priority:** {task['priority']} · **Phase:** {task['phase']} · **Area:** {task['area']}.", "",
             f"**Suggested role:** {task['owner_role']}.", "",
             "**Prerequisites:** " + (", ".join(task_link(t) for t in task["depends_on"]) or "None") + ".", "",

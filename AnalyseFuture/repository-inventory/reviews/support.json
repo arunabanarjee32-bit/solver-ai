@@ -2056,6 +2056,217 @@
       "active": true,
       "status": "Product proposal; longer-term AI, contest, production and training capabilities are not implemented by this document.",
       "risks": []
+    },
+    {
+      "path": "docs/product/DSA_SOLVER_READINESS.md",
+      "purpose": "Complete future DSA solver readiness checklist: supported coverage, evaluated correctness, data/model research, actual approved training, artifacts, serving and release gates.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/research/FINETUNING_MODEL_RESEARCH.md",
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Documentation/research only; no model selected, downloaded, trained or benchmarked.",
+      "risks": [
+        "Future model artifacts and licenses require direct card/config verification before selection."
+      ]
+    },
+    {
+      "path": "docs/research/FINETUNING_MODEL_RESEARCH.md",
+      "purpose": "Dated non-ranked research catalogue of 20 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "official publisher documentation linked in the catalogue"
+      ],
+      "active": true,
+      "status": "Documentation/research only; no model selected, downloaded, trained or benchmarked.",
+      "risks": [
+        "Future model artifacts and licenses require direct card/config verification before selection."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B128.md",
+      "purpose": "Planned SAI-B128: Implement a declared DSA coverage matrix and preregistered model release measurements; ownership area solver-readiness.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Coverage can be gamed by easy tasks or thresholds chosen after results; preserve category counts, lineage, uncertainty and preregistration."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B129.md",
+      "purpose": "Planned SAI-B129: Run an approved untuned checkpoint comparison and record a future selection; ownership area model-baseline.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Model training exposure is often unknown and published hardware figures may not match this workload; report contamination and feasibility uncertainty."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B130.md",
+      "purpose": "Planned SAI-B130: Materialize a permitted validated training corpus with immutable split lineage; ownership area training-data.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Bad solutions, silent rights assumptions and leakage can invalidate both training and evaluation; quarantine uncertain inputs rather than filling gaps automatically."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B131.md",
+      "purpose": "Planned SAI-B131: Create a separate locked training environment and reviewed artifact loader; ownership area training-infrastructure.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Artifact deserialization and accelerator dependencies expand the supply chain; isolate them from app credentials and preserve immutable versions."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B132.md",
+      "purpose": "Planned SAI-B132: Implement tokenizer-aware SFT examples and answer-only loss masking; ownership area training-preprocessing.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Loss-mask/template errors can create a seemingly successful training curve while teaching the wrong objective; inspect labels, not just batch shapes."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B133.md",
+      "purpose": "Planned SAI-B133: Run an approved external LoRA smoke experiment with stop and resume evidence; ownership area training-smoke.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Even smoke runs incur compute and artifact risk; enforce hard limits in the runner and stop on invalid gradients, loss or artifact state."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B134.md",
+      "purpose": "Planned SAI-B134: Execute the approved bounded SFT adapter training campaign; ownership area actual-fine-tuning.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Training can overfit, leak evaluation data or exhaust resources; frozen manifests and independent review of run evidence are required."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B135.md",
+      "purpose": "Planned SAI-B135: Publish immutable private model artifacts and complete adapter lineage; ownership area model-artifacts.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Ambiguous lineage or unrestricted artifact publication can violate licenses and make rollback impossible; retain exact reconstructible identities."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B136.md",
+      "purpose": "Planned SAI-B136: Evaluate tuned candidates against matched baselines and enforce category gates; ownership area model-promotion-evaluation.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Contamination, faulty oracles and unequal budgets can manufacture gains; evaluator independence and complete negative reporting are essential."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B137.md",
+      "purpose": "Planned SAI-B137: Qualify inference export and quantization at the deployed precision; ownership area inference-qualification.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Merging/quantization can silently degrade quality or exceed memory; qualify the artifact actually deployed, not only its training checkpoint."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B138.md",
+      "purpose": "Planned SAI-B138: Integrate the qualified trained artifact with bounded provider-neutral serving; ownership area trained-model-serving.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Model-serving isolation and endpoint configuration can bypass established policy if treated as a new shortcut; reuse existing trusted admission controls."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B139.md",
+      "purpose": "Planned SAI-B139: Promote a trained model through a limited pilot and rehearsed rollback; ownership area trained-model-release.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Promotion changes real-user behavior and recurring spend; require accountable operations, consent, capacity and a tested fallback."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B140.md",
+      "purpose": "Planned SAI-B140: Run a separately approved execution-reward preference or RL experiment; ownership area optional-model-research.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Reward hacking, data leakage and resource amplification can produce misleading gains; this optional issue requires an explicit stop/no-go outcome."
+      ]
+    },
+    {
+      "path": "docs/engineering/backlog/issues/SAI-B141.md",
+      "purpose": "Planned SAI-B141: Operate a consented failure-analysis and retraining improvement cycle; ownership area model-lifecycle.",
+      "feature": "future solver training and measured DSA readiness",
+      "dependencies": [
+        "docs/engineering/backlog/issues.json"
+      ],
+      "active": true,
+      "status": "Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.",
+      "risks": [
+        "Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes."
+      ]
     }
   ],
   "scope": "Coordinator full support/config inspection"

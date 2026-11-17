@@ -1,3 +1,15 @@
+CURRENT SOLVER AND TRAINING PLAN UPDATE — 2026-11-17 (Asia/Kolkata)
+44 feature records:23 active,1 partial,12 feasible proposals and8 research-only.
+F033 now has an explicit future solver training/artifact/release plan instead of
+only an archive research reference. It is NOT implemented; no model is selected,
+no training has run and no model benchmark is claimed. B080 remains admission;
+appended task cards cover data/pipeline, approved smoke and real training,
+evaluation, artifact qualification, inference/pilot/rollback and improvement.
+See docs/product/DSA_SOLVER_READINESS.md and
+ docs/research/FINETUNING_MODEL_RESEARCH.md for scope and future model research.
+features.json and PROJECT_HANDOFF.md provide the current complete records.
+All earlier paragraphs below retain their original dated phase counts/evidence.
+
 CURRENT FEATURE REGISTER
 44 records:23 active,1 partial,11 proposed and9 research-only. The latest
 engineering increment implements the PR evidence contract locally; hosting

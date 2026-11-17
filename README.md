@@ -6,8 +6,14 @@
 
 **Continue this project:** [Complete project guide and task handoff](PROJECT_HANDOFF.md)
 explains the goal, implemented and planned features, every tracked file and folder,
-and all 127 detailed task specifications. Other tools can use it to choose a ready
+and all 141 detailed task specifications. Other tools can use it to choose a ready
 task, implement a focused PR and request review.
+
+**DSA solver and fine-tuning:** the [readiness plan](docs/product/DSA_SOLVER_READINESS.md)
+covers supported problem categories, actual future training, evaluation and model
+delivery. The [model research catalogue](docs/research/FINETUNING_MODEL_RESEARCH.md)
+keeps checkpoint selection open for later comparison. No model is selected or
+being trained, and readiness does not guarantee solving every possible problem.
 
 Read the [current project vision and future roadmap](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt)
 for the product, feasibility, AI workflow and conditional one-year, two-year and
@@ -30,7 +36,7 @@ The validation report separates current checks from retained historical evidence
 ## Run locally
 
 The [ordered implementation backlog](docs/engineering/backlog/README.md) contains
-127 scoped tasks with prerequisites, current feature paths, acceptance criteria
+141 scoped tasks with prerequisites, current feature paths, acceptance criteria
 and validation commands. Other implementation tools follow the
 [review-and-merge workflow](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md).
 The publication receipt distinguishes prepared local cards from confirmed open

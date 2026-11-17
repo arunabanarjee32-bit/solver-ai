@@ -2,7 +2,7 @@
 
 The owner has assigned implementation tasks to other AI tools and requested
 maintainer/assistant review before merging their work. The
-[ordered backlog](backlog/README.md) contains 127 task cards with current feature
+[ordered backlog](backlog/README.md) contains 141 task cards with current feature
 paths, prerequisites, bounded scope, acceptance criteria and validation commands.
 Cards are plans; [publication.json](backlog/publication.json) records actual
 GitHub issue links and any publishing blocker.

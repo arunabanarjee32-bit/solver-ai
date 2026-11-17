@@ -2,6 +2,14 @@
 
 Goal: high-quality algorithmic help with *measured correctness* and a learning-oriented interface.
 
+The main ambition is broad DSA-solving coverage on previously unseen problems.
+Read [DSA solver readiness](DSA_SOLVER_READINESS.md) for the full capability,
+training and qualification checklist. “Can attempt” and “accepted by a named
+evaluator” are distinct claims; no implementation or fine-tuning milestone
+guarantees solving every possible problem. No fine-tuning model is selected;
+the [model research catalogue](../research/FINETUNING_MODEL_RESEARCH.md) preserves
+options for future comparison and decision.
+
 ## Distinct user experiences
 
 - Tutor: progressively reveal concept -> insight -> pseudocode -> code review; default to hints, not spoilers.
@@ -39,7 +47,11 @@ Per-user quotas; strict token and test budgets; input bounds; rate limits; adver
 
 ## Model strategy
 
-Start with interchangeable API and open-weight model adapters; baseline on an unseen benchmark before LoRA. Fine-tuning is a separate research experiment and not a shortcut around judge correctness. See MODEL_DATA_EVALUATION.md.
+Start with interchangeable API and open-weight model adapters; baseline on
+disjoint tasks before LoRA. Compare candidates without assuming a winning family.
+Fine-tuning includes data/tooling, actual approved external training, evaluation,
+artifact qualification and serving work beyond the earlier admission gate.
+See [model/data/evaluation](../research/MODEL_DATA_EVALUATION.md).
 
 ## First implementation after the judge
 

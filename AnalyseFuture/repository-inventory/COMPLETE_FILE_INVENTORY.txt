@@ -1,6 +1,6 @@
 COMPLETE FILE INVENTORY
 Baseline: a00894df45e5b451d3261ed374b36e8d2c208ad6
-Current indexed paths: 446
+Current indexed paths: 462
 All current Git-index paths; generated inventory outputs included.
 Size/hash omitted for both inventory outputs to avoid recursion.
 Review records describe baseline static findings; final validation and fixes are in
@@ -1747,7 +1747,7 @@ AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt
   Assessment: Current recovery report; validation results and pending work explicitly separated.
   Risks/gaps: Not a security certification or promise of future delivery.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: ccb1ebcd07542974eb57257b96cff7572f326afcb941c039f458e6d3f05d6216; bytes: 39787
+  SHA256: df9339bf5ac64055750a091422da7545bdf719e872eb4d5052aded9905100121; bytes: 40614
 
 AnalyseFuture/repository-inventory/baseline.json
   Owner: recovery records and inventory
@@ -1777,7 +1777,7 @@ AnalyseFuture/repository-inventory/features.json
   Assessment: Machine-readable evidence; source/version limitations recorded in contents.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 15f6f6fdeea760d8c2432c7cc35c15838aebf4fc67a70d6c4fc9b7adfcec3f76; bytes: 53002
+  SHA256: d85a82a5c4f94f7968906e3372810a643b168ea2879129999be4551994372b10; bytes: 53750
 
 AnalyseFuture/repository-inventory/functional-baseline.json
   Owner: recovery records and inventory
@@ -1887,7 +1887,7 @@ AnalyseFuture/repository-inventory/reviews/support.json
   Assessment: Machine-readable evidence; source/version limitations recorded in contents.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: b2cd4dd09f7330bf8a53bda4f5e67c1d4794eb641de2c17c0a6e2021a93bb909; bytes: 103047
+  SHA256: acdbc48b43c41637ee61360f14dcba4a9d23d265ef8a45d09cf1fed0bcd08699; bytes: 114569
 
 AnalyseFuture/repository-inventory/reviews/web.json
   Owner: recovery records and inventory
@@ -1927,7 +1927,7 @@ PROJECT_HANDOFF.md
   Assessment: Generated documentation; task and feature states remain distinct from observed runtime evidence.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: d32e61351b5dce9eed92de41b4cb9f0fdde6d33f9c8b58580757719c5a5cd994; bytes: 499012
+  SHA256: f3e9e8a446a46247195cbd3b887470a551c00bb8811f1f7d5d7d324102681da4; bytes: 492739
 
 PROJECT_STRUCTURE.md
   Owner: root project guidance, dependencies and deployment configuration
@@ -1937,7 +1937,7 @@ PROJECT_STRUCTURE.md
   Assessment: Current layout reference; named-revision validation and remaining limits are recorded in the status and validation ledgers.
   Risks/gaps: Runtime verification deferred at the owner request.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: bece68ea4f0a2090ee8864f2c6dcc73c576715c960a817ee7e79f19937746ca4; bytes: 13636
+  SHA256: e814b90f8f7b77e69862a11ef7422d5d6054769b90c7f7e3099b341e8f9a84b5; bytes: 13638
 
 README.md
   Owner: root project guidance, dependencies and deployment configuration
@@ -1947,7 +1947,7 @@ README.md
   Assessment: Current local workflow; future target architecture explicitly broader.
   Risks/gaps: One-line setup cannot cover all platform-specific judge/browser conditions.; Roadmap and architecture diagram include unimplemented components.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: e65898141424d93d4138db3d82c9ec0354ba92f27f29874f53094a041255d729; bytes: 8776
+  SHA256: e83d9af7ca26e5556c52a5b9098f4cc293d53e9127f53355b4cf1be890773569; bytes: 9193
 
 SECURITY.md
   Owner: root project guidance, dependencies and deployment configuration
@@ -2297,7 +2297,7 @@ docs/INDEX.md
   Assessment: Current links with canonical future file to be added by parent task.
   Risks/gaps: Readers may conflate linked proposals and executed implementation without status labels.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 0be7338ed937818d46576f52b2d076cad10877b597937fc11e8f3d74a85073ab; bytes: 5615
+  SHA256: ae11d41c7f77769e1c2f14c155d17322714782c86b2ea83bf10af6502295fb19; bytes: 5909
 
 docs/architecture/ARCHITECTURE.md
   Owner: specifications, decisions and development guidance
@@ -2347,7 +2347,7 @@ docs/engineering/AI_CONTRIBUTION_WORKFLOW.md
   Assessment: Current instructions; no background monitor or server enforcement claimed.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 913d83b6b43535ca077065cfaa14405d6b3c5f4cbdb298c4000b29cec3768cd5; bytes: 4958
+  SHA256: c70422cac411f94a2bf7b26f04255737b05c535259c9a21b419663ae5ecb3d39; bytes: 4958
 
 docs/engineering/CODEX_PLAYBOOK.md
   Owner: engineering workflow and contribution guidance
@@ -2387,7 +2387,7 @@ docs/engineering/backlog/README.md
   Assessment: 127local task cards;0confirmed remote issue links.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: c9a2c1214c15ea26cab245d0605c1cee716ac4e3b1c03530fe86809cffc0e07f; bytes: 24438
+  SHA256: 7ddba077e4d3b63ad25a0a654223f90f867c2f6e54c6e1c58b7f963dd37d2b36; bytes: 27605
 
 docs/engineering/backlog/issues.json
   Owner: implementation task catalogue and publication records
@@ -2397,7 +2397,7 @@ docs/engineering/backlog/issues.json
   Assessment: Offline schema/dependency/target-path validation passed; tasks not implemented by this file.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: b3d89e344ffb56a0441ec35dd603a79ec14c9f6b1cdbc668346bf3eede8c93f0; bytes: 253465
+  SHA256: f064bc770ebc1aa9b335d0fbd0c820ab67059abc2ced9ee338b8bfafc8aa0b4d; bytes: 295214
 
 docs/engineering/backlog/issues/SAI-B001.md
   Owner: implementation task catalogue and publication records
@@ -3669,6 +3669,146 @@ docs/engineering/backlog/issues/SAI-B127.md
   Review: AnalyseFuture/repository-inventory/reviews/support.json
   SHA256: 18cdb119cd7dc2b7645b98667d1f3177ef4329dc03a9fe61f51ec43ec5843a4f; bytes: 2803
 
+docs/engineering/backlog/issues/SAI-B128.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B128: Implement a declared DSA coverage matrix and preregistered model release measurements; ownership area solver-readiness.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Coverage can be gamed by easy tasks or thresholds chosen after results; preserve category counts, lineage, uncertainty and preregistration.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: c7a5f1af5779aa5e0f4b4baacac0edbe6cc67a172d4db7907c38a84c85ad0426; bytes: 3439
+
+docs/engineering/backlog/issues/SAI-B129.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B129: Run an approved untuned checkpoint comparison and record a future selection; ownership area model-baseline.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Model training exposure is often unknown and published hardware figures may not match this workload; report contamination and feasibility uncertainty.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 22d323290c0ddbb7fb2aa85b52b2bd563da719376a7408a22d11f6898bd9be5b; bytes: 3766
+
+docs/engineering/backlog/issues/SAI-B130.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B130: Materialize a permitted validated training corpus with immutable split lineage; ownership area training-data.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Bad solutions, silent rights assumptions and leakage can invalidate both training and evaluation; quarantine uncertain inputs rather than filling gaps automatically.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 10957d8e84b540cd617eb20637d956c69c2c3ee611aa85ae43000a1bb1786c23; bytes: 3410
+
+docs/engineering/backlog/issues/SAI-B131.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B131: Create a separate locked training environment and reviewed artifact loader; ownership area training-infrastructure.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Artifact deserialization and accelerator dependencies expand the supply chain; isolate them from app credentials and preserve immutable versions.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 2c1a90f44bcac3fe786921bf48d79ee5183abadb7daf85310e4fe095c8a26b02; bytes: 3329
+
+docs/engineering/backlog/issues/SAI-B132.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B132: Implement tokenizer-aware SFT examples and answer-only loss masking; ownership area training-preprocessing.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Loss-mask/template errors can create a seemingly successful training curve while teaching the wrong objective; inspect labels, not just batch shapes.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 751775cebfa08aceecdcfd5ceeff60ecf46df47c9a4747b69742a94d8c7963ec; bytes: 3056
+
+docs/engineering/backlog/issues/SAI-B133.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B133: Run an approved external LoRA smoke experiment with stop and resume evidence; ownership area training-smoke.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Even smoke runs incur compute and artifact risk; enforce hard limits in the runner and stop on invalid gradients, loss or artifact state.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 898c39d8f538bbbde955c84aa043ebef94cc556e79ac2c866bd2511e938f30d1; bytes: 3354
+
+docs/engineering/backlog/issues/SAI-B134.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B134: Execute the approved bounded SFT adapter training campaign; ownership area actual-fine-tuning.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Training can overfit, leak evaluation data or exhaust resources; frozen manifests and independent review of run evidence are required.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 15296a9d2d863c7b831898e09356b0b5f3b0a623475bb1c0d7b600dafeccb996; bytes: 3394
+
+docs/engineering/backlog/issues/SAI-B135.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B135: Publish immutable private model artifacts and complete adapter lineage; ownership area model-artifacts.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Ambiguous lineage or unrestricted artifact publication can violate licenses and make rollback impossible; retain exact reconstructible identities.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: ddf215f5e6d8a289a9c57715025ed77a99c2734d1d947943589518c628367b63; bytes: 3234
+
+docs/engineering/backlog/issues/SAI-B136.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B136: Evaluate tuned candidates against matched baselines and enforce category gates; ownership area model-promotion-evaluation.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Contamination, faulty oracles and unequal budgets can manufacture gains; evaluator independence and complete negative reporting are essential.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 9bd9ecd2c98ade08c4c12c59cad51ec149d9fb8ecbf01b3cfd6d907a1b792813; bytes: 3724
+
+docs/engineering/backlog/issues/SAI-B137.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B137: Qualify inference export and quantization at the deployed precision; ownership area inference-qualification.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Merging/quantization can silently degrade quality or exceed memory; qualify the artifact actually deployed, not only its training checkpoint.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: c845fbd1bcbde53b4e966e2dcc49204bc64604d03180d519753d68b8ff7ac35b; bytes: 3095
+
+docs/engineering/backlog/issues/SAI-B138.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B138: Integrate the qualified trained artifact with bounded provider-neutral serving; ownership area trained-model-serving.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Model-serving isolation and endpoint configuration can bypass established policy if treated as a new shortcut; reuse existing trusted admission controls.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: ed67f774e2f10d46eb567f89139abb628d4f7d30d68267edc79eb6178d401024; bytes: 3857
+
+docs/engineering/backlog/issues/SAI-B139.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B139: Promote a trained model through a limited pilot and rehearsed rollback; ownership area trained-model-release.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Promotion changes real-user behavior and recurring spend; require accountable operations, consent, capacity and a tested fallback.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 789bb21c4090e2fd8b505dab422942e72e63c7341b275da23be16ed057802d2a; bytes: 3648
+
+docs/engineering/backlog/issues/SAI-B140.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B140: Run a separately approved execution-reward preference or RL experiment; ownership area optional-model-research.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Reward hacking, data leakage and resource amplification can produce misleading gains; this optional issue requires an explicit stop/no-go outcome.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: bbc3ae9db9e6e318edc2389600618d27df3ca3a66235cd8b5e29103a1110b69b; bytes: 3852
+
+docs/engineering/backlog/issues/SAI-B141.md
+  Owner: implementation task catalogue and publication records
+  Purpose: Planned SAI-B141: Operate a consented failure-analysis and retraining improvement cycle; ownership area model-lifecycle.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/engineering/backlog/issues.json
+  Assessment: Generated detailed future task card; no model selection, training, evaluation or deployment is implemented by the card.
+  Risks/gaps: Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: b07993b3ff8d7c66014e6b6f61ab8de8eb2448b3ce572b6604c8d6882437ed54; bytes: 3758
+
 docs/engineering/backlog/publication.json
   Owner: implementation task catalogue and publication records
   Purpose: Actual confirmed remote issue links and publication/access status.
@@ -3677,7 +3817,7 @@ docs/engineering/backlog/publication.json
   Assessment: Blocked at API preflight;0POSTs and0created issues in this session.
   Risks/gaps: Observe issue prerequisites, owner decisions and actual publication receipts.
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: ab4b4e91f6282928ce5d8cb8f19ea8fffcce9b6b8ac6be755958719935468f84; bytes: 1249
+  SHA256: f25cc01c234eec690ededa212286456c7fafcb1a5138e26dc25c471bae460d97; bytes: 1249
 
 docs/engineering/handoff-directories.json
   Owner: engineering workflow and contribution guidance
@@ -3707,7 +3847,7 @@ docs/governance/OPEN_DECISIONS.md
   Assessment: Mixed open business/legal choices and partly resolved local technical choices.
   Risks/gaps: D-06 presents Piston/alternate choice before local gVisor adoption.; Local adoption does not settle production deployment or licensing policy.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 74ca389cfd3f9baf06115e11ebdfd7aa7a75767734429317fefe3f3bc863c621; bytes: 2419
+  SHA256: 8f1d68da90cb84633615750fa246c950ea52660d9dc880a8ad01e39692549fea; bytes: 2912
 
 docs/governance/OPEN_SOURCE_STRATEGY.md
   Owner: specifications, decisions and development guidance
@@ -3747,7 +3887,17 @@ docs/product/AI_SOLVER.md
   Assessment: Mostly future design; first offline hint contract exists according to status ledger.
   Risks/gaps: Last section proposing initial stub is partly superseded.; Private grading tests must not become model feedback.; Finite tests and model confidence do not prove correctness.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 50eaddd2316920b37778b79ba2e95dffcbc9d6b00ec665f612c08c5d914c46bc; bytes: 3023
+  SHA256: 5c5817e9f7db93d04d9b6c59a5645faf56fb5bb0b889a60fb455769e3ebae653; bytes: 3697
+
+docs/product/DSA_SOLVER_READINESS.md
+  Owner: specifications, decisions and development guidance
+  Purpose: Complete future DSA solver readiness checklist: supported coverage, evaluated correctness, data/model research, actual approved training, artifacts, serving and release gates.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/research/FINETUNING_MODEL_RESEARCH.md, docs/research/MODEL_DATA_EVALUATION.md, docs/engineering/backlog/issues.json
+  Assessment: Documentation/research only; no model selected, downloaded, trained or benchmarked.
+  Risks/gaps: Future model artifacts and licenses require direct card/config verification before selection.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: aec3b8f821d3b3af726a0c7a31f50fe9bbc50d144eb72fb9318aa232f7135978; bytes: 13080
 
 docs/product/PRODUCT_REQUIREMENTS.md
   Owner: specifications, decisions and development guidance
@@ -3787,7 +3937,7 @@ docs/product/ROADMAP.md
   Assessment: No committed dates; phases partially implemented per status ledger.
   Risks/gaps: Phase zero/one text predates completed foundation; must not trigger reset.; Default issue/PR wording differs from current direct-main authorization.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: ba455d1c654a03d844b19dc098162fa17c515559dafb7d7f3e5252665e26d289; bytes: 3037
+  SHA256: f553a24a45916f84a2eecd2c6103f691e8f93df84b1cc7159fc26f5c14cd2d80; bytes: 3958
 
 docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md
   Owner: specifications, decisions and development guidance
@@ -3809,6 +3959,16 @@ docs/research/COMPETITIVE_LANDSCAPE.md
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
   SHA256: efe4629179e85104f9c2ea633895461be1ece451a2d68fed7afadc1a2202db13; bytes: 2279
 
+docs/research/FINETUNING_MODEL_RESEARCH.md
+  Owner: specifications, decisions and development guidance
+  Purpose: Dated non-ranked research catalogue of 20 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist.
+  Active: True; feature: future solver training and measured DSA readiness
+  Dependencies: docs/product/DSA_SOLVER_READINESS.md, official publisher documentation linked in the catalogue
+  Assessment: Documentation/research only; no model selected, downloaded, trained or benchmarked.
+  Risks/gaps: Future model artifacts and licenses require direct card/config verification before selection.
+  Review: AnalyseFuture/repository-inventory/reviews/support.json
+  SHA256: 0592dfecf1a28625e60631827fd0adc53a0e0f616ad77caa7872342ab3628842; bytes: 26616
+
 docs/research/MODEL_DATA_EVALUATION.md
   Owner: specifications, decisions and development guidance
   Purpose: Future permitted data pipeline, model baselines, tuning and evaluation.
@@ -3817,7 +3977,7 @@ docs/research/MODEL_DATA_EVALUATION.md
   Assessment: No trained model or benchmark run is claimed.
   Risks/gaps: Training requires separate rights and external compute budget.; Model/provider family names are candidates, not installed dependencies.; Benchmark contamination and invalid rewards can create misleading gains.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 25a2a5ead3aa5bb5b7119e216b50013fd8eb7cf4a0e2d63d21b5af470972a5f8; bytes: 3358
+  SHA256: b283d0aeca6f12cbb188214f89944b96eb6c32960e064f0eed62ac3baf3272ac; bytes: 5510
 
 docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt
   Owner: specifications, decisions and development guidance
@@ -3847,7 +4007,7 @@ docs/status/PROJECT_STATUS.md
   Assessment: Current local 2026-11-17 preservation validation separated from historical/hosted evidence.
   Risks/gaps: Recorded checks apply to named revision, not all later changes.; Local passes and earlier hosted run do not prove production readiness or account recovery.
   Review: AnalyseFuture/repository-inventory/reviews/docs.json
-  SHA256: 304c579d8fb1afcc2f136f688e66a31f48017fb364e8fd9f1fb34bddda9e93d2; bytes: 14448
+  SHA256: d9e2a5a7bc88c61f5bbd31d790a33b5e6b6972b92dbc36102e74f3459861695f; bytes: 16236
 
 package-lock.json
   Owner: root project guidance, dependencies and deployment configuration
@@ -3957,7 +4117,7 @@ scripts/verification/project_handoff.py
   Assessment: Documentation generator only; no network, application execution, training or remote mutation.
   Risks/gaps:
   Review: AnalyseFuture/repository-inventory/reviews/support.json
-  SHA256: 16a957d17e17a39447f0bcc9294871fb634dcf2495390802c5bfe3761e448597; bytes: 21824
+  SHA256: b05c890bedd0eb97ab5b6ff194cd6c311f1fe0eadef2d206938659706dd1aedc; bytes: 23323
 
 scripts/verification/repository_inventory.py
   Owner: development and verification tools

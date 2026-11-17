@@ -3,7 +3,7 @@
   "repository": "arunabanarjee32-bit/solver-ai",
   "prepared_date": "2026-11-17",
   "source_baseline": "adcfb0ba74a3ab022977b1ede3abe5db95e8ceec",
-  "scope": "127 future bounded tasks. Current authored API/UI, practice/account/history and gVisor implementation are retained, not reopened as missing. Stable IDs are distinct from topologically sorted execution order.",
+  "scope": "141 bounded tasks: one locally completed PR evidence gate and 140 pending. Existing practice/account/history/authored hints and gVisor are retained. Appended B128-B141 define DSA coverage, future empirical model selection, actual approved training, artifacts, evaluation, serving, pilot and optional improvement research; no model is selected or trained by these cards.",
   "review_workflow": "Other AI tools implement one ready issue per branch/PR; designated maintainer/assistant reviews actual code and observed checks before an authorized merge. No self-merge/automatic merger or unattended monitoring is enabled.",
   "issues": [
     {
@@ -3093,13 +3093,13 @@
         "apps/web/app",
         "services/api/tests"
       ],
-      "problem": "A coach must not gain access to a learner’s private practice simply because both have accounts.",
+      "problem": "A coach must not gain access to a learner\u2019s private practice simply because both have accounts.",
       "scope": [
         "Add a proposed cohort invitation/acceptance workflow with bounded coach membership and learner-controlled sharing scopes.",
         "Keep ordinary private history inaccessible unless a specific cohort permission covers it."
       ],
       "acceptance": [
-        "Joining requires the invited learner’s explicit action and shows exactly which data becomes visible.",
+        "Joining requires the invited learner\u2019s explicit action and shows exactly which data becomes visible.",
         "A coach outside the cohort and a removed coach cannot query cohort-only data.",
         "Leaving/revoking sharing changes subsequent access according to a tested policy."
       ],
@@ -4325,7 +4325,7 @@
         "apps/web/features",
         "services/api/tests"
       ],
-      "problem": "Participants need a traceable correction channel that does not reveal another team’s private work.",
+      "problem": "Participants need a traceable correction channel that does not reveal another team\u2019s private work.",
       "scope": [
         "Add proposed private participant questions, organizer responses and separately approved public clarifications.",
         "Link a grading appeal to an attempt/rejudge decision with bounded text and a visible state history."
@@ -4811,7 +4811,7 @@
         "docs/governance/DATA_AND_LICENSES.md",
         "services/api/tests"
       ],
-      "problem": "An institutional pilot needs explicit limits on what an organization controls versus the learner’s personal account.",
+      "problem": "An institutional pilot needs explicit limits on what an organization controls versus the learner\u2019s personal account.",
       "scope": [
         "Add a proposed institution/cohort sponsorship policy record with accepted terms version and permitted data scopes.",
         "Ensure institutional administrators can manage sponsored assignments without inheriting personal practice/source access."
@@ -4819,7 +4819,7 @@
       "acceptance": [
         "An institutional administrator is denied unrelated personal history and source detail routes.",
         "Terms/scope changes require the documented acknowledgement path and an audit record.",
-        "Pilot enrollment fails clearly when the organization’s required policy configuration is missing."
+        "Pilot enrollment fails clearly when the organization\u2019s required policy configuration is missing."
       ],
       "validation": [
         "uv run --project services/api --frozen pytest services/api/tests/institutions/test_data_boundaries.py",
@@ -4856,7 +4856,7 @@
         "Default to summary/rubric records; include source only when the assignment consent/policy explicitly permits it."
       ],
       "acceptance": [
-        "A seeded mixed personal/cohort history exports only the requested institution’s allowed assignment rows.",
+        "A seeded mixed personal/cohort history exports only the requested institution\u2019s allowed assignment rows.",
         "Private grading data, tokens, account keys and unrelated identifiers never appear.",
         "Expired/revoked institution permissions cannot generate or retrieve a fresh export."
       ],
@@ -5121,6 +5121,649 @@
       ],
       "risk": "Training can memorize evaluation tasks or consume substantial resources without improving product value.",
       "owner_role": "ML evaluation lead with project owner"
+    },
+    {
+      "id": "SAI-B128",
+      "order": 128,
+      "title": "Implement a declared DSA coverage matrix and preregistered model release measurements",
+      "area": "solver-readiness",
+      "priority": "P1",
+      "phase": "ML-1 measured scope and baseline",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B074",
+        "SAI-B077",
+        "SAI-B078"
+      ],
+      "target_paths": [
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/product/AI_SOLVER.md",
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "scripts/verification",
+        "tests/tooling"
+      ],
+      "problem": "The readiness document can describe broad ambitions, but training and release need a machine-readable support policy and measurable category coverage. Neither attempting a prompt nor passing a small benchmark demonstrates support for every DSA problem.",
+      "scope": [
+        "Create a versioned coverage manifest under a new ml/evaluation/ implementation, keyed by algorithm topic/subtopic, problem format, difficulty band, supported language/runtime, constraint range and evaluation budget. Reuse B068 problem identities and B074 run records instead of creating another identity authority.",
+        "Bind rights-approved held-out task manifests and independent graders to declared cells; represent missing evidence, out-of-distribution inputs and unsupported formats explicitly.",
+        "Record owner-reviewed per-category quality, reliability, latency/cost and regression thresholds before tuned results are inspected. Define attemptable, measured-supported and unsupported states, including safe refusal/abstention."
+      ],
+      "acceptance": [
+        "Synthetic fixtures distinguish an untested category from a measured pass, a failed category and an unsupported input; no empty cell counts as success.",
+        "Release aggregation records eligible task counts, pass@1/pass@k sampling policy, uncertainty and execution failures for each declared category without hiding weak categories in an overall score.",
+        "A model cannot receive a universal any-DSA label, an untested language/interactive format cannot be advertised as supported, and threshold changes retain dated review provenance."
+      ],
+      "validation": [
+        "Future authorized checks: deterministic manifest/report fixtures introduced under tests/tooling; no weights, model calls or GPU access are needed for these schema checks.",
+        "Review the coverage manifest and preregistration against DSA_SOLVER_READINESS.md with the evaluation lead and owner."
+      ],
+      "out_of_scope": [
+        "Selecting a checkpoint now",
+        "Claiming formal correctness from finite tests",
+        "Implementing a general natural-language problem parser or replacing B074 evaluation orchestration"
+      ],
+      "risk": "Coverage can be gamed by easy tasks or thresholds chosen after results; preserve category counts, lineage, uncertainty and preregistration.",
+      "owner_role": "ML evaluation lead and product owner"
+    },
+    {
+      "id": "SAI-B129",
+      "order": 129,
+      "title": "Run an approved untuned checkpoint comparison and record a future selection",
+      "area": "model-baseline",
+      "priority": "P1",
+      "phase": "ML-1 measured scope and baseline",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B074",
+        "SAI-B078",
+        "SAI-B079",
+        "SAI-B128"
+      ],
+      "target_paths": [
+        "docs/research/FINETUNING_MODEL_RESEARCH.md",
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/governance/OPEN_DECISIONS.md",
+        "scripts/verification",
+        "tests/tooling"
+      ],
+      "problem": "The research catalogue names future candidates but no model has been selected, downloaded or benchmarked here. A fine-tuning choice needs measured task fit, actual resource behavior and license compatibility rather than a nominal parameter count or advertised score.",
+      "scope": [
+        "After separate owner authorization for artifacts, hardware and a fixed experiment budget, compare at least two eligible open-weight checkpoints or explicitly justify why only one is eligible. Do not assume any family or size wins.",
+        "Reuse B074 evaluation and B128 coverage on a model-selection/validation split disjoint from training and the sealed final release test; fix prompts/templates, decoding, context limits, candidate/test budgets and exact model revisions. Run single-candidate untuned baselines before adding repair or tuning.",
+        "Measure peak training/inference feasibility separately where authorized, report unknowns and record a reviewed selection or do-not-proceed outcome. Hosted/API models may be optional approved reference baselines, not assumed downloadable LoRA bases."
+      ],
+      "acceptance": [
+        "The report includes exact checkpoint/revision, license/usage evidence, tokenizer/template, hardware/software, precision, per-category results, latency, memory, cost and failures.",
+        "All compared scores state task eligibility and comparable budgets; no task used for later held-out evaluation is silently moved into training.",
+        "No checkpoint is selected merely by writing this issue. Actual execution requires recorded artifact/compute permission; absent resources produce an explicit blocked decision without substituting invented measurements.",
+        "Checkpoint selection never inspects the sealed final release-test results; record a separate selection split and freeze the chosen model/criteria before final evaluation."
+      ],
+      "validation": [
+        "Future approved execution: use the B074 harness to replay the recorded untuned manifests on the allowed isolated inference host and retain result hashes.",
+        "Reproduce one small manifest twice and investigate nondeterministic/failed outcomes; any paid API baseline requires its own existing approval and cap."
+      ],
+      "out_of_scope": [
+        "Choosing a specific model in this planning update",
+        "Training adapters",
+        "Reproducing every published model benchmark or buying hardware by default"
+      ],
+      "risk": "Model training exposure is often unknown and published hardware figures may not match this workload; report contamination and feasibility uncertainty.",
+      "owner_role": "ML evaluation engineer with project owner"
+    },
+    {
+      "id": "SAI-B130",
+      "order": 130,
+      "title": "Materialize a permitted validated training corpus with immutable split lineage",
+      "area": "training-data",
+      "priority": "P1",
+      "phase": "ML-2 approved data and training tooling",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B077",
+        "SAI-B078",
+        "SAI-B128"
+      ],
+      "target_paths": [
+        "docs/governance/DATA_AND_LICENSES.md",
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "services/judge/solver_judge/grading/cases.py",
+        "scripts/verification",
+        "tests/tooling"
+      ],
+      "problem": "B077 and B078 define split/permission records, but no approved corpus has been normalized, validated and materialized for actual training. The archives include incomplete LFS entries and overlapping benchmark variants that cannot be treated as a ready dataset.",
+      "scope": [
+        "Implement a data-only pipeline under new ml/data/ modules that reads only explicitly approved complete inputs and emits immutable train/validation manifests outside Git. Reuse the permission/split registries rather than infer rights from repository licenses.",
+        "Normalize task/solution/language/provenance records, quarantine malformed or duplicate entries and verify solution correctness through authorized independent grading before including solution targets.",
+        "Reserve the held-out release set; record exact and reviewed near-duplicate exclusions, source lineage, content hashes, accepted/rejected counts and a reproducible materialization recipe."
+      ],
+      "acceptance": [
+        "Every emitted training record points to complete approved source and a valid immutable task identity; missing LFS objects, unknown training permission and private unconsented submissions are rejected.",
+        "A synthetic variant of a held-out task is excluded even when its file name or wording changes, with reviewable reason/override records.",
+        "The manifest can be rebuilt to matching hashes from the same approved inputs; logs contain metadata/counts rather than raw private code or benchmark bodies."
+      ],
+      "validation": [
+        "Future authorized checks: synthetic malformed/rights/duplicate/split fixtures for the new data pipeline.",
+        "Future approved data execution: run the fixed corpus materialization manifest, independently inspect a stratified sample and verify solution targets in the existing isolated judge."
+      ],
+      "out_of_scope": [
+        "Bulk importing all archived datasets",
+        "Using model-created answers as trusted ground truth without independent validation",
+        "Redistributing datasets or downloading missing objects without permission"
+      ],
+      "risk": "Bad solutions, silent rights assumptions and leakage can invalidate both training and evaluation; quarantine uncertain inputs rather than filling gaps automatically.",
+      "owner_role": "Data engineer and rights/evaluation reviewer"
+    },
+    {
+      "id": "SAI-B131",
+      "order": 131,
+      "title": "Create a separate locked training environment and reviewed artifact loader",
+      "area": "training-infrastructure",
+      "priority": "P1",
+      "phase": "ML-2 approved data and training tooling",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B079",
+        "SAI-B080",
+        "SAI-B129"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/onboarding/DEVELOPMENT.md",
+        "scripts/verification",
+        "tests/tooling"
+      ],
+      "problem": "The active API environment deliberately has no ML training stack. Actual training requires a reproducible separate environment, compatible accelerator libraries and safe artifact loading without importing archived requirements or model remote code into app services.",
+      "scope": [
+        "Create ml/training/ with its own pinned project/lock, supported Python/CUDA/toolchain matrix and noninteractive setup/preflight entry point; retain independent API/web lockfiles.",
+        "Implement an artifact loader tied to the future selected revision and B078/B080 records, verifying approved artifact identities, tokenizer/config files and allowed local paths. Default to no arbitrary trust_remote_code and safe tensor formats.",
+        "Implement dry-run configuration and resource preflight that report required resources, supported precision/adapter modes, environment versions and hard stop conditions without automatically provisioning compute."
+      ],
+      "acceptance": [
+        "Installing or importing training tooling does not add ML dependencies to services/api or start a download/training job.",
+        "Synthetic unapproved revision, hash mismatch, path escape and remote-code-required cases fail before loading; trusted artifact handling preserves TLS/checksum verification.",
+        "The exact training environment can be reconstructed and its preflight distinguishes unsupported hardware, missing approved artifact and ready state without pretending a memory estimate is an actual measurement."
+      ],
+      "validation": [
+        "Future authorized checks: the new loader/config fixtures run on CPU with tiny local synthetic tensors/configurations and no external requests.",
+        "On separately approved external hardware, run only the documented training preflight and record the actual environment/artifact hashes before a training job."
+      ],
+      "out_of_scope": [
+        "Installing GPU drivers in the application environment",
+        "Copying archive requirements or enabling unreviewed remote code",
+        "Provisioning paid GPUs or running the actual smoke/train job"
+      ],
+      "risk": "Artifact deserialization and accelerator dependencies expand the supply chain; isolate them from app credentials and preserve immutable versions.",
+      "owner_role": "ML infrastructure engineer"
+    },
+    {
+      "id": "SAI-B132",
+      "order": 132,
+      "title": "Implement tokenizer-aware SFT examples and answer-only loss masking",
+      "area": "training-preprocessing",
+      "priority": "P1",
+      "phase": "ML-2 approved data and training tooling",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B129",
+        "SAI-B130",
+        "SAI-B131"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "tests/tooling"
+      ],
+      "problem": "A clean text corpus is insufficient for SFT: the chosen tokenizer/chat template, truncation, special tokens and labels determine what the model actually learns. Incorrect masking can train on user/system text or cut away the solution.",
+      "scope": [
+        "Implement preprocessing under ml/training/ using the selected artifact tokenizer/template and materialized corpus lineage, with versioned formatting and no fabricated private chain-of-thought targets.",
+        "Define explicit maximum lengths, special-token handling, sample packing/attention policy and assistant-target loss masking; reject or separately report examples that cannot fit validly.",
+        "Produce an immutable tokenization manifest containing tokenizer/template/config hashes, retained/dropped counts and non-sensitive inspection summaries."
+      ],
+      "acceptance": [
+        "Synthetic multi-turn, empty-answer, Unicode, long-source and boundary-token examples have exact expected masks; prompt/system/user tokens and padding do not receive unintended loss.",
+        "No included example silently loses its required answer or crosses split boundaries through packing.",
+        "Reprocessing the same corpus/tokenizer/config reproduces the manifest; inspection summaries do not publish full private examples."
+      ],
+      "validation": [
+        "Future authorized checks: deterministic tokenizer/masking/packing fixtures with a tiny local tokenizer under the separate training environment.",
+        "After artifact approval, manually inspect a small stratified token/label sample and record truncation/drop rates before smoke training."
+      ],
+      "out_of_scope": [
+        "An actual optimization run",
+        "Automatic generation of reasoning traces from private model internals",
+        "Silently changing the corpus or selected tokenizer to make examples fit"
+      ],
+      "risk": "Loss-mask/template errors can create a seemingly successful training curve while teaching the wrong objective; inspect labels, not just batch shapes.",
+      "owner_role": "ML data/training engineer"
+    },
+    {
+      "id": "SAI-B133",
+      "order": 133,
+      "title": "Run an approved external LoRA smoke experiment with stop and resume evidence",
+      "area": "training-smoke",
+      "priority": "P1",
+      "phase": "ML-3 actual approved training",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B080",
+        "SAI-B129",
+        "SAI-B130",
+        "SAI-B131",
+        "SAI-B132"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/governance/OPEN_DECISIONS.md",
+        "tests/tooling"
+      ],
+      "problem": "Admission validation and CPU fixtures do not demonstrate that the selected base, tokenizer, adapter configuration and accelerator stack can train safely. A finite external smoke experiment must precede a larger job.",
+      "scope": [
+        "Implement a bounded LoRA/QLoRA-compatible training command under ml/training/ consuming the accepted B080 manifest and fixed tiny approved corpus slice; choose only a supported precision/method for the future selected model.",
+        "Execute the smoke only on separately authorized external hardware with a recorded low step/time/spend ceiling, cancellation and OOM behavior.",
+        "Save a checkpoint, deliberately stop within the fixture budget, resume under the same configuration and evaluate a small allowed sanity set without using held-out release results for tuning."
+      ],
+      "acceptance": [
+        "Evidence records a real approved run: optimizer updates occurred, losses/gradients are finite, intended adapter parameters changed and frozen base parameters remained unchanged.",
+        "Checkpoint resume restores the documented optimizer/scheduler/RNG state or explicitly reports nondeterministic limits; cancellation and budget exhaustion stop the job and leave a usable manifest.",
+        "Memory/time/cost measurements and failed/OOM outcomes are recorded honestly; a dry-run or five-minute demonstration is not marked as a completed full training campaign."
+      ],
+      "validation": [
+        "Future approved execution: run the new smoke command with the accepted manifest on the authorized external host, then run its bounded stop/resume scenario.",
+        "Verify checkpoint/base/tokenizer/data hashes and run only the declared finite sanity evaluation; do not load model-generated programs on the host."
+      ],
+      "out_of_scope": [
+        "Selecting a model now",
+        "Training inside Codex/application services",
+        "Launching an unconstrained full corpus job or assuming successful smoke establishes quality"
+      ],
+      "risk": "Even smoke runs incur compute and artifact risk; enforce hard limits in the runner and stop on invalid gradients, loss or artifact state.",
+      "owner_role": "ML training engineer and authorized compute operator"
+    },
+    {
+      "id": "SAI-B134",
+      "order": 134,
+      "title": "Execute the approved bounded SFT adapter training campaign",
+      "area": "actual-fine-tuning",
+      "priority": "P1",
+      "phase": "ML-3 actual approved training",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B080",
+        "SAI-B129",
+        "SAI-B130",
+        "SAI-B131",
+        "SAI-B132",
+        "SAI-B133"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/governance/OPEN_DECISIONS.md"
+      ],
+      "problem": "B080 explicitly excludes actual LoRA/QLoRA/GRPO execution. Without this separate task the roadmap can finish admission tooling and still produce no fine-tuned model.",
+      "scope": [
+        "Execute the approved SFT campaign through the separate ml/training/ runner using the fixed base, allowed adapter method, training/validation corpus, seed, effective batch, schedule and bounded hyperparameter plan from the accepted manifest.",
+        "Use validation data for the preregistered checkpoint/stopping policy, record every attempted run including failed/aborted ones and enforce external compute/time/spend ceilings.",
+        "Produce retained candidate adapters and a complete run report with environment/data/code lineage, losses, step counts, resource measurements and termination reason; keep weights and private data out of Git."
+      ],
+      "acceptance": [
+        "At least one actual optimization campaign reaches its declared completion or a clearly recorded failure/early-stop state; documentation completion cannot substitute for execution.",
+        "The saved candidate loads with the exact base/tokenizer and has verified tensor/checkpoint identities; no held-out release task was used to select hyperparameters or checkpoints.",
+        "The report states actual cost/resources and all runs, including negative outcomes. Training completion alone neither promotes the artifact nor asserts improved DSA performance."
+      ],
+      "validation": [
+        "Future separately approved execution: run the training command against the signed-off B080 manifest on the approved external host; verify recorded steps, cancellation and spend stops.",
+        "Reconstruct the selected checkpoint from the report and run the declared validation-only evaluation before handing the candidate to B136."
+      ],
+      "out_of_scope": [
+        "Defaulting to a named checkpoint in this planning update",
+        "Unlimited hyperparameter search",
+        "A foundation-model pretraining project or guaranteed performance gain"
+      ],
+      "risk": "Training can overfit, leak evaluation data or exhaust resources; frozen manifests and independent review of run evidence are required.",
+      "owner_role": "ML training lead and compute operator"
+    },
+    {
+      "id": "SAI-B135",
+      "order": 135,
+      "title": "Publish immutable private model artifacts and complete adapter lineage",
+      "area": "model-artifacts",
+      "priority": "P1",
+      "phase": "ML-3 actual approved training",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B078",
+        "SAI-B129",
+        "SAI-B130",
+        "SAI-B131",
+        "SAI-B134"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/governance/DATA_AND_LICENSES.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "scripts/verification",
+        "tests/tooling"
+      ],
+      "problem": "A training checkpoint directory is not a reproducible deliverable. Consumers need to know which base/tokenizer/license/data/run produced an adapter and must not accidentally load a mismatched or modified artifact.",
+      "scope": [
+        "Implement an immutable artifact manifest/registry interface under ml/ for base, tokenizer, adapter/config, training run and intended compatible inference precisions, storing approved large artifacts outside Git.",
+        "Record hashes, size, code/environment versions, data/split lineage, license/NOTICE/redistribution restrictions and retention/access policy; do not publish private training examples.",
+        "Provide a fetch/verify/reconstruct command that requires exact identities, rejects unauthorized artifacts and records a retained last-known-good candidate for rollback."
+      ],
+      "acceptance": [
+        "Reconstruction with the correct authorized base/tokenizer/adapter succeeds to matching identities; mismatched bases, altered tensors and missing required files fail before serving.",
+        "Registry entries are immutable/versioned, contain every required provenance link and distinguish unpublished/private from approved redistributable artifacts.",
+        "No weight, credential, private corpus or raw learner code enters the application repository or public model-card evidence."
+      ],
+      "validation": [
+        "Future authorized checks: synthetic registry/manifest/hash/access fixtures in the separate ML tooling.",
+        "For the trained candidate, fetch only the approved artifacts into an isolated temporary inference workspace and verify the complete reconstruction record."
+      ],
+      "out_of_scope": [
+        "Making weights public without permission",
+        "Buying an artifact-store service by default",
+        "Silently merging an adapter into an unidentified base"
+      ],
+      "risk": "Ambiguous lineage or unrestricted artifact publication can violate licenses and make rollback impossible; retain exact reconstructible identities.",
+      "owner_role": "ML platform engineer and data/model steward"
+    },
+    {
+      "id": "SAI-B136",
+      "order": 136,
+      "title": "Evaluate tuned candidates against matched baselines and enforce category gates",
+      "area": "model-promotion-evaluation",
+      "priority": "P1",
+      "phase": "ML-4 evaluation and delivery",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B074",
+        "SAI-B075",
+        "SAI-B077",
+        "SAI-B128",
+        "SAI-B129",
+        "SAI-B134",
+        "SAI-B135"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/product/AI_SOLVER.md",
+        "services/judge/solver_judge/grading/cases.py"
+      ],
+      "problem": "A decreasing SFT loss or successful adapter load does not show better solving, teaching or cost. Promotion requires independent held-out comparison against the untuned baseline and the declared support matrix.",
+      "scope": [
+        "Run the frozen immutable candidate and matched untuned base through the existing B074 harness on a sealed final release set disjoint from training and model-selection/validation, using preregistered B128 measurements, equal budgets and approved independent graders.",
+        "Report per-topic/difficulty/language/input-format coverage, compile/runtime/system failures, pass@1/pass@k protocol, uncertainty, cost/latency and relevant hint quality/safety regressions.",
+        "Produce a reviewed promote/reject/limited-scope decision; quarantine contaminated or invalid tasks and invalidate affected claims instead of repairing the score by omission."
+      ],
+      "acceptance": [
+        "A deterministic synthetic worse candidate fails promotion, and missing category evidence yields unmeasured/unsupported status rather than a pass.",
+        "The actual trained candidate receives a complete held-out report including weak categories and failures; no improvement claim is made unless supported by the preregistered comparison.",
+        "A rejected or inconclusive run remains documented and the untuned/previous qualified artifact remains usable; no public activation occurs in this issue.",
+        "Repeated model/hyperparameter selection cannot query the same sealed final test for feedback; any exposed set is labeled and replaced with a newly rights-approved untouched release set for later claims."
+      ],
+      "validation": [
+        "Future separately approved execution: replay the locked held-out evaluation manifests for base and candidate with the authorized isolated judge and inference budget.",
+        "Independently review a sample of predictions, grading validity and report aggregation; retain hashes and exact eligible sample counts."
+      ],
+      "out_of_scope": [
+        "Using release-set failures as another training batch before preserving an independent holdout",
+        "Claiming all-DSA correctness",
+        "Changing success thresholds after seeing candidate results"
+      ],
+      "risk": "Contamination, faulty oracles and unequal budgets can manufacture gains; evaluator independence and complete negative reporting are essential.",
+      "owner_role": "Independent ML evaluation reviewer"
+    },
+    {
+      "id": "SAI-B137",
+      "order": 137,
+      "title": "Qualify inference export and quantization at the deployed precision",
+      "area": "inference-qualification",
+      "priority": "P1",
+      "phase": "ML-4 evaluation and delivery",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B079",
+        "SAI-B128",
+        "SAI-B135",
+        "SAI-B136"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/architecture/ARCHITECTURE.md",
+        "tests/tooling"
+      ],
+      "problem": "The trained adapter and the intended serving artifact may differ through merging, quantization, tokenizer handling or engine support. A training-precision score cannot be assumed to survive the deployment format.",
+      "scope": [
+        "Implement a reproducible export recipe for one approved serving engine/precision with exact base/adapter/tokenizer/config identities and safe serialization.",
+        "Compare the exported artifact with the qualified training/reference representation using bounded tokenization/generation parity fixtures and the preregistered regression subset.",
+        "Measure supported context, throughput/latency, actual peak memory and constrained concurrency on approved hardware; document unsupported operations and fallback to the retained qualified artifact."
+      ],
+      "acceptance": [
+        "Export artifacts carry reconstructible lineage and cannot load with an incompatible tokenizer or unapproved remote-code path.",
+        "Actual inference-precision evaluation meets B128 thresholds or produces an explicit narrower/rejected decision; no assumption of lossless quantization substitutes for measurement.",
+        "A repeat export from the recorded recipe yields the stated deterministic identities or documented tool nondeterminism, and resources stay inside the approved envelope."
+      ],
+      "validation": [
+        "Future approved execution: run the exact export/qualification recipe on the authorized inference host and replay token/template plus held-out regression checks.",
+        "Verify malformed/mismatched export manifests fail in the CPU synthetic tooling fixtures."
+      ],
+      "out_of_scope": [
+        "Quantizing every available format",
+        "Assuming a specific model/engine is selected now",
+        "Public deployment or unrestricted benchmark tuning"
+      ],
+      "risk": "Merging/quantization can silently degrade quality or exceed memory; qualify the artifact actually deployed, not only its training checkpoint.",
+      "owner_role": "ML inference engineer"
+    },
+    {
+      "id": "SAI-B138",
+      "order": 138,
+      "title": "Integrate the qualified trained artifact with bounded provider-neutral serving",
+      "area": "trained-model-serving",
+      "priority": "P1",
+      "phase": "ML-4 evaluation and delivery",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B043",
+        "SAI-B044",
+        "SAI-B046",
+        "SAI-B050",
+        "SAI-B051",
+        "SAI-B054",
+        "SAI-B055",
+        "SAI-B057",
+        "SAI-B079",
+        "SAI-B135",
+        "SAI-B136",
+        "SAI-B137"
+      ],
+      "target_paths": [
+        "services/api/solver_api/features/hints/service.py",
+        "docs/architecture/ARCHITECTURE.md",
+        "docs/onboarding/DEVELOPMENT.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "tests/tooling"
+      ],
+      "problem": "The project has no trained-model inference service. An artifact registry and model score do not connect a qualified checkpoint to authenticated tutor/solver requests with enforceable budget and failure behavior.",
+      "scope": [
+        "Deploy one separately operated approved inference endpoint for the exact qualified artifact and wire it through the existing provider-neutral result/usage contracts; do not load GPU weights in web/API processes.",
+        "Reuse existing destination/secret, output-validation, entitlement, concurrency/budget, deadline/retry and kill-switch controls rather than implement a competing authorization or quota stack.",
+        "Add explicit model/artifact/revision provenance, bounded health/readiness and operator-only diagnostics; support the approved offline/local-model route without requiring a paid external provider."
+      ],
+      "acceptance": [
+        "A permitted request reaches only the configured qualified artifact and returns correct provenance; unauthorized/over-budget/oversized/out-of-scope inputs fail before inference as specified.",
+        "Endpoint timeout/crash/malformed output triggers bounded safe behavior and visibly authored fallback only under the existing policy; no fake model output is shown.",
+        "Admission caps hold at the declared serving concurrency, no provider/worker secrets or private tests reach generation context, and a kill switch stops new model work without breaking ordinary practice."
+      ],
+      "validation": [
+        "Future authorized checks: deterministic fake-endpoint contract/security/timeout/quota fixtures through the existing provider test harness.",
+        "On the approved isolated inference environment, run a small capped end-to-end request/overload/failure smoke using the exact exported artifact and no private learner data."
+      ],
+      "out_of_scope": [
+        "Choosing or buying serving hardware now",
+        "Replacing B048 transport/entitlement/budget work",
+        "Public activation before the pilot/release gates"
+      ],
+      "risk": "Model-serving isolation and endpoint configuration can bypass established policy if treated as a new shortcut; reuse existing trusted admission controls.",
+      "owner_role": "ML serving engineer and backend security reviewer"
+    },
+    {
+      "id": "SAI-B139",
+      "order": 139,
+      "title": "Promote a trained model through a limited pilot and rehearsed rollback",
+      "area": "trained-model-release",
+      "priority": "P1",
+      "phase": "ML-4 evaluation and delivery",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B003",
+        "SAI-B057",
+        "SAI-B059",
+        "SAI-B110",
+        "SAI-B124",
+        "SAI-B126",
+        "SAI-B128",
+        "SAI-B135",
+        "SAI-B136",
+        "SAI-B137",
+        "SAI-B138"
+      ],
+      "target_paths": [
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/status/PROJECT_STATUS.md",
+        "docs/onboarding/DEVELOPMENT.md",
+        "docs/governance/OPEN_DECISIONS.md",
+        "apps/web/features/hints/account-hint.tsx",
+        "services/api/solver_api/features/hints/service.py"
+      ],
+      "problem": "A working endpoint is not a release. The trained artifact needs an accountable go/no-go decision, clear supported scope and a real rollback rehearsal before wider learners rely on it.",
+      "scope": [
+        "Run an explicitly approved small consented pilot for the trained artifact with fixed audience, duration, traffic/cost ceilings and the B128 declared coverage.",
+        "Present artifact provenance, assistance mode, limitations, unsupported inputs and finite-evidence wording to users; preserve private data/contest rules and ordinary authored practice.",
+        "Rehearse switching to the last qualified artifact or authored-only mode during in-flight work, then record the actual measured pilot outcomes and owner promotion/rejection decision."
+      ],
+      "acceptance": [
+        "The release record binds exact artifact/application revisions, coverage matrix, evaluation evidence, audience/capacity and owner/operator approval.",
+        "Rollback/kill-switch drill stops new model admissions and handles in-flight jobs within their recorded budgets without cross-user results or loss of ordinary practice.",
+        "All preregistered quality/security/resource gates are passed or the pilot remains blocked/rejected; no universal any-DSA or independent security certification claim appears."
+      ],
+      "validation": [
+        "Future explicitly approved execution: finite end-to-end pilot and rollback rehearsal on the operated test/pilot deployment; record observed outcomes and unrun checks separately.",
+        "Review UI disclosures and release artifacts against the exact served model identity and held-out report."
+      ],
+      "out_of_scope": [
+        "Unattended permanent public launch",
+        "Automatic model promotion from a training script",
+        "Treating user activity alone as proof of learning improvement"
+      ],
+      "risk": "Promotion changes real-user behavior and recurring spend; require accountable operations, consent, capacity and a tested fallback.",
+      "owner_role": "Release owner, ML evaluation lead and deployment operator"
+    },
+    {
+      "id": "SAI-B140",
+      "order": 140,
+      "title": "Run a separately approved execution-reward preference or RL experiment",
+      "area": "optional-model-research",
+      "priority": "P2",
+      "phase": "ML-5 conditional improvement research",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B075",
+        "SAI-B077",
+        "SAI-B078",
+        "SAI-B080",
+        "SAI-B128",
+        "SAI-B130",
+        "SAI-B131",
+        "SAI-B132",
+        "SAI-B133",
+        "SAI-B134",
+        "SAI-B135",
+        "SAI-B136"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "services/judge/solver_judge/grading/cases.py",
+        "services/judge/solver_judge/sandbox/harness.py",
+        "tests/tooling"
+      ],
+      "problem": "SFT may leave systematic failures, but preference tuning or GRPO/RL can reward test exploitation and spend significant compute. The existing roadmap only mentions later research; it implements and runs no RL training stage.",
+      "scope": [
+        "First record a falsifiable hypothesis and a separately approved method/reward/data/compute manifest comparing one narrow preference or execution-reward method against the retained SFT baseline and equal-budget inference alternatives.",
+        "Reuse approved data/artifact tooling; build audited reward checks around independently reviewed finite execution evidence, with bounded generation/judge budgets and anti-reward-hacking fixtures.",
+        "Execute a tiny approved reward/training smoke, then only if valid execute the specifically approved bounded experiment; preserve actual checkpoints, costs, failed runs and independent held-out results."
+      ],
+      "acceptance": [
+        "Synthetic exploit candidates that print forged success, exploit grader assumptions or consume unbounded resources do not earn a valid success reward.",
+        "The actual approved experiment records optimizer updates and full resource/termination evidence; missing approval/valid reward prevents any job, and no improvement is a valid outcome.",
+        "Independent evaluation reports quality, regressions and total cost versus SFT and inference-only alternatives; the candidate is not promoted automatically."
+      ],
+      "validation": [
+        "Future authorized checks: deterministic reward/manifest fixtures with original finite sandbox cases and no live training.",
+        "Only after separate approval, run the recorded external smoke/experiment and replay the untouched held-out comparison under its fixed budget."
+      ],
+      "out_of_scope": [
+        "Making RL a prerequisite for releasing a useful SFT/tutor product",
+        "Unlimited GRPO rollouts or unknown reward oracles",
+        "Claiming finite rewards prove general reasoning or correctness"
+      ],
+      "risk": "Reward hacking, data leakage and resource amplification can produce misleading gains; this optional issue requires an explicit stop/no-go outcome.",
+      "owner_role": "ML researcher, independent grader reviewer and compute owner"
+    },
+    {
+      "id": "SAI-B141",
+      "order": 141,
+      "title": "Operate a consented failure-analysis and retraining improvement cycle",
+      "area": "model-lifecycle",
+      "priority": "P2",
+      "phase": "ML-5 conditional improvement research",
+      "depends_on": [
+        "SAI-B001",
+        "SAI-B003",
+        "SAI-B063",
+        "SAI-B077",
+        "SAI-B078",
+        "SAI-B128",
+        "SAI-B130",
+        "SAI-B134",
+        "SAI-B135",
+        "SAI-B136",
+        "SAI-B139"
+      ],
+      "target_paths": [
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md",
+        "docs/governance/DATA_AND_LICENSES.md",
+        "docs/status/PROJECT_STATUS.md",
+        "services/api/solver_api/features/hints/service.py"
+      ],
+      "problem": "After release, failures and user feedback need a controlled correction path. Automatically training on reported code or repeatedly optimizing against the same holdout would violate consent and undermine future evidence.",
+      "scope": [
+        "Define bounded operator review of consented/redacted failure categories, with separate source/problem rights checks and no automatic collection of raw private submissions.",
+        "Turn reviewed failures into correction candidates only through the approved corpus pipeline; quarantine any previously exposed evaluation task and preserve a genuinely independent future release set.",
+        "For a justified improvement, create a new approved training/evaluation manifest and execute the existing bounded cycle, comparing to the last released artifact before any owner-authorized rollout. Record no-change/rejected outcomes as well."
+      ],
+      "acceptance": [
+        "Opt-out/deleted/private inputs cannot enter a training batch; approved additions retain immutable provenance, consent and split lineage.",
+        "A failure that came from release evaluation cannot silently become both training data and a claimed unseen success in the next report.",
+        "Each actually attempted improvement has distinct run/artifact IDs, before/after category/regression/cost evidence and a tested rollback link; collecting feedback does not by itself trigger training or deployment."
+      ],
+      "validation": [
+        "Future authorized checks: synthetic consent/deletion/split-lineage/lifecycle fixtures in ML tooling.",
+        "For a separately approved iteration, replay the retained baseline and candidate manifests and record the actual training, independent evaluation and rollout decision; do not silently reuse old successes as new proof."
+      ],
+      "out_of_scope": [
+        "Continuous autonomous training on user activity",
+        "Default upload of learner code to models or datasets",
+        "A guarantee that every failure can be corrected or every DSA task solved"
+      ],
+      "risk": "Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes.",
+      "owner_role": "ML lifecycle owner and privacy/evaluation reviewers"
     }
   ]
 }

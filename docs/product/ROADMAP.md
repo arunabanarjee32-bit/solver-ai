@@ -2,6 +2,14 @@
 
 Status: planned; dates and timelines deliberately not committed. Advance by acceptance gates, not promises.
 
+The main solver/training delivery checklist is
+[DSA solver readiness](DSA_SOLVER_READINESS.md). The
+[fine-tuning model catalogue](../research/FINETUNING_MODEL_RESEARCH.md) supports
+future research; no model is selected. Broad, measured DSA competence is the
+goal, with explicit supported formats and failure reporting rather than a
+guarantee for every problem. The detailed training cards supplement B080's
+admission gate with actual future training and delivery.
+
 ## Phase 0 — foundation and decisions
 
 - Agree on code license, contributor policy, first users, stack owners and initial judge security baseline.
@@ -40,6 +48,12 @@ Status: planned; dates and timelines deliberately not committed. Advance by acce
 
 - Dataset provenance, deduplication, rights review, evaluation splits and inference harness.
 - SFT/QLoRA experiment on external GPU, compare to original base with reproducible logs.
+- Compare candidate model families before selection; pin model/tokenizer/license
+  and materialize validated, disjoint, rights-approved training data.
+- Implement the training pipeline; run approved smoke and real SFT experiments,
+  verify checkpoint/resume and record complete adapter/base/data lineage.
+- Qualify the deployed precision on per-topic/difficulty/language evaluation;
+  publish a model card and rehearse bounded serving, pilot and rollback.
 - Deploy model via versioned provider interface if accuracy/cost improves.
 - Gate: reproducible benchmark report with honest failures and compute cost.
 

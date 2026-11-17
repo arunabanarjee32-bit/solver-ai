@@ -1,10 +1,25 @@
 # Model selection, data strategy, fine-tuning and evaluation
 
-**Status: proposed research plan. No model currently trained or benchmarked in this repository.**
+**Status: proposed research and delivery plan. No model currently selected,
+trained or benchmarked in this repository.**
+
+The owner explicitly requests a future model comparison before selection.
+Use [Fine-tuning model research](FINETUNING_MODEL_RESEARCH.md) for the broad
+candidate catalogue and unresolved checkpoint/license/hardware questions.
+Use [DSA solver readiness](../product/DSA_SOLVER_READINESS.md) for the complete
+coverage, training, evaluation and release checklist. A model that attempts
+supported problems cannot be promised to solve every possible DSA problem.
 
 ## Model selection
 
-Compare at least one coding-focused open-weight base model and one reasoning-oriented base model against a provider API baseline on the same held-out tasks. Candidate families discussed include Qwen coding and thinking models; exact checkpoint/version/terms/hardware to be chosen later. Model size, memory requirements and license are not interchangeable.
+Compare code-specialized and reasoning-oriented open-weight candidates from
+multiple families against an authorized provider baseline on the same disjoint
+tasks and budgets. The research catalogue includes small/dense models, larger
+models and MoE alternatives. No named family is the assumed winner. Choose the
+exact checkpoint, revision, license, template and hardware only after empirical
+comparison and the resource decision. API-only models may be baselines but are
+not downloadable checkpoints for local LoRA. Model size, total/active parameter
+counts, memory requirements and license are not interchangeable.
 
 ## Data pipeline
 
@@ -41,3 +56,28 @@ Serving via provider abstraction: remote model API or separate vLLM GPU service;
 ## Exit criteria for training milestone
 
 Licensed/provenanced dataset manifest + reproducible baseline + held-out eval + documented GPU/training run + quantifiable gain or honest failure. Avoid declaring 'ICPC-level AI' based on anecdotal demos.
+
+## Delivery beyond training admission
+
+SAI-B080 validates an experiment admission manifest and explicitly does not train
+a model. The appended training-delivery cards in the
+[canonical backlog](../engineering/backlog/README.md) cover the missing work:
+
+1. Define supported DSA coverage and pre-registered release measurements.
+2. Compare checkpoint candidates empirically; record a future owner selection.
+3. Materialize permitted, validated, deduplicated train/validation data without
+   contaminating the separate held-out evaluation set.
+4. Implement pinned tokenization/loss masking and reproducible SFT/LoRA/QLoRA
+   tooling outside application dependencies.
+5. Run an explicitly approved external smoke experiment, then the approved real
+   bounded training run, with memory/cost/stop/resume evidence.
+6. Preserve adapter/base/tokenizer/data lineage and evaluate the deployed
+   precision against matched untuned baselines, regressions and category targets.
+7. Qualify provider-neutral serving, a model card, a limited pilot, kill switch
+   and rollback before promotion.
+8. Improve from consented failure analysis; optional preference/RL experiments
+   remain separately approved research with reliable execution rewards.
+
+Documentation completion is not training completion. No model weights, datasets,
+ML dependencies, external inference requests or paid compute are activated by
+this planning update.

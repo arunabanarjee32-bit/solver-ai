@@ -7,11 +7,11 @@
   "access_diagnosis": "Observed environment CONNECT403: api.github.com is absent from enforced allowlist; Git HTTPS fetch/push work. Existing GH_TOKEN is present, but API permissions cannot be verified until network access is allowed.",
   "issue_posts_attempted_this_session": 0,
   "confirmed_created_this_session": 0,
-  "prepared_issue_count": 127,
+  "prepared_issue_count": 141,
   "required_action": "Review/save the additive api.github.com environment-settings draft, then publish the environment and rerun the publisher. Supply credentials securely in settings only if an authenticated API operation still reports an authorization failure.",
-  "prepared_catalog_sha256": "b3d89e344ffb56a0441ec35dd603a79ec14c9f6b1cdbc668346bf3eede8c93f0",
+  "prepared_catalog_sha256": "f064bc770ebc1aa9b335d0fbd0c820ab67059abc2ced9ee338b8bfafc8aa0b4d",
   "attempt_stage": "initial_repository_metadata_read",
-  "pending_issue_count": 126,
+  "pending_issue_count": 140,
   "completed_locally": [
     "SAI-B001"
   ]

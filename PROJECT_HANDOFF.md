@@ -12,6 +12,7 @@ implementation changes; the maintenance commands are at the end.
 ## Navigation
 
 - [Main goal and current user journey](#main-goal-and-current-user-journey)
+- [DSA solver and fine-tuning delivery](#dsa-solver-and-fine-tuning-delivery)
 - [Current evidence and remaining limits](#current-evidence-and-remaining-limits)
 - [How another tool should continue](#how-another-tool-should-continue)
 - [Every feature: implemented, partial and proposed](#feature-register)
@@ -50,6 +51,33 @@ Keeping TypeScript for browser/Next.js code and Python for API/judge control is
 intentional. Learner languages are a separate product capability. A rewrite into
 one language is unnecessary for this handoff and is not an assigned task; shared
 HTTP contracts and feature ownership connect the existing services.
+
+## DSA solver and fine-tuning delivery
+
+The main ambition is broad competence on previously unseen DSA problems. A ready
+system must attempt supported formats within a budget, generate/explain code,
+test it through the isolated judge and report observed results or a clear failure.
+No completed task list, model checkpoint or finite evaluation guarantees solving
+every possible problem. Track coverage by topic, difficulty, language and format.
+
+Read the [complete readiness checklist](docs/product/DSA_SOLVER_READINESS.md) and
+[fine-tuning model research catalogue](docs/research/FINETUNING_MODEL_RESEARCH.md).
+**No checkpoint or model family is selected.** The catalogue compares a broad
+set of open-weight families and API-baseline alternatives for future research;
+it does not claim to enumerate every model or declare a universal best model.
+
+The solver delivery work includes supported-problem contracts; reviewed
+evaluators; permitted disjoint training/evaluation data; empirical model
+comparison; reproducible SFT/LoRA/QLoRA tooling; approved external smoke and real
+training runs; artifact/base/tokenizer lineage; matched-budget held-out and
+regression evaluation; qualified inference, pilot and rollback; and controlled
+failure-driven improvement. Optional preference/RL work follows reliable rewards
+and separate approval. No weights, GPU job, provider or training is activated here.
+
+**B080 is only the training admission gate.** Appended training-delivery tasks
+cover actual future implementation and execution beyond it. They remain planned.
+Use each card's prerequisites; unrelated contest/business tasks do not become
+mandatory ML dependencies merely because they appear earlier in the index.
 
 ## Current evidence and remaining limits
 
@@ -494,7 +522,7 @@ Add one reviewed provider behind the existing public hint context, with explicit
 
 **Dependencies:** F009; F010; approved model endpoint; per-account token/cost/time quotas; consent and rights policy.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -510,7 +538,7 @@ Use deliberately supplied source/evidence to form bounded diagnosis/repair hypot
 
 **Dependencies:** F013; F016; F023; approved user source/public evidence; privacy controls.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -522,11 +550,11 @@ Use deliberately supplied source/evidence to form bounded diagnosis/repair hypot
 
 Plan, generate a limited candidate set, run permitted tests, optionally repair and rank by authorized execution evidence.
 
-**Files / evidence:** [docs/product/AI_SOLVER.md](docs/product/AI_SOLVER.md); [docs/research/MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md).
+**Files / evidence:** [docs/product/AI_SOLVER.md](docs/product/AI_SOLVER.md); [docs/research/MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md); [docs/product/DSA_SOLVER_READINESS.md](docs/product/DSA_SOLVER_READINESS.md).
 
 **Dependencies:** F016; F017; F023; candidate/test/token/time budget; authorized tasks.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -538,11 +566,11 @@ Plan, generate a limited candidate set, run permitted tests, optionally repair a
 
 Compare baselines and candidate/repair/ranking strategies using pass@1/pass@k, latency, cost and failures.
 
-**Files / evidence:** [docs/research/MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md); [docs/governance/DATA_AND_LICENSES.md](docs/governance/DATA_AND_LICENSES.md).
+**Files / evidence:** [docs/research/MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md); [docs/governance/DATA_AND_LICENSES.md](docs/governance/DATA_AND_LICENSES.md); [docs/product/DSA_SOLVER_READINESS.md](docs/product/DSA_SOLVER_READINESS.md).
 
 **Dependencies:** approved datasets; disjoint splits; fixed model/prompt/seed/budget; isolated judge.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -558,7 +586,7 @@ Manage licensed/original statements, sample correctness, validators, test versio
 
 **Dependencies:** F004; F017; author permissions; versioned problem/test contracts.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -574,7 +602,7 @@ Offer progressive topic practice, mistake reflection and transfer/retention meas
 
 **Dependencies:** F008; F014; consented learning data; original problem taxonomy.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -590,7 +618,7 @@ Support timed original/permissioned events, team workflows and post-contest revi
 
 **Dependencies:** F008; F013; F016; server-enforced assistance policy; scoreboard/time/freeze tests.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -606,7 +634,7 @@ Add Java, JavaScript, Rust, Go or C++20 individually behind reviewed runtime con
 
 **Dependencies:** F016; compiler/runtime lifecycle; protocol limits/diagnostics; hostile fixtures.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -622,7 +650,7 @@ Make accounts and private learning data operable with verified recovery, access 
 
 **Dependencies:** F008; F009; trusted ingress; email delivery; retention/deletion/backup policy.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -638,27 +666,29 @@ Operate a maintained dedicated execution host with audited updates, monitoring, 
 
 **Dependencies:** F016; F018; maintained runtime; aggregate CPU/memory/PID/disk limits; independent review; incident drills.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
 - Local prototype is not certified; old recorded runtime and missing aggregate accounting block public-readiness claims.
 
-### F033: Model/ranker fine-tuning on licensed data
+### F033: Solver fine-tuning, artifact lineage and release qualification
 
-**Status:** Research only. **Owner:** future external ML workflow.
+**Status:** Planned. **Owner:** future offline ML training and model delivery.
 
-Investigate measured task-specific fine-tuning only after a bounded baseline and clean evaluation exist.
+Research candidate models without assuming a selection; prepare permitted disjoint data; implement reproducible SFT/LoRA/QLoRA tooling; run approved external smoke and real training; compare held-out results; qualify artifacts, serving and rollback.
 
-**Files / evidence:** [docs/research/MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md); [AnalyseFuture/extracted/phi-code-main/ranker/](AnalyseFuture/extracted/phi-code-main/ranker/).
+**Files / evidence:** [docs/research/MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md); [docs/research/FINETUNING_MODEL_RESEARCH.md](docs/research/FINETUNING_MODEL_RESEARCH.md); [docs/product/DSA_SOLVER_READINESS.md](docs/product/DSA_SOLVER_READINESS.md).
 
 **Dependencies:** F026; separate data/model rights; approved external compute/spend; baseline comparison.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
-- No training run, GPU provisioning or improvement claimed; five archive datasets are absent LFS objects.
+- No model is selected or trained; no weights, GPU job or training stack is installed. B080 is admission only; appended training-delivery tasks cover actual future execution and release.
+- Readiness must name measured DSA coverage and failures; no fine-tuning or finite tests guarantee every possible problem can be solved.
+- Five supplied archive datasets are LFS pointers without underlying data.
 
 ### F034: Coach, educator and institutional workspaces
 
@@ -670,7 +700,7 @@ Support permissioned content assignment, learning evidence and policy-bound asse
 
 **Dependencies:** F008; F027; F028; role permissions; consented reports and assessment policy.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -686,7 +716,7 @@ Compare hosted APIs and owned inference without making one provider permanent in
 
 **Dependencies:** F023; approved model license; hardware/economics/security review.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -702,7 +732,7 @@ Study direct/analogical/self-planning/CodeSIM/MapCoder methods and purposeful st
 
 **Dependencies:** archived provider interfaces; research prompts; benchmark adapters.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -718,7 +748,7 @@ Preserve generation provider abstractions and accounting/resume approaches as re
 
 **Dependencies:** OpenAI/Azure/OpenRouter/Anthropic/Gemini/Groq external SDKs; archived accounting.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -734,7 +764,7 @@ Preserve dataset normalization, sample/test variants, results/resume and publish
 
 **Dependencies:** benchmark formats; JSON/JSONL; unverified upstream result files.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -750,7 +780,7 @@ Keep original evaluator mechanics inspectable as supplied evidence.
 
 **Dependencies:** exec/multiprocessing/subprocess; external execution endpoint; developer-specific shell/Docker mounts.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -766,7 +796,7 @@ Study diverse Python attempts and ranking by passed examples followed by embeddi
 
 **Dependencies:** LLM endpoint; sentence-transformers ranker; site-specific parsers.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -782,7 +812,7 @@ Preserve token-length filtering, dataset sampling and triplet/contrastive ranker
 
 **Dependencies:** sentence-transformers; Transformers; datasets; five missing LFS data objects.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -798,7 +828,7 @@ Preserve alternative standalone research interaction modes as examples, not addi
 
 **Dependencies:** Gradio; curses; Python; archived solver pipeline.
 
-**Recorded checks / references:** .
+**Recorded checks / references:** None executed for this proposed capability.
 
 **Remaining gaps / conditions:**
 
@@ -808,7 +838,7 @@ Preserve alternative standalone research interaction modes as examples, not addi
 
 **Status:** Partial. **Owner:** repository engineering/GitHub workflow.
 
-Validate and render127 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.
+Validate and render 141 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.
 
 **Files / evidence:** [scripts/github/publish_issues.py](scripts/github/publish_issues.py); [scripts/github/build_backlog.py](scripts/github/build_backlog.py); [tests/tooling/github/test_publish_issues.py](tests/tooling/github/test_publish_issues.py); [docs/engineering/AI_CONTRIBUTION_WORKFLOW.md](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md); [docs/engineering/backlog/issues.json](docs/engineering/backlog/issues.json); [docs/engineering/backlog/publication.json](docs/engineering/backlog/publication.json).
 
@@ -838,11 +868,11 @@ Validate one bounded structured evidence block against catalogue ID/order, curre
 
 ## Complete folder map
 
-**114 folders including the root**, derived from all **446 tracked files**. Counts include nested descendants. Folders are functional owners; preserved upstream internal structure remains evidence.
+**114 folders including the root**, derived from all **462 tracked files**. Counts include nested descendants. Folders are functional owners; preserved upstream internal structure remains evidence.
 
 | Folder | Responsibility | Tracked files below it |
 | --- | --- | --- |
-| [./](.) | One modular Solver AI repository joining the working practice application, independently bounded services, development tooling, planned tasks and preserved research evidence. | 446 |
+| [./](.) | One modular Solver AI repository joining the working practice application, independently bounded services, development tooling, planned tasks and preserved research evidence. | 462 |
 | [.github/](.github) | Repository-hosted contributor templates and read-only GitHub Actions configuration. | 3 |
 | [.github/workflows/](.github/workflows) | Hosted application checks and trusted-base pull-request evidence validation workflows. | 2 |
 | [AnalyseFuture/](AnalyseFuture) | Organized recovery evidence, inventories, migration records and inactive upstream or historical material kept outside application execution. | 181 |
@@ -910,16 +940,16 @@ Validate one bounded structured evidence block against catalogue ID/order, curre
 | [apps/web/features/submissions/](apps/web/features/submissions) | Explicit run and submit actions, bounded API requests, capability checks and private saved-result history. | 3 |
 | [apps/web/scripts/](apps/web/scripts) | Web-owned official auth migration and locally bundled Monaco asset preparation commands. | 2 |
 | [apps/web/tests/](apps/web/tests) | Real Better Auth integration checks using isolated temporary databases and keys. | 1 |
-| [docs/](docs) | Active product and engineering documentation indexed by functional responsibility. | 156 |
+| [docs/](docs) | Active product and engineering documentation indexed by functional responsibility. | 172 |
 | [docs/architecture/](docs/architecture) | Current and proposed service boundaries, repository organization and recorded architecture decisions. | 4 |
 | [docs/architecture/adr/](docs/architecture/adr) | Dated decisions documenting the practice foundation and authenticated isolated judging boundaries. | 2 |
-| [docs/engineering/](docs/engineering) | Contributor workflow, scoped implementation tasks and coding-agent practices. | 135 |
-| [docs/engineering/backlog/](docs/engineering/backlog) | Canonical ordered task catalogue, generated issue cards and actual publication receipts. | 130 |
-| [docs/engineering/backlog/issues/](docs/engineering/backlog/issues) | One generated Markdown card per stable backlog task with prerequisites, ownership paths and acceptance criteria. | 127 |
+| [docs/engineering/](docs/engineering) | Contributor workflow, scoped implementation tasks and coding-agent practices. | 149 |
+| [docs/engineering/backlog/](docs/engineering/backlog) | Canonical ordered task catalogue, generated issue cards and actual publication receipts. | 144 |
+| [docs/engineering/backlog/issues/](docs/engineering/backlog/issues) | One generated Markdown card per stable backlog task with prerequisites, ownership paths and acceptance criteria. | 141 |
 | [docs/governance/](docs/governance) | Maintainer decisions, original-code and content rights, and build-versus-reuse policies. | 3 |
 | [docs/onboarding/](docs/onboarding) | Contributor orientation and reproducible installation, startup, validation and deployment instructions. | 2 |
-| [docs/product/](docs/product) | Product vision, requirements, roadmap and the retained detailed idea and solver proposals. | 5 |
-| [docs/research/](docs/research) | Dated audits, upstream study references, competitive positioning and model-evaluation proposals. | 4 |
+| [docs/product/](docs/product) | Product vision, requirements, roadmap and the retained detailed idea and solver proposals. | 6 |
+| [docs/research/](docs/research) | Dated audits, upstream study references, competitive positioning and model-evaluation proposals. | 5 |
 | [docs/security/](docs/security) | Judge threat model, untrusted-execution boundaries and production release controls. | 1 |
 | [docs/status/](docs/status) | Named-revision implementation evidence, current limitations and historical validation distinctions. | 1 |
 | [scripts/](scripts) | Repository command implementations for local development, explicit GitHub tooling and verification. | 10 |
@@ -961,7 +991,7 @@ Ignored local folders such as `.local/`, `.venv/`, `node_modules/`, `.next/`, ge
 
 ## Complete file map
 
-Every one of the **446 tracked paths** appears once below, grouped by its immediate owning folder. Each entry explains its reviewed role. Source imports/direct dependencies are static links, not proof a research dependency is installed or approved. Product task ownership is defined by the target paths in the complete task specifications.
+Every one of the **462 tracked paths** appears once below, grouped by its immediate owning folder. Each entry explains its reviewed role. The linked full inventory records direct imports/dependencies and provenance. Product task ownership is defined by the target paths in the complete task specifications.
 
 The [full inventory](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt) also records baseline assessments, risks, review provenance, sizes and hashes. Preserved material is marked inactive below, even when its upstream code describes an implemented research experiment. Documentation and configuration support a feature; their existence alone does not implement the planned behavior.
 
@@ -970,24 +1000,24 @@ The [full inventory](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.
 
 One modular Solver AI repository joining the working practice application, independently bounded services, development tooling, planned tasks and preserved research evidence.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [.dockerignore](.dockerignore) | Exclude Git, runtime state, dependency/build caches and all AnalyseFuture evidence from web image context. Feature/owner: repository operations and reproducibility. | — |
-| [.gitignore](.gitignore) | Keep private runtime state, credentials, dependencies and generated outputs out of Git. Feature/owner: repository operations and reproducibility. | — |
-| [.node-version](.node-version) | Pin native/CI Node toolchain to 24.22.1. Feature/owner: repository operations and reproducibility. | — |
-| [.npmrc](.npmrc) | Use writable task npm cache and disable funding chatter; no credentials configured. Feature/owner: repository operations and reproducibility. | — |
-| [.python-version](.python-version) | Pin native Python toolchain to 3.12.14. Feature/owner: repository operations and reproducibility. | — |
-| [AGENTS.md](AGENTS.md) | Agent operating rules and project priorities. Feature/owner: root project guidance, dependencies and deployment configuration. | `README.md`; `docs/INDEX.md`; `docs/PROJECT_STATUS.md`; `docs/CODEX_PLAYBOOK.md` |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contributor workflow, scope, review and licensing expectations. Feature/owner: root project guidance, dependencies and deployment configuration. | `docs/START_HERE.md`; `docs/PROJECT_STATUS.md`; `docs/DATA_AND_LICENSES.md` |
-| [PROJECT_HANDOFF.md](PROJECT_HANDOFF.md) | Root homepage handoff: project goal, implemented/planned features, every tracked file/folder and full ordered task specifications. Feature/owner: project continuity and implementation handoff. | `docs/engineering/backlog/issues.json`; `AnalyseFuture/repository-inventory/features.json`; `docs/engineering/handoff-directories.json` |
-| [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) | Current functional ownership and location guide for the complete monorepo, preservation collections and post-relocation validation. Feature/owner: functional organization and explicit ownership. | `docs/status/PROJECT_STATUS.md`; `PROJECT_HANDOFF.md`; `AnalyseFuture/repository-inventory/current-files.json` |
-| [README.md](README.md) | Primary orientation, current capabilities and development entry point. Feature/owner: root project guidance, dependencies and deployment configuration. | `package.json`; `services/api/pyproject.toml`; `docs/DEVELOPMENT.md`; `docs/PROJECT_STATUS.md` |
-| [SECURITY.md](SECURITY.md) | Private vulnerability reporting and key execution/data boundaries. Feature/owner: root project guidance, dependencies and deployment configuration. | `docs/JUDGE_SECURITY.md`; `docs/DATA_AND_LICENSES.md` |
-| [compose.cloud.yaml](compose.cloud.yaml) | Optional BuildKit system-CA secret for verified TLS during managed-cloud image builds. Feature/owner: repository operations and reproducibility. | — |
-| [compose.yaml](compose.yaml) | Run separate nonroot/read-only web and API containers with persistent local-state volumes and loopback ports. Feature/owner: repository operations and reproducibility. | — |
-| [package-lock.json](package-lock.json) | Frozen npm registry/workspace dependency graph with integrity hashes; reviewed structurally in history audit. Feature/owner: repository operations and reproducibility. | — |
-| [package.json](package.json) | Root npm workspace and explicit API/web/auth/judge/build/browser command entrypoints. Feature/owner: repository operations and reproducibility. | — |
-| [playwright.config.ts](playwright.config.ts) | Browser suite web/API/optional judge orchestration with temporary DBs and system browser override Feature/owner: end-to-end. | `@playwright/test`; `node:fs`; `node:os`; `node:path` |
+| File | Purpose / feature |
+| --- | --- |
+| [.dockerignore](.dockerignore) | Exclude Git, runtime state, dependency/build caches and all AnalyseFuture evidence from web image context. |
+| [.gitignore](.gitignore) | Keep private runtime state, credentials, dependencies and generated outputs out of Git. |
+| [.node-version](.node-version) | Pin native/CI Node toolchain to 24.22.1. |
+| [.npmrc](.npmrc) | Use writable task npm cache and disable funding chatter; no credentials configured. |
+| [.python-version](.python-version) | Pin native Python toolchain to 3.12.14. |
+| [AGENTS.md](AGENTS.md) | Agent operating rules and project priorities. |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contributor workflow, scope, review and licensing expectations. |
+| [PROJECT_HANDOFF.md](PROJECT_HANDOFF.md) | Root homepage handoff: project goal, implemented/planned features, every tracked file/folder and full ordered task specifications. |
+| [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) | Current functional ownership and location guide for the complete monorepo, preservation collections and post-relocation validation. |
+| [README.md](README.md) | Primary orientation, current capabilities and development entry point. |
+| [SECURITY.md](SECURITY.md) | Private vulnerability reporting and key execution/data boundaries. |
+| [compose.cloud.yaml](compose.cloud.yaml) | Optional BuildKit system-CA secret for verified TLS during managed-cloud image builds. |
+| [compose.yaml](compose.yaml) | Run separate nonroot/read-only web and API containers with persistent local-state volumes and loopback ports. |
+| [package-lock.json](package-lock.json) | Frozen npm registry/workspace dependency graph with integrity hashes; reviewed structurally in history audit. |
+| [package.json](package.json) | Root npm workspace and explicit API/web/auth/judge/build/browser command entrypoints. |
+| [playwright.config.ts](playwright.config.ts) | Browser suite web/API/optional judge orchestration with temporary DBs and system browser override |
 
 </details>
 
@@ -996,9 +1026,9 @@ One modular Solver AI repository joining the working practice application, indep
 
 Repository-hosted contributor templates and read-only GitHub Actions configuration.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) | Contributor review template with one explicitly incomplete fenced evidence record to fill. Feature/owner: repository operations and reproducibility. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) | Contributor review template with one explicitly incomplete fenced evidence record to fill. |
 
 </details>
 
@@ -1007,10 +1037,10 @@ Repository-hosted contributor templates and read-only GitHub Actions configurati
 
 Hosted application checks and trusted-base pull-request evidence validation workflows.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [ci.yml](.github/workflows/ci.yml) | Read-only-permission hosted dependency, source, test, browser and archive-preservation validation. Feature/owner: repository operations and reproducibility. | — |
-| [pr-evidence.yml](.github/workflows/pr-evidence.yml) | Metadata-only PR open/edit/head synchronization check using trusted base SHA and read-only checkout. Feature/owner: PR evidence and reviewed contribution workflow. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [ci.yml](.github/workflows/ci.yml) | Read-only-permission hosted dependency, source, test, browser and archive-preservation validation. |
+| [pr-evidence.yml](.github/workflows/pr-evidence.yml) | Metadata-only PR open/edit/head synchronization check using trusted base SHA and read-only checkout. |
 
 </details>
 
@@ -1019,12 +1049,12 @@ Hosted application checks and trusted-base pull-request evidence validation work
 
 Organized recovery evidence, inventories, migration records and inactive upstream or historical material kept outside application execution.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [.gitattributes](AnalyseFuture/.gitattributes) | Preservation-folder Git inclusion and byte/filter policy Feature/owner: preservation-integrity. | — |
-| [.gitignore](AnalyseFuture/.gitignore) | Preservation-folder Git inclusion and byte/filter policy Feature/owner: preservation-integrity. | — |
-| [README.md](AnalyseFuture/README.md) | Preservation rationale, inventory map and inactive-reference boundaries Feature/owner: preservation-reference. | — |
-| [manifest.json](AnalyseFuture/manifest.json) | Original tracked-path inventory, archive/member SHA-256 hashes and preserved destinations Feature/owner: preservation-integrity. | `scripts/verify_preserved_archives.py`; `both supplied ZIPs` |
+| File | Purpose / feature |
+| --- | --- |
+| [.gitattributes](AnalyseFuture/.gitattributes) | Preservation-folder Git inclusion and byte/filter policy |
+| [.gitignore](AnalyseFuture/.gitignore) | Preservation-folder Git inclusion and byte/filter policy |
+| [README.md](AnalyseFuture/README.md) | Preservation rationale, inventory map and inactive-reference boundaries |
+| [manifest.json](AnalyseFuture/manifest.json) | Original tracked-path inventory, archive/member SHA-256 hashes and preserved destinations |
 
 </details>
 
@@ -1033,10 +1063,10 @@ Organized recovery evidence, inventories, migration records and inactive upstrea
 
 Unchanged original uploaded ZIPs preserved as inactive provenance evidence rather than installed application packages.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [CodeGenerator-master.zip](AnalyseFuture/archives/CodeGenerator-master.zip) | **Inactive preserved material.** Original user-supplied research archive, byte-preserved evidence Feature/owner: preservation-reference. | `Non-text content or parser limitation; see review record.` |
-| [phi-code-main.zip](AnalyseFuture/archives/phi-code-main.zip) | **Inactive preserved material.** Original user-supplied research archive, byte-preserved evidence Feature/owner: preservation-reference. | `Non-text content or parser limitation; see review record.` |
+| File | Purpose / feature |
+| --- | --- |
+| [CodeGenerator-master.zip](AnalyseFuture/archives/CodeGenerator-master.zip) | **Inactive preserved material.** Original user-supplied research archive, byte-preserved evidence |
+| [phi-code-main.zip](AnalyseFuture/archives/phi-code-main.zip) | **Inactive preserved material.** Original user-supplied research archive, byte-preserved evidence |
 
 </details>
 
@@ -1045,10 +1075,10 @@ Unchanged original uploaded ZIPs preserved as inactive provenance evidence rathe
 
 Evidence-scoped repository, Git history and security review findings with attribution and investigation limits.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [REPOSITORY_AUDIT.txt](AnalyseFuture/audits/REPOSITORY_AUDIT.txt) | SOLVER AI — COMPLETE REPOSITORY REVIEW Feature/owner: recovery evidence and developer continuity. | — |
-| [SECURITY_AUDIT.txt](AnalyseFuture/audits/SECURITY_AUDIT.txt) | SOLVER AI — SECURITY AND HISTORY REVIEW Feature/owner: recovery evidence and developer continuity. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [REPOSITORY_AUDIT.txt](AnalyseFuture/audits/REPOSITORY_AUDIT.txt) | SOLVER AI — COMPLETE REPOSITORY REVIEW |
+| [SECURITY_AUDIT.txt](AnalyseFuture/audits/SECURITY_AUDIT.txt) | SOLVER AI — SECURITY AND HISTORY REVIEW |
 
 </details>
 
@@ -1057,10 +1087,10 @@ Evidence-scoped repository, Git history and security review findings with attrib
 
 Persistent progress and next-developer instructions for resuming work without relying on chat memory.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [NEXT_DEVELOPER_INSTRUCTIONS.txt](AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt) | SOLVER AI — NEXT DEVELOPER CONTINUATION GUIDE Feature/owner: recovery evidence and developer continuity. | — |
-| [WORK_PROGRESS.txt](AnalyseFuture/continuation/WORK_PROGRESS.txt) | WORK PROGRESS - 17 November 2026, Asia/Kolkata Feature/owner: recovery evidence and developer continuity. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [NEXT_DEVELOPER_INSTRUCTIONS.txt](AnalyseFuture/continuation/NEXT_DEVELOPER_INSTRUCTIONS.txt) | SOLVER AI — NEXT DEVELOPER CONTINUATION GUIDE |
+| [WORK_PROGRESS.txt](AnalyseFuture/continuation/WORK_PROGRESS.txt) | WORK PROGRESS - 17 November 2026, Asia/Kolkata |
 
 </details>
 
@@ -1069,13 +1099,13 @@ Persistent progress and next-developer instructions for resuming work without re
 
 Inactive CodeGenerator upload snapshot preserving original research source, dependencies, licenses, benchmark material and images, without active application adoption.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [.env.example](AnalyseFuture/extracted/CodeGenerator-master/.env.example) | **Inactive preserved material.** Research provider configuration example with empty credential fields Feature/owner: codesim-research. | — |
-| [.gitignore.upstream](AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream) | **Inactive preserved material.** Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect Feature/owner: codesim-research. | — |
-| [LICENSE](AnalyseFuture/extracted/CodeGenerator-master/LICENSE) | **Inactive preserved material.** Original MIT source license notice Feature/owner: codesim-research. | — |
-| [README.md](AnalyseFuture/extracted/CodeGenerator-master/README.md) | **Inactive preserved material.** Research framework purpose, setup and benchmark claims Feature/owner: codesim-research. | — |
-| [requirements.txt](AnalyseFuture/extracted/CodeGenerator-master/requirements.txt) | **Inactive preserved material.** Archived research dependency declarations Feature/owner: codesim-research. | `openai`; `numpy`; `pandas`; `python-dotenv`; `pyyml`; `tenacity`; `tiktoken`; `tqdm`; `gensim`; `jsonlines`; `astunparse`; `pyarrow`; `google-generativeai`; `accelerate`; `groq`; `matplotlib` |
+| File | Purpose / feature |
+| --- | --- |
+| [.env.example](AnalyseFuture/extracted/CodeGenerator-master/.env.example) | **Inactive preserved material.** Research provider configuration example with empty credential fields |
+| [.gitignore.upstream](AnalyseFuture/extracted/CodeGenerator-master/.gitignore.upstream) | **Inactive preserved material.** Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect |
+| [LICENSE](AnalyseFuture/extracted/CodeGenerator-master/LICENSE) | **Inactive preserved material.** Original MIT source license notice |
+| [README.md](AnalyseFuture/extracted/CodeGenerator-master/README.md) | **Inactive preserved material.** Research framework purpose, setup and benchmark claims |
+| [requirements.txt](AnalyseFuture/extracted/CodeGenerator-master/requirements.txt) | **Inactive preserved material.** Archived research dependency declarations |
 
 </details>
 
@@ -1084,9 +1114,9 @@ Inactive CodeGenerator upload snapshot preserving original research source, depe
 
 Inactive uploaded APPS selection preserved as research data with provenance and reuse limits unverified.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [selected150.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl) | **Inactive preserved material.** Preserved APPS benchmark problem/completion/test records Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [selected150.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/APPS/selected150.jsonl) | **Inactive preserved material.** Preserved APPS benchmark problem/completion/test records |
 
 </details>
 
@@ -1095,11 +1125,11 @@ Inactive uploaded APPS selection preserved as research data with provenance and 
 
 Inactive uploaded HumanEval-family evaluation fixtures preserved as research data rather than production problem content.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [HumanEval.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl) | **Inactive preserved material.** Preserved HumanEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
-| [HumanEvalET.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl) | **Inactive preserved material.** Preserved HumanEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
-| [HumanEvalIncreasedSampleIO.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl) | **Inactive preserved material.** Preserved HumanEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [HumanEval.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEval.jsonl) | **Inactive preserved material.** Preserved HumanEval benchmark problem/completion/test records |
+| [HumanEvalET.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalET.jsonl) | **Inactive preserved material.** Preserved HumanEval benchmark problem/completion/test records |
+| [HumanEvalIncreasedSampleIO.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/HumanEval/HumanEvalIncreasedSampleIO.jsonl) | **Inactive preserved material.** Preserved HumanEval benchmark problem/completion/test records |
 
 </details>
 
@@ -1108,11 +1138,11 @@ Inactive uploaded HumanEval-family evaluation fixtures preserved as research dat
 
 Inactive uploaded MBPP evaluation variants preserved as research data rather than approved training material.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [MBPP.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl) | **Inactive preserved material.** Preserved MBPPEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
-| [MBPP_ET.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl) | **Inactive preserved material.** Preserved MBPPEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
-| [mbpp-py.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl) | **Inactive preserved material.** Preserved MBPPEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [MBPP.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP.jsonl) | **Inactive preserved material.** Preserved MBPPEval benchmark problem/completion/test records |
+| [MBPP_ET.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/MBPP_ET.jsonl) | **Inactive preserved material.** Preserved MBPPEval benchmark problem/completion/test records |
+| [mbpp-py.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/MBPPEval/mbpp-py.jsonl) | **Inactive preserved material.** Preserved MBPPEval benchmark problem/completion/test records |
 
 </details>
 
@@ -1121,11 +1151,11 @@ Inactive uploaded MBPP evaluation variants preserved as research data rather tha
 
 Inactive uploaded xCodeEval descriptions, cases and evaluation records preserved without validating their reuse rights.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [problem_descriptions.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl) | **Inactive preserved material.** Preserved xCodeEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
-| [prog_syn_val.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl) | **Inactive preserved material.** Preserved xCodeEval benchmark problem/completion/test records Feature/owner: codesim-research. | — |
-| [unittest_db.json](AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json) | **Inactive preserved material.** xCodeEval source-ID to reference test-list database Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [problem_descriptions.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/problem_descriptions.jsonl) | **Inactive preserved material.** Preserved xCodeEval benchmark problem/completion/test records |
+| [prog_syn_val.jsonl](AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/prog_syn_val.jsonl) | **Inactive preserved material.** Preserved xCodeEval benchmark problem/completion/test records |
+| [unittest_db.json](AnalyseFuture/extracted/CodeGenerator-master/data/xCodeEval/unittest_db.json) | **Inactive preserved material.** xCodeEval source-ID to reference test-list database |
 
 </details>
 
@@ -1134,12 +1164,12 @@ Inactive uploaded xCodeEval descriptions, cases and evaluation records preserved
 
 Inactive uploaded research diagrams and result graphics preserved as upstream artifacts, not reproduced performance evidence.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [CodeSim-Overview.png](AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure Feature/owner: codesim-research. | `Non-text content or parser limitation; see review record.` |
-| [basic-results.png](AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure Feature/owner: codesim-research. | `Non-text content or parser limitation; see review record.` |
-| [contest-results.png](AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure Feature/owner: codesim-research. | `Non-text content or parser limitation; see review record.` |
-| [opensource-llm-results.png](AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure Feature/owner: codesim-research. | `Non-text content or parser limitation; see review record.` |
+| File | Purpose / feature |
+| --- | --- |
+| [CodeSim-Overview.png](AnalyseFuture/extracted/CodeGenerator-master/images/CodeSim-Overview.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure |
+| [basic-results.png](AnalyseFuture/extracted/CodeGenerator-master/images/basic-results.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure |
+| [contest-results.png](AnalyseFuture/extracted/CodeGenerator-master/images/contest-results.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure |
+| [opensource-llm-results.png](AnalyseFuture/extracted/CodeGenerator-master/images/opensource-llm-results.png) | **Inactive preserved material.** Research pipeline illustration or reported benchmark figure |
 
 </details>
 
@@ -1148,9 +1178,9 @@ Inactive uploaded research diagrams and result graphics preserved as upstream ar
 
 Inactive uploaded Python research pipeline source retained for reference without installation or execution.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [main.py](AnalyseFuture/extracted/CodeGenerator-master/src/main.py) | **Inactive preserved material.** CLI benchmark experiment orchestration, model/dataset/strategy selection, result resume and extended-test summaries Feature/owner: codesim-research. | `argparse`; `constants.paths`; `constants.verboseType`; `datasets.DatasetFactory`; `datetime`; `dotenv`; `models.Gemini`; `models.ModelFactory`; `models.OpenAI`; `promptings.PromptingFactory`; `results.Results`; `sys`; `utils.evaluateET`; `utils.generateEP`; `utils.runEP`; `utils.summary` |
+| File | Purpose / feature |
+| --- | --- |
+| [main.py](AnalyseFuture/extracted/CodeGenerator-master/src/main.py) | **Inactive preserved material.** CLI benchmark experiment orchestration, model/dataset/strategy selection, result resume and extended-test summaries |
 
 </details>
 
@@ -1159,12 +1189,12 @@ Inactive uploaded Python research pipeline source retained for reference without
 
 Inactive uploaded language, path and verbosity configuration for the upstream research pipeline.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
-| [lang_mappings.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py) | **Inactive preserved material.** Map research language labels to external ExecEval runtime names Feature/owner: codesim-research. | — |
-| [paths.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py) | **Inactive preserved material.** Relative benchmark data and output path constants Feature/owner: codesim-research. | `os`; `os.path` |
-| [verboseType.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py) | **Inactive preserved material.** Verbosity level constants Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/__init__.py) | **Inactive preserved material.** Empty research package marker |
+| [lang_mappings.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/lang_mappings.py) | **Inactive preserved material.** Map research language labels to external ExecEval runtime names |
+| [paths.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/paths.py) | **Inactive preserved material.** Relative benchmark data and output path constants |
+| [verboseType.py](AnalyseFuture/extracted/CodeGenerator-master/src/constants/verboseType.py) | **Inactive preserved material.** Verbosity level constants |
 
 </details>
 
@@ -1173,18 +1203,18 @@ Inactive uploaded language, path and verbosity configuration for the upstream re
 
 Inactive uploaded benchmark adapters, dataset factory and conversion utilities retained for provenance.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [APPSDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py) | **Inactive preserved material.** APPS statement/sample/full-test adapter for external execution Feature/owner: codesim-research. | `.Dataset`; `constants.paths`; `evaluations.evalute`; `typing` |
-| [CodeContestDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py) | **Inactive preserved material.** CodeContests statement/sample/full-test adapter for external execution Feature/owner: codesim-research. | `.Dataset`; `constants.paths`; `evaluations.evalute`; `typing` |
-| [Dataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py) | **Inactive preserved material.** Abstract JSONL dataset loader and evaluation/prompt interface Feature/owner: codesim-research. | `utils.jsonl` |
-| [DatasetFactory.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py) | **Inactive preserved material.** Resolve benchmark dataset names to adapter classes Feature/owner: codesim-research. | `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset` |
-| [HumanEvalDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py) | **Inactive preserved material.** HumanEval functional-test and prompt adapter Feature/owner: codesim-research. | `.Dataset`; `constants.paths`; `evaluations.func_evaluate`; `typing` |
-| [MBPPDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py) | **Inactive preserved material.** MBPP functional-test and prompt adapter Feature/owner: codesim-research. | `.Dataset`; `constants.paths`; `evaluations.func_evaluate`; `typing` |
-| [XCodeDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py) | **Inactive preserved material.** xCodeEval standard-input/sample/full-test adapter Feature/owner: codesim-research. | `.Dataset`; `constants.paths`; `evaluations.evalute`; `typing` |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
-| [convert-apps-xcode.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py) | **Inactive preserved material.** Select and convert APPS data into external-executor record format Feature/owner: codesim-research. | `json`; `pandas` |
-| [convert-cc-xcode.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py) | **Inactive preserved material.** Convert CodeContests parquet public/private/generated tests to executor record format Feature/owner: codesim-research. | `json`; `pandas` |
+| File | Purpose / feature |
+| --- | --- |
+| [APPSDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/APPSDataset.py) | **Inactive preserved material.** APPS statement/sample/full-test adapter for external execution |
+| [CodeContestDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/CodeContestDataset.py) | **Inactive preserved material.** CodeContests statement/sample/full-test adapter for external execution |
+| [Dataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/Dataset.py) | **Inactive preserved material.** Abstract JSONL dataset loader and evaluation/prompt interface |
+| [DatasetFactory.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/DatasetFactory.py) | **Inactive preserved material.** Resolve benchmark dataset names to adapter classes |
+| [HumanEvalDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/HumanEvalDataset.py) | **Inactive preserved material.** HumanEval functional-test and prompt adapter |
+| [MBPPDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/MBPPDataset.py) | **Inactive preserved material.** MBPP functional-test and prompt adapter |
+| [XCodeDataset.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/XCodeDataset.py) | **Inactive preserved material.** xCodeEval standard-input/sample/full-test adapter |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/__init__.py) | **Inactive preserved material.** Empty research package marker |
+| [convert-apps-xcode.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-apps-xcode.py) | **Inactive preserved material.** Select and convert APPS data into external-executor record format |
+| [convert-cc-xcode.py](AnalyseFuture/extracted/CodeGenerator-master/src/datasets/convert-cc-xcode.py) | **Inactive preserved material.** Convert CodeContests parquet public/private/generated tests to executor record format |
 
 </details>
 
@@ -1193,16 +1223,16 @@ Inactive uploaded benchmark adapters, dataset factory and conversion utilities r
 
 Inactive uploaded execution and benchmark-scoring helpers whose host or external execution paths are not adopted by Solver AI.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
-| [api_comm.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py) | **Inactive preserved material.** External ExecEval HTTP client and result dataclasses Feature/owner: codesim-research. | `.exec_outcome`; `dataclasses`; `requests` |
-| [evalute.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py) | **Inactive preserved material.** Invoke external execution and construct test-result feedback Feature/owner: codesim-research. | `.api_comm`; `.exec_outcome`; `constants.lang_mappings`; `json`; `numpy`; `os`; `tqdm`; `typing`; `yaml` |
-| [exec_outcome.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py) | **Inactive preserved material.** External execution verdict enum Feature/owner: codesim-research. | `enum` |
-| [executor_utils.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py) | **Inactive preserved material.** Thread timeout/result propagation and JSONL utility Feature/owner: codesim-research. | `json`; `os`; `threading` |
-| [func_evaluate.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py) | **Inactive preserved material.** Execute generated Python with functional/assertion tests in host globals Feature/owner: codesim-research. | `.executor_utils`; `contextlib`; `signal`; `typing` |
-| [limits_by_lang.yaml](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml) | **Inactive preserved material.** Requested per-runtime resource limits for external executor Feature/owner: codesim-research. | `PyYAML/external executor` |
-| [resource_limit.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py) | **Inactive preserved material.** Resource-limit dataclass and prlimit-string example; not sandbox enforcement Feature/owner: codesim-research. | `dataclasses` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/__init__.py) | **Inactive preserved material.** Empty research package marker |
+| [api_comm.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/api_comm.py) | **Inactive preserved material.** External ExecEval HTTP client and result dataclasses |
+| [evalute.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/evalute.py) | **Inactive preserved material.** Invoke external execution and construct test-result feedback |
+| [exec_outcome.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/exec_outcome.py) | **Inactive preserved material.** External execution verdict enum |
+| [executor_utils.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/executor_utils.py) | **Inactive preserved material.** Thread timeout/result propagation and JSONL utility |
+| [func_evaluate.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/func_evaluate.py) | **Inactive preserved material.** Execute generated Python with functional/assertion tests in host globals |
+| [limits_by_lang.yaml](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/limits_by_lang.yaml) | **Inactive preserved material.** Requested per-runtime resource limits for external executor |
+| [resource_limit.py](AnalyseFuture/extracted/CodeGenerator-master/src/evaluations/resource_limit.py) | **Inactive preserved material.** Resource-limit dataclass and prlimit-string example; not sandbox enforcement |
 
 </details>
 
@@ -1211,15 +1241,15 @@ Inactive uploaded execution and benchmark-scoring helpers whose host or external
 
 Inactive uploaded provider adapters retained as upstream research source without credentials or configured model calls.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [Anthropic.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py) | **Inactive preserved material.** Anthropic-branded OpenRouter chat adapter with token accounting Feature/owner: codesim-research. | `.Base`; `base64`; `json`; `openai`; `os`; `requests`; `tenacity`; `time` |
-| [Base.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py) | **Inactive preserved material.** Abstract provider prompt interface Feature/owner: codesim-research. | `abc`; `logging`; `sys`; `traceback` |
-| [Gemini.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py) | **Inactive preserved material.** Gemini generation adapter with metadata and retry Feature/owner: codesim-research. | `.Base`; `dotenv`; `google.generativeai`; `os`; `pprint`; `tenacity`; `time` |
-| [GroqModel.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py) | **Inactive preserved material.** Groq chat adapter with retry and token accounting Feature/owner: codesim-research. | `.Base`; `base64`; `groq`; `json`; `os`; `requests`; `tenacity`; `time`; `typing` |
-| [ModelFactory.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py) | **Inactive preserved material.** Provider name to adapter selection; eagerly imports providers Feature/owner: codesim-research. | `models.Anthropic`; `models.Gemini`; `models.GroqModel`; `models.OpenAI` |
-| [OpenAI.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py) | **Inactive preserved material.** OpenAI/Azure SDK and raw HTTP chat adapters with token logs Feature/owner: codesim-research. | `.Base`; `base64`; `json`; `openai`; `os`; `requests`; `tenacity`; `time` |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [Anthropic.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/Anthropic.py) | **Inactive preserved material.** Anthropic-branded OpenRouter chat adapter with token accounting |
+| [Base.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/Base.py) | **Inactive preserved material.** Abstract provider prompt interface |
+| [Gemini.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/Gemini.py) | **Inactive preserved material.** Gemini generation adapter with metadata and retry |
+| [GroqModel.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/GroqModel.py) | **Inactive preserved material.** Groq chat adapter with retry and token accounting |
+| [ModelFactory.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/ModelFactory.py) | **Inactive preserved material.** Provider name to adapter selection; eagerly imports providers |
+| [OpenAI.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/OpenAI.py) | **Inactive preserved material.** OpenAI/Azure SDK and raw HTTP chat adapters with token logs |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/models/__init__.py) | **Inactive preserved material.** Empty research package marker |
 
 </details>
 
@@ -1228,17 +1258,17 @@ Inactive uploaded provider adapters retained as upstream research source without
 
 Inactive uploaded planning, code-generation and repair strategies preserved for conceptual study.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [Analogical.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py) | **Inactive preserved material.** Analogical exemplar-based generation strategy Feature/owner: codesim-research. | `.Base`; `copy`; `datasets.Dataset`; `models.Base`; `os`; `re`; `results.Results`; `tiktoken`; `typing` |
-| [Base.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py) | **Inactive preserved material.** Benchmark loop, resume handling, pass budget and result accumulation Feature/owner: codesim-research. | `constants.verboseType`; `copy`; `datasets.Dataset`; `models.Base`; `os`; `results.Results`; `tiktoken`; `time`; `typing`; `utils.parse` |
-| [CoT.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py) | **Inactive preserved material.** Dataset-conditioned few-shot reasoning/code prompt strategy Feature/owner: codesim-research. | `.Base`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.XCodeDataset`; `models.Base`; `os`; `results.Results`; `tiktoken`; `typing` |
-| [CodeSIM.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py) | **Inactive preserved material.** Exemplar/plan simulation, refinement, code generation and bounded debug strategy Feature/owner: codesim-research. | `.Base`; `.Direct`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `sys`; `tiktoken`; `time`; `typing`; `utils.parse`; `xml.etree.ElementTree` |
-| [Direct.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py) | **Inactive preserved material.** Single direct generation strategy Feature/owner: codesim-research. | `.Base`; `copy`; `datasets.Dataset`; `models.Base`; `os`; `results.Results`; `tiktoken`; `typing` |
-| [MapCoder.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py) | **Inactive preserved material.** Multiple exemplar plans, confidence ordering and sample-based repair strategy Feature/owner: codesim-research. | `.Base`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `results.Results`; `sys`; `tiktoken`; `time`; `typing`; `xml.etree.ElementTree` |
-| [PromptingFactory.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py) | **Inactive preserved material.** Select named prompting/ablation strategy Feature/owner: codesim-research. | `promptings.Analogical`; `promptings.CoT`; `promptings.CodeSIM`; `promptings.Direct`; `promptings.MapCoder`; `promptings.SelfPlanning`; `promptings.variations.CodeSIMA`; `promptings.variations.CodeSIMC`; `promptings.variations.CodeSIMWD`; `promptings.variations.CodeSIMWPV`; `promptings.variations.CodeSIMWPVD` |
-| [SelfPlanning.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py) | **Inactive preserved material.** Two-stage dataset-conditioned planning then implementation strategy Feature/owner: codesim-research. | `.Base`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.XCodeDataset`; `models.Base`; `os`; `results.Results`; `tiktoken`; `typing` |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [Analogical.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Analogical.py) | **Inactive preserved material.** Analogical exemplar-based generation strategy |
+| [Base.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Base.py) | **Inactive preserved material.** Benchmark loop, resume handling, pass budget and result accumulation |
+| [CoT.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CoT.py) | **Inactive preserved material.** Dataset-conditioned few-shot reasoning/code prompt strategy |
+| [CodeSIM.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/CodeSIM.py) | **Inactive preserved material.** Exemplar/plan simulation, refinement, code generation and bounded debug strategy |
+| [Direct.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/Direct.py) | **Inactive preserved material.** Single direct generation strategy |
+| [MapCoder.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/MapCoder.py) | **Inactive preserved material.** Multiple exemplar plans, confidence ordering and sample-based repair strategy |
+| [PromptingFactory.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/PromptingFactory.py) | **Inactive preserved material.** Select named prompting/ablation strategy |
+| [SelfPlanning.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/SelfPlanning.py) | **Inactive preserved material.** Two-stage dataset-conditioned planning then implementation strategy |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/__init__.py) | **Inactive preserved material.** Empty research package marker |
 
 </details>
 
@@ -1247,13 +1277,13 @@ Inactive uploaded planning, code-generation and repair strategies preserved for 
 
 Inactive uploaded CodeSIM strategy variants retained for research comparison rather than current product features.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [CodeSIMA.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py) | **Inactive preserved material.** CodeSIM additional generated assertions variant (consensus/intersection of tests) Feature/owner: codesim-research. | `..Base`; `..Direct`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `sys`; `tiktoken`; `time`; `typing`; `utils.parse`; `xml.etree.ElementTree` |
-| [CodeSIMC.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py) | **Inactive preserved material.** CodeSIM competitive prompting variant Feature/owner: codesim-research. | `..Base`; `..Direct`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `sys`; `tiktoken`; `time`; `typing`; `utils.parse`; `xml.etree.ElementTree` |
-| [CodeSIMWD.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py) | **Inactive preserved material.** CodeSIM ablation omitting debugging Feature/owner: codesim-research. | `..Base`; `..Direct`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `sys`; `tiktoken`; `time`; `typing`; `utils.parse`; `xml.etree.ElementTree` |
-| [CodeSIMWPV.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py) | **Inactive preserved material.** CodeSIM ablation omitting plan verification Feature/owner: codesim-research. | `..Base`; `..Direct`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `sys`; `tiktoken`; `time`; `typing`; `utils.parse`; `xml.etree.ElementTree` |
-| [CodeSIMWPVD.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py) | **Inactive preserved material.** CodeSIM ablation omitting plan verification and debugging Feature/owner: codesim-research. | `..Base`; `..Direct`; `constants.verboseType`; `copy`; `datasets.APPSDataset`; `datasets.CodeContestDataset`; `datasets.Dataset`; `datasets.HumanEvalDataset`; `datasets.MBPPDataset`; `datasets.XCodeDataset`; `evaluations.func_evaluate`; `json`; `models.Base`; `os`; `re`; `sys`; `tiktoken`; `time`; `typing`; `utils.parse`; `xml.etree.ElementTree` |
+| File | Purpose / feature |
+| --- | --- |
+| [CodeSIMA.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMA.py) | **Inactive preserved material.** CodeSIM additional generated assertions variant (consensus/intersection of tests) |
+| [CodeSIMC.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMC.py) | **Inactive preserved material.** CodeSIM competitive prompting variant |
+| [CodeSIMWD.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWD.py) | **Inactive preserved material.** CodeSIM ablation omitting debugging |
+| [CodeSIMWPV.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPV.py) | **Inactive preserved material.** CodeSIM ablation omitting plan verification |
+| [CodeSIMWPVD.py](AnalyseFuture/extracted/CodeGenerator-master/src/promptings/variations/CodeSIMWPVD.py) | **Inactive preserved material.** CodeSIM ablation omitting plan verification and debugging |
 
 </details>
 
@@ -1262,10 +1292,10 @@ Inactive uploaded CodeSIM strategy variants retained for research comparison rat
 
 Inactive uploaded research result persistence helpers retained with their source provenance.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [Results.py](AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py) | **Inactive preserved material.** Load, append, persist and index resumable experiment JSONL results Feature/owner: codesim-research. | `os`; `utils.jsonl` |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [Results.py](AnalyseFuture/extracted/CodeGenerator-master/src/results/Results.py) | **Inactive preserved material.** Load, append, persist and index resumable experiment JSONL results |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/results/__init__.py) | **Inactive preserved material.** Empty research package marker |
 
 </details>
 
@@ -1274,16 +1304,16 @@ Inactive uploaded research result persistence helpers retained with their source
 
 Inactive uploaded parsing, cost, data and execution utilities retained without importing their execution behavior.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py) | **Inactive preserved material.** Empty research package marker Feature/owner: codesim-research. | — |
-| [evaluateET.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py) | **Inactive preserved material.** Re-evaluate HumanEval/MBPP completions against extended tests Feature/owner: codesim-research. | `evaluations.func_evaluate`; `os`; `utils.jsonl` |
-| [generateEP.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py) | **Inactive preserved material.** Format completions for optional EvalPlus evaluation Feature/owner: codesim-research. | `evaluations.func_evaluate`; `os`; `utils.jsonl` |
-| [jsonl.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py) | **Inactive preserved material.** JSONL read/write/append helpers with output directory creation Feature/owner: codesim-research. | `json`; `os` |
-| [parse.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py) | **Inactive preserved material.** Extract final fenced source code or numbered plans from provider text Feature/owner: codesim-research. | `re` |
-| [runEP.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py) | **Inactive preserved material.** Optional shell-based EvalPlus Docker invocation with fixed developer mounts Feature/owner: codesim-research. | `subprocess` |
-| [summary.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py) | **Inactive preserved material.** Aggregate solved counts, token usage, API calls and elapsed time Feature/owner: codesim-research. | `json`; `pandas`; `utils.jsonl` |
-| [tokenCount.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py) | **Inactive preserved material.** Approximate chat token counting with fixed tokenizer heuristics Feature/owner: codesim-research. | `tiktoken` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/__init__.py) | **Inactive preserved material.** Empty research package marker |
+| [evaluateET.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/evaluateET.py) | **Inactive preserved material.** Re-evaluate HumanEval/MBPP completions against extended tests |
+| [generateEP.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/generateEP.py) | **Inactive preserved material.** Format completions for optional EvalPlus evaluation |
+| [jsonl.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/jsonl.py) | **Inactive preserved material.** JSONL read/write/append helpers with output directory creation |
+| [parse.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/parse.py) | **Inactive preserved material.** Extract final fenced source code or numbered plans from provider text |
+| [runEP.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/runEP.py) | **Inactive preserved material.** Optional shell-based EvalPlus Docker invocation with fixed developer mounts |
+| [summary.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/summary.py) | **Inactive preserved material.** Aggregate solved counts, token usage, API calls and elapsed time |
+| [tokenCount.py](AnalyseFuture/extracted/CodeGenerator-master/src/utils/tokenCount.py) | **Inactive preserved material.** Approximate chat token counting with fixed tokenizer heuristics |
 
 </details>
 
@@ -1292,15 +1322,15 @@ Inactive uploaded parsing, cost, data and execution utilities retained without i
 
 Inactive phi-code upload snapshot preserving candidate-generation, ranking and alternate UI research with its original notices.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [.gitattributes.upstream](AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream) | **Inactive preserved material.** Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect Feature/owner: phi-research. | — |
-| [.gitignore.upstream](AnalyseFuture/extracted/phi-code-main/.gitignore.upstream) | **Inactive preserved material.** Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect Feature/owner: phi-research. | — |
-| [LICENSE](AnalyseFuture/extracted/phi-code-main/LICENSE) | **Inactive preserved material.** Original Apache-2.0 source license notice Feature/owner: phi-research. | — |
-| [README.md](AnalyseFuture/extracted/phi-code-main/README.md) | **Inactive preserved material.** Research framework purpose, setup and benchmark claims Feature/owner: phi-research. | — |
-| [curses_ui.png](AnalyseFuture/extracted/phi-code-main/curses_ui.png) | **Inactive preserved material.** Research UI screenshot Feature/owner: phi-research. | `Non-text content or parser limitation; see review record.` |
-| [terminal_mode.png](AnalyseFuture/extracted/phi-code-main/terminal_mode.png) | **Inactive preserved material.** Research UI screenshot Feature/owner: phi-research. | `Non-text content or parser limitation; see review record.` |
-| [webui.png](AnalyseFuture/extracted/phi-code-main/webui.png) | **Inactive preserved material.** Research UI screenshot Feature/owner: phi-research. | `Non-text content or parser limitation; see review record.` |
+| File | Purpose / feature |
+| --- | --- |
+| [.gitattributes.upstream](AnalyseFuture/extracted/phi-code-main/.gitattributes.upstream) | **Inactive preserved material.** Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect |
+| [.gitignore.upstream](AnalyseFuture/extracted/phi-code-main/.gitignore.upstream) | **Inactive preserved material.** Preserved upstream Git ignore/attribute policy, renamed so it has no Git effect |
+| [LICENSE](AnalyseFuture/extracted/phi-code-main/LICENSE) | **Inactive preserved material.** Original Apache-2.0 source license notice |
+| [README.md](AnalyseFuture/extracted/phi-code-main/README.md) | **Inactive preserved material.** Research framework purpose, setup and benchmark claims |
+| [curses_ui.png](AnalyseFuture/extracted/phi-code-main/curses_ui.png) | **Inactive preserved material.** Research UI screenshot |
+| [terminal_mode.png](AnalyseFuture/extracted/phi-code-main/terminal_mode.png) | **Inactive preserved material.** Research UI screenshot |
+| [webui.png](AnalyseFuture/extracted/phi-code-main/webui.png) | **Inactive preserved material.** Research UI screenshot |
 
 </details>
 
@@ -1309,12 +1339,12 @@ Inactive phi-code upload snapshot preserving candidate-generation, ranking and a
 
 Inactive uploaded weekly-contest 476 statements and experiment outputs retained solely as supplied research artifacts.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [3745_statement.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
-| [3746_statement.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
-| [3747_statement.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
-| [3748_statment.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt) | **Inactive preserved material.** Historical research command/output log Feature/owner: phi-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [3745_statement.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3745_statement.txt) | **Inactive preserved material.** Historical contest problem statement |
+| [3746_statement.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3746_statement.txt) | **Inactive preserved material.** Historical contest problem statement |
+| [3747_statement.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3747_statement.txt) | **Inactive preserved material.** Historical contest problem statement |
+| [3748_statment.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/3748_statment.txt) | **Inactive preserved material.** Historical research command/output log |
 
 </details>
 
@@ -1323,16 +1353,16 @@ Inactive uploaded weekly-contest 476 statements and experiment outputs retained 
 
 Inactive uploaded weekly-contest 476 commands and candidate records labeled by upstream as a model experiment.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [3745_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt) | **Inactive preserved material.** Historical research command/output log Feature/owner: phi-research. | — |
-| [3745_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
-| [3746_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt) | **Inactive preserved material.** Historical research command/output log Feature/owner: phi-research. | — |
-| [3746_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
-| [3747_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt) | **Inactive preserved material.** Historical research command/output log Feature/owner: phi-research. | — |
-| [3747_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
-| [3748_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt) | **Inactive preserved material.** Historical research command/output log Feature/owner: phi-research. | — |
-| [3748_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [3745_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_command.txt) | **Inactive preserved material.** Historical research command/output log |
+| [3745_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3745_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
+| [3746_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_command.txt) | **Inactive preserved material.** Historical research command/output log |
+| [3746_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3746_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
+| [3747_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_command.txt) | **Inactive preserved material.** Historical research command/output log |
+| [3747_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3747_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
+| [3748_command.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_command.txt) | **Inactive preserved material.** Historical research command/output log |
+| [3748_solutions.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_476/gpt_oss_20B/3748_solutions.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
 
 </details>
 
@@ -1341,12 +1371,12 @@ Inactive uploaded weekly-contest 476 commands and candidate records labeled by u
 
 Inactive uploaded weekly-contest 477 statements and experiment outputs retained solely as supplied research artifacts.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [3754.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
-| [3755.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
-| [3756.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
-| [3757.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt) | **Inactive preserved material.** Historical contest problem statement Feature/owner: phi-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [3754.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3754.txt) | **Inactive preserved material.** Historical contest problem statement |
+| [3755.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3755.txt) | **Inactive preserved material.** Historical contest problem statement |
+| [3756.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3756.txt) | **Inactive preserved material.** Historical contest problem statement |
+| [3757.txt](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/3757.txt) | **Inactive preserved material.** Historical contest problem statement |
 
 </details>
 
@@ -1355,12 +1385,12 @@ Inactive uploaded weekly-contest 477 statements and experiment outputs retained 
 
 Inactive uploaded weekly-contest 477 candidate records retained as upstream artifacts rather than verified benchmark evidence.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [3754.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
-| [3755.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
-| [3756.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
-| [3757.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores Feature/owner: phi-research. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [3754.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3754.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
+| [3755.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3755.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
+| [3756.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3756.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
+| [3757.jsonl](AnalyseFuture/extracted/phi-code-main/contests_results/leetcode_weekly_477/gpt_oss_20B/3757.jsonl) | **Inactive preserved material.** Historical generated candidate solutions, sample-pass counts and embedding scores |
 
 </details>
 
@@ -1369,13 +1399,13 @@ Inactive uploaded weekly-contest 477 candidate records retained as upstream arti
 
 Inactive uploaded Git LFS pointer files preserved exactly, with the referenced dataset objects absent from the ZIP.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [atcoder.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents Feature/owner: phi-research. | `unavailable upstream Git LFS object` |
-| [codechef.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents Feature/owner: phi-research. | `unavailable upstream Git LFS object` |
-| [codeforces.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents Feature/owner: phi-research. | `unavailable upstream Git LFS object` |
-| [codeforces_positive.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents Feature/owner: phi-research. | `unavailable upstream Git LFS object` |
-| [leetcode.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents Feature/owner: phi-research. | `unavailable upstream Git LFS object` |
+| File | Purpose / feature |
+| --- | --- |
+| [atcoder.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/atcoder.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents |
+| [codechef.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/codechef.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents |
+| [codeforces.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/codeforces.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents |
+| [codeforces_positive.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/codeforces_positive.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents |
+| [leetcode.jsonl](AnalyseFuture/extracted/phi-code-main/datasets/leetcode.jsonl) | **Inactive preserved material.** Git LFS pointer to upstream ranker dataset, not dataset contents |
 
 </details>
 
@@ -1384,13 +1414,13 @@ Inactive uploaded Git LFS pointer files preserved exactly, with the referenced d
 
 Inactive uploaded embedding-ranker data and training utilities retained without model downloads or training execution.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [check_datasets.py](AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py) | **Inactive preserved material.** Inspect triplet/pair dataset field and token-length compatibility with selected ranker Feature/owner: phi-research. | `argparse`; `glob`; `json`; `os`; `sentence_transformers`; `sys`; `tqdm` |
-| [filter_datasets.py](AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py) | **Inactive preserved material.** Write dataset subsets fitting the ranker tokenizer length limit Feature/owner: phi-research. | `argparse`; `glob`; `json`; `os`; `sentence_transformers`; `sys`; `tqdm` |
-| [log_config.py](AnalyseFuture/extracted/phi-code-main/ranker/log_config.py) | **Inactive preserved material.** Install file/console logging handlers for research utilities Feature/owner: phi-research. | `logging` |
-| [sample_dataset.py](AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py) | **Inactive preserved material.** Randomly sample a chosen percentage of JSONL records Feature/owner: phi-research. | `argparse`; `json`; `random`; `tqdm` |
-| [train.py](AnalyseFuture/extracted/phi-code-main/ranker/train.py) | **Inactive preserved material.** Fine-tune sentence-transformer ranker using triplet/contrastive losses and multiple datasets Feature/owner: phi-research. | `argparse`; `collections`; `datasets`; `json`; `log_config`; `random`; `sentence_transformers`; `sentence_transformers.losses`; `sentence_transformers.training_args`; `torch` |
+| File | Purpose / feature |
+| --- | --- |
+| [check_datasets.py](AnalyseFuture/extracted/phi-code-main/ranker/check_datasets.py) | **Inactive preserved material.** Inspect triplet/pair dataset field and token-length compatibility with selected ranker |
+| [filter_datasets.py](AnalyseFuture/extracted/phi-code-main/ranker/filter_datasets.py) | **Inactive preserved material.** Write dataset subsets fitting the ranker tokenizer length limit |
+| [log_config.py](AnalyseFuture/extracted/phi-code-main/ranker/log_config.py) | **Inactive preserved material.** Install file/console logging handlers for research utilities |
+| [sample_dataset.py](AnalyseFuture/extracted/phi-code-main/ranker/sample_dataset.py) | **Inactive preserved material.** Randomly sample a chosen percentage of JSONL records |
+| [train.py](AnalyseFuture/extracted/phi-code-main/ranker/train.py) | **Inactive preserved material.** Fine-tune sentence-transformer ranker using triplet/contrastive losses and multiple datasets |
 
 </details>
 
@@ -1399,20 +1429,20 @@ Inactive uploaded embedding-ranker data and training utilities retained without 
 
 Inactive uploaded model-client, candidate-execution and alternate-interface source whose host execution paths are not adopted.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [atcoder.py](AnalyseFuture/extracted/phi-code-main/solver/atcoder.py) | **Inactive preserved material.** Parse AtCoder samples and score generated Python via host subprocesses Feature/owner: phi-research. | `log_config`; `multiprocessing`; `subprocess`; `tempfile`; `time`; `tqdm`; `typing`; `utils` |
-| [codeforces.py](AnalyseFuture/extracted/phi-code-main/solver/codeforces.py) | **Inactive preserved material.** Parse Codeforces samples and score generated Python via host subprocesses Feature/owner: phi-research. | `log_config`; `multiprocessing`; `subprocess`; `tempfile`; `time`; `tqdm`; `typing`; `utils` |
-| [curses_ui.py](AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py) | **Inactive preserved material.** Interactive curses viewer/generation/save controls for ranked code candidates Feature/owner: phi-research. | `curses`; `json`; `sys`; `terminal`; `time`; `utils` |
-| [general_prompt.txt](AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt) | **Inactive preserved material.** Python standard-input program generation prompt template Feature/owner: phi-research. | — |
-| [leetcode.py](AnalyseFuture/extracted/phi-code-main/solver/leetcode.py) | **Inactive preserved material.** Parse LeetCode examples and score generated Solution classes through exec in multiprocessing Feature/owner: phi-research. | `ast`; `log_config`; `multiprocessing`; `re`; `time`; `tqdm`; `typing`; `utils` |
-| [leetcode_prompt.txt](AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt) | **Inactive preserved material.** Python Solution-class generation prompt template with optional sortedcontainers Feature/owner: phi-research. | — |
-| [log_config.py](AnalyseFuture/extracted/phi-code-main/solver/log_config.py) | **Inactive preserved material.** Install file/console logging handlers for research solver Feature/owner: phi-research. | `logging` |
-| [main.py](AnalyseFuture/extracted/phi-code-main/solver/main.py) | **Inactive preserved material.** Configure local-model endpoint/ranker/site/interface and launch solver UI/CLI Feature/owner: phi-research. | `argparse`; `atcoder`; `codeforces`; `curses_ui`; `leetcode`; `log_config`; `openai`; `os`; `sentence_transformers`; `sys`; `terminal`; `torch`; `utils`; `web_ui` |
-| [requirements.txt](AnalyseFuture/extracted/phi-code-main/solver/requirements.txt) | **Inactive preserved material.** Archived research dependency declarations Feature/owner: phi-research. | `gradio==5.49.1`; `transformers==4.49.0`; `sentence-transformers==5.1.1`; `sortedcontainers`; `openai==2.5.0` |
-| [terminal.py](AnalyseFuture/extracted/phi-code-main/solver/terminal.py) | **Inactive preserved material.** Generate multiple candidates, run sample tests, embed/rank and sort by pass count then similarity Feature/owner: phi-research. | `log_config`; `tqdm`; `utils` |
-| [utils.py](AnalyseFuture/extracted/phi-code-main/solver/utils.py) | **Inactive preserved material.** Request compatible chat completions and save candidate JSONL output Feature/owner: phi-research. | `json`; `log_config`; `openai`; `typing` |
-| [web_ui.py](AnalyseFuture/extracted/phi-code-main/solver/web_ui.py) | **Inactive preserved material.** Gradio interface for generation, evidence display and candidate navigation Feature/owner: phi-research. | `gradio`; `terminal`; `utils` |
+| File | Purpose / feature |
+| --- | --- |
+| [atcoder.py](AnalyseFuture/extracted/phi-code-main/solver/atcoder.py) | **Inactive preserved material.** Parse AtCoder samples and score generated Python via host subprocesses |
+| [codeforces.py](AnalyseFuture/extracted/phi-code-main/solver/codeforces.py) | **Inactive preserved material.** Parse Codeforces samples and score generated Python via host subprocesses |
+| [curses_ui.py](AnalyseFuture/extracted/phi-code-main/solver/curses_ui.py) | **Inactive preserved material.** Interactive curses viewer/generation/save controls for ranked code candidates |
+| [general_prompt.txt](AnalyseFuture/extracted/phi-code-main/solver/general_prompt.txt) | **Inactive preserved material.** Python standard-input program generation prompt template |
+| [leetcode.py](AnalyseFuture/extracted/phi-code-main/solver/leetcode.py) | **Inactive preserved material.** Parse LeetCode examples and score generated Solution classes through exec in multiprocessing |
+| [leetcode_prompt.txt](AnalyseFuture/extracted/phi-code-main/solver/leetcode_prompt.txt) | **Inactive preserved material.** Python Solution-class generation prompt template with optional sortedcontainers |
+| [log_config.py](AnalyseFuture/extracted/phi-code-main/solver/log_config.py) | **Inactive preserved material.** Install file/console logging handlers for research solver |
+| [main.py](AnalyseFuture/extracted/phi-code-main/solver/main.py) | **Inactive preserved material.** Configure local-model endpoint/ranker/site/interface and launch solver UI/CLI |
+| [requirements.txt](AnalyseFuture/extracted/phi-code-main/solver/requirements.txt) | **Inactive preserved material.** Archived research dependency declarations |
+| [terminal.py](AnalyseFuture/extracted/phi-code-main/solver/terminal.py) | **Inactive preserved material.** Generate multiple candidates, run sample tests, embed/rank and sort by pass count then similarity |
+| [utils.py](AnalyseFuture/extracted/phi-code-main/solver/utils.py) | **Inactive preserved material.** Request compatible chat completions and save candidate JSONL output |
+| [web_ui.py](AnalyseFuture/extracted/phi-code-main/solver/web_ui.py) | **Inactive preserved material.** Gradio interface for generation, evidence display and candidate navigation |
 
 </details>
 
@@ -1421,10 +1451,10 @@ Inactive uploaded model-client, candidate-execution and alternate-interface sour
 
 Inactive original project-memory branch documents preserved with source-commit provenance rather than treated as current instructions.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [AGENTS.md.upstream](AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream) | **Inactive preserved material.** Inert historical agent-instruction snapshot adding continuity-document reading requirements. Feature/owner: inactive historical branch evidence. | `Historical continuity pack`; `live root AGENTS.md for actual instructions` |
-| [README.md](AnalyseFuture/historical-implementations/project-memory/README.md) | **Inactive preserved material.** Historical root orientation augmented with project-memory, RTF handbook and continuity links. Feature/owner: inactive historical branch evidence. | `Historical continuity pack`; `root current README.md for active status` |
+| File | Purpose / feature |
+| --- | --- |
+| [AGENTS.md.upstream](AnalyseFuture/historical-implementations/project-memory/AGENTS.md.upstream) | **Inactive preserved material.** Inert historical agent-instruction snapshot adding continuity-document reading requirements. |
+| [README.md](AnalyseFuture/historical-implementations/project-memory/README.md) | **Inactive preserved material.** Historical root orientation augmented with project-memory, RTF handbook and continuity links. |
 
 </details>
 
@@ -1433,15 +1463,15 @@ Inactive original project-memory branch documents preserved with source-commit p
 
 Inactive original continuity, handbook and development prose preserved as historical branch evidence, not authoritative current guidance.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [CHAT_CONTINUITY_LOG.md](AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md) | **Inactive preserved material.** Historical accessible-conversation summaries, explicit excerpts, engineering timeline, decision table and handoff template. Feature/owner: inactive historical branch evidence. | `Historical SAI-010/011 source and CI links`; `structured master development specification` |
-| [INDEX.md](AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md) | **Inactive preserved material.** Historical navigation introducing memory, RTF, master spec, chat log and resume prompt. Feature/owner: inactive historical branch evidence. | `Source-branch handbook and existing docs`; `current active index` |
-| [MASTER_DEVELOPMENT_SPEC.md](AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md) | **Inactive preserved material.** Historical structured restatement of the owner's ten-task development brief and original project constraints. Feature/owner: inactive historical branch evidence. | `Existing foundation and SAI-010`; `historical SAI-011 work`; `20-study-repository catalog` |
-| [PROJECT_MEMORY.md](AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md) | **Inactive preserved material.** Historical comprehensive continuity handbook: original intent, code map, diagrams, 20 references, two primary solvers, P0-P4 backlog, owner decisions and commands. Feature/owner: inactive historical branch evidence. | `Main 9952f8b and historical SAI-011 head b591db1`; `historical final branch CI run 43837980897`; `source docs and provider/judge budgets` |
-| [RESUME_PROMPT.md](AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md) | **Inactive preserved material.** Historical copy/paste startup prompt preserving continuity, source verification and next provider-design idea. Feature/owner: inactive historical branch evidence. | `Historical memory/master spec/log`; `current source, owner instructions and status ledger` |
-| [SOLVER_AI_COMPLETE_HANDBOOK.rtf](AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf) | **Inactive preserved material.** Historical Word-readable compilation of project memory, conversation log, master development specification and resume prompt. Feature/owner: inactive historical branch evidence. | `The four source Markdown documents in project-memory snapshot`; `basic RTF text decoder for inspection only` |
-| [START_HERE.md](AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md) | **Inactive preserved material.** Historical onboarding augmented with continuity-pack instructions and RTF link. Feature/owner: inactive historical branch evidence. | `Historical PROJECT_MEMORY.md and RESUME_PROMPT.md`; `existing local development guide` |
+| File | Purpose / feature |
+| --- | --- |
+| [CHAT_CONTINUITY_LOG.md](AnalyseFuture/historical-implementations/project-memory/docs/CHAT_CONTINUITY_LOG.md) | **Inactive preserved material.** Historical accessible-conversation summaries, explicit excerpts, engineering timeline, decision table and handoff template. |
+| [INDEX.md](AnalyseFuture/historical-implementations/project-memory/docs/INDEX.md) | **Inactive preserved material.** Historical navigation introducing memory, RTF, master spec, chat log and resume prompt. |
+| [MASTER_DEVELOPMENT_SPEC.md](AnalyseFuture/historical-implementations/project-memory/docs/MASTER_DEVELOPMENT_SPEC.md) | **Inactive preserved material.** Historical structured restatement of the owner's ten-task development brief and original project constraints. |
+| [PROJECT_MEMORY.md](AnalyseFuture/historical-implementations/project-memory/docs/PROJECT_MEMORY.md) | **Inactive preserved material.** Historical comprehensive continuity handbook: original intent, code map, diagrams, 20 references, two primary solvers, P0-P4 backlog, owner decisions and commands. |
+| [RESUME_PROMPT.md](AnalyseFuture/historical-implementations/project-memory/docs/RESUME_PROMPT.md) | **Inactive preserved material.** Historical copy/paste startup prompt preserving continuity, source verification and next provider-design idea. |
+| [SOLVER_AI_COMPLETE_HANDBOOK.rtf](AnalyseFuture/historical-implementations/project-memory/docs/SOLVER_AI_COMPLETE_HANDBOOK.rtf) | **Inactive preserved material.** Historical Word-readable compilation of project memory, conversation log, master development specification and resume prompt. |
+| [START_HERE.md](AnalyseFuture/historical-implementations/project-memory/docs/START_HERE.md) | **Inactive preserved material.** Historical onboarding augmented with continuity-pack instructions and RTF link. |
 
 </details>
 
@@ -1450,9 +1480,9 @@ Inactive original continuity, handbook and development prose preserved as histor
 
 Inactive historical hint styling snapshot preserved without inclusion in the active web build.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [globals.css](AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css) | **Inactive preserved material.** Inactive original SAI-011 apps/web/app/globals.css version; retained before feature recovery/import repair. Feature/owner: historical authenticated authored-hint UI evidence. | `Source commit b591db142d7b65c306769a59251ed4129f42118a` |
+| File | Purpose / feature |
+| --- | --- |
+| [globals.css](AnalyseFuture/historical-implementations/sai-011/apps/web/app/globals.css) | **Inactive preserved material.** Inactive original SAI-011 apps/web/app/globals.css version; retained before feature recovery/import repair. |
 
 </details>
 
@@ -1461,10 +1491,10 @@ Inactive historical hint styling snapshot preserved without inclusion in the act
 
 Inactive original account-hint and workspace component versions preserved before feature-folder migration.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [account-hint.tsx](AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx) | **Inactive preserved material.** Inactive original SAI-011 apps/web/components/account-hint.tsx version; retained before feature recovery/import repair. Feature/owner: historical authenticated authored-hint UI evidence. | `@/lib/auth-client`; `@/lib/hints`; `next/link`; `react` |
-| [workspace.tsx](AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx) | **Inactive preserved material.** Inactive original SAI-011 apps/web/components/workspace.tsx version; retained before feature recovery/import repair. Feature/owner: historical authenticated authored-hint UI evidence. | `./account-hint`; `./code-pane`; `./icons`; `./submission-panel`; `@/lib/api`; `next/dynamic`; `next/link`; `react` |
+| File | Purpose / feature |
+| --- | --- |
+| [account-hint.tsx](AnalyseFuture/historical-implementations/sai-011/apps/web/components/account-hint.tsx) | **Inactive preserved material.** Inactive original SAI-011 apps/web/components/account-hint.tsx version; retained before feature recovery/import repair. |
+| [workspace.tsx](AnalyseFuture/historical-implementations/sai-011/apps/web/components/workspace.tsx) | **Inactive preserved material.** Inactive original SAI-011 apps/web/components/workspace.tsx version; retained before feature recovery/import repair. |
 
 </details>
 
@@ -1473,9 +1503,9 @@ Inactive original account-hint and workspace component versions preserved before
 
 Inactive original hint API client retained with its branch provenance rather than imported by the application.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [hints.ts](AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts) | **Inactive preserved material.** Inactive original SAI-011 apps/web/lib/hints.ts version; retained before feature recovery/import repair. Feature/owner: historical authenticated authored-hint UI evidence. | `./auth-client`; `zod` |
+| File | Purpose / feature |
+| --- | --- |
+| [hints.ts](AnalyseFuture/historical-implementations/sai-011/apps/web/lib/hints.ts) | **Inactive preserved material.** Inactive original SAI-011 apps/web/lib/hints.ts version; retained before feature recovery/import repair. |
 
 </details>
 
@@ -1484,17 +1514,17 @@ Inactive original hint API client retained with its branch provenance rather tha
 
 Inactive branch-specific status, research, backlog and handoff prose retained without replacing current documentation.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [AI_ARCHITECTURE_PLAN.md](AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md) | **Inactive preserved material.** Historical staged AI architecture with exact authored provenance, bounded UI requests and future provider/debugger/solver gates. Feature/owner: inactive historical branch evidence. | `Existing API and recovered typed UI`; `fixed provider egress and approved spend`; `isolated judge and evaluation` |
-| [CODEX_PLAYBOOK.md](AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md) | **Inactive preserved material.** Historical corrected agent playbook recognizing implemented foundation and identifying SAI-011/provider ADR next steps. Feature/owner: inactive historical branch evidence. | `Historical PR #5 review`; `source status verification`; `provider threat model and approval` |
-| [IMPLEMENTATION_BACKLOG.md](AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md) | **Inactive preserved material.** Historical P0-P4 backlog with user value, source paths, dependencies, acceptance, cost and rollback. Feature/owner: inactive historical branch evidence. | `Original-code license decision`; `identity/judge production gates`; `provider entitlement and budget`; `held-out evaluation` |
-| [IMPLEMENTATION_PROGRESS.md](AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md) | **Inactive preserved material.** Historical SAI-011 change log, hosted evidence, test-selector regression and resume handoff. Feature/owner: inactive historical branch evidence. | `Source branch at b591db142d7b65c306769a59251ed4129f42118a`; `recorded CI at earlier 294c6a3`; `current recovery validation` |
-| [INDEX.md](AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md) | **Inactive preserved material.** Historical navigation for five SAI-011 research/backlog documents plus existing handbook. Feature/owner: inactive historical branch evidence. | `Source-branch docs tree`; `current docs/INDEX.md for live navigation` |
-| [PRIMARY_RESEARCH_REPOS.md](AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md) | **Inactive preserved material.** Historical exact-two-reference assessment of CodeSIM/MapCoder and phi-code, source modules, unsafe execution and acceptance gates. Feature/owner: inactive historical branch evidence. | `Recorded upstream SHAs/licenses`; `current provider/judge contracts`; `rights-approved held-out evaluation` |
-| [PROJECT_STATUS.md](AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md) | **Inactive preserved material.** Historical implementation ledger distinguishing merged SAI-010, branch-only SAI-011 and recorded tests. Feature/owner: inactive historical branch evidence. | `Historical SAI-010 and SAI-011 hosted runs`; `earlier local judge evidence`; `current root status ledger` |
-| [PUBLIC_REPOSITORIES_AND_RESOURCES.txt](AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | **Inactive preserved material.** Historical complete 20-repository inventory with refreshed November 16 verification note and adoption boundaries. Feature/owner: inactive historical branch evidence. | `Historical REPOSITORY_AUDIT.md and PRIMARY_RESEARCH_REPOS.md`; `source/data/model rights review` |
-| [REPOSITORY_AUDIT.md](AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md) | **Inactive preserved material.** Historical source-path audit of main 9952f8b and refreshed 20-reference default-head matrix. Feature/owner: inactive historical branch evidence. | `Recorded GitHub source API inspection`; `prior November 15 audit`; `current source and tests` |
+| File | Purpose / feature |
+| --- | --- |
+| [AI_ARCHITECTURE_PLAN.md](AnalyseFuture/historical-implementations/sai-011/docs/AI_ARCHITECTURE_PLAN.md) | **Inactive preserved material.** Historical staged AI architecture with exact authored provenance, bounded UI requests and future provider/debugger/solver gates. |
+| [CODEX_PLAYBOOK.md](AnalyseFuture/historical-implementations/sai-011/docs/CODEX_PLAYBOOK.md) | **Inactive preserved material.** Historical corrected agent playbook recognizing implemented foundation and identifying SAI-011/provider ADR next steps. |
+| [IMPLEMENTATION_BACKLOG.md](AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_BACKLOG.md) | **Inactive preserved material.** Historical P0-P4 backlog with user value, source paths, dependencies, acceptance, cost and rollback. |
+| [IMPLEMENTATION_PROGRESS.md](AnalyseFuture/historical-implementations/sai-011/docs/IMPLEMENTATION_PROGRESS.md) | **Inactive preserved material.** Historical SAI-011 change log, hosted evidence, test-selector regression and resume handoff. |
+| [INDEX.md](AnalyseFuture/historical-implementations/sai-011/docs/INDEX.md) | **Inactive preserved material.** Historical navigation for five SAI-011 research/backlog documents plus existing handbook. |
+| [PRIMARY_RESEARCH_REPOS.md](AnalyseFuture/historical-implementations/sai-011/docs/PRIMARY_RESEARCH_REPOS.md) | **Inactive preserved material.** Historical exact-two-reference assessment of CodeSIM/MapCoder and phi-code, source modules, unsafe execution and acceptance gates. |
+| [PROJECT_STATUS.md](AnalyseFuture/historical-implementations/sai-011/docs/PROJECT_STATUS.md) | **Inactive preserved material.** Historical implementation ledger distinguishing merged SAI-010, branch-only SAI-011 and recorded tests. |
+| [PUBLIC_REPOSITORIES_AND_RESOURCES.txt](AnalyseFuture/historical-implementations/sai-011/docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | **Inactive preserved material.** Historical complete 20-repository inventory with refreshed November 16 verification note and adoption boundaries. |
+| [REPOSITORY_AUDIT.md](AnalyseFuture/historical-implementations/sai-011/docs/REPOSITORY_AUDIT.md) | **Inactive preserved material.** Historical source-path audit of main 9952f8b and refreshed 20-reference default-head matrix. |
 
 </details>
 
@@ -1503,9 +1533,9 @@ Inactive branch-specific status, research, backlog and handoff prose retained wi
 
 Inactive original hint browser-spec snapshot preserved before relocation and additional cancellation regressions.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [hints.spec.ts](AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts) | **Inactive preserved material.** Inactive original SAI-011 tests/e2e/hints.spec.ts version; retained before feature recovery/import repair. Feature/owner: historical authenticated authored-hint UI evidence. | `../../apps/web/lib/hints`; `@playwright/test` |
+| File | Purpose / feature |
+| --- | --- |
+| [hints.spec.ts](AnalyseFuture/historical-implementations/sai-011/tests/e2e/hints.spec.ts) | **Inactive preserved material.** Inactive original SAI-011 tests/e2e/hints.spec.ts version; retained before feature recovery/import repair. |
 
 </details>
 
@@ -1514,11 +1544,11 @@ Inactive original hint browser-spec snapshot preserved before relocation and add
 
 Original-to-current path mappings, consolidation decisions and preservation summaries for structural changes.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [CONSOLIDATION_REPORT.txt](AnalyseFuture/migration-records/CONSOLIDATION_REPORT.txt) | SOLVER AI — CONSOLIDATION DECISIONS AND IMPLEMENTATION Feature/owner: recovery evidence and developer continuity. | — |
-| [MIGRATION_SUMMARY.txt](AnalyseFuture/migration-records/MIGRATION_SUMMARY.txt) | SOLVER AI — MIGRATION SUMMARY Feature/owner: recovery evidence and developer continuity. | — |
-| [ORIGINAL_TO_NEW_PATH_MAPPING.txt](AnalyseFuture/migration-records/ORIGINAL_TO_NEW_PATH_MAPPING.txt) | ORIGINAL TO NEW PATH MAPPING Feature/owner: recovery evidence and developer continuity. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [CONSOLIDATION_REPORT.txt](AnalyseFuture/migration-records/CONSOLIDATION_REPORT.txt) | SOLVER AI — CONSOLIDATION DECISIONS AND IMPLEMENTATION |
+| [MIGRATION_SUMMARY.txt](AnalyseFuture/migration-records/MIGRATION_SUMMARY.txt) | SOLVER AI — MIGRATION SUMMARY |
+| [ORIGINAL_TO_NEW_PATH_MAPPING.txt](AnalyseFuture/migration-records/ORIGINAL_TO_NEW_PATH_MAPPING.txt) | ORIGINAL TO NEW PATH MAPPING |
 
 </details>
 
@@ -1527,10 +1557,10 @@ Original-to-current path mappings, consolidation decisions and preservation summ
 
 Detailed future product vision and prioritized technical debt, with feasibility and delivery limits separated from implementation claims.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [PROJECT_VISION_AND_FUTURE_ROADMAP.txt](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | SOLVER AI Feature/owner: recovery evidence and developer continuity. | — |
-| [TECHNICAL_DEBT.txt](AnalyseFuture/planning/TECHNICAL_DEBT.txt) | SOLVER AI — TECHNICAL DEBT AND RELEASE GATES Feature/owner: recovery evidence and developer continuity. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [PROJECT_VISION_AND_FUTURE_ROADMAP.txt](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | SOLVER AI |
+| [TECHNICAL_DEBT.txt](AnalyseFuture/planning/TECHNICAL_DEBT.txt) | SOLVER AI — TECHNICAL DEBT AND RELEASE GATES |
 
 </details>
 
@@ -1539,20 +1569,20 @@ Detailed future product vision and prioritized technical debt, with feasibility 
 
 Machine-readable and plain-text file, feature, dependency, baseline and preservation ledgers.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [ARCHIVED_FILES_MANIFEST.txt](AnalyseFuture/repository-inventory/ARCHIVED_FILES_MANIFEST.txt) | ARCHIVED FILES MANIFEST Feature/owner: recovery evidence and developer continuity. | — |
-| [COMPLETE_FILE_INVENTORY.txt](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt) | Complete generated per-file responsibility, dependency, status, risk and hash ledger. Feature/owner: complete tracked-file accountability. | `scripts/repository_inventory.py`; `repository-inventory/reviews` |
-| [DEPENDENCY_MAP.txt](AnalyseFuture/repository-inventory/DEPENDENCY_MAP.txt) | SOLVER AI — RUNTIME AND DEPENDENCY MAP Feature/owner: recovery evidence and developer continuity. | — |
-| [DUPLICATE_ANALYSIS.txt](AnalyseFuture/repository-inventory/DUPLICATE_ANALYSIS.txt) | SOLVER AI — DUPLICATE AND CONSOLIDATION ANALYSIS Feature/owner: recovery evidence and developer continuity. | — |
-| [FEATURE_INVENTORY.txt](AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt) | SOLVER AI — FEATURE INVENTORY Feature/owner: recovery evidence and developer continuity. | — |
-| [baseline.json](AnalyseFuture/repository-inventory/baseline.json) | Structured baseline evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [current-files.json](AnalyseFuture/repository-inventory/current-files.json) | Machine-readable complete current tracked-file ledger; self hashes omitted to avoid recursion. Feature/owner: complete tracked-file accountability. | `scripts/verification/repository_inventory.py` |
-| [features.json](AnalyseFuture/repository-inventory/features.json) | Structured features evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [functional-baseline.json](AnalyseFuture/repository-inventory/functional-baseline.json) | Immutable293-path published baseline before complete functional reorganization. Feature/owner: functional organization and explicit ownership. | — |
-| [functional-moves.json](AnalyseFuture/repository-inventory/functional-moves.json) | Exact68 current functional moves and preserved runtime-boundary decisions. Feature/owner: functional organization and explicit ownership. | — |
-| [historical-branches.json](AnalyseFuture/repository-inventory/historical-branches.json) | Structured historical-branches evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [moves.json](AnalyseFuture/repository-inventory/moves.json) | Structured moves evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
+| File | Purpose / feature |
+| --- | --- |
+| [ARCHIVED_FILES_MANIFEST.txt](AnalyseFuture/repository-inventory/ARCHIVED_FILES_MANIFEST.txt) | ARCHIVED FILES MANIFEST |
+| [COMPLETE_FILE_INVENTORY.txt](AnalyseFuture/repository-inventory/COMPLETE_FILE_INVENTORY.txt) | Complete generated per-file responsibility, dependency, status, risk and hash ledger. |
+| [DEPENDENCY_MAP.txt](AnalyseFuture/repository-inventory/DEPENDENCY_MAP.txt) | SOLVER AI — RUNTIME AND DEPENDENCY MAP |
+| [DUPLICATE_ANALYSIS.txt](AnalyseFuture/repository-inventory/DUPLICATE_ANALYSIS.txt) | SOLVER AI — DUPLICATE AND CONSOLIDATION ANALYSIS |
+| [FEATURE_INVENTORY.txt](AnalyseFuture/repository-inventory/FEATURE_INVENTORY.txt) | SOLVER AI — FEATURE INVENTORY |
+| [baseline.json](AnalyseFuture/repository-inventory/baseline.json) | Structured baseline evidence backing the complete recovery reports; provenance retained. |
+| [current-files.json](AnalyseFuture/repository-inventory/current-files.json) | Machine-readable complete current tracked-file ledger; self hashes omitted to avoid recursion. |
+| [features.json](AnalyseFuture/repository-inventory/features.json) | Structured features evidence backing the complete recovery reports; provenance retained. |
+| [functional-baseline.json](AnalyseFuture/repository-inventory/functional-baseline.json) | Immutable293-path published baseline before complete functional reorganization. |
+| [functional-moves.json](AnalyseFuture/repository-inventory/functional-moves.json) | Exact68 current functional moves and preserved runtime-boundary decisions. |
+| [historical-branches.json](AnalyseFuture/repository-inventory/historical-branches.json) | Structured historical-branches evidence backing the complete recovery reports; provenance retained. |
+| [moves.json](AnalyseFuture/repository-inventory/moves.json) | Structured moves evidence backing the complete recovery reports; provenance retained. |
 
 </details>
 
@@ -1561,16 +1591,16 @@ Machine-readable and plain-text file, feature, dependency, baseline and preserva
 
 Frozen per-scope static source assessments whose original findings remain historical evidence rather than fresh runtime claims.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [api.json](AnalyseFuture/repository-inventory/reviews/api.json) | Structured api evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [archive.json](AnalyseFuture/repository-inventory/reviews/archive.json) | Structured archive evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [docs.json](AnalyseFuture/repository-inventory/reviews/docs.json) | Structured docs evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [history.json](AnalyseFuture/repository-inventory/reviews/history.json) | Structured history evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [judge.json](AnalyseFuture/repository-inventory/reviews/judge.json) | Structured judge evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [recovered-web.json](AnalyseFuture/repository-inventory/reviews/recovered-web.json) | Structured recovered-web evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [support.json](AnalyseFuture/repository-inventory/reviews/support.json) | Structured support evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
-| [web.json](AnalyseFuture/repository-inventory/reviews/web.json) | Structured web evidence backing the complete recovery reports; provenance retained. Feature/owner: auditable repository inventory. | `Git object/index metadata and source-review records` |
+| File | Purpose / feature |
+| --- | --- |
+| [api.json](AnalyseFuture/repository-inventory/reviews/api.json) | Structured api evidence backing the complete recovery reports; provenance retained. |
+| [archive.json](AnalyseFuture/repository-inventory/reviews/archive.json) | Structured archive evidence backing the complete recovery reports; provenance retained. |
+| [docs.json](AnalyseFuture/repository-inventory/reviews/docs.json) | Structured docs evidence backing the complete recovery reports; provenance retained. |
+| [history.json](AnalyseFuture/repository-inventory/reviews/history.json) | Structured history evidence backing the complete recovery reports; provenance retained. |
+| [judge.json](AnalyseFuture/repository-inventory/reviews/judge.json) | Structured judge evidence backing the complete recovery reports; provenance retained. |
+| [recovered-web.json](AnalyseFuture/repository-inventory/reviews/recovered-web.json) | Structured recovered-web evidence backing the complete recovery reports; provenance retained. |
+| [support.json](AnalyseFuture/repository-inventory/reviews/support.json) | Structured support evidence backing the complete recovery reports; provenance retained. |
+| [web.json](AnalyseFuture/repository-inventory/reviews/web.json) | Structured web evidence backing the complete recovery reports; provenance retained. |
 
 </details>
 
@@ -1579,9 +1609,9 @@ Frozen per-scope static source assessments whose original findings remain histor
 
 Named-revision validation records distinguishing successful, failed, expected-failure and unexecuted checks.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [TEST_AND_VALIDATION_REPORT.txt](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt) | SOLVER AI — CURRENT VALIDATION RECORD Feature/owner: recovery evidence and developer continuity. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [TEST_AND_VALIDATION_REPORT.txt](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt) | SOLVER AI — CURRENT VALIDATION RECORD |
 
 </details>
 
@@ -1590,14 +1620,14 @@ Named-revision validation records distinguishing successful, failed, expected-fa
 
 Next.js and TypeScript practice interface, account authority, browser feature modules and web-owned build tooling.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [AGENTS.md](apps/web/AGENTS.md) | Installed Next.js-version development instructions Feature/owner: developer-tooling. | — |
-| [Dockerfile](apps/web/Dockerfile) | Multi-stage Node image: install/build standalone then nonroot persistent-auth runtime Feature/owner: deployment. | — |
-| [next-env.d.ts](apps/web/next-env.d.ts) | Framework-generated type references for Next routing Feature/owner: developer-tooling. | `./.next/types/root-params.d.ts`; `./.next/types/routes.d.ts` |
-| [next.config.ts](apps/web/next.config.ts) | Standalone packaging, private/archive tracing exclusion and server-only API rewrite Feature/owner: deployment. | `next`; `node:path` |
-| [package.json](apps/web/package.json) | Web workspace dependencies and dev/build/typecheck scripts Feature/owner: dependency-management. | — |
-| [tsconfig.json](apps/web/tsconfig.json) | Strict app TypeScript compilation and @/ root alias Feature/owner: developer-tooling. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [AGENTS.md](apps/web/AGENTS.md) | Installed Next.js-version development instructions |
+| [Dockerfile](apps/web/Dockerfile) | Multi-stage Node image: install/build standalone then nonroot persistent-auth runtime |
+| [next-env.d.ts](apps/web/next-env.d.ts) | Framework-generated type references for Next routing |
+| [next.config.ts](apps/web/next.config.ts) | Standalone packaging, private/archive tracing exclusion and server-only API rewrite |
+| [package.json](apps/web/package.json) | Web workspace dependencies and dev/build/typecheck scripts |
+| [tsconfig.json](apps/web/tsconfig.json) | Strict app TypeScript compilation and @/ root alias |
 
 </details>
 
@@ -1606,12 +1636,12 @@ Next.js and TypeScript practice interface, account authority, browser feature mo
 
 Next.js App Router entry points, root layout and global styles that compose the feature modules.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [globals.css](apps/web/app/globals.css) | Shared visual tokens, layout, catalog/editor/account/history and responsive accessibility rules Feature/owner: shared-ui. | — |
-| [layout.tsx](apps/web/app/layout.tsx) | Root HTML/metadata/global stylesheet and shared application shell Feature/owner: shared-ui. | `./globals.css`; `@/components/shell`; `next` |
-| [not-found.tsx](apps/web/app/not-found.tsx) | Framework missing-route UI and return link Feature/owner: shared-ui. | `next/link` |
-| [page.tsx](apps/web/app/page.tsx) | Catalog home route entrypoint Feature/owner: practice. | `@/features/practice/catalog` |
+| File | Purpose / feature |
+| --- | --- |
+| [globals.css](apps/web/app/globals.css) | Shared visual tokens, layout, catalog/editor/account/history and responsive accessibility rules |
+| [layout.tsx](apps/web/app/layout.tsx) | Root HTML/metadata/global stylesheet and shared application shell |
+| [not-found.tsx](apps/web/app/not-found.tsx) | Framework missing-route UI and return link |
+| [page.tsx](apps/web/app/page.tsx) | Catalog home route entrypoint |
 
 </details>
 
@@ -1620,9 +1650,9 @@ Next.js App Router entry points, root layout and global styles that compose the 
 
 Account route that passes a constrained continuation path to the sign-in and registration interface.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [page.tsx](apps/web/app/account/page.tsx) | Account route resolving optional next query into account form Feature/owner: accounts. | `@/features/accounts/account-form` |
+| File | Purpose / feature |
+| --- | --- |
+| [page.tsx](apps/web/app/account/page.tsx) | Account route resolving optional next query into account form |
 
 </details>
 
@@ -1631,9 +1661,9 @@ Account route that passes a constrained continuation path to the sign-in and reg
 
 Node-runtime catch-all Better Auth adapter that initializes supported migrations before handling authentication requests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [route.ts](apps/web/app/api/auth/%5B...all%5D/route.ts) | Node-runtime Better Auth HTTP entrypoint with lazy official migrations Feature/owner: accounts. | `@/features/accounts/server`; `better-auth/next-js` |
+| File | Purpose / feature |
+| --- | --- |
+| [route.ts](apps/web/app/api/auth/%5B...all%5D/route.ts) | Node-runtime Better Auth HTTP entrypoint with lazy official migrations |
 
 </details>
 
@@ -1642,9 +1672,9 @@ Node-runtime catch-all Better Auth adapter that initializes supported migrations
 
 Dynamic problem route that resolves the public slug and mounts the practice workspace.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [page.tsx](apps/web/app/problems/%5Bslug%5D/page.tsx) | Async dynamic problem route passes slug into workspace Feature/owner: practice. | `@/features/practice/workspace` |
+| File | Purpose / feature |
+| --- | --- |
+| [page.tsx](apps/web/app/problems/%5Bslug%5D/page.tsx) | Async dynamic problem route passes slug into workspace |
 
 </details>
 
@@ -1653,9 +1683,9 @@ Dynamic problem route that resolves the public slug and mounts the practice work
 
 Route entry point for the authenticated learner submission-history interface.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [page.tsx](apps/web/app/submissions/page.tsx) | Submission-history route entrypoint Feature/owner: submissions. | `@/features/submissions/submission-history` |
+| File | Purpose / feature |
+| --- | --- |
+| [page.tsx](apps/web/app/submissions/page.tsx) | Submission-history route entrypoint |
 
 </details>
 
@@ -1664,10 +1694,10 @@ Route entry point for the authenticated learner submission-history interface.
 
 Shared navigation shell and SVG icon components reused by the application features.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [icons.tsx](apps/web/components/icons.tsx) | Typed original SVG icon component shared by feature interfaces Feature/owner: shared-ui. | `react` |
-| [shell.tsx](apps/web/components/shell.tsx) | Navigation, session summary, signout and shared page framing Feature/owner: shared-ui. | `./icons`; `@/features/accounts/client`; `next/link`; `next/navigation`; `react` |
+| File | Purpose / feature |
+| --- | --- |
+| [icons.tsx](apps/web/components/icons.tsx) | Typed original SVG icon component shared by feature interfaces |
+| [shell.tsx](apps/web/components/shell.tsx) | Navigation, session summary, signout and shared page framing |
 
 </details>
 
@@ -1676,11 +1706,11 @@ Shared navigation shell and SVG icon components reused by the application featur
 
 Account form, browser session client and server-side Better Auth authority with persistent local state.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [account-form.tsx](apps/web/features/accounts/account-form.tsx) | Signup/signin/signout form and same-origin redirect validation Feature/owner: accounts. | `@/features/accounts/client`; `next/link`; `next/navigation`; `react` |
-| [client.ts](apps/web/features/accounts/client.ts) | Better Auth React/JWT client singleton Feature/owner: accounts. | `better-auth/client/plugins`; `better-auth/react` |
-| [server.ts](apps/web/features/accounts/server.ts) | Single session authority, SQLite/JWKS, persisted secret, origin policy and lazy migrations Feature/owner: accounts. | `better-auth`; `better-auth/db/migration`; `better-auth/plugins`; `node:crypto`; `node:fs`; `node:path`; `node:sqlite` |
+| File | Purpose / feature |
+| --- | --- |
+| [account-form.tsx](apps/web/features/accounts/account-form.tsx) | Signup/signin/signout form and same-origin redirect validation |
+| [client.ts](apps/web/features/accounts/client.ts) | Better Auth React/JWT client singleton |
+| [server.ts](apps/web/features/accounts/server.ts) | Single session authority, SQLite/JWKS, persisted secret, origin policy and lazy migrations |
 
 </details>
 
@@ -1689,10 +1719,10 @@ Account form, browser session client and server-side Better Auth authority with 
 
 Authenticated authored-hint requests and UI with bounded contracts, provenance validation, cancellation and safe errors.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [account-hint.tsx](apps/web/features/hints/account-hint.tsx) | Optional account-owned hint UI alongside public ladder: signin affordance, loading/error/retry/cancel, contextual abort and explicit authored/mock/model provenance rendering. Feature/owner: authenticated authored hint frontend. | `@/features/accounts/client`; `@/features/hints/api`; `next/link`; `react` |
-| [api.ts](apps/web/features/hints/api.ts) | Authenticated authored-hint API adapter: strict bounded Zod request/response, matched slug/level and provenance, short-lived Better Auth JWT, timeout/cancel/retry-safe errors. Feature/owner: authenticated authored hint frontend. | `@/features/accounts/client`; `zod` |
+| File | Purpose / feature |
+| --- | --- |
+| [account-hint.tsx](apps/web/features/hints/account-hint.tsx) | Optional account-owned hint UI alongside public ladder: signin affordance, loading/error/retry/cancel, contextual abort and explicit authored/mock/model provenance rendering. |
+| [api.ts](apps/web/features/hints/api.ts) | Authenticated authored-hint API adapter: strict bounded Zod request/response, matched slug/level and provenance, short-lived Better Auth JWT, timeout/cancel/retry-safe errors. |
 
 </details>
 
@@ -1701,12 +1731,12 @@ Authenticated authored-hint requests and UI with bounded contracts, provenance v
 
 Problem catalog, public response validation, practice workspace and locally persisted Monaco or textarea editing.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [api.ts](apps/web/features/practice/api.ts) | Bounded Zod catalog/detail contracts, 10s request timeout and cancellation-safe errors Feature/owner: practice. | `zod` |
-| [catalog.tsx](apps/web/features/practice/catalog.tsx) | Public catalog retrieval and combined client search/topic/difficulty filtering Feature/owner: practice. | `@/components/icons`; `@/features/practice/api`; `next/link`; `react` |
-| [code-pane.tsx](apps/web/features/practice/code-pane.tsx) | Local Monaco load/retry and textarea fallback; per-problem/language draft persistence Feature/owner: practice. | `@monaco-editor/react`; `monaco-editor`; `react` |
-| [workspace.tsx](apps/web/features/practice/workspace.tsx) | Public statement/examples/hint ladder/editor composition and submission controls Feature/owner: practice. | `./code-pane`; `@/components/icons`; `@/features/hints/account-hint`; `@/features/practice/api`; `@/features/submissions/submission-panel`; `next/dynamic`; `next/link`; `react` |
+| File | Purpose / feature |
+| --- | --- |
+| [api.ts](apps/web/features/practice/api.ts) | Bounded Zod catalog/detail contracts, 10s request timeout and cancellation-safe errors |
+| [catalog.tsx](apps/web/features/practice/catalog.tsx) | Public catalog retrieval and combined client search/topic/difficulty filtering |
+| [code-pane.tsx](apps/web/features/practice/code-pane.tsx) | Local Monaco load/retry and textarea fallback; per-problem/language draft persistence |
+| [workspace.tsx](apps/web/features/practice/workspace.tsx) | Public statement/examples/hint ladder/editor composition and submission controls |
 
 </details>
 
@@ -1715,11 +1745,11 @@ Problem catalog, public response validation, practice workspace and locally pers
 
 Explicit run and submit actions, bounded API requests, capability checks and private saved-result history.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [api.ts](apps/web/features/submissions/api.ts) | Typed capabilities and authenticated submission API with schemas and bounded requests Feature/owner: submissions. | `@/features/accounts/client`; `zod` |
-| [submission-history.tsx](apps/web/features/submissions/submission-history.tsx) | Owned, paginated history and source/result detail with abortable requests Feature/owner: submissions. | `./submission-panel`; `@/features/accounts/client`; `@/features/submissions/api`; `next/link`; `react` |
-| [submission-panel.tsx](apps/web/features/submissions/submission-panel.tsx) | Capability checks, explicit run/submit, idempotency, bounded polling and reusable result rendering Feature/owner: submissions. | `@/components/icons`; `@/features/accounts/client`; `@/features/submissions/api`; `next/link`; `react` |
+| File | Purpose / feature |
+| --- | --- |
+| [api.ts](apps/web/features/submissions/api.ts) | Typed capabilities and authenticated submission API with schemas and bounded requests |
+| [submission-history.tsx](apps/web/features/submissions/submission-history.tsx) | Owned, paginated history and source/result detail with abortable requests |
+| [submission-panel.tsx](apps/web/features/submissions/submission-panel.tsx) | Capability checks, explicit run/submit, idempotency, bounded polling and reusable result rendering |
 
 </details>
 
@@ -1728,10 +1758,10 @@ Explicit run and submit actions, bounded API requests, capability checks and pri
 
 Web-owned official auth migration and locally bundled Monaco asset preparation commands.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [auth-migrate.mjs](apps/web/scripts/auth-migrate.mjs) | Idempotent official Better Auth schema migration preserving web cwd Feature/owner: accounts. | `../features/accounts/server.ts`; `better-auth/db/migration`; `node:url` |
-| [copy-monaco.mjs](apps/web/scripts/copy-monaco.mjs) | Local editor/worker bundle and notices with enforced patched sanitizer substitution Feature/owner: practice. | `esbuild`; `monaco-editor`; `node:fs/promises`; `node:module`; `node:path`; `node:url` |
+| File | Purpose / feature |
+| --- | --- |
+| [auth-migrate.mjs](apps/web/scripts/auth-migrate.mjs) | Idempotent official Better Auth schema migration preserving web cwd |
+| [copy-monaco.mjs](apps/web/scripts/copy-monaco.mjs) | Local editor/worker bundle and notices with enforced patched sanitizer substitution |
 
 </details>
 
@@ -1740,9 +1770,9 @@ Web-owned official auth migration and locally bundled Monaco asset preparation c
 
 Real Better Auth integration checks using isolated temporary databases and keys.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [auth.test.mjs](apps/web/tests/auth.test.mjs) | 7 real-library auth tests with isolated temporary state and repeated migrations Feature/owner: accounts. | `../features/accounts/server.ts`; `better-auth/db/migration`; `node:assert/strict`; `node:crypto`; `node:fs`; `node:os`; `node:path`; `node:test` |
+| File | Purpose / feature |
+| --- | --- |
+| [auth.test.mjs](apps/web/tests/auth.test.mjs) | 7 real-library auth tests with isolated temporary state and repeated migrations |
 
 </details>
 
@@ -1751,9 +1781,9 @@ Real Better Auth integration checks using isolated temporary databases and keys.
 
 Active product and engineering documentation indexed by functional responsibility.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [INDEX.md](docs/INDEX.md) | Navigation and truth convention for project documents. Feature/owner: specifications, decisions and development guidance. | `docs/START_HERE.md`; `docs/PROJECT_STATUS.md`; `README.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [INDEX.md](docs/INDEX.md) | Navigation and truth convention for project documents. |
 
 </details>
 
@@ -1762,10 +1792,10 @@ Active product and engineering documentation indexed by functional responsibilit
 
 Current and proposed service boundaries, repository organization and recorded architecture decisions.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) | Current local boundaries and proposed larger architecture. Feature/owner: specifications, decisions and development guidance. | `docs/adr/0001-practice-foundation.md`; `docs/adr/0002-authenticated-isolated-submissions.md`; `docs/REPOSITORY_STRUCTURE.md` |
-| [REPOSITORY_STRUCTURE.md](docs/architecture/REPOSITORY_STRUCTURE.md) | Current tree, preservation rationale, hashes, boundaries and recovery limitations. Feature/owner: specifications, decisions and development guidance. | `AnalyseFuture/manifest.json`; `scripts/verify_preserved_archives.py`; `docs/PROJECT_STATUS.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) | Current local boundaries and proposed larger architecture. |
+| [REPOSITORY_STRUCTURE.md](docs/architecture/REPOSITORY_STRUCTURE.md) | Current tree, preservation rationale, hashes, boundaries and recovery limitations. |
 
 </details>
 
@@ -1774,10 +1804,10 @@ Current and proposed service boundaries, repository organization and recorded ar
 
 Dated decisions documenting the practice foundation and authenticated isolated judging boundaries.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [0001-practice-foundation.md](docs/architecture/adr/0001-practice-foundation.md) | Historical first-increment decision and exact initial dependency choices. Feature/owner: specifications, decisions and development guidance. | `package-lock.json`; `services/api/uv.lock`; `docs/adr/0002-authenticated-isolated-submissions.md` |
-| [0002-authenticated-isolated-submissions.md](docs/architecture/adr/0002-authenticated-isolated-submissions.md) | Local identity/ownership/gVisor decisions, alternatives and limits. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_STATUS.md`; `services/judge/UPSTREAM_REVIEW.md`; `docs/JUDGE_SECURITY.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [0001-practice-foundation.md](docs/architecture/adr/0001-practice-foundation.md) | Historical first-increment decision and exact initial dependency choices. |
+| [0002-authenticated-isolated-submissions.md](docs/architecture/adr/0002-authenticated-isolated-submissions.md) | Local identity/ownership/gVisor decisions, alternatives and limits. |
 
 </details>
 
@@ -1786,13 +1816,13 @@ Dated decisions documenting the practice foundation and authenticated isolated j
 
 Contributor workflow, scoped implementation tasks and coding-agent practices.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [AI_CONTRIBUTION_WORKFLOW.md](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md) | Implementation assignment, exact-head review, validation evidence and authorized merge policy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [CODEX_PLAYBOOK.md](docs/engineering/CODEX_PLAYBOOK.md) | Agent scope, verification ladder and implementation discipline. Feature/owner: engineering workflow and contribution guidance. | `AGENTS.md`; `docs/PROJECT_STATUS.md`; `docs/OPEN_SOURCE_STRATEGY.md` |
-| [CONTRIBUTOR_TASKS.md](docs/engineering/CONTRIBUTOR_TASKS.md) | Suggested issue backlog, initial sequencing and acceptance template. Feature/owner: engineering workflow and contribution guidance. | `docs/PROJECT_STATUS.md`; `docs/OPEN_DECISIONS.md`; `docs/ROADMAP.md` |
-| [PR_EVIDENCE.md](docs/engineering/PR_EVIDENCE.md) | Version1 field contract, size/path/head rules, trust boundaries and metadata limitations. Feature/owner: PR evidence and reviewed contribution workflow. | — |
-| [handoff-directories.json](docs/engineering/handoff-directories.json) | Concrete functional responsibilities for every tracked ancestor folder, including inactive archive and historical collections. Feature/owner: project continuity and implementation handoff. | `scripts/verification/project_handoff.py` |
+| File | Purpose / feature |
+| --- | --- |
+| [AI_CONTRIBUTION_WORKFLOW.md](docs/engineering/AI_CONTRIBUTION_WORKFLOW.md) | Implementation assignment, exact-head review, validation evidence and authorized merge policy. |
+| [CODEX_PLAYBOOK.md](docs/engineering/CODEX_PLAYBOOK.md) | Agent scope, verification ladder and implementation discipline. |
+| [CONTRIBUTOR_TASKS.md](docs/engineering/CONTRIBUTOR_TASKS.md) | Suggested issue backlog, initial sequencing and acceptance template. |
+| [PR_EVIDENCE.md](docs/engineering/PR_EVIDENCE.md) | Version1 field contract, size/path/head rules, trust boundaries and metadata limitations. |
+| [handoff-directories.json](docs/engineering/handoff-directories.json) | Concrete functional responsibilities for every tracked ancestor folder, including inactive archive and historical collections. |
 
 </details>
 
@@ -1801,148 +1831,162 @@ Contributor workflow, scoped implementation tasks and coding-agent practices.
 
 Canonical ordered task catalogue, generated issue cards and actual publication receipts.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [README.md](docs/engineering/backlog/README.md) | Generated execution-order index and publication instructions for contributor handoff. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [issues.json](docs/engineering/backlog/issues.json) | Canonical127-task future implementation plan with topological order and feature ownership. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [publication.json](docs/engineering/backlog/publication.json) | Actual confirmed remote issue links and publication/access status. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [README.md](docs/engineering/backlog/README.md) | Generated execution-order index and publication instructions for contributor handoff. |
+| [issues.json](docs/engineering/backlog/issues.json) | Canonical127-task future implementation plan with topological order and feature ownership. |
+| [publication.json](docs/engineering/backlog/publication.json) | Actual confirmed remote issue links and publication/access status. |
 
 </details>
 
 <details>
-<summary>docs/engineering/backlog/issues/ — 127 files</summary>
+<summary>docs/engineering/backlog/issues/ — 141 files</summary>
 
 One generated Markdown card per stable backlog task with prerequisites, ownership paths and acceptance criteria.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [SAI-B001.md](docs/engineering/backlog/issues/SAI-B001.md) | Completed-local B001 task and evidence; preserved as prerequisite history. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B002.md](docs/engineering/backlog/issues/SAI-B002.md) | Planned SAI-B002: Record owner-approved original-code licensing and inbound contribution rights; current owning area governance. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B003.md](docs/engineering/backlog/issues/SAI-B003.md) | Planned SAI-B003: Approve a small pilot charter and data lifecycle contract; current owning area product. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B004.md](docs/engineering/backlog/issues/SAI-B004.md) | Planned SAI-B004: Pin CI actions to immutable reviewed commits; current owning area supply-chain. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B005.md](docs/engineering/backlog/issues/SAI-B005.md) | Planned SAI-B005: Pin web and API container bases and align intended Python patch versions; current owning area supply-chain. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B006.md](docs/engineering/backlog/issues/SAI-B006.md) | Planned SAI-B006: Reject plaintext external identity and worker transport configuration; current owning area deployment-security. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B007.md](docs/engineering/backlog/issues/SAI-B007.md) | Planned SAI-B007: Add a total JWKS fetch deadline with real transport fixtures; current owning area identity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B008.md](docs/engineering/backlog/issues/SAI-B008.md) | Planned SAI-B008: Describe protected endpoints with an accurate OpenAPI bearer scheme; current owning area api-contract. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B009.md](docs/engineering/backlog/issues/SAI-B009.md) | Planned SAI-B009: Validate production worker credential strength before enabling internal routes; current owning area worker-auth. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B010.md](docs/engineering/backlog/issues/SAI-B010.md) | Planned SAI-B010: Support bounded worker bearer rotation without an outage; current owning area worker-auth. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B011.md](docs/engineering/backlog/issues/SAI-B011.md) | Planned SAI-B011: Introduce an explicit trusted-ingress identity throttle policy; current owning area identity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B012.md](docs/engineering/backlog/issues/SAI-B012.md) | Planned SAI-B012: Create a consistent private backup and restore procedure for both stores; current owning area storage-operations. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B013.md](docs/engineering/backlog/issues/SAI-B013.md) | Planned SAI-B013: Introduce versioned transactional migrations for the submission database; current owning area storage. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B014.md](docs/engineering/backlog/issues/SAI-B014.md) | Planned SAI-B014: Add a testable email-verification delivery flow for pilot accounts; current owning area identity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B015.md](docs/engineering/backlog/issues/SAI-B015.md) | Planned SAI-B015: Implement password recovery with bounded single-use reset links; current owning area identity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B016.md](docs/engineering/backlog/issues/SAI-B016.md) | Planned SAI-B016: Expose owned session listing and revoke-other-sessions controls; current owning area identity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B017.md](docs/engineering/backlog/issues/SAI-B017.md) | Planned SAI-B017: Record privacy-safe account security events; current owning area identity-observability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B018.md](docs/engineering/backlog/issues/SAI-B018.md) | Planned SAI-B018: Implement deliberate account deletion across auth and owned submission state; current owning area privacy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B019.md](docs/engineering/backlog/issues/SAI-B019.md) | Planned SAI-B019: Bound general API admission and concurrent slow requests; current owning area ingress-security. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B020.md](docs/engineering/backlog/issues/SAI-B020.md) | Planned SAI-B020: Add structured redacted request and failure logs; current owning area operations. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B021.md](docs/engineering/backlog/issues/SAI-B021.md) | Planned SAI-B021: Expose private bounded operational readiness and queue metrics; current owning area operations. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B022.md](docs/engineering/backlog/issues/SAI-B022.md) | Planned SAI-B022: Apply retention to terminal submission source with a dry-run purge; current owning area privacy-storage. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B023.md](docs/engineering/backlog/issues/SAI-B023.md) | Planned SAI-B023: Enforce cumulative owned-source storage budgets at submission admission; current owning area storage-abuse. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B024.md](docs/engineering/backlog/issues/SAI-B024.md) | Planned SAI-B024: Avoid loading private source for submission summary pages; current owning area storage-performance. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B025.md](docs/engineering/backlog/issues/SAI-B025.md) | Planned SAI-B025: Export an authenticated user-owned submission history bundle; current owning area privacy-product. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B026.md](docs/engineering/backlog/issues/SAI-B026.md) | Planned SAI-B026: Extend problem provenance with explicit permitted-use metadata; current owning area content. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B027.md](docs/engineering/backlog/issues/SAI-B027.md) | Planned SAI-B027: Version problem and grader identity on every new submission; current owning area content-contract. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B028.md](docs/engineering/backlog/issues/SAI-B028.md) | Planned SAI-B028: Detect public-sample drift between catalog and judge deployments; current owning area content-quality. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B029.md](docs/engineering/backlog/issues/SAI-B029.md) | Planned SAI-B029: Validate trusted problem authoring inputs before catalog publication; current owning area content-tooling. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B030.md](docs/engineering/backlog/issues/SAI-B030.md) | Planned SAI-B030: Add one original prefix-sum range-query teaching exercise; current owning area content. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B031.md](docs/engineering/backlog/issues/SAI-B031.md) | Planned SAI-B031: Use bounded server-side pagination for the expanding problem catalog; current owning area catalog. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B032.md](docs/engineering/backlog/issues/SAI-B032.md) | Planned SAI-B032: Make catalog filters and page position shareable through the URL; current owning area catalog-ux. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B033.md](docs/engineering/backlog/issues/SAI-B033.md) | Planned SAI-B033: Add explicit local draft export and bounded import; current owning area editor. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B034.md](docs/engineering/backlog/issues/SAI-B034.md) | Planned SAI-B034: Offer explicit draft ownership and clear-on-shared-device controls; current owning area editor-privacy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B035.md](docs/engineering/backlog/issues/SAI-B035.md) | Planned SAI-B035: Detect cross-tab draft conflicts before overwriting newer code; current owning area editor-reliability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B036.md](docs/engineering/backlog/issues/SAI-B036.md) | Planned SAI-B036: Add persistent editor display and accessibility preferences; current owning area editor-ux. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B037.md](docs/engineering/backlog/issues/SAI-B037.md) | Planned SAI-B037: Complete keyboard navigation for the practice and submission workflow; current owning area accessibility. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B038.md](docs/engineering/backlog/issues/SAI-B038.md) | Planned SAI-B038: Improve screen-reader announcements and focus for asynchronous results; current owning area accessibility. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B039.md](docs/engineering/backlog/issues/SAI-B039.md) | Planned SAI-B039: Repair contrast, reduced-motion and zoom reflow gaps; current owning area accessibility. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B040.md](docs/engineering/backlog/issues/SAI-B040.md) | Planned SAI-B040: Add a focused automated accessibility regression gate; current owning area accessibility-quality. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B041.md](docs/engineering/backlog/issues/SAI-B041.md) | Planned SAI-B041: Record the single-provider hint pilot activation decision; current owning area AI activation governance. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B042.md](docs/engineering/backlog/issues/SAI-B042.md) | Planned SAI-B042: Bound and fingerprint the existing public-only hint context; current owning area Safe model context. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B043.md](docs/engineering/backlog/issues/SAI-B043.md) | Planned SAI-B043: Validate trusted provider destinations and secret configuration; current owning area Provider configuration. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B044.md](docs/engineering/backlog/issues/SAI-B044.md) | Planned SAI-B044: Define an internal generation result and usage contract; current owning area Provider-neutral contracts. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B045.md](docs/engineering/backlog/issues/SAI-B045.md) | Planned SAI-B045: Version bounded hint prompts and spoiler policies; current owning area Tutoring prompts. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B046.md](docs/engineering/backlog/issues/SAI-B046.md) | Planned SAI-B046: Reject malformed model hints before constructing learner responses; current owning area Model output contracts. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B047.md](docs/engineering/backlog/issues/SAI-B047.md) | Planned SAI-B047: Add deterministic provider transport fixtures without external inference; current owning area Provider adapter verification. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B048.md](docs/engineering/backlog/issues/SAI-B048.md) | Planned SAI-B048: Implement one opt-in bounded asynchronous hint provider adapter; current owning area Real provider transport. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B049.md](docs/engineering/backlog/issues/SAI-B049.md) | Planned SAI-B049: Enforce account-level entitlement before model-backed hints; current owning area AI admission policy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B050.md](docs/engineering/backlog/issues/SAI-B050.md) | Planned SAI-B050: Reserve and reconcile durable per-account hint budgets atomically; current owning area AI token and request quotas. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B051.md](docs/engineering/backlog/issues/SAI-B051.md) | Planned SAI-B051: Add process-wide provider concurrency and monetary admission ceilings; current owning area Global AI spend control. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B052.md](docs/engineering/backlog/issues/SAI-B052.md) | Planned SAI-B052: Deduplicate model hint retries with account-scoped idempotency; current owning area AI request reliability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B053.md](docs/engineering/backlog/issues/SAI-B053.md) | Planned SAI-B053: Record redacted generation usage and failure telemetry; current owning area AI observability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B054.md](docs/engineering/backlog/issues/SAI-B054.md) | Planned SAI-B054: Propagate total generation deadlines and explicit cancellation states; current owning area AI cancellation and deadlines. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B055.md](docs/engineering/backlog/issues/SAI-B055.md) | Planned SAI-B055: Bound provider retries and add outage admission state; current owning area AI failure policy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B056.md](docs/engineering/backlog/issues/SAI-B056.md) | Planned SAI-B056: Require clear external-AI disclosure before opt-in hint requests; current owning area AI privacy UX. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B057.md](docs/engineering/backlog/issues/SAI-B057.md) | Planned SAI-B057: Provide a tested operator kill switch for model hint admission; current owning area AI operations. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B058.md](docs/engineering/backlog/issues/SAI-B058.md) | Planned SAI-B058: Add shared golden fixtures for hint API and browser schema parity; current owning area Cross-runtime AI contracts. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B059.md](docs/engineering/backlog/issues/SAI-B059.md) | Planned SAI-B059: Define and execute a small consented model-hint pilot acceptance gate; current owning area Hint quality pilot. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B060.md](docs/engineering/backlog/issues/SAI-B060.md) | Planned SAI-B060: Design a bounded tutoring interaction contract beyond hint levels; current owning area Tutor interaction design. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B061.md](docs/engineering/backlog/issues/SAI-B061.md) | Planned SAI-B061: Implement account-owned expiring tutor conversation state; current owning area Tutor context lifecycle. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B062.md](docs/engineering/backlog/issues/SAI-B062.md) | Planned SAI-B062: Add a consented concept-check interaction with bounded feedback; current owning area Evidence-oriented tutoring. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B063.md](docs/engineering/backlog/issues/SAI-B063.md) | Planned SAI-B063: Collect minimal account-owned hint quality feedback; current owning area AI feedback and correction. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B064.md](docs/engineering/backlog/issues/SAI-B064.md) | Planned SAI-B064: Define explicit source-sharing consent and owned debugger input; current owning area Debugger privacy boundary. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B065.md](docs/engineering/backlog/issues/SAI-B065.md) | Planned SAI-B065: Build a public-only execution evidence projection for debugging; current owning area Safe debugger evidence. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B066.md](docs/engineering/backlog/issues/SAI-B066.md) | Planned SAI-B066: Return debugger hypotheses separately from observed failures; current owning area Evidence-backed debugging. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B067.md](docs/engineering/backlog/issues/SAI-B067.md) | Planned SAI-B067: Show a source-hash-bound debugger patch preview with explicit apply; current owning area Debugger editor UX. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B068.md](docs/engineering/backlog/issues/SAI-B068.md) | Planned SAI-B068: Version authorized solver problem specifications and evaluation modes; current owning area Solver input contracts. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B069.md](docs/engineering/backlog/issues/SAI-B069.md) | Planned SAI-B069: Generate a bounded algorithm-plan record before candidate code; current owning area Candidate planning. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B070.md](docs/engineering/backlog/issues/SAI-B070.md) | Planned SAI-B070: Normalize bounded source candidates without archive parser assumptions; current owning area Candidate generation. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B071.md](docs/engineering/backlog/issues/SAI-B071.md) | Planned SAI-B071: Route authorized AI candidates through the existing isolated judge boundary; current owning area Solver-to-judge integration. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B072.md](docs/engineering/backlog/issues/SAI-B072.md) | Planned SAI-B072: Implement a finite repair state machine with one shared run budget; current owning area Bounded solver repair. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B073.md](docs/engineering/backlog/issues/SAI-B073.md) | Planned SAI-B073: Rank candidates by explicit execution evidence with deterministic ties; current owning area Candidate ranking. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B074.md](docs/engineering/backlog/issues/SAI-B074.md) | Planned SAI-B074: Create a reproducible offline solver evaluation run manifest; current owning area Solver evaluation. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B075.md](docs/engineering/backlog/issues/SAI-B075.md) | Planned SAI-B075: Admit only reviewed differential and metamorphic test specifications; current owning area Authorized test generation. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B076.md](docs/engineering/backlog/issues/SAI-B076.md) | Planned SAI-B076: Reduce consented public counterexamples under a finite execution budget; current owning area Counterexample debugging. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B077.md](docs/engineering/backlog/issues/SAI-B077.md) | Planned SAI-B077: Separate evaluation splits and report archive contamination candidates; current owning area Evaluation integrity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B078.md](docs/engineering/backlog/issues/SAI-B078.md) | Planned SAI-B078: Register dataset and model permissions separately from source licenses; current owning area Research provenance. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B079.md](docs/engineering/backlog/issues/SAI-B079.md) | Planned SAI-B079: Produce a resource-and-integrity feasibility decision for one self-hosted model; current owning area Model serving research gate. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B080.md](docs/engineering/backlog/issues/SAI-B080.md) | Planned SAI-B080: Add an explicit admission gate for reproducible fine-tuning experiments; current owning area Fine-tuning research controls. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B081.md](docs/engineering/backlog/issues/SAI-B081.md) | Planned SAI-B081: Implement contest lifecycle and authoritative event timing; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B082.md](docs/engineering/backlog/issues/SAI-B082.md) | Planned SAI-B082: Add permissioned contest registration and eligibility checks; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B083.md](docs/engineering/backlog/issues/SAI-B083.md) | Planned SAI-B083: Freeze versioned problem sets for each contest; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B084.md](docs/engineering/backlog/issues/SAI-B084.md) | Planned SAI-B084: Implement deterministic ICPC scoring as a tested pure calculation; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B085.md](docs/engineering/backlog/issues/SAI-B085.md) | Planned SAI-B085: Add participant and organizer scoreboard projections with freeze rules; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B086.md](docs/engineering/backlog/issues/SAI-B086.md) | Planned SAI-B086: Connect contest submissions to event eligibility and immutable attempt context; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B087.md](docs/engineering/backlog/issues/SAI-B087.md) | Planned SAI-B087: Implement isolated virtual-contest sessions with personal start times; current owning area contests. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B088.md](docs/engineering/backlog/issues/SAI-B088.md) | Planned SAI-B088: Add locked ICPC team rosters and event membership rules; current owning area teams. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B089.md](docs/engineering/backlog/issues/SAI-B089.md) | Planned SAI-B089: Scope contest attempts and source visibility to authorized team members; current owning area teams. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B090.md](docs/engineering/backlog/issues/SAI-B090.md) | Planned SAI-B090: Enforce contest assistance policy across hint and submission routes; current owning area contest-integrity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B091.md](docs/engineering/backlog/issues/SAI-B091.md) | Planned SAI-B091: Build an organizer workflow for contest draft, preview and publication; current owning area contest-admin. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B092.md](docs/engineering/backlog/issues/SAI-B092.md) | Planned SAI-B092: Implement audited contest rejudging with immutable verdict revisions; current owning area contest-admin. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B093.md](docs/engineering/backlog/issues/SAI-B093.md) | Planned SAI-B093: Add contest clarification and appeal records with controlled disclosure; current owning area contest-admin. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B094.md](docs/engineering/backlog/issues/SAI-B094.md) | Planned SAI-B094: Deliver bounded scoreboard polling with consistent event revisions; current owning area leaderboards. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B095.md](docs/engineering/backlog/issues/SAI-B095.md) | Planned SAI-B095: Create a reproducible contest rehearsal and official standings export; current owning area contest-release. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B096.md](docs/engineering/backlog/issues/SAI-B096.md) | Planned SAI-B096: Version output-comparison policies without changing existing verdicts; current owning area judge-validators. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B097.md](docs/engineering/backlog/issues/SAI-B097.md) | Planned SAI-B097: Add isolated versioned custom-checker support for authorized problems; current owning area judge-validators. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B098.md](docs/engineering/backlog/issues/SAI-B098.md) | Planned SAI-B098: Implement bounded floating-point answer validation; current owning area judge-validators. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B099.md](docs/engineering/backlog/issues/SAI-B099.md) | Planned SAI-B099: Introduce explicit subtask scoring for separately configured events; current owning area judge-validators. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B100.md](docs/engineering/backlog/issues/SAI-B100.md) | Planned SAI-B100: Add an audited C++20 runtime alongside existing C++17; current owning area judge-languages. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B101.md](docs/engineering/backlog/issues/SAI-B101.md) | Planned SAI-B101: Add isolated Java support with explicit JVM resource semantics; current owning area judge-languages. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B102.md](docs/engineering/backlog/issues/SAI-B102.md) | Planned SAI-B102: Add isolated JavaScript support with denied network and bounded runtime; current owning area judge-languages. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B103.md](docs/engineering/backlog/issues/SAI-B103.md) | Planned SAI-B103: Add isolated Go compilation with offline standard-library execution; current owning area judge-languages. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B104.md](docs/engineering/backlog/issues/SAI-B104.md) | Planned SAI-B104: Add isolated Rust compilation with a fixed edition and no dependency fetch; current owning area judge-languages. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B105.md](docs/engineering/backlog/issues/SAI-B105.md) | Planned SAI-B105: Add a bounded metrics exporter consuming the existing private operational surface; current owning area operations-observability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B106.md](docs/engineering/backlog/issues/SAI-B106.md) | Planned SAI-B106: Propagate redacted correlation identifiers across accepted jobs; current owning area operations-observability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B107.md](docs/engineering/backlog/issues/SAI-B107.md) | Planned SAI-B107: Define measurable service objectives and test operator alert rules; current owning area operations-observability. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B108.md](docs/engineering/backlog/issues/SAI-B108.md) | Planned SAI-B108: Rehearse a timed full-stack disaster restore using the approved backup helper; current owning area operations-recovery. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B109.md](docs/engineering/backlog/issues/SAI-B109.md) | Planned SAI-B109: Measure bounded capacity and overload behavior using original fixtures; current owning area operations-capacity. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B110.md](docs/engineering/backlog/issues/SAI-B110.md) | Planned SAI-B110: Implement a revisioned deployment smoke and rollback rehearsal; current owning area operations-release. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B111.md](docs/engineering/backlog/issues/SAI-B111.md) | Planned SAI-B111: Create a canary qualification gate for judge runtime upgrades; current owning area operations-release. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B112.md](docs/engineering/backlog/issues/SAI-B112.md) | Planned SAI-B112: Run a bounded incident exercise for worker outage and recovery; current owning area operations-recovery. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B113.md](docs/engineering/backlog/issues/SAI-B113.md) | Planned SAI-B113: Provide learner-controlled progress summaries with assistance provenance; current owning area learning-analytics. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B114.md](docs/engineering/backlog/issues/SAI-B114.md) | Planned SAI-B114: Add editable practice plans and deterministic review reminders; current owning area learning-plans. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B115.md](docs/engineering/backlog/issues/SAI-B115.md) | Planned SAI-B115: Implement opt-in coach cohorts with explicit sharing permissions; current owning area coaching. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B116.md](docs/engineering/backlog/issues/SAI-B116.md) | Planned SAI-B116: Add permissioned assignments and human rubric feedback; current owning area coaching. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B117.md](docs/engineering/backlog/issues/SAI-B117.md) | Planned SAI-B117: Enforce institutional sponsorship and learner data-use boundaries; current owning area institutional-privacy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B118.md](docs/engineering/backlog/issues/SAI-B118.md) | Planned SAI-B118: Export institution-authorized assignment records with redaction tests; current owning area institutional-privacy. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B119.md](docs/engineering/backlog/issues/SAI-B119.md) | Planned SAI-B119: Produce a redacted pilot cost ledger and resource-envelope report; current owning area business-operations. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B120.md](docs/engineering/backlog/issues/SAI-B120.md) | Planned SAI-B120: Extend existing pilot grants with expiring institutional scopes; current owning area business-release. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B121.md](docs/engineering/backlog/issues/SAI-B121.md) | Planned SAI-B121: Persist owned sandbox records and reconcile crash-orphaned containers; current owning area judge-recovery. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B122.md](docs/engineering/backlog/issues/SAI-B122.md) | Planned SAI-B122: Bind controller credentials to registered worker identities; current owning area worker-auth. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B123.md](docs/engineering/backlog/issues/SAI-B123.md) | Planned SAI-B123: Enforce an atomic active-lease allowance per worker principal; current owning area judge-admission. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B124.md](docs/engineering/backlog/issues/SAI-B124.md) | Planned SAI-B124: Require a verified aggregate resource envelope for a production judge host; current owning area judge-isolation. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B125.md](docs/engineering/backlog/issues/SAI-B125.md) | Planned SAI-B125: Gate production readiness on an approved supported runtime identity; current owning area runtime-maintenance. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B126.md](docs/engineering/backlog/issues/SAI-B126.md) | Planned SAI-B126: Withdraw worker readiness and reconcile its current lease on retirement; current owning area judge-lifecycle. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
-| [SAI-B127.md](docs/engineering/backlog/issues/SAI-B127.md) | Planned SAI-B127: Enforce owner-approved reviewed-merge rules for the main branch; current owning area repository governance. Feature/owner: ordered implementation and reviewed contribution workflow. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [SAI-B001.md](docs/engineering/backlog/issues/SAI-B001.md) | Completed-local B001 task and evidence; preserved as prerequisite history. |
+| [SAI-B002.md](docs/engineering/backlog/issues/SAI-B002.md) | Planned SAI-B002: Record owner-approved original-code licensing and inbound contribution rights; current owning area governance. |
+| [SAI-B003.md](docs/engineering/backlog/issues/SAI-B003.md) | Planned SAI-B003: Approve a small pilot charter and data lifecycle contract; current owning area product. |
+| [SAI-B004.md](docs/engineering/backlog/issues/SAI-B004.md) | Planned SAI-B004: Pin CI actions to immutable reviewed commits; current owning area supply-chain. |
+| [SAI-B005.md](docs/engineering/backlog/issues/SAI-B005.md) | Planned SAI-B005: Pin web and API container bases and align intended Python patch versions; current owning area supply-chain. |
+| [SAI-B006.md](docs/engineering/backlog/issues/SAI-B006.md) | Planned SAI-B006: Reject plaintext external identity and worker transport configuration; current owning area deployment-security. |
+| [SAI-B007.md](docs/engineering/backlog/issues/SAI-B007.md) | Planned SAI-B007: Add a total JWKS fetch deadline with real transport fixtures; current owning area identity. |
+| [SAI-B008.md](docs/engineering/backlog/issues/SAI-B008.md) | Planned SAI-B008: Describe protected endpoints with an accurate OpenAPI bearer scheme; current owning area api-contract. |
+| [SAI-B009.md](docs/engineering/backlog/issues/SAI-B009.md) | Planned SAI-B009: Validate production worker credential strength before enabling internal routes; current owning area worker-auth. |
+| [SAI-B010.md](docs/engineering/backlog/issues/SAI-B010.md) | Planned SAI-B010: Support bounded worker bearer rotation without an outage; current owning area worker-auth. |
+| [SAI-B011.md](docs/engineering/backlog/issues/SAI-B011.md) | Planned SAI-B011: Introduce an explicit trusted-ingress identity throttle policy; current owning area identity. |
+| [SAI-B012.md](docs/engineering/backlog/issues/SAI-B012.md) | Planned SAI-B012: Create a consistent private backup and restore procedure for both stores; current owning area storage-operations. |
+| [SAI-B013.md](docs/engineering/backlog/issues/SAI-B013.md) | Planned SAI-B013: Introduce versioned transactional migrations for the submission database; current owning area storage. |
+| [SAI-B014.md](docs/engineering/backlog/issues/SAI-B014.md) | Planned SAI-B014: Add a testable email-verification delivery flow for pilot accounts; current owning area identity. |
+| [SAI-B015.md](docs/engineering/backlog/issues/SAI-B015.md) | Planned SAI-B015: Implement password recovery with bounded single-use reset links; current owning area identity. |
+| [SAI-B016.md](docs/engineering/backlog/issues/SAI-B016.md) | Planned SAI-B016: Expose owned session listing and revoke-other-sessions controls; current owning area identity. |
+| [SAI-B017.md](docs/engineering/backlog/issues/SAI-B017.md) | Planned SAI-B017: Record privacy-safe account security events; current owning area identity-observability. |
+| [SAI-B018.md](docs/engineering/backlog/issues/SAI-B018.md) | Planned SAI-B018: Implement deliberate account deletion across auth and owned submission state; current owning area privacy. |
+| [SAI-B019.md](docs/engineering/backlog/issues/SAI-B019.md) | Planned SAI-B019: Bound general API admission and concurrent slow requests; current owning area ingress-security. |
+| [SAI-B020.md](docs/engineering/backlog/issues/SAI-B020.md) | Planned SAI-B020: Add structured redacted request and failure logs; current owning area operations. |
+| [SAI-B021.md](docs/engineering/backlog/issues/SAI-B021.md) | Planned SAI-B021: Expose private bounded operational readiness and queue metrics; current owning area operations. |
+| [SAI-B022.md](docs/engineering/backlog/issues/SAI-B022.md) | Planned SAI-B022: Apply retention to terminal submission source with a dry-run purge; current owning area privacy-storage. |
+| [SAI-B023.md](docs/engineering/backlog/issues/SAI-B023.md) | Planned SAI-B023: Enforce cumulative owned-source storage budgets at submission admission; current owning area storage-abuse. |
+| [SAI-B024.md](docs/engineering/backlog/issues/SAI-B024.md) | Planned SAI-B024: Avoid loading private source for submission summary pages; current owning area storage-performance. |
+| [SAI-B025.md](docs/engineering/backlog/issues/SAI-B025.md) | Planned SAI-B025: Export an authenticated user-owned submission history bundle; current owning area privacy-product. |
+| [SAI-B026.md](docs/engineering/backlog/issues/SAI-B026.md) | Planned SAI-B026: Extend problem provenance with explicit permitted-use metadata; current owning area content. |
+| [SAI-B027.md](docs/engineering/backlog/issues/SAI-B027.md) | Planned SAI-B027: Version problem and grader identity on every new submission; current owning area content-contract. |
+| [SAI-B028.md](docs/engineering/backlog/issues/SAI-B028.md) | Planned SAI-B028: Detect public-sample drift between catalog and judge deployments; current owning area content-quality. |
+| [SAI-B029.md](docs/engineering/backlog/issues/SAI-B029.md) | Planned SAI-B029: Validate trusted problem authoring inputs before catalog publication; current owning area content-tooling. |
+| [SAI-B030.md](docs/engineering/backlog/issues/SAI-B030.md) | Planned SAI-B030: Add one original prefix-sum range-query teaching exercise; current owning area content. |
+| [SAI-B031.md](docs/engineering/backlog/issues/SAI-B031.md) | Planned SAI-B031: Use bounded server-side pagination for the expanding problem catalog; current owning area catalog. |
+| [SAI-B032.md](docs/engineering/backlog/issues/SAI-B032.md) | Planned SAI-B032: Make catalog filters and page position shareable through the URL; current owning area catalog-ux. |
+| [SAI-B033.md](docs/engineering/backlog/issues/SAI-B033.md) | Planned SAI-B033: Add explicit local draft export and bounded import; current owning area editor. |
+| [SAI-B034.md](docs/engineering/backlog/issues/SAI-B034.md) | Planned SAI-B034: Offer explicit draft ownership and clear-on-shared-device controls; current owning area editor-privacy. |
+| [SAI-B035.md](docs/engineering/backlog/issues/SAI-B035.md) | Planned SAI-B035: Detect cross-tab draft conflicts before overwriting newer code; current owning area editor-reliability. |
+| [SAI-B036.md](docs/engineering/backlog/issues/SAI-B036.md) | Planned SAI-B036: Add persistent editor display and accessibility preferences; current owning area editor-ux. |
+| [SAI-B037.md](docs/engineering/backlog/issues/SAI-B037.md) | Planned SAI-B037: Complete keyboard navigation for the practice and submission workflow; current owning area accessibility. |
+| [SAI-B038.md](docs/engineering/backlog/issues/SAI-B038.md) | Planned SAI-B038: Improve screen-reader announcements and focus for asynchronous results; current owning area accessibility. |
+| [SAI-B039.md](docs/engineering/backlog/issues/SAI-B039.md) | Planned SAI-B039: Repair contrast, reduced-motion and zoom reflow gaps; current owning area accessibility. |
+| [SAI-B040.md](docs/engineering/backlog/issues/SAI-B040.md) | Planned SAI-B040: Add a focused automated accessibility regression gate; current owning area accessibility-quality. |
+| [SAI-B041.md](docs/engineering/backlog/issues/SAI-B041.md) | Planned SAI-B041: Record the single-provider hint pilot activation decision; current owning area AI activation governance. |
+| [SAI-B042.md](docs/engineering/backlog/issues/SAI-B042.md) | Planned SAI-B042: Bound and fingerprint the existing public-only hint context; current owning area Safe model context. |
+| [SAI-B043.md](docs/engineering/backlog/issues/SAI-B043.md) | Planned SAI-B043: Validate trusted provider destinations and secret configuration; current owning area Provider configuration. |
+| [SAI-B044.md](docs/engineering/backlog/issues/SAI-B044.md) | Planned SAI-B044: Define an internal generation result and usage contract; current owning area Provider-neutral contracts. |
+| [SAI-B045.md](docs/engineering/backlog/issues/SAI-B045.md) | Planned SAI-B045: Version bounded hint prompts and spoiler policies; current owning area Tutoring prompts. |
+| [SAI-B046.md](docs/engineering/backlog/issues/SAI-B046.md) | Planned SAI-B046: Reject malformed model hints before constructing learner responses; current owning area Model output contracts. |
+| [SAI-B047.md](docs/engineering/backlog/issues/SAI-B047.md) | Planned SAI-B047: Add deterministic provider transport fixtures without external inference; current owning area Provider adapter verification. |
+| [SAI-B048.md](docs/engineering/backlog/issues/SAI-B048.md) | Planned SAI-B048: Implement one opt-in bounded asynchronous hint provider adapter; current owning area Real provider transport. |
+| [SAI-B049.md](docs/engineering/backlog/issues/SAI-B049.md) | Planned SAI-B049: Enforce account-level entitlement before model-backed hints; current owning area AI admission policy. |
+| [SAI-B050.md](docs/engineering/backlog/issues/SAI-B050.md) | Planned SAI-B050: Reserve and reconcile durable per-account hint budgets atomically; current owning area AI token and request quotas. |
+| [SAI-B051.md](docs/engineering/backlog/issues/SAI-B051.md) | Planned SAI-B051: Add process-wide provider concurrency and monetary admission ceilings; current owning area Global AI spend control. |
+| [SAI-B052.md](docs/engineering/backlog/issues/SAI-B052.md) | Planned SAI-B052: Deduplicate model hint retries with account-scoped idempotency; current owning area AI request reliability. |
+| [SAI-B053.md](docs/engineering/backlog/issues/SAI-B053.md) | Planned SAI-B053: Record redacted generation usage and failure telemetry; current owning area AI observability. |
+| [SAI-B054.md](docs/engineering/backlog/issues/SAI-B054.md) | Planned SAI-B054: Propagate total generation deadlines and explicit cancellation states; current owning area AI cancellation and deadlines. |
+| [SAI-B055.md](docs/engineering/backlog/issues/SAI-B055.md) | Planned SAI-B055: Bound provider retries and add outage admission state; current owning area AI failure policy. |
+| [SAI-B056.md](docs/engineering/backlog/issues/SAI-B056.md) | Planned SAI-B056: Require clear external-AI disclosure before opt-in hint requests; current owning area AI privacy UX. |
+| [SAI-B057.md](docs/engineering/backlog/issues/SAI-B057.md) | Planned SAI-B057: Provide a tested operator kill switch for model hint admission; current owning area AI operations. |
+| [SAI-B058.md](docs/engineering/backlog/issues/SAI-B058.md) | Planned SAI-B058: Add shared golden fixtures for hint API and browser schema parity; current owning area Cross-runtime AI contracts. |
+| [SAI-B059.md](docs/engineering/backlog/issues/SAI-B059.md) | Planned SAI-B059: Define and execute a small consented model-hint pilot acceptance gate; current owning area Hint quality pilot. |
+| [SAI-B060.md](docs/engineering/backlog/issues/SAI-B060.md) | Planned SAI-B060: Design a bounded tutoring interaction contract beyond hint levels; current owning area Tutor interaction design. |
+| [SAI-B061.md](docs/engineering/backlog/issues/SAI-B061.md) | Planned SAI-B061: Implement account-owned expiring tutor conversation state; current owning area Tutor context lifecycle. |
+| [SAI-B062.md](docs/engineering/backlog/issues/SAI-B062.md) | Planned SAI-B062: Add a consented concept-check interaction with bounded feedback; current owning area Evidence-oriented tutoring. |
+| [SAI-B063.md](docs/engineering/backlog/issues/SAI-B063.md) | Planned SAI-B063: Collect minimal account-owned hint quality feedback; current owning area AI feedback and correction. |
+| [SAI-B064.md](docs/engineering/backlog/issues/SAI-B064.md) | Planned SAI-B064: Define explicit source-sharing consent and owned debugger input; current owning area Debugger privacy boundary. |
+| [SAI-B065.md](docs/engineering/backlog/issues/SAI-B065.md) | Planned SAI-B065: Build a public-only execution evidence projection for debugging; current owning area Safe debugger evidence. |
+| [SAI-B066.md](docs/engineering/backlog/issues/SAI-B066.md) | Planned SAI-B066: Return debugger hypotheses separately from observed failures; current owning area Evidence-backed debugging. |
+| [SAI-B067.md](docs/engineering/backlog/issues/SAI-B067.md) | Planned SAI-B067: Show a source-hash-bound debugger patch preview with explicit apply; current owning area Debugger editor UX. |
+| [SAI-B068.md](docs/engineering/backlog/issues/SAI-B068.md) | Planned SAI-B068: Version authorized solver problem specifications and evaluation modes; current owning area Solver input contracts. |
+| [SAI-B069.md](docs/engineering/backlog/issues/SAI-B069.md) | Planned SAI-B069: Generate a bounded algorithm-plan record before candidate code; current owning area Candidate planning. |
+| [SAI-B070.md](docs/engineering/backlog/issues/SAI-B070.md) | Planned SAI-B070: Normalize bounded source candidates without archive parser assumptions; current owning area Candidate generation. |
+| [SAI-B071.md](docs/engineering/backlog/issues/SAI-B071.md) | Planned SAI-B071: Route authorized AI candidates through the existing isolated judge boundary; current owning area Solver-to-judge integration. |
+| [SAI-B072.md](docs/engineering/backlog/issues/SAI-B072.md) | Planned SAI-B072: Implement a finite repair state machine with one shared run budget; current owning area Bounded solver repair. |
+| [SAI-B073.md](docs/engineering/backlog/issues/SAI-B073.md) | Planned SAI-B073: Rank candidates by explicit execution evidence with deterministic ties; current owning area Candidate ranking. |
+| [SAI-B074.md](docs/engineering/backlog/issues/SAI-B074.md) | Planned SAI-B074: Create a reproducible offline solver evaluation run manifest; current owning area Solver evaluation. |
+| [SAI-B075.md](docs/engineering/backlog/issues/SAI-B075.md) | Planned SAI-B075: Admit only reviewed differential and metamorphic test specifications; current owning area Authorized test generation. |
+| [SAI-B076.md](docs/engineering/backlog/issues/SAI-B076.md) | Planned SAI-B076: Reduce consented public counterexamples under a finite execution budget; current owning area Counterexample debugging. |
+| [SAI-B077.md](docs/engineering/backlog/issues/SAI-B077.md) | Planned SAI-B077: Separate evaluation splits and report archive contamination candidates; current owning area Evaluation integrity. |
+| [SAI-B078.md](docs/engineering/backlog/issues/SAI-B078.md) | Planned SAI-B078: Register dataset and model permissions separately from source licenses; current owning area Research provenance. |
+| [SAI-B079.md](docs/engineering/backlog/issues/SAI-B079.md) | Planned SAI-B079: Produce a resource-and-integrity feasibility decision for one self-hosted model; current owning area Model serving research gate. |
+| [SAI-B080.md](docs/engineering/backlog/issues/SAI-B080.md) | Planned SAI-B080: Add an explicit admission gate for reproducible fine-tuning experiments; current owning area Fine-tuning research controls. |
+| [SAI-B081.md](docs/engineering/backlog/issues/SAI-B081.md) | Planned SAI-B081: Implement contest lifecycle and authoritative event timing; current owning area contests. |
+| [SAI-B082.md](docs/engineering/backlog/issues/SAI-B082.md) | Planned SAI-B082: Add permissioned contest registration and eligibility checks; current owning area contests. |
+| [SAI-B083.md](docs/engineering/backlog/issues/SAI-B083.md) | Planned SAI-B083: Freeze versioned problem sets for each contest; current owning area contests. |
+| [SAI-B084.md](docs/engineering/backlog/issues/SAI-B084.md) | Planned SAI-B084: Implement deterministic ICPC scoring as a tested pure calculation; current owning area contests. |
+| [SAI-B085.md](docs/engineering/backlog/issues/SAI-B085.md) | Planned SAI-B085: Add participant and organizer scoreboard projections with freeze rules; current owning area contests. |
+| [SAI-B086.md](docs/engineering/backlog/issues/SAI-B086.md) | Planned SAI-B086: Connect contest submissions to event eligibility and immutable attempt context; current owning area contests. |
+| [SAI-B087.md](docs/engineering/backlog/issues/SAI-B087.md) | Planned SAI-B087: Implement isolated virtual-contest sessions with personal start times; current owning area contests. |
+| [SAI-B088.md](docs/engineering/backlog/issues/SAI-B088.md) | Planned SAI-B088: Add locked ICPC team rosters and event membership rules; current owning area teams. |
+| [SAI-B089.md](docs/engineering/backlog/issues/SAI-B089.md) | Planned SAI-B089: Scope contest attempts and source visibility to authorized team members; current owning area teams. |
+| [SAI-B090.md](docs/engineering/backlog/issues/SAI-B090.md) | Planned SAI-B090: Enforce contest assistance policy across hint and submission routes; current owning area contest-integrity. |
+| [SAI-B091.md](docs/engineering/backlog/issues/SAI-B091.md) | Planned SAI-B091: Build an organizer workflow for contest draft, preview and publication; current owning area contest-admin. |
+| [SAI-B092.md](docs/engineering/backlog/issues/SAI-B092.md) | Planned SAI-B092: Implement audited contest rejudging with immutable verdict revisions; current owning area contest-admin. |
+| [SAI-B093.md](docs/engineering/backlog/issues/SAI-B093.md) | Planned SAI-B093: Add contest clarification and appeal records with controlled disclosure; current owning area contest-admin. |
+| [SAI-B094.md](docs/engineering/backlog/issues/SAI-B094.md) | Planned SAI-B094: Deliver bounded scoreboard polling with consistent event revisions; current owning area leaderboards. |
+| [SAI-B095.md](docs/engineering/backlog/issues/SAI-B095.md) | Planned SAI-B095: Create a reproducible contest rehearsal and official standings export; current owning area contest-release. |
+| [SAI-B096.md](docs/engineering/backlog/issues/SAI-B096.md) | Planned SAI-B096: Version output-comparison policies without changing existing verdicts; current owning area judge-validators. |
+| [SAI-B097.md](docs/engineering/backlog/issues/SAI-B097.md) | Planned SAI-B097: Add isolated versioned custom-checker support for authorized problems; current owning area judge-validators. |
+| [SAI-B098.md](docs/engineering/backlog/issues/SAI-B098.md) | Planned SAI-B098: Implement bounded floating-point answer validation; current owning area judge-validators. |
+| [SAI-B099.md](docs/engineering/backlog/issues/SAI-B099.md) | Planned SAI-B099: Introduce explicit subtask scoring for separately configured events; current owning area judge-validators. |
+| [SAI-B100.md](docs/engineering/backlog/issues/SAI-B100.md) | Planned SAI-B100: Add an audited C++20 runtime alongside existing C++17; current owning area judge-languages. |
+| [SAI-B101.md](docs/engineering/backlog/issues/SAI-B101.md) | Planned SAI-B101: Add isolated Java support with explicit JVM resource semantics; current owning area judge-languages. |
+| [SAI-B102.md](docs/engineering/backlog/issues/SAI-B102.md) | Planned SAI-B102: Add isolated JavaScript support with denied network and bounded runtime; current owning area judge-languages. |
+| [SAI-B103.md](docs/engineering/backlog/issues/SAI-B103.md) | Planned SAI-B103: Add isolated Go compilation with offline standard-library execution; current owning area judge-languages. |
+| [SAI-B104.md](docs/engineering/backlog/issues/SAI-B104.md) | Planned SAI-B104: Add isolated Rust compilation with a fixed edition and no dependency fetch; current owning area judge-languages. |
+| [SAI-B105.md](docs/engineering/backlog/issues/SAI-B105.md) | Planned SAI-B105: Add a bounded metrics exporter consuming the existing private operational surface; current owning area operations-observability. |
+| [SAI-B106.md](docs/engineering/backlog/issues/SAI-B106.md) | Planned SAI-B106: Propagate redacted correlation identifiers across accepted jobs; current owning area operations-observability. |
+| [SAI-B107.md](docs/engineering/backlog/issues/SAI-B107.md) | Planned SAI-B107: Define measurable service objectives and test operator alert rules; current owning area operations-observability. |
+| [SAI-B108.md](docs/engineering/backlog/issues/SAI-B108.md) | Planned SAI-B108: Rehearse a timed full-stack disaster restore using the approved backup helper; current owning area operations-recovery. |
+| [SAI-B109.md](docs/engineering/backlog/issues/SAI-B109.md) | Planned SAI-B109: Measure bounded capacity and overload behavior using original fixtures; current owning area operations-capacity. |
+| [SAI-B110.md](docs/engineering/backlog/issues/SAI-B110.md) | Planned SAI-B110: Implement a revisioned deployment smoke and rollback rehearsal; current owning area operations-release. |
+| [SAI-B111.md](docs/engineering/backlog/issues/SAI-B111.md) | Planned SAI-B111: Create a canary qualification gate for judge runtime upgrades; current owning area operations-release. |
+| [SAI-B112.md](docs/engineering/backlog/issues/SAI-B112.md) | Planned SAI-B112: Run a bounded incident exercise for worker outage and recovery; current owning area operations-recovery. |
+| [SAI-B113.md](docs/engineering/backlog/issues/SAI-B113.md) | Planned SAI-B113: Provide learner-controlled progress summaries with assistance provenance; current owning area learning-analytics. |
+| [SAI-B114.md](docs/engineering/backlog/issues/SAI-B114.md) | Planned SAI-B114: Add editable practice plans and deterministic review reminders; current owning area learning-plans. |
+| [SAI-B115.md](docs/engineering/backlog/issues/SAI-B115.md) | Planned SAI-B115: Implement opt-in coach cohorts with explicit sharing permissions; current owning area coaching. |
+| [SAI-B116.md](docs/engineering/backlog/issues/SAI-B116.md) | Planned SAI-B116: Add permissioned assignments and human rubric feedback; current owning area coaching. |
+| [SAI-B117.md](docs/engineering/backlog/issues/SAI-B117.md) | Planned SAI-B117: Enforce institutional sponsorship and learner data-use boundaries; current owning area institutional-privacy. |
+| [SAI-B118.md](docs/engineering/backlog/issues/SAI-B118.md) | Planned SAI-B118: Export institution-authorized assignment records with redaction tests; current owning area institutional-privacy. |
+| [SAI-B119.md](docs/engineering/backlog/issues/SAI-B119.md) | Planned SAI-B119: Produce a redacted pilot cost ledger and resource-envelope report; current owning area business-operations. |
+| [SAI-B120.md](docs/engineering/backlog/issues/SAI-B120.md) | Planned SAI-B120: Extend existing pilot grants with expiring institutional scopes; current owning area business-release. |
+| [SAI-B121.md](docs/engineering/backlog/issues/SAI-B121.md) | Planned SAI-B121: Persist owned sandbox records and reconcile crash-orphaned containers; current owning area judge-recovery. |
+| [SAI-B122.md](docs/engineering/backlog/issues/SAI-B122.md) | Planned SAI-B122: Bind controller credentials to registered worker identities; current owning area worker-auth. |
+| [SAI-B123.md](docs/engineering/backlog/issues/SAI-B123.md) | Planned SAI-B123: Enforce an atomic active-lease allowance per worker principal; current owning area judge-admission. |
+| [SAI-B124.md](docs/engineering/backlog/issues/SAI-B124.md) | Planned SAI-B124: Require a verified aggregate resource envelope for a production judge host; current owning area judge-isolation. |
+| [SAI-B125.md](docs/engineering/backlog/issues/SAI-B125.md) | Planned SAI-B125: Gate production readiness on an approved supported runtime identity; current owning area runtime-maintenance. |
+| [SAI-B126.md](docs/engineering/backlog/issues/SAI-B126.md) | Planned SAI-B126: Withdraw worker readiness and reconcile its current lease on retirement; current owning area judge-lifecycle. |
+| [SAI-B127.md](docs/engineering/backlog/issues/SAI-B127.md) | Planned SAI-B127: Enforce owner-approved reviewed-merge rules for the main branch; current owning area repository governance. |
+| [SAI-B128.md](docs/engineering/backlog/issues/SAI-B128.md) | Planned SAI-B128: Implement a declared DSA coverage matrix and preregistered model release measurements; ownership area solver-readiness. |
+| [SAI-B129.md](docs/engineering/backlog/issues/SAI-B129.md) | Planned SAI-B129: Run an approved untuned checkpoint comparison and record a future selection; ownership area model-baseline. |
+| [SAI-B130.md](docs/engineering/backlog/issues/SAI-B130.md) | Planned SAI-B130: Materialize a permitted validated training corpus with immutable split lineage; ownership area training-data. |
+| [SAI-B131.md](docs/engineering/backlog/issues/SAI-B131.md) | Planned SAI-B131: Create a separate locked training environment and reviewed artifact loader; ownership area training-infrastructure. |
+| [SAI-B132.md](docs/engineering/backlog/issues/SAI-B132.md) | Planned SAI-B132: Implement tokenizer-aware SFT examples and answer-only loss masking; ownership area training-preprocessing. |
+| [SAI-B133.md](docs/engineering/backlog/issues/SAI-B133.md) | Planned SAI-B133: Run an approved external LoRA smoke experiment with stop and resume evidence; ownership area training-smoke. |
+| [SAI-B134.md](docs/engineering/backlog/issues/SAI-B134.md) | Planned SAI-B134: Execute the approved bounded SFT adapter training campaign; ownership area actual-fine-tuning. |
+| [SAI-B135.md](docs/engineering/backlog/issues/SAI-B135.md) | Planned SAI-B135: Publish immutable private model artifacts and complete adapter lineage; ownership area model-artifacts. |
+| [SAI-B136.md](docs/engineering/backlog/issues/SAI-B136.md) | Planned SAI-B136: Evaluate tuned candidates against matched baselines and enforce category gates; ownership area model-promotion-evaluation. |
+| [SAI-B137.md](docs/engineering/backlog/issues/SAI-B137.md) | Planned SAI-B137: Qualify inference export and quantization at the deployed precision; ownership area inference-qualification. |
+| [SAI-B138.md](docs/engineering/backlog/issues/SAI-B138.md) | Planned SAI-B138: Integrate the qualified trained artifact with bounded provider-neutral serving; ownership area trained-model-serving. |
+| [SAI-B139.md](docs/engineering/backlog/issues/SAI-B139.md) | Planned SAI-B139: Promote a trained model through a limited pilot and rehearsed rollback; ownership area trained-model-release. |
+| [SAI-B140.md](docs/engineering/backlog/issues/SAI-B140.md) | Planned SAI-B140: Run a separately approved execution-reward preference or RL experiment; ownership area optional-model-research. |
+| [SAI-B141.md](docs/engineering/backlog/issues/SAI-B141.md) | Planned SAI-B141: Operate a consented failure-analysis and retraining improvement cycle; ownership area model-lifecycle. |
 
 </details>
 
@@ -1951,11 +1995,11 @@ One generated Markdown card per stable backlog task with prerequisites, ownershi
 
 Maintainer decisions, original-code and content rights, and build-versus-reuse policies.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [DATA_AND_LICENSES.md](docs/governance/DATA_AND_LICENSES.md) | Original-code, content, dataset, model and privacy rights boundaries. Feature/owner: specifications, decisions and development guidance. | `docs/OPEN_DECISIONS.md`; `docs/OPEN_SOURCE_STRATEGY.md` |
-| [OPEN_DECISIONS.md](docs/governance/OPEN_DECISIONS.md) | Maintainer-owned licensing, audience, runtime, provider and policy decisions. Feature/owner: specifications, decisions and development guidance. | `docs/adr/0001-practice-foundation.md`; `docs/adr/0002-authenticated-isolated-submissions.md`; `docs/PROJECT_STATUS.md` |
-| [OPEN_SOURCE_STRATEGY.md](docs/governance/OPEN_SOURCE_STRATEGY.md) | Build/reuse policy and dependency/service/reference candidate matrix. Feature/owner: specifications, decisions and development guidance. | `docs/adr/0001-practice-foundation.md`; `docs/adr/0002-authenticated-isolated-submissions.md`; `docs/DATA_AND_LICENSES.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [DATA_AND_LICENSES.md](docs/governance/DATA_AND_LICENSES.md) | Original-code, content, dataset, model and privacy rights boundaries. |
+| [OPEN_DECISIONS.md](docs/governance/OPEN_DECISIONS.md) | Maintainer-owned licensing, audience, runtime, provider and policy decisions. |
+| [OPEN_SOURCE_STRATEGY.md](docs/governance/OPEN_SOURCE_STRATEGY.md) | Build/reuse policy and dependency/service/reference candidate matrix. |
 
 </details>
 
@@ -1964,39 +2008,41 @@ Maintainer decisions, original-code and content rights, and build-versus-reuse p
 
 Contributor orientation and reproducible installation, startup, validation and deployment instructions.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [DEVELOPMENT.md](docs/onboarding/DEVELOPMENT.md) | Pinned native setup, startup, tests, local secrets and Compose workflows. Feature/owner: specifications, decisions and development guidance. | `package.json`; `services/api/pyproject.toml`; `playwright.config.ts`; `compose.yaml`; `compose.cloud.yaml` |
-| [START_HERE.md](docs/onboarding/START_HERE.md) | First-day reading, local workflow and contribution expectations. Feature/owner: specifications, decisions and development guidance. | `README.md`; `docs/DEVELOPMENT.md`; `docs/PROJECT_STATUS.md`; `docs/CONTRIBUTOR_TASKS.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [DEVELOPMENT.md](docs/onboarding/DEVELOPMENT.md) | Pinned native setup, startup, tests, local secrets and Compose workflows. |
+| [START_HERE.md](docs/onboarding/START_HERE.md) | First-day reading, local workflow and contribution expectations. |
 
 </details>
 
 <details>
-<summary>docs/product/ — 5 files</summary>
+<summary>docs/product/ — 6 files</summary>
 
 Product vision, requirements, roadmap and the retained detailed idea and solver proposals.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [AI_SOLVER.md](docs/product/AI_SOLVER.md) | Design proposal for tutor/debugger/candidate solver contracts. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_STATUS.md`; `docs/MODEL_DATA_EVALUATION.md`; `services/api/solver_api/hints.py` |
-| [PRODUCT_REQUIREMENTS.md](docs/product/PRODUCT_REQUIREMENTS.md) | Proposed P0/P1/P2 features, modes and acceptance conditions. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_STATUS.md`; `docs/ARCHITECTURE.md`; `docs/AI_SOLVER.md` |
-| [PROJECT_IDEA.txt](docs/product/PROJECT_IDEA.txt) | Earlier detailed plain-text product proposal. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_STATUS.md`; `docs/PROJECT_VISION.md`; `docs/AI_SOLVER.md` |
-| [PROJECT_VISION.md](docs/product/PROJECT_VISION.md) | Original mission, users, product pillars and non-goals. Feature/owner: specifications, decisions and development guidance. | `docs/PRODUCT_REQUIREMENTS.md`; `docs/ROADMAP.md`; `docs/PROJECT_STATUS.md` |
-| [ROADMAP.md](docs/product/ROADMAP.md) | Dependency-ordered phases and acceptance gates. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_STATUS.md`; `docs/PRODUCT_REQUIREMENTS.md`; `docs/MODEL_DATA_EVALUATION.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [AI_SOLVER.md](docs/product/AI_SOLVER.md) | Design proposal for tutor/debugger/candidate solver contracts. |
+| [DSA_SOLVER_READINESS.md](docs/product/DSA_SOLVER_READINESS.md) | Complete future DSA solver readiness checklist: supported coverage, evaluated correctness, data/model research, actual approved training, artifacts, serving and release gates. |
+| [PRODUCT_REQUIREMENTS.md](docs/product/PRODUCT_REQUIREMENTS.md) | Proposed P0/P1/P2 features, modes and acceptance conditions. |
+| [PROJECT_IDEA.txt](docs/product/PROJECT_IDEA.txt) | Earlier detailed plain-text product proposal. |
+| [PROJECT_VISION.md](docs/product/PROJECT_VISION.md) | Original mission, users, product pillars and non-goals. |
+| [ROADMAP.md](docs/product/ROADMAP.md) | Dependency-ordered phases and acceptance gates. |
 
 </details>
 
 <details>
-<summary>docs/research/ — 4 files</summary>
+<summary>docs/research/ — 5 files</summary>
 
 Dated audits, upstream study references, competitive positioning and model-evaluation proposals.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [AUDIT_AND_AI_PLAN_2026-11-15.md](docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md) | Dated source audit and provider-neutral AI delivery plan with upstream triage. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_STATUS.md`; `docs/PUBLIC_REPOSITORIES_AND_RESOURCES.txt`; `docs/OPEN_SOURCE_STRATEGY.md` |
-| [COMPETITIVE_LANDSCAPE.md](docs/research/COMPETITIVE_LANDSCAPE.md) | Qualitative user jobs, positioning and differentiation hypotheses. Feature/owner: specifications, decisions and development guidance. | `docs/PROJECT_VISION.md`; `docs/PRODUCT_REQUIREMENTS.md` |
-| [MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md) | Future permitted data pipeline, model baselines, tuning and evaluation. Feature/owner: specifications, decisions and development guidance. | `docs/DATA_AND_LICENSES.md`; `docs/AI_SOLVER.md`; `docs/OPEN_DECISIONS.md` |
-| [PUBLIC_REPOSITORIES_AND_RESOURCES.txt](docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | Complete 20-repository and model/dataset study inventory. Feature/owner: specifications, decisions and development guidance. | `docs/OPEN_SOURCE_STRATEGY.md`; `docs/AUDIT_AND_AI_PLAN_2026-11-15.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [AUDIT_AND_AI_PLAN_2026-11-15.md](docs/research/AUDIT_AND_AI_PLAN_2026-11-15.md) | Dated source audit and provider-neutral AI delivery plan with upstream triage. |
+| [COMPETITIVE_LANDSCAPE.md](docs/research/COMPETITIVE_LANDSCAPE.md) | Qualitative user jobs, positioning and differentiation hypotheses. |
+| [FINETUNING_MODEL_RESEARCH.md](docs/research/FINETUNING_MODEL_RESEARCH.md) | Dated non-ranked research catalogue of 20 fine-tuning model/baseline families, official source evidence, metadata limitations, licensing/hardware questions and future decision checklist. |
+| [MODEL_DATA_EVALUATION.md](docs/research/MODEL_DATA_EVALUATION.md) | Future permitted data pipeline, model baselines, tuning and evaluation. |
+| [PUBLIC_REPOSITORIES_AND_RESOURCES.txt](docs/research/PUBLIC_REPOSITORIES_AND_RESOURCES.txt) | Complete 20-repository and model/dataset study inventory. |
 
 </details>
 
@@ -2005,9 +2051,9 @@ Dated audits, upstream study references, competitive positioning and model-evalu
 
 Judge threat model, untrusted-execution boundaries and production release controls.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [JUDGE_SECURITY.md](docs/security/JUDGE_SECURITY.md) | Threat model, required controls, judge vocabulary and public-release gate. Feature/owner: specifications, decisions and development guidance. | `docs/adr/0002-authenticated-isolated-submissions.md`; `services/judge/UPSTREAM_REVIEW.md`; `docs/PROJECT_STATUS.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [JUDGE_SECURITY.md](docs/security/JUDGE_SECURITY.md) | Threat model, required controls, judge vocabulary and public-release gate. |
 
 </details>
 
@@ -2016,9 +2062,9 @@ Judge threat model, untrusted-execution boundaries and production release contro
 
 Named-revision implementation evidence, current limitations and historical validation distinctions.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [PROJECT_STATUS.md](docs/status/PROJECT_STATUS.md) | Executed implementation, test evidence, limitations and current facts. Feature/owner: specifications, decisions and development guidance. | `docs/DEVELOPMENT.md`; `docs/REPOSITORY_STRUCTURE.md`; `docs/AUDIT_AND_AI_PLAN_2026-11-15.md` |
+| File | Purpose / feature |
+| --- | --- |
+| [PROJECT_STATUS.md](docs/status/PROJECT_STATUS.md) | Executed implementation, test evidence, limitations and current facts. |
 
 </details>
 
@@ -2027,11 +2073,11 @@ Named-revision implementation evidence, current limitations and historical valid
 
 Native web, API and worker lifecycle orchestration and private local worker-token selection.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [dev.py](scripts/development/dev.py) | Start API/web/optional trusted judge; generate/select worker token and stop owned child process groups. Feature/owner: repository operations and reproducibility. | `argparse`; `local_config`; `os`; `pathlib`; `signal`; `subprocess`; `sys`; `time` |
-| [judge-worker.py](scripts/development/judge-worker.py) | Launch trusted worker with local credential without logging it. Feature/owner: repository operations and reproducibility. | `local_config`; `os`; `sys` |
-| [local_config.py](scripts/development/local_config.py) | Generate and preserve private local worker credential using atomic file publication and restrictive permissions. Feature/owner: repository operations and reproducibility. | `os`; `pathlib`; `secrets`; `tempfile` |
+| File | Purpose / feature |
+| --- | --- |
+| [dev.py](scripts/development/dev.py) | Start API/web/optional trusted judge; generate/select worker token and stop owned child process groups. |
+| [judge-worker.py](scripts/development/judge-worker.py) | Launch trusted worker with local credential without logging it. |
+| [local_config.py](scripts/development/local_config.py) | Generate and preserve private local worker credential using atomic file publication and restrictive permissions. |
 
 </details>
 
@@ -2040,11 +2086,11 @@ Native web, API and worker lifecycle orchestration and private local worker-toke
 
 Offline backlog generation, explicit safe issue publication and inert pull-request evidence checking.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [build_backlog.py](scripts/github/build_backlog.py) | Offline deterministic issue cards and ordered index generated from the canonical task catalogue. Feature/owner: ordered implementation and reviewed contribution workflow. | `argparse`; `json`; `pathlib`; `publish_issues` |
-| [check_pr_evidence.py](scripts/github/check_pr_evidence.py) | Offline bounded PR-event evidence validation without network, command execution or raw-body logging. Feature/owner: PR evidence and reviewed contribution workflow. | `argparse`; `json`; `pathlib`; `re` |
-| [publish_issues.py](scripts/github/publish_issues.py) | Explicit GitHub issue publication with validated order, remote-marker reconciliation, pacing and durable receipts. Feature/owner: ordered implementation and reviewed contribution workflow. | `argparse`; `hashlib`; `json`; `pathlib`; `re`; `subprocess`; `tempfile`; `time` |
+| File | Purpose / feature |
+| --- | --- |
+| [build_backlog.py](scripts/github/build_backlog.py) | Offline deterministic issue cards and ordered index generated from the canonical task catalogue. |
+| [check_pr_evidence.py](scripts/github/check_pr_evidence.py) | Offline bounded PR-event evidence validation without network, command execution or raw-body logging. |
+| [publish_issues.py](scripts/github/publish_issues.py) | Explicit GitHub issue publication with validated order, remote-marker reconciliation, pacing and durable receipts. |
 
 </details>
 
@@ -2053,12 +2099,12 @@ Offline backlog generation, explicit safe issue publication and inert pull-reque
 
 Packaging exclusion guards and deterministic inventory and preservation checks.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [check-standalone.mjs](scripts/verification/check-standalone.mjs) | Reject private runtime state or preserved research in Next standalone artifacts. Feature/owner: repository operations and reproducibility. | `node:fs`; `node:path`; `node:url` |
-| [project_handoff.py](scripts/verification/project_handoff.py) | Render or verify the complete root Markdown handoff from staged file annotations, canonical features, directory ownership and detailed tasks. Feature/owner: project continuity and implementation handoff. | `argparse`; `collections`; `json`; `pathlib`; `repository_inventory`; `urllib.parse` |
-| [repository_inventory.py](scripts/verification/repository_inventory.py) | Generate/check complete tracked-file ledger from source assessments and static imports, without source execution. Feature/owner: repository operations and reproducibility. | `argparse`; `ast`; `hashlib`; `json`; `pathlib`; `re`; `subprocess` |
-| [verify_preserved_archives.py](scripts/verification/verify_preserved_archives.py) | Verify ZIP/member and branch-snapshot bytes/hashes and optional staged Git blobs without importing evidence. Feature/owner: repository operations and reproducibility. | `argparse`; `hashlib`; `json`; `pathlib`; `subprocess`; `zipfile` |
+| File | Purpose / feature |
+| --- | --- |
+| [check-standalone.mjs](scripts/verification/check-standalone.mjs) | Reject private runtime state or preserved research in Next standalone artifacts. |
+| [project_handoff.py](scripts/verification/project_handoff.py) | Render or verify the complete root Markdown handoff from staged file annotations, canonical features, directory ownership and detailed tasks. |
+| [repository_inventory.py](scripts/verification/repository_inventory.py) | Generate/check complete tracked-file ledger from source assessments and static imports, without source execution. |
+| [verify_preserved_archives.py](scripts/verification/verify_preserved_archives.py) | Verify ZIP/member and branch-snapshot bytes/hashes and optional staged Git blobs without importing evidence. |
 
 </details>
 
@@ -2067,13 +2113,13 @@ Packaging exclusion guards and deterministic inventory and preservation checks.
 
 Python FastAPI application, frozen dependencies, container definition and service-owned tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [.dockerignore](services/api/.dockerignore) | Exclude local environments, caches, tests, private local state and env files from API image build context. Feature/owner: container. | `Docker build context` |
-| [.python-version](services/api/.python-version) | Select the API project Python 3.12 interpreter family. Feature/owner: toolchain. | `uv`; `Python 3.12` |
-| [Dockerfile](services/api/Dockerfile) | Build nonroot FastAPI/Uvicorn runtime with frozen production dependencies and optional build-time managed CA. Feature/owner: container. | `python:3.12-slim`; `uv 0.13.6`; `pyproject.toml`; `uv.lock`; `solver_api` |
-| [pyproject.toml](services/api/pyproject.toml) | Declare five pinned runtime packages, pytest/Ruff dev packages and test/lint settings. Feature/owner: dependency management. | `Python >=3.12,<3.13`; `FastAPI`; `Uvicorn`; `PyJWT`; `cryptography`; `HTTPX`; `pytest`; `Ruff` |
-| [uv.lock](services/api/uv.lock) | Lock Python package resolution and SHA-256-verified distribution artifacts. Feature/owner: dependency management. | `PyPI`; `files.pythonhosted.org`; `uv` |
+| File | Purpose / feature |
+| --- | --- |
+| [.dockerignore](services/api/.dockerignore) | Exclude local environments, caches, tests, private local state and env files from API image build context. |
+| [.python-version](services/api/.python-version) | Select the API project Python 3.12 interpreter family. |
+| [Dockerfile](services/api/Dockerfile) | Build nonroot FastAPI/Uvicorn runtime with frozen production dependencies and optional build-time managed CA. |
+| [pyproject.toml](services/api/pyproject.toml) | Declare five pinned runtime packages, pytest/Ruff dev packages and test/lint settings. |
+| [uv.lock](services/api/uv.lock) | Lock Python package resolution and SHA-256-verified distribution artifacts. |
 
 </details>
 
@@ -2082,10 +2128,10 @@ Python FastAPI application, frozen dependencies, container definition and servic
 
 Stable API entry point composing feature modules and shared HTTP behavior.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/__init__.py) | Package marker stating that learner programs are never executed by this service. Feature/owner: service boundary. | — |
-| [main.py](services/api/solver_api/main.py) | Compose FastAPI routes, request IDs/errors, public catalog, authenticated hints/history and worker-only control endpoints. Feature/owner: API routing. | `fastapi`; `fastapi.exceptions`; `fastapi.responses`; `os`; `secrets`; `solver_api.features.catalog.content`; `solver_api.features.catalog.models`; `solver_api.features.hints.service`; `solver_api.features.identity.verification`; `solver_api.features.submissions.store`; `solver_api.http.body_limit`; `solver_api.http.errors`; `starlette.exceptions`; `typing`; `uuid` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/__init__.py) | Package marker stating that learner programs are never executed by this service. |
+| [main.py](services/api/solver_api/main.py) | Compose FastAPI routes, request IDs/errors, public catalog, authenticated hints/history and worker-only control endpoints. |
 
 </details>
 
@@ -2094,9 +2140,9 @@ Stable API entry point composing feature modules and shared HTTP behavior.
 
 Server feature boundaries for catalog, authored hints, fixed identity verification and owned submissions.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/features/__init__.py) | Empty Python package marker for the features functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/features/__init__.py) | Empty Python package marker for the features functional domain; no initialization side effects. |
 
 </details>
 
@@ -2105,11 +2151,11 @@ Server feature boundaries for catalog, authored hints, fixed identity verificati
 
 Original public problem content and validated catalog response models.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/features/catalog/__init__.py) | Empty Python package marker for the catalog functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [content.py](services/api/solver_api/features/catalog/content.py) | Define three original public exercises including statements, two samples, Python/C++ starter templates and three authored hints. Feature/owner: public catalog. | `solver_api.features.catalog.models` |
-| [models.py](services/api/solver_api/features/catalog/models.py) | Immutable public catalog/summary/sample/starter/provenance/error response models. Feature/owner: public contracts. | `pydantic`; `typing` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/features/catalog/__init__.py) | Empty Python package marker for the catalog functional domain; no initialization side effects. |
+| [content.py](services/api/solver_api/features/catalog/content.py) | Define three original public exercises including statements, two samples, Python/C++ starter templates and three authored hints. |
+| [models.py](services/api/solver_api/features/catalog/models.py) | Immutable public catalog/summary/sample/starter/provenance/error response models. |
 
 </details>
 
@@ -2118,10 +2164,10 @@ Original public problem content and validated catalog response models.
 
 Authenticated authored-hint contract and a bounded future-provider interface without real model inference.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/features/hints/__init__.py) | Empty Python package marker for the hints functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [service.py](services/api/solver_api/features/hints/service.py) | Strict versioned authenticated hint contracts, public-only model boundary, truthful provenance, authored backend and timeout/error handling. Feature/owner: offline authored hints. | `asyncio`; `os`; `pydantic`; `solver_api.features.catalog.content`; `solver_api.features.catalog.models`; `solver_api.http.errors`; `typing` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/features/hints/__init__.py) | Empty Python package marker for the hints functional domain; no initialization side effects. |
+| [service.py](services/api/solver_api/features/hints/service.py) | Strict versioned authenticated hint contracts, public-only model boundary, truthful provenance, authored backend and timeout/error handling. |
 
 </details>
 
@@ -2130,10 +2176,10 @@ Authenticated authored-hint contract and a bounded future-provider interface wit
 
 Fixed-issuer and fixed-JWKS bearer authentication for account-owned API access.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/features/identity/__init__.py) | Empty Python package marker for the identity functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [verification.py](services/api/solver_api/features/identity/verification.py) | Verify bounded Bearer JWTs against fixed configured Ed25519 JWKS with issuer, audience, subject, use, expiry and refresh controls. Feature/owner: identity. | `asyncio`; `dataclasses`; `fastapi`; `httpx`; `json`; `jwt`; `os`; `re`; `solver_api.http.errors`; `time`; `urllib.parse` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/features/identity/__init__.py) | Empty Python package marker for the identity functional domain; no initialization side effects. |
+| [verification.py](services/api/solver_api/features/identity/verification.py) | Verify bounded Bearer JWTs against fixed configured Ed25519 JWKS with issuer, audience, subject, use, expiry and refresh controls. |
 
 </details>
 
@@ -2142,10 +2188,10 @@ Fixed-issuer and fixed-JWKS bearer authentication for account-owned API access.
 
 Durable owned SQLite jobs, source history, quotas, idempotency and worker lease completion.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/features/submissions/__init__.py) | Empty Python package marker for the submissions functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [store.py](services/api/solver_api/features/submissions/store.py) | Persist owned SQLite submissions and source, enforce idempotency/quotas, advertise worker capabilities and issue/complete atomic expiring leases. Feature/owner: owned durable judge queue. | `collections.abc`; `contextlib`; `datetime`; `functools`; `hashlib`; `json`; `os`; `pathlib`; `pydantic`; `secrets`; `solver_api.http.errors`; `sqlite3`; `time`; `typing`; `uuid` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/features/submissions/__init__.py) | Empty Python package marker for the submissions functional domain; no initialization side effects. |
+| [store.py](services/api/solver_api/features/submissions/store.py) | Persist owned SQLite submissions and source, enforce idempotency/quotas, advertise worker capabilities and issue/complete atomic expiring leases. |
 
 </details>
 
@@ -2154,11 +2200,11 @@ Durable owned SQLite jobs, source history, quotas, idempotency and worker lease 
 
 Shared bounded request bodies, correlated safe error handling and HTTP support.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/api/solver_api/http/__init__.py) | Empty Python package marker for the http functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [body_limit.py](services/api/solver_api/http/body_limit.py) | ASGI middleware bounding declared/streamed HTTP request bytes to 128 KiB and receive duration to ten seconds. Feature/owner: request resource limits. | `asyncio`; `starlette.responses`; `starlette.types`; `uuid` |
-| [errors.py](services/api/solver_api/http/errors.py) | Represent deliberately public status/code/message/header errors without exposing internal details. Feature/owner: safe errors. | `Python Exception` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/api/solver_api/http/__init__.py) | Empty Python package marker for the http functional domain; no initialization side effects. |
+| [body_limit.py](services/api/solver_api/http/body_limit.py) | ASGI middleware bounding declared/streamed HTTP request bytes to 128 KiB and receive duration to ten seconds. |
+| [errors.py](services/api/solver_api/http/errors.py) | Represent deliberately public status/code/message/header errors without exposing internal details. |
 
 </details>
 
@@ -2167,9 +2213,9 @@ Shared bounded request bodies, correlated safe error handling and HTTP support.
 
 Catalog and shared request or error contract tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_api.py](services/api/tests/catalog/test_api.py) | Exercise real routes, catalog filtering/pagination, data provenance, sample oracles, safe errors, authentication requirement and OpenAPI presence. Feature/owner: API regression tests. | `fastapi.testclient`; `pytest`; `re`; `solver_api.main` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_api.py](services/api/tests/catalog/test_api.py) | Exercise real routes, catalog filtering/pagination, data provenance, sample oracles, safe errors, authentication requirement and OpenAPI presence. |
 
 </details>
 
@@ -2178,9 +2224,9 @@ Catalog and shared request or error contract tests.
 
 Authored-hint authentication, provenance, provider-boundary and failure-contract tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_hints.py](services/api/tests/hints/test_hints.py) | Exercise authored hints, provenance, invalid/injected input, authentication, public-only context, size limits, provider failures and timeout. Feature/owner: offline hint regression tests. | `asyncio`; `cryptography.hazmat.primitives`; `cryptography.hazmat.primitives.asymmetric.ed25519`; `fastapi.testclient`; `jwt`; `pytest`; `solver_api.features.hints`; `solver_api.features.identity`; `solver_api.main`; `time` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_hints.py](services/api/tests/hints/test_hints.py) | Exercise authored hints, provenance, invalid/injected input, authentication, public-only context, size limits, provider failures and timeout. |
 
 </details>
 
@@ -2189,9 +2235,9 @@ Authored-hint authentication, provenance, provider-boundary and failure-contract
 
 JWT, JWKS, issuer and authentication-boundary tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_auth.py](services/api/tests/identity/test_auth.py) | Exercise real Ed25519 JWTs and fixed JWKS logic: claims, header attacks, rotation, cache cooldown/failures and concurrency. Feature/owner: identity regression tests. | `asyncio`; `cryptography.hazmat.primitives`; `cryptography.hazmat.primitives.asymmetric.ed25519`; `httpx`; `jwt`; `pytest`; `solver_api.features.identity`; `solver_api.http.errors`; `starlette.requests`; `time` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_auth.py](services/api/tests/identity/test_auth.py) | Exercise real Ed25519 JWTs and fixed JWKS logic: claims, header attacks, rotation, cache cooldown/failures and concurrency. |
 
 </details>
 
@@ -2200,9 +2246,9 @@ JWT, JWKS, issuer and authentication-boundary tests.
 
 Ownership, durable queue, quotas, idempotency, lease and completion regression tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_submissions.py](services/api/tests/submissions/test_submissions.py) | Exercise persistence, ownership, source/body limits, idempotency, quotas, atomic leasing/completion, expiry and worker authentication. Feature/owner: queue and worker regression tests. | `concurrent.futures`; `cryptography.hazmat.primitives`; `cryptography.hazmat.primitives.asymmetric.ed25519`; `fastapi.testclient`; `jwt`; `os`; `pytest`; `solver_api.features.identity`; `solver_api.features.submissions.store`; `solver_api.main`; `sqlite3`; `time`; `uuid` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_submissions.py](services/api/tests/submissions/test_submissions.py) | Exercise persistence, ownership, source/body limits, idempotency, quotas, atomic leasing/completion, expiry and worker authentication. |
 
 </details>
 
@@ -2211,12 +2257,12 @@ Ownership, durable queue, quotas, idempotency, lease and completion regression t
 
 Trusted host judge controller, sandbox image definition and independently gated execution tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [.dockerignore](services/judge/.dockerignore) | Exclude caches, virtualenv and tests from sandbox image context Feature/owner: sandbox packaging. | — |
-| [Dockerfile](services/judge/Dockerfile) | Build nonroot Python/C++17 supervisor image from digest-pinned Python base with signed Debian compiler packages Feature/owner: sandbox packaging. | `python:3.12-slim-bookworm pinned digest`; `Debian apt repositories/g++`; `solver_judge/harness.py`; `solver_judge/bounded.py` |
-| [UPSTREAM_REVIEW.md](services/judge/UPSTREAM_REVIEW.md) | Record runtime selection, installed gVisor age, limits, boundary and finite checks Feature/owner: judge architecture/governance. | `gVisor runtime`; `docs/PROJECT_STATUS.md` |
-| [pytest.ini](services/judge/pytest.ini) | Configure judge Python import and test roots Feature/owner: judge validation. | `pytest`; `services/api development environment` |
+| File | Purpose / feature |
+| --- | --- |
+| [.dockerignore](services/judge/.dockerignore) | Exclude caches, virtualenv and tests from sandbox image context |
+| [Dockerfile](services/judge/Dockerfile) | Build nonroot Python/C++17 supervisor image from digest-pinned Python base with signed Debian compiler packages |
+| [UPSTREAM_REVIEW.md](services/judge/UPSTREAM_REVIEW.md) | Record runtime selection, installed gVisor age, limits, boundary and finite checks |
+| [pytest.ini](services/judge/pytest.ini) | Configure judge Python import and test roots |
 
 </details>
 
@@ -2225,10 +2271,10 @@ Trusted host judge controller, sandbox image definition and independently gated 
 
 Judge control, grading and restricted-program modules with deliberately shared bounded process transport.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/judge/solver_judge/__init__.py) | Mark trusted judge controller package Feature/owner: judge package. | — |
-| [bounded.py](services/judge/solver_judge/bounded.py) | Supervise trusted control or sandbox processes using bounded nonblocking stdin/stdout/stderr, deadlines and process-group cleanup Feature/owner: bounded process transport. | `collections.abc`; `dataclasses`; `os`; `selectors`; `signal`; `subprocess`; `time` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/judge/solver_judge/__init__.py) | Mark trusted judge controller package |
+| [bounded.py](services/judge/solver_judge/bounded.py) | Supervise trusted control or sandbox processes using bounded nonblocking stdin/stdout/stderr, deadlines and process-group cleanup |
 
 </details>
 
@@ -2237,12 +2283,12 @@ Judge control, grading and restricted-program modules with deliberately shared b
 
 Trusted Docker and gVisor runner, worker lifecycle and read-only readiness diagnostics.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/judge/solver_judge/control/__init__.py) | Empty Python package marker for the control functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [diagnostics.py](services/judge/solver_judge/control/diagnostics.py) | Run finite sandbox preflight and print controlled readiness/check fields Feature/owner: judge readiness. | `json`; `os`; `solver_judge.control.runner` |
-| [runner.py](services/judge/solver_judge/control/runner.py) | Resolve immutable image identity, require rootless runsc, create per-job isolated containers, validate protocol and grade outputs externally Feature/owner: gVisor control and grading. | `base64`; `json`; `os`; `solver_judge.bounded`; `solver_judge.grading.cases`; `subprocess`; `threading`; `uuid` |
-| [worker.py](services/judge/solver_judge/control/worker.py) | Validate leased jobs and trusted API origin, maintain readiness heartbeat, run one lease at a time, sanitize completion and handle shutdown Feature/owner: leased judge worker. | `__future__`; `ipaddress`; `json`; `logging`; `os`; `signal`; `solver_judge.control.runner`; `threading`; `typing`; `urllib.error`; `urllib.parse`; `urllib.request`; `uuid` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/judge/solver_judge/control/__init__.py) | Empty Python package marker for the control functional domain; no initialization side effects. |
+| [diagnostics.py](services/judge/solver_judge/control/diagnostics.py) | Run finite sandbox preflight and print controlled readiness/check fields |
+| [runner.py](services/judge/solver_judge/control/runner.py) | Resolve immutable image identity, require rootless runsc, create per-job isolated containers, validate protocol and grade outputs externally |
+| [worker.py](services/judge/solver_judge/control/worker.py) | Validate leased jobs and trusted API origin, maintain readiness heartbeat, run one lease at a time, sanitize completion and handle shutdown |
 
 </details>
 
@@ -2251,10 +2297,10 @@ Trusted Docker and gVisor runner, worker lifecycle and read-only readiness diagn
 
 Original problem grading cases and trusted expected-answer computations kept outside learner programs.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/judge/solver_judge/grading/__init__.py) | Empty Python package marker for the grading functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [cases.py](services/judge/solver_judge/grading/cases.py) | Provide three original problem oracles, two public examples and six bounded generated submission cases per problem Feature/owner: grading cases. | `collections`; `dataclasses`; `random`; `secrets` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/judge/solver_judge/grading/__init__.py) | Empty Python package marker for the grading functional domain; no initialization side effects. |
+| [cases.py](services/judge/solver_judge/grading/cases.py) | Provide three original problem oracles, two public examples and six bounded generated submission cases per problem |
 
 </details>
 
@@ -2263,10 +2309,10 @@ Original problem grading cases and trusted expected-answer computations kept out
 
 Restricted learner-program supervisor copied into the isolated sandbox image.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [__init__.py](services/judge/solver_judge/sandbox/__init__.py) | Empty Python package marker for the sandbox functional domain; no initialization side effects. Feature/owner: functional organization and explicit ownership. | — |
-| [harness.py](services/judge/solver_judge/sandbox/harness.py) | Trusted image entrypoint that validates source/input bounds, compiles Python/C++17, applies rlimits and emits one bounded response Feature/owner: isolated execution. | `base64`; `bounded`; `json`; `os`; `pathlib`; `resource`; `signal`; `subprocess`; `sys` |
+| File | Purpose / feature |
+| --- | --- |
+| [__init__.py](services/judge/solver_judge/sandbox/__init__.py) | Empty Python package marker for the sandbox functional domain; no initialization side effects. |
+| [harness.py](services/judge/solver_judge/sandbox/harness.py) | Trusted image entrypoint that validates source/input bounds, compiles Python/C++17, applies rlimits and emits one bounded response |
 
 </details>
 
@@ -2275,10 +2321,10 @@ Restricted learner-program supervisor copied into the isolated sandbox image.
 
 Runner protocol, worker leasing and container lifecycle cleanup regression tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_runner.py](services/judge/tests/control/test_runner.py) | Mock sandbox exchange to test no expected-answer transmission, protocol failure, count/output/exit validation and no runc fallback Feature/owner: control protocol validation. | `base64`; `json`; `pytest`; `solver_judge.bounded`; `solver_judge.control.runner`; `unittest.mock` |
-| [test_worker.py](services/judge/tests/control/test_worker.py) | Use fakes/local HTTP to check lease validation, retry, startup readiness, shutdown, response limits and no bearer redirects Feature/owner: worker transport validation. | `http.server`; `json`; `pytest`; `solver_judge.control.worker`; `threading`; `time`; `unittest.mock`; `uuid` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_runner.py](services/judge/tests/control/test_runner.py) | Mock sandbox exchange to test no expected-answer transmission, protocol failure, count/output/exit validation and no runc fallback |
+| [test_worker.py](services/judge/tests/control/test_worker.py) | Use fakes/local HTTP to check lease validation, retry, startup readiness, shutdown, response limits and no bearer redirects |
 
 </details>
 
@@ -2287,9 +2333,9 @@ Runner protocol, worker leasing and container lifecycle cleanup regression tests
 
 Deterministic original grading-case and expected-answer checks.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_cases.py](services/judge/tests/grading/test_cases.py) | Check oracle correctness, public/generated bounds, deterministic test seed and failure cases Feature/owner: grading validation. | `pytest`; `random`; `solver_judge.grading.cases` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_cases.py](services/judge/tests/grading/test_cases.py) | Check oracle correctness, public/generated bounds, deterministic test seed and failure cases |
 
 </details>
 
@@ -2298,10 +2344,10 @@ Deterministic original grading-case and expected-answer checks.
 
 Bounded process transport checks and explicitly enabled live gVisor isolation tests.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_bounded.py](services/judge/tests/sandbox/test_bounded.py) | Exercise fixed trusted probes for output cap, deadline and nonblocking large input Feature/owner: bounded process validation. | `solver_judge.bounded`; `sys` |
-| [test_sandbox.py](services/judge/tests/sandbox/test_sandbox.py) | Opt-in real gVisor integration fixtures: three Python AC, C++64-bit AC, WA/CE/RE/TLE/OLE, isolation, forged output, supervisor kill and tmpfs quota Feature/owner: sandbox validation. | `os`; `pytest`; `solver_judge.control.runner` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_bounded.py](services/judge/tests/sandbox/test_bounded.py) | Exercise fixed trusted probes for output cap, deadline and nonblocking large input |
+| [test_sandbox.py](services/judge/tests/sandbox/test_sandbox.py) | Opt-in real gVisor integration fixtures: three Python AC, C++64-bit AC, WA/CE/RE/TLE/OLE, isolation, forged output, supervisor kill and tmpfs quota |
 
 </details>
 
@@ -2310,9 +2356,9 @@ Bounded process transport checks and explicitly enabled live gVisor isolation te
 
 Guest and authenticated hint provenance, failure, timeout, cancellation and context-change browser checks.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [hints.spec.ts](tests/e2e/hints/hints.spec.ts) | Seven browser regressions for guest hints, JWT-backed authored results, provenance, safe failure/recovery, timeout, explicit cancellation and level-change abort; one read-only hint account per worker with fresh per-test signin sessions. Feature/owner: authenticated authored hint browser validation. | `../../../apps/web/features/hints/api`; `@playwright/test` |
+| File | Purpose / feature |
+| --- | --- |
+| [hints.spec.ts](tests/e2e/hints/hints.spec.ts) | Seven browser regressions for guest hints, JWT-backed authored results, provenance, safe failure/recovery, timeout, explicit cancellation and level-change abort; one read-only hint account per worker with fresh per-test signin sessions. |
 
 </details>
 
@@ -2321,10 +2367,10 @@ Guest and authenticated hint provenance, failure, timeout, cancellation and cont
 
 Catalog, editor, draft privacy, layout and API resilience browser checks.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [practice.spec.ts](tests/e2e/practice/practice.spec.ts) | 7 browser tests: catalog filters, local Monaco, isolated drafts, errors, fallback/retry and responsive layout Feature/owner: practice. | `@playwright/test` |
-| [resilience.spec.ts](tests/e2e/practice/resilience.spec.ts) | 6 API-client/browser resilience tests for malformed bodies, timeout and cancellation Feature/owner: practice. | `../../../apps/web/features/practice/api`; `@playwright/test` |
+| File | Purpose / feature |
+| --- | --- |
+| [practice.spec.ts](tests/e2e/practice/practice.spec.ts) | 7 browser tests: catalog filters, local Monaco, isolated drafts, errors, fallback/retry and responsive layout |
+| [resilience.spec.ts](tests/e2e/practice/resilience.spec.ts) | 6 API-client/browser resilience tests for malformed bodies, timeout and cancellation |
 
 </details>
 
@@ -2333,9 +2379,9 @@ Catalog, editor, draft privacy, layout and API resilience browser checks.
 
 Account lifecycle, explicit isolated judging and cross-user private-history browser checks.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [submissions.spec.ts](tests/e2e/submissions/submissions.spec.ts) | 5 browser tests for accounts, safe redirect, guest privacy, unavailable judge and real private submission flow Feature/owner: submissions. | `@playwright/test` |
+| File | Purpose / feature |
+| --- | --- |
+| [submissions.spec.ts](tests/e2e/submissions/submissions.spec.ts) | 5 browser tests for accounts, safe redirect, guest privacy, unavailable judge and real private submission flow |
 
 </details>
 
@@ -2344,16 +2390,16 @@ Account lifecycle, explicit isolated judging and cross-user private-history brow
 
 Fake-client issue-publication and pull-request evidence safety checks without real GitHub writes.
 
-| File | Purpose / feature | Direct imports or recorded dependencies |
-| --- | --- | --- |
-| [test_pr_evidence.py](tests/tooling/github/test_pr_evidence.py) | Offline evidence validation, malformed input, stale heads, dependency and injection regressions. Feature/owner: PR evidence and reviewed contribution workflow. | `copy`; `importlib.util`; `json`; `pathlib`; `pytest`; `sys` |
-| [test_publish_issues.py](tests/tooling/github/test_publish_issues.py) | Safety regressions for bulk issue posting; all external requests replaced by fake clients. Feature/owner: ordered implementation and reviewed contribution workflow. | `importlib.util`; `json`; `pathlib`; `pytest`; `sys`; `types` |
+| File | Purpose / feature |
+| --- | --- |
+| [test_pr_evidence.py](tests/tooling/github/test_pr_evidence.py) | Offline evidence validation, malformed input, stale heads, dependency and injection regressions. |
+| [test_publish_issues.py](tests/tooling/github/test_publish_issues.py) | Safety regressions for bulk issue posting; all external requests replaced by fake clients. |
 
 </details>
 
 ## Ordered task index
 
-**127 detailed tasks: 126 pending, 1 completed locally.** Preserve stable IDs and use the execution order below. Completion requires observed acceptance/validation evidence; a task card or generated file is not completion.
+**141 detailed tasks: 140 pending, 1 completed locally.** Preserve stable IDs and use the execution order below. Completion requires observed acceptance/validation evidence; a task card or generated file is not completion.
 
 Actual GitHub publication receipt: **blocked_network**; **0** confirmed remote issue links. Until access is restored, assign and reference these local cards.
 
@@ -2486,6 +2532,20 @@ Actual GitHub publication receipt: **blocked_network**; **0** confirmed remote i
 | 125 | [SAI-B078](#sai-b078): Register dataset and model permissions separately from source licenses | Pending | P1 | Research provenance / AI-4 evaluation and research gates | [SAI-B041](#sai-b041), [SAI-B068](#sai-b068), [SAI-B077](#sai-b077), [SAI-B002](#sai-b002), [SAI-B026](#sai-b026), [SAI-B001](#sai-b001) |
 | 126 | [SAI-B079](#sai-b079): Produce a resource-and-integrity feasibility decision for one self-hosted model | Pending | P2 | Model serving research gate / AI-4 evaluation and research gates | [SAI-B074](#sai-b074), [SAI-B078](#sai-b078), [SAI-B001](#sai-b001) |
 | 127 | [SAI-B080](#sai-b080): Add an explicit admission gate for reproducible fine-tuning experiments | Pending | P1 | Fine-tuning research controls / AI-4 evaluation and research gates | [SAI-B074](#sai-b074), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B079](#sai-b079), [SAI-B001](#sai-b001) |
+| 128 | [SAI-B128](#sai-b128): Implement a declared DSA coverage matrix and preregistered model release measurements | Pending | P1 | solver-readiness / ML-1 measured scope and baseline | [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078) |
+| 129 | [SAI-B129](#sai-b129): Run an approved untuned checkpoint comparison and record a future selection | Pending | P1 | model-baseline / ML-1 measured scope and baseline | [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B078](#sai-b078), [SAI-B079](#sai-b079), [SAI-B128](#sai-b128) |
+| 130 | [SAI-B130](#sai-b130): Materialize a permitted validated training corpus with immutable split lineage | Pending | P1 | training-data / ML-2 approved data and training tooling | [SAI-B001](#sai-b001), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B128](#sai-b128) |
+| 131 | [SAI-B131](#sai-b131): Create a separate locked training environment and reviewed artifact loader | Pending | P1 | training-infrastructure / ML-2 approved data and training tooling | [SAI-B001](#sai-b001), [SAI-B079](#sai-b079), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129) |
+| 132 | [SAI-B132](#sai-b132): Implement tokenizer-aware SFT examples and answer-only loss masking | Pending | P1 | training-preprocessing / ML-2 approved data and training tooling | [SAI-B001](#sai-b001), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131) |
+| 133 | [SAI-B133](#sai-b133): Run an approved external LoRA smoke experiment with stop and resume evidence | Pending | P1 | training-smoke / ML-3 actual approved training | [SAI-B001](#sai-b001), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132) |
+| 134 | [SAI-B134](#sai-b134): Execute the approved bounded SFT adapter training campaign | Pending | P1 | actual-fine-tuning / ML-3 actual approved training | [SAI-B001](#sai-b001), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133) |
+| 135 | [SAI-B135](#sai-b135): Publish immutable private model artifacts and complete adapter lineage | Pending | P1 | model-artifacts / ML-3 actual approved training | [SAI-B001](#sai-b001), [SAI-B078](#sai-b078), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B134](#sai-b134) |
+| 136 | [SAI-B136](#sai-b136): Evaluate tuned candidates against matched baselines and enforce category gates | Pending | P1 | model-promotion-evaluation / ML-4 evaluation and delivery | [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B128](#sai-b128), [SAI-B129](#sai-b129), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135) |
+| 137 | [SAI-B137](#sai-b137): Qualify inference export and quantization at the deployed precision | Pending | P1 | inference-qualification / ML-4 evaluation and delivery | [SAI-B001](#sai-b001), [SAI-B079](#sai-b079), [SAI-B128](#sai-b128), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136) |
+| 138 | [SAI-B138](#sai-b138): Integrate the qualified trained artifact with bounded provider-neutral serving | Pending | P1 | trained-model-serving / ML-4 evaluation and delivery | [SAI-B001](#sai-b001), [SAI-B043](#sai-b043), [SAI-B044](#sai-b044), [SAI-B046](#sai-b046), [SAI-B050](#sai-b050), [SAI-B051](#sai-b051), [SAI-B054](#sai-b054), [SAI-B055](#sai-b055), [SAI-B057](#sai-b057), [SAI-B079](#sai-b079), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B137](#sai-b137) |
+| 139 | [SAI-B139](#sai-b139): Promote a trained model through a limited pilot and rehearsed rollback | Pending | P1 | trained-model-release / ML-4 evaluation and delivery | [SAI-B001](#sai-b001), [SAI-B003](#sai-b003), [SAI-B057](#sai-b057), [SAI-B059](#sai-b059), [SAI-B110](#sai-b110), [SAI-B124](#sai-b124), [SAI-B126](#sai-b126), [SAI-B128](#sai-b128), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B137](#sai-b137), [SAI-B138](#sai-b138) |
+| 140 | [SAI-B140](#sai-b140): Run a separately approved execution-reward preference or RL experiment | Pending | P2 | optional-model-research / ML-5 conditional improvement research | [SAI-B001](#sai-b001), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B080](#sai-b080), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136) |
+| 141 | [SAI-B141](#sai-b141): Operate a consented failure-analysis and retraining improvement cycle | Pending | P2 | model-lifecycle / ML-5 conditional improvement research | [SAI-B001](#sai-b001), [SAI-B003](#sai-b003), [SAI-B063](#sai-b063), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B139](#sai-b139) |
 
 ## Complete task specifications
 
@@ -2494,8 +2554,6 @@ All scope, acceptance, validation, exclusions and review risks from the canonica
 <a id="sai-b001"></a>
 <details>
 <summary>1. SAI-B001: Enforce an evidence contract for contributor pull requests [completed_locally]</summary>
-
-**Canonical card:** [SAI-B001](docs/engineering/backlog/issues/SAI-B001.md).
 
 **Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** foundation.
 
@@ -2550,8 +2608,6 @@ Untrusted PR text must remain data, and evidence completeness must not be presen
 <details>
 <summary>2. SAI-B127: Enforce owner-approved reviewed-merge rules for the main branch [pending]</summary>
 
-**Canonical card:** [SAI-B127](docs/engineering/backlog/issues/SAI-B127.md).
-
 **Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** repository governance.
 
 **Suggested role:** Repository owner and designated security reviewer.
@@ -2601,8 +2657,6 @@ Incorrect rules can block maintainers or leave unreviewed writes possible. Owner
 <a id="sai-b002"></a>
 <details>
 <summary>3. SAI-B002: Record owner-approved original-code licensing and inbound contribution rights [pending]</summary>
-
-**Canonical card:** [SAI-B002](docs/engineering/backlog/issues/SAI-B002.md).
 
 **Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** governance.
 
@@ -2654,8 +2708,6 @@ An assistant cannot invent licensing consent or assign rights it does not own.
 <details>
 <summary>4. SAI-B003: Approve a small pilot charter and data lifecycle contract [pending]</summary>
 
-**Canonical card:** [SAI-B003](docs/engineering/backlog/issues/SAI-B003.md).
-
 **Priority:** P0 · **Phase:** 0-contribution-gates · **Area:** product.
 
 **Suggested role:** project owner and privacy/product reviewer.
@@ -2706,8 +2758,6 @@ Policy choices affect irreversible deletion and public trust; engineering must f
 <details>
 <summary>5. SAI-B004: Pin CI actions to immutable reviewed commits [pending]</summary>
 
-**Canonical card:** [SAI-B004](docs/engineering/backlog/issues/SAI-B004.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** supply-chain.
 
 **Suggested role:** release engineer.
@@ -2755,8 +2805,6 @@ Incorrect action provenance can install a malicious implementation; digest updat
 <a id="sai-b005"></a>
 <details>
 <summary>6. SAI-B005: Pin web and API container bases and align intended Python patch versions [pending]</summary>
-
-**Canonical card:** [SAI-B005](docs/engineering/backlog/issues/SAI-B005.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** supply-chain.
 
@@ -2810,8 +2858,6 @@ Image updates may change OS libraries or runtime behavior; preserve rollback dig
 <details>
 <summary>7. SAI-B006: Reject plaintext external identity and worker transport configuration [pending]</summary>
 
-**Canonical card:** [SAI-B006](docs/engineering/backlog/issues/SAI-B006.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** deployment-security.
 
 **Suggested role:** backend security engineer.
@@ -2863,8 +2909,6 @@ A broad private-network exception would recreate the gap; explicit development e
 <details>
 <summary>8. SAI-B007: Add a total JWKS fetch deadline with real transport fixtures [pending]</summary>
 
-**Canonical card:** [SAI-B007](docs/engineering/backlog/issues/SAI-B007.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
 
 **Suggested role:** backend identity engineer.
@@ -2911,8 +2955,6 @@ Cancellation and cache-state changes can accidentally deny all users or accept s
 <a id="sai-b008"></a>
 <details>
 <summary>9. SAI-B008: Describe protected endpoints with an accurate OpenAPI bearer scheme [pending]</summary>
-
-**Canonical card:** [SAI-B008](docs/engineering/backlog/issues/SAI-B008.md).
 
 **Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** api-contract.
 
@@ -2962,8 +3004,6 @@ Convenience helpers can mask duplicate headers or bypass the existing verifier; 
 <a id="sai-b009"></a>
 <details>
 <summary>10. SAI-B009: Validate production worker credential strength before enabling internal routes [pending]</summary>
-
-**Canonical card:** [SAI-B009](docs/engineering/backlog/issues/SAI-B009.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** worker-auth.
 
@@ -3016,8 +3056,6 @@ Overly broad validation could break deliberate no-judge development; disabled mo
 <details>
 <summary>11. SAI-B010: Support bounded worker bearer rotation without an outage [pending]</summary>
 
-**Canonical card:** [SAI-B010](docs/engineering/backlog/issues/SAI-B010.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** worker-auth.
 
 **Suggested role:** backend engineer and deployment operator.
@@ -3068,8 +3106,6 @@ A permissive grace window can preserve a compromised key; require operator-contr
 <details>
 <summary>12. SAI-B011: Introduce an explicit trusted-ingress identity throttle policy [pending]</summary>
 
-**Canonical card:** [SAI-B011](docs/engineering/backlog/issues/SAI-B011.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
 
 **Suggested role:** identity/platform engineer.
@@ -3118,8 +3154,6 @@ Trusting client-controlled IP headers weakens existing defenses; proxy provenanc
 <a id="sai-b012"></a>
 <details>
 <summary>13. SAI-B012: Create a consistent private backup and restore procedure for both stores [pending]</summary>
-
-**Canonical card:** [SAI-B012](docs/engineering/backlog/issues/SAI-B012.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** storage-operations.
 
@@ -3173,8 +3207,6 @@ Backups contain credentials and source; accidental publication or destructive re
 <details>
 <summary>14. SAI-B013: Introduce versioned transactional migrations for the submission database [pending]</summary>
 
-**Canonical card:** [SAI-B013](docs/engineering/backlog/issues/SAI-B013.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** storage.
 
 **Suggested role:** backend storage engineer.
@@ -3223,8 +3255,6 @@ Schema mistakes can corrupt private history; require backup and real old-schema 
 <a id="sai-b014"></a>
 <details>
 <summary>15. SAI-B014: Add a testable email-verification delivery flow for pilot accounts [pending]</summary>
-
-**Canonical card:** [SAI-B014](docs/engineering/backlog/issues/SAI-B014.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
 
@@ -3277,8 +3307,6 @@ Mail links and logs can leak account tokens; use fixture delivery and library-su
 <details>
 <summary>16. SAI-B015: Implement password recovery with bounded single-use reset links [pending]</summary>
 
-**Canonical card:** [SAI-B015](docs/engineering/backlog/issues/SAI-B015.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** identity.
 
 **Suggested role:** identity engineer.
@@ -3328,8 +3356,6 @@ Enumeration and reset-link leakage can turn recovery into account takeover; use 
 <a id="sai-b016"></a>
 <details>
 <summary>17. SAI-B016: Expose owned session listing and revoke-other-sessions controls [pending]</summary>
-
-**Canonical card:** [SAI-B016](docs/engineering/backlog/issues/SAI-B016.md).
 
 **Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** identity.
 
@@ -3382,8 +3408,6 @@ Session metadata is sensitive, and stale browser state must not cross identities
 <details>
 <summary>18. SAI-B017: Record privacy-safe account security events [pending]</summary>
 
-**Canonical card:** [SAI-B017](docs/engineering/backlog/issues/SAI-B017.md).
-
 **Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** identity-observability.
 
 **Suggested role:** identity engineer and privacy reviewer.
@@ -3432,8 +3456,6 @@ Additional audit data creates privacy and storage obligations; collect the small
 <a id="sai-b018"></a>
 <details>
 <summary>19. SAI-B018: Implement deliberate account deletion across auth and owned submission state [pending]</summary>
-
-**Canonical card:** [SAI-B018](docs/engineering/backlog/issues/SAI-B018.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** privacy.
 
@@ -3487,8 +3509,6 @@ Deletion is destructive and spans two stores; fixtures and failure recovery must
 <details>
 <summary>20. SAI-B019: Bound general API admission and concurrent slow requests [pending]</summary>
 
-**Canonical card:** [SAI-B019](docs/engineering/backlog/issues/SAI-B019.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** ingress-security.
 
 **Suggested role:** API/platform engineer.
@@ -3538,8 +3558,6 @@ An in-process cap is not a global multi-replica budget; document deployment scop
 <a id="sai-b020"></a>
 <details>
 <summary>21. SAI-B020: Add structured redacted request and failure logs [pending]</summary>
-
-**Canonical card:** [SAI-B020](docs/engineering/backlog/issues/SAI-B020.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** operations.
 
@@ -3591,8 +3609,6 @@ Logs are another data export channel; redaction must be tested before deployment
 <details>
 <summary>22. SAI-B021: Expose private bounded operational readiness and queue metrics [pending]</summary>
 
-**Canonical card:** [SAI-B021](docs/engineering/backlog/issues/SAI-B021.md).
-
 **Priority:** P2 · **Phase:** 1-safe-pilot · **Area:** operations.
 
 **Suggested role:** platform/backend engineer.
@@ -3641,8 +3657,6 @@ Operator endpoints can expose sensitive topology and state; require a separate c
 <a id="sai-b022"></a>
 <details>
 <summary>23. SAI-B022: Apply retention to terminal submission source with a dry-run purge [pending]</summary>
-
-**Canonical card:** [SAI-B022](docs/engineering/backlog/issues/SAI-B022.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** privacy-storage.
 
@@ -3694,8 +3708,6 @@ Retention is deliberate destruction; ensure policy, exclusions and backup behavi
 <details>
 <summary>24. SAI-B023: Enforce cumulative owned-source storage budgets at submission admission [pending]</summary>
 
-**Canonical card:** [SAI-B023](docs/engineering/backlog/issues/SAI-B023.md).
-
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** storage-abuse.
 
 **Suggested role:** backend storage engineer.
@@ -3744,8 +3756,6 @@ Accounting races can bypass budgets or reject valid replay; enforce charging in 
 <details>
 <summary>25. SAI-B024: Avoid loading private source for submission summary pages [pending]</summary>
 
-**Canonical card:** [SAI-B024](docs/engineering/backlog/issues/SAI-B024.md).
-
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** storage-performance.
 
 **Suggested role:** backend engineer.
@@ -3792,8 +3802,6 @@ Summary optimization must not bypass expiry/ownership checks or change determini
 <a id="sai-b025"></a>
 <details>
 <summary>26. SAI-B025: Export an authenticated user-owned submission history bundle [pending]</summary>
-
-**Canonical card:** [SAI-B025](docs/engineering/backlog/issues/SAI-B025.md).
 
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** privacy-product.
 
@@ -3846,8 +3854,6 @@ Exports are private source artifacts; owner authorization, response limits and c
 <details>
 <summary>27. SAI-B026: Extend problem provenance with explicit permitted-use metadata [pending]</summary>
 
-**Canonical card:** [SAI-B026](docs/engineering/backlog/issues/SAI-B026.md).
-
 **Priority:** P1 · **Phase:** 2-useful-practice · **Area:** content.
 
 **Suggested role:** content engineer and rights reviewer.
@@ -3898,8 +3904,6 @@ Rights metadata is a recorded authorization, not automatic legal clearance; owne
 <a id="sai-b027"></a>
 <details>
 <summary>28. SAI-B027: Version problem and grader identity on every new submission [pending]</summary>
-
-**Canonical card:** [SAI-B027](docs/engineering/backlog/issues/SAI-B027.md).
 
 **Priority:** P1 · **Phase:** 2-useful-practice · **Area:** content-contract.
 
@@ -3952,8 +3956,6 @@ Revision mismatches can silently invalidate verdicts; worker/API identity must b
 <details>
 <summary>29. SAI-B028: Detect public-sample drift between catalog and judge deployments [pending]</summary>
 
-**Canonical card:** [SAI-B028](docs/engineering/backlog/issues/SAI-B028.md).
-
 **Priority:** P1 · **Phase:** 2-useful-practice · **Area:** content-quality.
 
 **Suggested role:** content/backend engineer.
@@ -4003,8 +4005,6 @@ A shared manifest must not accidentally package private tests into web/API artif
 <a id="sai-b029"></a>
 <details>
 <summary>30. SAI-B029: Validate trusted problem authoring inputs before catalog publication [pending]</summary>
-
-**Canonical card:** [SAI-B029](docs/engineering/backlog/issues/SAI-B029.md).
 
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** content-tooling.
 
@@ -4056,8 +4056,6 @@ An authoring validator must validate data rather than become an unrestricted cod
 <a id="sai-b030"></a>
 <details>
 <summary>31. SAI-B030: Add one original prefix-sum range-query teaching exercise [pending]</summary>
-
-**Canonical card:** [SAI-B030](docs/engineering/backlog/issues/SAI-B030.md).
 
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** content.
 
@@ -4111,8 +4109,6 @@ Poor constraints/oracles can invalidate teaching and verdicts; require independe
 <details>
 <summary>32. SAI-B031: Use bounded server-side pagination for the expanding problem catalog [pending]</summary>
 
-**Canonical card:** [SAI-B031](docs/engineering/backlog/issues/SAI-B031.md).
-
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** catalog.
 
 **Suggested role:** frontend/API engineer.
@@ -4164,8 +4160,6 @@ Stale network responses and partial-page filtering can create misleading results
 <details>
 <summary>33. SAI-B032: Make catalog filters and page position shareable through the URL [pending]</summary>
 
-**Canonical card:** [SAI-B032](docs/engineering/backlog/issues/SAI-B032.md).
-
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** catalog-ux.
 
 **Suggested role:** frontend engineer.
@@ -4214,8 +4208,6 @@ URL state must be bounded and must not introduce navigation loops or expose priv
 <details>
 <summary>34. SAI-B033: Add explicit local draft export and bounded import [pending]</summary>
 
-**Canonical card:** [SAI-B033](docs/engineering/backlog/issues/SAI-B033.md).
-
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** editor.
 
 **Suggested role:** frontend editor engineer.
@@ -4263,8 +4255,6 @@ Import is a destructive edit and export may contain private source; require expl
 <a id="sai-b034"></a>
 <details>
 <summary>35. SAI-B034: Offer explicit draft ownership and clear-on-shared-device controls [pending]</summary>
-
-**Canonical card:** [SAI-B034](docs/engineering/backlog/issues/SAI-B034.md).
 
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** editor-privacy.
 
@@ -4316,8 +4306,6 @@ Local identity migration can lose code or cross account boundaries; migration mu
 <details>
 <summary>36. SAI-B035: Detect cross-tab draft conflicts before overwriting newer code [pending]</summary>
 
-**Canonical card:** [SAI-B035](docs/engineering/backlog/issues/SAI-B035.md).
-
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** editor-reliability.
 
 **Suggested role:** frontend editor engineer.
@@ -4364,8 +4352,6 @@ Migration must not mistake existing source text for malformed metadata or discar
 <a id="sai-b036"></a>
 <details>
 <summary>37. SAI-B036: Add persistent editor display and accessibility preferences [pending]</summary>
-
-**Canonical card:** [SAI-B036](docs/engineering/backlog/issues/SAI-B036.md).
 
 **Priority:** P3 · **Phase:** 2-useful-practice · **Area:** editor-ux.
 
@@ -4415,8 +4401,6 @@ Preference initialization can race draft hydration; source must remain unchanged
 <a id="sai-b037"></a>
 <details>
 <summary>38. SAI-B037: Complete keyboard navigation for the practice and submission workflow [pending]</summary>
-
-**Canonical card:** [SAI-B037](docs/engineering/backlog/issues/SAI-B037.md).
 
 **Priority:** P1 · **Phase:** 2-useful-practice · **Area:** accessibility.
 
@@ -4468,8 +4452,6 @@ Automation cannot establish all editor assistive-technology behavior; include an
 <a id="sai-b038"></a>
 <details>
 <summary>39. SAI-B038: Improve screen-reader announcements and focus for asynchronous results [pending]</summary>
-
-**Canonical card:** [SAI-B038](docs/engineering/backlog/issues/SAI-B038.md).
 
 **Priority:** P1 · **Phase:** 2-useful-practice · **Area:** accessibility.
 
@@ -4523,8 +4505,6 @@ Over-announcement and forced focus can make a technically labeled UI unusable; t
 <details>
 <summary>40. SAI-B039: Repair contrast, reduced-motion and zoom reflow gaps [pending]</summary>
 
-**Canonical card:** [SAI-B039](docs/engineering/backlog/issues/SAI-B039.md).
-
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** accessibility.
 
 **Suggested role:** accessibility/UI engineer.
@@ -4575,8 +4555,6 @@ Visual fixes can hide controls or alter editor sizing; preserve responsive behav
 <a id="sai-b040"></a>
 <details>
 <summary>41. SAI-B040: Add a focused automated accessibility regression gate [pending]</summary>
-
-**Canonical card:** [SAI-B040](docs/engineering/backlog/issues/SAI-B040.md).
 
 **Priority:** P2 · **Phase:** 2-useful-practice · **Area:** accessibility-quality.
 
@@ -4631,8 +4609,6 @@ Scanner version changes and noisy exceptions can erode trust; pin the tool and r
 <details>
 <summary>42. SAI-B121: Persist owned sandbox records and reconcile crash-orphaned containers [pending]</summary>
 
-**Canonical card:** [SAI-B121](docs/engineering/backlog/issues/SAI-B121.md).
-
 **Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** judge-recovery.
 
 **Suggested role:** Judge maintainer and recovery reviewer.
@@ -4683,8 +4659,6 @@ Automatic orphan cleanup is destructive unless ownership is established independ
 <a id="sai-b122"></a>
 <details>
 <summary>43. SAI-B122: Bind controller credentials to registered worker identities [pending]</summary>
-
-**Canonical card:** [SAI-B122](docs/engineering/backlog/issues/SAI-B122.md).
 
 **Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** worker-auth.
 
@@ -4738,8 +4712,6 @@ An identity migration can lock out valid workers or accidentally widen completio
 <details>
 <summary>44. SAI-B123: Enforce an atomic active-lease allowance per worker principal [pending]</summary>
 
-**Canonical card:** [SAI-B123](docs/engineering/backlog/issues/SAI-B123.md).
-
 **Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** judge-admission.
 
 **Suggested role:** Backend queue engineer.
@@ -4790,8 +4762,6 @@ A nontransactional count-and-lease check can race; a stranded lease must expire 
 <a id="sai-b125"></a>
 <details>
 <summary>45. SAI-B125: Gate production readiness on an approved supported runtime identity [pending]</summary>
-
-**Canonical card:** [SAI-B125](docs/engineering/backlog/issues/SAI-B125.md).
 
 **Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** runtime-maintenance.
 
@@ -4845,8 +4815,6 @@ A self-asserted or stale inventory can create false confidence; policy approval 
 <details>
 <summary>46. SAI-B124: Require a verified aggregate resource envelope for a production judge host [pending]</summary>
 
-**Canonical card:** [SAI-B124](docs/engineering/backlog/issues/SAI-B124.md).
-
 **Priority:** P0 · **Phase:** 1-safe-pilot · **Area:** judge-isolation.
 
 **Suggested role:** Judge infrastructure engineer and security reviewer.
@@ -4898,8 +4866,6 @@ Resource flags can be ignored by unsupported runtimes; readiness must depend on 
 <a id="sai-b126"></a>
 <details>
 <summary>47. SAI-B126: Withdraw worker readiness and reconcile its current lease on retirement [pending]</summary>
-
-**Canonical card:** [SAI-B126](docs/engineering/backlog/issues/SAI-B126.md).
 
 **Priority:** P1 · **Phase:** 1-safe-pilot · **Area:** judge-lifecycle.
 
@@ -4953,8 +4919,6 @@ Retiring a shared identity or releasing an uncertain lease incorrectly can inval
 <details>
 <summary>48. SAI-B105: Add a bounded metrics exporter consuming the existing private operational surface [pending]</summary>
 
-**Canonical card:** [SAI-B105](docs/engineering/backlog/issues/SAI-B105.md).
-
 **Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-observability.
 
 **Suggested role:** Backend engineer and operator.
@@ -5003,8 +4967,6 @@ Metrics labels and endpoints can leak private activity or overload storage.
 <a id="sai-b106"></a>
 <details>
 <summary>49. SAI-B106: Propagate redacted correlation identifiers across accepted jobs [pending]</summary>
-
-**Canonical card:** [SAI-B106](docs/engineering/backlog/issues/SAI-B106.md).
 
 **Priority:** P2 · **Phase:** operated-pilot · **Area:** operations-observability.
 
@@ -5055,8 +5017,6 @@ Improper correlation data can become an injection or cross-user tracking vector.
 <details>
 <summary>50. SAI-B107: Define measurable service objectives and test operator alert rules [pending]</summary>
 
-**Canonical card:** [SAI-B107](docs/engineering/backlog/issues/SAI-B107.md).
-
 **Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-observability.
 
 **Suggested role:** Site reliability engineer and service owner.
@@ -5104,8 +5064,6 @@ Noisy alerts can hide actual incidents; broad thresholds can miss failures.
 <a id="sai-b108"></a>
 <details>
 <summary>51. SAI-B108: Rehearse a timed full-stack disaster restore using the approved backup helper [pending]</summary>
-
-**Canonical card:** [SAI-B108](docs/engineering/backlog/issues/SAI-B108.md).
 
 **Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-recovery.
 
@@ -5157,8 +5115,6 @@ A partial restoration can lose accounts, invalidate sessions or mismatch ownersh
 <details>
 <summary>52. SAI-B109: Measure bounded capacity and overload behavior using original fixtures [pending]</summary>
 
-**Canonical card:** [SAI-B109](docs/engineering/backlog/issues/SAI-B109.md).
-
 **Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-capacity.
 
 **Suggested role:** Performance engineer and operator.
@@ -5206,8 +5162,6 @@ A careless load test can exhaust the shared development machine.
 <a id="sai-b110"></a>
 <details>
 <summary>53. SAI-B110: Implement a revisioned deployment smoke and rollback rehearsal [pending]</summary>
-
-**Canonical card:** [SAI-B110](docs/engineering/backlog/issues/SAI-B110.md).
 
 **Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-release.
 
@@ -5259,8 +5213,6 @@ Rollback across incompatible state versions can corrupt user data.
 <details>
 <summary>54. SAI-B111: Create a canary qualification gate for judge runtime upgrades [pending]</summary>
 
-**Canonical card:** [SAI-B111](docs/engineering/backlog/issues/SAI-B111.md).
-
 **Priority:** P1 · **Phase:** operated-pilot · **Area:** operations-release.
 
 **Suggested role:** Judge maintainer and security reviewer.
@@ -5309,8 +5261,6 @@ A toolchain update can weaken isolation or alter resource semantics.
 <a id="sai-b112"></a>
 <details>
 <summary>55. SAI-B112: Run a bounded incident exercise for worker outage and recovery [pending]</summary>
-
-**Canonical card:** [SAI-B112](docs/engineering/backlog/issues/SAI-B112.md).
 
 **Priority:** P2 · **Phase:** operated-pilot · **Area:** operations-recovery.
 
@@ -5361,8 +5311,6 @@ An exercise that touches live state can create the incident it is meant to test.
 <details>
 <summary>56. SAI-B041: Record the single-provider hint pilot activation decision [pending]</summary>
 
-**Canonical card:** [SAI-B041](docs/engineering/backlog/issues/SAI-B041.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI activation governance.
 
 **Suggested role:** Project owner with privacy and AI engineering reviewers.
@@ -5409,8 +5357,6 @@ A written provider name must not be mistaken for permission to send user data or
 <a id="sai-b042"></a>
 <details>
 <summary>57. SAI-B042: Bound and fingerprint the existing public-only hint context [pending]</summary>
-
-**Canonical card:** [SAI-B042](docs/engineering/backlog/issues/SAI-B042.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Safe model context.
 
@@ -5459,8 +5405,6 @@ Silent truncation could remove a constraint and produce misleading hints.
 <details>
 <summary>58. SAI-B043: Validate trusted provider destinations and secret configuration [pending]</summary>
 
-**Canonical card:** [SAI-B043](docs/engineering/backlog/issues/SAI-B043.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Provider configuration.
 
 **Suggested role:** Backend security engineer.
@@ -5507,8 +5451,6 @@ Provider configuration can become an SSRF or credential-forwarding boundary if e
 <a id="sai-b044"></a>
 <details>
 <summary>59. SAI-B044: Define an internal generation result and usage contract [pending]</summary>
-
-**Canonical card:** [SAI-B044](docs/engineering/backlog/issues/SAI-B044.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Provider-neutral contracts.
 
@@ -5557,8 +5499,6 @@ Treating absent provider usage as zero would undercount spend.
 <details>
 <summary>60. SAI-B045: Version bounded hint prompts and spoiler policies [pending]</summary>
 
-**Canonical card:** [SAI-B045](docs/engineering/backlog/issues/SAI-B045.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Tutoring prompts.
 
 **Suggested role:** AI engineer and teaching reviewer.
@@ -5605,8 +5545,6 @@ A model may still overshare; prompt instructions require output review and produ
 <a id="sai-b046"></a>
 <details>
 <summary>61. SAI-B046: Reject malformed model hints before constructing learner responses [pending]</summary>
-
-**Canonical card:** [SAI-B046](docs/engineering/backlog/issues/SAI-B046.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Model output contracts.
 
@@ -5655,8 +5593,6 @@ String cleanup must not silently convert a refusal or truncated answer into a no
 <details>
 <summary>62. SAI-B047: Add deterministic provider transport fixtures without external inference [pending]</summary>
 
-**Canonical card:** [SAI-B047](docs/engineering/backlog/issues/SAI-B047.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Provider adapter verification.
 
 **Suggested role:** AI integration engineer.
@@ -5702,8 +5638,6 @@ A fixture may drift from the selected provider schema; record the reviewed API v
 <a id="sai-b048"></a>
 <details>
 <summary>63. SAI-B048: Implement one opt-in bounded asynchronous hint provider adapter [pending]</summary>
-
-**Canonical card:** [SAI-B048](docs/engineering/backlog/issues/SAI-B048.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Real provider transport.
 
@@ -5751,8 +5685,6 @@ Transport completion does not establish content quality, privacy compliance or p
 <a id="sai-b049"></a>
 <details>
 <summary>64. SAI-B049: Enforce account-level entitlement before model-backed hints [pending]</summary>
-
-**Canonical card:** [SAI-B049](docs/engineering/backlog/issues/SAI-B049.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI admission policy.
 
@@ -5802,8 +5734,6 @@ Authentication alone is insufficient authority to consume external resources.
 <details>
 <summary>65. SAI-B050: Reserve and reconcile durable per-account hint budgets atomically [pending]</summary>
 
-**Canonical card:** [SAI-B050](docs/engineering/backlog/issues/SAI-B050.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI token and request quotas.
 
 **Suggested role:** Backend persistence engineer.
@@ -5852,8 +5782,6 @@ Ledger races and ambiguous completion can bypass caps or unfairly consume allowa
 <details>
 <summary>66. SAI-B051: Add process-wide provider concurrency and monetary admission ceilings [pending]</summary>
 
-**Canonical card:** [SAI-B051](docs/engineering/backlog/issues/SAI-B051.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Global AI spend control.
 
 **Suggested role:** Backend platform engineer.
@@ -5900,8 +5828,6 @@ A process-local semaphore is not a distributed project-wide spending guarantee.
 <a id="sai-b052"></a>
 <details>
 <summary>67. SAI-B052: Deduplicate model hint retries with account-scoped idempotency [pending]</summary>
-
-**Canonical card:** [SAI-B052](docs/engineering/backlog/issues/SAI-B052.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI request reliability.
 
@@ -5951,8 +5877,6 @@ An underspecified cache key can leak responses or replay stale prompt policy.
 <details>
 <summary>68. SAI-B053: Record redacted generation usage and failure telemetry [pending]</summary>
 
-**Canonical card:** [SAI-B053](docs/engineering/backlog/issues/SAI-B053.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI observability.
 
 **Suggested role:** Backend observability engineer.
@@ -6000,8 +5924,6 @@ Verbose error logging can defeat an otherwise safe context boundary.
 <a id="sai-b054"></a>
 <details>
 <summary>69. SAI-B054: Propagate total generation deadlines and explicit cancellation states [pending]</summary>
-
-**Canonical card:** [SAI-B054](docs/engineering/backlog/issues/SAI-B054.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI cancellation and deadlines.
 
@@ -6052,8 +5974,6 @@ Local cancellation and remote resource consumption can diverge.
 <details>
 <summary>70. SAI-B055: Bound provider retries and add outage admission state [pending]</summary>
 
-**Canonical card:** [SAI-B055](docs/engineering/backlog/issues/SAI-B055.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI failure policy.
 
 **Suggested role:** Backend reliability engineer.
@@ -6100,8 +6020,6 @@ Retries can multiply both latency and charges even after the browser gives up.
 <a id="sai-b056"></a>
 <details>
 <summary>71. SAI-B056: Require clear external-AI disclosure before opt-in hint requests [pending]</summary>
-
-**Canonical card:** [SAI-B056](docs/engineering/backlog/issues/SAI-B056.md).
 
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI privacy UX.
 
@@ -6152,8 +6070,6 @@ A blanket consent checkbox cannot authorize unspecified future source sharing.
 <details>
 <summary>72. SAI-B057: Provide a tested operator kill switch for model hint admission [pending]</summary>
 
-**Canonical card:** [SAI-B057](docs/engineering/backlog/issues/SAI-B057.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** AI operations.
 
 **Suggested role:** Backend operations engineer.
@@ -6201,8 +6117,6 @@ A UI-only toggle cannot stop API callers or already admitted upstream work.
 <a id="sai-b058"></a>
 <details>
 <summary>73. SAI-B058: Add shared golden fixtures for hint API and browser schema parity [pending]</summary>
-
-**Canonical card:** [SAI-B058](docs/engineering/backlog/issues/SAI-B058.md).
 
 **Priority:** P2 · **Phase:** AI-1 controlled model hints · **Area:** Cross-runtime AI contracts.
 
@@ -6252,8 +6166,6 @@ Generated types alone do not validate hostile network payloads.
 <details>
 <summary>74. SAI-B059: Define and execute a small consented model-hint pilot acceptance gate [pending]</summary>
 
-**Canonical card:** [SAI-B059](docs/engineering/backlog/issues/SAI-B059.md).
-
 **Priority:** P1 · **Phase:** AI-1 controlled model hints · **Area:** Hint quality pilot.
 
 **Suggested role:** Teaching evaluator with project owner.
@@ -6301,8 +6213,6 @@ A provider working on three seed problems is not evidence of broad tutoring qual
 <a id="sai-b113"></a>
 <details>
 <summary>75. SAI-B113: Provide learner-controlled progress summaries with assistance provenance [pending]</summary>
-
-**Canonical card:** [SAI-B113](docs/engineering/backlog/issues/SAI-B113.md).
 
 **Priority:** P2 · **Phase:** learning-coaching · **Area:** learning-analytics.
 
@@ -6352,8 +6262,6 @@ Misleading or leaking progress metrics can harm learner trust.
 <details>
 <summary>76. SAI-B114: Add editable practice plans and deterministic review reminders [pending]</summary>
 
-**Canonical card:** [SAI-B114](docs/engineering/backlog/issues/SAI-B114.md).
-
 **Priority:** P2 · **Phase:** learning-coaching · **Area:** learning-plans.
 
 **Suggested role:** Full-stack engineer and learning designer.
@@ -6402,8 +6310,6 @@ Incorrect scheduling or intrusive reminders can undermine user control.
 <details>
 <summary>77. SAI-B115: Implement opt-in coach cohorts with explicit sharing permissions [pending]</summary>
 
-**Canonical card:** [SAI-B115](docs/engineering/backlog/issues/SAI-B115.md).
-
 **Priority:** P2 · **Phase:** learning-coaching · **Area:** coaching.
 
 **Suggested role:** Backend engineer and privacy reviewer.
@@ -6451,8 +6357,6 @@ Broad sharing scopes could expose unrelated private attempts.
 <a id="sai-b116"></a>
 <details>
 <summary>78. SAI-B116: Add permissioned assignments and human rubric feedback [pending]</summary>
-
-**Canonical card:** [SAI-B116](docs/engineering/backlog/issues/SAI-B116.md).
 
 **Priority:** P2 · **Phase:** learning-coaching · **Area:** coaching.
 
@@ -6503,8 +6407,6 @@ Feedback permissions and immutable problem references must remain consistent.
 <details>
 <summary>79. SAI-B060: Design a bounded tutoring interaction contract beyond hint levels [pending]</summary>
 
-**Canonical card:** [SAI-B060](docs/engineering/backlog/issues/SAI-B060.md).
-
 **Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Tutor interaction design.
 
 **Suggested role:** Product and AI interface designer.
@@ -6551,8 +6453,6 @@ An open-ended conversation broadens privacy and cost exposure beyond the success
 <a id="sai-b061"></a>
 <details>
 <summary>80. SAI-B061: Implement account-owned expiring tutor conversation state [pending]</summary>
-
-**Canonical card:** [SAI-B061](docs/engineering/backlog/issues/SAI-B061.md).
 
 **Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Tutor context lifecycle.
 
@@ -6602,8 +6502,6 @@ Conversation history can become an uncontrolled source of retained personal data
 <details>
 <summary>81. SAI-B062: Add a consented concept-check interaction with bounded feedback [pending]</summary>
 
-**Canonical card:** [SAI-B062](docs/engineering/backlog/issues/SAI-B062.md).
-
 **Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Evidence-oriented tutoring.
 
 **Suggested role:** Teaching product engineer.
@@ -6651,8 +6549,6 @@ A model-generated rubric may be wrong; reviewed questions and appeal/skip behavi
 <a id="sai-b063"></a>
 <details>
 <summary>82. SAI-B063: Collect minimal account-owned hint quality feedback [pending]</summary>
-
-**Canonical card:** [SAI-B063](docs/engineering/backlog/issues/SAI-B063.md).
 
 **Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** AI feedback and correction.
 
@@ -6702,8 +6598,6 @@ Self-selected ratings are product feedback, not a controlled educational study.
 <details>
 <summary>83. SAI-B064: Define explicit source-sharing consent and owned debugger input [pending]</summary>
 
-**Canonical card:** [SAI-B064](docs/engineering/backlog/issues/SAI-B064.md).
-
 **Priority:** P1 · **Phase:** AI-2 consented tutor and debugger · **Area:** Debugger privacy boundary.
 
 **Suggested role:** Privacy and backend authorization engineer.
@@ -6751,8 +6645,6 @@ Source can contain personal information or secrets; the product must disclose th
 <a id="sai-b065"></a>
 <details>
 <summary>84. SAI-B065: Build a public-only execution evidence projection for debugging [pending]</summary>
-
-**Canonical card:** [SAI-B065](docs/engineering/backlog/issues/SAI-B065.md).
 
 **Priority:** P1 · **Phase:** AI-2 consented tutor and debugger · **Area:** Safe debugger evidence.
 
@@ -6802,8 +6694,6 @@ An error message can contain hostile program-written text and must remain untrus
 <details>
 <summary>85. SAI-B066: Return debugger hypotheses separately from observed failures [pending]</summary>
 
-**Canonical card:** [SAI-B066](docs/engineering/backlog/issues/SAI-B066.md).
-
 **Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Evidence-backed debugging.
 
 **Suggested role:** AI debugging engineer.
@@ -6851,8 +6741,6 @@ Well-written model explanations can sound more certain than the supplied evidenc
 <a id="sai-b067"></a>
 <details>
 <summary>86. SAI-B067: Show a source-hash-bound debugger patch preview with explicit apply [pending]</summary>
-
-**Canonical card:** [SAI-B067](docs/engineering/backlog/issues/SAI-B067.md).
 
 **Priority:** P2 · **Phase:** AI-2 consented tutor and debugger · **Area:** Debugger editor UX.
 
@@ -6902,8 +6790,6 @@ Applying a correct-looking diff can still introduce a bug; retain original sourc
 <details>
 <summary>87. SAI-B068: Version authorized solver problem specifications and evaluation modes [pending]</summary>
 
-**Canonical card:** [SAI-B068](docs/engineering/backlog/issues/SAI-B068.md).
-
 **Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Solver input contracts.
 
 **Suggested role:** Backend contract engineer.
@@ -6952,8 +6838,6 @@ Version labels without immutable content and rights metadata are not reproducibl
 <details>
 <summary>88. SAI-B069: Generate a bounded algorithm-plan record before candidate code [pending]</summary>
 
-**Canonical card:** [SAI-B069](docs/engineering/backlog/issues/SAI-B069.md).
-
 **Priority:** P2 · **Phase:** AI-3 bounded candidate solver · **Area:** Candidate planning.
 
 **Suggested role:** AI solver engineer.
@@ -7000,8 +6884,6 @@ A convincing plan may be wrong and must not bypass isolated tests.
 <a id="sai-b070"></a>
 <details>
 <summary>89. SAI-B070: Normalize bounded source candidates without archive parser assumptions [pending]</summary>
-
-**Canonical card:** [SAI-B070](docs/engineering/backlog/issues/SAI-B070.md).
 
 **Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Candidate generation.
 
@@ -7051,8 +6933,6 @@ Aggressive source cleanup can silently alter the program the learner thinks was 
 <details>
 <summary>90. SAI-B071: Route authorized AI candidates through the existing isolated judge boundary [pending]</summary>
 
-**Canonical card:** [SAI-B071](docs/engineering/backlog/issues/SAI-B071.md).
-
 **Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Solver-to-judge integration.
 
 **Suggested role:** Judge and backend integration engineer.
@@ -7100,8 +6980,6 @@ Generated code is equally untrusted as learner code and may target the result pr
 <a id="sai-b072"></a>
 <details>
 <summary>91. SAI-B072: Implement a finite repair state machine with one shared run budget [pending]</summary>
-
-**Canonical card:** [SAI-B072](docs/engineering/backlog/issues/SAI-B072.md).
 
 **Priority:** P1 · **Phase:** AI-3 bounded candidate solver · **Area:** Bounded solver repair.
 
@@ -7151,8 +7029,6 @@ Per-step limits are insufficient when aggregate attempts can still grow.
 <details>
 <summary>92. SAI-B073: Rank candidates by explicit execution evidence with deterministic ties [pending]</summary>
 
-**Canonical card:** [SAI-B073](docs/engineering/backlog/issues/SAI-B073.md).
-
 **Priority:** P2 · **Phase:** AI-3 bounded candidate solver · **Area:** Candidate ranking.
 
 **Suggested role:** AI evaluation engineer.
@@ -7199,8 +7075,6 @@ Optimizing public tests can overfit them; show exactly which finite checks infor
 <a id="sai-b074"></a>
 <details>
 <summary>93. SAI-B074: Create a reproducible offline solver evaluation run manifest [pending]</summary>
-
-**Canonical card:** [SAI-B074](docs/engineering/backlog/issues/SAI-B074.md).
 
 **Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Solver evaluation.
 
@@ -7250,8 +7124,6 @@ Unequal inference budgets or contaminated tasks can make a comparison misleading
 <details>
 <summary>94. SAI-B075: Admit only reviewed differential and metamorphic test specifications [pending]</summary>
 
-**Canonical card:** [SAI-B075](docs/engineering/backlog/issues/SAI-B075.md).
-
 **Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Authorized test generation.
 
 **Suggested role:** Problem author and judge evaluation engineer.
@@ -7299,8 +7171,6 @@ A faulty oracle can confidently reject correct programs or accept incorrect ones
 <a id="sai-b076"></a>
 <details>
 <summary>95. SAI-B076: Reduce consented public counterexamples under a finite execution budget [pending]</summary>
-
-**Canonical card:** [SAI-B076](docs/engineering/backlog/issues/SAI-B076.md).
 
 **Priority:** P2 · **Phase:** AI-4 evaluation and research gates · **Area:** Counterexample debugging.
 
@@ -7350,8 +7220,6 @@ Naive reduction can leave the input domain or change the failure being explained
 <details>
 <summary>96. SAI-B081: Implement contest lifecycle and authoritative event timing [pending]</summary>
 
-**Canonical card:** [SAI-B081](docs/engineering/backlog/issues/SAI-B081.md).
-
 **Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
 **Suggested role:** Backend engineer with contest product owner.
@@ -7400,8 +7268,6 @@ Ambiguous deadlines can accept late work or invalidate legitimate attempts.
 <details>
 <summary>97. SAI-B082: Add permissioned contest registration and eligibility checks [pending]</summary>
 
-**Canonical card:** [SAI-B082](docs/engineering/backlog/issues/SAI-B082.md).
-
 **Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
 **Suggested role:** Backend engineer.
@@ -7448,8 +7314,6 @@ Registration leakage or weak checks could expose private events.
 <a id="sai-b083"></a>
 <details>
 <summary>98. SAI-B083: Freeze versioned problem sets for each contest [pending]</summary>
-
-**Canonical card:** [SAI-B083](docs/engineering/backlog/issues/SAI-B083.md).
 
 **Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
@@ -7499,8 +7363,6 @@ Incorrect version linkage changes fairness and reproducibility.
 <details>
 <summary>99. SAI-B084: Implement deterministic ICPC scoring as a tested pure calculation [pending]</summary>
 
-**Canonical card:** [SAI-B084](docs/engineering/backlog/issues/SAI-B084.md).
-
 **Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
 **Suggested role:** Backend engineer with experienced contest reviewer.
@@ -7547,8 +7409,6 @@ A small scoring rule mistake can change winners.
 <details>
 <summary>100. SAI-B085: Add participant and organizer scoreboard projections with freeze rules [pending]</summary>
 
-**Canonical card:** [SAI-B085](docs/engineering/backlog/issues/SAI-B085.md).
-
 **Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
 **Suggested role:** Backend engineer.
@@ -7594,8 +7454,6 @@ Aggregate fields can accidentally leak frozen results.
 <a id="sai-b086"></a>
 <details>
 <summary>101. SAI-B086: Connect contest submissions to event eligibility and immutable attempt context [pending]</summary>
-
-**Canonical card:** [SAI-B086](docs/engineering/backlog/issues/SAI-B086.md).
 
 **Priority:** P1 · **Phase:** contest-foundation · **Area:** contests.
 
@@ -7645,8 +7503,6 @@ Race conditions between registration, deadline and enqueue could create unfair a
 <details>
 <summary>102. SAI-B087: Implement isolated virtual-contest sessions with personal start times [pending]</summary>
 
-**Canonical card:** [SAI-B087](docs/engineering/backlog/issues/SAI-B087.md).
-
 **Priority:** P2 · **Phase:** contest-experience · **Area:** contests.
 
 **Suggested role:** Full-stack engineer.
@@ -7695,8 +7551,6 @@ Shared identifiers could mix personal and official attempts.
 <details>
 <summary>103. SAI-B088: Add locked ICPC team rosters and event membership rules [pending]</summary>
 
-**Canonical card:** [SAI-B088](docs/engineering/backlog/issues/SAI-B088.md).
-
 **Priority:** P2 · **Phase:** contest-experience · **Area:** teams.
 
 **Suggested role:** Backend engineer.
@@ -7742,8 +7596,6 @@ Membership races or invitation leakage could grant unintended team access.
 <a id="sai-b089"></a>
 <details>
 <summary>104. SAI-B089: Scope contest attempts and source visibility to authorized team members [pending]</summary>
-
-**Canonical card:** [SAI-B089](docs/engineering/backlog/issues/SAI-B089.md).
 
 **Priority:** P2 · **Phase:** contest-experience · **Area:** teams.
 
@@ -7792,8 +7644,6 @@ Expanding ownership from a user to a team can leak private code.
 <a id="sai-b090"></a>
 <details>
 <summary>105. SAI-B090: Enforce contest assistance policy across hint and submission routes [pending]</summary>
-
-**Canonical card:** [SAI-B090](docs/engineering/backlog/issues/SAI-B090.md).
 
 **Priority:** P1 · **Phase:** contest-experience · **Area:** contest-integrity.
 
@@ -7844,8 +7694,6 @@ Inconsistent checks across endpoints could bypass event policy.
 <details>
 <summary>106. SAI-B091: Build an organizer workflow for contest draft, preview and publication [pending]</summary>
 
-**Canonical card:** [SAI-B091](docs/engineering/backlog/issues/SAI-B091.md).
-
 **Priority:** P2 · **Phase:** contest-experience · **Area:** contest-admin.
 
 **Suggested role:** Full-stack engineer.
@@ -7893,8 +7741,6 @@ Administrative forms can expose mutation permissions or conceal critical rules.
 <a id="sai-b092"></a>
 <details>
 <summary>107. SAI-B092: Implement audited contest rejudging with immutable verdict revisions [pending]</summary>
-
-**Canonical card:** [SAI-B092](docs/engineering/backlog/issues/SAI-B092.md).
 
 **Priority:** P1 · **Phase:** contest-corrections · **Area:** contest-admin.
 
@@ -7944,8 +7790,6 @@ A faulty correction can retroactively invalidate many results.
 <details>
 <summary>108. SAI-B093: Add contest clarification and appeal records with controlled disclosure [pending]</summary>
 
-**Canonical card:** [SAI-B093](docs/engineering/backlog/issues/SAI-B093.md).
-
 **Priority:** P2 · **Phase:** contest-corrections · **Area:** contest-admin.
 
 **Suggested role:** Full-stack engineer and contest moderator.
@@ -7993,8 +7837,6 @@ Support discussions can leak hidden cases or identifiable submissions.
 <a id="sai-b094"></a>
 <details>
 <summary>109. SAI-B094: Deliver bounded scoreboard polling with consistent event revisions [pending]</summary>
-
-**Canonical card:** [SAI-B094](docs/engineering/backlog/issues/SAI-B094.md).
 
 **Priority:** P2 · **Phase:** contest-experience · **Area:** leaderboards.
 
@@ -8045,8 +7887,6 @@ Out-of-order updates and aggressive polling can harm fairness or availability.
 <details>
 <summary>110. SAI-B095: Create a reproducible contest rehearsal and official standings export [pending]</summary>
 
-**Canonical card:** [SAI-B095](docs/engineering/backlog/issues/SAI-B095.md).
-
 **Priority:** P1 · **Phase:** contest-corrections · **Area:** contest-release.
 
 **Suggested role:** QA engineer and contest operator.
@@ -8094,8 +7934,6 @@ An incomplete rehearsal can hide event-wide correctness failures.
 <a id="sai-b096"></a>
 <details>
 <summary>111. SAI-B096: Version output-comparison policies without changing existing verdicts [pending]</summary>
-
-**Canonical card:** [SAI-B096](docs/engineering/backlog/issues/SAI-B096.md).
 
 **Priority:** P1 · **Phase:** judge-extensibility · **Area:** judge-validators.
 
@@ -8145,8 +7983,6 @@ A permissive comparator can accept incorrect programs.
 <details>
 <summary>112. SAI-B097: Add isolated versioned custom-checker support for authorized problems [pending]</summary>
 
-**Canonical card:** [SAI-B097](docs/engineering/backlog/issues/SAI-B097.md).
-
 **Priority:** P2 · **Phase:** judge-extensibility · **Area:** judge-validators.
 
 **Suggested role:** Judge engineer with security reviewer.
@@ -8195,8 +8031,6 @@ Checker privileges and diagnostic leakage expand the execution trust boundary.
 <details>
 <summary>113. SAI-B098: Implement bounded floating-point answer validation [pending]</summary>
 
-**Canonical card:** [SAI-B098](docs/engineering/backlog/issues/SAI-B098.md).
-
 **Priority:** P2 · **Phase:** judge-extensibility · **Area:** judge-validators.
 
 **Suggested role:** Judge engineer and numerical-problem author.
@@ -8242,8 +8076,6 @@ Floating-point edge cases can produce false acceptance or rejection.
 <a id="sai-b099"></a>
 <details>
 <summary>114. SAI-B099: Introduce explicit subtask scoring for separately configured events [pending]</summary>
-
-**Canonical card:** [SAI-B099](docs/engineering/backlog/issues/SAI-B099.md).
 
 **Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-validators.
 
@@ -8292,8 +8124,6 @@ Mixing score models can silently change rankings.
 <a id="sai-b100"></a>
 <details>
 <summary>115. SAI-B100: Add an audited C++20 runtime alongside existing C++17 [pending]</summary>
-
-**Canonical card:** [SAI-B100](docs/engineering/backlog/issues/SAI-B100.md).
 
 **Priority:** P2 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
@@ -8344,8 +8174,6 @@ Compiler-mode drift can make editor and judge capabilities disagree.
 <details>
 <summary>116. SAI-B101: Add isolated Java support with explicit JVM resource semantics [pending]</summary>
 
-**Canonical card:** [SAI-B101](docs/engineering/backlog/issues/SAI-B101.md).
-
 **Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
 **Suggested role:** Judge engineer with runtime reviewer.
@@ -8394,8 +8222,6 @@ JVM memory reservations can conflict with existing per-process limits.
 <a id="sai-b102"></a>
 <details>
 <summary>117. SAI-B102: Add isolated JavaScript support with denied network and bounded runtime [pending]</summary>
-
-**Canonical card:** [SAI-B102](docs/engineering/backlog/issues/SAI-B102.md).
 
 **Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
@@ -8446,8 +8272,6 @@ Reusing the application runtime would collapse the isolation boundary.
 <details>
 <summary>118. SAI-B103: Add isolated Go compilation with offline standard-library execution [pending]</summary>
 
-**Canonical card:** [SAI-B103](docs/engineering/backlog/issues/SAI-B103.md).
-
 **Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
 **Suggested role:** Judge engineer.
@@ -8496,8 +8320,6 @@ Compiler caches, network resolution and concurrent goroutines need bounded polic
 <a id="sai-b104"></a>
 <details>
 <summary>119. SAI-B104: Add isolated Rust compilation with a fixed edition and no dependency fetch [pending]</summary>
-
-**Canonical card:** [SAI-B104](docs/engineering/backlog/issues/SAI-B104.md).
 
 **Priority:** P3 · **Phase:** judge-extensibility · **Area:** judge-languages.
 
@@ -8548,8 +8370,6 @@ Long compilation or shared cache mutation can exhaust capacity or contaminate jo
 <details>
 <summary>120. SAI-B117: Enforce institutional sponsorship and learner data-use boundaries [pending]</summary>
 
-**Canonical card:** [SAI-B117](docs/engineering/backlog/issues/SAI-B117.md).
-
 **Priority:** P1 · **Phase:** institutional-pilot · **Area:** institutional-privacy.
 
 **Suggested role:** Backend engineer with policy/privacy owner.
@@ -8599,8 +8419,6 @@ Institutional roles can unintentionally override personal privacy.
 <details>
 <summary>121. SAI-B118: Export institution-authorized assignment records with redaction tests [pending]</summary>
 
-**Canonical card:** [SAI-B118](docs/engineering/backlog/issues/SAI-B118.md).
-
 **Priority:** P2 · **Phase:** institutional-pilot · **Area:** institutional-privacy.
 
 **Suggested role:** Backend engineer and privacy reviewer.
@@ -8647,8 +8465,6 @@ Portable exports can turn a narrow permission mistake into a durable data leak.
 <a id="sai-b119"></a>
 <details>
 <summary>122. SAI-B119: Produce a redacted pilot cost ledger and resource-envelope report [pending]</summary>
-
-**Canonical card:** [SAI-B119](docs/engineering/backlog/issues/SAI-B119.md).
 
 **Priority:** P2 · **Phase:** institutional-pilot · **Area:** business-operations.
 
@@ -8697,8 +8513,6 @@ False precision can hide unpriced support, capacity or provider costs.
 <a id="sai-b120"></a>
 <details>
 <summary>123. SAI-B120: Extend existing pilot grants with expiring institutional scopes [pending]</summary>
-
-**Canonical card:** [SAI-B120](docs/engineering/backlog/issues/SAI-B120.md).
 
 **Priority:** P2 · **Phase:** institutional-pilot · **Area:** business-release.
 
@@ -8751,8 +8565,6 @@ A commercial access flag must not become a bypass for safety or privacy policy.
 <details>
 <summary>124. SAI-B077: Separate evaluation splits and report archive contamination candidates [pending]</summary>
 
-**Canonical card:** [SAI-B077](docs/engineering/backlog/issues/SAI-B077.md).
-
 **Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Evaluation integrity.
 
 **Suggested role:** Data evaluation engineer.
@@ -8800,8 +8612,6 @@ Approximate deduplication needs human review and cannot establish unseen model p
 <a id="sai-b078"></a>
 <details>
 <summary>125. SAI-B078: Register dataset and model permissions separately from source licenses [pending]</summary>
-
-**Canonical card:** [SAI-B078](docs/engineering/backlog/issues/SAI-B078.md).
 
 **Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Research provenance.
 
@@ -8851,8 +8661,6 @@ Permission metadata can be incomplete or expire; record review date and responsi
 <details>
 <summary>126. SAI-B079: Produce a resource-and-integrity feasibility decision for one self-hosted model [pending]</summary>
 
-**Canonical card:** [SAI-B079](docs/engineering/backlog/issues/SAI-B079.md).
-
 **Priority:** P2 · **Phase:** AI-4 evaluation and research gates · **Area:** Model serving research gate.
 
 **Suggested role:** ML infrastructure researcher.
@@ -8901,8 +8709,6 @@ Published memory or benchmark claims may not hold under this project's concurren
 <details>
 <summary>127. SAI-B080: Add an explicit admission gate for reproducible fine-tuning experiments [pending]</summary>
 
-**Canonical card:** [SAI-B080](docs/engineering/backlog/issues/SAI-B080.md).
-
 **Priority:** P1 · **Phase:** AI-4 evaluation and research gates · **Area:** Fine-tuning research controls.
 
 **Suggested role:** ML evaluation lead with project owner.
@@ -8944,6 +8750,715 @@ The archived trainer can start expensive, nondeterministic work, while Solver AI
 **Risk and review**
 
 Training can memorize evaluation tasks or consume substantial resources without improving product value.
+
+</details>
+
+<a id="sai-b128"></a>
+<details>
+<summary>128. SAI-B128: Implement a declared DSA coverage matrix and preregistered model release measurements [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-1 measured scope and baseline · **Area:** solver-readiness.
+
+**Suggested role:** ML evaluation lead and product owner.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078).
+
+**Problem / missing behavior**
+
+The readiness document can describe broad ambitions, but training and release need a machine-readable support policy and measurable category coverage. Neither attempting a prompt nor passing a small benchmark demonstrates support for every DSA problem.
+
+**Target paths / responsibility**
+
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/product/AI_SOLVER.md`
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `scripts/verification`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Create a versioned coverage manifest under a new ml/evaluation/ implementation, keyed by algorithm topic/subtopic, problem format, difficulty band, supported language/runtime, constraint range and evaluation budget. Reuse B068 problem identities and B074 run records instead of creating another identity authority.
+- Bind rights-approved held-out task manifests and independent graders to declared cells; represent missing evidence, out-of-distribution inputs and unsupported formats explicitly.
+- Record owner-reviewed per-category quality, reliability, latency/cost and regression thresholds before tuned results are inspected. Define attemptable, measured-supported and unsupported states, including safe refusal/abstention.
+
+**Acceptance criteria**
+
+- Synthetic fixtures distinguish an untested category from a measured pass, a failed category and an unsupported input; no empty cell counts as success.
+- Release aggregation records eligible task counts, pass@1/pass@k sampling policy, uncertainty and execution failures for each declared category without hiding weak categories in an overall score.
+- A model cannot receive a universal any-DSA label, an untested language/interactive format cannot be advertised as supported, and threshold changes retain dated review provenance.
+
+**Validation required**
+
+- Future authorized checks: deterministic manifest/report fixtures introduced under tests/tooling; no weights, model calls or GPU access are needed for these schema checks.
+- Review the coverage manifest and preregistration against DSA_SOLVER_READINESS.md with the evaluation lead and owner.
+
+**Out of scope**
+
+- Selecting a checkpoint now
+- Claiming formal correctness from finite tests
+- Implementing a general natural-language problem parser or replacing B074 evaluation orchestration
+
+**Risk and review**
+
+Coverage can be gamed by easy tasks or thresholds chosen after results; preserve category counts, lineage, uncertainty and preregistration.
+
+</details>
+
+<a id="sai-b129"></a>
+<details>
+<summary>129. SAI-B129: Run an approved untuned checkpoint comparison and record a future selection [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-1 measured scope and baseline · **Area:** model-baseline.
+
+**Suggested role:** ML evaluation engineer with project owner.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B078](#sai-b078), [SAI-B079](#sai-b079), [SAI-B128](#sai-b128).
+
+**Problem / missing behavior**
+
+The research catalogue names future candidates but no model has been selected, downloaded or benchmarked here. A fine-tuning choice needs measured task fit, actual resource behavior and license compatibility rather than a nominal parameter count or advertised score.
+
+**Target paths / responsibility**
+
+- `docs/research/FINETUNING_MODEL_RESEARCH.md`
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/governance/OPEN_DECISIONS.md`
+- `scripts/verification`
+- `tests/tooling`
+
+**Implementation scope**
+
+- After separate owner authorization for artifacts, hardware and a fixed experiment budget, compare at least two eligible open-weight checkpoints or explicitly justify why only one is eligible. Do not assume any family or size wins.
+- Reuse B074 evaluation and B128 coverage on a model-selection/validation split disjoint from training and the sealed final release test; fix prompts/templates, decoding, context limits, candidate/test budgets and exact model revisions. Run single-candidate untuned baselines before adding repair or tuning.
+- Measure peak training/inference feasibility separately where authorized, report unknowns and record a reviewed selection or do-not-proceed outcome. Hosted/API models may be optional approved reference baselines, not assumed downloadable LoRA bases.
+
+**Acceptance criteria**
+
+- The report includes exact checkpoint/revision, license/usage evidence, tokenizer/template, hardware/software, precision, per-category results, latency, memory, cost and failures.
+- All compared scores state task eligibility and comparable budgets; no task used for later held-out evaluation is silently moved into training.
+- No checkpoint is selected merely by writing this issue. Actual execution requires recorded artifact/compute permission; absent resources produce an explicit blocked decision without substituting invented measurements.
+- Checkpoint selection never inspects the sealed final release-test results; record a separate selection split and freeze the chosen model/criteria before final evaluation.
+
+**Validation required**
+
+- Future approved execution: use the B074 harness to replay the recorded untuned manifests on the allowed isolated inference host and retain result hashes.
+- Reproduce one small manifest twice and investigate nondeterministic/failed outcomes; any paid API baseline requires its own existing approval and cap.
+
+**Out of scope**
+
+- Choosing a specific model in this planning update
+- Training adapters
+- Reproducing every published model benchmark or buying hardware by default
+
+**Risk and review**
+
+Model training exposure is often unknown and published hardware figures may not match this workload; report contamination and feasibility uncertainty.
+
+</details>
+
+<a id="sai-b130"></a>
+<details>
+<summary>130. SAI-B130: Materialize a permitted validated training corpus with immutable split lineage [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-2 approved data and training tooling · **Area:** training-data.
+
+**Suggested role:** Data engineer and rights/evaluation reviewer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B128](#sai-b128).
+
+**Problem / missing behavior**
+
+B077 and B078 define split/permission records, but no approved corpus has been normalized, validated and materialized for actual training. The archives include incomplete LFS entries and overlapping benchmark variants that cannot be treated as a ready dataset.
+
+**Target paths / responsibility**
+
+- `docs/governance/DATA_AND_LICENSES.md`
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `services/judge/solver_judge/grading/cases.py`
+- `scripts/verification`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Implement a data-only pipeline under new ml/data/ modules that reads only explicitly approved complete inputs and emits immutable train/validation manifests outside Git. Reuse the permission/split registries rather than infer rights from repository licenses.
+- Normalize task/solution/language/provenance records, quarantine malformed or duplicate entries and verify solution correctness through authorized independent grading before including solution targets.
+- Reserve the held-out release set; record exact and reviewed near-duplicate exclusions, source lineage, content hashes, accepted/rejected counts and a reproducible materialization recipe.
+
+**Acceptance criteria**
+
+- Every emitted training record points to complete approved source and a valid immutable task identity; missing LFS objects, unknown training permission and private unconsented submissions are rejected.
+- A synthetic variant of a held-out task is excluded even when its file name or wording changes, with reviewable reason/override records.
+- The manifest can be rebuilt to matching hashes from the same approved inputs; logs contain metadata/counts rather than raw private code or benchmark bodies.
+
+**Validation required**
+
+- Future authorized checks: synthetic malformed/rights/duplicate/split fixtures for the new data pipeline.
+- Future approved data execution: run the fixed corpus materialization manifest, independently inspect a stratified sample and verify solution targets in the existing isolated judge.
+
+**Out of scope**
+
+- Bulk importing all archived datasets
+- Using model-created answers as trusted ground truth without independent validation
+- Redistributing datasets or downloading missing objects without permission
+
+**Risk and review**
+
+Bad solutions, silent rights assumptions and leakage can invalidate both training and evaluation; quarantine uncertain inputs rather than filling gaps automatically.
+
+</details>
+
+<a id="sai-b131"></a>
+<details>
+<summary>131. SAI-B131: Create a separate locked training environment and reviewed artifact loader [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-2 approved data and training tooling · **Area:** training-infrastructure.
+
+**Suggested role:** ML infrastructure engineer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B079](#sai-b079), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129).
+
+**Problem / missing behavior**
+
+The active API environment deliberately has no ML training stack. Actual training requires a reproducible separate environment, compatible accelerator libraries and safe artifact loading without importing archived requirements or model remote code into app services.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/onboarding/DEVELOPMENT.md`
+- `scripts/verification`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Create ml/training/ with its own pinned project/lock, supported Python/CUDA/toolchain matrix and noninteractive setup/preflight entry point; retain independent API/web lockfiles.
+- Implement an artifact loader tied to the future selected revision and B078/B080 records, verifying approved artifact identities, tokenizer/config files and allowed local paths. Default to no arbitrary trust_remote_code and safe tensor formats.
+- Implement dry-run configuration and resource preflight that report required resources, supported precision/adapter modes, environment versions and hard stop conditions without automatically provisioning compute.
+
+**Acceptance criteria**
+
+- Installing or importing training tooling does not add ML dependencies to services/api or start a download/training job.
+- Synthetic unapproved revision, hash mismatch, path escape and remote-code-required cases fail before loading; trusted artifact handling preserves TLS/checksum verification.
+- The exact training environment can be reconstructed and its preflight distinguishes unsupported hardware, missing approved artifact and ready state without pretending a memory estimate is an actual measurement.
+
+**Validation required**
+
+- Future authorized checks: the new loader/config fixtures run on CPU with tiny local synthetic tensors/configurations and no external requests.
+- On separately approved external hardware, run only the documented training preflight and record the actual environment/artifact hashes before a training job.
+
+**Out of scope**
+
+- Installing GPU drivers in the application environment
+- Copying archive requirements or enabling unreviewed remote code
+- Provisioning paid GPUs or running the actual smoke/train job
+
+**Risk and review**
+
+Artifact deserialization and accelerator dependencies expand the supply chain; isolate them from app credentials and preserve immutable versions.
+
+</details>
+
+<a id="sai-b132"></a>
+<details>
+<summary>132. SAI-B132: Implement tokenizer-aware SFT examples and answer-only loss masking [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-2 approved data and training tooling · **Area:** training-preprocessing.
+
+**Suggested role:** ML data/training engineer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131).
+
+**Problem / missing behavior**
+
+A clean text corpus is insufficient for SFT: the chosen tokenizer/chat template, truncation, special tokens and labels determine what the model actually learns. Incorrect masking can train on user/system text or cut away the solution.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Implement preprocessing under ml/training/ using the selected artifact tokenizer/template and materialized corpus lineage, with versioned formatting and no fabricated private chain-of-thought targets.
+- Define explicit maximum lengths, special-token handling, sample packing/attention policy and assistant-target loss masking; reject or separately report examples that cannot fit validly.
+- Produce an immutable tokenization manifest containing tokenizer/template/config hashes, retained/dropped counts and non-sensitive inspection summaries.
+
+**Acceptance criteria**
+
+- Synthetic multi-turn, empty-answer, Unicode, long-source and boundary-token examples have exact expected masks; prompt/system/user tokens and padding do not receive unintended loss.
+- No included example silently loses its required answer or crosses split boundaries through packing.
+- Reprocessing the same corpus/tokenizer/config reproduces the manifest; inspection summaries do not publish full private examples.
+
+**Validation required**
+
+- Future authorized checks: deterministic tokenizer/masking/packing fixtures with a tiny local tokenizer under the separate training environment.
+- After artifact approval, manually inspect a small stratified token/label sample and record truncation/drop rates before smoke training.
+
+**Out of scope**
+
+- An actual optimization run
+- Automatic generation of reasoning traces from private model internals
+- Silently changing the corpus or selected tokenizer to make examples fit
+
+**Risk and review**
+
+Loss-mask/template errors can create a seemingly successful training curve while teaching the wrong objective; inspect labels, not just batch shapes.
+
+</details>
+
+<a id="sai-b133"></a>
+<details>
+<summary>133. SAI-B133: Run an approved external LoRA smoke experiment with stop and resume evidence [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-3 actual approved training · **Area:** training-smoke.
+
+**Suggested role:** ML training engineer and authorized compute operator.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132).
+
+**Problem / missing behavior**
+
+Admission validation and CPU fixtures do not demonstrate that the selected base, tokenizer, adapter configuration and accelerator stack can train safely. A finite external smoke experiment must precede a larger job.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/governance/OPEN_DECISIONS.md`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Implement a bounded LoRA/QLoRA-compatible training command under ml/training/ consuming the accepted B080 manifest and fixed tiny approved corpus slice; choose only a supported precision/method for the future selected model.
+- Execute the smoke only on separately authorized external hardware with a recorded low step/time/spend ceiling, cancellation and OOM behavior.
+- Save a checkpoint, deliberately stop within the fixture budget, resume under the same configuration and evaluate a small allowed sanity set without using held-out release results for tuning.
+
+**Acceptance criteria**
+
+- Evidence records a real approved run: optimizer updates occurred, losses/gradients are finite, intended adapter parameters changed and frozen base parameters remained unchanged.
+- Checkpoint resume restores the documented optimizer/scheduler/RNG state or explicitly reports nondeterministic limits; cancellation and budget exhaustion stop the job and leave a usable manifest.
+- Memory/time/cost measurements and failed/OOM outcomes are recorded honestly; a dry-run or five-minute demonstration is not marked as a completed full training campaign.
+
+**Validation required**
+
+- Future approved execution: run the new smoke command with the accepted manifest on the authorized external host, then run its bounded stop/resume scenario.
+- Verify checkpoint/base/tokenizer/data hashes and run only the declared finite sanity evaluation; do not load model-generated programs on the host.
+
+**Out of scope**
+
+- Selecting a model now
+- Training inside Codex/application services
+- Launching an unconstrained full corpus job or assuming successful smoke establishes quality
+
+**Risk and review**
+
+Even smoke runs incur compute and artifact risk; enforce hard limits in the runner and stop on invalid gradients, loss or artifact state.
+
+</details>
+
+<a id="sai-b134"></a>
+<details>
+<summary>134. SAI-B134: Execute the approved bounded SFT adapter training campaign [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-3 actual approved training · **Area:** actual-fine-tuning.
+
+**Suggested role:** ML training lead and compute operator.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B080](#sai-b080), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133).
+
+**Problem / missing behavior**
+
+B080 explicitly excludes actual LoRA/QLoRA/GRPO execution. Without this separate task the roadmap can finish admission tooling and still produce no fine-tuned model.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/governance/OPEN_DECISIONS.md`
+
+**Implementation scope**
+
+- Execute the approved SFT campaign through the separate ml/training/ runner using the fixed base, allowed adapter method, training/validation corpus, seed, effective batch, schedule and bounded hyperparameter plan from the accepted manifest.
+- Use validation data for the preregistered checkpoint/stopping policy, record every attempted run including failed/aborted ones and enforce external compute/time/spend ceilings.
+- Produce retained candidate adapters and a complete run report with environment/data/code lineage, losses, step counts, resource measurements and termination reason; keep weights and private data out of Git.
+
+**Acceptance criteria**
+
+- At least one actual optimization campaign reaches its declared completion or a clearly recorded failure/early-stop state; documentation completion cannot substitute for execution.
+- The saved candidate loads with the exact base/tokenizer and has verified tensor/checkpoint identities; no held-out release task was used to select hyperparameters or checkpoints.
+- The report states actual cost/resources and all runs, including negative outcomes. Training completion alone neither promotes the artifact nor asserts improved DSA performance.
+
+**Validation required**
+
+- Future separately approved execution: run the training command against the signed-off B080 manifest on the approved external host; verify recorded steps, cancellation and spend stops.
+- Reconstruct the selected checkpoint from the report and run the declared validation-only evaluation before handing the candidate to B136.
+
+**Out of scope**
+
+- Defaulting to a named checkpoint in this planning update
+- Unlimited hyperparameter search
+- A foundation-model pretraining project or guaranteed performance gain
+
+**Risk and review**
+
+Training can overfit, leak evaluation data or exhaust resources; frozen manifests and independent review of run evidence are required.
+
+</details>
+
+<a id="sai-b135"></a>
+<details>
+<summary>135. SAI-B135: Publish immutable private model artifacts and complete adapter lineage [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-3 actual approved training · **Area:** model-artifacts.
+
+**Suggested role:** ML platform engineer and data/model steward.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B078](#sai-b078), [SAI-B129](#sai-b129), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B134](#sai-b134).
+
+**Problem / missing behavior**
+
+A training checkpoint directory is not a reproducible deliverable. Consumers need to know which base/tokenizer/license/data/run produced an adapter and must not accidentally load a mismatched or modified artifact.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/governance/DATA_AND_LICENSES.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `scripts/verification`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Implement an immutable artifact manifest/registry interface under ml/ for base, tokenizer, adapter/config, training run and intended compatible inference precisions, storing approved large artifacts outside Git.
+- Record hashes, size, code/environment versions, data/split lineage, license/NOTICE/redistribution restrictions and retention/access policy; do not publish private training examples.
+- Provide a fetch/verify/reconstruct command that requires exact identities, rejects unauthorized artifacts and records a retained last-known-good candidate for rollback.
+
+**Acceptance criteria**
+
+- Reconstruction with the correct authorized base/tokenizer/adapter succeeds to matching identities; mismatched bases, altered tensors and missing required files fail before serving.
+- Registry entries are immutable/versioned, contain every required provenance link and distinguish unpublished/private from approved redistributable artifacts.
+- No weight, credential, private corpus or raw learner code enters the application repository or public model-card evidence.
+
+**Validation required**
+
+- Future authorized checks: synthetic registry/manifest/hash/access fixtures in the separate ML tooling.
+- For the trained candidate, fetch only the approved artifacts into an isolated temporary inference workspace and verify the complete reconstruction record.
+
+**Out of scope**
+
+- Making weights public without permission
+- Buying an artifact-store service by default
+- Silently merging an adapter into an unidentified base
+
+**Risk and review**
+
+Ambiguous lineage or unrestricted artifact publication can violate licenses and make rollback impossible; retain exact reconstructible identities.
+
+</details>
+
+<a id="sai-b136"></a>
+<details>
+<summary>136. SAI-B136: Evaluate tuned candidates against matched baselines and enforce category gates [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** model-promotion-evaluation.
+
+**Suggested role:** Independent ML evaluation reviewer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B074](#sai-b074), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B128](#sai-b128), [SAI-B129](#sai-b129), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135).
+
+**Problem / missing behavior**
+
+A decreasing SFT loss or successful adapter load does not show better solving, teaching or cost. Promotion requires independent held-out comparison against the untuned baseline and the declared support matrix.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/product/AI_SOLVER.md`
+- `services/judge/solver_judge/grading/cases.py`
+
+**Implementation scope**
+
+- Run the frozen immutable candidate and matched untuned base through the existing B074 harness on a sealed final release set disjoint from training and model-selection/validation, using preregistered B128 measurements, equal budgets and approved independent graders.
+- Report per-topic/difficulty/language/input-format coverage, compile/runtime/system failures, pass@1/pass@k protocol, uncertainty, cost/latency and relevant hint quality/safety regressions.
+- Produce a reviewed promote/reject/limited-scope decision; quarantine contaminated or invalid tasks and invalidate affected claims instead of repairing the score by omission.
+
+**Acceptance criteria**
+
+- A deterministic synthetic worse candidate fails promotion, and missing category evidence yields unmeasured/unsupported status rather than a pass.
+- The actual trained candidate receives a complete held-out report including weak categories and failures; no improvement claim is made unless supported by the preregistered comparison.
+- A rejected or inconclusive run remains documented and the untuned/previous qualified artifact remains usable; no public activation occurs in this issue.
+- Repeated model/hyperparameter selection cannot query the same sealed final test for feedback; any exposed set is labeled and replaced with a newly rights-approved untouched release set for later claims.
+
+**Validation required**
+
+- Future separately approved execution: replay the locked held-out evaluation manifests for base and candidate with the authorized isolated judge and inference budget.
+- Independently review a sample of predictions, grading validity and report aggregation; retain hashes and exact eligible sample counts.
+
+**Out of scope**
+
+- Using release-set failures as another training batch before preserving an independent holdout
+- Claiming all-DSA correctness
+- Changing success thresholds after seeing candidate results
+
+**Risk and review**
+
+Contamination, faulty oracles and unequal budgets can manufacture gains; evaluator independence and complete negative reporting are essential.
+
+</details>
+
+<a id="sai-b137"></a>
+<details>
+<summary>137. SAI-B137: Qualify inference export and quantization at the deployed precision [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** inference-qualification.
+
+**Suggested role:** ML inference engineer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B079](#sai-b079), [SAI-B128](#sai-b128), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136).
+
+**Problem / missing behavior**
+
+The trained adapter and the intended serving artifact may differ through merging, quantization, tokenizer handling or engine support. A training-precision score cannot be assumed to survive the deployment format.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/architecture/ARCHITECTURE.md`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Implement a reproducible export recipe for one approved serving engine/precision with exact base/adapter/tokenizer/config identities and safe serialization.
+- Compare the exported artifact with the qualified training/reference representation using bounded tokenization/generation parity fixtures and the preregistered regression subset.
+- Measure supported context, throughput/latency, actual peak memory and constrained concurrency on approved hardware; document unsupported operations and fallback to the retained qualified artifact.
+
+**Acceptance criteria**
+
+- Export artifacts carry reconstructible lineage and cannot load with an incompatible tokenizer or unapproved remote-code path.
+- Actual inference-precision evaluation meets B128 thresholds or produces an explicit narrower/rejected decision; no assumption of lossless quantization substitutes for measurement.
+- A repeat export from the recorded recipe yields the stated deterministic identities or documented tool nondeterminism, and resources stay inside the approved envelope.
+
+**Validation required**
+
+- Future approved execution: run the exact export/qualification recipe on the authorized inference host and replay token/template plus held-out regression checks.
+- Verify malformed/mismatched export manifests fail in the CPU synthetic tooling fixtures.
+
+**Out of scope**
+
+- Quantizing every available format
+- Assuming a specific model/engine is selected now
+- Public deployment or unrestricted benchmark tuning
+
+**Risk and review**
+
+Merging/quantization can silently degrade quality or exceed memory; qualify the artifact actually deployed, not only its training checkpoint.
+
+</details>
+
+<a id="sai-b138"></a>
+<details>
+<summary>138. SAI-B138: Integrate the qualified trained artifact with bounded provider-neutral serving [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** trained-model-serving.
+
+**Suggested role:** ML serving engineer and backend security reviewer.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B043](#sai-b043), [SAI-B044](#sai-b044), [SAI-B046](#sai-b046), [SAI-B050](#sai-b050), [SAI-B051](#sai-b051), [SAI-B054](#sai-b054), [SAI-B055](#sai-b055), [SAI-B057](#sai-b057), [SAI-B079](#sai-b079), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B137](#sai-b137).
+
+**Problem / missing behavior**
+
+The project has no trained-model inference service. An artifact registry and model score do not connect a qualified checkpoint to authenticated tutor/solver requests with enforceable budget and failure behavior.
+
+**Target paths / responsibility**
+
+- `services/api/solver_api/features/hints/service.py`
+- `docs/architecture/ARCHITECTURE.md`
+- `docs/onboarding/DEVELOPMENT.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `tests/tooling`
+
+**Implementation scope**
+
+- Deploy one separately operated approved inference endpoint for the exact qualified artifact and wire it through the existing provider-neutral result/usage contracts; do not load GPU weights in web/API processes.
+- Reuse existing destination/secret, output-validation, entitlement, concurrency/budget, deadline/retry and kill-switch controls rather than implement a competing authorization or quota stack.
+- Add explicit model/artifact/revision provenance, bounded health/readiness and operator-only diagnostics; support the approved offline/local-model route without requiring a paid external provider.
+
+**Acceptance criteria**
+
+- A permitted request reaches only the configured qualified artifact and returns correct provenance; unauthorized/over-budget/oversized/out-of-scope inputs fail before inference as specified.
+- Endpoint timeout/crash/malformed output triggers bounded safe behavior and visibly authored fallback only under the existing policy; no fake model output is shown.
+- Admission caps hold at the declared serving concurrency, no provider/worker secrets or private tests reach generation context, and a kill switch stops new model work without breaking ordinary practice.
+
+**Validation required**
+
+- Future authorized checks: deterministic fake-endpoint contract/security/timeout/quota fixtures through the existing provider test harness.
+- On the approved isolated inference environment, run a small capped end-to-end request/overload/failure smoke using the exact exported artifact and no private learner data.
+
+**Out of scope**
+
+- Choosing or buying serving hardware now
+- Replacing B048 transport/entitlement/budget work
+- Public activation before the pilot/release gates
+
+**Risk and review**
+
+Model-serving isolation and endpoint configuration can bypass established policy if treated as a new shortcut; reuse existing trusted admission controls.
+
+</details>
+
+<a id="sai-b139"></a>
+<details>
+<summary>139. SAI-B139: Promote a trained model through a limited pilot and rehearsed rollback [pending]</summary>
+
+**Priority:** P1 · **Phase:** ML-4 evaluation and delivery · **Area:** trained-model-release.
+
+**Suggested role:** Release owner, ML evaluation lead and deployment operator.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B003](#sai-b003), [SAI-B057](#sai-b057), [SAI-B059](#sai-b059), [SAI-B110](#sai-b110), [SAI-B124](#sai-b124), [SAI-B126](#sai-b126), [SAI-B128](#sai-b128), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B137](#sai-b137), [SAI-B138](#sai-b138).
+
+**Problem / missing behavior**
+
+A working endpoint is not a release. The trained artifact needs an accountable go/no-go decision, clear supported scope and a real rollback rehearsal before wider learners rely on it.
+
+**Target paths / responsibility**
+
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/status/PROJECT_STATUS.md`
+- `docs/onboarding/DEVELOPMENT.md`
+- `docs/governance/OPEN_DECISIONS.md`
+- `apps/web/features/hints/account-hint.tsx`
+- `services/api/solver_api/features/hints/service.py`
+
+**Implementation scope**
+
+- Run an explicitly approved small consented pilot for the trained artifact with fixed audience, duration, traffic/cost ceilings and the B128 declared coverage.
+- Present artifact provenance, assistance mode, limitations, unsupported inputs and finite-evidence wording to users; preserve private data/contest rules and ordinary authored practice.
+- Rehearse switching to the last qualified artifact or authored-only mode during in-flight work, then record the actual measured pilot outcomes and owner promotion/rejection decision.
+
+**Acceptance criteria**
+
+- The release record binds exact artifact/application revisions, coverage matrix, evaluation evidence, audience/capacity and owner/operator approval.
+- Rollback/kill-switch drill stops new model admissions and handles in-flight jobs within their recorded budgets without cross-user results or loss of ordinary practice.
+- All preregistered quality/security/resource gates are passed or the pilot remains blocked/rejected; no universal any-DSA or independent security certification claim appears.
+
+**Validation required**
+
+- Future explicitly approved execution: finite end-to-end pilot and rollback rehearsal on the operated test/pilot deployment; record observed outcomes and unrun checks separately.
+- Review UI disclosures and release artifacts against the exact served model identity and held-out report.
+
+**Out of scope**
+
+- Unattended permanent public launch
+- Automatic model promotion from a training script
+- Treating user activity alone as proof of learning improvement
+
+**Risk and review**
+
+Promotion changes real-user behavior and recurring spend; require accountable operations, consent, capacity and a tested fallback.
+
+</details>
+
+<a id="sai-b140"></a>
+<details>
+<summary>140. SAI-B140: Run a separately approved execution-reward preference or RL experiment [pending]</summary>
+
+**Priority:** P2 · **Phase:** ML-5 conditional improvement research · **Area:** optional-model-research.
+
+**Suggested role:** ML researcher, independent grader reviewer and compute owner.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B075](#sai-b075), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B080](#sai-b080), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B131](#sai-b131), [SAI-B132](#sai-b132), [SAI-B133](#sai-b133), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136).
+
+**Problem / missing behavior**
+
+SFT may leave systematic failures, but preference tuning or GRPO/RL can reward test exploitation and spend significant compute. The existing roadmap only mentions later research; it implements and runs no RL training stage.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `services/judge/solver_judge/grading/cases.py`
+- `services/judge/solver_judge/sandbox/harness.py`
+- `tests/tooling`
+
+**Implementation scope**
+
+- First record a falsifiable hypothesis and a separately approved method/reward/data/compute manifest comparing one narrow preference or execution-reward method against the retained SFT baseline and equal-budget inference alternatives.
+- Reuse approved data/artifact tooling; build audited reward checks around independently reviewed finite execution evidence, with bounded generation/judge budgets and anti-reward-hacking fixtures.
+- Execute a tiny approved reward/training smoke, then only if valid execute the specifically approved bounded experiment; preserve actual checkpoints, costs, failed runs and independent held-out results.
+
+**Acceptance criteria**
+
+- Synthetic exploit candidates that print forged success, exploit grader assumptions or consume unbounded resources do not earn a valid success reward.
+- The actual approved experiment records optimizer updates and full resource/termination evidence; missing approval/valid reward prevents any job, and no improvement is a valid outcome.
+- Independent evaluation reports quality, regressions and total cost versus SFT and inference-only alternatives; the candidate is not promoted automatically.
+
+**Validation required**
+
+- Future authorized checks: deterministic reward/manifest fixtures with original finite sandbox cases and no live training.
+- Only after separate approval, run the recorded external smoke/experiment and replay the untouched held-out comparison under its fixed budget.
+
+**Out of scope**
+
+- Making RL a prerequisite for releasing a useful SFT/tutor product
+- Unlimited GRPO rollouts or unknown reward oracles
+- Claiming finite rewards prove general reasoning or correctness
+
+**Risk and review**
+
+Reward hacking, data leakage and resource amplification can produce misleading gains; this optional issue requires an explicit stop/no-go outcome.
+
+</details>
+
+<a id="sai-b141"></a>
+<details>
+<summary>141. SAI-B141: Operate a consented failure-analysis and retraining improvement cycle [pending]</summary>
+
+**Priority:** P2 · **Phase:** ML-5 conditional improvement research · **Area:** model-lifecycle.
+
+**Suggested role:** ML lifecycle owner and privacy/evaluation reviewers.
+
+**Prerequisites:** [SAI-B001](#sai-b001), [SAI-B003](#sai-b003), [SAI-B063](#sai-b063), [SAI-B077](#sai-b077), [SAI-B078](#sai-b078), [SAI-B128](#sai-b128), [SAI-B130](#sai-b130), [SAI-B134](#sai-b134), [SAI-B135](#sai-b135), [SAI-B136](#sai-b136), [SAI-B139](#sai-b139).
+
+**Problem / missing behavior**
+
+After release, failures and user feedback need a controlled correction path. Automatically training on reported code or repeatedly optimizing against the same holdout would violate consent and undermine future evidence.
+
+**Target paths / responsibility**
+
+- `docs/research/MODEL_DATA_EVALUATION.md`
+- `docs/product/DSA_SOLVER_READINESS.md`
+- `docs/governance/DATA_AND_LICENSES.md`
+- `docs/status/PROJECT_STATUS.md`
+- `services/api/solver_api/features/hints/service.py`
+
+**Implementation scope**
+
+- Define bounded operator review of consented/redacted failure categories, with separate source/problem rights checks and no automatic collection of raw private submissions.
+- Turn reviewed failures into correction candidates only through the approved corpus pipeline; quarantine any previously exposed evaluation task and preserve a genuinely independent future release set.
+- For a justified improvement, create a new approved training/evaluation manifest and execute the existing bounded cycle, comparing to the last released artifact before any owner-authorized rollout. Record no-change/rejected outcomes as well.
+
+**Acceptance criteria**
+
+- Opt-out/deleted/private inputs cannot enter a training batch; approved additions retain immutable provenance, consent and split lineage.
+- A failure that came from release evaluation cannot silently become both training data and a claimed unseen success in the next report.
+- Each actually attempted improvement has distinct run/artifact IDs, before/after category/regression/cost evidence and a tested rollback link; collecting feedback does not by itself trigger training or deployment.
+
+**Validation required**
+
+- Future authorized checks: synthetic consent/deletion/split-lineage/lifecycle fixtures in ML tooling.
+- For a separately approved iteration, replay the retained baseline and candidate manifests and record the actual training, independent evaluation and rollout decision; do not silently reuse old successes as new proof.
+
+**Out of scope**
+
+- Continuous autonomous training on user activity
+- Default upload of learner code to models or datasets
+- A guarantee that every failure can be corrected or every DSA task solved
+
+**Risk and review**
+
+Feedback loops can turn private data into training material and destroy holdout independence; keep human/owner review and repeatable negative outcomes.
 
 </details>
 

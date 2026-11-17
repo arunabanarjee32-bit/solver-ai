@@ -7,8 +7,8 @@
   "status_counts": {
     "active": 23,
     "partial": 1,
-    "feasible_proposal": 11,
-    "research_only": 9
+    "feasible_proposal": 12,
+    "research_only": 8
   },
   "features": [
     {
@@ -695,7 +695,8 @@
       "service": "future solver orchestration",
       "files": [
         "docs/product/AI_SOLVER.md",
-        "docs/research/MODEL_DATA_EVALUATION.md"
+        "docs/research/MODEL_DATA_EVALUATION.md",
+        "docs/product/DSA_SOLVER_READINESS.md"
       ],
       "dependencies": [
         "F016",
@@ -720,7 +721,8 @@
       "service": "future offline evaluation",
       "files": [
         "docs/research/MODEL_DATA_EVALUATION.md",
-        "docs/governance/DATA_AND_LICENSES.md"
+        "docs/governance/DATA_AND_LICENSES.md",
+        "docs/product/DSA_SOLVER_READINESS.md"
       ],
       "dependencies": [
         "approved datasets",
@@ -886,13 +888,14 @@
     },
     {
       "id": "F033",
-      "name": "Model/ranker fine-tuning on licensed data",
-      "status": "research_only",
+      "name": "Solver fine-tuning, artifact lineage and release qualification",
+      "status": "feasible_proposal",
       "active": false,
-      "service": "future external ML workflow",
+      "service": "future offline ML training and model delivery",
       "files": [
         "docs/research/MODEL_DATA_EVALUATION.md",
-        "AnalyseFuture/extracted/phi-code-main/ranker/"
+        "docs/research/FINETUNING_MODEL_RESEARCH.md",
+        "docs/product/DSA_SOLVER_READINESS.md"
       ],
       "dependencies": [
         "F026",
@@ -901,11 +904,13 @@
         "baseline comparison"
       ],
       "tests": [],
-      "behavior": "Investigate measured task-specific fine-tuning only after a bounded baseline and clean evaluation exist.",
+      "behavior": "Research candidate models without assuming a selection; prepare permitted disjoint data; implement reproducible SFT/LoRA/QLoRA tooling; run approved external smoke and real training; compare held-out results; qualify artifacts, serving and rollback.",
       "gaps": [
-        "No training run, GPU provisioning or improvement claimed; five archive datasets are absent LFS objects."
+        "No model is selected or trained; no weights, GPU job or training stack is installed. B080 is admission only; appended training-delivery tasks cover actual future execution and release.",
+        "Readiness must name measured DSA coverage and failures; no fine-tuning or finite tests guarantee every possible problem can be solved.",
+        "Five supplied archive datasets are LFS pointers without underlying data."
       ],
-      "final_location": "Inactive research under AnalyseFuture; a future isolated offline ML workspace only after owner approval.",
+      "final_location": "Future independently pinned offline ML tooling and approved artifact storage; archived trainers remain inactive evidence.",
       "validation": "No current implementation validation is claimed for this proposal/research reference."
     },
     {
@@ -1150,12 +1155,12 @@
       "tests": [
         "tests/tooling/github/test_publish_issues.py"
       ],
-      "behavior": "Validate and render127 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.",
+      "behavior": "Validate and render 141 ordered scoped cards, reconcile remote markers, publish missing issues only after explicit --publish, record actual confirmed issue numbers and support reviewed contributor PR handoff.",
       "gaps": [
         "Live GitHub issue creation blocked by network policy;0issuePOSTs attempted. Server-side branch-rule enforcement and unattended review are not enabled."
       ],
       "final_location": "scripts/github; tests/tooling/github; docs/engineering/backlog",
-      "validation": "13 fake-client publication safety cases passed.127task cards validated:126pending and1completed locally. No remote issue created because API egress remains blocked."
+      "validation": "13 fake-client publication safety cases passed as part of the 50-case tooling suite. All 141 local task cards validated: 140 pending and one completed locally. No remote issue is confirmed created; API access remains blocked in the last recorded receipt."
     },
     {
       "id": "F044",
